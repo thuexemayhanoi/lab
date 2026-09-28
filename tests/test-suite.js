@@ -154,22 +154,93 @@ test('truth: informational_only pages have no owner service claims / LocalBusine
     assert.ok(!/chúng tôi cứu hộ|đội cứu hộ của chúng tôi|gọi chúng tôi tại/.test(html), r.article_id + ' fake service claim');
   });
 });
-test('truth: compact footer — no category mega menu, no NAP, utility links only', () => {
+// ---------- FOOTER: compact mini-sitemap derived from the canonical nav registry ----------
+const shell = require(path.join(ROOT, 'scripts', 'site', 'shell.js'));
+const footOf = html => html.split('site-foot')[1] || '';
+test('footer: compact mini-sitemap derives from the canonical nav registry (header/footer equality)', () => {
   const home = fs.readFileSync(path.join(SITE, 'index.html'), 'utf8');
-  const foot = home.split('site-foot')[1] || '';
+  const foot = footOf(home);
+  const header = home.slice(0, home.indexOf('</header>'));
+  shell.FOOTER_NAV.forEach(col => {
+    assert.ok(foot.includes('class="foot-label">' + shell.esc(col.label) + '<'), 'footer column missing: ' + col.label);
+    col.slugs.forEach(s => {
+      const link = shell.NAV_BY_SLUG[s];
+      assert.ok(link, 'footer slug not in canonical registry: ' + s);
+      // footer label + href must match the registry EXACTLY (labels are HTML-escaped)
+      assert.ok(foot.includes('href="' + link.href + '">' + shell.esc(link.nav) + '</a>'),
+        'footer link drifts from registry: ' + s);
+      // the SAME nav destination must exist in the header (desktop nav, dropdown or
+      // drawer). The sitemap file is footer-only by design — not a nav destination.
+      if (s !== 'sitemap-index')
+        assert.ok(header.includes('href="' + link.href + '"'), 'header missing canonical destination: ' + link.href);
+    });
+  });
+  // hub link labels in footer === canonical menu labels consumed by the header
+  shell.GROUPS.forEach(g => g.children.forEach(c => {
+    const link = shell.NAV_BY_SLUG[c.slug];
+    assert.strictEqual(link.nav, c.nav, 'registry label drift for ' + c.slug);
+    assert.ok(foot.includes('>' + shell.esc(c.nav) + '</a>'), 'footer missing canonical label: ' + c.nav);
+  }));
+});
+test('footer: no second hardcoded nav URL map — footer resolves through NAV_BY_SLUG', () => {
+  const src = fs.readFileSync(path.join(ROOT, 'scripts', 'site', 'shell.js'), 'utf8');
+  assert.ok(src.includes('NAV_BY_SLUG[s]'), 'footerHtml must resolve via NAV_BY_SLUG');
+  assert.ok(src.includes('FOOTER_NAV'), 'footerHtml must consume FOOTER_NAV (slug-only layout)');
+  // hub URLs are template-derived; a literal hub URL anywhere in the shell
+  // would be a second, drift-prone URL map
+  shell.GROUPS.forEach(g => g.children.forEach(c =>
+    assert.ok(!src.includes(`'/lab/${c.slug}/'`) && !src.includes(`"/lab/${c.slug}/"`),
+      'hardcoded hub URL literal in shell: ' + c.slug)));
+  // rendered footer carries exactly the registry links — nothing extra
+  const home = fs.readFileSync(path.join(SITE, 'index.html'), 'utf8');
+  const foot = footOf(home);
+  const expected = shell.FOOTER_NAV.reduce((n, c) => n + c.slugs.length, 0);
+  assert.strictEqual((foot.match(/<li><a href=/g) || []).length, expected,
+    'footer link count != registry size (second link source?)');
+});
+test('footer: compact — no descriptions, no icons, no drawer/dropdown, no NAP; sitemap + copyright retained', () => {
+  const foot = footOf(fs.readFileSync(path.join(SITE, 'index.html'), 'utf8'));
+  assert.ok(!foot.includes('dd-desc'), 'category descriptions leaked into footer');
+  assert.ok(!foot.includes('dd-icon'), 'icons leaked into footer');
+  assert.ok(!foot.includes('dropdown') && !foot.includes('drawer'), 'header widgets leaked into footer');
+  assert.ok(!foot.includes('href="tel:') && !foot.includes('mailto:'), 'NAP contact leaked into footer');
   assert.ok(!/\d{2}\s*(Nguyễn|Trần|Lê|Phạm|Phố|Đường)/.test(foot), 'street address in footer');
   assert.ok(!/0\d{9,10}/.test(foot), 'phone number in footer');
-  assert.ok(!/mailto:/.test(foot), 'email in footer');
-  // the footer must NOT repeat the header navigation / category columns
-  assert.ok(!/foot-grid|foot-col|foot-label/.test(foot), 'footer still has category columns');
-  ['Khám phá', 'Pháp lý', 'Thuê xe máy', 'Cứu hộ', 'Bằng lái', 'Đăng ký xe', 'Xe máy điện', 'Phụ tùng'].forEach(s =>
-    assert.ok(!foot.includes('>' + s + '</a>'), 'footer repeats category link: ' + s));
-  assert.ok(!foot.includes('href="tel:'), 'no quick-call button allowed in global footer');
-  // compact utility row + copyright
-  assert.strictEqual((foot.match(/<nav class="foot-links-row"/g) || []).length, 1, 'footer must have exactly one compact link row');
-  ['/lab/lien-he/', '/lab/chinh-sach-bao-mat/', '/lab/dieu-khoan-su-dung/', '/lab/sitemap-index.xml'].forEach(href =>
-    assert.ok(foot.includes(`href="${href}"`), 'footer utility link missing: ' + href));
+  assert.ok(foot.includes('/lab/sitemap-index.xml'), 'sitemap link missing from footer');
   assert.ok(/© \d{4} /.test(foot), 'copyright line missing');
+  assert.ok(foot.includes('Dữ liệu &amp; nội dung được biên tập theo nguồn đã kiểm chứng.'),
+    'verified-source sentence missing from footer');
+});
+test('footer: exactly one footer per public page, registry-identical links everywhere', () => {
+  publicFiles().filter(f => f.endsWith('.html')).forEach(f => {
+    const t = fs.readFileSync(f, 'utf8');
+    assert.strictEqual((t.match(/<footer class="site-foot"/g) || []).length, 1, 'footer count != 1 in ' + f);
+    shell.FOOTER_NAV.forEach(col => col.slugs.forEach(s => {
+      const link = shell.NAV_BY_SLUG[s];
+      assert.ok(t.includes('href="' + link.href + '">' + shell.esc(link.nav) + '</a>'),
+        'footer drift from registry in ' + f + ' for ' + s);
+    }));
+  });
+  // every footer target resolves to a real file
+  shell.FOOTER_NAV.forEach(col => col.slugs.forEach(s => {
+    const href = shell.NAV_BY_SLUG[s].href;
+    const p = href.replace(/^\/lab\//, '').replace(/\/$/, '');
+    const ok = !p ? fs.existsSync(path.join(ROOT, 'index.html'))
+      : href.endsWith('.xml') ? fs.existsSync(path.join(ROOT, p))
+      : fs.existsSync(path.join(ROOT, p, 'index.html'));
+    assert.ok(ok, 'footer target does not resolve: ' + href);
+  }));
+});
+test('footer: mobile layout collapses structurally — wrap, no overflow risk', () => {
+  const css = fs.readFileSync(path.join(SITE, 'assets', 'style.css'), 'utf8');
+  assert.ok(/\.foot-nav\{display:grid;grid-template-columns:repeat\(3,minmax\(0,1fr\)\)/.test(css),
+    'desktop 3-column footer grid missing');
+  assert.ok(/@media\(max-width:767px\)\{\.foot-nav\{grid-template-columns:repeat\(2,minmax\(0,1fr\)\)\}\}/.test(css),
+    'phone 2-column footer grid missing');
+  assert.ok(/@media\(max-width:379px\)\{\.foot-nav\{grid-template-columns:1fr\}\}/.test(css),
+    'very-narrow 1-column footer grid missing');
+  assert.ok(/\.foot-links\{[^}]*flex-wrap:wrap/.test(css), 'footer links must wrap (overflow risk)');
+  assert.ok(css.includes('overflow-x:clip'), 'page-level horizontal overflow guard missing');
 });
 test('draft safety: no drafts directory in the public tree', () => {
   assert.ok(!fs.existsSync(path.join(ROOT, '_drafts')), 'drafts directory at repository root');
@@ -231,6 +302,18 @@ test('sitemap: contains no non-published matrix URLs', () => {
   const pubSet = new Set(published.map(r => r.canonical));
   rows.filter(r => r.status !== 'PUBLISHED').forEach(r =>
     assert.ok(!urls.has(r.canonical), 'non-published URL in sitemap: ' + r.canonical));
+});
+test('sitemap: every URL appears exactly once across all shards (no duplicates)', () => {
+  const all = [];
+  sitemapFiles().forEach(f => {
+    const xml = fs.readFileSync(path.join(SITE, f), 'utf8');
+    [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].forEach(m => all.push(m[1]));
+  });
+  const dups = all.filter((u, i) => all.indexOf(u) !== i);
+  assert.strictEqual(all.length, new Set(all).size, 'duplicate sitemap URLs: ' + [...new Set(dups)].join(', '));
+  // homepage is owned by the static sitemap only
+  assert.ok(all.filter(u => u === cfg.site_base_url || u === 'https://thuexemayhanoi.github.io/lab/').length === 1,
+    'homepage must appear in exactly one sitemap');
 });
 test('search index: only published pages indexed', () => {
   const idx = JSON.parse(fs.readFileSync(path.join(SITE, 'assets', 'search-index.json'), 'utf8'));
@@ -373,6 +456,39 @@ test('branch-pages: factory state intact (PRODUCTION, 10,000 rows, published cou
   assert.strictEqual(st.phase, 'PRODUCTION');
   assert.strictEqual(rows.length, 10000);
   assert.strictEqual(published.length, 10);
+});
+
+// ---------- A11Y SKIP LINK / OG METADATA / 404 (audit AUD-02, AUD-03, AUD-09) ----------
+test('a11y: skip link on every public page targets the main content', () => {
+  publicFiles().filter(f => f.endsWith('.html')).forEach(f => {
+    const t = fs.readFileSync(f, 'utf8');
+    assert.ok(t.includes('class="skip-link" href="#main-content"'), 'skip link missing in ' + f);
+    assert.ok(/<main[^>]*id="main-content"/.test(t), 'main content id missing in ' + f);
+  });
+  const css = fs.readFileSync(path.join(SITE, 'assets', 'style.css'), 'utf8');
+  assert.ok(/\.skip-link\{[^}]*position:absolute/.test(css), 'skip link must not affect layout when unfocused');
+  assert.ok(/\.skip-link:focus\{[^}]*top:0\}/.test(css), 'skip link must become visible on keyboard focus');
+});
+test('seo: every indexable public page has Open Graph metadata (og:url == canonical)', () => {
+  publicFiles().filter(f => f.endsWith('.html') && !f.endsWith(path.join('404.html'))).forEach(f => {
+    const t = fs.readFileSync(f, 'utf8');
+    ['og:title', 'og:description', 'og:url', 'og:type'].forEach(p =>
+      assert.ok(t.includes('property="' + p + '"'), p + ' missing in ' + f));
+    const ogUrl = (t.match(/<meta property="og:url" content="([^"]*)"/) || [])[1];
+    const canon = (t.match(/<link rel="canonical" href="([^"]*)"/) || [])[1];
+    assert.ok(ogUrl && ogUrl === canon, 'og:url must equal canonical in ' + f);
+  });
+});
+test('branch-pages: custom 404 — noindex, one H1, shared shell, way-back links, no canonical', () => {
+  const t = fs.readFileSync(path.join(SITE, '404.html'), 'utf8');
+  assert.ok(/<meta name="robots" content="noindex, follow">/.test(t), '404 must be noindex');
+  assert.strictEqual((t.match(/<h1/g) || []).length, 1, '404 H1 count != 1');
+  assert.ok(!t.includes('rel="canonical"'), '404 must not carry a canonical');
+  assert.ok(!t.includes('property="og:url"'), '404 must not declare an og:url');
+  assert.ok(t.includes('href="/lab/"'), '404 missing home link');
+  assert.ok((t.match(/<footer class="site-foot"/g) || []).length === 1, '404 missing the shared footer');
+  assert.ok(t.includes('class="skip-link"'), '404 missing skip link');
+  assert.ok(t.includes('id="chat-launcher"'), '404 missing chatbot launcher (shared shell)');
 });
 
 // ---------- MENU / IA: Trang chủ + Giới thiệu lead everywhere (desktop = tablet = mobile) ----------
