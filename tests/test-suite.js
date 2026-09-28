@@ -364,3 +364,108 @@ test('branch-pages: factory state intact (PRODUCTION, 10,000 rows, published cou
   assert.strictEqual(rows.length, 10000);
   assert.strictEqual(published.length, 10);
 });
+
+// ---------- MENU / IA: Trang chủ + Giới thiệu lead everywhere (desktop = tablet = mobile) ----------
+test('menu: Trang chủ first, Giới thiệu second — desktop nav AND mobile drawer, on every page', () => {
+  const pages = publicFiles().filter(f => f.endsWith('.html'));
+  assert.ok(pages.length >= 20, 'too few built pages');
+  pages.forEach(f => {
+    const t = fs.readFileSync(f, 'utf8');
+    // desktop / tablet nav: the first two .nav-link anchors
+    const nav = [...t.matchAll(/<a class="nav-link" href="([^"]+)">([^<]*)<\/a>/g)];
+    assert.ok(nav.length >= 2, 'fewer than 2 nav links in ' + f);
+    assert.strictEqual(nav[0][1], '/lab/', 'first nav link is not Trang chủ in ' + f);
+    assert.strictEqual(nav[0][2].trim(), 'Trang chủ', 'first nav label wrong in ' + f);
+    assert.strictEqual(nav[1][1], '/lab/ve-chung-toi/', 'second nav link is not Giới thiệu in ' + f);
+    assert.strictEqual(nav[1][2].trim(), 'Giới thiệu', 'second nav label wrong in ' + f);
+    // mobile drawer: main group appears directly under the brand, BEFORE category groups
+    const iMain = t.indexOf('dr-group-main');
+    const iCat = t.indexOf('<div class="dr-group">');
+    assert.ok(iMain >= 0, 'drawer main group missing in ' + f);
+    assert.ok(iCat < 0 || iMain < iCat, 'drawer: Trang chủ/Giới thiệu must precede category groups in ' + f);
+    const main = t.match(/<div class="dr-group dr-group-main">([\s\S]*?)<\/div>/);
+    assert.ok(main, 'drawer main group malformed in ' + f);
+    const dr = [...main[1].matchAll(/<a class="dr-link dr-main-link" href="([^"]+)">[\s\S]*?<span class="dr-text">([^<]*)<\/span>/g)];
+    assert.ok(dr.length >= 2, 'drawer main links missing in ' + f);
+    assert.strictEqual(dr[0][1], '/lab/', 'drawer: Trang chủ not first in ' + f);
+    assert.strictEqual(dr[0][2].trim(), 'Trang chủ', 'drawer: first label wrong in ' + f);
+    assert.strictEqual(dr[1][1], '/lab/ve-chung-toi/', 'drawer: Giới thiệu not second in ' + f);
+    assert.strictEqual(dr[1][2].trim(), 'Giới thiệu', 'drawer: second label wrong in ' + f);
+  });
+});
+test('menu: every nav / drawer / dropdown target resolves to a built public page', () => {
+  publicFiles().filter(f => f.endsWith('.html')).forEach(f => {
+    const t = fs.readFileSync(f, 'utf8');
+    const hrefs = [...t.matchAll(/<a class="(?:nav-link|dr-link[^"]*|dd-link[^"]*)"[^>]*href="(\/lab\/[^"#]*)"/g)].map(m => m[1]);
+    assert.ok(hrefs.length >= 6, 'too few nav hrefs in ' + f);
+    hrefs.forEach(h => {
+      const rel = h.replace(/^\/lab\//, '').replace(/\/$/, '');
+      const p = rel ? path.join(ROOT, rel, 'index.html') : path.join(ROOT, 'index.html');
+      assert.ok(fs.existsSync(p), 'nav target not built: ' + h + ' (from ' + f + ')');
+    });
+  });
+});
+
+// ---------- RESPONSIVE / SHARED DESIGN SYSTEM ----------
+test('design: shared stylesheet carries the responsive editorial system (not per-article CSS)', () => {
+  const css = fs.readFileSync(path.join(SITE, 'assets', 'style.css'), 'utf8');
+  // fluid type + true responsive guards
+  ['clamp(', '100dvh', 'env(safe-area-inset-bottom', 'overflow-x:clip',
+   '@media(prefers-reduced-motion:reduce)'].forEach(m =>
+    assert.ok(css.includes(m), 'style.css missing responsive marker: ' + m));
+  // shared editorial components
+  ['.table-scroll', '.key-points', 'ol.steps', 'ul.checklist', '.sources', '.faq',
+   '.article-hero', '.article-lead', '.quick'].forEach(m =>
+    assert.ok(css.includes(m), 'style.css missing editorial component: ' + m));
+  // canonical sources are read by the builder (presentation is generator-owned)
+  const b = fs.readFileSync(path.join(ROOT, 'scripts', 'site', 'build-site.js'), 'utf8');
+  assert.ok(/readFileSync\(path\.join\(__dirname,\s*'style\.css'\)/.test(b), 'build-site must read canonical style.css');
+  assert.ok(/readFileSync\(path\.join\(__dirname,\s*'menu\.js'\)/.test(b), 'build-site must read canonical menu.js');
+  // future drafts inherit the same shell automatically: wrap-drafts emits the
+  // shared header/footer, and build-site decorates every published page
+  const w = fs.readFileSync(path.join(ROOT, 'scripts', 'factory', 'wrap-drafts.js'), 'utf8');
+  assert.ok(/site', 'shell\.js'/.test(w) || /shell\.js/.test(w), 'wrap-drafts must use shared shell');
+  assert.ok(w.includes('shell.headerHtml()'), 'wrap-drafts must emit the shared header');
+  assert.ok(b.includes('shell.decorateArticle('), 'build-site must decorate every published page');
+});
+test('design: published articles render the shared editorial chrome, no one-off styling', () => {
+  published.forEach(r => {
+    const p = path.join(ROOT, r.output_path.replace(/\/$/, ''), 'index.html');
+    const t = fs.readFileSync(p, 'utf8');
+    assert.ok(t.includes('<header class="article-hero'), 'article hero missing in ' + r.article_id);
+    assert.ok(/class="article-lead">[^<]/.test(t), 'empty/stray article lead in ' + r.article_id);
+    assert.ok(!/class="article-lead">p>/.test(t), 'stray "p>" prefix in article lead of ' + r.article_id);
+    assert.ok(!t.includes('<style'), 'inline <style> block in ' + r.article_id);
+    assert.ok(t.includes('class="key-points"'), 'key-points box missing in ' + r.article_id);
+    assert.ok(/<details class="faq/.test(t), 'FAQ details missing in ' + r.article_id);
+    // any table in the canonical archive must ship inside the responsive wrapper
+    const arch = fs.readFileSync(path.join(DATA, 'published', r.article_id + '.html'), 'utf8');
+    if (arch.includes('<table')) {
+      assert.ok(/<div class="table-scroll" role="region"/.test(t), 'responsive table wrapper missing in ' + r.article_id);
+    }
+  });
+});
+
+// ---------- CHATBOT REDESIGN CONTRACT ----------
+test('chatbot: navy subsystem identity + bounded panel + bottom sheet on mobile', () => {
+  const css = fs.readFileSync(path.join(SITE, 'assets', 'style.css'), 'utf8');
+  assert.ok(css.includes('--chat-bg:#0F172A'), 'chatbot navy tokens missing');
+  assert.ok(css.includes('width:min(410px,calc(100vw - 32px))'), 'desktop panel width not bounded');
+  const sheet = css.match(/@media\(max-width:767px\)\{[\s\S]*?\.chat-panel\{[^}]*border-radius:20px 20px 0 0/);
+  assert.ok(sheet, 'mobile bottom-sheet rule missing for .chat-panel');
+  assert.ok(/--chat-vh,100dvh/.test(css), 'dynamic viewport height fallback missing');
+});
+test('chatbot: redesigned embed is single, textarea composer, keyboard-safe, no chips', () => {
+  const js = fs.readFileSync(path.join(SITE, 'assets', 'chatbot.js'), 'utf8');
+  assert.ok(js.includes('visualViewport'), 'visualViewport keyboard handling missing');
+  assert.ok(/requestSubmit|dispatchEvent\(new Event\('submit'/.test(js), 'Enter-to-send path missing');
+  assert.ok(js.includes('autoGrow'), 'textarea auto-grow missing');
+  publicFiles().filter(f => f.endsWith('.html')).forEach(f => {
+    const t = fs.readFileSync(f, 'utf8');
+    assert.strictEqual((t.match(/id="chat-launcher"/g) || []).length, 1, 'launcher not exactly once in ' + f);
+    assert.strictEqual((t.match(/id="chat-panel"/g) || []).length, 1, 'panel not exactly once in ' + f);
+    assert.ok(/<textarea id="chat-q" rows="1"[^>]*aria-label="Câu hỏi cho trợ lý"/.test(t), 'labelled textarea composer missing in ' + f);
+    assert.ok(t.includes('chat-title-sub'), 'assistant identity header missing in ' + f);
+    assert.ok(!/chat-chip|suggestion-chip|prompt-chip/.test(t), 'suggestion chips present in ' + f);
+  });
+});
