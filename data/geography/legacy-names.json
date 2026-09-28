@@ -1,0 +1,508 @@
+{
+ "legacy_names": [
+  {
+   "geo_id": "LG-001",
+   "legacy_name": "Hà Giang",
+   "current_province": "Tuyên Quang",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-002",
+   "legacy_name": "Tuyên Quang",
+   "current_province": "Tuyên Quang",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-003",
+   "legacy_name": "Cao Bằng",
+   "current_province": "Cao Bằng",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-004",
+   "legacy_name": "Bắc Kạn",
+   "current_province": "Thái Nguyên",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-005",
+   "legacy_name": "Thái Nguyên",
+   "current_province": "Thái Nguyên",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-006",
+   "legacy_name": "Lào Cai",
+   "current_province": "Lào Cai",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-007",
+   "legacy_name": "Yên Bái",
+   "current_province": "Lào Cai",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-008",
+   "legacy_name": "Điện Biên",
+   "current_province": "Điện Biên",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-009",
+   "legacy_name": "Lai Châu",
+   "current_province": "Lai Châu",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-010",
+   "legacy_name": "Sơn La",
+   "current_province": "Sơn La",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-011",
+   "legacy_name": "Lạng Sơn",
+   "current_province": "Lạng Sơn",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-012",
+   "legacy_name": "Vĩnh Phúc",
+   "current_province": "Phú Thọ",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-013",
+   "legacy_name": "Phú Thọ",
+   "current_province": "Phú Thọ",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-014",
+   "legacy_name": "Hà Nội",
+   "current_province": "Hà Nội",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-015",
+   "legacy_name": "Hòa Bình",
+   "current_province": "Hà Nội",
+   "status": "SPLIT",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-016",
+   "legacy_name": "Quảng Ninh",
+   "current_province": "Quảng Ninh",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-017",
+   "legacy_name": "Bắc Giang",
+   "current_province": "Bắc Ninh",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-018",
+   "legacy_name": "Bắc Ninh",
+   "current_province": "Bắc Ninh",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-019",
+   "legacy_name": "Hải Phòng",
+   "current_province": "Hải Phòng",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-020",
+   "legacy_name": "Hải Dương",
+   "current_province": "Hải Phòng",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-021",
+   "legacy_name": "Hưng Yên",
+   "current_province": "Hưng Yên",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-022",
+   "legacy_name": "Thái Bình",
+   "current_province": "Hưng Yên",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-023",
+   "legacy_name": "Hà Nam",
+   "current_province": "Ninh Bình",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-024",
+   "legacy_name": "Nam Định",
+   "current_province": "Ninh Bình",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-025",
+   "legacy_name": "Ninh Bình",
+   "current_province": "Ninh Bình",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-026",
+   "legacy_name": "Thanh Hóa",
+   "current_province": "Thanh Hóa",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-027",
+   "legacy_name": "Nghệ An",
+   "current_province": "Nghệ An",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-028",
+   "legacy_name": "Hà Tĩnh",
+   "current_province": "Hà Tĩnh",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-029",
+   "legacy_name": "Quảng Bình",
+   "current_province": "Quảng Bình",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-030",
+   "legacy_name": "Quảng Trị",
+   "current_province": "Quảng Trị",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-031",
+   "legacy_name": "Thừa Thiên Huế",
+   "current_province": "Huế",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-032",
+   "legacy_name": "Đà Nẵng",
+   "current_province": "Đà Nẵng",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-033",
+   "legacy_name": "Quảng Nam",
+   "current_province": "Đà Nẵng",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-034",
+   "legacy_name": "Kon Tum",
+   "current_province": "Quảng Ngãi",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-035",
+   "legacy_name": "Quảng Ngãi",
+   "current_province": "Quảng Ngãi",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-036",
+   "legacy_name": "Bình Định",
+   "current_province": "Gia Lai",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-037",
+   "legacy_name": "Gia Lai",
+   "current_province": "Gia Lai",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-038",
+   "legacy_name": "Phú Yên",
+   "current_province": "Đắk Lắk",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-039",
+   "legacy_name": "Đắk Lắk",
+   "current_province": "Đắk Lắk",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-040",
+   "legacy_name": "Đắk Nông",
+   "current_province": "Lâm Đồng",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-041",
+   "legacy_name": "Lâm Đồng",
+   "current_province": "Lâm Đồng",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-042",
+   "legacy_name": "Ninh Thuận",
+   "current_province": "Khánh Hòa",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-043",
+   "legacy_name": "Khánh Hòa",
+   "current_province": "Khánh Hòa",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-044",
+   "legacy_name": "Bình Thuận",
+   "current_province": "Lâm Đồng",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-045",
+   "legacy_name": "TP.HCM",
+   "current_province": "TP.HCM",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-046",
+   "legacy_name": "Bà Rịa-Vũng Tàu",
+   "current_province": "TP.HCM",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-047",
+   "legacy_name": "Bình Dương",
+   "current_province": "TP.HCM",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-048",
+   "legacy_name": "Bình Phước",
+   "current_province": "Đồng Nai",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-049",
+   "legacy_name": "Đồng Nai",
+   "current_province": "Đồng Nai",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-050",
+   "legacy_name": "Tây Ninh",
+   "current_province": "Tây Ninh",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-051",
+   "legacy_name": "Long An",
+   "current_province": "Tây Ninh",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-052",
+   "legacy_name": "Tiền Giang",
+   "current_province": "Đồng Tháp",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-053",
+   "legacy_name": "Bến Tre",
+   "current_province": "Vĩnh Long",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-054",
+   "legacy_name": "Trà Vinh",
+   "current_province": "Vĩnh Long",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-055",
+   "legacy_name": "Vĩnh Long",
+   "current_province": "Vĩnh Long",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-056",
+   "legacy_name": "Đồng Tháp",
+   "current_province": "Đồng Tháp",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-057",
+   "legacy_name": "An Giang",
+   "current_province": "An Giang",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-058",
+   "legacy_name": "Kiên Giang",
+   "current_province": "An Giang",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-059",
+   "legacy_name": "Cần Thơ",
+   "current_province": "Cần Thơ",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-060",
+   "legacy_name": "Hậu Giang",
+   "current_province": "Cần Thơ",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-061",
+   "legacy_name": "Sóc Trăng",
+   "current_province": "Cần Thơ",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-062",
+   "legacy_name": "Bạc Liêu",
+   "current_province": "Cà Mau",
+   "status": "MERGED_INTO",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  },
+  {
+   "geo_id": "LG-063",
+   "legacy_name": "Cà Mau",
+   "current_province": "Cà Mau",
+   "status": "UNCHANGED",
+   "verified_source": "Nghị quyết sắp xếp đơn vị hành chính 2025",
+   "last_verified": "2026-09-28"
+  }
+ ]
+}

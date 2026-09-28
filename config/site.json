@@ -1,0 +1,8 @@
+{
+  "site_name": "Việt Nam Motorbike SEO Lab",
+  "base_url": "https://thuexemayhanoi.github.io/lab/",
+  "language": "vi",
+  "locale_prefix": "/lab/",
+  "generator": "scripts/site/build-site.js",
+  "notes": "Static GitHub Pages site. Public URL = base_url. Deploy via .github/workflows/deploy.yml."
+}

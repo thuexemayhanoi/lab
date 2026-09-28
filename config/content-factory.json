@@ -1,0 +1,10 @@
+{
+  "BATCH": 50,
+  "CHUNK": 10,
+  "total_target_articles": 10000,
+  "max_publication_in_bootstrap": 10,
+  "status_lifecycle": ["PLANNED", "RESEARCH", "WRITING", "QA", "PASS", "PUBLISHED"],
+  "failure_path": ["QA", "REPAIR", "QA", "...", "BLOCKED"],
+  "writer": "external AI writer — không đặt API key trong GitHub Actions, không tự động viết trong Actions",
+  "notes": "Actions chỉ chạy: tests, validation, QA, deterministic generation, publish promotion, reports."
+}

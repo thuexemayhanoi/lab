@@ -1,0 +1,26 @@
+{
+  "policy_version": "1.0",
+  "official_source_domains": [
+    "chinhphu.vn", "vanban.chinhphu.vn", "xaydungchinhphu.gov.vn", "congbao.chinhphu.vn",
+    "moj.gov.vn", "mt.gov.vn (Bộ GTVT cũ)", "mof.gov.vn", "mof.customs.gov.vn",
+    "mps.gov.vn (Bộ Công an)", "daknong.gov.vn", "*.gov.vn", "vneid.gov.vn", "dichvucong.gov.vn",
+    "thuenhanhieu", "gdt.gov.vn"
+  ],
+  "preferred_for": {
+    "laws": "cổng văn bản Chính phủ / Bộ ngành",
+    "fines": "Luật + nghị định hiện hành",
+    "licence_requirements": "Luật Trật tự ATGT đường bộ + thông tư hướng dẫn",
+    "registration": "Thông tư BCA/BTC hiện hành + Cổng DVC",
+    "tax_fees": "thông tư Bộ Tài chính",
+    "exam_locations": "công bố chính thức của Sở GTVT / cơ sở đào tạo được phê duyệt"
+  },
+  "rules": [
+    "Search trước khi viết — ghi source_url, source_domain, date_accessed, claim_supported.",
+    "Không có nguồn chính thức cho thông tin pháp lý quan trọng → BLOCK bài, không đoán.",
+    "Thông tin nhạy cảm thời gian (phí, thủ tục, mức phạt) yêu cầu nguồn hiện hành tại thời điểm viết.",
+    "Không hardcode cơ cấu hành chính cũ (63 tỉnh) mà không kiểm chứng."
+  ],
+  "record_schema": {
+    "source_url": "", "source_domain": "", "date_accessed": "", "claim_supported": ""
+  }
+}

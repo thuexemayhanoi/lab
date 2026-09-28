@@ -1,0 +1,7 @@
+{
+  "baseline": "zero-active-backlink-building",
+  "goal": "measure organic ranking of long-tail/local queries through intent match, content quality, local relevance, topical coverage, internal links, crawl architecture",
+  "started_at": "2026-09-28",
+  "forbidden": ["mass external link creation", "forum spam", "comment spam", "PBN", "automated directory submissions", "fake social profiles"],
+  "notes": "Backlinks may be tested later as a separate controlled variable. Measure zero-backlink baseline first."
+}
