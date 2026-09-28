@@ -159,9 +159,15 @@ ${chatbotHtml()}`;
  * only after an explicit user action. No inference API, no key, no NAP promotion. */
 function chatbotHtml() {
   return `<button class="chat-launcher" id="chat-launcher" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="chat-panel" aria-label="Mở trợ lý đọc" title="Trợ lý đọc">${svg('chat', 'lg')}</button>
-<section class="chat-panel glass-strong" id="chat-panel" role="dialog" aria-modal="false" aria-label="Trợ lý đọc Bản Đồ Xe 2 Bánh" hidden>
+<section class="chat-panel" id="chat-panel" role="dialog" aria-modal="false" aria-label="Trợ lý Bản Đồ Xe 2 Bánh" hidden>
   <div class="chat-head">
-    <span class="chat-title">${svg('chat')} Trợ lý đọc</span>
+    <div class="chat-title">
+      <span class="chat-title-ico">${svg('chat')}</span>
+      <span class="chat-title-txt">
+        <span class="chat-title-name">Trợ lý Bản Đồ Xe 2 Bánh</span>
+        <span class="chat-title-sub">Dựa trên nội dung đã xuất bản</span>
+      </span>
+    </div>
     <div class="chat-head-actions">
       <button class="chat-ai-toggle" id="chat-ai-toggle" type="button" aria-pressed="false">Bật AI cục bộ</button>
       <button class="chat-clear" id="chat-clear" type="button" aria-label="Xóa hội thoại" title="Xóa hội thoại">${svg('trash')}</button>
@@ -172,7 +178,7 @@ function chatbotHtml() {
   <div class="chat-log" id="chat-log" role="log" aria-live="polite" aria-label="Hội thoại với trợ lý"></div>
   <p class="chat-status" id="chat-status" role="status" aria-live="polite"></p>
   <form class="chat-input" id="chat-form" autocomplete="off">
-    <input id="chat-q" type="text" placeholder="Hỏi về thuê xe, cứu hộ, giấy tờ…" aria-label="Câu hỏi cho trợ lý">
+    <textarea id="chat-q" rows="1" placeholder="Hỏi về thuê xe, cứu hộ, giấy tờ…" aria-label="Câu hỏi cho trợ lý"></textarea>
     <button class="chat-send" id="chat-send" type="submit" aria-label="Gửi câu hỏi">${svg('send')}</button>
   </form>
   <p class="chat-note">Trợ lý chỉ dựa trên nội dung đã xuất bản của trang; nếu chưa có thông tin đủ, trợ lý sẽ nói rõ. AI (khi bạn bật) chạy cục bộ trên thiết bị, không gửi hội thoại tới dịch vụ suy luận nào.</p>

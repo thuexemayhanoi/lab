@@ -282,7 +282,7 @@
   panel.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') { e.stopPropagation(); closePanel(); return; }
     if (e.key !== 'Tab') return;
-    var f = [].filter.call(panel.querySelectorAll('button, input, a[href]'), function (el) { return !el.disabled; });
+    var f = [].filter.call(panel.querySelectorAll('button, input, textarea, a[href]'), function (el) { return !el.disabled; });
     if (!f.length) return;
     var first = f[0], last = f[f.length - 1];
     if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
@@ -309,13 +309,53 @@
     if (ok) startAI();
   });
 
-  // ---------- input ----------
+  // ---------- input (auto-grow textarea; Enter sends, Shift+Enter = newline) ----------
+  var AUTO_GROW_MAX = 104; // px — matches .chat-input textarea max-height in style.css
+  function autoGrow() {
+    if (!input) return;
+    input.style.height = 'auto';
+    input.style.height = Math.min(input.scrollHeight, AUTO_GROW_MAX) + 'px';
+  }
+  if (input) {
+    input.addEventListener('input', autoGrow);
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        if (form.requestSubmit) form.requestSubmit();
+        else form.dispatchEvent(new Event('submit', { cancelable: true }));
+      }
+    });
+  }
   if (form) form.addEventListener('submit', function (e) {
     e.preventDefault();
     var q = input.value;
     input.value = '';
+    autoGrow();
     ask(q);
   });
+
+  // ---------- mobile keyboard: keep composer visible (visual viewport) ----------
+  var vv = window.visualViewport || null;
+  var mq = window.matchMedia ? window.matchMedia('(max-width:767px)') : null;
+  function syncViewport() {
+    if (!vv) return;
+    // 1) dynamic height unit: panels size themselves to the VISIBLE viewport
+    panel.style.setProperty('--chat-vh', Math.round(vv.height) + 'px');
+    // 2) bottom-sheet: lift the panel above the on-screen keyboard
+    if (mq && mq.matches) {
+      var kb = Math.max(0, Math.round(window.innerHeight - vv.height - vv.offsetTop));
+      panel.style.bottom = kb > 4 ? kb + 'px' : '';
+    } else {
+      panel.style.bottom = '';
+    }
+    if (!panel.hidden && log) log.scrollTop = log.scrollHeight;
+  }
+  if (vv) {
+    vv.addEventListener('resize', syncViewport);
+    vv.addEventListener('scroll', syncViewport);
+    syncViewport();
+  }
+  if (mq && mq.addEventListener) mq.addEventListener('change', syncViewport);
 
   // ---------- boot ----------
   restore();
