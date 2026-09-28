@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-09-28T05:44:58.597Z",
+  "total": 10000,
+  "by_cluster": {
+    "RENTAL": {
+      "PUBLISHED": 4,
+      "PLANNED": 4996
+    },
+    "RESCUE": {
+      "PLANNED": 999,
+      "PUBLISHED": 1
+    },
+    "REPAIR": {
+      "PLANNED": 799,
+      "PUBLISHED": 1
+    },
+    "LICENCE": {
+      "PUBLISHED": 1,
+      "PLANNED": 799
+    },
+    "REGISTRATION": {
+      "PLANNED": 599,
+      "PUBLISHED": 1
+    },
+    "ELECTRIC": {
+      "PUBLISHED": 1,
+      "PLANNED": 1199
+    },
+    "PARTS": {
+      "PUBLISHED": 1,
+      "PLANNED": 599
+    }
+  },
+  "published": [
+    {
+      "id": "A00001",
+      "pk": "thuê xe máy Hà Nội",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ha-noi/"
+    },
+    {
+      "id": "A00052",
+      "pk": "thuê xe máy gần Sân bay quốc tế Nội Bài",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-noi-bai/"
+    },
+    {
+      "id": "A00097",
+      "pk": "thuê Honda Vision Hà Nội",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-honda-vision-ha-noi/"
+    },
+    {
+      "id": "A00465",
+      "pk": "Vision hay Air Blade nên thuê dòng nào",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/"
+    },
+    {
+      "id": "A05060",
+      "pk": "cứu hộ xe máy Thủ Đức",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/cuu-ho-xe-may/cuu-ho-xe-may-thu-duc/"
+    },
+    {
+      "id": "A06003",
+      "pk": "bảo dưỡng xe máy định kỳ",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/sua-xe-may/bao-duong-xe-may-dinh-ky/"
+    },
+    {
+      "id": "A06801",
+      "pk": "thi bằng lái xe máy A1",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/bang-lai-xe-may/thi-bang-lai-xe-may-a1/"
+    },
+    {
+      "id": "A07602",
+      "pk": "đăng ký xe máy online",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/dang-ky-xe-may/dang-ky-xe-may-online/"
+    },
+    {
+      "id": "A08201",
+      "pk": "xe máy điện có nên mua không",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/xe-may-dien/xe-may-dien-co-nen-mua-khong/"
+    },
+    {
+      "id": "A09401",
+      "pk": "lốp xe máy các loại và cách chọn",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/phu-tung/lop-xe-may-cac-loai-va-cach-chon/"
+    }
+  ],
+  "zero_backlink_baseline": "YES"
+}

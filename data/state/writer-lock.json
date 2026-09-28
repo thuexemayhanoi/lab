@@ -1,1 +1,6 @@
-{ "locked": false, "holder": null, "acquired_at": null, "expires_at": null }
+{
+  "locked": false,
+  "holder": null,
+  "acquired_at": null,
+  "expires_at": null
+}

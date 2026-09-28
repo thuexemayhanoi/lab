@@ -19,5 +19,12 @@ for(const l of lines.slice(1).filter(x=>x.trim())){
   out.push(c.map(v=>/[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v).join(','));
 }
 fs.writeFileSync(p, out.join('\n'));
+// rewrite canonical shards so parts stay the source of truth
+const csv = out.join('\n');
+const partFiles = fs.readdirSync('data').filter(f => /^content-matrix\.csv\.part/.test(f)).sort();
+if (partFiles.length) {
+  const size = Math.ceil(csv.length / partFiles.length);
+  partFiles.forEach((pf, i) => fs.writeFileSync('data/' + pf, csv.slice(i * size, (i + 1) * size)));
+}
 fs.writeFileSync('data/state/checkpoint.json', JSON.stringify({last_run:new Date().toISOString(),phase:'PILOT',matrix_rows:out.length-1,published_count:0,last_batch:[...ids],notes:'Pilot set of 10 prepared for research (deterministic pilot prep).'},null,2));
 console.log('PREPARED', n);

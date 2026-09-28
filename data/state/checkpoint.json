@@ -1,1 +1,19 @@
-{ "last_run": null, "phase": "BOOTSTRAP", "matrix_rows": 10000, "published_count": 0, "last_batch": [], "notes": "Bootstrap checkpoint — matrix generated, factory ready." }
+{
+  "last_run": "2026-09-28T05:44:01.380Z",
+  "phase": "PILOT",
+  "matrix_rows": 10000,
+  "published_count": 10,
+  "last_batch": [
+    "A00001",
+    "A00052",
+    "A00097",
+    "A00465",
+    "A05060",
+    "A06003",
+    "A06801",
+    "A07602",
+    "A08201",
+    "A09401"
+  ],
+  "notes": "Published 10 articles."
+}

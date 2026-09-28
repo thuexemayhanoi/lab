@@ -123,7 +123,13 @@ fs.writeFileSync(path.join(SITE,'ve-chung-toi','index.html'),layout('Về chúng
 <p>Motorbike SEO Lab là trang thông tin nghiên cứu về hệ sinh thái xe máy Việt Nam, vận hành bởi ${esc(facts.business_name)} (${esc(facts.location_summary)}). Dịch vụ cho thuê xe máy thực tế của chủ sở hữu hoạt động tại Hà Nội.</p>
 <p>Trang này không phải trang kinh doanh và không có chi nhánh toàn quốc. Bài viết về địa phương ngoài Hà Nội mang tính hướng dẫn, không phải lời chào dịch vụ.</p>
 <p>Thí nghiệm SEO hiện tại: baseline zero-backlink — xem <a href="/lab/reports/experiments/baseline.md">báo cáo baseline</a> trong repo.</p>`,cfg.base_url+'ve-chung-toi/'));
-// Restore published article pages from durable archive
+// publish experiment baseline report (linked from About page)
+const baselineSrc=path.join(ROOT,'reports','experiments','baseline.md');
+if(fs.existsSync(baselineSrc)){
+ fs.mkdirSync(path.join(SITE,'reports','experiments'),{recursive:true});
+ fs.copyFileSync(baselineSrc,path.join(SITE,'reports','experiments','baseline.md'));
+}
+// restore published article pages from durable archive
 published.forEach(r=>{
  const src=path.join(ROOT,'data','published',r.article_id+'.html');
  const dest=path.join(SITE,r.output_path.replace(/^\//,''),'index.html');

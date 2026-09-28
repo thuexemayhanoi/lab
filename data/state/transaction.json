@@ -1,1 +1,8 @@
-{ "active": false, "id": null, "started_at": null, "operation": null, "articles": [], "notes": "Committed." }
+{
+  "active": false,
+  "id": null,
+  "started_at": null,
+  "operation": null,
+  "articles": [],
+  "notes": "Committed."
+}
