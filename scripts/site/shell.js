@@ -29,6 +29,29 @@ const INFO_LINKS = [
   { slug: 'chinh-sach-bao-mat', nav: 'Chính sách bảo mật', icon: 'shield', href: '/lab/chinh-sach-bao-mat/' },
   { slug: 'dieu-khoan-su-dung', nav: 'Điều khoản sử dụng', icon: 'file-text', href: '/lab/dieu-khoan-su-dung/' },
 ];
+// Main destinations (Trang chủ / Giới thiệu) — consumed by header AND footer.
+const MAIN_LINKS = [
+  { slug: 'trang-chu', nav: 'Trang chủ', icon: 'home', href: '/lab/' },
+  { slug: 've-chung-toi', nav: 'Giới thiệu', icon: 'info', href: '/lab/ve-chung-toi/' },
+];
+// CANONICAL NAV REGISTRY — the single label+href source for every generated
+// link target. Header and footer both resolve through NAV_BY_SLUG, so a second
+// hardcoded navigation URL map cannot exist and the two can never drift.
+const NAV_BY_SLUG = (() => {
+  const m = {};
+  GROUPS.forEach(g => g.children.forEach(c => { m[c.slug] = { nav: c.nav, href: '/lab/' + c.slug + '/' }; }));
+  INFO_LINKS.forEach(c => { m[c.slug] = { nav: c.nav, href: c.href }; });
+  MAIN_LINKS.forEach(c => { m[c.slug] = { nav: c.nav, href: c.href }; });
+  m['sitemap-index'] = { nav: 'Sitemap', href: '/lab/sitemap-index.xml' };
+  return m;
+})();
+// Compact footer mini-sitemap layout — slugs only; labels and hrefs are always
+// resolved via NAV_BY_SLUG at render time (no duplicate URL data here).
+const FOOTER_NAV = [
+  { label: 'Khám phá', slugs: ['thue-xe-may', 'kinh-nghiem', 'cuu-ho-xe-may', 'sua-xe-may'] },
+  { label: 'Pháp lý & Phương tiện', slugs: ['bang-lai-xe-may', 'dang-ky-xe-may', 'xe-may-dien', 'phu-tung'] },
+  { label: 'Thông tin', slugs: ['ve-chung-toi', 'lien-he', 'chinh-sach-bao-mat', 'dieu-khoan-su-dung', 'sitemap-index'] },
+];
 
 // ---------- inline SVG icon set (no emoji, no icon font, no external request) ----------
 const ICON = {
@@ -80,19 +103,16 @@ function headerHtml() {
   const drawerGroups = GROUPS.map(g => `
     <div class="dr-group">
       <p class="dr-label">${esc(g.label.toUpperCase())}</p>
-      ${g.children.map(c => `<a class="dr-link" data-hub="${g.id}" href="/lab/${c.slug}/"><span class="dd-icon">${svg(c.icon, 'lg')}</span><span class="dr-text">${esc(c.nav)}</span><span class="dr-arrow" aria-hidden="true">›</span></a>`).join('')}
+      ${g.children.map(c => `<a class="dr-link" data-hub="${g.id}" href="${NAV_BY_SLUG[c.slug].href}"><span class="dd-icon">${svg(c.icon, 'lg')}</span><span class="dr-text">${esc(c.nav)}</span><span class="dr-arrow" aria-hidden="true">›</span></a>`).join('')}
     </div>`).join('');
-  const drMain = [
-    { href: '/lab/', nav: 'Trang chủ', icon: 'home' },
-    { href: '/lab/ve-chung-toi/', nav: 'Giới thiệu', icon: 'info' },
-  ].map(c => `<a class="dr-link dr-main-link" href="${c.href}"><span class="dd-icon">${svg(c.icon, 'lg')}</span><span class="dr-text">${esc(c.nav)}</span><span class="dr-arrow" aria-hidden="true">›</span></a>`).join('');
+  const drMain = MAIN_LINKS.map(c => `<a class="dr-link dr-main-link" href="${c.href}"><span class="dd-icon">${svg(c.icon, 'lg')}</span><span class="dr-text">${esc(c.nav)}</span><span class="dr-arrow" aria-hidden="true">›</span></a>`).join('');
   const drUtility = INFO_LINKS.map(c => `<a class="dr-link" href="${c.href}"><span class="dd-icon">${svg(c.icon, 'lg')}</span><span class="dr-text">${esc(c.nav)}</span><span class="dr-arrow" aria-hidden="true">›</span></a>`).join('');
-  return `<header class="site-head">
+  return `<a class="skip-link" href="#main-content">Bỏ qua đến nội dung chính</a>
+<header class="site-head">
 <div class="wrap nav-shell glass-nav">
   <a class="brand" href="/lab/">${BRAND_SHORT}</a>
   <nav class="main-nav" aria-label="Chuyên mục chính">
-    <a class="nav-link" href="/lab/">Trang chủ</a>
-    <a class="nav-link" href="/lab/ve-chung-toi/">Giới thiệu</a>
+${MAIN_LINKS.map(c => `    <a class="nav-link" href="${c.href}">${esc(c.nav)}</a>`).join('\n')}
 ${groups}
     ${infoGroup}
   </nav>
@@ -123,21 +143,27 @@ ${groups}
 }
 
 function footerHtml(facts) {
-  // Compact editorial footer — navigation lives in the header/drawer, not here.
+  // Compact footer mini-sitemap. Every link resolves through NAV_BY_SLUG — the
+  // SAME canonical registry the header consumes — so footer labels/hrefs are
+  // always identical to header navigation and no second URL map can drift.
   // No NAP in the global footer; the verified NAP lives on /lab/lien-he/.
   void facts;
-  const links = [
-    { href: '/lab/lien-he/', nav: 'Liên hệ' },
-    { href: '/lab/chinh-sach-bao-mat/', nav: 'Chính sách bảo mật' },
-    { href: '/lab/dieu-khoan-su-dung/', nav: 'Điều khoản sử dụng' },
-    { href: '/lab/sitemap-index.xml', nav: 'Sitemap' },
-  ];
+  const cols = FOOTER_NAV.map(col => {
+    const items = col.slugs.map(s => {
+      const link = NAV_BY_SLUG[s];
+      return `<li><a href="${link.href}">${esc(link.nav)}</a></li>`;
+    }).join('');
+    return `<div class="foot-col">
+  <p class="foot-label">${esc(col.label)}</p>
+  <ul class="foot-links">${items}</ul>
+</div>`;
+  }).join('\n');
   return `<footer class="site-foot"><div class="wrap">
 <div class="foot-shell glass-footer">
   <div class="foot-top">
     <p class="foot-brand">${BRAND_FULL}</p>
     <p class="foot-desc">Cẩm nang nghiên cứu thực tế về xe máy, hành trình, bảo dưỡng, pháp lý và phương tiện hai bánh tại Việt Nam.</p>
-    <nav class="foot-links-row" aria-label="Liên kết chân trang">${links.map(c => `<a href="${c.href}">${esc(c.nav)}</a>`).join('')}</nav>
+    <nav class="foot-nav" aria-label="Sơ đồ trang">${cols}</nav>
   </div>
   <div class="foot-bottom">
     <p>© ${new Date().getFullYear()} ${BRAND_FULL}</p>
@@ -254,4 +280,4 @@ ${pm ? pm[0].replace(/<\/p>$/, ` · ~${opt.readingMin || '?'} phút đọc</p>`)
   return `${head}${open}${before}${hero}${toc}${rest}${related}${hubCta}${pn}${close}${tail}`;
 }
 
-module.exports = { GROUPS, BRAND_FULL, BRAND_SHORT, EYEBROW, INFO_LINKS, ICON, svg, esc, groupOf, headerHtml, footerHtml, chatbotHtml, decorateArticle };
+module.exports = { GROUPS, BRAND_FULL, BRAND_SHORT, EYEBROW, INFO_LINKS, MAIN_LINKS, NAV_BY_SLUG, FOOTER_NAV, ICON, svg, esc, groupOf, headerHtml, footerHtml, chatbotHtml, decorateArticle };

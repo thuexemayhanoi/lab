@@ -55,12 +55,16 @@ const layout=(title,content,canonical,extra,desc)=>{
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc||title)}">
 <link rel="canonical" href="${canonical}">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(desc||title)}">
+<meta property="og:url" content="${canonical}">
+<meta property="og:type" content="website">
 ${extra||''}
 <link rel="stylesheet" href="/lab/assets/style.css">
 </head>
 <body>
 ${headerHtml()}
-<main class="wrap">${content}</main>
+<main class="wrap" id="main-content">${content}</main>
 ${footerHtml(facts)}
 <script src="/lab/assets/menu.js" defer></script>
 </body>
@@ -72,9 +76,18 @@ fs.mkdirSync(path.join(SITE,'assets'),{recursive:true});
 fs.writeFileSync(path.join(SITE,'assets','style.css'),CSS());
 // inject the canonical shell into archived article pages (body/schema/canonical untouched)
 const SHELL_RE={head:/<header class="site-head">[\s\S]*?<\/header>/,foot:/<footer class="site-foot">[\s\S]*?<\/footer>/};
+// OG metadata derived from the archive's own canonical head (title/description/canonical).
+const ogFor=html=>{
+ const t=(html.match(/<title>([\s\S]*?)<\/title>/)||[])[1]||'';
+ const d=(html.match(/<meta name="description" content="([^"]*)"/)||[])[1]||t;
+ const u=(html.match(/<link rel="canonical" href="([^"]*)"/)||[])[1]||'';
+ return `<meta property="og:title" content="${esc(t)}">\n<meta property="og:description" content="${esc(d)}">\n<meta property="og:url" content="${u}">\n<meta property="og:type" content="article">\n`;
+};
 const withShell=html=>html
  .replace(SHELL_RE.head,headerHtml().replace(/\n\s+/g,'\n  '))
  .replace(SHELL_RE.foot,footerHtml(facts).replace(/\n\s+/g,'\n  '))
+ .replace(/<main(?![^>]*\bid=)/,'<main id="main-content"')
+ .replace('</head>',ogFor(html)+'</head>')
  .replace('</body>','<script src="/lab/assets/menu.js" defer></script>\n</body>');
 // Homepage — SEO super hub: 4 parent groups, crawlable child links + latest articles
 const artCard=(r,label)=>`<li class="card"><a class="article-chip" href="/lab/${r.output_path.split('/')[0]}/">${esc(CLUSTER_VI[r.cluster]||r.cluster)}</a><a class="card-title" href="/lab/${r.output_path}">${esc(titleOf(r))}</a><p class="meta">${esc(descOf(r))}</p><div class="meta"><time datetime="${esc(r.published_date)}">${esc(r.published_date)}</time>${r.province?' · '+esc(r.province):''}</div><a class="read-more" href="/lab/${r.output_path}">Đọc bài →</a></li>`;
@@ -109,7 +122,7 @@ ${hubSections}
 <section class="editorial" aria-label="Giới thiệu về cẩm nang">
 ${editorialBlock(EDIT.home)}
 </section>
-<script src="/lab/assets/search.js"></script>`,cfg.base_url,
+<script src="/lab/assets/search.js" defer></script>`,cfg.base_url,
 `<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"WebSite",name:BRAND_FULL,url:cfg.base_url,inLanguage:'vi'})}</script>`,
 'Hướng dẫn, kinh nghiệm và thông tin thực tế về thuê xe máy, cứu hộ, sửa chữa, bằng lái, đăng ký xe, xe máy điện và phụ tùng tại Việt Nam.');
 fs.writeFileSync(path.join(SITE,'index.html'),home);
@@ -280,16 +293,48 @@ const shards={static:[]};
 published.forEach(r=>{const c=r.cluster.toLowerCase();(shards[c]=shards[c]||[]).push(r);});
 let shardFiles=[];
 Object.entries(shards).forEach(([name,list])=>{
- const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[cfg.base_url].concat(list.map(r=>r.canonical)).map(u=>`<url><loc>${u}</loc></url>`).join('\n')}\n</urlset>`;
+ // Each URL appears in EXACTLY ONE sitemap: category shards own only their own
+ // published canonicals; the static sitemap owns the homepage (see extraUrls).
+ const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${list.map(r=>r.canonical).map(u=>`<url><loc>${u}</loc></url>`).join('\n')}\n</urlset>`;
  const fn='sitemap-'+name+'.xml';
  fs.writeFileSync(path.join(SITE,fn),xml);
  shardFiles.push(fn);
 });
-const extraUrls=[cfg.base_url+'lien-he/',cfg.base_url+'ve-chung-toi/',cfg.base_url+'chinh-sach-bao-mat/',cfg.base_url+'dieu-khoan-su-dung/',...HUBS.map(h=>cfg.base_url+h.slug+'/')];
+const extraUrls=[cfg.base_url,cfg.base_url+'lien-he/',cfg.base_url+'ve-chung-toi/',cfg.base_url+'chinh-sach-bao-mat/',cfg.base_url+'dieu-khoan-su-dung/',...HUBS.map(h=>cfg.base_url+h.slug+'/')];
 fs.writeFileSync(path.join(SITE,'sitemap-static.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${extraUrls.map(u=>`<url><loc>${u}</loc></url>`).join('\n')}\n</urlset>`);
 if(!shardFiles.includes('sitemap-static.xml'))shardFiles.push('sitemap-static.xml');
 fs.writeFileSync(path.join(SITE,'sitemap-index.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${shardFiles.map(f=>`<sitemap><loc>${cfg.base_url+f}</loc></sitemap>`).join('\n')}\n</sitemapindex>`);
 fs.writeFileSync(path.join(SITE,'robots.txt'),`User-agent: *\nAllow: /\nDisallow: /lab/_drafts/\nSitemap: ${cfg.base_url}sitemap-index.xml\n`);
+// 404 page — shared shell, noindex, useful way back. No canonical and no og:url:
+// a 404 must never be indexed or given an alternate representation.
+fs.writeFileSync(path.join(SITE,'404.html'),`<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Không tìm thấy trang — ${esc(BRAND_FULL)}</title>
+<meta name="description" content="Trang bạn tìm không tồn tại hoặc đã được di chuyển.">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="/lab/assets/style.css">
+</head>
+<body>
+${headerHtml()}
+<main class="wrap" id="main-content">
+<section class="hero glass-strong" aria-labelledby="nf-h">
+<p class="eyebrow">LỖI 404</p>
+<h1 id="nf-h">Không tìm thấy trang</h1>
+<p class="lead">Trang bạn tìm không tồn tại hoặc đã được di chuyển. Nội dung của cẩm nang vẫn đủ trên trang chủ và các chuyên mục.</p>
+<div class="cta-row">
+<a class="btn btn-primary" href="/lab/">Về trang chủ</a>
+<a class="btn btn-secondary" href="/lab/thue-xe-may/">Thuê xe máy</a>
+<a class="btn btn-secondary" href="/lab/lien-he/">Liên hệ</a>
+</div>
+</section>
+</main>
+${footerHtml(facts)}
+<script src="/lab/assets/menu.js" defer></script>
+</body>
+</html>`);
 // search index (PUBLISHED only, minimal fields)
 const idx=published.map(r=>({t:r.primary_keyword,d:r.secondary_keywords||r.primary_keyword,c:r.cluster,p:r.province,l:r.locality,poi:r.poi,b:r.brand,m:r.model,v:r.vehicle_type,u:r.output_path}));
 fs.writeFileSync(path.join(SITE,'assets','search-index.json'),JSON.stringify(idx));
@@ -361,7 +406,7 @@ if(fs.existsSync(path.join(ROOT,'reports','experiments','baseline.md')))
 // data/, tests/, docs/, .github/, reports/) are never written. Deterministic: every
 // build regenerates the same deployable root tree.
 fs.writeFileSync(path.join(SITE,'.nojekyll'),'');
-const PUB_FILES=['index.html','robots.txt','.nojekyll','sitemap-index.xml',...shardFiles];
+const PUB_FILES=['index.html','404.html','robots.txt','.nojekyll','sitemap-index.xml',...shardFiles];
 const PUB_DIRS=['assets','thue-xe-may','kinh-nghiem','cuu-ho-xe-may','sua-xe-may','bang-lai-xe-may',
  'dang-ky-xe-may','xe-may-dien','phu-tung','ve-chung-toi','lien-he','chinh-sach-bao-mat',
  'dieu-khoan-su-dung','dia-phuong'];

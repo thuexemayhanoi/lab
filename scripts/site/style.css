@@ -320,11 +320,20 @@ ul.cards{list-style:none;padding:0;display:grid;grid-template-columns:1fr;gap:10
 .foot-top{position:relative;display:flex;flex-direction:column;gap:10px}
 .foot-brand{font-weight:700;color:var(--accent);margin:0;font-size:1rem;letter-spacing:-.01em}
 .foot-desc{color:var(--muted);font-size:.86rem;margin:0;max-width:64ch;line-height:1.6}
-.foot-links-row{display:flex;flex-wrap:wrap;gap:2px 8px;margin-top:2px}
-.foot-links-row a{color:var(--text);text-decoration:none;font-size:.88rem;display:inline-flex;align-items:center;
- min-height:44px;padding:4px 8px 4px 0;transition:color var(--transition-fast)}
-.foot-links-row a:not(:last-child)::after{content:"·";margin-left:8px;color:var(--muted);opacity:.45;font-weight:700}
-.foot-links-row a:hover{color:var(--accent)}
+/* compact footer mini-sitemap — 3 columns desktop, 2 on phones, 1 very narrow;
+   text links only (no icons/descriptions), links wrap and never overflow */
+.foot-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 22px;margin-top:8px}
+.foot-label{margin:0 0 2px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.foot-links{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 14px}
+.foot-links a{color:var(--text);text-decoration:none;font-size:.88rem;display:inline-flex;align-items:center;
+ min-height:44px;padding:4px 14px 4px 0;transition:color var(--transition-fast)}
+.foot-links a:hover{color:var(--accent)}
+@media(max-width:767px){.foot-nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:379px){.foot-nav{grid-template-columns:1fr}}
+/* skip link — keyboard-only bypass, offscreen until focused (no layout shift) */
+.skip-link{position:absolute;left:12px;top:-72px;z-index:120;background:var(--accent);color:#fff;font-weight:700;
+ text-decoration:none;padding:10px 18px;border-radius:0 0 var(--radius-sm) var(--radius-sm);transition:top var(--transition-fast)}
+.skip-link:focus{top:0}
 .foot-bottom{border-top:1px solid var(--hairline);margin-top:12px;padding-top:12px;color:var(--muted);font-size:.85rem;position:relative}
 .foot-bottom p{margin:0 0 3px}
 .fine{font-size:.8rem}
