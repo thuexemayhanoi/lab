@@ -23,9 +23,9 @@ csvText.split('\n').slice(1).filter(l => l.trim()).forEach(l => {
 });
 const cfg = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'site.json'), 'utf8'));
 const facts = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'business-facts.json'), 'utf8'));
-const HUBS = [['thue-xe-may','Thuê xe máy'],['cuu-ho-xe-may','Cứu hộ xe máy'],['sua-xe-may','Sửa chữa & bảo dưỡng'],['bang-lai-xe-may','Bằng lái xe máy'],['dang-ky-xe-may','Đăng ký xe máy'],['xe-may-dien','Xe máy điện'],['phu-tung','Phụ tùng xe máy'],['kinh-nghiem','Kinh nghiệm']];
-const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const nav = HUBS.map(([slug, t]) => `<a href="/lab/${slug}/">${t}</a>`).join('');
+// canonical Liquid Glass shell shared with build-site.js (header/footer/menu)
+const shell = require(path.join(__dirname, '..', 'site', 'shell.js'));
+const esc = shell.esc;
 const firstH1 = b => ((b.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || '');
 const firstP = b => ((b.match(/<p[^>]*>([\s\S]*?)<\/p>/) || [])[1] || '');
 // word-boundary-safe truncation: never cut a Vietnamese word in half
@@ -60,13 +60,10 @@ for (const f of fs.readdirSync(path.join(ROOT, '_drafts'))) {
 <link rel="stylesheet" href="/lab/assets/style.css">
 </head>
 <body>
-<header class="site-head"><div class="wrap"><a class="brand" href="/lab/">Bản Đồ Xe 2 Bánh</a><nav>${nav}<a href="/lab/lien-he/">Liên hệ</a><a href="/lab/ve-chung-toi/">Về chúng tôi</a></nav></div></header>
+${shell.headerHtml()}
 <main class="wrap article">${bodyWithMeta}</main>
-<footer class="site-foot"><div class="wrap">
-<p>${esc(facts.business_name)} — ${esc(facts.location_summary)}</p>
-<p><a href="mailto:${esc(facts.email)}">${esc(facts.email)}</a></p>
-<p class="fine">Trang thông tin nghiên cứu về hệ sinh thái xe máy Việt Nam. Không phải trang dịch vụ toàn quốc.</p>
-</div></footer>
+${shell.footerHtml(facts)}
+<script src="/lab/assets/menu.js" defer></script>
 </body>
 </html>`;
   fs.writeFileSync(path.join(ROOT, '_drafts', id + '.html'), html);
