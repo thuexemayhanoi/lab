@@ -182,7 +182,7 @@ function promoteProduction(){
   published.forEach(r=>{
     if(Number(r.qa_score)<rubric.pass_min)problems.push(r.article_id+' qa='+r.qa_score);
     if(!fs.existsSync(path.join(ROOT,'data','published',r.article_id+'.html')))problems.push(r.article_id+' missing archive');
-    if(!fs.existsSync(path.join(ROOT,'site',r.output_path.replace(/^\//,''),'index.html')))problems.push(r.article_id+' missing public file');
+    if(!fs.existsSync(path.join(ROOT,r.output_path.replace(/^\//,''),'index.html')))problems.push(r.article_id+' missing public file');
   });
   const tx=JSON.parse(fs.readFileSync(path.join(STATE,'transaction.json'),'utf8'));
   if(tx.active)problems.push('active transaction '+tx.id+' — run recover first');
@@ -206,14 +206,15 @@ function consistency(){
     const pk=r.primary_keyword.toLowerCase();
     if(pks.has(pk))errors.push('dup primary_keyword '+r.primary_keyword);pks.add(pk);
     if(r.status==='PUBLISHED'){
-      const f=path.join(ROOT,'site',r.output_path.replace(/^\//,''),'index.html');
+      // Branch Pages: the public tree is the repository root (main / (root)).
+      const f=path.join(ROOT,r.output_path.replace(/^\//,''),'index.html');
       if(!fs.existsSync(f))errors.push('PUBLISHED but no public file: '+r.output_path);
       const a=path.join(ROOT,'data','published',r.article_id+'.html');
       if(!fs.existsSync(a))errors.push('PUBLISHED but no archive: '+r.article_id);
     }
   });
   const draftLeak=[];
-  if(fs.existsSync(path.join(ROOT,'site','_drafts')))draftLeak.push('drafts directory is public!');
+  if(fs.existsSync(path.join(ROOT,'_drafts'))||fs.existsSync(path.join(ROOT,'site','_drafts')))draftLeak.push('drafts directory is public!');
   console.log(errors.length?'CONSISTENCY FAIL\n'+errors.join('\n'):'CONSISTENCY PASS: '+rows.length+' rows, all unique, no leaks.');
   process.exitCode = errors.length||draftLeak.length?1:0;
 }

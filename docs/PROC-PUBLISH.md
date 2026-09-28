@@ -19,7 +19,7 @@ Publishing is deterministic and reversible-safe.
 
 ## PUBLISHED means (all must hold — consistency checks enforce)
 
-- public file exists under `site/`
+- public file exists at the repository root `<output_path>index.html` (promoted from `site/` by `scripts/site/build-site.js`)
 - canonical correct
 - matrix row status PUBLISHED
 - URL present in the correct sitemap shard
