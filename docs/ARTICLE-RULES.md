@@ -46,6 +46,16 @@ No fabricated promises in titles or meta descriptions.
   (see `config/business-facts.json` + `docs/SEO-OWNERSHIP.md`).
 - Do not imply the lab is an authorized dealer of any brand.
 
+## Editorial presentation (semantic markup — presentation is NOT the writer's job)
+
+Writers write semantic HTML only; the shared editorial design system
+(`scripts/site/style.css` + `scripts/site/shell.js decorateArticle`) supplies
+all presentation for published AND future articles. Use the documented
+components (`quick`, `key-points`, `note`, `warning`, `ol.steps`,
+`ul.checklist`, plain `<table>`, `details.faq`, `div.sources`) when they fit —
+see `docs/EDITORIAL-SYSTEM.md`. Never inline `<style>`, never invent one-off
+wrapper classes, never hand-patch generated pages.
+
 ## Anti-doorway rule
 
 A page whose only difference from another is a place name is forbidden.

@@ -30,6 +30,9 @@ XE MÁY ĐIỆN (electric) · PHỤ TÙNG (parts).
 6. `docs/GEO-LOCAL-SEO.md` — geography & local-intent model
 7. `docs/PROC-RESEARCH.md`, `docs/PROC-QA.md`, `docs/PROC-PUBLISH.md`, `docs/PROC-RECOVERY.md`
 8. `docs/EXPERIMENT-METRICS.md` — measurement plan
+9. `docs/EDITORIAL-SYSTEM.md` — shared editorial design system (writers write
+   semantic markup only; presentation lives in `scripts/site/style.css`,
+   `scripts/site/menu.js`, `scripts/site/shell.js`)
 
 ## Hard rules (violations = QA critical failure)
 
