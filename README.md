@@ -16,7 +16,7 @@ xe máy điện, hãng/model, phụ tùng.
 node scripts/factory/factory.js status       # also assembles the matrix
 node scripts/factory/factory.js consistency
 node --test tests/test-suite.js
-node scripts/site/build-site.js              # build public site into site/
+node scripts/site/build-site.js              # build site/ then promote public outputs to repo root
 ```
 
 ## Repository layout

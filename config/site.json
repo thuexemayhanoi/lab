@@ -4,5 +4,5 @@
   "language": "vi",
   "locale_prefix": "/lab/",
   "generator": "scripts/site/build-site.js",
-  "notes": "Static GitHub Pages site. Public URL = base_url. Deploy via .github/workflows/deploy.yml."
+  "notes": "Static GitHub Pages site. Public URL = base_url. Pages deploys from branch main / (root); scripts/site/build-site.js builds site/ and promotes public outputs to the repository root."
 }

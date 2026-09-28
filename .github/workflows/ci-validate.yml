@@ -1,0 +1,31 @@
+# ci-validate — non-Pages validation only. Pages is served from branch main / (root).
+# This workflow never touches Pages: no pages/id-token permissions, no artifacts.
+name: ci-validate
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Assemble matrix + status
+        run: node scripts/factory/factory.js status
+      - name: Consistency check
+        run: node scripts/factory/factory.js consistency
+      - name: Tests
+        run: node --test tests/test-suite.js
+      - name: Build (regenerates site/ and idempotently promotes public outputs to root)
+        run: node scripts/site/build-site.js

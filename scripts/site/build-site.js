@@ -299,7 +299,28 @@ fs.copyFileSync(path.join(ROOT,'scripts','site','chatbot-worker.js'),path.join(S
 fs.mkdirSync(path.join(SITE,'reports','experiments'),{recursive:true});
 if(fs.existsSync(path.join(ROOT,'reports','experiments','baseline.md')))
  fs.copyFileSync(path.join(ROOT,'reports','experiments','baseline.md'),path.join(SITE,'reports','experiments','baseline.md'));
+// ---------- branch-pages promotion: public build outputs -> repository root ----------
+// Pages is served from branch main / (root). site/ is a LOCAL, GITIGNORED intermediate.
+// Only explicit public outputs are promoted; source directories (scripts/, config/,
+// data/, tests/, docs/, .github/, reports/) are never written. Deterministic: every
+// build regenerates the same deployable root tree.
+fs.writeFileSync(path.join(SITE,'.nojekyll'),'');
+const PUB_FILES=['index.html','robots.txt','.nojekyll','sitemap-index.xml',...shardFiles];
+const PUB_DIRS=['assets','thue-xe-may','kinh-nghiem','cuu-ho-xe-may','sua-xe-may','bang-lai-xe-may',
+ 'dang-ky-xe-may','xe-may-dien','phu-tung','ve-chung-toi','lien-he','chinh-sach-bao-mat',
+ 'dieu-khoan-su-dung','dia-phuong'];
+const SRC_GUARD=new Set(['scripts','config','data','tests','docs','.github','reports','_drafts']);
+let promoted=0;
+const promoteFile=rel=>{ fs.mkdirSync(path.dirname(path.join(ROOT,rel)),{recursive:true});
+ fs.copyFileSync(path.join(SITE,rel),path.join(ROOT,rel)); promoted++; };
+const promoteDir=dir=>{ (function walk(rel){ fs.readdirSync(path.join(SITE,rel),{withFileTypes:true}).forEach(e=>{
+ const r=rel?rel+'/'+e.name:e.name;
+ if(e.isDirectory()){ if(SRC_GUARD.has(e.name)) throw new Error('promotion guard hit source dir: '+r); walk(r); }
+ else promoteFile(r); }); })(dir); };
+PUB_FILES.forEach(f=>{ if(fs.existsSync(path.join(SITE,f))) promoteFile(f); });
+PUB_DIRS.forEach(d=>{ if(fs.existsSync(path.join(SITE,d))) promoteDir(d); });
 console.log('SITE BUILT. published='+published.length+' shards='+shardFiles.join(','));
+console.log('ROOT PROMOTED: '+promoted+' public files mirrored to repository root (branch Pages: main / (root)).');
 
 // ---------- premium editorial stylesheet (deterministic) ----------
 function CSS(){return `:root{

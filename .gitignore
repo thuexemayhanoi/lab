@@ -4,10 +4,10 @@ _drafts/
 # Assembled matrix (canonical form = 4 shards data/content-matrix.csv.part00..03)
 data/content-matrix.csv
 
-# Local build output of committed artifacts is regenerated, but site/ IS committed
-# (site/ is the Pages artifact — keep it)
+# Local build intermediate — public outputs are promoted to repository root by
+# scripts/site/build-site.js (branch Pages: main / (root)); root tree is committed.
+site/
 
 node_modules/
 .DS_Store
 *.log
-# brand: Bản Đồ Xe 2 Bánh Việt Nam

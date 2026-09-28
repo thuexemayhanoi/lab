@@ -7,7 +7,26 @@ const assert = require('node:assert');
 const fs = require('fs'), path = require('path');
 const ROOT = path.join(__dirname, '..');
 const DATA = path.join(ROOT, 'data');
-const SITE = path.join(ROOT, 'site');
+// Branch Pages architecture: the public tree is the REPOSITORY ROOT (main / (root)).
+// site/ is a gitignored local intermediate. Source directories are never public
+// output and are excluded from public walks.
+const SITE = ROOT;
+const SRC_TOP = new Set(['.git', '.github', '.gitignore', 'AGENTS.md', 'README.md', 'node_modules',
+  'scripts', 'config', 'data', 'tests', 'docs', 'site', 'reports', '_drafts']);
+// Every file served by Pages (repository root public outputs).
+function publicFiles() {
+  const out = [];
+  for (const e of fs.readdirSync(ROOT)) {
+    if (SRC_TOP.has(e)) continue;
+    const p = path.join(ROOT, e);
+    if (fs.statSync(p).isDirectory()) (function walk(d){fs.readdirSync(d,{withFileTypes:true}).forEach(x=>{const q=path.join(d,x.name);x.isDirectory()?walk(q):out.push(q);});})(p);
+    else out.push(p);
+  }
+  // single public report URL — source file doubles as public output
+  const bl = path.join(ROOT, 'reports', 'experiments', 'baseline.md');
+  if (fs.existsSync(bl)) out.push(bl);
+  return out;
+}
 
 // ---- assemble matrix from parts (canonical) ----
 const partFiles = fs.readdirSync(DATA).filter(f => /^content-matrix\.csv\.part/.test(f)).sort();
@@ -142,8 +161,9 @@ test('truth: footer NAP has no street address and no phone', () => {
   assert.ok(!/0\d{9,10}/.test(foot), 'phone number in footer');
   assert.ok(foot.includes(facts.location_summary), 'location summary missing');
 });
-test('draft safety: no drafts directory under site/', () => {
-  assert.ok(!fs.existsSync(path.join(SITE, '_drafts')));
+test('draft safety: no drafts directory in the public tree', () => {
+  assert.ok(!fs.existsSync(path.join(ROOT, '_drafts')), 'drafts directory at repository root');
+  assert.ok(publicFiles().every(f => !f.includes('_drafts')), 'drafts leaked into public root tree');
 });
 
 // ---------- POLICY PAGES / SHELL SEMANTICS ----------
@@ -166,8 +186,7 @@ test('shell: no emoji menu icons; parent groups are buttons; utility anchors rea
   assert.ok(!/javascript:void\(0\)/.test(home), 'javascript:void(0) in shell');
 });
 test('urls: every built internal href resolves to a real file; one H1 per page', () => {
-  const files = [];
-  (function walk(d){fs.readdirSync(d,{withFileTypes:true}).forEach(e=>{const p=path.join(d,e.name);e.isDirectory()?walk(p):files.push(p);});})(SITE);
+  const files = publicFiles();
   const targets = new Set();
   files.forEach(f => {
     const t = fs.readFileSync(f, 'utf8');
@@ -178,13 +197,13 @@ test('urls: every built internal href resolves to a real file; one H1 per page',
   });
   targets.forEach(h => {
     const p = h.replace(/^\/lab\//, '').replace(/\/$/, '');
-    const ok = !p || fs.existsSync(path.join(SITE, p, 'index.html')) || fs.existsSync(path.join(SITE, p));
+    const ok = !p || fs.existsSync(path.join(ROOT, p, 'index.html')) || fs.existsSync(path.join(ROOT, p));
     assert.ok(ok, 'unresolved internal href ' + h);
   });
 });
 
 // ---------- SITEMAP / SEARCH ----------
-const sitemapFiles = () => fs.readdirSync(SITE).filter(f => /^sitemap-.*\.xml$/.test(f));
+const sitemapFiles = () => fs.readdirSync(ROOT).filter(f => /^sitemap-.*\.xml$/.test(f));
 const sitemapUrls = () => {
   const urls = new Set();
   sitemapFiles().forEach(f => {
@@ -231,9 +250,7 @@ test('research: official-source rows cite at least one official source', () => {
 
 // ---------- URL HYGIENE / READER UX ----------
 test('urls: no double-slash /lab// in any built page or search index', () => {
-  const files = [];
-  (function walk(d){fs.readdirSync(d,{withFileTypes:true}).forEach(e=>{const p=path.join(d,e.name);e.isDirectory()?walk(p):files.push(p);});})(SITE);
-  files.forEach(f => {
+  publicFiles().forEach(f => {
     const t = fs.readFileSync(f,'utf8');
     assert.ok(!t.includes('/lab//'), 'double slash in ' + f);
     assert.ok(!t.includes('github.io/lab//'), 'double slash canonical in ' + f);
@@ -249,9 +266,7 @@ test('homepage: no internal QA scores exposed to readers', () => {
 test('chatbot: assets generated and launcher present on every built page', () => {
   ['chatbot.js','chatbot-worker.js','knowledge-index.json'].forEach(a =>
     assert.ok(fs.existsSync(path.join(SITE,'assets',a)), 'missing asset ' + a));
-  const htmlFiles = [];
-  (function walk(d){fs.readdirSync(d,{withFileTypes:true}).forEach(e=>{const p=path.join(d,e.name);
-    e.isDirectory()?walk(p):(e.name.endsWith('.html')&&htmlFiles.push(p));});})(SITE);
+  const htmlFiles = publicFiles().filter(f => f.endsWith('.html'));
   assert.ok(htmlFiles.length >= 20, 'too few built pages');
   htmlFiles.forEach(f => {
     const t = fs.readFileSync(f,'utf8');
@@ -307,4 +322,45 @@ test('chatbot: privacy page discloses local AI behavior truthfully', () => {
   assert.ok(!/100% offline/.test(t), 'privacy overclaims offline behavior');
   // the "no network request" wording may only appear inside an explicit non-guarantee
   assert.ok(!/cam kết ["']?không có bất kỳ yêu cầu mạng nào["']?(?!.*không cam kết)/.test(t) || /không cam kết/.test(t), 'privacy guarantees zero network');
+});
+
+// ---------- BRANCH PAGES: repository root is the deployable public tree ----------
+test('branch-pages: root public tree exists (index.html, assets/style.css, .nojekyll)', () => {
+  assert.ok(fs.existsSync(path.join(ROOT,'index.html')), 'root index.html missing');
+  assert.ok(fs.existsSync(path.join(ROOT,'assets','style.css')), 'root assets/style.css missing');
+  assert.ok(fs.existsSync(path.join(ROOT,'.nojekyll')), 'root .nojekyll missing');
+  assert.ok(fs.existsSync(path.join(ROOT,'robots.txt')) && fs.existsSync(path.join(ROOT,'sitemap-index.xml')), 'root robots/sitemap missing');
+});
+test('branch-pages: root hubs and policy pages exist', () => {
+  ['thue-xe-may','kinh-nghiem','cuu-ho-xe-may','sua-xe-may','bang-lai-xe-may','dang-ky-xe-may','xe-may-dien','phu-tung',
+   've-chung-toi','lien-he','chinh-sach-bao-mat','dieu-khoan-su-dung'].forEach(h =>
+    assert.ok(fs.existsSync(path.join(ROOT,h,'index.html')), 'root hub/policy page missing: ' + h));
+  published.forEach(r => assert.ok(fs.existsSync(path.join(ROOT, r.output_path.replace(/\/$/,''), 'index.html')),
+    'root article page missing: ' + r.article_id));
+});
+test('branch-pages: no canonical or href references /lab/site/ (single public tree)', () => {
+  publicFiles().forEach(f => {
+    const t = fs.readFileSync(f,'utf8');
+    if (f.endsWith('.html')) {
+      assert.ok(!/href="\/lab\/site\//.test(t), 'href points into /lab/site/: ' + f);
+      assert.ok(!/rel="canonical" href="[^"]*\/lab\/site\//.test(t), 'canonical points into /lab/site/: ' + f);
+    }
+    if (f.endsWith('.xml')) assert.ok(!/\/lab\/site\//.test(t), 'sitemap references /lab/site/: ' + f);
+  });
+});
+test('branch-pages: exactly one Pages publisher — no Pages-permissions workflow remains', () => {
+  const wf = path.join(ROOT,'.github','workflows');
+  const files = fs.readdirSync(wf).filter(f => f.endsWith('.yml') || f.endsWith('.yaml'));
+  assert.ok(files.length >= 1, 'no workflows found');
+  files.forEach(f => {
+    const t = fs.readFileSync(path.join(wf,f),'utf8');
+    assert.ok(!/upload-pages-artifact|deploy-pages/.test(t), 'Pages deployment action in ' + f);
+    assert.ok(!/pages:\s*write|id-token:\s*write/.test(t), 'Pages/id-token permission in ' + f);
+  });
+});
+test('branch-pages: factory state intact (PRODUCTION, 10,000 rows, published count)', () => {
+  const st = JSON.parse(fs.readFileSync(path.join(DATA,'state','checkpoint.json'),'utf8'));
+  assert.strictEqual(st.phase, 'PRODUCTION');
+  assert.strictEqual(rows.length, 10000);
+  assert.strictEqual(published.length, 10);
 });
