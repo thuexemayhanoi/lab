@@ -65,34 +65,110 @@ ${extra||''}
 fs.rmSync(SITE,{recursive:true,force:true});
 fs.mkdirSync(SITE,{recursive:true});
 fs.mkdirSync(path.join(SITE,'assets'),{recursive:true});
-fs.writeFileSync(path.join(SITE,'assets','style.css'),`:root{--ink:#1a202c;--mut:#5a6572;--line:#e2e8f0;--acc:#0b5c3b}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);line-height:1.7}
+fs.writeFileSync(path.join(SITE,'assets','style.css'),`:root{--bg:#f4f7f5;--text:#182230;--muted:#52606d;--accent:#0b5c3b;--accent-soft:rgba(11,92,59,.12);
+--glass:rgba(255,255,255,.62);--glass-strong:rgba(255,255,255,.8);--glass-border:rgba(255,255,255,.65);--hairline:rgba(24,34,48,.08);
+--radius:18px;--radius-lg:24px;--blur:14px;--shadow:0 1px 2px rgba(24,34,48,.05),0 8px 24px -12px rgba(24,34,48,.14);
+--shadow-lift:0 2px 4px rgba(24,34,48,.06),0 14px 34px -12px rgba(24,34,48,.2)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--text);line-height:1.7;
+background:var(--bg) radial-gradient(700px 420px at 12% -4%,rgba(120,190,150,.14),transparent 60%) no-repeat,
+radial-gradient(760px 480px at 100% 0%,rgba(120,170,220,.11),transparent 55%) no-repeat,
+radial-gradient(900px 620px at 50% 108%,rgba(120,190,150,.08),transparent 60%) no-repeat;
+background-attachment:fixed;color-scheme:light}
 .wrap{max-width:860px;margin:0 auto;padding:0 16px}
-.site-head{border-bottom:1px solid var(--line);padding:14px 0}
-.brand{font-weight:700;color:var(--acc);text-decoration:none;font-size:1.15rem}
-nav{margin-top:6px;display:flex;flex-wrap:wrap;gap:12px}nav a{color:var(--mut);text-decoration:none;font-size:.95rem}
-main{padding:24px 0;overflow-wrap:break-word}h1{line-height:1.25;font-size:1.7rem}h2{margin-top:1.6em;line-height:1.3}h3{line-height:1.35}
-a{color:var(--acc)}
-.lead{font-size:1.05rem;color:#2d3748}
-.postmeta{color:var(--mut);font-size:.85rem;margin-bottom:16px}
-.site-foot{border-top:1px solid var(--line);padding:20px 0;color:var(--mut);font-size:.9rem}
+/* Liquid Glass floating header (works with archived article markup too) */
+.site-head{position:sticky;top:10px;z-index:40;padding:0 10px}
+.site-head .wrap{max-width:900px;padding:0}
+.glass-nav,.site-head nav,.site-head .brand{background:0 0}
+.site-head>div{background:var(--glass);border:1px solid var(--glass-border);outline:1px solid var(--hairline);
+border-radius:16px;box-shadow:var(--shadow);backdrop-filter:blur(var(--blur)) saturate(1.5);-webkit-backdrop-filter:blur(var(--blur)) saturate(1.5);
+padding:12px 18px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}
+@supports not ((backdrop-filter:blur(2px)) or (-webkit-backdrop-filter:blur(2px))){.site-head>div{background:rgba(255,255,255,.96)}}
+.site-head::after{content:"";display:block;height:0}
+.brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.1rem;letter-spacing:-.01em}
+.site-head nav{display:flex;flex-wrap:wrap;gap:4px 14px;margin:0}
+nav a{color:var(--muted);text-decoration:none;font-size:.92rem;padding:4px 2px;border-radius:8px;transition:color .18s}
+nav a:hover{color:var(--accent)}
+main{padding:28px 0 40px;overflow-wrap:break-word}
+h1{line-height:1.22;font-size:1.75rem;letter-spacing:-.015em}
+h2{margin-top:1.7em;line-height:1.3;font-size:1.3rem;letter-spacing:-.01em}
+h3{line-height:1.35;font-size:1.08rem}
+h1,h2,h3{scroll-margin-top:86px}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+/* Glass surface primitives */
+.glass{background:var(--glass);border:1px solid var(--glass-border);outline:1px solid var(--hairline);
+border-radius:var(--radius);box-shadow:var(--shadow);backdrop-filter:blur(var(--blur)) saturate(1.4);-webkit-backdrop-filter:blur(var(--blur)) saturate(1.4)}
+@supports not ((backdrop-filter:blur(2px)) or (-webkit-backdrop-filter:blur(2px))){.glass,.hero{background:rgba(255,255,255,.95)}}
+/* Homepage hero */
+.hero{position:relative;padding:28px 24px 24px;margin-top:8px;border-radius:var(--radius-lg);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0 0 auto 0;height:64px;border-radius:var(--radius-lg) var(--radius-lg) 0 0;
+background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(255,255,255,0));pointer-events:none}
+.hero::after{content:"";position:absolute;top:-36%;left:-12%;width:52%;height:120%;transform:rotate(18deg);pointer-events:none;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent)}
+.eyebrow{margin:0 0 6px;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.lead{font-size:1.05rem;color:#2b3a49;margin:.4em 0 1.2em}
+.hero .searchbox{margin-top:6px}
+.postmeta{color:var(--muted);font-size:.85rem;margin-bottom:18px}
+.site-foot{padding:24px 0 32px;color:var(--muted);font-size:.9rem}
+.site-foot .wrap{border-top:1px solid var(--hairline);padding-top:18px}
 .fine{font-size:.8rem}
-.breadcrumb{font-size:.85rem;color:var(--mut);margin-bottom:8px}
-table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}th,td{border:1px solid var(--line);padding:8px;text-align:left}
-.quick{background:#f0fdf4;border-left:4px solid var(--acc);padding:12px 16px;margin:16px 0}
-ul.cards{list-style:none;padding:0}ul.cards li{border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:8px 0}
-@media(min-width:640px){ul.cards{display:grid;grid-template-columns:1fr 1fr;gap:8px}ul.cards li{margin:0}}
-.card a{font-weight:600;text-decoration:none}.card .meta{color:var(--mut);font-size:.85rem}
-.searchbox{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font-size:1rem}
+/* Breadcrumb: quiet translucent pill */
+.breadcrumb{font-size:.83rem;color:var(--muted);margin:0 0 14px;display:inline-block;background:rgba(255,255,255,.55);
+border:1px solid var(--glass-border);border-radius:999px;padding:4px 12px}
+@supports ((backdrop-filter:blur(2px)) or (-webkit-backdrop-filter:blur(2px))){.breadcrumb{backdrop-filter:blur(8px)}}
+/* Tables: responsive glass container */
+table{border-collapse:collapse;width:100%;display:block;overflow-x:auto;border-radius:12px}
+th,td{border:1px solid var(--hairline);padding:9px 12px;text-align:left;background:rgba(255,255,255,.6)}
+th{background:rgba(255,255,255,.85);font-weight:600}
+/* Quick-answer: Liquid Glass accent panel */
+.quick{position:relative;background:linear-gradient(180deg,rgba(236,250,242,.92),rgba(255,255,255,.8));
+border:1px solid rgba(11,92,59,.16);border-left:4px solid var(--accent);border-radius:14px;padding:14px 18px;margin:18px 0;
+box-shadow:0 4px 16px -8px rgba(11,92,59,.18)}
+blockquote{margin:1.2em 0;padding:10px 18px;border-left:3px solid var(--accent);background:rgba(255,255,255,.6);border-radius:0 12px 12px 0}
+/* Cards */
+ul.cards{list-style:none;padding:0;display:grid;grid-template-columns:1fr;gap:10px}
+.card{position:relative;border-radius:var(--radius);padding:16px 18px;background:var(--glass);
+border:1px solid var(--glass-border);outline:1px solid var(--hairline);box-shadow:var(--shadow);
+backdrop-filter:blur(10px) saturate(1.4);-webkit-backdrop-filter:blur(10px) saturate(1.4);
+transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:40%;border-radius:var(--radius) var(--radius) 0 0;
+background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,0));pointer-events:none}
+@supports not ((backdrop-filter:blur(2px)) or (-webkit-backdrop-filter:blur(2px))){.card{background:rgba(255,255,255,.94)}}
+.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lift);border-color:rgba(11,92,59,.22)}
+.card a{font-weight:600;text-decoration:none}
+.card .meta{color:var(--muted);font-size:.85rem;margin-top:4px}
+@media(min-width:640px){ul.cards{grid-template-columns:1fr 1fr}}
+/* Article reading surface: glass outer, highly readable text */
+.wrap.article,.article .wrap{margin-top:8px;padding:26px 22px 30px;border-radius:var(--radius-lg);
+background:var(--glass-strong);border:1px solid var(--glass-border);outline:1px solid var(--hairline);
+box-shadow:var(--shadow);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+@supports not ((backdrop-filter:blur(2px)) or (-webkit-backdrop-filter:blur(2px))){.wrap.article,.article .wrap{background:rgba(255,255,255,.97)}}
+.article h1,.wrap.article h1{margin-top:0}
+article p,main p{font-size:1.0625rem;line-height:1.78}
+/* Search */
+.searchbox{width:100%;padding:12px 16px;font-size:1rem;color:var(--text);border-radius:999px;
+border:1px solid var(--glass-border);outline:1px solid var(--hairline);background:rgba(255,255,255,.72);
+box-shadow:inset 0 1px 2px rgba(24,34,48,.05),var(--shadow);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+transition:box-shadow .18s ease,border-color .18s ease}
+.searchbox::placeholder{color:var(--muted)}
+.searchbox:focus{outline:none;border-color:rgba(11,92,59,.45);box-shadow:0 0 0 3px rgba(11,92,59,.18),var(--shadow)}
+#search-results{margin-top:10px}
 #search-results li{margin:6px 0}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.card:hover,.searchbox:focus{transform:none}}
 `);
 // Homepage
 const hqCards=published.map(r=>`<li class="card"><a href="/lab/${r.output_path}">${esc(titleOf(r))}</a><p class="meta">${esc(descOf(r))}</p><div class="meta"><time datetime="${esc(r.published_date)}">${esc(r.published_date)}</time> · ${esc(CLUSTER_VI[r.cluster]||r.cluster)}</div></li>`).join('\n');
 const home=layout('Việt Nam Motorbike SEO Lab — hướng dẫn xe máy Việt Nam',`
+<section class="hero glass">
+<p class="eyebrow">Motorbike Knowledge Lab</p>
 <h1>Việt Nam Motorbike SEO Lab</h1>
 <p class="lead">Blog thông tin về hệ sinh thái xe máy Việt Nam: hướng dẫn <strong>thuê xe máy</strong>, cứu hộ khi gặp sự cố, sửa chữa &amp; bảo dưỡng, bằng lái, đăng ký xe, xe máy điện và phụ tùng — viết từ nghiên cứu thực tế, cập nhật theo quy định hiện hành.</p>
 <input id="q" class="searchbox" type="search" placeholder="Tìm bài viết… (ví dụ: thuê xe máy Hà Nội)" oninput="doSearch(this.value)">
 <ul id="search-results"></ul>
+</section>
 <h2>Chủ đề</h2>
 <ul class="cards">${HUBS.map(h=>`<li class="card"><a href="/lab/${h.slug}/">${h.title}</a><div class="meta">${h.desc}</div></li>`).join('')}</ul>
 <h2>Bài viết mới</h2>
