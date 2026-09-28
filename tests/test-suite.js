@@ -162,7 +162,10 @@ test('footer: compact mini-sitemap derives from the canonical nav registry (head
   const foot = footOf(home);
   const header = home.slice(0, home.indexOf('</header>'));
   shell.FOOTER_NAV.forEach(col => {
-    assert.ok(foot.includes('class="foot-label">' + shell.esc(col.label) + '<'), 'footer column missing: ' + col.label);
+    // group label carries a small icon from the SAME inline-SVG system the header uses
+    assert.ok(foot.includes('class="foot-label"><span class="foot-label-ico">' + shell.svg(col.icon) + '</span>' + shell.esc(col.label)),
+      'footer column missing icon+label: ' + col.label);
+    assert.ok(shell.ICON[col.icon], 'footer group icon not in the canonical ICON set: ' + col.icon);
     col.slugs.forEach(s => {
       const link = shell.NAV_BY_SLUG[s];
       assert.ok(link, 'footer slug not in canonical registry: ' + s);
@@ -198,16 +201,27 @@ test('footer: no second hardcoded nav URL map — footer resolves through NAV_BY
   assert.strictEqual((foot.match(/<li><a href=/g) || []).length, expected,
     'footer link count != registry size (second link source?)');
 });
-test('footer: compact — no descriptions, no icons, no drawer/dropdown, no NAP; sitemap + copyright retained', () => {
+test('footer: compact — group-label icons only (canonical SVG system), no descriptions/dropdown/NAP; short brand + copyright retained', () => {
   const foot = footOf(fs.readFileSync(path.join(SITE, 'index.html'), 'utf8'));
   assert.ok(!foot.includes('dd-desc'), 'category descriptions leaked into footer');
-  assert.ok(!foot.includes('dd-icon'), 'icons leaked into footer');
+  assert.ok(!foot.includes('dd-icon'), 'header dropdown icons leaked into footer');
   assert.ok(!foot.includes('dropdown') && !foot.includes('drawer'), 'header widgets leaked into footer');
   assert.ok(!foot.includes('href="tel:') && !foot.includes('mailto:'), 'NAP contact leaked into footer');
   assert.ok(!/\d{2}\s*(Nguyễn|Trần|Lê|Phạm|Phố|Đường)/.test(foot), 'street address in footer');
   assert.ok(!/0\d{9,10}/.test(foot), 'phone number in footer');
+  // owner decision: footer displays the SHORT brand only
+  assert.ok(/class="foot-brand">Bản Đồ Xe 2 Bánh</.test(foot), 'footer brand must be the short brand');
+  assert.ok(!foot.includes(shell.BRAND_FULL), 'long brand must not appear in the footer');
+  assert.ok(/© \d{4} Bản Đồ Xe 2 Bánh</.test(foot), 'copyright must use the short brand');
+  assert.ok(foot.includes('Cẩm nang nghiên cứu thực tế về xe máy, hành trình, bảo dưỡng, pháp lý và phương tiện hai bánh tại Việt Nam.'),
+    'footer tagline must be unchanged');
+  // group-label icons must come from the shell SVG system (no second icon source)
+  shell.FOOTER_NAV.forEach(col => {
+    assert.ok(shell.ICON[col.icon], 'footer icon outside canonical ICON set: ' + col.icon);
+    assert.ok(foot.includes('<span class="foot-label-ico">' + shell.svg(col.icon)), 'footer label icon missing: ' + col.icon);
+    assert.ok(!/<img/.test(foot), 'footer must not load external images');
+  });
   assert.ok(foot.includes('/lab/sitemap-index.xml'), 'sitemap link missing from footer');
-  assert.ok(/© \d{4} /.test(foot), 'copyright line missing');
   assert.ok(foot.includes('Dữ liệu &amp; nội dung được biên tập theo nguồn đã kiểm chứng.'),
     'verified-source sentence missing from footer');
 });
@@ -573,24 +587,60 @@ test('design: published articles render the shared editorial chrome, no one-off 
 });
 
 // ---------- CHATBOT COMPACT/MOBILE-FIRST CONTRACT ----------
-test('chatbot: navy subsystem identity + bounded panel + compact bottom sheet on mobile', () => {
+test('chatbot: navy subsystem identity + responsive AI panel (desktop / tablet / mobile bottom sheet)', () => {
   const css = fs.readFileSync(path.join(SITE, 'assets', 'style.css'), 'utf8');
+  const t = fs.readFileSync(path.join(SITE, 'index.html'), 'utf8');
   assert.ok(css.includes('--chat-bg:#0F172A'), 'chatbot navy tokens missing');
-  assert.ok(css.includes('width:min(400px,calc(100vw - 32px))'), 'desktop panel width not bounded');
-  const sheet = css.match(/@media\(max-width:767px\)\{[\s\S]*?\.chat-panel\{[^}]*border-radius:24px 24px 0 0/);
-  assert.ok(sheet, 'mobile bottom-sheet rule missing for .chat-panel');
   assert.ok(/--chat-vh,100dvh/.test(css), 'dynamic viewport height fallback missing');
-  // mobile: sheet never exceeds ~78dvh (not full screen) and shrinks with the keyboard
-  assert.ok(/max-height:min\(calc\(var\(--chat-vh,100dvh\)\*\.76\),78dvh\)/.test(css), 'mobile sheet height not capped');
+  // DESKTOP: large comfortable panel 440–520px wide, 620–760px tall, viewport-capped
+  assert.ok(/\.chat-panel\{[^}]*width:clamp\(440px,34vw,520px\)/.test(css), 'desktop width must clamp to 440–520px');
+  assert.ok(/\.chat-panel\{[^}]*height:clamp\(620px,72dvh,760px\)/.test(css), 'desktop height must clamp to 620–760px');
+  assert.ok(/\.chat-panel\{[^}]*max-width:calc\(100vw - 32px\)/.test(css), 'desktop panel must not overflow narrow viewports');
+  assert.ok(/\.chat-panel\{[^}]*max-height:calc\(var\(--chat-vh,100dvh\) - 48px\)/.test(css), 'desktop panel must be capped to the viewport');
+  // TABLET: its OWN centered layout (not a shrunk desktop panel): 70–85vw wide, 70–82dvh tall
+  const tablet = css.match(/@media\(min-width:768px\) and \(max-width:1023px\)\{[\s\S]*?\n\}/);
+  assert.ok(tablet, 'tablet breakpoint block missing');
+  assert.ok(/\.chat-panel\{left:50%;right:auto;transform:translateX\(-50%\)/.test(tablet[0]), 'tablet panel must be centered');
+  assert.ok(/width:min\(85vw,520px\)/.test(tablet[0]), 'tablet width must be 70–85vw with a sane max-width');
+  assert.ok(/height:min\(82dvh,720px\)/.test(tablet[0]), 'tablet height must be 70–82dvh');
+  // MOBILE: LARGE bottom sheet — near full width (8–12px margins honoring safe areas),
+  // 82–92dvh tall, rounded top corners, never 100vh
+  const mobile = css.match(/@media\(max-width:767px\)\{[\s\S]*?\.chat-panel\{[\s\S]*?border-bottom:0/);
+  assert.ok(mobile, 'mobile bottom-sheet rule missing for .chat-panel');
+  assert.ok(/left:max\(10px,env\(safe-area-inset-left,0px\)\)/.test(mobile[0]), 'mobile sheet must honor left safe area');
+  assert.ok(/right:max\(10px,env\(safe-area-inset-right,0px\)\)/.test(mobile[0]), 'mobile sheet must honor right safe area');
+  assert.ok(/height:min\(88dvh,calc\(var\(--chat-vh,100dvh\) - 10px\)\)/.test(mobile[0]), 'mobile sheet must be 82–92dvh');
+  assert.ok(/border-radius:22px 22px 0 0/.test(mobile[0]), 'mobile sheet must round only the top corners');
+  assert.ok(/body\.chat-open\{overflow:hidden\}/.test(mobile[0]), 'mobile must lock body scroll while sheet is open (no double scroll)');
   assert.ok(css.includes('.chat-handle'), 'bottom-sheet handle missing');
-  // compact composer: 16px textarea (no iOS zoom), max 3–4 lines, safe-area aware
+  // composer: 16px textarea (no iOS zoom), bounded auto-grow, safe-area aware on mobile
   assert.ok(/\.chat-input textarea\{[^}]*font-size:16px/.test(css), 'textarea must be 16px to avoid iOS zoom');
   assert.ok(/\.chat-input textarea\{[^}]*max-height:96px/.test(css), 'auto-grow max height not bounded');
-  assert.ok(/\.chat-input\{[^}]*safe-area-inset-bottom/.test(css.slice(css.indexOf('.chat-input{'))) || /chat-input\{padding:8px 8px calc/.test(css), 'composer not safe-area aware on mobile');
-  assert.ok(css.includes('.chat-msg{max-width:92%'), 'bubbles not width-bounded');
-  // title never truncated prematurely on narrow viewports; subtitle hides only when very narrow
+  assert.ok(/\.chat-input\{padding:8px 10px calc\(10px \+ env\(safe-area-inset-bottom,0px\)\)/.test(css),
+    'composer bottom padding must add env(safe-area-inset-bottom)');
+  assert.ok(css.includes('.chat-msg{max-width:min(92%,440px)'), 'bubbles not width-bounded');
   assert.ok(/\.chat-title-name\{font-size:clamp\(11\.5px,3\.1vw,13px\)\}/.test(css), 'mobile title sizing missing');
+  assert.ok(/@media\(max-width:479px\)/.test(css), 'sub-480px tuning missing');
   assert.ok(/@media\(max-width:379px\)/.test(css), 'very-narrow fallback missing');
+  // composer is the LAST element of the panel (always visible above the keyboard)
+  const panel = t.match(/<section class="chat-panel"[\s\S]*?<\/section>/);
+  assert.ok(panel, 'chat panel markup missing');
+  assert.ok(/<\/form>\s*<\/section>$/.test(panel[0]), 'composer form must be the last child of the panel');
+  assert.ok(/<textarea id="chat-q"[^>]*enterkeyhint="send"/.test(panel[0]), 'mobile keyboards need enterkeyhint=send');
+});
+test('chatbot: no fixed 100vh bug — iPhone safe areas respected by launcher and composer', () => {
+  const css = fs.readFileSync(path.join(SITE, 'assets', 'style.css'), 'utf8');
+  // dvh/svh dynamic viewport everywhere; a hard 100vh height would break under the iOS keyboard
+  assert.ok(!/height:100vh/.test(css) && !/max-height:100vh/.test(css) && !/min-height:100vh/.test(css),
+    'fixed 100vh height is forbidden (keyboard jumps)');
+  assert.ok(/height:min\(88dvh/.test(css), 'mobile sheet height must use dvh units');
+  // floating launcher lifted above the iPhone home indicator / Safari bar
+  assert.ok(/\.chat-launcher\{[^}]*bottom:calc\(16px \+ env\(safe-area-inset-bottom,0px\)\)/.test(css),
+    'launcher must sit above env(safe-area-inset-bottom)');
+  assert.ok(/\.chat-launcher\{[^}]*right:max\(16px,env\(safe-area-inset-right,0px\)\)/.test(css),
+    'launcher must honor the right safe area (landscape notch)');
+  // chat log owns its scroll; body behind the sheet does not double-scroll
+  assert.ok(/\.chat-log\{[^}]*overscroll-behavior:contain/.test(css), 'chat log must contain overscroll');
 });
 test('chatbot: friendly local-AI failure UX — no raw module error in UI', () => {
   const js = fs.readFileSync(path.join(SITE, 'assets', 'chatbot.js'), 'utf8');
@@ -626,10 +676,14 @@ test('chatbot: compact header actions — overflow menu holds clear, controls st
 });
 
 // ---------- CONTACT / PRIVACY TRUST ----------
-test('contact: verified NAP, actions, map CTA + truthful LocalBusiness schema', () => {
+test('contact: verified NAP, responsive Maps embed (verified address only) + truthful LocalBusiness schema', () => {
   const t = fs.readFileSync(path.join(SITE, 'lien-he', 'index.html'), 'utf8');
+  const css = fs.readFileSync(path.join(SITE, 'assets', 'style.css'), 'utf8');
   const f = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'business-facts.json'), 'utf8'));
   assert.ok(t.includes('112 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội, Việt Nam'), 'exact address missing');
+  // the address is displayed exactly ONCE — in the contact-info section, never repeated below
+  assert.strictEqual((t.match(/112 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội, Việt Nam/g) || []).length, 1,
+    'address must appear exactly once on the contact page');
   assert.ok(t.includes('0942 467 674'), 'exact phone missing');
   assert.ok(t.includes('nguyentuantu8x@gmail.com'), 'exact email missing');
   assert.ok(t.includes('09:00 - 21:00'), 'exact opening hours missing');
@@ -638,12 +692,23 @@ test('contact: verified NAP, actions, map CTA + truthful LocalBusiness schema', 
   assert.ok(t.includes('href="mailto:nguyentuantu8x@gmail.com"'), 'mailto: link missing');
   assert.ok(t.includes('https://share.google/59Er3R16jWr3psKeo'), 'Google Maps CTA missing');
   assert.ok(t.includes('Thuê Xe Máy Nguyễn Tú'), 'verified business name missing');
+  // Maps embed: built ONLY from the verified repo address (no invented coordinates),
+  // responsive, rounded, lazy, fully labelled
+  const ifr = t.match(/<iframe[^>]*src="([^"]*)"[^>]*>/);
+  assert.ok(ifr, 'contact page must embed a Google Maps iframe');
+  assert.ok(ifr[1].startsWith('https://www.google.com/maps?q=' + encodeURIComponent(f.address) + '&amp;output=embed'),
+    'iframe must embed the EXACT verified address from business-facts.json (no new address/coords)');
+  assert.ok(/loading="lazy"/.test(ifr[0]), 'map iframe must lazy-load');
+  assert.ok(/title="[^"]+"/.test(ifr[0]), 'map iframe must have an accessible title');
+  assert.ok(/\.map-embed\{[^}]*width:100%;aspect-ratio:16\/10/.test(css), 'map embed must be 100% responsive');
+  assert.ok(/\.map-embed iframe\{[^}]*border:0/.test(css), 'map iframe must be borderless (rounded by wrapper)');
+  assert.ok(/Mở Google Maps/.test(t), 'Mở Google Maps button must stay beside/below the map');
+  assert.ok(!/map-line/.test(t), 'old duplicate address block must be gone');
   // schema on the contact page only, strictly from verified facts
   assert.ok(/"@type":"LocalBusiness"/.test(t), 'LocalBusiness schema missing on contact page');
   assert.ok(/"@type":"PostalAddress"/.test(t), 'PostalAddress schema missing');
   assert.ok(/"opens":"09:00"/.test(t) && /"closes":"21:00"/.test(t), 'opening hours schema mismatch');
   assert.ok(!/aggregateRating|"review"|priceRange|"geo"/.test(t), 'unverified schema fields present');
-  assert.ok(!/<iframe/.test(t), 'no unverified map embed allowed (share URL cannot be embedded truthfully)');
   // trust section
   assert.ok(t.includes('Thông tin trước khi liên hệ'), 'pre-contact trust section missing');
   assert.strictEqual((t.match(/<h1/g) || []).length, 1, 'contact page must have one H1');
