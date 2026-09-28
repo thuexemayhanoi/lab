@@ -58,3 +58,21 @@ factory.js reports            # regenerate reports/factory/*.json
 - Only one writer mutates production (writer lock + transaction marker).
 - Bootstrap publication cap: 10 pilot articles (`config/content-factory.json`).
 - Never rewrite PUBLISHED rows silently.
+
+## Phase lifecycle: PILOT → PRODUCTION
+
+- `config/content-factory.json` carries `"phase"` (`PILOT` | `PRODUCTION`).
+- In `PILOT`, `publish` and `prepare-next` honor `max_publication_in_bootstrap` (10 pilot articles).
+- Once the pilot is complete (all pilot articles PUBLISHED, QA ≥ 90, archives present,
+  no active transaction), the **canonical transition** is:
+
+  ```
+  node scripts/factory/factory.js promote-production
+  ```
+
+  It refuses to run twice, refuses an incomplete/unhealthy pilot, uses the writer
+  lock + transaction marker, and only flips `phase` (config + checkpoint).
+  Matrix, article IDs, published set and QA evidence are untouched.
+- In `PRODUCTION`, the bootstrap cap no longer binds; the normal chunk size remains
+  `CHUNK` (10). The external AI writer remains the only prose writer; GitHub Actions
+  stays deterministic (no API keys, no autonomous writing).

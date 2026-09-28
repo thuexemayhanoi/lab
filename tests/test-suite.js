@@ -86,8 +86,15 @@ test('geography: every entity has geo_id, name, type, verified_source', () => {
 });
 
 // ---------- PUBLISHED / SITE ----------
-test('bootstrap cap: published ≤ 10', () =>
-  assert.ok(published.length <= cfg.max_publication_in_bootstrap));
+test('factory phase contract: PILOT or PRODUCTION, checkpoint agrees', () => {
+  assert.ok(['PILOT','PRODUCTION'].includes(cfg.phase), 'invalid phase ' + cfg.phase);
+  const ck = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'state', 'checkpoint.json'), 'utf8'));
+  assert.strictEqual(ck.phase, cfg.phase, 'checkpoint phase disagrees with config');
+});
+test('bootstrap cap: published ≤ cap while in PILOT', () => {
+  if (cfg.phase === 'PILOT')
+    assert.ok(published.length <= cfg.max_publication_in_bootstrap);
+});
 test('published: public file, archive, and matrix agree', () => {
   published.forEach(r => {
     assert.ok(fs.existsSync(path.join(SITE, r.output_path, 'index.html')), 'no public file ' + r.output_path);

@@ -45,6 +45,8 @@ XE MÁY ĐIỆN (electric) · PHỤ TÙNG (parts).
 - Only PUBLISHED pages may be publicly deployed. Drafts live in `_drafts/`
   (gitignored, never deployed).
 - Max publication during bootstrap: 10 pilot articles (config: `content-factory.json`).
+- Phase lifecycle: `PILOT` → `PRODUCTION` via `node scripts/factory/factory.js promote-production`
+  (canonical transition; bootstrap cap only binds in PILOT). See `docs/CONTENT-FACTORY.md`.
 - No autonomous AI writer in GitHub Actions; no API keys in Actions.
 - No backlink campaigns. Do not create external links to manipulate rankings.
 
