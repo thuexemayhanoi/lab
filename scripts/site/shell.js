@@ -49,6 +49,8 @@ const ICON = {
   menu: '<path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/>',
   close: '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
   chat: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+  send: '<path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/>',
+  trash: '<path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>',
 };
 const svg = (n, size) => `<svg class="ico ico-${size === 'lg' ? 'lg' : 'sm'}" viewBox="0 0 24 24" width="${size === 'lg' ? 20 : 18}" height="${size === 'lg' ? 20 : 18}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[n] || ''}</svg>`;
 
@@ -148,7 +150,34 @@ function footerHtml(facts) {
     <button class="to-top" id="to-top" type="button" aria-label="Lên đầu trang" title="Lên đầu trang">↑</button>
   </div>
 </div>
-</div></footer>`;
+</div></footer>
+${chatbotHtml()}`;
+}
+
+/** Trợ lý đọc bản địa — shell markup shared by every generated page (build-site + wrap-drafts).
+ * Retrieval-first; optional on-device AI (WebLLM/Qwen) is lazy-loaded by chatbot.js
+ * only after an explicit user action. No inference API, no key, no NAP promotion. */
+function chatbotHtml() {
+  return `<button class="chat-launcher" id="chat-launcher" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="chat-panel" aria-label="Mở trợ lý đọc" title="Trợ lý đọc">${svg('chat', 'lg')}</button>
+<section class="chat-panel glass-strong" id="chat-panel" role="dialog" aria-modal="false" aria-label="Trợ lý đọc Bản Đồ Xe 2 Bánh" hidden>
+  <div class="chat-head">
+    <span class="chat-title">${svg('chat')} Trợ lý đọc</span>
+    <div class="chat-head-actions">
+      <button class="chat-ai-toggle" id="chat-ai-toggle" type="button" aria-pressed="false">Bật AI cục bộ</button>
+      <button class="chat-clear" id="chat-clear" type="button" aria-label="Xóa hội thoại" title="Xóa hội thoại">${svg('trash')}</button>
+      <button class="btn-icon chat-close" id="chat-close" type="button" aria-label="Đóng trợ lý">${svg('close')}</button>
+    </div>
+  </div>
+  <p class="chat-mode" id="chat-mode">Chế độ tra cứu nội dung — trả lời từ nội dung đã xuất bản của trang.</p>
+  <div class="chat-log" id="chat-log" role="log" aria-live="polite" aria-label="Hội thoại với trợ lý"></div>
+  <p class="chat-status" id="chat-status" role="status" aria-live="polite"></p>
+  <form class="chat-input" id="chat-form" autocomplete="off">
+    <input id="chat-q" type="text" placeholder="Hỏi về thuê xe, cứu hộ, giấy tờ…" aria-label="Câu hỏi cho trợ lý">
+    <button class="chat-send" id="chat-send" type="submit" aria-label="Gửi câu hỏi">${svg('send')}</button>
+  </form>
+  <p class="chat-note">Trợ lý chỉ dựa trên nội dung đã xuất bản của trang; nếu chưa có thông tin đủ, trợ lý sẽ nói rõ. AI (khi bạn bật) chạy cục bộ trên thiết bị, không gửi hội thoại tới dịch vụ suy luận nào.</p>
+</section>
+<script src="/lab/assets/chatbot.js" defer></script>`;
 }
 
 /** Article chrome shared by build-site (published restore) and wrap-drafts.
@@ -213,4 +242,4 @@ ${pm ? pm[0].replace(/<\/p>$/, ` · ~${opt.readingMin || '?'} phút đọc</p>`)
   return `${head}${open}${before}${hero}${toc}${rest}${related}${hubCta}${pn}${close}${tail}`;
 }
 
-module.exports = { GROUPS, BRAND_FULL, BRAND_SHORT, EYEBROW, INFO_LINKS, ICON, svg, esc, groupOf, headerHtml, footerHtml, decorateArticle };
+module.exports = { GROUPS, BRAND_FULL, BRAND_SHORT, EYEBROW, INFO_LINKS, ICON, svg, esc, groupOf, headerHtml, footerHtml, chatbotHtml, decorateArticle };

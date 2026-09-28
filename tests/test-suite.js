@@ -244,3 +244,67 @@ test('homepage: no internal QA scores exposed to readers', () => {
   assert.ok(!/QA\s*\d/.test(home), 'QA score leaked on homepage');
   assert.ok(!/PUBLISHED|PLANNED|matrix|nhà máy nội dung/.test(home), 'factory language leaked on homepage');
 });
+
+// ---------- LOCAL READING ASSISTANT (chatbot) ----------
+test('chatbot: assets generated and launcher present on every built page', () => {
+  ['chatbot.js','chatbot-worker.js','knowledge-index.json'].forEach(a =>
+    assert.ok(fs.existsSync(path.join(SITE,'assets',a)), 'missing asset ' + a));
+  const htmlFiles = [];
+  (function walk(d){fs.readdirSync(d,{withFileTypes:true}).forEach(e=>{const p=path.join(d,e.name);
+    e.isDirectory()?walk(p):(e.name.endsWith('.html')&&htmlFiles.push(p));});})(SITE);
+  assert.ok(htmlFiles.length >= 20, 'too few built pages');
+  htmlFiles.forEach(f => {
+    const t = fs.readFileSync(f,'utf8');
+    assert.ok(t.includes('id="chat-launcher"'), 'launcher missing in ' + f);
+    assert.ok(t.includes('id="chat-panel"'), 'panel missing in ' + f);
+    assert.ok(t.includes('/lab/assets/chatbot.js'), 'chatbot script missing in ' + f);
+  });
+});
+test('chatbot: panel has dialog semantics + accessible controls', () => {
+  const t = fs.readFileSync(path.join(SITE,'index.html'),'utf8');
+  assert.ok(/role="dialog"[^>]*id="chat-panel"/.test(t) || /id="chat-panel"[^>]*role="dialog"/.test(t), 'panel not a dialog');
+  assert.ok(/id="chat-launcher"[^>]*aria-expanded="false"/.test(t), 'launcher aria-expanded');
+  assert.ok(/aria-controls="chat-panel"/.test(t), 'launcher aria-controls');
+  assert.ok(/role="status"/.test(t), 'no live status region');
+  assert.ok(/aria-label="Câu hỏi cho trợ lý"/.test(t), 'input not labelled');
+  assert.ok(/aria-label="Xóa hội thoại"/.test(t), 'clear button not labelled');
+});
+test('chatbot: knowledge index covers published articles + static pages only', () => {
+  const kb = JSON.parse(fs.readFileSync(path.join(SITE,'assets','knowledge-index.json'),'utf8'));
+  assert.ok(kb.version === 1 && Array.isArray(kb.records) && kb.records.length >= 19, 'unexpected index shape');
+  const us = kb.records.map(r => r.u);
+  // every published article is indexed exactly with its output path
+  published.forEach(r => assert.ok(us.includes(r.output_path), 'article missing from KB: ' + r.article_id));
+  // no drafts / factory internals / unpublished matrix rows
+  const planned = rows.filter(r => r.status !== 'PUBLISHED').map(r => r.output_path);
+  kb.records.forEach(rec => {
+    assert.ok(!planned.includes(rec.u), 'KB contains non-published row: ' + rec.u);
+    assert.ok(!String(rec.u).includes('_drafts') && !String(rec.u).includes('data/'), 'KB has factory internal: ' + rec.u);
+    const file = path.join(SITE, rec.u.replace(/\/$/,''), 'index.html');
+    assert.ok(fs.existsSync(rec.u ? file : path.join(SITE,'index.html')), 'KB URL not built: ' + rec.u);
+    assert.ok(rec.chunks.length >= 3 && rec.chunks.every(c => c.t && c.t.length <= 721), 'bad chunks in ' + rec.u);
+  });
+});
+test('chatbot: no inference API, no API key, no NAP promotion', () => {
+  const js = fs.readFileSync(path.join(SITE,'assets','chatbot.js'),'utf8');
+  const w = fs.readFileSync(path.join(SITE,'assets','chatbot-worker.js'),'utf8');
+  [js, w].forEach(src => {
+    assert.ok(!/api[_-]?key/i.test(src), 'api key string present');
+    assert.ok(!/openai\.com|api\.openai|gemini|anthropic|dashscope|qwen\.aliyun/i.test(src), 'commercial inference endpoint present');
+    assert.ok(!/zalo|whatsapp|0\d{9,10}/i.test(src), 'NAP/service promotion in chatbot');
+  });
+  // conversation is never POSTed anywhere: only local fetch of the static knowledge index
+  assert.ok(/fetch\('\/lab\/assets\/knowledge-index\.json'\)/.test(js), 'unexpected remote calls in chatbot.js');
+  assert.ok(!/XMLHttpRequest|method:\s*['"]POST['"]|navigator\.sendBeacon/.test(js), 'chatbot posts data remotely');
+  // the only remote import is the open-source WebLLM runtime in the worker (opt-in AI mode)
+  assert.ok(w.includes("import('https://esm.run/@mlc-ai/webllm')"), 'worker must use WebLLM local runtime');
+  assert.ok(w.includes('Qwen2.5-0.5B-Instruct-q4f16_1-MLC'), 'worker model id');
+  assert.ok(!/await import\(/.test(js), 'main thread must not import the AI runtime eagerly');
+});
+test('chatbot: privacy page discloses local AI behavior truthfully', () => {
+  const t = fs.readFileSync(path.join(SITE,'chinh-sach-bao-mat','index.html'),'utf8');
+  assert.ok(/cục bộ/.test(t) && /inference API|dịch vụ suy luận/.test(t), 'privacy must disclose local AI');
+  assert.ok(!/100% offline/.test(t), 'privacy overclaims offline behavior');
+  // the "no network request" wording may only appear inside an explicit non-guarantee
+  assert.ok(!/cam kết ["']?không có bất kỳ yêu cầu mạng nào["']?(?!.*không cam kết)/.test(t) || /không cam kết/.test(t), 'privacy guarantees zero network');
+});
