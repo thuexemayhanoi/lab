@@ -1,0 +1,166 @@
+{
+ "home": {
+  "sections": [
+   {
+    "h": "Bản Đồ Xe 2 Bánh Việt Nam là gì?",
+    "ps": [
+     "Bản Đồ Xe 2 Bánh Việt Nam là một cẩm nang nghiên cứu độc lập về hệ sinh thái phương tiện hai bánh tại Việt Nam: từ việc thuê xe máy khi đi công tác hay du lịch, xử lý sự cố ngoài đường, bảo dưỡng định kỳ, cho tới các thủ tục pháp lý như bằng lái và đăng ký xe, cùng làn sóng xe máy điện đang lớn mạnh.",
+     "Khác với các trang bán dịch vụ, mỗi bài viết ở đây được viết theo nguyên tắc <a href=\"/lab/ve-chung-toi/\">nghiên cứu trước khi viết</a>: chủ đề được chọn dựa trên dữ liệu nhu cầu tìm kiếm thực tế, thông tin được đối chiếu với nguồn chính thức hoặc ghi rõ giới hạn của nó, và nội dung chỉ được công bố sau khi vượt qua bộ kiểm tra chất lượng nội bộ.",
+     "Trang được vận hành như một thí nghiệm dài hạn về SEO: liệu nội dung chất lượng, câu hỏi dài có độ cạnh tranh thấp và cấu trúc web sạch có thể xếp hạng mà không cần chạy chiến dịch xây dựng liên kết ngược (backlink) chủ động. Bạn đọc theo dõi tiến trình thí nghiệm thông qua các bài cập nhật định kỳ."
+    ]
+   },
+   {
+    "h": "Cách sử dụng cẩm nang",
+    "ps": [
+     "Nếu bạn đang có một kế hoạch cụ thể — ví dụ cần thuê xe ở một tỉnh thành mới, chuẩn bị thi bằng lái A1, hoặc phân vân giữa các dòng xe máy điện — hãy bắt đầu từ chủ đề tương ứng trong menu: bốn nhóm chủ đề lớn dẫn bạn tới từng trang chuyên mục.",
+     "Mỗi trang chuyên mục tổng hợp các bài viết đã xuất bản của chủ đề đó, kèm phần hướng dẫn đọc nhanh: chủ đề bao gồm những gì, ai nên đọc, những sai lầm thường gặp và các câu hỏi thường gặp.",
+     "Bạn cũng có thể dùng ô tìm kiếm ở đầu trang chủ để tra theo từ khóa tự nhiên, ví dụ “thuê xe máy Hà Nội” hay “bảo dưỡng định kỳ”. Chức năng tìm kiếm chạy hoàn toàn trong trình duyệt của bạn, không gửi dữ liệu đi đâu."
+    ]
+   },
+   {
+    "h": "Thuê xe và hành trình",
+    "ps": [
+     "Thuê xe máy là chủ đề lớn nhất của cẩm nang. Các bài viết trong nhóm này đi vào tình huống thực tế: thuê xe tại các thành phố du lịch, thuê ở khu vực gần sân bay, chọn dòng xe phổ thông như Honda Vision hay Air Blade, và những điều cần kiểm tra trước khi nhận xe.",
+     "Chúng tôi cố tình tránh kiểu bài “top 10 quán cho thuê giá rẻ” vì giá thuê thay đổi liên tục theo mùa, địa điểm và tình trạng xe. Thay vào đó, nội dung tập trung vào những yếu tố ổn định hơn: cách so sánh hợp đồng, giấy tờ cần mang, cách nhận biết xe được bảo dưỡng, và cách xử lý khi có tranh chấp.",
+     "Với các địa phương ngoài khu vực đã xác thực, bài viết chỉ mang tính hướng dẫn thông tin — cẩm nang không đại diện cho bất kỳ cửa hàng nào tại đó."
+    ]
+   },
+   {
+    "h": "Cứu hộ và bảo dưỡng",
+    "ps": [
+     "Xe máy hỏng giữa đường là trải nghiệm phổ biến của bất kỳ ai đi xe hai bánh ở Việt Nam. Nhóm chủ đề cứu hộ giúp bạn chuẩn bị trước: nhận biết hỏng hóc có thể tự xử lý hay phải gọi hỗ trợ, cách mô tả tình huống cho bên cứu hộ, và những câu hỏi nên hỏi trước khi chốt giá.",
+     "Nhóm bảo dưỡng đi theo chiều dài thời gian sử dụng xe: lịch bảo dưỡng định kỳ, các hạng mục nên thay theo mili, dấu hiệu nhận biết phụ tùng tới hạn, và khi nào nên tin cửa hàng sửa xe.",
+     "Các bài trong nhóm này luôn nhấn mạnh một điều: thông tin kỹ thuật chỉ mang tính tham khảo; đối với xe có vận hành đặc thù, hướng dẫn của nhà sản xuất và ý kiến thợ là ưu tiên."
+    ]
+   },
+   {
+    "h": "Pháp lý và giấy tờ",
+    "ps": [
+     "Bằng lái và đăng ký xe là hai thủ tục pháp lý mà hầu hết người đi xe máy đều phải trải qua. Cẩm nang giải thích theo ngôn ngữ thường: hồ sơ gồm những gì, trình tự ra sao, lệ phí cấu thành từ đâu, và các lỗi hay gặp khiến hồ sơ bị trả lại.",
+     "Đặc thù của nội dung pháp lý là <strong>thay đổi theo văn bản mới</strong>. Vì vậy các bài pháp lý bắt buộc dẫn nguồn chính thức và luôn khuyến khích bạn kiểm tra văn bản gốc trước khi làm thủ tục. Khi quy định thay đổi, bài viết sẽ được cập nhật và ghi chú rõ.",
+     "Cẩm nang không phải cơ quan nhà nước và không đại diện cho bất kỳ cơ quan quản lý nào — nội dung chỉ giúp bạn hiểu quy trình trước khi tới cơ quan có thẩm quyền."
+    ]
+   },
+   {
+    "h": "Xe điện và phụ tùng",
+    "ps": [
+     "Xe máy điện đang thay đổi đáng kể bức tranh phương tiện hai bánh Việt Nam: giá thành mua và vận hành, cách tính chi phí sạc, độ bền pin, và hạ tầng trạm sạc là những câu hỏi ngày càng nhiều người tìm hiểu.",
+     "Song song đó, phụ tùng xe máy — lốp, ắc quy, bugi, nhông xích, dầu máy — là chủ đề mà bất kỳ chủ xe nào cũng cần nắm để tránh mua nhầm và thay sớm quá. Nhóm chủ đề này giúp bạn hiểu cách chọn phụ tùng theo nhu cầu thực tế, không theo quảng cáo.",
+     "Các bài so sánh trong nhóm này không nhận tài trợ từ hãng; khi một sản phẩm được nêu tên, đó là vì nó phổ biến trên thị trường, không phải vì xuất hiện trong quảng cáo."
+    ]
+   },
+   {
+    "h": "Cách chúng tôi nghiên cứu nội dung",
+    "ps": [
+     "Mỗi bài viết trải qua quy trình bốn bước. Bước một: chọn chủ đề từ hệ thống phân tích nhu cầu tìm kiếm, ưu tiên câu hỏi có ít nội dung chất lượng bằng tiếng Việt. Bước hai: xây dựng gói nghiên cứu — tổng hợp nguồn chính thức, dữ liệu công khai và kiến thức thực địa — trước khi viết chữ đầu tiên.",
+     "Bước ba: viết theo cấu trúc chuẩn — trả lời nhanh lên đầu, triển khai đầy đủ phần sau, kết thúc bằng câu hỏi thường gặp và ghi chú nguồn. Bước bốn: kiểm tra chất lượng độc lập trên các tiêu chí độ chính xác, đầy đủ, trung thực và trải nghiệm đọc; bài chỉ được xuất bản khi đạt ngưỡng từ 90/100.",
+     "Nội dung pháp lý phải dẫn được ít nhất một nguồn chính thức hiện hành; nếu không, bài viết bị hoãn xuất bản thay vì bịa nguồn. Đây là lý do tốc độ xuất bản của cẩm nang không nhanh, nhưng độ tin cậy được ưu tiên tuyệt đối."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Cẩm nang này có bán hoặc môi giới dịch vụ thuê xe không?",
+    "a": "Không. Đây là trang thông tin nghiên cứu độc lập. Chủ sở hữu có hoạt động cho thuê thực tế tại khu vực đã xác thực ở Hà Nội, nhưng trang này không nhận đặt xe và không thu phí giới thiệu từ bất kỳ bên thứ ba nào."
+   },
+   {
+    "q": "Số điện thoại và địa chỉ cửa hàng có đăng không?",
+    "a": "Chỉ hiển thị khi được chủ sở hữu xác nhận chính xác. Chúng tôi không đăng thông tin liên hệ chưa kiểm chứng — xem trang Chính sách bảo mật và Điều khoản sử dụng để hiểu cách trang vận hành."
+   },
+   {
+    "q": "Thông tin pháp lý trên trang có phải văn bản pháp luật không?",
+    "a": "Không. Bài viết chỉ giải thích quy trình theo ngôn ngữ dễ hiểu và luôn dẫn nguồn chính thức để bạn kiểm chứng. Quyết định về thủ tục nên dựa trên văn bản gốc và hướng dẫn của cơ quan có thẩm quyền."
+   },
+   {
+    "q": "Trang cập nhật nội dung thế nào?",
+    "a": "Bài đã xuất bản được theo dõi liên tục: khi quy định, giá thị trường hay hạ tầng thay đổi đáng kể, bài được hiệu đính tại cùng địa chỉ và ghi chú phần cập nhật cuối bài. Danh sách bài mới nhất luôn nằm ở trang chủ."
+   },
+   {
+    "q": "Trang có dùng AI để viết bài không?",
+    "a": "Quy trình biên soạn có dùng công cụ hỗ trợ biên tập, nhưng mọi bài đăng phải vượt qua kiểm tra chất lượng độc lập và bắt buộc dẫn nguồn với nội dung pháp lý. Trợ lý trò chuyện trên trang (nếu bạn bật) chạy mô hình AI cục bộ ngay trong trình duyệt và chỉ đọc nội dung đã xuất bản của trang."
+   },
+   {
+    "q": "Tôi có thể đề xuất chủ đề được không?",
+    "a": "Được — qua trang Liên hệ. Các chủ đề được chọn dựa trên nhu cầu tìm kiếm thực tế, nên lời đề xuất của bạn giúp cẩm nang ưu tiên đúng chỗ."
+   }
+  ]
+ },
+ "about": {
+  "sections": [
+   {
+    "h": "Dự án này là gì",
+    "ps": [
+     "Bản Đồ Xe 2 Bánh Việt Nam là một cẩm nang thông tin độc lập về hệ sinh thái phương tiện hai bánh tại Việt Nam, được vận hành bởi một cá nhân có hoạt động cho thuê xe máy thực tế tại khu vực đã xác thực ở Hà Nội.",
+     "Mục tiêu của trang rất đơn giản: cung cấp bằng tiếng Việt những câu trả lời chất lượng cho các câu hỏi thực tế mà người đi xe hay tìm kiếm — thuê xe ở nơi mới, xử lý hỏng hóc, bảo dưỡng, thủ tục giấy tờ, mua xe điện, chọn phụ tùng — thay vì để người đọc phải lục lọi từng diễn đàn hay trang bán hàng thiếu nguồn."
+    ]
+   },
+   {
+    "h": "Phạm vi cơ sở tri thức",
+    "ps": [
+     "Cẩm nang phủ bảy cụm chủ đề chính: thuê xe máy (chiếm tỷ trọng lớn nhất), cứu hộ xe máy, sửa chữa và bảo dưỡng, bằng lái, đăng ký xe, xe máy điện và phụ tùng.",
+     "Về địa lý, nội dung địa phương ngoài khu vực đã xác thực ở Hà Nội chỉ mang tính hướng dẫn thông tin: cách tìm xe tốt, cách cân nhắc hợp đồng, cách xử lý tình huống. Trang không có chi nhánh, không có đội ngũ “toàn quốc” và không nhận đặt dịch vụ tại các tỉnh khác.",
+     "Nguyên tắc bất di bất dịch: không bịa địa chỉ, không bịa cửa hàng, không bịa trung tâm đăng kiểm, không bịa giá stated as fact khi không kiểm chứng được, không bịa quy định. Thông tin chưa xác minh được thì không đăng, hoặc đăng kèm ghi chú giới hạn rõ ràng."
+    ]
+   },
+   {
+    "h": "Thí nghiệm SEO zero-backlink",
+    "ps": [
+     "Trang vận hành như một thí nghiệm mở: liệu một site chỉ dựa vào nội dung chất lượng, cấu trúc kỹ thuật chuẩn và truy vấn dài cạnh tranh thấp có thể xếp hạng trên công cụ tìm kiếm mà không cần chủ động xây dựng liên kết ngược?",
+     "Baseline của thí nghiệm được công khai: zero-backlink chủ động. Trang không mua liên kết, không trao đổi chéo, không chạy chiến dịch outreach. Tiến trình được đo lường và công bố định kỳ.",
+     "Chúng tôi coi đây là cách kiểm chứng trung thực: nếu nội dung tốt đủ để xếp hạng, dữ liệu sẽ cho thấy; nếu không, việc công bố kết quả âm tính cũng là một đóng góp cho cộng đồng SEO Việt Nam."
+    ]
+   },
+   {
+    "h": "Phương pháp biên soạn nội dung",
+    "ps": [
+     "Mỗi chủ đề đi qua quy trình bốn bước nghiêm ngặt: chọn chủ đề theo dữ liệu nhu cầu tìm kiếm; xây gói nghiên cứu trước khi viết; viết theo cấu trúc trả lời nhanh — triển khai sâu — câu hỏi thường gặp — ghi chú nguồn; kiểm tra chất lượng độc lập với ngưỡng xuất bản 90/100.",
+     "Nội dung pháp lý bắt buộc dẫn nguồn chính thức hiện hành. Bài nào không kiểm chứng được nguồn sẽ bị hoãn vô thời hạn thay vì công bố thông tin phỏng đo.",
+     "Bài viết sau xuất bản vẫn tiếp tục được theo dõi: khi quy định, giá thị trường hoặc hạ tầng thay đổi đáng kể, nội dung được cập nhật và ghi rõ ngày cập nhật."
+    ]
+   },
+   {
+    "h": "Chính sách nguồn và tính độc lập biên tập",
+    "ps": [
+     "Nguồn được phân loại rõ: nguồn chính thức (văn bản pháp luật, cổng thông tin cơ quan nhà nước), nguồn dữ liệu công khai, và kiến thức thực địa từ người vận hành xe thực tế. Mỗi loại nguồn được ghi nhận cách khác nhau trong bài.",
+     "Trang không nhận bài PR, không bán vị trí trong bảng so sánh, không chèn liên kết affiliate trá hình. Nếu một bài đề cập sản phẩm, đó là vì sản phẩm đó phổ biến hoặc đáng được phân tích.",
+     "Độc lập biên tập là điều kiện tồn tại của một trang nghiên cứu: một bài viết sai để đổi lấy lợi ích sẽ phá hỏng toàn bộ giá trị của cẩm nang."
+    ]
+   },
+   {
+    "h": "Giới hạn và cách cập nhật",
+    "ps": [
+     "Cẩm nang công khai các giới hạn của chính nó: thông tin pháp lý có thể đổi theo văn bản mới; giá thị trường biến động; độ phủ địa phương còn chọn lọc thay vì toàn quốc; và trải nghiệm thực địa chỉ sâu tại khu vực đã xác thực.",
+     "Khi có thay đổi, bài gốc được hiệu đính tại cùng địa chỉ — URL không đổi để liên kết cũ không gãy — và phần ghi chú cập nhật xuất hiện cuối bài. Chúng tôi không âm thầm thay đổi nội dung pháp lý.",
+     "Phát hiện sai sót? Vui lòng báo qua trang Liên hệ kèm nguồn kiểm chứng; các bản đính chính được ghi nhận công khai."
+    ]
+   },
+   {
+    "h": "Cấu trúc thông tin trên trang",
+    "ps": [
+     "Mỗi bài viết trên cẩm nang theo một cấu trúc đọc nhanh: câu trả lời ngắn nằm ngay đầu bài để bạn hết thắc mắc trong ba mươi giây; phần thân triển khai đầy đủ theo trình tự quyết định thực tế; bảng so sánh xuất hiện khi thực sự giúp lựa chọn; và phần câu hỏi thường gặp cuối bài xử lý các tình huống cạnh.",
+     "Chuyên mục được tổ chức thành bốn nhóm từ menu: thuê xe & hành trình, cứu hộ & bảo dưỡng, pháp lý & giấy tờ, xe điện & phụ tùng. Cấu trúc này giúp bạn tìm theo nhu cầu thay vì phải biết trước tên bài viết."
+    ]
+   },
+   {
+    "h": "Lịch sử và định hướng phát triển",
+    "ps": [
+     "Cẩm nang bắt đầu từ những ghi chú nội bộ phục vụ chính hoạt động cho thuê xe tại Hà Nội: câu hỏi khách hay hỏi, sự cố hay gặp, thủ tục phải làm. Những ghi chú đó dần lớn thành hệ thống chủ đề có cấu trúc — và nhận ra rằng nhiều người ngoài cũng đang tìm đúng những câu trả lời này.",
+     "Định hướng của trang là chiều sâu có kiểm chứng hơn là số lượng bài mỏng. Chúng tôi không chạy đua sản xuất nội dung; một chủ đề chỉ được viết khi gói nghiên cứu đủ dày và bài viết vượt qua kiểm tra chất lượng. Lộ trình các chủ đề được chọn theo dữ liệu nhu cầu tìm kiếm thực tế, ưu tiên những câu hỏi mà tiếng Việt chưa có câu trả lời tốt."
+    ]
+   },
+   {
+    "h": "Trợ lý AI cục bộ hoạt động thế nào",
+    "ps": [
+     "Trang có một trợ lý đọc dùng mô hình AI chạy hoàn toàn cục bộ trong trình duyệt của bạn, chỉ khi bạn chủ động bật. Trợ lý đọc chỉ nội dung đã xuất bản của trang và trả lời dựa trên đó; nó không bịa thông tin và không gửi hội thoại của bạn tới dịch vụ suy luận nào.",
+     "Nếu thiết bị không đủ điều kiện chạy mô hình, trợ lý tự chuyển sang chế độ tra cứu nội dung — vẫn giúp bạn tìm đúng bài viết cần đọc. Chi tiết về dữ liệu được mô tả trung thực trong trang Chính sách bảo mật."
+    ]
+   },
+   {
+    "h": "Liên hệ",
+    "ps": [
+     "Mọi câu hỏi, góp ý nội dung, báo lỗi hay hợp tác nghiên cứu: xin dùng thông tin trên trang <a href=\"/lab/lien-he/\">Liên hệ</a>. Cảm ơn bạn đã đọc và đồng hành cùng cẩm nang."
+    ]
+   }
+  ]
+ }
+}

@@ -12,6 +12,12 @@ const ROOT = path.join(__dirname, '..', '..');
 const SITE = path.join(ROOT, 'site');
 const cfg = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'site.json'), 'utf8'));
 const facts = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'business-facts.json'), 'utf8'));
+// editorial deep-content (canonical copy source for homepage / about / hub intros)
+const EDIT=JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'editorial.json'), 'utf8'));
+const EDIT_HUBS=JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'editorial-hubs.json'), 'utf8')).hubs;
+const secBlock=sec=>`<h2>${esc(sec.h)}</h2>\n${(sec.ps||[]).map(p=>`<p>${p}</p>`).join('\n')}`;
+const faqBlock=list=>`<h2>Câu hỏi thường gặp</h2>\n${(list||[]).map(f=>`<details class="faq glass"><summary>${esc(f.q)}</summary><p>${f.a}</p></details>`).join('\n')}`;
+const editorialBlock=o=>[(o.sections||[]).map(secBlock).join('\n'),o.faq?faqBlock(o.faq):''].filter(Boolean).join('\n');
 const shell = require(path.join(__dirname, 'shell.js'));
 const { GROUPS, BRAND_FULL, EYEBROW, esc, headerHtml, footerHtml } = shell;
 function parseCSV(text){const L=text.split('\n');const H=parseLine(L[0]);return L.slice(1).filter(l=>l.trim()).map(l=>{const c=parseLine(l);const o={};H.forEach((h,i)=>o[h]=c[i]||'');return o;});}
@@ -100,6 +106,9 @@ ${hubSections}
 </div>
 <h2>Bài viết mới</h2>
 <ul class="cards">${hqCards}</ul>
+<section class="editorial" aria-label="Giới thiệu về cẩm nang">
+${editorialBlock(EDIT.home)}
+</section>
 <script src="/lab/assets/search.js"></script>`,cfg.base_url,
 `<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"WebSite",name:BRAND_FULL,url:cfg.base_url,inLanguage:'vi'})}</script>`,
 'Hướng dẫn, kinh nghiệm và thông tin thực tế về thuê xe máy, cứu hộ, sửa chữa, bằng lái, đăng ký xe, xe máy điện và phụ tùng tại Việt Nam.');
@@ -112,10 +121,12 @@ HUBS.forEach(h=>{
  const sibs=group.children.filter(c=>c.slug!==h.slug);
  const title=HUB_TITLE[h.slug]||h.title;
  const desc=HUB_DESC[h.slug]||h.desc;
+ const ed=EDIT_HUBS[h.slug]||{};
  const html=layout(title+' — Bản Đồ Xe 2 Bánh Việt Nam',`<nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › ${esc(title)}</nav>
-<h1>${esc(title)}</h1><p>${esc(desc)}</p>
+<h1>${esc(title)}</h1><p>${esc(ed.lead||desc)}</p>
 <p class="siblings">Cùng nhóm <strong>${esc(group.label)}</strong>: ${sibs.map(s=>`<a class="sib-link" href="/lab/${s.slug}/">${esc(s.nav)}</a>`).join('')}</p>
-<h2>Bài viết</h2><ul class="cards">${cards}</ul>`,cfg.base_url+h.slug+'/',
+<h2>Bài viết</h2><ul class="cards">${cards}</ul>
+<section class="editorial" aria-label="Hướng dẫn chủ đề">${editorialBlock(ed)}</section>`,cfg.base_url+h.slug+'/',
 `<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"CollectionPage",name:title,description:desc,url:cfg.base_url+h.slug+'/'})}</script>`+(arts.length?`\n<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"ItemList",itemListElement:arts.map((r,i)=>({"@type":"ListItem",position:i+1,name:titleOf(r),url:cfg.base_url+r.output_path}))})}</script>`:''),desc);
  fs.mkdirSync(path.join(SITE,h.slug),{recursive:true});
  fs.writeFileSync(path.join(SITE,h.slug,'index.html'),html);
@@ -174,10 +185,13 @@ fs.writeFileSync(path.join(SITE,'lien-he','index.html'),layout('Liên hệ',`<h1
 <p>Khu vực: ${esc(facts.location_summary)}</p>
 <p class="fine">Số điện thoại, địa chỉ chính xác và giờ mở cửa chỉ hiển thị sau khi chủ sở hữu xác nhận. ${BRAND_FULL} không bịa thông tin NAP.</p>`,cfg.base_url+'lien-he/'));
 fs.mkdirSync(path.join(SITE,'ve-chung-toi'));
-fs.writeFileSync(path.join(SITE,'ve-chung-toi','index.html'),layout('Về chúng tôi',`<h1>Về chúng tôi</h1>
-<p>${BRAND_FULL} là trang thông tin nghiên cứu về hệ sinh thái xe máy Việt Nam, vận hành bởi ${esc(facts.business_name)} (${esc(facts.location_summary)}). Dịch vụ cho thuê xe máy thực tế của chủ sở hữu hoạt động tại Hà Nội.</p>
-<p>Trang này không phải trang kinh doanh và không có chi nhánh toàn quốc. Bài viết về địa phương ngoài Hà Nội mang tính hướng dẫn, không phải lời chào dịch vụ.</p>
-<p>Thí nghiệm SEO hiện tại: baseline zero-backlink — xem <a href="/lab/reports/experiments/baseline.md">báo cáo baseline</a> thí nghiệm.</p>`,cfg.base_url+'ve-chung-toi/'));
+fs.writeFileSync(path.join(SITE,'ve-chung-toi','index.html'),layout('Về chúng tôi',`
+<nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › Về chúng tôi</nav>
+<h1>Về chúng tôi</h1>
+<p class="about-lead">${BRAND_FULL} là trang thông tin nghiên cứu độc lập về hệ sinh thái xe hai bánh Việt Nam, vận hành bởi ${esc(facts.business_name)} (${esc(facts.location_summary)}).</p>
+${editorialBlock(EDIT.about)}
+<p class="fine">Thí nghiệm SEO hiện tại: baseline zero-backlink — xem <a href="/lab/reports/experiments/baseline.md">báo cáo baseline</a> thí nghiệm.</p>`,cfg.base_url+'ve-chung-toi/',null,
+'Về Bản Đồ Xe 2 Bánh Việt Nam: phương pháp nghiên cứu, chính sách nguồn, thí nghiệm zero-backlink và cách cập nhật nội dung.'));
 // publish experiment baseline report (linked from About page)
 const baselineSrc=path.join(ROOT,'reports','experiments','baseline.md');
 if(fs.existsSync(baselineSrc)){
@@ -508,6 +522,15 @@ ul.cards{list-style:none;padding:0;display:grid;grid-template-columns:1fr;gap:10
 .to-top:hover{background:var(--accent-soft);transform:translateY(-1px)}
 .foot-brand-col{grid-column:1/-1}
 @media(min-width:768px){.foot-grid{grid-template-columns:2fr 1fr 1fr 1.2fr}.foot-brand-col{grid-column:auto}}
+/* ---------- editorial deep content / FAQ ---------- */
+.editorial{margin-top:28px}
+.about-lead{font-size:1.06rem}
+.faq{padding:0;margin:0 0 10px;overflow:hidden}
+.faq summary{cursor:pointer;padding:12px 14px;font-weight:600;list-style:none;position:relative}
+.faq summary::after{content:"+";position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:1.1rem}
+.faq[open] summary::after{content:"–"}
+.faq summary::-webkit-details-marker{display:none}
+.faq p{margin:0;padding:0 14px 14px;color:var(--muted)}
 /* ---------- progress bar ---------- */
 .progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,rgba(23,142,94,.9),rgba(11,92,59,.9));
  z-index:100;border-radius:0 2px 2px 0;pointer-events:none;transition:width 60ms linear}

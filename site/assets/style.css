@@ -262,6 +262,15 @@ ul.cards{list-style:none;padding:0;display:grid;grid-template-columns:1fr;gap:10
 .to-top:hover{background:var(--accent-soft);transform:translateY(-1px)}
 .foot-brand-col{grid-column:1/-1}
 @media(min-width:768px){.foot-grid{grid-template-columns:2fr 1fr 1fr 1.2fr}.foot-brand-col{grid-column:auto}}
+/* ---------- editorial deep content / FAQ ---------- */
+.editorial{margin-top:28px}
+.about-lead{font-size:1.06rem}
+.faq{padding:0;margin:0 0 10px;overflow:hidden}
+.faq summary{cursor:pointer;padding:12px 14px;font-weight:600;list-style:none;position:relative}
+.faq summary::after{content:"+";position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:1.1rem}
+.faq[open] summary::after{content:"–"}
+.faq summary::-webkit-details-marker{display:none}
+.faq p{margin:0;padding:0 14px 14px;color:var(--muted)}
 /* ---------- progress bar ---------- */
 .progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,rgba(23,142,94,.9),rgba(11,92,59,.9));
  z-index:100;border-radius:0 2px 2px 0;pointer-events:none;transition:width 60ms linear}
