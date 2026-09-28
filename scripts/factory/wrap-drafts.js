@@ -60,7 +60,7 @@ for (const f of fs.readdirSync(path.join(ROOT, '_drafts'))) {
 <link rel="stylesheet" href="/lab/assets/style.css">
 </head>
 <body>
-<header class="site-head"><div class="wrap"><a class="brand" href="/lab/">Motorbike SEO Lab</a><nav>${nav}<a href="/lab/lien-he/">Liên hệ</a><a href="/lab/ve-chung-toi/">Về chúng tôi</a></nav></div></header>
+<header class="site-head"><div class="wrap"><a class="brand" href="/lab/">Bản Đồ Xe 2 Bánh</a><nav>${nav}<a href="/lab/lien-he/">Liên hệ</a><a href="/lab/ve-chung-toi/">Về chúng tôi</a></nav></div></header>
 <main class="wrap article">${bodyWithMeta}</main>
 <footer class="site-foot"><div class="wrap">
 <p>${esc(facts.business_name)} — ${esc(facts.location_summary)}</p>

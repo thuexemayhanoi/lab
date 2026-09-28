@@ -52,7 +52,7 @@ ${extra||''}
 <link rel="stylesheet" href="/lab/assets/style.css">
 </head>
 <body>
-<header class="site-head"><div class="wrap"><a class="brand" href="/lab/">Motorbike SEO Lab</a><nav>${nav}<a href="/lab/lien-he/">Liên hệ</a><a href="/lab/ve-chung-toi/">Về chúng tôi</a></nav></div></header>
+<header class="site-head"><div class="wrap"><a class="brand" href="/lab/">Bản Đồ Xe 2 Bánh</a><nav>${nav}<a href="/lab/lien-he/">Liên hệ</a><a href="/lab/ve-chung-toi/">Về chúng tôi</a></nav></div></header>
 <main class="wrap">${content}</main>
 <footer class="site-foot"><div class="wrap">
 <p>${esc(facts.business_name)} — ${esc(facts.location_summary)}</p>
@@ -161,10 +161,10 @@ transition:box-shadow .18s ease,border-color .18s ease}
 `);
 // Homepage
 const hqCards=published.map(r=>`<li class="card"><a href="/lab/${r.output_path}">${esc(titleOf(r))}</a><p class="meta">${esc(descOf(r))}</p><div class="meta"><time datetime="${esc(r.published_date)}">${esc(r.published_date)}</time> · ${esc(CLUSTER_VI[r.cluster]||r.cluster)}</div></li>`).join('\n');
-const home=layout('Việt Nam Motorbike SEO Lab — hướng dẫn xe máy Việt Nam',`
+const home=layout('Bản Đồ Xe 2 Bánh Việt Nam — hướng dẫn xe máy Việt Nam',`
 <section class="hero glass">
-<p class="eyebrow">Motorbike Knowledge Lab</p>
-<h1>Việt Nam Motorbike SEO Lab</h1>
+<p class="eyebrow">CẨM NANG XE 2 BÁNH VIỆT NAM</p>
+<h1>Bản Đồ Xe 2 Bánh Việt Nam</h1>
 <p class="lead">Blog thông tin về hệ sinh thái xe máy Việt Nam: hướng dẫn <strong>thuê xe máy</strong>, cứu hộ khi gặp sự cố, sửa chữa &amp; bảo dưỡng, bằng lái, đăng ký xe, xe máy điện và phụ tùng — viết từ nghiên cứu thực tế, cập nhật theo quy định hiện hành.</p>
 <input id="q" class="searchbox" type="search" placeholder="Tìm bài viết… (ví dụ: thuê xe máy Hà Nội)" oninput="doSearch(this.value)">
 <ul id="search-results"></ul>
@@ -174,14 +174,14 @@ const home=layout('Việt Nam Motorbike SEO Lab — hướng dẫn xe máy Việ
 <h2>Bài viết mới</h2>
 <ul class="cards">${hqCards}</ul>
 <script src="/lab/assets/search.js"></script>`,cfg.base_url,
-`<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"WebSite",name:"Việt Nam Motorbike SEO Lab",url:cfg.base_url,inLanguage:'vi'})}</script>`,
+`<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"WebSite",name:"Bản Đồ Xe 2 Bánh Việt Nam",url:cfg.base_url,inLanguage:'vi'})}</script>`,
 'Hướng dẫn, kinh nghiệm và thông tin thực tế về thuê xe máy, cứu hộ, sửa chữa, bằng lái, đăng ký xe, xe máy điện và phụ tùng tại Việt Nam.');
 fs.writeFileSync(path.join(SITE,'index.html'),home);
 // Topic hubs
 HUBS.forEach(h=>{
  const arts=published.filter(r=>r.output_path.startsWith(h.slug+'/')||(h.slug==='kinh-nghiem'&&!HUBS.slice(0,7).some(x=>r.output_path.startsWith(x.slug+'/'))));
  const cards=arts.map(r=>`<li class="card"><a href="/lab/${r.output_path}">${esc(titleOf(r))}</a><p class="meta">${esc(descOf(r))}</p><div class="meta">${esc(CLUSTER_VI[r.cluster]||r.cluster)}${r.province?' · '+esc(r.province):''}</div></li>`).join('\n')||'<li class="card">Chủ đề này sẽ sớm có bài viết mới.</li>';
- const html=layout(h.title+' — Motorbike SEO Lab',`<nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › ${h.title}</nav>
+ const html=layout(h.title+' — Bản Đồ Xe 2 Bánh Việt Nam',`<nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › ${h.title}</nav>
 <h1>${h.title}</h1><p>${h.desc}</p>
 <h2>Bài viết</h2><ul class="cards">${cards}</ul>`,cfg.base_url+h.slug+'/',
 `<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"CollectionPage",name:h.title,description:h.desc,url:cfg.base_url+h.slug+'/'})}</script>`+(arts.length?`\n<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"ItemList",itemListElement:arts.map((r,i)=>({"@type":"ListItem",position:i+1,name:titleOf(r),url:cfg.base_url+r.output_path}))})}</script>`:''),h.desc);
@@ -206,7 +206,7 @@ fs.writeFileSync(path.join(SITE,'lien-he','index.html'),layout('Liên hệ',`<h1
 <p class="fine">Số điện thoại, địa chỉ chính xác và giờ mở cửa chỉ hiển thị sau khi chủ sở hữu xác nhận (xem config/business-facts.json — status REQUIRES_VERIFICATION). Lab không bịa thông tin NAP.</p>`,cfg.base_url+'lien-he/'));
 fs.mkdirSync(path.join(SITE,'ve-chung-toi'));
 fs.writeFileSync(path.join(SITE,'ve-chung-toi','index.html'),layout('Về chúng tôi',`<h1>Về chúng tôi</h1>
-<p>Motorbike SEO Lab là trang thông tin nghiên cứu về hệ sinh thái xe máy Việt Nam, vận hành bởi ${esc(facts.business_name)} (${esc(facts.location_summary)}). Dịch vụ cho thuê xe máy thực tế của chủ sở hữu hoạt động tại Hà Nội.</p>
+<p>Bản Đồ Xe 2 Bánh Việt Nam là trang thông tin nghiên cứu về hệ sinh thái xe máy Việt Nam, vận hành bởi ${esc(facts.business_name)} (${esc(facts.location_summary)}). Dịch vụ cho thuê xe máy thực tế của chủ sở hữu hoạt động tại Hà Nội.</p>
 <p>Trang này không phải trang kinh doanh và không có chi nhánh toàn quốc. Bài viết về địa phương ngoài Hà Nội mang tính hướng dẫn, không phải lời chào dịch vụ.</p>
 <p>Thí nghiệm SEO hiện tại: baseline zero-backlink — xem <a href="/lab/reports/experiments/baseline.md">báo cáo baseline</a> trong repo.</p>`,cfg.base_url+'ve-chung-toi/'));
 // publish experiment baseline report (linked from About page)
