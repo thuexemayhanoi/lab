@@ -40,6 +40,7 @@ const read = p => JSON.parse(fs.readFileSync(path.join(ROOT,p),'utf8'));
 const write = (p,o) => fs.writeFileSync(path.join(ROOT,p), JSON.stringify(o,null,2));
 const cfg = read('config/content-factory.json');
 const rubric = read('config/article-rubric.json');
+const phase = () => cfg.phase || 'PILOT'; // PILOT -> PRODUCTION via promote-production
 
 function acquireLock(cmd){
   const lockPath=path.join(STATE,'writer-lock.json');
@@ -67,7 +68,7 @@ function prepareNext(){
     const rows=loadMatrix(); const CHUNK=cfg.CHUNK||10; const batch=[];
     const published=rows.filter(r=>r.status==='PUBLISHED').length;
     let next;
-    if(published<cfg.max_publication_in_bootstrap){
+    if(phase()==='PILOT'&&published<cfg.max_publication_in_bootstrap){
       const clusters=['RENTAL','RESCUE','REPAIR','ELECTRIC','LICENCE','REGISTRATION','PARTS'];
       const used=new Set(rows.filter(r=>r.status!=='PLANNED').map(r=>r.cluster));
       for(const c of clusters){ if(!used.has(c)||batch.length===0){ const cand=rows.find(r=>r.cluster===c&&r.status==='PLANNED'); if(cand)batch.push(cand); } }
@@ -77,7 +78,7 @@ function prepareNext(){
     beginTx('prepare-next',batch.map(r=>r.article_id));
     batch.forEach(r=>r.status='RESEARCH');
     saveMatrix(rows);
-    write('data/state/checkpoint.json',{last_run:new Date().toISOString(),phase:'PILOT',matrix_rows:rows.length,published_count:rows.filter(r=>r.status==='PUBLISHED').length,last_batch:batch.map(r=>r.article_id),notes:'Prepared '+batch.length+' articles for research.'});
+    write('data/state/checkpoint.json',{last_run:new Date().toISOString(),phase:phase(),matrix_rows:rows.length,published_count:rows.filter(r=>r.status==='PUBLISHED').length,last_batch:batch.map(r=>r.article_id),notes:'Prepared '+batch.length+' articles for research.'});
     commitTx();
     console.log('PREPARED '+batch.length+': '+batch.map(r=>r.article_id+' ('+r.primary_keyword+')').join(' | '));
   } finally { releaseLock(); }
@@ -135,13 +136,13 @@ function publish(args){
     const rows=loadMatrix();
     const ids=args.length?args:[rows.filter(r=>r.status==='PASS').map(r=>r.article_id)];
     const published=rows.filter(r=>r.status==='PUBLISHED').length;
-    const room=cfg.max_publication_in_bootstrap-published;
+    const room=phase()==='PILOT'?cfg.max_publication_in_bootstrap-published:ids.length;
     let done=0;
     beginTx('publish',ids);
     for(const id of ids){
       const r=rows.find(x=>x.article_id===id);
       if(!r||r.status!=='PASS'){console.log('SKIP '+id+' (not PASS)');continue;}
-      if(done>=room){console.log('LIMIT reached: max bootstrap publication = '+cfg.max_publication_in_bootstrap);break;}
+      if(done>=room){console.log('LIMIT reached: '+(phase()==='PILOT'?'max bootstrap publication = '+cfg.max_publication_in_bootstrap:'chunk limit'));break;}
       const draft=path.join(ROOT,'_drafts',id+'.html');
       if(!fs.existsSync(draft)){console.log('SKIP '+id+' no draft');continue;}
       const dest=path.join(ROOT,'site',r.output_path.replace(/^\//,''),'index.html');
@@ -155,7 +156,7 @@ function publish(args){
       done++;
     }
     saveMatrix(rows);
-    write('data/state/checkpoint.json',{last_run:new Date().toISOString(),phase:'PILOT',matrix_rows:rows.length,published_count:rows.filter(r=>r.status==='PUBLISHED').length,last_batch:ids,notes:'Published '+done+' articles.'});
+    write('data/state/checkpoint.json',{last_run:new Date().toISOString(),phase:phase(),matrix_rows:rows.length,published_count:rows.filter(r=>r.status==='PUBLISHED').length,last_batch:ids,notes:'Published '+done+' articles.'});
     commitTx();
     console.log('PUBLISHED '+done);
   } finally{ releaseLock(); }
@@ -166,6 +167,35 @@ function recover(){
   releaseLock(); commitTx();
   const ck=JSON.parse(fs.readFileSync(path.join(STATE,'checkpoint.json'),'utf8'));
   console.log('RECOVERED. checkpoint: '+JSON.stringify(ck));
+}
+function promoteProduction(){
+  // Canonical PILOT -> PRODUCTION transition. Verifies the bootstrap pilot is
+  // complete and healthy, then flips config.phase and the checkpoint phase.
+  // Matrix, article IDs, published set, QA evidence and lock/transaction
+  // semantics are untouched.
+  const rows=loadMatrix();
+  const published=rows.filter(r=>r.status==='PUBLISHED');
+  const problems=[];
+  if(phase()!=='PILOT')problems.push('phase is already '+phase());
+  if(published.length<cfg.max_publication_in_bootstrap)
+    problems.push('bootstrap pilot incomplete: published='+published.length+' < cap='+cfg.max_publication_in_bootstrap);
+  published.forEach(r=>{
+    if(Number(r.qa_score)<rubric.pass_min)problems.push(r.article_id+' qa='+r.qa_score);
+    if(!fs.existsSync(path.join(ROOT,'data','published',r.article_id+'.html')))problems.push(r.article_id+' missing archive');
+    if(!fs.existsSync(path.join(ROOT,'site',r.output_path.replace(/^\//,''),'index.html')))problems.push(r.article_id+' missing public file');
+  });
+  const tx=JSON.parse(fs.readFileSync(path.join(STATE,'transaction.json'),'utf8'));
+  if(tx.active)problems.push('active transaction '+tx.id+' — run recover first');
+  if(problems.length){console.error('PROMOTE REFUSED:\n'+problems.join('\n'));process.exit(1);}
+  acquireLock('promote-production');
+  try{
+    beginTx('promote-production',[]);
+    cfg.phase='PRODUCTION';
+    write('config/content-factory.json',cfg);
+    write('data/state/checkpoint.json',{last_run:new Date().toISOString(),phase:'PRODUCTION',matrix_rows:rows.length,published_count:published.length,last_batch:published.map(r=>r.article_id),notes:'Bootstrap pilot complete (10/10, QA>=90). Promoted PILOT -> PRODUCTION via canonical promote-production command.'});
+    commitTx();
+    console.log('PROMOTED PILOT -> PRODUCTION. published='+published.length+', chunk='+cfg.CHUNK+', bootstrap cap no longer binds.');
+  } finally { releaseLock(); }
 }
 function consistency(){
   const rows=loadMatrix();
@@ -197,6 +227,6 @@ function reports(){
   console.log('REPORTS WRITTEN: reports/factory/status-report.json');
 }
 const [cmd,...args]=process.argv.slice(2);
-const commands={status,'prepare-next':prepareNext,research,qa,publish,recover,consistency,reports};
-if(!commands[cmd]){console.error('Usage: factory.js <status|prepare-next|research|qa|publish|recover|consistency|reports> [args]');process.exit(1);}
+const commands={status,'prepare-next':prepareNext,research,qa,publish,recover,'promote-production':promoteProduction,consistency,reports};
+if(!commands[cmd]){console.error('Usage: factory.js <status|prepare-next|research|qa|publish|recover|promote-production|consistency|reports> [args]');process.exit(1);}
 commands[cmd](args);

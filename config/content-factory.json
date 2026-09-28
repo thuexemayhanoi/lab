@@ -3,8 +3,27 @@
   "CHUNK": 10,
   "total_target_articles": 10000,
   "max_publication_in_bootstrap": 10,
-  "status_lifecycle": ["PLANNED", "RESEARCH", "WRITING", "QA", "PASS", "PUBLISHED"],
-  "failure_path": ["QA", "REPAIR", "QA", "...", "BLOCKED"],
+  "status_lifecycle": [
+    "PLANNED",
+    "RESEARCH",
+    "WRITING",
+    "QA",
+    "PASS",
+    "PUBLISHED"
+  ],
+  "failure_path": [
+    "QA",
+    "REPAIR",
+    "QA",
+    "...",
+    "BLOCKED"
+  ],
   "writer": "external AI writer — không đặt API key trong GitHub Actions, không tự động viết trong Actions",
-  "notes": "Actions chỉ chạy: tests, validation, QA, deterministic generation, publish promotion, reports."
+  "notes": "Actions chỉ chạy: tests, validation, QA, deterministic generation, publish promotion, reports.",
+  "phase": "PRODUCTION",
+  "phase_lifecycle": [
+    "PILOT",
+    "PRODUCTION"
+  ],
+  "notes_promote_production": "Canonical transition: node scripts/factory/factory.js promote-production (verifies pilot complete, promotes phase to PRODUCTION; bootstrap cap then no longer binds)."
 }

@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-09-28T05:44:01.380Z",
-  "phase": "PILOT",
+  "last_run": "2026-09-28T11:26:39.831Z",
+  "phase": "PRODUCTION",
   "matrix_rows": 10000,
   "published_count": 10,
   "last_batch": [
@@ -15,5 +15,5 @@
     "A08201",
     "A09401"
   ],
-  "notes": "Published 10 articles."
+  "notes": "Bootstrap pilot complete (10/10, QA>=90). Promoted PILOT -> PRODUCTION via canonical promote-production command."
 }
