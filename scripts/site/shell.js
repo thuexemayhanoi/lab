@@ -187,6 +187,7 @@ function chatbotHtml() {
  * text are untouched. inner = full page HTML; returns full page HTML. */
 function decorateArticle(inner, opt) {
   // opt: { category, hubSlug, hubTitle, groupLabel, related:[{href,title,meta,category,hubSlug}], prev, next, readingMin }
+  if (/<header class="article-hero"/.test(inner)) return inner; // already decorated — idempotent
   const m = inner.match(/^([\s\S]*?)(<main[^>]*>)([\s\S]*?)(<\/main>)([\s\S]*)$/);
   if (!m) return inner;
   const [, head, open, bodyMain, close, tail] = m;
@@ -200,12 +201,16 @@ function decorateArticle(inner, opt) {
   if (h1m) {
     h1 = h1m[0];
     rest = after.slice(h1m.index + h1m[0].length);
-    const leadm = rest.match(/^\s*<p[\s\S]*?<\/p>/);
-    if (leadm) { lead = `<p class="article-lead">${leadm[0].slice(3, -4)}</p>`; rest = rest.slice(leadm[0].length); }
+    const leadm = rest.match(/^\s*<p[^>]*>([\s\S]*?)<\/p>/);
+    if (leadm) { lead = `<p class="article-lead">${leadm[1]}</p>`; rest = rest.slice(leadm[0].length); }
   }
   // deterministic TOC from H2/H3 with generated ids
   const heads = [];
   rest = rest.replace('<strong>Trả lời nhanh:</strong>', '<strong class="quick-label">Trả lời nhanh:</strong>');
+  // responsive tables: every bare <table> gets a scroll wrapper (keyboard-focusable
+  // region). Writers never add CSS — this is shared article chrome.
+  rest = rest.replace(/<table>([\s\S]*?)<\/table>/g,
+    '<div class="table-scroll" role="region" aria-label="Bảng dữ liệu — cuộn ngang trên màn hình nhỏ" tabindex="0"><table>$1</table></div>');
   rest = rest.replace(/<(h[23])>([^<]+)<\/\1>/g, (all, tag, txt) => {
     const id = 'sec-' + (heads.length + 1);
     heads.push({ id, tag, txt: txt.trim() });
