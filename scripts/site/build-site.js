@@ -216,7 +216,11 @@ const napSchema = JSON.stringify({
   dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
   opens:"09:00",closes:"21:00"}]
 });
-const mapPin = '<svg class="ico ico-sm" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>';
+// Map embed is built ONLY from the verified address in config/business-facts.json
+// (single source of truth). No new address, no coordinates — Google resolves the
+// exact verified address server-side. The original maps_url share link stays the
+// authoritative "Mở Google Maps" destination.
+const mapEmbedUrl = 'https://www.google.com/maps?q=' + encodeURIComponent(facts.address) + '&output=embed';
 fs.writeFileSync(path.join(SITE,'lien-he','index.html'),layout('Liên hệ',`
 <nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › Liên hệ</nav>
 <h1>Liên hệ</h1>
@@ -238,9 +242,12 @@ fs.writeFileSync(path.join(SITE,'lien-he','index.html'),layout('Liên hệ',`
 </section>
 <section class="map-card glass" aria-labelledby="map-h">
   <h2 id="map-h">Vị trí</h2>
-  <p class="map-line">${mapPin} ${esc(facts.address)}</p>
-  <p class="fine">Bản đồ chi tiết vị trí được mở trong Google Maps — dùng nút “Xem trên Google Maps” phía trên.</p>
-  <a class="btn btn-secondary" href="${esc(facts.maps_url)}" target="_blank" rel="noopener">Mở Google Maps</a>
+  <div class="map-embed">
+    <iframe src="${esc(mapEmbedUrl)}" title="Bản đồ Google Maps — vị trí ${esc(facts.business_name)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+  </div>
+  <div class="map-actions">
+    <a class="btn btn-secondary" href="${esc(facts.maps_url)}" target="_blank" rel="noopener">Mở Google Maps</a>
+  </div>
 </section>
 <section aria-labelledby="pre-h">
   <h2 id="pre-h">Thông tin trước khi liên hệ</h2>

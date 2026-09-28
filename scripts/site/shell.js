@@ -47,10 +47,12 @@ const NAV_BY_SLUG = (() => {
 })();
 // Compact footer mini-sitemap layout — slugs only; labels and hrefs are always
 // resolved via NAV_BY_SLUG at render time (no duplicate URL data here).
+// Each group label carries a small icon from the SAME inline-SVG set the
+// header/menu consumes (shell.svg/ICON) — no second icon system is introduced.
 const FOOTER_NAV = [
-  { label: 'Khám phá', slugs: ['thue-xe-may', 'kinh-nghiem', 'cuu-ho-xe-may', 'sua-xe-may'] },
-  { label: 'Pháp lý & Phương tiện', slugs: ['bang-lai-xe-may', 'dang-ky-xe-may', 'xe-may-dien', 'phu-tung'] },
-  { label: 'Thông tin', slugs: ['ve-chung-toi', 'lien-he', 'chinh-sach-bao-mat', 'dieu-khoan-su-dung', 'sitemap-index'] },
+  { label: 'Khám phá', icon: 'compass', slugs: ['thue-xe-may', 'kinh-nghiem', 'cuu-ho-xe-may', 'sua-xe-may'] },
+  { label: 'Pháp lý & Phương tiện', icon: 'card', slugs: ['bang-lai-xe-may', 'dang-ky-xe-may', 'xe-may-dien', 'phu-tung'] },
+  { label: 'Thông tin', icon: 'info', slugs: ['ve-chung-toi', 'lien-he', 'chinh-sach-bao-mat', 'dieu-khoan-su-dung', 'sitemap-index'] },
 ];
 
 // ---------- inline SVG icon set (no emoji, no icon font, no external request) ----------
@@ -154,19 +156,20 @@ function footerHtml(facts) {
       return `<li><a href="${link.href}">${esc(link.nav)}</a></li>`;
     }).join('');
     return `<div class="foot-col">
-  <p class="foot-label">${esc(col.label)}</p>
+  <p class="foot-label"><span class="foot-label-ico">${svg(col.icon)}</span>${esc(col.label)}</p>
   <ul class="foot-links">${items}</ul>
 </div>`;
   }).join('\n');
+  // Footer brand display = short brand (owner decision); tagline unchanged.
   return `<footer class="site-foot"><div class="wrap">
 <div class="foot-shell glass-footer">
   <div class="foot-top">
-    <p class="foot-brand">${BRAND_FULL}</p>
+    <p class="foot-brand">${BRAND_SHORT}</p>
     <p class="foot-desc">Cẩm nang nghiên cứu thực tế về xe máy, hành trình, bảo dưỡng, pháp lý và phương tiện hai bánh tại Việt Nam.</p>
     <nav class="foot-nav" aria-label="Sơ đồ trang">${cols}</nav>
   </div>
   <div class="foot-bottom">
-    <p>© ${new Date().getFullYear()} ${BRAND_FULL}</p>
+    <p>© ${new Date().getFullYear()} ${BRAND_SHORT}</p>
     <p class="fine">Dữ liệu &amp; nội dung được biên tập theo nguồn đã kiểm chứng.</p>
     <button class="to-top" id="to-top" type="button" aria-label="Lên đầu trang" title="Lên đầu trang">↑</button>
   </div>
@@ -204,11 +207,11 @@ function chatbotHtml() {
   <div class="chat-mode-row"><span class="chat-mode" id="chat-mode" role="status" title="Chế độ tra cứu nội dung — trả lời từ nội dung đã xuất bản của trang.">Tra cứu nội dung</span></div>
   <div class="chat-log" id="chat-log" role="log" aria-live="polite" aria-label="Hội thoại với trợ lý"></div>
   <p class="chat-status" id="chat-status" role="status" aria-live="polite"></p>
+  <p class="chat-note">Trợ lý chỉ dựa trên nội dung đã xuất bản của trang; nếu chưa có thông tin đủ, trợ lý sẽ nói rõ. AI (khi bạn bật) chạy cục bộ trên thiết bị, không gửi hội thoại tới dịch vụ suy luận nào.</p>
   <form class="chat-input" id="chat-form" autocomplete="off">
-    <textarea id="chat-q" rows="1" placeholder="Hỏi về thuê xe, cứu hộ, giấy tờ…" aria-label="Câu hỏi cho trợ lý"></textarea>
+    <textarea id="chat-q" rows="1" enterkeyhint="send" placeholder="Hỏi về thuê xe, cứu hộ, giấy tờ…" aria-label="Câu hỏi cho trợ lý"></textarea>
     <button class="chat-send" id="chat-send" type="submit" aria-label="Gửi câu hỏi">${svg('send')}</button>
   </form>
-  <p class="chat-note">Trợ lý chỉ dựa trên nội dung đã xuất bản của trang; nếu chưa có thông tin đủ, trợ lý sẽ nói rõ. AI (khi bạn bật) chạy cục bộ trên thiết bị, không gửi hội thoại tới dịch vụ suy luận nào.</p>
 </section>
 <script src="/lab/assets/chatbot.js" defer></script>`;
 }
