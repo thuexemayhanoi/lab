@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <sitemap><loc>https://thuexemayhanoi.github.io/lab/sitemap-static.xml</loc></sitemap>
-<sitemap><loc>https://thuexemayhanoi.github.io/lab/sitemap-rental.xml</loc></sitemap>
-<sitemap><loc>https://thuexemayhanoi.github.io/lab/sitemap-rescue.xml</loc></sitemap>
-<sitemap><loc>https://thuexemayhanoi.github.io/lab/sitemap-repair.xml</loc></sitemap>
-<sitemap><loc>https://thuexemayhanoi.github.io/lab/sitemap-licence.xml</loc></sitemap>
-<sitemap><loc>https://thuexemayhanoi.github.io/lab/sitemap-registration.xml</loc></sitemap>
-<sitemap><loc>https://thuexemayhanoi.github.io/lab/sitemap-electric.xml</loc></sitemap>
 <sitemap><loc>https://thuexemayhanoi.github.io/lab/sitemap-parts.xml</loc></sitemap>
+<sitemap><loc>https://thuexemayhanoi.github.io/lab/sitemap-electric.xml</loc></sitemap>
+<sitemap><loc>https://thuexemayhanoi.github.io/lab/sitemap-registration.xml</loc></sitemap>
+<sitemap><loc>https://thuexemayhanoi.github.io/lab/sitemap-licence.xml</loc></sitemap>
+<sitemap><loc>https://thuexemayhanoi.github.io/lab/sitemap-repair.xml</loc></sitemap>
+<sitemap><loc>https://thuexemayhanoi.github.io/lab/sitemap-rescue.xml</loc></sitemap>
+<sitemap><loc>https://thuexemayhanoi.github.io/lab/sitemap-rental.xml</loc></sitemap>
 </sitemapindex>
