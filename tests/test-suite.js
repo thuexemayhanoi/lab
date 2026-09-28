@@ -154,12 +154,22 @@ test('truth: informational_only pages have no owner service claims / LocalBusine
     assert.ok(!/chúng tôi cứu hộ|đội cứu hộ của chúng tôi|gọi chúng tôi tại/.test(html), r.article_id + ' fake service claim');
   });
 });
-test('truth: footer NAP has no street address and no phone', () => {
+test('truth: compact footer — no category mega menu, no NAP, utility links only', () => {
   const home = fs.readFileSync(path.join(SITE, 'index.html'), 'utf8');
   const foot = home.split('site-foot')[1] || '';
   assert.ok(!/\d{2}\s*(Nguyễn|Trần|Lê|Phạm|Phố|Đường)/.test(foot), 'street address in footer');
   assert.ok(!/0\d{9,10}/.test(foot), 'phone number in footer');
-  assert.ok(foot.includes(facts.location_summary), 'location summary missing');
+  assert.ok(!/mailto:/.test(foot), 'email in footer');
+  // the footer must NOT repeat the header navigation / category columns
+  assert.ok(!/foot-grid|foot-col|foot-label/.test(foot), 'footer still has category columns');
+  ['Khám phá', 'Pháp lý', 'Thuê xe máy', 'Cứu hộ', 'Bằng lái', 'Đăng ký xe', 'Xe máy điện', 'Phụ tùng'].forEach(s =>
+    assert.ok(!foot.includes('>' + s + '</a>'), 'footer repeats category link: ' + s));
+  assert.ok(!foot.includes('href="tel:'), 'no quick-call button allowed in global footer');
+  // compact utility row + copyright
+  assert.strictEqual((foot.match(/<nav class="foot-links-row"/g) || []).length, 1, 'footer must have exactly one compact link row');
+  ['/lab/lien-he/', '/lab/chinh-sach-bao-mat/', '/lab/dieu-khoan-su-dung/', '/lab/sitemap-index.xml'].forEach(href =>
+    assert.ok(foot.includes(`href="${href}"`), 'footer utility link missing: ' + href));
+  assert.ok(/© \d{4} /.test(foot), 'copyright line missing');
 });
 test('draft safety: no drafts directory in the public tree', () => {
   assert.ok(!fs.existsSync(path.join(ROOT, '_drafts')), 'drafts directory at repository root');
@@ -446,20 +456,38 @@ test('design: published articles render the shared editorial chrome, no one-off 
   });
 });
 
-// ---------- CHATBOT REDESIGN CONTRACT ----------
-test('chatbot: navy subsystem identity + bounded panel + bottom sheet on mobile', () => {
+// ---------- CHATBOT COMPACT/MOBILE-FIRST CONTRACT ----------
+test('chatbot: navy subsystem identity + bounded panel + compact bottom sheet on mobile', () => {
   const css = fs.readFileSync(path.join(SITE, 'assets', 'style.css'), 'utf8');
   assert.ok(css.includes('--chat-bg:#0F172A'), 'chatbot navy tokens missing');
-  assert.ok(css.includes('width:min(410px,calc(100vw - 32px))'), 'desktop panel width not bounded');
-  const sheet = css.match(/@media\(max-width:767px\)\{[\s\S]*?\.chat-panel\{[^}]*border-radius:20px 20px 0 0/);
+  assert.ok(css.includes('width:min(400px,calc(100vw - 32px))'), 'desktop panel width not bounded');
+  const sheet = css.match(/@media\(max-width:767px\)\{[\s\S]*?\.chat-panel\{[^}]*border-radius:24px 24px 0 0/);
   assert.ok(sheet, 'mobile bottom-sheet rule missing for .chat-panel');
   assert.ok(/--chat-vh,100dvh/.test(css), 'dynamic viewport height fallback missing');
+  // mobile: sheet never exceeds ~78dvh (not full screen) and shrinks with the keyboard
+  assert.ok(/max-height:min\(calc\(var\(--chat-vh,100dvh\)\*\.76\),78dvh\)/.test(css), 'mobile sheet height not capped');
+  assert.ok(css.includes('.chat-handle'), 'bottom-sheet handle missing');
+  // compact composer: 16px textarea (no iOS zoom), max 3–4 lines, safe-area aware
+  assert.ok(/\.chat-input textarea\{[^}]*font-size:16px/.test(css), 'textarea must be 16px to avoid iOS zoom');
+  assert.ok(/\.chat-input textarea\{[^}]*max-height:96px/.test(css), 'auto-grow max height not bounded');
+  assert.ok(/\.chat-input\{[^}]*safe-area-inset-bottom/.test(css.slice(css.indexOf('.chat-input{'))) || /chat-input\{padding:8px 8px calc/.test(css), 'composer not safe-area aware on mobile');
+  assert.ok(css.includes('.chat-msg{max-width:92%'), 'bubbles not width-bounded');
+  // title never truncated prematurely on narrow viewports; subtitle hides only when very narrow
+  assert.ok(/\.chat-title-name\{font-size:clamp\(11\.5px,3\.1vw,13px\)\}/.test(css), 'mobile title sizing missing');
+  assert.ok(/@media\(max-width:379px\)/.test(css), 'very-narrow fallback missing');
 });
-test('chatbot: redesigned embed is single, textarea composer, keyboard-safe, no chips', () => {
+test('chatbot: friendly local-AI failure UX — no raw module error in UI', () => {
+  const js = fs.readFileSync(path.join(SITE, 'assets', 'chatbot.js'), 'utf8');
+  assert.ok(!/Importing a module script failed/.test(js), 'raw technical error string leaked into chatbot UI');
+  assert.ok(js.includes('AI cục bộ chưa khả dụng trên thiết bị này.'), 'friendly AI-unavailable message missing');
+  assert.ok(js.includes('console.warn'), 'technical detail must stay in console');
+});
+test('chatbot: embed is single, textarea composer, keyboard-safe, no chips', () => {
   const js = fs.readFileSync(path.join(SITE, 'assets', 'chatbot.js'), 'utf8');
   assert.ok(js.includes('visualViewport'), 'visualViewport keyboard handling missing');
   assert.ok(/requestSubmit|dispatchEvent\(new Event\('submit'/.test(js), 'Enter-to-send path missing');
   assert.ok(js.includes('autoGrow'), 'textarea auto-grow missing');
+  assert.ok(js.includes('setBusy'), 'busy state on send control missing');
   publicFiles().filter(f => f.endsWith('.html')).forEach(f => {
     const t = fs.readFileSync(f, 'utf8');
     assert.strictEqual((t.match(/id="chat-launcher"/g) || []).length, 1, 'launcher not exactly once in ' + f);
@@ -467,5 +495,78 @@ test('chatbot: redesigned embed is single, textarea composer, keyboard-safe, no 
     assert.ok(/<textarea id="chat-q" rows="1"[^>]*aria-label="Câu hỏi cho trợ lý"/.test(t), 'labelled textarea composer missing in ' + f);
     assert.ok(t.includes('chat-title-sub'), 'assistant identity header missing in ' + f);
     assert.ok(!/chat-chip|suggestion-chip|prompt-chip/.test(t), 'suggestion chips present in ' + f);
+  });
+});
+test('chatbot: compact header actions — overflow menu holds clear, controls stay >=44px', () => {
+  const t = fs.readFileSync(path.join(SITE, 'index.html'), 'utf8');
+  assert.ok(/id="chat-more-btn"[^>]*aria-haspopup="menu"/.test(t), 'overflow menu button missing');
+  assert.ok(/<div class="chat-menu"[^>]*role="menu"/.test(t), 'overflow menu container missing');
+  assert.ok(/id="chat-clear"[^>]*role="menuitem"[^>]*aria-label="Xóa hội thoại"|aria-label="Xóa hội thoại"[^>]*role="menuitem"/.test(t), 'clear must live in the overflow menu');
+  assert.ok(t.includes('class="chat-handle"'), 'bottom-sheet handle missing from markup');
+  assert.ok(/id="chat-mode"[^>]*>Tra cứu nội dung</.test(t), 'compact mode badge missing');
+  const css = fs.readFileSync(path.join(SITE, 'assets', 'style.css'), 'utf8');
+  assert.ok(/\.chat-ai-toggle\{[^}]*min-height:44px/.test(css), 'AI toggle touch target < 44px');
+  assert.ok(/\.chat-more-btn,\.chat-close\{[^}]*width:44px;height:44px/.test(css), 'header controls < 44px');
+});
+
+// ---------- CONTACT / PRIVACY TRUST ----------
+test('contact: verified NAP, actions, map CTA + truthful LocalBusiness schema', () => {
+  const t = fs.readFileSync(path.join(SITE, 'lien-he', 'index.html'), 'utf8');
+  const f = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'business-facts.json'), 'utf8'));
+  assert.ok(t.includes('112 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội, Việt Nam'), 'exact address missing');
+  assert.ok(t.includes('0942 467 674'), 'exact phone missing');
+  assert.ok(t.includes('nguyentuantu8x@gmail.com'), 'exact email missing');
+  assert.ok(t.includes('09:00 - 21:00'), 'exact opening hours missing');
+  assert.ok(t.includes('https://thuexemaynguyentu.com'), 'verified website missing');
+  assert.ok(t.includes('href="tel:+84942467674"'), 'tel: link missing');
+  assert.ok(t.includes('href="mailto:nguyentuantu8x@gmail.com"'), 'mailto: link missing');
+  assert.ok(t.includes('https://share.google/59Er3R16jWr3psKeo'), 'Google Maps CTA missing');
+  assert.ok(t.includes('Thuê Xe Máy Nguyễn Tú'), 'verified business name missing');
+  // schema on the contact page only, strictly from verified facts
+  assert.ok(/"@type":"LocalBusiness"/.test(t), 'LocalBusiness schema missing on contact page');
+  assert.ok(/"@type":"PostalAddress"/.test(t), 'PostalAddress schema missing');
+  assert.ok(/"opens":"09:00"/.test(t) && /"closes":"21:00"/.test(t), 'opening hours schema mismatch');
+  assert.ok(!/aggregateRating|"review"|priceRange|"geo"/.test(t), 'unverified schema fields present');
+  assert.ok(!/<iframe/.test(t), 'no unverified map embed allowed (share URL cannot be embedded truthfully)');
+  // trust section
+  assert.ok(t.includes('Thông tin trước khi liên hệ'), 'pre-contact trust section missing');
+  assert.strictEqual((t.match(/<h1/g) || []).length, 1, 'contact page must have one H1');
+});
+test('contact: LocalBusiness schema stays on the contact page only', () => {
+  publicFiles().filter(f => f.endsWith('.html') && !f.includes(path.join('lien-he', 'index.html'))).forEach(f => {
+    const t = fs.readFileSync(f, 'utf8');
+    assert.ok(!/"@type":"LocalBusiness"/.test(t), 'LocalBusiness leaked to ' + f);
+  });
+});
+test('privacy: contact transparency block (verified NAP) at the end', () => {
+  const t = fs.readFileSync(path.join(SITE, 'chinh-sach-bao-mat', 'index.html'), 'utf8');
+  ['Thuê Xe Máy Nguyễn Tú', '112 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội, Việt Nam',
+   '0942 467 674', 'nguyentuantu8x@gmail.com', 'https://thuexemaynguyentu.com', '09:00 - 21:00'].forEach(s =>
+    assert.ok(t.includes(s), 'privacy NAP missing: ' + s));
+  const napIdx = t.indexOf('Thông tin liên hệ');
+  assert.ok(napIdx > -1 && napIdx > t.indexOf('<h1'), 'NAP block must be near the end of the privacy page');
+  assert.ok(!/<iframe/.test(t), 'no map iframe on privacy page');
+  assert.ok(!/24\/7|giao xe miễn phí/i.test(t), 'unverified service claims on privacy page');
+});
+
+// ---------- EDITORIAL AUDIT REPORT SYNC ----------
+test('audit: reports/editorial/audit-after.json matches current source (no stale report)', () => {
+  const { execFileSync } = require('child_process');
+  const os = require('os');
+  const tmp = path.join(os.tmpdir(), 'lab-audit-check-' + process.pid + '.json');
+  execFileSync(process.execPath, [path.join(ROOT, 'scripts', 'factory', 'editorial-audit.js'), '--out', tmp], { cwd: ROOT });
+  const fresh = JSON.parse(fs.readFileSync(tmp, 'utf8'));
+  fs.rmSync(tmp, { force: true });
+  const stored = JSON.parse(fs.readFileSync(path.join(ROOT, 'reports', 'editorial', 'audit-after.json'), 'utf8'));
+  assert.strictEqual(fresh.audited, stored.audited, 'audited count drift');
+  assert.strictEqual(fresh.summary.avg_total, stored.summary.avg_total, 'stale audit avg — regenerate with: node scripts/factory/editorial-audit.js --out reports/editorial/audit-after.json');
+  assert.strictEqual(fresh.summary.min_total, stored.summary.min_total, 'stale audit min');
+  assert.strictEqual(fresh.summary.max_total, stored.summary.max_total, 'stale audit max');
+  fresh.articles.forEach(a => {
+    const s = stored.articles.find(x => x.article_id === a.article_id);
+    assert.ok(s, 'article missing from stored audit: ' + a.article_id);
+    assert.strictEqual(a.editorial.total, s.editorial.total, 'stale editorial score for ' + a.article_id);
+    assert.deepStrictEqual(a.issues || [], s.issues || [], 'stale issues for ' + a.article_id);
+    assert.strictEqual(a.word_count, s.word_count, 'stale word count for ' + a.article_id);
   });
 });

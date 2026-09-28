@@ -1,11 +1,14 @@
 {
-  "business_name": "Cho thuê xe máy Phố Cổ - Mr Tú",
+  "business_name": "Thuê Xe Máy Nguyễn Tú",
   "operator": "Chủ sở hữu: Nguyễn Tuấn Tú (nguyentuantu2482)",
-  "email": "nguyentuantu2482@gmail.com",
+  "email": "nguyentuantu8x@gmail.com",
+  "phone": "0942 467 674",
+  "phone_tel": "+84942467674",
+  "address": "112 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội, Việt Nam",
+  "opening_hours": "09:00 - 21:00",
+  "website": "https://thuexemaynguyentu.com",
+  "maps_url": "https://share.google/59Er3R16jWr3psKeo",
   "location_summary": "Long Biên, Hà Nội, Việt Nam",
-  "phone": "REQUIRES_VERIFICATION — không hiển thị cho đến khi chủ sở hữu xác nhận",
-  "address": "REQUIRES_VERIFICATION — chỉ hiển thị tại trang Liên hệ sau khi xác nhận",
-  "opening_hours": "REQUIRES_VERIFICATION",
   "service_area_verified": ["Long Biên, Hà Nội", "phố cổ Hà Nội", "Hoàn Kiếm, Hà Nội"],
-  "nap_policy": "Footer toàn cầu: chỉ tên + email + location_summary. KHÔNG địa chỉ chính xác, KHÔNG số điện thoại, KHÔNG nút gọi nhanh toàn cục. Trang Liên hệ chỉ hiển thị NAP đã xác nhận. Không bịa thông tin NAP."
+  "nap_policy": "NAP đã xác nhận (xác minh 2026-09-28). Footer toàn cầu: KHÔNG hiển thị NAP — chỉ liên kết tới trang Liên hệ. Trang Liên hệ và block liên hệ trong Chính sách bảo mật hiển thị đủ NAP đã xác nhận (tên, địa chỉ, điện thoại, email, giờ hoạt động, website, Google Maps). Không bịa thông tin NAP, không thêm số điện thoại/zalo khác, không thêm chi nhánh."
 }

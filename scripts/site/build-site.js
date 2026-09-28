@@ -156,6 +156,15 @@ fs.writeFileSync(path.join(SITE,'chinh-sach-bao-mat','index.html'),layout('Chín
 <p>Trang có một trợ lý đọc dùng mô hình ngôn ngữ AI chạy <strong>cục bộ ngay trong trình duyệt của bạn</strong> khi bạn chủ động bật chế độ AI. Nội dung trò chuyện không được gửi tới dịch vụ suy luận (inference API) nào. Tệp mô hình chỉ được tải xuống khi bạn chủ động bật chế độ AI, có thể được trình duyệt lưu trong bộ nhớ đệm (cache) của thiết bị và tải lại lần sau không cần tải đầy. Vì tệp mô hình được phân phối qua một kho mô hình công khai, việc bật chế độ AI sẽ phát sinh yêu cầu mạng tới kho mô hình đó — trang không cam kết "không có bất kỳ yêu cầu mạng nào" cho tính năng này. Chi tiết vận hành của trợ lý được mô tả ngay trong bảng trò chuyện.</p>
 <h2>Cập nhật chính sách</h2>
 <p>Nếu cách vận hành của trang thay đổi, chính sách này sẽ được cập nhật tại đúng địa chỉ hiện tại. Ngày cập nhật gần nhất ghi cuối trang. Mọi câu hỏi về quyền riêng tư, vui lòng liên hệ qua trang <a href="/lab/lien-he/">Liên hệ</a>.</p>
+<h2>Thông tin liên hệ</h2>
+<div class="nap-block">
+<p><strong>${esc(facts.business_name)}</strong><br>
+${esc(facts.address)}<br>
+Điện thoại: <a href="tel:${esc(facts.phone_tel)}">${esc(facts.phone)}</a><br>
+Email: <a href="mailto:${esc(facts.email)}">${esc(facts.email)}</a><br>
+Website: <a href="${esc(facts.website)}" target="_blank" rel="noopener">${esc(facts.website)}</a><br>
+Giờ hoạt động: ${esc(facts.opening_hours)}</p>
+</div>
 <p class="fine">Cập nhật lần cuối: 2026-09-28.</p>`,cfg.base_url+'chinh-sach-bao-mat/',null,
 'Chính sách bảo mật của Bản Đồ Xe 2 Bánh Việt Nam: không có analytics, không theo dõi, trợ lý AI chạy cục bộ trong trình duyệt.'));
 fs.mkdirSync(path.join(SITE,'dieu-khoan-su-dung'),{recursive:true});
@@ -177,13 +186,59 @@ fs.writeFileSync(path.join(SITE,'dieu-khoan-su-dung','index.html'),layout('Đi�
 <p>Thắc mắc về nội dung hoặc điều khoản: xin dùng thông tin trên trang <a href="/lab/lien-he/">Liên hệ</a>.</p>
 <p class="fine">Cập nhật lần cuối: 2026-09-28.</p>`,cfg.base_url+'dieu-khoan-su-dung/',null,
 'Điều khoản sử dụng của Bản Đồ Xe 2 Bánh Việt Nam: nội dung thông tin, nguồn chính thức, trách nhiệm người đọc.'));
-// Contact & About
+// Contact page — canonical trust/NAP page built from verified business facts
+// (config/business-facts.json is the single source of truth; nothing invented here).
 fs.mkdirSync(path.join(SITE,'lien-he'));
-fs.writeFileSync(path.join(SITE,'lien-he','index.html'),layout('Liên hệ',`<h1>Liên hệ</h1>
-<p><strong>${esc(facts.business_name)}</strong></p>
-<p>Email: <a href="mailto:${esc(facts.email)}">${esc(facts.email)}</a></p>
-<p>Khu vực: ${esc(facts.location_summary)}</p>
-<p class="fine">Số điện thoại, địa chỉ chính xác và giờ mở cửa chỉ hiển thị sau khi chủ sở hữu xác nhận. ${BRAND_FULL} không bịa thông tin NAP.</p>`,cfg.base_url+'lien-he/'));
+const napAddr = String(facts.address||'').split(',').map(s=>s.trim());
+const napSchema = JSON.stringify({
+ "@context":"https://schema.org",
+ "@type":"LocalBusiness",
+ name:facts.business_name,
+ telephone:facts.phone_tel,
+ email:facts.email,
+ url:facts.website,
+ address:{"@type":"PostalAddress",streetAddress:napAddr[0]||'',
+  addressLocality:(napAddr[1]&&napAddr[2]?napAddr[1]+', '+napAddr[2]:''),addressRegion:napAddr[3]||'',addressCountry:"VN"},
+ openingHoursSpecification:[{"@type":"OpeningHoursSpecification",
+  dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+  opens:"09:00",closes:"21:00"}]
+});
+const mapPin = '<svg class="ico ico-sm" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>';
+fs.writeFileSync(path.join(SITE,'lien-he','index.html'),layout('Liên hệ',`
+<nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › Liên hệ</nav>
+<h1>Liên hệ</h1>
+<p class="lead">Thông tin liên hệ chính thức của ${esc(facts.business_name)}.</p>
+<section class="nap-card glass-strong" aria-labelledby="nap-h">
+  <h2 id="nap-h">Thông tin liên hệ</h2>
+  <dl class="nap-list">
+    <div class="nap-row"><dt>Địa chỉ</dt><dd>${esc(facts.address)}</dd></div>
+    <div class="nap-row"><dt>Điện thoại</dt><dd><a href="tel:${esc(facts.phone_tel)}">${esc(facts.phone)}</a></dd></div>
+    <div class="nap-row"><dt>Email</dt><dd><a href="mailto:${esc(facts.email)}">${esc(facts.email)}</a></dd></div>
+    <div class="nap-row"><dt>Giờ hoạt động</dt><dd>${esc(facts.opening_hours)}</dd></div>
+    <div class="nap-row"><dt>Website</dt><dd><a href="${esc(facts.website)}" target="_blank" rel="noopener">${esc(facts.website)}</a></dd></div>
+  </dl>
+  <div class="nap-actions">
+    <a class="btn" href="tel:${esc(facts.phone_tel)}">Gọi điện</a>
+    <a class="btn" href="${esc(facts.website)}" target="_blank" rel="noopener">Mở website</a>
+    <a class="btn btn-secondary" href="${esc(facts.maps_url)}" target="_blank" rel="noopener">Xem trên Google Maps</a>
+  </div>
+</section>
+<section class="map-card glass" aria-labelledby="map-h">
+  <h2 id="map-h">Vị trí</h2>
+  <p class="map-line">${mapPin} ${esc(facts.address)}</p>
+  <p class="fine">Bản đồ chi tiết vị trí được mở trong Google Maps — dùng nút “Xem trên Google Maps” phía trên.</p>
+  <a class="btn btn-secondary" href="${esc(facts.maps_url)}" target="_blank" rel="noopener">Mở Google Maps</a>
+</section>
+<section aria-labelledby="pre-h">
+  <h2 id="pre-h">Thông tin trước khi liên hệ</h2>
+  <ul class="checklist">
+    <li>Giờ hoạt động: ${esc(facts.opening_hours)} mỗi ngày.</li>
+    <li>Nên liên hệ trước để kiểm tra tình trạng xe.</li>
+    <li>Thông tin trên trang này là thông tin liên hệ chính thức của ${esc(facts.business_name)}.</li>
+  </ul>
+</section>`,cfg.base_url+'lien-he/',
+`<script type="application/ld+json">${napSchema}</script>`,
+'Thông tin liên hệ chính thức của Thuê Xe Máy Nguyễn Tú tại Long Biên, Hà Nội: địa chỉ, điện thoại, email, giờ hoạt động, website và Google Maps.'));
 fs.mkdirSync(path.join(SITE,'ve-chung-toi'));
 fs.writeFileSync(path.join(SITE,'ve-chung-toi','index.html'),layout('Về chúng tôi',`
 <nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › Về chúng tôi</nav>

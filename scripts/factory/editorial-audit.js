@@ -186,8 +186,9 @@ const report = {
 };
 const outIdx = process.argv.indexOf('--out');
 const out = outIdx > -1 ? process.argv[outIdx + 1] : null;
-if (out) { fs.mkdirSync(path.dirname(path.join(ROOT, out)), { recursive: true });
-  fs.writeFileSync(path.join(ROOT, out), JSON.stringify(report, null, 2)); }
+const outFile = out ? path.resolve(ROOT, out) : null;
+if (outFile) { fs.mkdirSync(path.dirname(outFile), { recursive: true });
+  fs.writeFileSync(outFile, JSON.stringify(report, null, 2)); }
 console.log('EDITORIAL AUDIT — ' + results.length + ' published articles');
 results.forEach(a => console.log(
   a.article_id + '  editorial=' + String(a.editorial.total).padStart(3) + '/100  qa=' + a.canonical_qa_score +
@@ -195,4 +196,4 @@ results.forEach(a => console.log(
   a.editorial.seo + ',' + a.editorial.link + ',' + a.editorial.ux + ',' + a.editorial.tech + ']' +
   (a.issues.length ? '  issues: ' + a.issues.join('; ') : '')));
 console.log('AVG ' + report.summary.avg_total + '  MIN ' + report.summary.min_total + '  MAX ' + report.summary.max_total);
-if (out) console.log('WROTE ' + out);
+if (outFile) console.log("WROTE " + outFile);

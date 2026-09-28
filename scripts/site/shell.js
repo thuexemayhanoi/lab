@@ -51,6 +51,8 @@ const ICON = {
   chat: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
   send: '<path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/>',
   trash: '<path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>',
+  more: '<circle cx="5" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.6" fill="currentColor" stroke="none"/>',
+  'map-pin': '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/>',
 };
 const svg = (n, size) => `<svg class="ico ico-${size === 'lg' ? 'lg' : 'sm'}" viewBox="0 0 24 24" width="${size === 'lg' ? 20 : 18}" height="${size === 'lg' ? 20 : 18}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[n] || ''}</svg>`;
 
@@ -121,32 +123,25 @@ ${groups}
 }
 
 function footerHtml(facts) {
-  const col = (label, links) => `<div class="foot-col"><p class="foot-label">${esc(label)}</p><ul class="foot-links">${links.map(c => `<li><a href="${c.href}">${esc(c.nav)}</a></li>`).join('')}</ul></div>`;
-  const discover = [{ href: '/lab/thue-xe-may/', nav: 'Thuê xe máy' }, { href: '/lab/kinh-nghiem/', nav: 'Kinh nghiệm' }, { href: '/lab/cuu-ho-xe-may/', nav: 'Cứu hộ' }, { href: '/lab/sua-xe-may/', nav: 'Sửa chữa & bảo dưỡng' }];
-  const legal = [{ href: '/lab/bang-lai-xe-may/', nav: 'Bằng lái' }, { href: '/lab/dang-ky-xe-may/', nav: 'Đăng ký xe' }, { href: '/lab/xe-may-dien/', nav: 'Xe máy điện' }, { href: '/lab/phu-tung/', nav: 'Phụ tùng' }];
-  const info = INFO_LINKS.map(c => ({ href: c.href, nav: c.nav })).concat([{ href: '/lab/sitemap-index.xml', nav: 'Sitemap' }]);
+  // Compact editorial footer — navigation lives in the header/drawer, not here.
+  // No NAP in the global footer; the verified NAP lives on /lab/lien-he/.
+  void facts;
+  const links = [
+    { href: '/lab/lien-he/', nav: 'Liên hệ' },
+    { href: '/lab/chinh-sach-bao-mat/', nav: 'Chính sách bảo mật' },
+    { href: '/lab/dieu-khoan-su-dung/', nav: 'Điều khoản sử dụng' },
+    { href: '/lab/sitemap-index.xml', nav: 'Sitemap' },
+  ];
   return `<footer class="site-foot"><div class="wrap">
 <div class="foot-shell glass-footer">
-  <div class="foot-grid">
-    <div class="foot-col foot-brand-col">
-      <p class="foot-brand">${BRAND_FULL}</p>
-      <p class="foot-desc">Cẩm nang nghiên cứu thực tế về xe máy, hành trình, bảo dưỡng, pháp lý và phương tiện hai bánh tại Việt Nam.</p>
-      <ul class="foot-links">
-        <li><a href="/lab/">Trang chủ</a></li>
-        <li><a href="/lab/ve-chung-toi/">Giới thiệu</a></li>
-      </ul>
-    </div>
-    ${col('Khám phá', discover)}
-    ${col('Pháp lý & Phương tiện', legal)}
-    ${col('Thông tin', info)}
+  <div class="foot-top">
+    <p class="foot-brand">${BRAND_FULL}</p>
+    <p class="foot-desc">Cẩm nang nghiên cứu thực tế về xe máy, hành trình, bảo dưỡng, pháp lý và phương tiện hai bánh tại Việt Nam.</p>
+    <nav class="foot-links-row" aria-label="Liên kết chân trang">${links.map(c => `<a href="${c.href}">${esc(c.nav)}</a>`).join('')}</nav>
   </div>
   <div class="foot-bottom">
-    <p>© ${new Date().getFullYear()} ${BRAND_FULL} · ${esc(facts.business_name)} — ${esc(facts.location_summary)}</p>
-    <div class="foot-utility">
-      <a href="/lab/chinh-sach-bao-mat/">Chính sách bảo mật</a>
-      <a href="/lab/dieu-khoan-su-dung/">Điều khoản sử dụng</a>
-    </div>
-    <p class="fine">Trang thông tin nghiên cứu về hệ sinh thái xe hai bánh Việt Nam. Không phải trang dịch vụ toàn quốc.</p>
+    <p>© ${new Date().getFullYear()} ${BRAND_FULL}</p>
+    <p class="fine">Dữ liệu &amp; nội dung được biên tập theo nguồn đã kiểm chứng.</p>
     <button class="to-top" id="to-top" type="button" aria-label="Lên đầu trang" title="Lên đầu trang">↑</button>
   </div>
 </div>
@@ -160,6 +155,7 @@ ${chatbotHtml()}`;
 function chatbotHtml() {
   return `<button class="chat-launcher" id="chat-launcher" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="chat-panel" aria-label="Mở trợ lý đọc" title="Trợ lý đọc">${svg('chat', 'lg')}</button>
 <section class="chat-panel" id="chat-panel" role="dialog" aria-modal="false" aria-label="Trợ lý Bản Đồ Xe 2 Bánh" hidden>
+  <div class="chat-handle" aria-hidden="true"></div>
   <div class="chat-head">
     <div class="chat-title">
       <span class="chat-title-ico">${svg('chat')}</span>
@@ -169,12 +165,17 @@ function chatbotHtml() {
       </span>
     </div>
     <div class="chat-head-actions">
-      <button class="chat-ai-toggle" id="chat-ai-toggle" type="button" aria-pressed="false">Bật AI cục bộ</button>
-      <button class="chat-clear" id="chat-clear" type="button" aria-label="Xóa hội thoại" title="Xóa hội thoại">${svg('trash')}</button>
+      <button class="chat-ai-toggle" id="chat-ai-toggle" type="button" aria-pressed="false" aria-label="Bật AI cục bộ"><span class="ai-txt">Bật AI cục bộ</span></button>
+      <div class="chat-more" id="chat-more">
+        <button class="chat-more-btn" id="chat-more-btn" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Tùy chọn trợ lý" title="Tùy chọn trợ lý">${svg('more')}</button>
+        <div class="chat-menu" id="chat-menu" role="menu" hidden>
+          <button class="chat-clear" id="chat-clear" type="button" role="menuitem" aria-label="Xóa hội thoại" title="Xóa hội thoại">${svg('trash')}<span>Xóa hội thoại</span></button>
+        </div>
+      </div>
       <button class="btn-icon chat-close" id="chat-close" type="button" aria-label="Đóng trợ lý">${svg('close')}</button>
     </div>
   </div>
-  <p class="chat-mode" id="chat-mode">Chế độ tra cứu nội dung — trả lời từ nội dung đã xuất bản của trang.</p>
+  <div class="chat-mode-row"><span class="chat-mode" id="chat-mode" role="status" title="Chế độ tra cứu nội dung — trả lời từ nội dung đã xuất bản của trang.">Tra cứu nội dung</span></div>
   <div class="chat-log" id="chat-log" role="log" aria-live="polite" aria-label="Hội thoại với trợ lý"></div>
   <p class="chat-status" id="chat-status" role="status" aria-live="polite"></p>
   <form class="chat-input" id="chat-form" autocomplete="off">

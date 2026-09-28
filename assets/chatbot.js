@@ -18,8 +18,15 @@
   var statusEl = document.getElementById('chat-status');
   var modeEl = document.getElementById('chat-mode');
   var aiBtn = document.getElementById('chat-ai-toggle');
+  var aiLabel = aiBtn ? (aiBtn.querySelector('.ai-txt') || aiBtn) : null;
   var clearBtn = document.getElementById('chat-clear');
   var closeBtn = document.getElementById('chat-close');
+  var moreBtn = document.getElementById('chat-more-btn');
+  var menuEl = document.getElementById('chat-menu');
+  var sendBtn = document.getElementById('chat-send');
+  var MODE_LOOKUP = 'Tra cứu nội dung';
+  var MODE_LOOKUP_FULL = 'Chế độ tra cứu nội dung — trả lời từ nội dung đã xuất bản của trang.';
+  var AI_UNAVAILABLE = 'AI cục bộ chưa khả dụng trên thiết bị này. Trợ lý vẫn hoạt động ở chế độ tra cứu nội dung.';
 
   // ---------- state ----------
   var KB = null;            // knowledge index {records:[...]}
@@ -124,7 +131,7 @@
     save();
   }
   function rerender() {
-    log.innerHTML = msgs.length ? '' : '<p class="chat-empty">Xin chào! Mình là trợ lý đọc của Bản Đồ Xe 2 Bánh. Hỏi về thuê xe máy, cứu hộ, bảo dưỡng, bằng lái, đăng ký xe, xe điện hoặc phụ tùng — mình trả lời từ nội dung đã xuất bản của trang.</p>';
+    log.innerHTML = msgs.length ? '' : '<p class="chat-empty">Xin chào! Tôi trả lời dựa trên nội dung đã xuất bản của Bản Đồ Xe 2 Bánh.<br>Hỏi về thuê xe, cứu hộ, bảo dưỡng, giấy tờ, xe điện hoặc phụ tùng.</p>';
     msgs.forEach(function (m) {
       var div = document.createElement('div');
       div.className = 'chat-msg ' + (m.role === 'user' ? 'user' : 'bot');
@@ -148,6 +155,22 @@
     } catch (e) { msgs = []; }
   }
   function setStatus(t) { statusEl.textContent = t || ''; }
+  // compact mode badge: short label + full explanation via title/aria-label
+  function setMode(short, full) {
+    if (!modeEl) return;
+    modeEl.textContent = short;
+    modeEl.title = full;
+    modeEl.setAttribute('aria-label', full);
+  }
+  function setAiLabel(t) {
+    if (aiLabel) aiLabel.textContent = t;
+    if (aiBtn) aiBtn.setAttribute('aria-label', t);
+  }
+  // transient busy state on the send control — never moves layout
+  function setBusy(b) {
+    if (sendBtn) sendBtn.disabled = !!b;
+    if (input) input.setAttribute('aria-busy', b ? 'true' : 'false');
+  }
   function excerpt(t, n) {
     t = String(t);
     return t.length > n ? t.slice(0, n - 1) + '…' : t;
@@ -174,21 +197,22 @@
   function startAI() {
     if (aiReady || aiBusy) return;
     if (!hasWebGPU()) {
-      setStatus('Thiết bị/trình duyệt này chưa hỗ trợ WebGPU nên không chạy được mô hình AI cục bộ. Trợ lý tiếp tục ở Chế độ tra cứu nội dung.');
-      modeEl.textContent = 'Chế độ tra cứu nội dung — trả lời từ nội dung đã xuất bản của trang.';
+      setStatus('Thiết bị/trình duyệt này chưa hỗ trợ WebGPU nên không chạy được mô hình AI cục bộ. Trợ lý tiếp tục ở chế độ tra cứu nội dung.');
+      setMode(MODE_LOOKUP, MODE_LOOKUP_FULL);
       aiBtn.disabled = false;
       return;
     }
     aiBusy = true;
     aiBtn.disabled = true;
-    aiBtn.textContent = 'Đang tải…';
-    modeEl.textContent = 'Đang tải mô hình AI cục bộ…';
+    setAiLabel('Đang tải…');
+    setMode('Đang tải AI…', 'Đang tải mô hình AI cục bộ về trình duyệt của bạn — chỉ khi bạn chủ động bật.');
     setStatus('Đang tải mô hình ' + MODEL_ID + ' (' + MODEL_SIZE + ') về trình duyệt của bạn — chỉ tải một lần, lần sau dùng lại từ bộ nhớ đệm.');
     try {
       worker = new Worker('/lab/assets/chatbot-worker.js', { type: 'module' });
     } catch (e) {
-      aiBusy = false; aiBtn.disabled = false; aiBtn.textContent = 'Bật AI cục bộ';
-      setStatus('Không thể khởi động trình chạy AI cục bộ. Trợ lý tiếp tục ở Chế độ tra cứu nội dung.');
+      aiBusy = false; aiBtn.disabled = false; setAiLabel('Bật AI cục bộ');
+      setStatus(AI_UNAVAILABLE);
+      try { console.warn('[trợ lý] không khởi động được worker AI cục bộ:', e && e.message); } catch (e2) {}
       return;
     }
     worker.addEventListener('message', function (ev) {
@@ -197,26 +221,30 @@
         setStatus('Đang tải mô hình AI cục bộ… ' + Math.round((d.p || 0) * 100) + '% — xử lý hoàn toàn trên thiết bị của bạn.');
       } else if (d.type === 'ready') {
         aiReady = true; aiBusy = false;
-        aiBtn.textContent = 'AI cục bộ đang bật';
-        modeEl.textContent = 'Chế độ AI cục bộ — mô hình chạy trên thiết bị của bạn, trả lời kèm nguồn từ trang.';
+        setAiLabel('AI cục bộ đang bật');
+        setMode('AI cục bộ', 'Chế độ AI cục bộ — mô hình chạy trên thiết bị của bạn, trả lời kèm nguồn từ trang.');
         setStatus('Mô hình AI cục bộ đã sẵn sàng. Hội thoại vẫn không rời khỏi thiết bị của bạn.');
-        pushMsg('bot', 'Đã bật AI cục bộ (' + MODEL_ID + '). Từ giờ mình trả lời tự nhiên hơn, vẫn dựa trên nội dung đã xuất bản của trang.', []);
+        pushMsg('bot', 'Đã bật AI cục bộ. Từ giờ mình trả lời tự nhiên hơn, vẫn dựa trên nội dung đã xuất bản của trang.', []);
         save();
       } else if (d.type === 'reply') {
         finishAI(d.text);
       } else if (d.type === 'error') {
         aiBusy = false;
         aiReady = false;
+        setBusy(false);
         aiBtn.disabled = false;
-        aiBtn.textContent = 'Bật AI cục bộ';
-        modeEl.textContent = 'Chế độ tra cứu nội dung — trả lời từ nội dung đã xuất bản của trang.';
-        setStatus('Không chạy được mô hình AI cục bộ trên thiết bị này (' + esc(d.message || 'lỗi không rõ') + '). Trợ lý tiếp tục ở Chế độ tra cứu nội dung.');
+        setAiLabel('Bật AI cục bộ');
+        setMode(MODE_LOOKUP, MODE_LOOKUP_FULL);
+        // raw technical detail stays in the console — never in the UI
+        try { console.warn('[trợ lý] lỗi mô hình AI cục bộ:', d.message || 'không rõ'); } catch (e) {}
+        setStatus(AI_UNAVAILABLE);
       }
     });
     worker.postMessage({ type: 'load' });
   }
   var pendingAI = null;
   function finishAI(text) {
+    setBusy(false);
     setStatus('');
     var src = (pendingAI && pendingAI.length) ? pendingAI : [];
     pendingAI = null;
@@ -238,6 +266,7 @@
       var sys = 'Bạn là trợ lý đọc bản địa của trang Bản Đồ Xe 2 Bánh Việt Nam. CHỈ trả lời dựa trên NGỮ CẢNH lấy từ nội dung đã xuất bản của trang. Nếu ngữ cảnh không đủ, hãy nói rõ trang chưa có đủ thông tin đã xác thực. Tuyệt đối không bịa giá, quy định, địa chỉ, cơ quan hay doanh nghiệp. Trả lời ngắn gọn, tự nhiên bằng tiếng Việt. Không quảng cáo dịch vụ, không đưa số điện thoại hay lời chào mời.';
       var usr = 'NGỮ CẢNH TỪ TRANG:\n' + ctx + '\n\nCÂU HỎI CỦA NGƯỜI ĐỌC: ' + q;
       genSeq++;
+      setBusy(true);
       setStatus('Đang tìm nội dung liên quan trên Bản Đồ Xe 2 Bánh…');
       setTimeout(function () { setStatus('Đang đọc các bài phù hợp…'); }, 450);
       worker.postMessage({ type: 'generate', seq: genSeq, messages: [
@@ -251,6 +280,28 @@
 
   // ---------- panel open/close + a11y ----------
   var lastFocus = null;
+  function closeMenu() {
+    if (!menuEl) return;
+    menuEl.hidden = true;
+    if (moreBtn) moreBtn.setAttribute('aria-expanded', 'false');
+  }
+  if (moreBtn && menuEl) {
+    moreBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      menuEl.hidden = !menuEl.hidden;
+      moreBtn.setAttribute('aria-expanded', menuEl.hidden ? 'false' : 'true');
+    });
+    menuEl.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('button')) closeMenu();
+    });
+    document.addEventListener('click', function (e) {
+      if (!menuEl.hidden && !(e.target.closest && e.target.closest('#chat-more'))) closeMenu();
+    });
+    // ESC closes the overflow menu first; only then closes the panel
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !menuEl.hidden) { e.stopPropagation(); closeMenu(); }
+    }, true);
+  }
   function openPanel() {
     lastFocus = document.activeElement;
     panel.hidden = false;
@@ -270,6 +321,7 @@
     }
   }
   function closePanel() {
+    closeMenu();
     panel.hidden = true;
     launcher.setAttribute('aria-expanded', 'false');
     document.body.classList.remove('chat-open');
@@ -282,7 +334,9 @@
   panel.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') { e.stopPropagation(); closePanel(); return; }
     if (e.key !== 'Tab') return;
-    var f = [].filter.call(panel.querySelectorAll('button, input, textarea, a[href]'), function (el) { return !el.disabled; });
+    var f = [].filter.call(panel.querySelectorAll('button, input, textarea, a[href]'), function (el) {
+      return !el.disabled && el.offsetParent !== null; // skip hidden overflow-menu items
+    });
     if (!f.length) return;
     var first = f[0], last = f[f.length - 1];
     if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
@@ -310,7 +364,7 @@
   });
 
   // ---------- input (auto-grow textarea; Enter sends, Shift+Enter = newline) ----------
-  var AUTO_GROW_MAX = 104; // px — matches .chat-input textarea max-height in style.css
+  var AUTO_GROW_MAX = 96; // px — matches .chat-input textarea max-height (3–4 lines) in style.css
   function autoGrow() {
     if (!input) return;
     input.style.height = 'auto';

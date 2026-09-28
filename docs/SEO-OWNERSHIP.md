@@ -2,8 +2,9 @@
 
 Owner's verified business (see `config/business-facts.json`): a motorbike
 rental service operating in Hanoi (Long Biên / phố cổ area), operator
-"Cho thuê xe máy Phố Cổ - Mr Tú". Phone and exact street address are
-REQUIRES_VERIFICATION unless re-verified — do not publish unverified NAP.
+"Thuê Xe Máy Nguyễn Tú". NAP (name, address, phone, email, hours, website,
+Google Maps link) was re-verified 2026-09-28 and may be published in full
+on the Contact page only. Never invent or extend NAP beyond these facts.
 
 ## actual_service_area values in the matrix
 
@@ -15,9 +16,12 @@ REQUIRES_VERIFICATION unless re-verified — do not publish unverified NAP.
 
 ## Global footer (ALL pages)
 
-Only: operator identity, email, opening hours, location summary
-"Long Biên, Hà Nội, Việt Nam". NO exact street address, NO Quick Call button,
-NO nationwide rental CTA, NO fake local phone numbers. No nationwide branches.
+Compact editorial footer only: brand line, one-line description, utility
+links (Liên hệ, Chính sách bảo mật, Điều khoản sử dụng, Sitemap) and the
+copyright line. NO NAP in the footer at all — no operator name, no email,
+no phone, no address, no location summary, no opening hours, no Quick Call
+button, no nationwide rental CTA. Full verified NAP lives on the Contact
+page (and a trust block on the Privacy page) only.
 
 ## Contact page
 
