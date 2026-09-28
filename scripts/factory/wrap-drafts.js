@@ -28,6 +28,9 @@ const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(
 const nav = HUBS.map(([slug, t]) => `<a href="/lab/${slug}/">${t}</a>`).join('');
 const firstH1 = b => ((b.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || '');
 const firstP = b => ((b.match(/<p[^>]*>([\s\S]*?)<\/p>/) || [])[1] || '');
+// word-boundary-safe truncation: never cut a Vietnamese word in half
+const clipWords = (s, max) => { s = s.trim(); if (s.length <= max) return s;
+  const cut = s.slice(0, max); const sp = cut.lastIndexOf(' '); return (sp > max * 0.6 ? cut.slice(0, sp) : cut).trim(); };
 let n = 0;
 for (const f of fs.readdirSync(path.join(ROOT, '_drafts'))) {
   if (!f.endsWith('.body.html')) continue;
@@ -35,15 +38,16 @@ for (const f of fs.readdirSync(path.join(ROOT, '_drafts'))) {
   const r = rows[id]; if (!r) { console.error('no matrix row for ' + id); process.exitCode = 1; continue; }
   const body = fs.readFileSync(path.join(ROOT, '_drafts', f), 'utf8');
   const title = esc(firstH1(body).replace(/<[^>]+>/g, ''));
-  const desc = esc(firstP(body).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 155));
+  const desc = esc(clipWords(firstP(body).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' '), 155));
   const date = new Date().toISOString().slice(0, 10);
   const schema = { '@context': 'https://schema.org', '@graph': [
     { '@type': 'Article', headline: title, inLanguage: 'vi', datePublished: date,
       author: { '@type': 'Organization', name: cfg.site_name }, mainEntityOfPage: r.canonical, description: desc },
     { '@type': 'BreadcrumbList', itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: cfg.base_url + '/' },
-      { '@type': 'ListItem', position: 2, name: esc(r.parent_topic), item: cfg.base_url + '/' + r.output_path.split('/')[0] + '/' },
+      { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: cfg.base_url },
+      { '@type': 'ListItem', position: 2, name: esc(r.parent_topic), item: cfg.base_url + r.output_path.split('/')[0] + '/' },
       { '@type': 'ListItem', position: 3, name: title, item: r.canonical } ] } ] };
+  const bodyWithMeta = body.replace(/(<\/h1>)/, `$1\n<p class="postmeta">Cập nhật ${date}</p>`);
   const html = `<!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -57,7 +61,7 @@ for (const f of fs.readdirSync(path.join(ROOT, '_drafts'))) {
 </head>
 <body>
 <header class="site-head"><div class="wrap"><a class="brand" href="/lab/">Motorbike SEO Lab</a><nav>${nav}<a href="/lab/lien-he/">Liên hệ</a><a href="/lab/ve-chung-toi/">Về chúng tôi</a></nav></div></header>
-<main class="wrap article">${body}</main>
+<main class="wrap article">${bodyWithMeta}</main>
 <footer class="site-foot"><div class="wrap">
 <p>${esc(facts.business_name)} — ${esc(facts.location_summary)}</p>
 <p><a href="mailto:${esc(facts.email)}">${esc(facts.email)}</a></p>

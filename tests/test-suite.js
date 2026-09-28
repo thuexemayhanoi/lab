@@ -184,3 +184,19 @@ test('research: official-source rows cite at least one official source', () => {
     p.official_sources.forEach(s => { assert.ok(s.source_url); assert.ok(s.claim_supported); });
   });
 });
+
+// ---------- URL HYGIENE / READER UX ----------
+test('urls: no double-slash /lab// in any built page or search index', () => {
+  const files = [];
+  (function walk(d){fs.readdirSync(d,{withFileTypes:true}).forEach(e=>{const p=path.join(d,e.name);e.isDirectory()?walk(p):files.push(p);});})(SITE);
+  files.forEach(f => {
+    const t = fs.readFileSync(f,'utf8');
+    assert.ok(!t.includes('/lab//'), 'double slash in ' + f);
+    assert.ok(!t.includes('github.io/lab//'), 'double slash canonical in ' + f);
+  });
+});
+test('homepage: no internal QA scores exposed to readers', () => {
+  const home = fs.readFileSync(path.join(SITE,'index.html'),'utf8');
+  assert.ok(!/QA\s*\d/.test(home), 'QA score leaked on homepage');
+  assert.ok(!/PUBLISHED|PLANNED|matrix|nhà máy nội dung/.test(home), 'factory language leaked on homepage');
+});
