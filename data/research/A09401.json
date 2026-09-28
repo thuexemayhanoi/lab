@@ -1,0 +1,28 @@
+{
+  "article_id": "A09401",
+  "primary_keyword": "lốp xe máy các loại và cách chọn",
+  "secondary_keywords": ["các loại lốp xe máy", "lốp không săm hay có săm", "chọn lốp xe máy", "lốp xe máy loại nào tốt"],
+  "search_intent": "informational",
+  "research_date": "2026-09-28",
+  "geo_entities": [],
+  "vehicle_entities": ["xe số phổ thông", "xe ga", "xe tay ga", "xe máy điện"],
+  "brand_entities": [],
+  "model_entities": [],
+  "questions_found": [
+    "lốp không săm và có săm khác nhau thế nào?",
+    "bao lâu thì thay lốp một lần?",
+    "lốp mòn đến mức nào là phải thay?",
+    "áp suất lốp chuẩn bao nhiêu?",
+    "lốp xe điện có khác lốp xe xăng không?"
+  ],
+  "related_queries": ["lốp không săm bị châm", "lốp trunk vs lốp thường", "bảo dưỡng lốp xe máy"],
+  "serp_patterns": "SERP bài kỹ thuật + review nhãn hàng lốp. Intent evergreen; cần phân loại rõ (không săm/có săm, lốp trunk, kích thước phổ thông), dấu hiệu mòn, áp suất tham khảo theo khuyến nghị hãng.",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://www.honda.com.vn/", "source_domain": "honda.com.vn", "date_accessed": "2026-09-28", "claim_supported": "tham chiếu chung: khuyến nghị áp suất lốp của Honda Việt Nam cho xe phổ thông"}
+  ],
+  "existing_internal_pages": ["/lab/phu-tung/", "/lab/sua-xe-may/"],
+  "potential_cannibalization": "CG-parts-pt-info-lop-xe-may; các bài chi tiết (lốp không săm bị châm — planned) tách theo problem intent.",
+  "unique_angle": "Phân loại + cách chọn theo nhu cầu (đi phố / chở nặng / đi xa / xe điện) + dấu hiệu mòn và mốc thời gian tham khảo — bảng so sánh không săm vs có săm theo trải nghiệm thực tế.",
+  "notes": "informational_only — không claim bán lốp; áp suất chỉ dạng 'tham khảo khuyến nghị của hãng, kiểm tra tại lốp xe'."
+}

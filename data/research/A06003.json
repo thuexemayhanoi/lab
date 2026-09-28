@@ -1,0 +1,28 @@
+{
+  "article_id": "A06003",
+  "primary_keyword": "bảo dưỡng xe máy định kỳ",
+  "secondary_keywords": ["bảo dưỡng xe máy theo số km", "thay dầu máy định kỳ", "danh mục bảo dưỡng xe máy"],
+  "search_intent": "informational",
+  "research_date": "2026-09-28",
+  "geo_entities": [],
+  "vehicle_entities": ["xe ga", "xe số", "xe tay ga phổ thông"],
+  "brand_entities": ["Honda", "Yamaha"],
+  "model_entities": ["Vision", "Air Blade", "Wave", "Sirius"],
+  "questions_found": [
+    "thay dầu máy sau bao nhiêu km?",
+    "bảo dưỡng lần đầu làm những gì?",
+    "thay bugi bao lâu một lần?",
+    "nhông xích khi nào cần thay?",
+    "chi phí bảo dưỡng định kỳ khoảng bao nhiêu?"
+  ],
+  "related_queries": ["bảo dưỡng xe Vision", "thay dầu xe máy bao lâu một lần", "vệ sinh bugi carburetor"],
+  "serp_patterns": "SERP hướng dẫn kỹ thuật (blog gara, diễn đàn). Intent evergreen informational; cần bảng theo mốc km rõ ràng. Không cần nguồn pháp lý.",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://www.honda.com.vn/", "source_domain": "honda.com.vn", "date_accessed": "2026-09-28", "claim_supported": "chu kỳ bảo dưỡng khuyến nghị của Honda Việt Nam cho xe ga/xe số phổ thông"}
+  ],
+  "existing_internal_pages": ["/lab/sua-xe-may/", "/lab/phu-tung/"],
+  "potential_cannibalization": "CG-repair-info-bao-duong-xe-may-dinh-ky; các bài per-part (dầu máy, bugi, nhông xích — planned trong cluster PARTS) sẽ đi sâu từng phụ tùng, không trùng intent tổng quan.",
+  "unique_angle": "Bảng mốc km thống nhất cho cả xe ga và xe số + chi phí tham khảo từng hạng mục + dấu hiệu nhận biết cần bảo dưỡng sớm — văn phong thực dụng cho người chưa rành xe.",
+  "notes": "informational_only — không claim dịch vụ bảo dưỡng; mốc km theo khuyến nghị hãng, ghi rõ 'tham khảo'."
+}

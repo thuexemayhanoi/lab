@@ -1,0 +1,29 @@
+{
+  "article_id": "A08201",
+  "primary_keyword": "xe máy điện có nên mua không",
+  "secondary_keywords": ["nên mua xe máy điện hay xe xăng", "xe điện có đáng mua không", "chi phí xe máy điện"],
+  "search_intent": "commercial/informational",
+  "research_date": "2026-09-28",
+  "geo_entities": [],
+  "vehicle_entities": ["xe máy điện", "xe đạp điện", "xe máy xăng phổ thông"],
+  "brand_entities": ["VinFast", "Yadea", "Dat Bike", "Honda", "Sysmoto"],
+  "model_entities": [],
+  "questions_found": [
+    "xe máy điện chạy 1 tháng tốn bao nhiêu tiền sạc?",
+    "pin xe điện tuổi thọ bao lâu, thay pin giá bao nhiêu?",
+    "xe điện có phải đăng ký, có cần bằng lái không?",
+    "sạc ở đâu khi đi xa?",
+    "so với xe xăng thì vài năm bù lại chi phí thế nào?"
+  ],
+  "related_queries": ["xe máy điện giá bao nhiêu", "xe điện VinFast dùng thế nào", "xe điện có bị trượt khi mưa không", "trạm sạc xe máy điện"],
+  "serp_patterns": "SERP review + so sánh chi phí + Q&A. Intent: người cân nhắc mua lần đầu. Các bài tốt thường có bảng so sánh chi phí lấp đầy (điện vs xăng), nói về pin/sạc, và thủ tục đăng ký/GPLX. Time-sensitive — không được đưa quy định cũ.",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://vinfastauto.com/vn_vi", "source_domain": "vinfastauto.com", "date_accessed": "2026-09-28", "claim_supported": "tham khảo chung về dòng xe máy điện VinFast tại Việt Nam"},
+    {"source_url": "https://datbike.com/", "source_domain": "datbike.com", "date_accessed": "2026-09-28", "claim_supported": "tham khảo chung về dòng xe máy điện Dat Bike"}
+  ],
+  "existing_internal_pages": ["/lab/xe-may-dien/", "/lab/dang-ky-xe-may/"],
+  "potential_cannibalization": "CG-el-info-xe-may-dien-co-nen-mua-khong; các bài model/brand (planned trong ELECTRIC) tách theo entity intent.",
+  "unique_angle": "Quyết định mua theo hồn cảnh: đi gần vs đi xa, có chỗ sạc vs không, gia đình có trẻ — kèm bảng chi phí 3 năm điện vs xăng dạng tham khảo, và nhắc điều kiện pháp lý (xe điện cũng phải đăng ký; GPLX tùy phân khúc) WITHOUT con số pháp lý cụ thể ngoài nguồn.",
+  "notes": "informational_only — không claim bán xe; giá chỉ tham khảo thị trường, ghi rõ 'tham khảo'."
+}

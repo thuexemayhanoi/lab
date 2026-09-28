@@ -1,0 +1,28 @@
+{
+  "article_id": "A00052",
+  "primary_keyword": "thuê xe máy gần Sân bay quốc tế Nội Bài",
+  "secondary_keywords": ["thuê xe máy Nội Bài", "thuê xe máy sân bay Nội Bài", "đi Nội Bài thuê xe máy ở đâu"],
+  "search_intent": "local/informational-directory",
+  "research_date": "2026-09-28",
+  "geo_entities": ["Sân bay quốc tế Nội Bài", "Phú Minh", "Sóc Sơn", "Hà Nội", "cau Nhật Tân", "đường Võ Nguyên Giáp"],
+  "vehicle_entities": ["xe ga phổ thông"],
+  "brand_entities": ["Honda"],
+  "model_entities": ["Vision", "Air Blade"],
+  "questions_found": [
+    "ở Nội Bài có cho thuê xe máy ngay trong sân bay không?",
+    "nên lấy xe ở sân bay hay ở trong phố rồi đi ra?",
+    "chạy từ Nội Bài về phố cổ mất bao lâu?",
+    "phí gửi xe qua đêm ở sân bay thế nào?",
+    "khách nước ngoài không có GPLX Việt Nam có được thuê xe không?"
+  ],
+  "related_queries": ["Nội Bài về phố cổ bao nhiêu km", "xe buýt sân bay Nội Bài", "thuê ô tô tự lái Nội Bài"],
+  "serp_patterns": "SERP thiên về hướng dẫn di chuyển sân bay ↔ trung tâm (khoảng cách 27–35km tuỳ tuyến, đường cao tốc Nhật Tân–Nội Bài/Võ Nguyên Giáp), ít landing page dịch vụ thuần; intent informational kèm directory. Câu hỏi GPLX quốc tế xuất hiện thường xuyên.",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://hanoiairportonline.com/", "source_domain": "hanoiairportonline.com", "date_accessed": "2026-09-28", "claim_supported": "bối cảnh nhà ga T2, phương tiện di chuyển từ Nội Bài vào trung tâm"}
+  ],
+  "existing_internal_pages": ["/lab/thue-xe-may/", "/lab/thue-xe-may/thue-xe-may-ha-noi/", "/lab/lien-he/"],
+  "potential_cannibalization": "Khác A00001 (thuê xe máy Hà Nội tổng quát): bài này gắn POI Nội Bài, tập trung tuyến đường, thời gian di chuyển, lựa chọn lấy xe. Không trùng intent.",
+  "unique_angle": "POI hub Nội Bài: chiến lược lấy xe (tại sân bay vs tại phố), các tuyến về trung tâm (Võ Nguyên Giáp – cầu Nhật Tân; cao tốc Thăng Long), lưu ý khách nước ngoài & GPLX.",
+  "notes": "informational_only — không claim dịch vụ tại Sóc Sơn; chỉ gợi ý liên hệ chủ xe tại Hà Nội qua trang liên hệ."
+}

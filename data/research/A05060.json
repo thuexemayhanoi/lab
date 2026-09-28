@@ -1,0 +1,28 @@
+{
+  "article_id": "A05060",
+  "primary_keyword": "cứu hộ xe máy Thủ Đức",
+  "secondary_keywords": ["cứu hộ xe máy tại Thủ Đức", "cứu hộ xe máy TP Thủ Đức", "sửa xe lưu động Thủ Đức"],
+  "search_intent": "emergency/local directory",
+  "research_date": "2026-09-28",
+  "geo_entities": ["TP. Hồ Chí Minh", "TP. Thủ Đức", "đường Xa lộ Hà Nội", "khu Đại học Quốc gia", "đại lộ Mai Chí Thọ"],
+  "vehicle_entities": ["xe máy phổ thông", "xe số", "xe ga"],
+  "brand_entities": [],
+  "model_entities": [],
+  "questions_found": [
+    "gần Thủ Đức có dịch vụ cứu hộ xe máy 24h không?",
+    "cứu hộ xe máy giá bao nhiêu?",
+    "xe chết máy giữa đường gọi ai?",
+    "cứu hộ kéo xe về gara hay về nhà?",
+    "làm sao phân biệt cứu hộ uy tín và chém giá?"
+  ],
+  "related_queries": ["cứu hộ xe máy gần đây", "cứu hộ xe máy quận 9 cũ", "sửa xe máy tại nhà Thủ Đức"],
+  "serp_patterns": "SERP landing page dịch vụ địa phương + danh bạ + bài 'cách gọi cứu hộ'. Intent khẩn cấp: người tìm cần cách tìm nhanh, giá tham khảo, lưu ý an toàn. Không trang nào của chủ sở hữu có dịch vụ tại TP.HCM.",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://thuduc.gov.vn/", "source_domain": "thuduc.gov.vn", "date_accessed": "2026-09-28", "claim_supported": "bối cảnh địa lý TP. Thủ Đức (thành phố trực thuộc TP.HCM)"}
+  ],
+  "existing_internal_pages": ["/lab/cuu-ho-xe-may/", "/lab/dia-phuong/tp-hcm/", "/lab/sua-xe-may/"],
+  "potential_cannibalization": "CG-rescue-res-loc-thu-duc riêng; khác bài 'cứu hộ xe máy' tổng quát (planned) ở geo intent.",
+  "unique_angle": "Trang hướng dẫn directory cho khu Thủ Đức: cách tìm cứu hộ quanh vị trí gặp sự cố (các trục chính như Xa lộ Hà Nội, Võ Văn Ngân, Linh Trung), bảng giá tham khảo thị trường, checklist tránh bị chém giá — KHÔNG giả danh dịch vụ.",
+  "notes": "informational_only — cấm mọi câu 'chúng tôi cứu hộ tại...'. Không bịa số hotline cụ thể của bên thứ ba."
+}

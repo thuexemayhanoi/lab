@@ -1,0 +1,28 @@
+{
+  "article_id": "A00001",
+  "primary_keyword": "thuê xe máy Hà Nội",
+  "secondary_keywords": ["thuê xe máy ở Hà Nội", "cho thuê xe máy Hà Nội", "thuê xe máy giá rẻ Hà Nội", "thuê xe máy phố cổ"],
+  "search_intent": "local/commercial",
+  "research_date": "2026-09-28",
+  "geo_entities": ["Hà Nội", "Long Biên", "Hoàn Kiếm", "phố cổ Hà Nội", "ga Hà Nội", "bến xe Mỹ Đình", "sân bay Nội Bài"],
+  "vehicle_entities": ["xe ga", "xe số", "xe tay ga phổ thông", "xe côn tay", "xe địa hình"],
+  "brand_entities": ["Honda", "Yamaha"],
+  "model_entities": ["Vision", "Air Blade", "Wave", "Sirius"],
+  "questions_found": [
+    "thuê xe máy Hà Nội giá bao nhiêu một ngày?",
+    "cần những giấy tờ gì khi thuê xe máy ở Hà Nội?",
+    "đặt cọc bao nhiêu khi thuê xe máy?",
+    "nên thuê xe ga hay xe số khi đi phố cổ?",
+    "thuê xe máy đi xa có được không?"
+  ],
+  "related_queries": ["giá thuê xe máy Hà Nội theo ngày", "thuê xe máy Hà Nội cho khách nước ngoài", "thuê xe máy gần ga Hà Nội", "thuê Honda Vision Hà Nội"],
+  "serp_patterns": "SERP hỗn hợp: trang dịch vụ địa phương (giá, địa chỉ, hotline), bài kinh nghiệm du lịch, aggregator danh bạ. Intent chủ đạo local/commercial — người tìm muốn giá, địa điểm, thủ tục. Fresness trung bình; bảng giá và mẹo giữ nguyên giá trị.",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://vietnam.travel/", "source_domain": "vietnam.travel", "date_accessed": "2026-09-28", "claim_supported": "tham khảo chung về du lịch Hà Nội, phố cổ"}
+  ],
+  "existing_internal_pages": ["/lab/thue-xe-may/", "/lab/lien-he/", "/lab/ve-chung-toi/", "/lab/dia-phuong/ha-noi/"],
+  "potential_cannibalization": "CG-rental-loc-ha-noi là nhóm gốc; các bài POI (Nội Bài, ga Hà Nội) và model (Vision) có intent khác biệt — không trùng.",
+  "unique_angle": "Bài duy nhất trong nhóm được phép mang thông tin dịch vụ thực của chủ sở hữu tại Hà Nội (Long Biên/phố cổ): giá thực, đặt cọc thực, giấy tờ thực — cộng bối cảnh phố cổ + giao thông Hà Nội.",
+  "notes": "actual_service_area=hanoi_owner_verified. Được phép dùng NAP đã xác minh từ config/business-facts.json; không bịa giá ngoài bảng giá thật."
+}

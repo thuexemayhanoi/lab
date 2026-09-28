@@ -1,0 +1,28 @@
+{
+  "article_id": "A00097",
+  "primary_keyword": "thuê Honda Vision Hà Nội",
+  "secondary_keywords": ["giá thuê Honda Vision Hà Nội", "thuê Vision Hà Nội", "thuê Honda Vision theo tuần"],
+  "search_intent": "local/commercial (model-specific)",
+  "research_date": "2026-09-28",
+  "geo_entities": ["Hà Nội", "Long Biên", "Hoàn Kiếm", "phố cổ"],
+  "vehicle_entities": ["xe ga phổ thông 110–125cc"],
+  "brand_entities": ["Honda"],
+  "model_entities": ["Honda Vision"],
+  "questions_found": [
+    "thuê Honda Vision ở Hà Nội giá bao nhiêu?",
+    "Vision thuê theo tuần có giảm giá không?",
+    "Vision có phù hợp hai người chở hành lý đi phố cổ không?",
+    "thuê Vision cần đặt cọc bao nhiêu?",
+    "Vision tiết kiệm xăng thế nào?"
+  ],
+  "related_queries": ["Honda Vision 2024 giá thuê", "Vision hay Grande", "xe ga tiết kiệm xăng nhất để thuê"],
+  "serp_patterns": "SERP là landing page dịch vụ theo model + bài so sánh model. Người tìm đã biết muốn dòng Vision — cần giá theo ngày/tuần/tháng, tính năng (cố xe rộng, bình xăng, tiêu hao ~1.8-2L/100km theo công bố Honda), độ phổ biến phụ tùng.",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://www.honda.com.vn/", "source_domain": "honda.com.vn", "date_accessed": "2026-09-28", "claim_supported": "thông số sản phẩm Honda Vision (dòng xe ga phổ thông của Honda Việt Nam)"}
+  ],
+  "existing_internal_pages": ["/lab/thue-xe-may/", "/lab/thue-xe-may/thue-xe-may-ha-noi/", "/lab/hang-xe/ (planned)"],
+  "potential_cannibalization": "Khác A00001 về model intent; CG-rental-model-vision riêng. Bài so sánh Vision/Air Blade (A00465) là comparison intent — không trùng.",
+  "unique_angle": "Model rental: vì sao Vision là dòng được thuê nhiều nhất Hà Nội (nhẹ, cố xe, tiết kiệm, phụ tùng dễ tìm), giá thuê thực của chủ xe, check-list kiểm tra xe Vision trước khi nhận.",
+  "notes": "hanoi_owner_verified — giá thuê thật của chủ xe; không bịa thông số ngoài công bố hãng."
+}

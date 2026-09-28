@@ -1,0 +1,28 @@
+{
+  "article_id": "A00465",
+  "primary_keyword": "Vision hay Air Blade nên thuê dòng nào",
+  "secondary_keywords": ["thuê Vision hay Air Blade", "so sánh Vision và Air Blade", "Air Blade phù hợp thuê dài ngày không"],
+  "search_intent": "comparison/informational",
+  "research_date": "2026-09-28",
+  "geo_entities": ["Hà Nội"],
+  "vehicle_entities": ["xe ga phổ thông", "xe ga thể thao"],
+  "brand_entities": ["Honda"],
+  "model_entities": ["Honda Vision", "Honda Air Blade"],
+  "questions_found": [
+    "Vision và Air Blade khác nhau chỗ nào?",
+    "nên thuê dòng nào cho dài ngày?",
+    "Air Blade mạnh hơn Vision bao nhiêu?",
+    "xe nào giữ xe, đổ xăng tiện hơn khi đi phố?",
+    "giá thuê hai dòng chênh bao nhiêu?"
+  ],
+  "related_queries": ["Air Blade 125 hay Vision 110", "xe ga nào bền cho thuê", "Vision vs Air Blade độ cao yên"],
+  "serp_patterns": "SERP comparison-heavy: bài so sánh thông số, diễn đàn, video review. Intent: người đang cân nhắc 2 dòng cho mục đích thuê/đi phố. Cần bảng so sánh rõ (dung tích, công suất, kích thước, cố xe, tiêu hao, độ phù hợp).",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://www.honda.com.vn/", "source_domain": "honda.com.vn", "date_accessed": "2026-09-28", "claim_supported": "thông số dòng Vision và Air Blade do Honda Việt Nam công bố"}
+  ],
+  "existing_internal_pages": ["/lab/thue-xe-may/", "/lab/thue-xe-may/thue-honda-vision-ha-noi/"],
+  "potential_cannibalization": "CG-rental-cmp-vision-air-blade riêng; không trùng bài model Vision (A00097 — mô tả 1 dòng, intent 'thuê Vision').",
+  "unique_angle": "So sánh theo NGỮ CẢNH THUÊ: dài ngày vs ngắn ngày, đi phố vs đi xa, chở 2 người vs 1 người, chi phí thuê chênh lệch — không lặp thông số hai dòng một cách vô hồn.",
+  "notes": "informational_only — không claim hai dòng đều có sẵn tại cửa hàng; giá tham khảo thị trường, không gán là giá dịch vụ."
+}

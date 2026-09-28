@@ -1,0 +1,31 @@
+{
+  "article_id": "A06801",
+  "primary_keyword": "thi bằng lái xe máy A1",
+  "secondary_keywords": ["thi bằng lái A1", "sát hạch GPLX A1", "hồ sơ thi bằng lái xe máy", "lệ phí thi bằng A1"],
+  "search_intent": "informational (legal/procedural — official sources required)",
+  "research_date": "2026-09-28",
+  "geo_entities": [],
+  "vehicle_entities": ["xe máy dưới 175cc ( hạng A1 theo phân hạng hiện hành )"],
+  "brand_entities": [],
+  "model_entities": [],
+  "questions_found": [
+    "bao nhiêu tuổi được thi bằng A1?",
+    "thi A1 gồm những gì, lệ phí bao nhiêu?",
+    "hồ sơ gồm những giấy tờ?",
+    "thi trượt lý thuyết thì thi lại thế nào?",
+    "bằng A1 dùng bao lâu, có thời hạn không?"
+  ],
+  "related_queries": ["điều kiện thi bằng lái A1", "thi bằng lái xe máy online lý thuyết", "đổi bằng lái A1 sang thẻ CSPGT"],
+  "serp_patterns": "SERP hỗn hợp bài hướng dẫn + trang tin pháp luật; các bài mới cập nhật theo Luật Trật tự ATGT đường bộ 2024 (hiệu lực 01/01/2025: tuổi thi A1 từ đủ 16 tuổi; GPLX A1 không thời hạn) và Thông tư 154/2025/TT-BTC về phí sát hạch từ 01/01/2026. Bắt buộc dẫn nguồn chính thức.",
+  "official_sources": [
+    {"source_url": "https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/iThong/102319/muc-thu-phi-thi-sat-hach-lai-xe-hang-a-va-a1-tu-1-1-2026", "source_domain": "thuvienphapluat.vn", "date_accessed": "2026-09-28", "claim_supported": "Thông tư 154/2025/TT-BTC (31/12/2025) của Bộ Tài chính quy định mức thu phí sát hạch lái xe hạng A và A1 áp dụng từ 01/01/2026"},
+    {"source_url": "https://stc.bacgiang.gov.vn/chi-tiet-tin-tuc/-/asset_publisher/N32bVxaMflNL/content/muc-thu-phi-le-phi-sat-hach-lai-xe", "source_domain": "stc.bacgiang.gov.vn", "date_accessed": "2026-09-28", "claim_supported": "lệ phí cấp mới/cấp lại/cấp đổi giấy phép lái xe giữ mức 135.000 đồng/lần theo quy định hiện hành"}
+  ],
+  "supporting_sources": [
+    {"source_url": "https://mod.gov.vn/", "source_domain": "mod.gov.vn", "date_accessed": "2026-09-28", "claim_supported": "Bộ Công an là cơ quan quản lý sát hạch và cấp GPLX; tham chiếu chung về thủ tục"}
+  ],
+  "existing_internal_pages": ["/lab/bang-lai-xe-may/", "/lab/dang-ky-xe-may/"],
+  "potential_cannibalization": "CG-lic-info-thi-bang-lai-xe-may-a1; các bài geo (địa điểm thi tại tỉnh — planned) sẽ tách theo location intent.",
+  "unique_angle": "Tổng quan quy trình A1 cập nhật theo Luật TTATGT 2024 + phí sát hạch mới theo TT 154/2025/TT-BTC từ 01/01/2026, nhấn phần chuẩn bị lý thuyết và lưu ý sai lầm phổ biến; KHÔNG liệt kê địa điểm sát hạch chưa xác minh.",
+  "notes": "requires_official_sources=1. Đã verify: TT 154/2025/TT-BTC (Bộ Tài chính, 31/12/2025); lệ phí cấp GPLX 135.000đ. Tuổi A1: đủ 16 tuổi theo Luật TTATGT đường bộ 2024 — phát biểu cẩn thận 'theo quy định hiện hành'."
+}

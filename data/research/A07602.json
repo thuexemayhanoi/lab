@@ -1,0 +1,31 @@
+{
+  "article_id": "A07602",
+  "primary_keyword": "đăng ký xe máy online",
+  "secondary_keywords": ["đăng ký xe máy trực tuyến", "cấp đăng ký xe qua dịch vụ công", "đăng ký xe online bước nào"],
+  "search_intent": "informational (legal/procedural — official sources required)",
+  "research_date": "2026-09-28",
+  "geo_entities": [],
+  "vehicle_entities": ["xe máy xăng", "xe máy điện"],
+  "brand_entities": [],
+  "model_entities": [],
+  "questions_found": [
+    "đăng ký xe máy online làm ở đâu, cần app gì?",
+    "xe mua ở đâu được cấp đăng ký online?",
+    "hồ sơ đăng ký online gồm những gì?",
+    "lệ phí đăng ký xe máy bao nhiêu?",
+    "biển số có được chọn không khi đăng ký online?"
+  ],
+  "related_queries": ["dịch vụ công đăng ký xe Bộ Công an", "đăng ký xe online VNeID", "lệ phí trước bạ xe máy", "đăng ký xe điện có cần không"],
+  "serp_patterns": "SERP tin pháp luật + hướng dẫn dịch vụ công. Theo Thông tư 79/2024/TT-BCA (Bộ Công an, 15/11/2024), đăng ký xe được thực hiện qua hệ thống dịch vụ công; kèm lệ phí đăng ký theo TT 60/2023/TT-BTC (mức do HĐND tỉnh quy định). Bắt buộc dẫn nguồn chính thức, không nêu mức phí cụ thể ngoài khung pháp lý cho phép.",
+  "official_sources": [
+    {"source_url": "https://chinhphu.vn/?pageid=27160&docid=211945&classid=1&orggroupid=4", "source_domain": "chinhphu.vn", "date_accessed": "2026-09-28", "claim_supported": "Thông tư 79/2024/TT-BCA của Bộ Công an quy định về cấp, thu hồi chứng nhận đăng ký xe, biển số xe cơ giới, xe máy chuyên dùng"},
+    {"source_url": "https://luatvietnam.vn/hanh-chinh/diem-moi-cua-thong-tu-79-2024-tt-bca-ve-dang-ky-xe-cap-bien-so-xe-570-100297-article.html", "source_domain": "luatvietnam.vn", "date_accessed": "2026-09-28", "claim_supported": "điểm mới của TT 79/2024/TT-BCA so với TT 24/2023/TT-BCA về đăng ký xe trực tuyến"}
+  ],
+  "supporting_sources": [
+    {"source_url": "https://dichvucong.gov.vn/", "source_domain": "dichvucong.gov.vn", "date_accessed": "2026-09-28", "claim_supported": "cổng Dịch vụ công quốc gia là kênh thực hiện thủ tục đăng ký xe trực tuyến"}
+  ],
+  "existing_internal_pages": ["/lab/dang-ky-xe-may/", "/lab/bang-lai-xe-may/"],
+  "potential_cannibalization": "CG-reg-info-dang-ky-xe-may-online; các bài geo (đăng ký xe máy tại tỉnh X — planned) tách theo location; bài lệ phí/trước bạ tách theo price intent.",
+  "unique_angle": "Hướng dẫn quy trình đăng ký online theo TT 79/2024/TT-BCA: điều kiện, kênh dịch vụ công, các bước, lệ phí theo quy định hiện hành, lưu ý sai phổ biến — KHÔNG bịa văn phòng đăng ký cụ thể.",
+  "notes": "requires_official_sources=1. Verified: TT 79/2024/TT-BCA (Bộ Công an, 15/11/2024). Mức lệ phí đăng ký do HĐND cấp tỉnh quyết định theo khung TT 60/2023/TT-BTC — phát biểu dạng 'mức do chính quyền địa phương quy định', không gán con số sai."
+}
