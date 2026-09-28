@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "language": "vi",
+  "clusters": {
+    "RENTAL": {
+      "topic": "THUÊ XE MÁY",
+      "allocation": 5000,
+      "hub": "/lab/thue-xe-may/",
+      "service_area": "hanoi_owner_verified for Hà Nội rows; informational_only elsewhere",
+      "axes": ["service", "geography", "vehicle_type", "brand", "model", "use_case", "duration", "route", "transport_hub", "tourism_poi", "user_intent"]
+    },
+    "RESCUE": {
+      "topic": "CỨU HỘ XE MÁY",
+      "allocation": 1000,
+      "hub": "/lab/cuu-ho-xe-may/",
+      "service_area": "informational_only outside verified Hanoi area — no nationwide rescue claims"
+    },
+    "REPAIR": {
+      "topic": "SỬA CHỮA / BẢO DƯỠNG XE MÁY",
+      "allocation": 800,
+      "hub": "/lab/sua-xe-may/",
+      "axes": ["problem", "component", "brand", "model", "geography (when useful)"]
+    },
+    "LICENCE": {
+      "topic": "BẰNG LÁI / THI BẰNG LÁI XE MÁY",
+      "allocation": 800,
+      "hub": "/lab/bang-lai-xe-may/",
+      "official_sources_required": true,
+      "notes": "Real testing locations and authorized facilities only — verify before publishing."
+    },
+    "REGISTRATION": {
+      "topic": "ĐĂNG KÝ / THUẾ / PHÍ / BIỂN SỐ",
+      "allocation": 600,
+      "hub": "/lab/dang-ky-xe-may/",
+      "official_sources_required": true
+    },
+    "ELECTRIC": {
+      "topic": "XE MÁY ĐIỆN / HÃNG XE / MODEL",
+      "allocation": 1200,
+      "hub": "/lab/xe-may-dien/",
+      "notes": "Brands verified present in Vietnam; no authorized-dealer implications; time-sensitive legal claims need current official sources."
+    },
+    "PARTS": {
+      "topic": "PHỤ TÙNG XE MÁY",
+      "allocation": 600,
+      "hub": "/lab/phu-tung/",
+      "axes": ["part × bike type / model / problem / price / replacement interval"]
+    }
+  },
+  "informational_topics": [
+    "KINH NGHIỆM SỬ DỤNG XE",
+    "LUẬT / QUY ĐỊNH LIÊN QUAN"
+  ],
+  "hub_urls": {
+    "home": "/lab/",
+    "contact": "/lab/lien-he/",
+    "about": "/lab/ve-chung-toi/",
+    "geo_prefix": "/lab/dia-phuong/"
+  },
+  "intent_labels": ["local/commercial", "local/directory", "informational", "commercial/informational", "transactional-info"],
+  "rules": [
+    "distinct search intent required for every article — no combinatorial generation",
+    "anti-doorway: geo pages need locality-specific substance",
+    "cannibalization_group required on every row"
+  ]
+}
