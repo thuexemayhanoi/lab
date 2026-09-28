@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Bản Đồ Xe 2 Bánh Việt Nam — cẩm nang xe máy">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#FBBF24"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1050" cy="120" r="180" fill="#1E293B" opacity="0.6"/>
+  <circle cx="180" cy="560" r="220" fill="#1E293B" opacity="0.5"/>
+  <path d="M0 520 C 240 470, 480 560, 720 505 S 1040 470, 1200 500" stroke="#334155" stroke-width="90" fill="none"/>
+  <path d="M0 520 C 240 470, 480 560, 720 505 S 1040 470, 1200 500" stroke="#F59E0B" stroke-width="6" stroke-dasharray="34 26" fill="none" opacity="0.85"/>
+  <g stroke="#475569" stroke-width="14" fill="none" opacity="0.8">
+    <circle cx="330" cy="430" r="62"/>
+    <circle cx="505" cy="430" r="46"/>
+    <path d="M392 430 L 459 430" />
+    <path d="M330 430 C 300 370, 360 340, 420 350" />
+  </g>
+  <rect x="90" y="120" width="152" height="14" rx="7" fill="url(#accent)"/>
+  <text x="90" y="230" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="86" font-weight="800" fill="#F8FAFC">Bản Đồ Xe 2 Bánh</text>
+  <text x="90" y="320" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="600" fill="#FBBF24">Cẩm nang xe máy Việt Nam</text>
+  <text x="90" y="372" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" fill="#CBD5E1">Thuê xe máy · Cứu hộ · Bảo dưỡng · Bằng lái · Đăng ký xe</text>
+  <text x="90" y="573" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="24" fill="#94A3B8">thuexemayhanoi.github.io — nội dung biên tập theo nguồn đã kiểm chứng</text>
+</svg>

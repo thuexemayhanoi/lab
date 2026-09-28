@@ -59,6 +59,11 @@ const layout=(title,content,canonical,extra,desc)=>{
 <meta property="og:description" content="${esc(desc||title)}">
 <meta property="og:url" content="${canonical}">
 <meta property="og:type" content="website">
+<meta property="og:image" content="${cfg.base_url}assets/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bản Đồ Xe 2 Bánh — cẩm nang xe máy Việt Nam">
+<meta name="google-site-verification" content="OIuEOzJFgjt8nxN2rgZaFNIW2n3fEMrC8iSrZdFHGDI" />
 ${extra||''}
 <link rel="stylesheet" href="/lab/assets/style.css">
 </head>
@@ -74,6 +79,8 @@ fs.rmSync(SITE,{recursive:true,force:true});
 fs.mkdirSync(SITE,{recursive:true});
 fs.mkdirSync(path.join(SITE,'assets'),{recursive:true});
 fs.writeFileSync(path.join(SITE,'assets','style.css'),CSS());
+// Open Graph image asset (canonical source: scripts/site/og-image.svg)
+fs.copyFileSync(path.join(__dirname,'og-image.svg'),path.join(SITE,'assets','og-image.svg'));
 // inject the canonical shell into archived article pages (body/schema/canonical untouched)
 const SHELL_RE={head:/<header class="site-head">[\s\S]*?<\/header>/,foot:/<footer class="site-foot">[\s\S]*?<\/footer>/};
 // OG metadata derived from the archive's own canonical head (title/description/canonical).
@@ -81,7 +88,7 @@ const ogFor=html=>{
  const t=(html.match(/<title>([\s\S]*?)<\/title>/)||[])[1]||'';
  const d=(html.match(/<meta name="description" content="([^"]*)"/)||[])[1]||t;
  const u=(html.match(/<link rel="canonical" href="([^"]*)"/)||[])[1]||'';
- return `<meta property="og:title" content="${esc(t)}">\n<meta property="og:description" content="${esc(d)}">\n<meta property="og:url" content="${u}">\n<meta property="og:type" content="article">\n`;
+ return `<meta property="og:title" content="${esc(t)}">\n<meta property="og:description" content="${esc(d)}">\n<meta property="og:url" content="${u}">\n<meta property="og:type" content="article">\n<meta property="og:image" content="${cfg.base_url}assets/og-image.svg">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:alt" content="Bản Đồ Xe 2 Bánh — cẩm nang xe máy Việt Nam">\n`;
 };
 const withShell=html=>html
  .replace(SHELL_RE.head,headerHtml().replace(/\n\s+/g,'\n  '))
@@ -167,6 +174,10 @@ fs.writeFileSync(path.join(SITE,'chinh-sach-bao-mat','index.html'),layout('Chín
 <p>Bài viết có thể dẫn tới các nguồn chính thức (ví dụ: cổng thông tin điện tử Chính phủ, cơ quan quản lý nhà nước) để bạn kiểm chứng thông tin pháp lý. Khi bạn nhấp sang một trang ngoài, việc truy cập đó tuân theo chính sách riêng của trang đích.</p>
 <h2>Nội dung AI cục bộ</h2>
 <p>Trang có một trợ lý đọc dùng mô hình ngôn ngữ AI chạy <strong>cục bộ ngay trong trình duyệt của bạn</strong> khi bạn chủ động bật chế độ AI. Nội dung trò chuyện không được gửi tới dịch vụ suy luận (inference API) nào. Tệp mô hình chỉ được tải xuống khi bạn chủ động bật chế độ AI, có thể được trình duyệt lưu trong bộ nhớ đệm (cache) của thiết bị và tải lại lần sau không cần tải đầy. Vì tệp mô hình được phân phối qua một kho mô hình công khai, việc bật chế độ AI sẽ phát sinh yêu cầu mạng tới kho mô hình đó — trang không cam kết "không có bất kỳ yêu cầu mạng nào" cho tính năng này. Chi tiết vận hành của trợ lý được mô tả ngay trong bảng trò chuyện.</p>
+<h2>Bản đồ nhúng và dữ liệu hội thoại</h2>
+<p>Trang <a href="/lab/lien-he/">Liên hệ</a> nhúng bản đồ Google Maps để hiển thị vị trí: khi bạn mở trang đó, trình duyệt sẽ tải nội dung bản đồ từ máy chủ của Google, và phần hiển thị bản đồ tuân theo chính sách quyền riêng tư riêng của Google. Các trang còn lại không nhúng iframe và không tải tài nguyên từ bên thứ ba khi bạn chỉ đọc bài.</p>
+<p>Hội thoại của bạn với trợ lý đọc được lưu tạm trong <strong>sessionStorage của chính trình duyệt</strong> (chỉ tồn tại đến khi bạn đóng tab; nút "Xóa hội thoại" xóa ngay lập tức). Dữ liệu hội thoại không được gửi tới máy chủ nào của trang và không dùng để theo dõi bạn.</p>
+<p>Trợ lý trả lời dựa trên nội dung đã xuất bản của trang; nó có thể thiếu thông tin hoặc diễn đạt chưa chuẩn — với thông tin pháp lý hoặc giá, hãy đối chiếu tại bài gốc và nguồn chính thức được dẫn trong bài. Trang không cam kết trợ lý không bao giờ trả lời sai.</p>
 <h2>Cập nhật chính sách</h2>
 <p>Nếu cách vận hành của trang thay đổi, chính sách này sẽ được cập nhật tại đúng địa chỉ hiện tại. Ngày cập nhật gần nhất ghi cuối trang. Mọi câu hỏi về quyền riêng tư, vui lòng liên hệ qua trang <a href="/lab/lien-he/">Liên hệ</a>.</p>
 <h2>Thông tin liên hệ</h2>
@@ -345,15 +356,29 @@ ${footerHtml(facts)}
 // search index (PUBLISHED only, minimal fields)
 const idx=published.map(r=>({t:r.primary_keyword,d:r.secondary_keywords||r.primary_keyword,c:r.cluster,p:r.province,l:r.locality,poi:r.poi,b:r.brand,m:r.model,v:r.vehicle_type,u:r.output_path}));
 fs.writeFileSync(path.join(SITE,'assets','search-index.json'),JSON.stringify(idx));
-fs.writeFileSync(path.join(SITE,'assets','search.js'),`let IDX=null;
-fetch('/lab/assets/search-index.json').then(r=>r.json()).then(d=>IDX=d);
+fs.writeFileSync(path.join(SITE,'assets','search.js'),`let IDX=null,IDX_ERR=false,LASTQ='';
+function foldText(s){
+ return (s||'').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'')
+  .replace(/đ/g,'d').replace(/\\s+/g,' ').trim();
+}
+fetch('/lab/assets/search-index.json').then(function(r){
+ if(!r.ok)throw new Error('HTTP '+r.status);
+ return r.json();
+}).then(function(d){
+ IDX=d.map(function(x){x._f=foldText([x.t,x.d,x.p,x.l,x.m,x.b,x.v].join(' '));return x;});
+ if(LASTQ)doSearch(LASTQ);
+}).catch(function(){IDX_ERR=true;});
 var CLV={RENTAL:'Thuê xe máy',RESCUE:'Cứu hộ xe máy',REPAIR:'Sửa chữa & bảo dưỡng',LICENCE:'Bằng lái xe máy',REGISTRATION:'Đăng ký xe máy',ELECTRIC:'Xe máy điện',PARTS:'Phụ tùng xe máy'};
-function doSearch(q){
- q=(q||'').toLowerCase().trim();
- const el=document.getElementById('search-results');
- if(!q||!IDX){el.innerHTML='';return;}
- const hits=IDX.filter(x=>(x.t+' '+x.d+' '+x.p+' '+x.l+' '+x.m).toLowerCase().includes(q)).slice(0,10);
- el.innerHTML=hits.length?hits.map(h=>'<li class="sr-card"><span class="article-chip">'+(CLV[h.c]||h.c)+'</span><a class="sr-title" href="/lab/'+h.u+'">'+h.t+'</a><span class="sr-meta">'+(h.p||'')+'</span></li>').join(''):'<li class="sr-meta">Không tìm thấy bài đã xuất bản nào.</li>';
+function doSearch(raw){
+ LASTQ=raw||'';
+ var q=foldText(LASTQ);
+ var el=document.getElementById('search-results');
+ if(!el)return;
+ if(IDX_ERR){el.innerHTML='<li class="sr-meta">Không tải được chỉ mục tìm kiếm. Hãy kiểm tra kết nối và tải lại trang.</li>';return;}
+ if(!q){el.innerHTML='';return;}
+ if(IDX===null){el.innerHTML='<li class="sr-meta">Đang tải chỉ mục tìm kiếm…</li>';return;}
+ var hits=IDX.filter(function(x){return x._f.indexOf(q)>-1;}).slice(0,10);
+ el.innerHTML=hits.length?hits.map(function(h){return '<li class="sr-card"><span class="article-chip">'+(CLV[h.c]||h.c)+'</span><a class="sr-title" href="/lab/'+h.u+'">'+h.t+'</a><span class="sr-meta">'+(h.p||'')+'</span></li>';}).join(''):'<li class="sr-meta">Không tìm thấy bài đã xuất bản nào.</li>';
 }
 `);
 // minimal vanilla menu interactions: dropdowns (mouse/keyboard/focus/touch) + mobile drawer
