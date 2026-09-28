@@ -1,0 +1,42 @@
+# PROC — QA
+
+Run: `factory.js qa <ID>` (operates on `_drafts/<ID>.html`).
+
+## Automated checks
+
+- word count ≥ 1,600 (regex `[A-Za-zÀ-ỹ0-9]+` on stripped text; 3,000 soft max)
+- exactly one H1
+- correct canonical (matches matrix row)
+- breadcrumb nav present
+- JSON-LD schema present (Article + BreadcrumbList)
+- internal links ≥ 3
+- no fake-service claim patterns on `informational_only` rows
+- no LocalBusiness schema on `informational_only` rows
+
+## Scoring
+
+- PASS: 90–100
+- REVIEW: 80–89 (never publish; repair)
+- FAIL: < 80 or any critical failure
+
+## Critical failures (automatic non-PASS)
+
+fake local business claim · invented address · invented business ·
+invented testing center · invented rescue service · invented price as fact ·
+invented law · invented government authority · wrong canonical ·
+duplicate primary intent · major copied content · missing required official
+source · misleading affiliate/authorized-dealer claim · public draft leak.
+
+## Repair loop
+
+QA → REPAIR → QA, maximum 3 repair attempts (`config/article-rubric.json`),
+then BLOCKED. The external writer performs the repairs (expand sections,
+add verified facts, fix links) — never lower the threshold to increase
+throughput; article length flexibility (1,600–3,000) is the writer's lever.
+
+## Human/AI editorial layer
+
+Automated checks are necessary but not sufficient. Before publish, the writer
+reviews: distinct informational reason to exist (anti-doorway), locality-specific
+substance, natural title/meta, link quality (4–8 editorial links), truthful
+NAP/CTA per `docs/SEO-OWNERSHIP.md`.
