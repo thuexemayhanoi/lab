@@ -195,7 +195,7 @@ Object.entries(byProv).forEach(([prov,arts])=>{
  const dir=path.join(SITE,'dia-phuong',slug);
  fs.mkdirSync(dir,{recursive:true});
  const cards=arts.map(r=>`<li class="card"><a href="/lab/${r.output_path}">${esc(r.primary_keyword)}</a></li>`).join('\n');
- fs.writeFileSync(path.join(dir,'index.html'),layout('Xe máy tại '+prov,`<nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › Địa phương › ${esc(prov)}</nav><h1>Xe máy tại ${esc(prov)}</h1><p>Các bài viết về hệ sinh thái xe máy tại ${esc(prov)} trên Lab.</p><ul class="cards">${cards}</ul>`,cfg.base_url+'dia-phuong/'+slug+'/'));
+ fs.writeFileSync(path.join(dir,'index.html'),layout('Xe máy tại '+prov,`<nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › Địa phương › ${esc(prov)}</nav><h1>Xe máy tại ${esc(prov)}</h1><p>Các bài viết về hệ sinh thái xe máy tại ${esc(prov)} trên Bản Đồ Xe 2 Bánh Việt Nam.</p><ul class="cards">${cards}</ul>`,cfg.base_url+'dia-phuong/'+slug+'/'));
 });
 // Contact & About
 fs.mkdirSync(path.join(SITE,'lien-he'));
@@ -203,7 +203,7 @@ fs.writeFileSync(path.join(SITE,'lien-he','index.html'),layout('Liên hệ',`<h1
 <p><strong>${esc(facts.business_name)}</strong></p>
 <p>Email: <a href="mailto:${esc(facts.email)}">${esc(facts.email)}</a></p>
 <p>Khu vực: ${esc(facts.location_summary)}</p>
-<p class="fine">Số điện thoại, địa chỉ chính xác và giờ mở cửa chỉ hiển thị sau khi chủ sở hữu xác nhận (xem config/business-facts.json — status REQUIRES_VERIFICATION). Lab không bịa thông tin NAP.</p>`,cfg.base_url+'lien-he/'));
+<p class="fine">Số điện thoại, địa chỉ chính xác và giờ mở cửa chỉ hiển thị sau khi chủ sở hữu xác nhận (xem config/business-facts.json — status REQUIRES_VERIFICATION). Bản Đồ Xe 2 Bánh Việt Nam không bịa thông tin NAP.</p>`,cfg.base_url+'lien-he/'));
 fs.mkdirSync(path.join(SITE,'ve-chung-toi'));
 fs.writeFileSync(path.join(SITE,'ve-chung-toi','index.html'),layout('Về chúng tôi',`<h1>Về chúng tôi</h1>
 <p>Bản Đồ Xe 2 Bánh Việt Nam là trang thông tin nghiên cứu về hệ sinh thái xe máy Việt Nam, vận hành bởi ${esc(facts.business_name)} (${esc(facts.location_summary)}). Dịch vụ cho thuê xe máy thực tế của chủ sở hữu hoạt động tại Hà Nội.</p>
