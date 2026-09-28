@@ -1,101 +1,152 @@
 /** shell.js — canonical premium editorial shell (header, footer, buttons, article chrome).
  * Shared by scripts/site/build-site.js and scripts/factory/wrap-drafts.js so every
- * generated page consumes the same markup. Child hub URLs are stable and never change. */
+ * generated page consumes the same markup. Child hub URLs are stable and never change.
+ * Icon system: single inline-SVG set (18–20px, currentColor, stroke 1.8, aria-hidden).
+ * Semantics: real destinations are <a>; dropdown/group controls are <button type="button">. */
 'use strict';
 
 // IA layer: 4 parent groups over the 8 existing child hubs. No new URLs are created.
 const GROUPS = [
   { id: 'thue-xe-hanh-trinh', label: 'Thuê xe & Hành trình', desc: 'Thuê xe máy và kinh nghiệm di chuyển bằng xe hai bánh.', children: [
-    { slug: 'thue-xe-may', nav: 'Thuê xe máy', icon: '🏍️', desc: 'Giá, thủ tục và kinh nghiệm thuê xe' },
-    { slug: 'kinh-nghiem', nav: 'Kinh nghiệm', icon: '🧭', desc: 'Lái xe an toàn, vận hành dài hạn' } ] },
+    { slug: 'thue-xe-may', nav: 'Thuê xe máy', icon: 'motorbike', desc: 'Giá, thủ tục và kinh nghiệm thuê xe' },
+    { slug: 'kinh-nghiem', nav: 'Kinh nghiệm', icon: 'compass', desc: 'Lái xe an toàn, vận hành dài hạn' } ] },
   { id: 'cuu-ho-bao-duong', label: 'Cứu hộ & Bảo dưỡng', desc: 'Xử lý sự cố trên đường và giữ xe luôn tốt.', children: [
-    { slug: 'cuu-ho-xe-may', nav: 'Cứu hộ', icon: '🆘', desc: 'Chọn cứu hộ nhanh, an toàn khi sự cố' },
-    { slug: 'sua-xe-may', nav: 'Sửa chữa & bảo dưỡng', icon: '🔧', desc: 'Bảo dưỡng định kỳ, sửa chữa xe máy' } ] },
+    { slug: 'cuu-ho-xe-may', nav: 'Cứu hộ', icon: 'life-ring', desc: 'Chọn cứu hộ nhanh, an toàn khi sự cố' },
+    { slug: 'sua-xe-may', nav: 'Sửa chữa & bảo dưỡng', icon: 'wrench', desc: 'Bảo dưỡng định kỳ, sửa chữa xe máy' } ] },
   { id: 'phap-ly-giay-to', label: 'Pháp lý & Giấy tờ', desc: 'Giấy phép lái xe và thủ tục đăng ký xe máy.', children: [
-    { slug: 'bang-lai-xe-may', nav: 'Bằng lái', icon: '📜', desc: 'Thi bằng A1, đổi và cấp lại GPLX' },
-    { slug: 'dang-ky-xe-may', nav: 'Đăng ký xe', icon: '🏷️', desc: 'Đăng ký, sang tên, lệ phí, biển số' } ] },
+    { slug: 'bang-lai-xe-may', nav: 'Bằng lái', icon: 'card', desc: 'Thi bằng A1, đổi và cấp lại GPLX' },
+    { slug: 'dang-ky-xe-may', nav: 'Đăng ký xe', icon: 'file-check', desc: 'Đăng ký, sang tên, lệ phí, biển số' } ] },
   { id: 'xe-dien-phu-tung', label: 'Xe điện & Phụ tùng', desc: 'Xe máy điện và phụ tùng, linh kiện thay thế.', children: [
-    { slug: 'xe-may-dien', nav: 'Xe máy điện', icon: '⚡', desc: 'Giá, pin, trạm sạc, chi phí xe điện' },
-    { slug: 'phu-tung', nav: 'Phụ tùng', icon: '⚙️', desc: 'Lốp, ắc quy, bugi, nhông xích, dầu' } ] },
+    { slug: 'xe-may-dien', nav: 'Xe máy điện', icon: 'bolt', desc: 'Giá, pin, trạm sạc, chi phí xe điện' },
+    { slug: 'phu-tung', nav: 'Phụ tùng', icon: 'gear', desc: 'Lốp, ắc quy, bugi, nhông xích, dầu' } ] },
 ];
 const BRAND_FULL = 'Bản Đồ Xe 2 Bánh Việt Nam';
 const BRAND_SHORT = 'Bản Đồ Xe 2 Bánh';
 const EYEBROW = 'CẨM NANG XE 2 BÁNH VIỆT NAM';
+// Utility destinations (real pages, real anchors)
+const INFO_LINKS = [
+  { slug: 'lien-he', nav: 'Liên hệ', icon: 'mail', href: '/lab/lien-he/' },
+  { slug: 'chinh-sach-bao-mat', nav: 'Chính sách bảo mật', icon: 'shield', href: '/lab/chinh-sach-bao-mat/' },
+  { slug: 'dieu-khoan-su-dung', nav: 'Điều khoản sử dụng', icon: 'file-text', href: '/lab/dieu-khoan-su-dung/' },
+];
+
+// ---------- inline SVG icon set (no emoji, no icon font, no external request) ----------
+const ICON = {
+  home: '<path d="M3 9.5 12 3l9 6.5V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22v-8h6v8"/>',
+  info: '<circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>',
+  motorbike: '<circle cx="5.5" cy="17.5" r="3"/><circle cx="18.5" cy="17.5" r="3"/><path d="M5.5 17.5h6.5l2.5-7h3.5"/><path d="M9 10.5h4l1.5 4"/><path d="M13 6.5h3l1 4"/>',
+  compass: '<circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z"/>',
+  'life-ring': '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m9.17 14.83-4.24 4.24"/>',
+  wrench: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+  card: '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>',
+  'file-check': '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/>',
+  bolt: '<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>',
+  gear: '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>',
+  mail: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/>',
+  shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+  'file-text': '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/>',
+  search: '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>',
+  menu: '<path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/>',
+  close: '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+  chat: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+};
+const svg = (n, size) => `<svg class="ico ico-${size === 'lg' ? 'lg' : 'sm'}" viewBox="0 0 24 24" width="${size === 'lg' ? 20 : 18}" height="${size === 'lg' ? 20 : 18}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[n] || ''}</svg>`;
 
 const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const groupOf = slug => GROUPS.find(g => g.children.some(c => c.slug === slug)) || null;
 
 function headerHtml() {
+  // desktop dropdown groups (real child anchors; parent = semantic button)
   const groups = GROUPS.map(g => `
     <div class="nav-group" data-hub="${g.id}">
       <button class="nav-drop" type="button" aria-expanded="false" aria-controls="dd-${g.id}">${esc(g.label)}<span class="chev" aria-hidden="true">▾</span></button>
       <div class="dropdown glass-menu" id="dd-${g.id}" role="group" aria-label="${esc(g.label)}">
-        ${g.children.map(c => `<a class="dd-link" data-hub="${g.id}" href="/lab/${c.slug}/"><span class="dd-title"><span class="dd-icon" aria-hidden="true">${c.icon}</span>${esc(c.nav)}</span><span class="dd-desc">${esc(c.desc)}</span></a>`).join('')}
+        ${g.children.map(c => `<a class="dd-link" data-hub="${g.id}" href="/lab/${c.slug}/"><span class="dd-title"><span class="dd-icon">${svg(c.icon)}</span>${esc(c.nav)}</span><span class="dd-desc">${esc(c.desc)}</span></a>`).join('')}
       </div>
     </div>`).join('');
-  const drawer = GROUPS.map(g => `
+  // "Thông tin" dropdown (utility destinations — real anchors)
+  const infoGroup = `
+    <div class="nav-group nav-group-info" data-hub="thong-tin">
+      <button class="nav-drop" type="button" aria-expanded="false" aria-controls="dd-thong-tin">Thông tin<span class="chev" aria-hidden="true">▾</span></button>
+      <div class="dropdown glass-menu" id="dd-thong-tin" role="group" aria-label="Thông tin">
+        ${INFO_LINKS.map(c => `<a class="dd-link" data-hub="thong-tin" href="${c.href}"><span class="dd-title"><span class="dd-icon">${svg(c.icon)}</span>${esc(c.nav)}</span><span class="dd-desc">Trang ${esc(c.nav.toLowerCase())}</span></a>`).join('')}
+      </div>
+    </div>`;
+  // mobile drawer: exact utility IA
+  const drawerGroups = GROUPS.map(g => `
     <div class="dr-group">
       <p class="dr-label">${esc(g.label.toUpperCase())}</p>
-      ${g.children.map(c => `<a class="dr-link" data-hub="${g.id}" href="/lab/${c.slug}/"><span class="dd-icon" aria-hidden="true">${c.icon}</span>${esc(c.nav)}</a>`).join('')}
+      ${g.children.map(c => `<a class="dr-link" data-hub="${g.id}" href="/lab/${c.slug}/"><span class="dd-icon">${svg(c.icon, 'lg')}</span><span class="dr-text">${esc(c.nav)}</span><span class="dr-arrow" aria-hidden="true">›</span></a>`).join('')}
     </div>`).join('');
+  const drMain = [
+    { href: '/lab/', nav: 'Trang chủ', icon: 'home' },
+    { href: '/lab/ve-chung-toi/', nav: 'Giới thiệu', icon: 'info' },
+  ].map(c => `<a class="dr-link dr-main-link" href="${c.href}"><span class="dd-icon">${svg(c.icon, 'lg')}</span><span class="dr-text">${esc(c.nav)}</span><span class="dr-arrow" aria-hidden="true">›</span></a>`).join('');
+  const drUtility = INFO_LINKS.map(c => `<a class="dr-link" href="${c.href}"><span class="dd-icon">${svg(c.icon, 'lg')}</span><span class="dr-text">${esc(c.nav)}</span><span class="dr-arrow" aria-hidden="true">›</span></a>`).join('');
   return `<header class="site-head">
 <div class="wrap nav-shell glass-nav">
   <a class="brand" href="/lab/">${BRAND_SHORT}</a>
-  <nav class="main-nav" aria-label="Chuyên mục chính">${groups}
+  <nav class="main-nav" aria-label="Chuyên mục chính">
+    <a class="nav-link" href="/lab/">Trang chủ</a>
     <a class="nav-link" href="/lab/ve-chung-toi/">Giới thiệu</a>
-    <a class="nav-link" href="/lab/lien-he/">Liên hệ</a>
+${groups}
+    ${infoGroup}
   </nav>
   <div class="nav-actions">
-    <a class="btn-icon" href="/lab/#q" aria-label="Tìm bài viết" title="Tìm bài viết"><span aria-hidden="true">🔎</span></a>
-    <button class="btn-icon menu-toggle" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Mở menu"><span aria-hidden="true">☰</span></button>
+    <a class="btn-icon" href="/lab/#q" aria-label="Tìm bài viết" title="Tìm bài viết">${svg('search')}</a>
+    <button class="btn-icon menu-toggle" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Mở menu">${svg('menu')}</button>
   </div>
 </div>
-<div class="drawer glass-menu" id="drawer" role="dialog" aria-modal="true" aria-label="Menu chuyên mục" hidden>
-  <div class="drawer-head">
-    <span class="dr-brand">${BRAND_SHORT}</span>
-    <button class="btn-icon drawer-close" type="button" aria-label="Đóng menu"><span aria-hidden="true">✕</span></button>
-  </div>
-  <nav class="drawer-nav" aria-label="Chuyên mục">${drawer}</nav>
-  <div class="drawer-foot">
-    <a class="dr-link" href="/lab/ve-chung-toi/">Giới thiệu</a>
-    <a class="dr-link" href="/lab/lien-he/">Liên hệ</a>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu chuyên mục" hidden>
+  <div class="drawer-panel">
+    <div class="drawer-head">
+      <span class="dr-brand">${BRAND_FULL}</span>
+      <button class="btn-icon drawer-close" type="button" aria-label="Đóng menu">${svg('close', 'lg')}</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Chuyên mục">
+      <div class="dr-group dr-group-main">${drMain}</div>
+      <div class="dr-divider" role="separator"></div>
+      ${drawerGroups}
+      <div class="dr-divider" role="separator"></div>
+      <div class="dr-group dr-utility">
+        <p class="dr-label">Thông tin</p>
+        ${drUtility}
+      </div>
+    </nav>
   </div>
 </div>
 </header>`;
 }
 
 function footerHtml(facts) {
-  const groupCol = g => `<p class="foot-label">${esc(g.label.toUpperCase())}</p>
-<ul class="foot-links">${g.children.map(c => `<li><a href="/lab/${c.slug}/">${esc(c.nav)}</a></li>`).join('')}</ul>`;
+  const col = (label, links) => `<div class="foot-col"><p class="foot-label">${esc(label)}</p><ul class="foot-links">${links.map(c => `<li><a href="${c.href}">${esc(c.nav)}</a></li>`).join('')}</ul></div>`;
+  const discover = [{ href: '/lab/thue-xe-may/', nav: 'Thuê xe máy' }, { href: '/lab/kinh-nghiem/', nav: 'Kinh nghiệm' }, { href: '/lab/cuu-ho-xe-may/', nav: 'Cứu hộ' }, { href: '/lab/sua-xe-may/', nav: 'Sửa chữa & bảo dưỡng' }];
+  const legal = [{ href: '/lab/bang-lai-xe-may/', nav: 'Bằng lái' }, { href: '/lab/dang-ky-xe-may/', nav: 'Đăng ký xe' }, { href: '/lab/xe-may-dien/', nav: 'Xe máy điện' }, { href: '/lab/phu-tung/', nav: 'Phụ tùng' }];
+  const info = INFO_LINKS.map(c => ({ href: c.href, nav: c.nav })).concat([{ href: '/lab/sitemap-index.xml', nav: 'Sitemap' }]);
   return `<footer class="site-foot"><div class="wrap">
 <div class="foot-shell glass-footer">
   <div class="foot-grid">
     <div class="foot-col foot-brand-col">
       <p class="foot-brand">${BRAND_FULL}</p>
-      <p class="foot-desc">Cẩm nang xe máy, xe điện và hệ sinh thái xe hai bánh Việt Nam.</p>
+      <p class="foot-desc">Cẩm nang nghiên cứu thực tế về xe máy, hành trình, bảo dưỡng, pháp lý và phương tiện hai bánh tại Việt Nam.</p>
       <ul class="foot-links">
         <li><a href="/lab/">Trang chủ</a></li>
         <li><a href="/lab/ve-chung-toi/">Giới thiệu</a></li>
-        <li><a href="/lab/lien-he/">Liên hệ</a></li>
       </ul>
     </div>
-    <div class="foot-col">${groupCol(GROUPS[0])}${groupCol(GROUPS[1])}</div>
-    <div class="foot-col">${groupCol(GROUPS[2])}${groupCol(GROUPS[3])}</div>
-    <div class="foot-col">
-      <p class="foot-label">KHÁM PHÁ</p>
-      <ul class="foot-links">
-        <li><a href="/lab/#q">Tìm bài viết</a></li>
-        <li><a href="/lab/sitemap-index.xml">Sitemap</a></li>
-        <li><a href="/lab/ve-chung-toi/">Về chúng tôi</a></li>
-        <li><a href="/lab/lien-he/">Liên hệ</a></li>
-      </ul>
-    </div>
+    ${col('Khám phá', discover)}
+    ${col('Pháp lý & Phương tiện', legal)}
+    ${col('Thông tin', info)}
   </div>
   <div class="foot-bottom">
     <p>© ${new Date().getFullYear()} ${BRAND_FULL} · ${esc(facts.business_name)} — ${esc(facts.location_summary)}</p>
+    <div class="foot-utility">
+      <a href="/lab/chinh-sach-bao-mat/">Chính sách bảo mật</a>
+      <a href="/lab/dieu-khoan-su-dung/">Điều khoản sử dụng</a>
+    </div>
     <p class="fine">Trang thông tin nghiên cứu về hệ sinh thái xe hai bánh Việt Nam. Không phải trang dịch vụ toàn quốc.</p>
+    <button class="to-top" id="to-top" type="button" aria-label="Lên đầu trang" title="Lên đầu trang">↑</button>
   </div>
-  <button class="to-top" id="to-top" type="button" aria-label="Lên đầu trang" title="Lên đầu trang">↑</button>
 </div>
 </div></footer>`;
 }
@@ -162,4 +213,4 @@ ${pm ? pm[0].replace(/<\/p>$/, ` · ~${opt.readingMin || '?'} phút đọc</p>`)
   return `${head}${open}${before}${hero}${toc}${rest}${related}${hubCta}${pn}${close}${tail}`;
 }
 
-module.exports = { GROUPS, BRAND_FULL, BRAND_SHORT, EYEBROW, esc, groupOf, headerHtml, footerHtml, decorateArticle };
+module.exports = { GROUPS, BRAND_FULL, BRAND_SHORT, EYEBROW, INFO_LINKS, ICON, svg, esc, groupOf, headerHtml, footerHtml, decorateArticle };

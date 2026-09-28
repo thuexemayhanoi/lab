@@ -146,6 +146,43 @@ test('draft safety: no drafts directory under site/', () => {
   assert.ok(!fs.existsSync(path.join(SITE, '_drafts')));
 });
 
+// ---------- POLICY PAGES / SHELL SEMANTICS ----------
+test('policy pages: privacy & terms exist with canonical, one H1, real anchors', () => {
+  ['chinh-sach-bao-mat', 'dieu-khoan-su-dung'].forEach(s => {
+    const html = fs.readFileSync(path.join(SITE, s, 'index.html'), 'utf8');
+    assert.ok(html.includes('rel="canonical"'), 'no canonical ' + s);
+    assert.strictEqual((html.match(/<h1/g) || []).length, 1, 'h1 count ' + s);
+    assert.ok(html.includes('href="/lab/lien-he/"'), 'no contact anchor ' + s);
+  });
+});
+test('shell: no emoji menu icons; parent groups are buttons; utility anchors real', () => {
+  const home = fs.readFileSync(path.join(SITE, 'index.html'), 'utf8');
+  assert.ok(!/[🏍🧭🆘🔧📜🏷⚡⚙🔎☰]/u.test(home), 'emoji icon leaked into built shell');
+  const head = home.slice(0, home.indexOf('</header>'));
+  assert.ok((head.match(/<button[^>]*class="[^"]*nav-drop[^"]*"/g) || []).length >= 5, 'parent groups must be semantic buttons');
+  ['/lab/', '/lab/ve-chung-toi/', '/lab/lien-he/', '/lab/chinh-sach-bao-mat/', '/lab/dieu-khoan-su-dung/'].forEach(href => {
+    assert.ok(head.includes(`href="${href}"`), 'missing real anchor for ' + href);
+  });
+  assert.ok(!/javascript:void\(0\)/.test(home), 'javascript:void(0) in shell');
+});
+test('urls: every built internal href resolves to a real file; one H1 per page', () => {
+  const files = [];
+  (function walk(d){fs.readdirSync(d,{withFileTypes:true}).forEach(e=>{const p=path.join(d,e.name);e.isDirectory()?walk(p):files.push(p);});})(SITE);
+  const targets = new Set();
+  files.forEach(f => {
+    const t = fs.readFileSync(f, 'utf8');
+    if (f.endsWith('.html')) {
+      assert.strictEqual((t.match(/<h1/g) || []).length, 1, 'H1 count != 1 in ' + f);
+      [...t.matchAll(/href="(\/lab\/[^"#]*)"/g)].forEach(m => targets.add(m[1]));
+    }
+  });
+  targets.forEach(h => {
+    const p = h.replace(/^\/lab\//, '').replace(/\/$/, '');
+    const ok = !p || fs.existsSync(path.join(SITE, p, 'index.html')) || fs.existsSync(path.join(SITE, p));
+    assert.ok(ok, 'unresolved internal href ' + h);
+  });
+});
+
 // ---------- SITEMAP / SEARCH ----------
 const sitemapFiles = () => fs.readdirSync(SITE).filter(f => /^sitemap-.*\.xml$/.test(f));
 const sitemapUrls = () => {

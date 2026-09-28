@@ -30,6 +30,7 @@ function setDrawer(open){
  if(!drawer)return;
  drawer.hidden=!open;
  if(toggle)toggle.setAttribute('aria-expanded',String(open));
+ document.body.classList[open?'add':'remove']('drawer-open');
  if(open){var c=drawer.querySelector('.drawer-close');if(c)c.focus();}
  else if(toggle)toggle.focus();
 }
@@ -40,24 +41,21 @@ if(toggle&&drawer){
  drawer.addEventListener('click',function(e){if(e.target===drawer)setDrawer(false);});
  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!drawer.hidden)setDrawer(false);});
 }
-// active nav state from current path
+// active nav state from current path (aria-current + accent highlight)
 (function(){
- var path=location.pathname;
- [].forEach.call(document.querySelectorAll('[data-hub]'),function(el){
-  var hub=el.getAttribute('data-hub');
-  var link=el.getAttribute('href');
-  if(!link)return;
-  var seg=link.split('/').filter(Boolean).slice(1).join('/');
-  if(seg&&('/lab/'+seg+'/')===path)el.classList.add('active');
- });
- [].forEach.call(document.querySelectorAll('.dr-link[href],.nav-link[href]'),function(el){
-  if(el.getAttribute('href')==='/lab/'&&path==='/lab/')el.classList.add('active');
+ var path=location.pathname.replace(/index.html$/,'');
+ [].forEach.call(document.querySelectorAll('a.nav-link,a.dd-link,a.dr-link'),function(el){
+  var href=el.getAttribute('href');
+  if(!href||href.indexOf('/lab/')!==0)return;
+  if(href==='/lab/#q')return;
+  if(href==='/lab/'){if(path==='/lab/'||path==='/lab'){el.classList.add('active');el.setAttribute('aria-current','page');}return;}
+  var seg=href.split('/').filter(Boolean).slice(1).join('/');
+  if(seg&&('/lab/'+seg+'/')===path){el.classList.add('active');el.setAttribute('aria-current','page');}
+  else if(seg&&path.indexOf('/lab/'+seg+'/')===0){el.classList.add('active');}
  });
  // highlight hub dropdown + drawer group containing the active child
  var active=document.querySelector('.dd-link.active');
- if(active){var g=active.closest('.nav-group');if(g){g.querySelector('.nav-drop').classList.add('active');}
-  var dg=document.querySelector('.drawer [data-hub="'+active.getAttribute('data-hub')+'"]');
- }
+ if(active){var g=active.closest('.nav-group');if(g){var b=g.querySelector('.nav-drop');if(b)b.classList.add('active');}}
 })();
 // reading progress bar (article pages)
 (function(){

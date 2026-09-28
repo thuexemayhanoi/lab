@@ -129,6 +129,43 @@ Object.entries(byProv).forEach(([prov,arts])=>{
  const cards=arts.map(r=>`<li class="card"><a href="/lab/${r.output_path}">${esc(r.primary_keyword)}</a></li>`).join('\n');
  fs.writeFileSync(path.join(dir,'index.html'),layout('Xe máy tại '+prov,`<nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › Địa phương › ${esc(prov)}</nav><h1>Xe máy tại ${esc(prov)}</h1><p>Các bài viết về hệ sinh thái xe máy tại ${esc(prov)} trên ${BRAND_FULL}.</p><ul class="cards">${cards}</ul>`,cfg.base_url+'dia-phuong/'+slug+'/'));
 });
+// Privacy & Terms (utility pages — exempt from long-form word range)
+fs.mkdirSync(path.join(SITE,'chinh-sach-bao-mat'),{recursive:true});
+fs.writeFileSync(path.join(SITE,'chinh-sach-bao-mat','index.html'),layout('Chính sách bảo mật',`
+<nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › Chính sách bảo mật</nav>
+<h1>Chính sách bảo mật</h1>
+<p>${BRAND_FULL} là trang thông tin tĩnh, không có tài khoản người dùng, không có biểu mẫu đăng ký và không bán bất kỳ sản phẩm nào qua trang này. Chính sách dưới đây mô tả đúng cách trang hoạt động ở thời điểm cập nhật.</p>
+<h2>Thông tin chúng tôi thu thập</h2>
+<p>Trang không có hệ thống phân tích (analytics), không dùng cookie theo dõi và không thu thập dữ liệu cá nhân của bạn khi đọc bài viết. Các tệp tĩnh của trang (HTML, CSS, JS) được phục vụ bởi hạ tầng GitHub Pages.</p>
+<h2>Tra cứu và tìm kiếm</h2>
+<p>Chức năng tìm bài viết trên trang chủ chạy hoàn toàn trong trình duyệt của bạn: dữ liệu tìm kiếm được tải xuống một tệp chỉ mục tĩnh và việc lọc diễn ra trên thiết bị, không gửi từ khóa tìm kiếm về máy chủ nào.</p>
+<h2>Liên kết ngoài</h2>
+<p>Bài viết có thể dẫn tới các nguồn chính thức (ví dụ: cổng thông tin điện tử Chính phủ, cơ quan quản lý nhà nước) để bạn kiểm chứng thông tin pháp lý. Khi bạn nhấp sang một trang ngoài, việc truy cập đó tuân theo chính sách riêng của trang đích.</p>
+<h2>Nội dung AI cục bộ</h2>
+<p>Trang có một trợ lý đọc dùng mô hình ngôn ngữ AI chạy <strong>cục bộ ngay trong trình duyệt của bạn</strong> khi bạn chủ động bật chế độ AI. Nội dung trò chuyện không được gửi tới dịch vụ suy luận (inference API) nào. Tệp mô hình chỉ được tải xuống khi bạn chủ động bật chế độ AI, có thể được trình duyệt lưu trong bộ nhớ đệm (cache) của thiết bị và tải lại lần sau không cần tải đầy. Vì tệp mô hình được phân phối qua một kho mô hình công khai, việc bật chế độ AI sẽ phát sinh yêu cầu mạng tới kho mô hình đó — trang không cam kết "không có bất kỳ yêu cầu mạng nào" cho tính năng này. Chi tiết vận hành của trợ lý được mô tả ngay trong bảng trò chuyện.</p>
+<h2>Cập nhật chính sách</h2>
+<p>Nếu cách vận hành của trang thay đổi, chính sách này sẽ được cập nhật tại đúng địa chỉ hiện tại. Ngày cập nhật gần nhất ghi cuối trang. Mọi câu hỏi về quyền riêng tư, vui lòng liên hệ qua trang <a href="/lab/lien-he/">Liên hệ</a>.</p>
+<p class="fine">Cập nhật lần cuối: 2026-09-28.</p>`,cfg.base_url+'chinh-sach-bao-mat/',null,
+'Chính sách bảo mật của Bản Đồ Xe 2 Bánh Việt Nam: không có analytics, không theo dõi, trợ lý AI chạy cục bộ trong trình duyệt.'));
+fs.mkdirSync(path.join(SITE,'dieu-khoan-su-dung'),{recursive:true});
+fs.writeFileSync(path.join(SITE,'dieu-khoan-su-dung','index.html'),layout('Điều khoản sử dụng',`
+<nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › Điều khoản sử dụng</nav>
+<h1>Điều khoản sử dụng</h1>
+<p>Cảm ơn bạn đã đọc ${BRAND_FULL}. Khi sử dụng trang, bạn đồng ý với các điều khoản dưới đây.</p>
+<h2>Mục đích của nội dung</h2>
+<p>Toàn bộ bài viết trên trang mang tính <strong>thông tin — tham khảo</strong> về hệ sinh thái xe hai bánh tại Việt Nam: thuê xe, cứu hộ, bảo dưỡng, giấy tờ pháp lý, xe điện và phụ tùng. Trang không phải cơ quan nhà nước, không phải văn phòng tư vấn pháp lý và không thay thế hướng dẫn chính thức của cơ quan có thẩm quyền.</p>
+<h2>Thông tin pháp lý có thể thay đổi</h2>
+<p>Quy định về giấy tờ, lệ phí, kỹ thuật và an toàn giao thông có thể thay đổi theo văn bản pháp luật mới. Chúng tôi cố gắng ghi rõ nguồn chính thức trong từng bài và cập nhật khi phát hiện thay đổi, song bạn nên kiểm tra văn bản gốc trước khi thực hiện thủ tục.</p>
+<h2>Trách nhiệm của người đọc</h2>
+<p>Bạn chịu trách nhiệm với quyết định của mình khi vận hành phương tiện, thực hiện thủ tục hay lựa chọn dịch vụ. Các bài viết địa phương ngoài khu vực xác thực chỉ mang tính hướng dẫn, không phải lời chào mời dịch vụ.</p>
+<h2>Bản quyền</h2>
+<p>Nội dung do ${BRAND_FULL} biên soạn theo phương pháp nghiên cứu có nguồn. Đăng lại toàn văn cần ghi rõ nguồn và liên kết về trang gốc.</p>
+<h2>Cập nhật nội dung</h2>
+<p>Bài viết được bổ sung, hiệu đính và cập nhật theo thời gian; ngày đăng và nội dung cập nhật được ghi trong từng bài.</p>
+<h2>Liên hệ</h2>
+<p>Thắc mắc về nội dung hoặc điều khoản: xin dùng thông tin trên trang <a href="/lab/lien-he/">Liên hệ</a>.</p>
+<p class="fine">Cập nhật lần cuối: 2026-09-28.</p>`,cfg.base_url+'dieu-khoan-su-dung/',null,
+'Điều khoản sử dụng của Bản Đồ Xe 2 Bánh Việt Nam: nội dung thông tin, nguồn chính thức, trách nhiệm người đọc.'));
 // Contact & About
 fs.mkdirSync(path.join(SITE,'lien-he'));
 fs.writeFileSync(path.join(SITE,'lien-he','index.html'),layout('Liên hệ',`<h1>Liên hệ</h1>
@@ -179,7 +216,7 @@ Object.entries(shards).forEach(([name,list])=>{
  fs.writeFileSync(path.join(SITE,fn),xml);
  shardFiles.push(fn);
 });
-const extraUrls=[cfg.base_url+'lien-he/',cfg.base_url+'ve-chung-toi/',...HUBS.map(h=>cfg.base_url+h.slug+'/')];
+const extraUrls=[cfg.base_url+'lien-he/',cfg.base_url+'ve-chung-toi/',cfg.base_url+'chinh-sach-bao-mat/',cfg.base_url+'dieu-khoan-su-dung/',...HUBS.map(h=>cfg.base_url+h.slug+'/')];
 fs.writeFileSync(path.join(SITE,'sitemap-static.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${extraUrls.map(u=>`<url><loc>${u}</loc></url>`).join('\n')}\n</urlset>`);
 if(!shardFiles.includes('sitemap-static.xml'))shardFiles.push('sitemap-static.xml');
 fs.writeFileSync(path.join(SITE,'sitemap-index.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${shardFiles.map(f=>`<sitemap><loc>${cfg.base_url+f}</loc></sitemap>`).join('\n')}\n</sitemapindex>`);
@@ -230,7 +267,7 @@ background:
 background-attachment:fixed;color-scheme:light;overflow-wrap:break-word}
 .wrap{max-width:860px;margin:0 auto;padding:0 16px}
 @supports not ((backdrop-filter:blur(2px)) or (-webkit-backdrop-filter:blur(2px))){
- .glass,.glass-strong,.glass-nav,.glass-menu,.glass-footer,.hero,.card,.breadcrumb,.toc{background:rgba(255,255,255,.96)!important}}
+ .glass,.glass-strong,.glass-nav,.glass-menu,.glass-footer,.drawer-panel,.hero,.card,.breadcrumb,.toc{background:rgba(255,255,255,.96)!important}}
 /* ---------- glass primitives (20-30% of surfaces; reading surfaces stay opaque) ---------- */
 .glass{background:var(--glass);border:1px solid var(--glass-border);outline:1px solid var(--hairline);
  border-radius:var(--radius);box-shadow:var(--glass-shadow);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur)}
@@ -294,18 +331,37 @@ a:focus-visible,.btn:focus-visible,button:focus-visible,summary:focus-visible{ou
 .category-chip:hover,.article-chip:hover{background:var(--accent-soft);border-color:rgba(11,92,59,.28)}
 .meta-chip{display:inline-block;font-size:.75rem;color:var(--muted);background:rgba(24,34,48,.05);
  border-radius:999px;padding:3px 10px}
-/* ---------- mobile drawer ---------- */
-.drawer{position:fixed;inset:0;z-index:80;display:flex;flex-direction:column;padding:14px;
- background:var(--glass-strong);backdrop-filter:var(--glass-blur-strong);-webkit-backdrop-filter:var(--glass-blur-strong)}
+/* ---------- icons (single inline SVG set) ---------- */
+.ico-sm,.ico-lg{flex:none;display:inline-block;vertical-align:-3px;color:currentColor}
+.ico-sm{width:18px;height:18px}.ico-lg{width:20px;height:20px}
+.dd-icon{display:inline-flex;color:var(--accent);opacity:.92}
+.dd-icon .ico-sm,.dd-icon .ico-lg{vertical-align:middle}
+.dr-arrow{margin-left:auto;color:var(--muted);font-size:1.05rem;opacity:.55;transition:transform var(--transition-fast)}
+.dr-link:hover .dr-arrow,.dr-link.active .dr-arrow{transform:translateX(2px);opacity:1}
+/* ---------- mobile drawer (premium editorial) ---------- */
+.drawer{position:fixed;inset:0;z-index:80;background:rgba(20,29,40,.38);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
 .drawer[hidden]{display:none}
-.drawer-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
-.dr-brand{font-weight:700;color:var(--accent)}
-.drawer-nav{overflow-y:auto;flex:1}
-.dr-label{font-size:.7rem;font-weight:700;letter-spacing:.09em;color:var(--muted);margin:14px 0 2px;text-transform:uppercase}
-.dr-link{display:flex;align-items:center;gap:10px;min-height:44px;padding:6px 12px;color:var(--text);text-decoration:none;
- font-size:.98rem;border-radius:var(--radius-sm);transition:background var(--transition-fast)}
-.dr-link:hover,.dr-link.active{background:var(--accent-soft);color:var(--accent)}
-.drawer-foot{border-top:1px solid var(--hairline);padding-top:6px;margin-top:10px}
+.drawer-panel{position:absolute;inset:12px;display:flex;flex-direction:column;padding:16px 14px calc(16px + env(safe-area-inset-bottom,0px));
+ background:rgba(252,254,252,.94);border:1px solid var(--glass-border);outline:1px solid var(--hairline);
+ border-radius:26px;box-shadow:0 2px 6px rgba(24,34,48,.08),0 28px 64px -18px rgba(24,34,48,.32);
+ -webkit-backdrop-filter:blur(22px) saturate(155%);backdrop-filter:blur(22px) saturate(155%);overflow:hidden}
+.drawer-panel::before{content:"";position:absolute;inset:0 0 auto 0;height:36px;pointer-events:none;
+ background:linear-gradient(180deg,rgba(255,255,255,.65),rgba(255,255,255,0))}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 10px;position:relative}
+.dr-brand{font-weight:700;color:var(--accent);font-size:.98rem;letter-spacing:-.01em}
+.drawer-close{width:44px;height:44px}
+.drawer-nav{overflow-y:auto;flex:1;overscroll-behavior:contain;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+.dr-group{margin:2px 0}
+.dr-group-main .dr-link:first-child{margin-top:0}
+.dr-label{font-size:.78rem;font-weight:700;letter-spacing:.08em;color:var(--muted);margin:16px 4px 4px;text-transform:uppercase}
+.dr-link{display:flex;align-items:center;gap:12px;min-height:48px;padding:8px 12px;color:var(--text);text-decoration:none;
+ font-size:1rem;border-radius:13px;border:1px solid transparent;transition:background var(--transition-fast),border-color var(--transition-fast)}
+.dr-link:hover{background:var(--accent-soft);color:var(--accent)}
+.dr-link.active{background:var(--accent-soft);color:var(--accent);border-color:rgba(11,92,59,.14);box-shadow:inset 3px 0 0 var(--accent)}
+.dr-text{flex:1;line-height:1.3}
+.dr-divider{height:1px;background:var(--hairline);margin:12px 4px}
+.dr-utility .dr-link{min-height:46px;font-size:.95rem}
+body.drawer-open{overflow:hidden}
 @media(min-width:1024px){.main-nav{display:flex}.menu-toggle{display:none}}
 /* ---------- hero ---------- */
 .hero{position:relative;padding:32px 28px 28px;margin-top:8px;border-radius:var(--radius-xl)}
@@ -422,30 +478,36 @@ ul.cards{list-style:none;padding:0;display:grid;grid-template-columns:1fr;gap:10
 #search-results .sr-title{font-weight:700;color:var(--text);text-decoration:none;font-size:.95rem}
 #search-results .sr-title:hover{color:var(--accent)}
 #search-results .sr-meta{font-size:.78rem;color:var(--muted)}
-/* ---------- footer ---------- */
-.site-foot{padding:14px 0 34px;margin-top:12px}
-.foot-shell{border-radius:var(--radius-xl);padding:26px 26px 18px;position:relative}
-.foot-shell::before{content:"";position:absolute;inset:0 0 auto 0;height:44px;pointer-events:none;
- background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,0))}
-.foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 18px;position:relative}
-.foot-brand{font-weight:700;color:var(--accent);margin:0 0 6px;font-size:1rem;letter-spacing:-.01em}
-.foot-desc{color:var(--muted);font-size:.9rem;margin:0 0 10px}
-.foot-label{font-size:.7rem;font-weight:700;letter-spacing:.09em;color:var(--muted);margin:0 0 6px;text-transform:uppercase}
+/* ---------- footer (premium editorial sitemap) ---------- */
+.site-foot{padding:16px 0 40px;margin-top:14px}
+.foot-shell{border-radius:28px;padding:30px 28px 20px;position:relative;background:var(--glass);
+ border:1px solid var(--glass-border);outline:1px solid var(--hairline);
+ box-shadow:0 2px 6px rgba(24,34,48,.05),0 24px 56px -20px rgba(24,34,48,.22),inset 0 1px 0 var(--glass-highlight);
+ -webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur)}
+.foot-shell::before{content:"";position:absolute;inset:0 0 auto 0;height:52px;pointer-events:none;
+ background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,0))}
+.foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 16px;position:relative}
+.foot-brand{font-weight:700;color:var(--accent);margin:0 0 8px;font-size:1.02rem;letter-spacing:-.01em}
+.foot-desc{color:var(--muted);font-size:.88rem;margin:0 0 12px;line-height:1.65}
+.foot-label{font-size:.72rem;font-weight:700;letter-spacing:.09em;color:var(--muted);margin:0 0 8px;text-transform:uppercase}
 .foot-label::before{content:"";display:inline-block;width:12px;height:2px;border-radius:1px;background:var(--accent);opacity:.6;margin-right:6px;vertical-align:middle}
-.foot-links{list-style:none;padding:0;margin:0 0 14px}
+.foot-links{list-style:none;padding:0;margin:0 0 6px}
 .foot-links a{display:inline-flex;align-items:center;color:var(--text);text-decoration:none;font-size:.9rem;padding:5px 0;transition:color var(--transition-fast)}
 .foot-links a::before{content:"";display:inline-block;width:0;height:2px;border-radius:1px;background:var(--accent);margin-right:0;transition:width var(--transition-fast),margin-right var(--transition-fast)}
 .foot-links a:hover{color:var(--accent)}
 .foot-links a:hover::before{width:10px;margin-right:6px}
-.foot-bottom{border-top:1px solid var(--hairline);margin-top:4px;padding-top:12px;color:var(--muted);font-size:.85rem;position:relative}
-.foot-bottom p{margin:0 0 3px}
+.foot-bottom{border-top:1px solid var(--hairline);margin-top:10px;padding-top:14px;color:var(--muted);font-size:.85rem;position:relative}
+.foot-bottom p{margin:0 0 4px}
+.foot-utility{display:flex;flex-wrap:wrap;gap:4px 16px;margin:2px 0 6px}
+.foot-utility a{color:var(--muted);text-decoration:none;font-size:.82rem;padding:3px 0}
+.foot-utility a:hover{color:var(--accent)}
 .fine{font-size:.8rem}
-.to-top{position:absolute;right:20px;bottom:16px;width:40px;height:40px;border-radius:12px;border:1px solid var(--glass-border);
+.to-top{position:absolute;right:22px;bottom:18px;width:44px;height:44px;border-radius:12px;border:1px solid var(--glass-border);
  background:var(--glass-soft);color:var(--accent);font-size:1rem;cursor:pointer;
  transition:background var(--transition-fast),transform var(--transition-fast)}
 .to-top:hover{background:var(--accent-soft);transform:translateY(-1px)}
 .foot-brand-col{grid-column:1/-1}
-@media(min-width:768px){.foot-grid{grid-template-columns:1.3fr 1fr 1fr 1fr}.foot-brand-col{grid-column:auto}}
+@media(min-width:768px){.foot-grid{grid-template-columns:2fr 1fr 1fr 1.2fr}.foot-brand-col{grid-column:auto}}
 /* ---------- progress bar ---------- */
 .progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,rgba(23,142,94,.9),rgba(11,92,59,.9));
  z-index:100;border-radius:0 2px 2px 0;pointer-events:none;transition:width 60ms linear}
@@ -485,6 +547,7 @@ function setDrawer(open){
  if(!drawer)return;
  drawer.hidden=!open;
  if(toggle)toggle.setAttribute('aria-expanded',String(open));
+ document.body.classList[open?'add':'remove']('drawer-open');
  if(open){var c=drawer.querySelector('.drawer-close');if(c)c.focus();}
  else if(toggle)toggle.focus();
 }
@@ -495,24 +558,21 @@ if(toggle&&drawer){
  drawer.addEventListener('click',function(e){if(e.target===drawer)setDrawer(false);});
  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!drawer.hidden)setDrawer(false);});
 }
-// active nav state from current path
+// active nav state from current path (aria-current + accent highlight)
 (function(){
- var path=location.pathname;
- [].forEach.call(document.querySelectorAll('[data-hub]'),function(el){
-  var hub=el.getAttribute('data-hub');
-  var link=el.getAttribute('href');
-  if(!link)return;
-  var seg=link.split('/').filter(Boolean).slice(1).join('/');
-  if(seg&&('/lab/'+seg+'/')===path)el.classList.add('active');
- });
- [].forEach.call(document.querySelectorAll('.dr-link[href],.nav-link[href]'),function(el){
-  if(el.getAttribute('href')==='/lab/'&&path==='/lab/')el.classList.add('active');
+ var path=location.pathname.replace(/index\.html$/,'');
+ [].forEach.call(document.querySelectorAll('a.nav-link,a.dd-link,a.dr-link'),function(el){
+  var href=el.getAttribute('href');
+  if(!href||href.indexOf('/lab/')!==0)return;
+  if(href==='/lab/#q')return;
+  if(href==='/lab/'){if(path==='/lab/'||path==='/lab'){el.classList.add('active');el.setAttribute('aria-current','page');}return;}
+  var seg=href.split('/').filter(Boolean).slice(1).join('/');
+  if(seg&&('/lab/'+seg+'/')===path){el.classList.add('active');el.setAttribute('aria-current','page');}
+  else if(seg&&path.indexOf('/lab/'+seg+'/')===0){el.classList.add('active');}
  });
  // highlight hub dropdown + drawer group containing the active child
  var active=document.querySelector('.dd-link.active');
- if(active){var g=active.closest('.nav-group');if(g){g.querySelector('.nav-drop').classList.add('active');}
-  var dg=document.querySelector('.drawer [data-hub="'+active.getAttribute('data-hub')+'"]');
- }
+ if(active){var g=active.closest('.nav-group');if(g){var b=g.querySelector('.nav-drop');if(b)b.classList.add('active');}}
 })();
 // reading progress bar (article pages)
 (function(){
