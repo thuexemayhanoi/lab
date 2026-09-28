@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /lab/_drafts/
-Sitemap: https://thuexemayhanoi.github.io/lab/sitemap-index.xml
