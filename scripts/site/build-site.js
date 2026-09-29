@@ -449,8 +449,9 @@ const PUB_DIRS=['assets','thue-xe-may','kinh-nghiem','cuu-ho-xe-may','sua-xe-may
  'dieu-khoan-su-dung','dia-phuong'];
 const SRC_GUARD=new Set(['scripts','config','data','tests','docs','.github','reports','_drafts']);
 let promoted=0;
+const manifestPaths=[]; // exact generated public outputs of THIS build (deterministic manifest)
 const promoteFile=rel=>{ fs.mkdirSync(path.dirname(path.join(ROOT,rel)),{recursive:true});
- fs.copyFileSync(path.join(SITE,rel),path.join(ROOT,rel)); promoted++; };
+ fs.copyFileSync(path.join(SITE,rel),path.join(ROOT,rel)); promoted++; manifestPaths.push(rel); };
 const promoteDir=dir=>{ (function walk(rel){ fs.readdirSync(path.join(SITE,rel),{withFileTypes:true}).forEach(e=>{
  const r=rel?rel+'/'+e.name:e.name;
  if(e.isDirectory()){ if(SRC_GUARD.has(e.name)) throw new Error('promotion guard hit source dir: '+r); walk(r); }
@@ -459,6 +460,38 @@ PUB_FILES.forEach(f=>{ if(fs.existsSync(path.join(SITE,f))) promoteFile(f); });
 PUB_DIRS.forEach(d=>{ if(fs.existsSync(path.join(SITE,d))) promoteDir(d); });
 console.log('SITE BUILT. published='+published.length+' shards='+shardFiles.join(','));
 console.log('ROOT PROMOTED: '+promoted+' public files mirrored to repository root (branch Pages: main / (root)).');
+
+// ---------- deterministic prune of stale generated public output ----------
+// data/state/build-manifest.json records EXACTLY the generated public outputs
+// promoted to the root. Every build removes entries from the PREVIOUS manifest
+// that are no longer in the current one, so a de-published (REPAIR/BLOCKED) or
+// rolled-back page VANISHES from the public tree and sitemap/search/hub stay in
+// sync (they are regenerated from the current PUBLISHED set only).
+// Safety: only paths a previous build itself generated are ever removed; a
+// defense-in-depth guard hard-fails on any source/infra path instead of
+// deleting it. scripts/, config/, data/, tests/, docs/, .github/, reports/
+// sources, AGENTS.md etc. can never appear in a manifest — and never get pruned.
+const MANIFEST=path.join(ROOT,'data','state','build-manifest.json');
+let prevFiles=[];
+try{ const m=JSON.parse(fs.readFileSync(MANIFEST,'utf8')); if(Array.isArray(m.files)) prevFiles=m.files; }catch(e){}
+const keepFiles=new Set(manifestPaths);
+const PRUNE_GUARD_DIRS=new Set([...SRC_GUARD,'site','.git']);
+const PRUNE_GUARD_FILES=new Set(['AGENTS.md','package.json','package-lock.json','.gitignore','.gitmodules']);
+let pruned=0;
+for(const rel of prevFiles){
+ if(keepFiles.has(rel)) continue;
+ const seg=String(rel).split('/');
+ if(seg.some(s=>PRUNE_GUARD_DIRS.has(s))||PRUNE_GUARD_FILES.has(seg[seg.length-1])){
+  console.error('BUILD PRUNE GUARD: manifest entry would touch a source/infra path: '+rel+' — refusing and aborting (tampered manifest?).');
+  process.exit(1);
+ }
+ const abs=path.join(ROOT,rel);
+ if(fs.existsSync(abs)){ fs.rmSync(abs); pruned++; }
+ let d=path.dirname(abs);
+ while(path.relative(ROOT,d)!==''){ try{ fs.rmdirSync(d); }catch(e){ break; } d=path.dirname(d); }
+}
+fs.writeFileSync(MANIFEST, JSON.stringify({version:1,files:manifestPaths.slice().sort()},null,1)+'\n');
+console.log('BUILD MANIFEST: '+manifestPaths.length+' promoted public output(s) tracked; '+pruned+' stale generated page(s) pruned.');
 
 // ---------- premium editorial stylesheet (deterministic) ----------
 function CSS(){ /* canonical source: scripts/site/style.css (single shared editorial design system) */

@@ -73,6 +73,17 @@ factory.js reports            # regenerate reports/factory/*.json
   (`data/state/operator-command.json`), recover-first, resume-before-claim,
   QA scopes fast/deep/full (thresholds never change), final-tree verify +
   safe push, single coordinator `lab-factory-production`.
+- Build manifest: `data/state/build-manifest.json` records EXACTLY the
+  generated public outputs promoted to the repo root; every build prunes
+  previous-build entries that are no longer generated (de-published pages
+  vanish; source trees are hard-guarded, never prunable). Deterministic,
+  sorted, committed alongside the tree it describes.
+- `capacity-check.js --staged-tx <TXID>`: staged-aware mode used ONLY inside
+  the atomic publish window — accepts exactly the in-flight STAGED publish
+  transaction holding the publish lock; every other state FAILS as usual.
+- `prep-pilot.js` is a LEGACY BOOTSTRAP-ONLY tool: it REFUSES unless
+  `config.phase === 'PILOT'` AND `checkpoint.published_count === 0`, before
+  touching any file. Production never runs it (`prepare-next` is the path).
 - Throughput ledger: `data/state/throughput-ledger.json` records REAL measured
   events only (prepare/research/qa/publish, appended by the canonical ops).
   `factory.js reports` derives `reports/factory/throughput.json` from it —

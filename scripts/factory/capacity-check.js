@@ -14,6 +14,8 @@
  *  - checkpoint consistent with matrix truth (rows, published count, phase,
  *    active chunk, next claimable, last completed)
  *  - transaction inactive or explicitly recoverable; writer lock not live-stuck
+ *    (staged-aware mode: --staged-tx <TXID> accepts EXACTLY that in-flight
+ *    STAGED publish transaction holding the publish lock — no blanket bypass)
  *  - every PUBLISHED row: public file at root + durable archive in data/published/
  *  - sitemap coverage: every PUBLISHED canonical in exactly one shard; no
  *    non-published matrix URL anywhere in the sitemaps
@@ -85,12 +87,23 @@ const factory=require(path.join(ROOT,'scripts','factory','factory.js'));
 const lastCompleted=factory.lastCompletedId(rows);
 ok('checkpoint last_completed_id = last contiguous completed prefix id', (ck.last_completed_id||null)===lastCompleted, ck.last_completed_id+' vs '+lastCompleted);
 
-// 5) state sanity
+// 5) state sanity — staged-aware contract (atomic publish verification window)
+// Normal production invariant UNCHANGED: transaction must be INACTIVE and the
+// lock not live-stuck. With --staged-tx <TXID> the ONLY alternative accepted
+// state is EXACTLY that in-flight STAGED publish transaction (id + operation +
+// phase + journal) holding the publish writer lock — anything else FAILS hard.
+const argv=process.argv.slice(2);
+const sti=argv.indexOf('--staged-tx');
+const STAGED_TX=sti!==-1?(argv[sti+1]||''):null;
 const tx=JSON.parse(fs.readFileSync(path.join(DATA,'state','transaction.json'),'utf8'));
-ok('transaction not active', tx.active!==true, JSON.stringify(tx));
+let txOk=tx.active!==true;
+if(tx.active===true&&STAGED_TX) txOk=(tx.id===STAGED_TX&&tx.operation==='publish'&&tx.phase==='STAGED'&&!!(tx.journal&&Array.isArray(tx.journal.ids)));
+ok('transaction inactive (or exactly the declared staged publish tx)', txOk, JSON.stringify(tx));
 const lock=JSON.parse(fs.readFileSync(path.join(DATA,'state','writer-lock.json'),'utf8'));
 const lockLive=!!(lock.locked&&lock.expires_at&&new Date(lock.expires_at)>new Date());
-ok('writer lock not live-stuck', !lockLive, lock.holder+' expires '+lock.expires_at);
+let lockOk=!lockLive;
+if(lockLive&&STAGED_TX) lockOk=(lock.holder==='publish'&&tx.active===true&&tx.id===STAGED_TX);
+ok('writer lock not live-stuck (held only by the declared staged publish)', lockOk, lock.holder+' expires '+lock.expires_at);
 
 // 6) published files + archives exist
 const missPub=[], missArch=[];

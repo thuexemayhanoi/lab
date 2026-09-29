@@ -78,7 +78,6 @@ node scripts/factory/factory.js recover
 node scripts/factory/factory.js consistency
 node scripts/factory/factory.js reports
 node scripts/factory/wrap-drafts.js        # wrap _drafts/<ID>.body.html -> <ID>.html
-node scripts/factory/prep-pilot.js         # mark pilot rows PLANNED -> RESEARCH
 node scripts/site/build-site.js           # rebuild site/ from published pages
 node scripts/factory/capacity-check.js     # READ-ONLY capacity + state invariants
 ```
@@ -100,6 +99,13 @@ Whitelist ops: `status, prepare-next, research, qa, publish, recover,
 consistency, reports, verify`. No arbitrary shell; ids must match `A#####`;
 count 1..10; scope `fast` (production default: consistency + tests),
 `deep` (+ capacity-check + editorial-audit) or `full` (+ site build).
+Inside an atomic (STAGED) publish the operator runs the STAGED-AWARE verify
+contract instead — consistency/capacity-check accept EXACTLY the in-flight
+publish transaction (`--staged-tx`), grounding is narrowed to the staged ids,
+and the test suite stays a CI gate on the committed tree (its tx-inactive
+invariant is never weakened). `prep-pilot.js` is a LEGACY bootstrap-only tool
+(PILOT phase + zero published articles, else it REFUSES); production uses
+`prepare-next` only.
 Thresholds NEVER change with scope. Mutating ops refuse while a transaction
 is active or a live writer lock is held (run `recover` first). Single
 coordinator: workflow concurrency group `lab-factory-production`, never

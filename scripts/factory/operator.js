@@ -129,6 +129,25 @@ function verifySteps(scope){
   if (s==='full') steps.push(['node','scripts/site/build-site.js']);
   return steps;
 }
+// Staged-window verification (atomic publish): every step is STAGED-AWARE —
+// consistency and capacity-check accept EXACTLY the in-flight STAGED publish
+// transaction (id/operation/phase/journal/ids) instead of requiring "no
+// transaction active". The production invariants are NOT weakened: every
+// non-staged caller still requires tx inactive + lock free, and a mismatched
+// transaction inside the staged window FAILS. tests/test-suite.js deliberately
+// runs OUTSIDE the staged window (it is a CI gate on the committed tree; its
+// tx-inactive invariant is exactly the post-commit production contract).
+function verifyStepsStaged(scope, txId, ids){
+  const s=['fast','deep','full'].includes(scope)?scope:'full'; // unknown scope -> safest (full)
+  const idList=(Array.isArray(ids)?ids:[]).filter(Boolean);
+  const cons=['node','scripts/factory/factory.js','consistency','--staged-tx',String(txId)];
+  if(idList.length) cons.push('--staged-ids',idList.join(','));
+  const steps=[cons,['node','scripts/factory/factory.js','grounding',...idList]];
+  if(s==='deep'||s==='full') steps.push(['node','scripts/factory/capacity-check.js','--staged-tx',String(txId)],
+                                        ['node','scripts/factory/editorial-audit.js']);
+  if(s==='full') steps.push(['node','scripts/site/build-site.js']);
+  return steps;
+}
 function runVerify(scope){
   const steps=verifySteps(scope);
   const failed=[];
@@ -215,11 +234,16 @@ function opPublish(cmd){
   const staged=factory.publishStage(cmd.ids); // exits non-zero on gate refusal
   let failed=null;
   const step=(name,rc)=>{ if(rc!==0&&!failed) failed=name+' (rc='+rc+')'; };
-  step('build-site', run(['node','scripts/site/build-site.js']));
-  if(!failed) step('editorial-audit', run(['node','scripts/factory/editorial-audit.js','--out','reports/editorial/audit-after.json']));
-  if(!failed) step('reports', run(['node','scripts/factory/factory.js','reports']));
-  if(!failed){
-    for (const st of verifySteps(cmd.scope||'fast')){ const rc=run(st); if(rc!==0){ failed='verify '+st.join(' '); break; } }
+  if(!staged.noop){
+    step('build-site', run(['node','scripts/site/build-site.js']));
+    if(!failed) step('editorial-audit', run(['node','scripts/factory/editorial-audit.js','--out','reports/editorial/audit-after.json']));
+    if(!failed) step('reports', run(['node','scripts/factory/factory.js','reports']));
+    // STAGED-AWARE VERIFY (was the success-path deadlock): the verification
+    // runs against the staged contract — exactly THIS transaction + journal —
+    // never a blanket bypass of the tx/lock invariants.
+    if(!failed){
+      for (const st of verifyStepsStaged(cmd.scope||'fast', staged.tx.id, staged.ids)){ const rc=run(st); if(rc!==0){ failed='verify '+st.join(' '); break; } }
+    }
   }
   if(failed){
     console.error('publish: '+failed+' — NOT committed. Rolling back the staged publish (deterministic restore to pre-publish truth; drafts intact).');
@@ -291,4 +315,4 @@ function main(argv){
 }
 
 if (require.main===module) main(process.argv.slice(2));
-module.exports={validateCommand,loadCommandFile,parseIds,OPS,SCOPES,verifySteps,preflight,CMD_FILE};
+module.exports={validateCommand,loadCommandFile,parseIds,OPS,SCOPES,verifySteps,verifyStepsStaged,preflight,CMD_FILE};

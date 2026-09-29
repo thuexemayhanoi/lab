@@ -237,8 +237,9 @@ function groundingCheck(ids){
   }
   return { ok:!problems.length, problems, checked, detail };
 }
-function grounding(){
-  const g=groundingCheck(null);
+function grounding(args){
+  // explicit ids (staged publish verify) narrow the scope; default = required_ids + PASS rows
+  const g=groundingCheck(args&&args.length?args:null);
   if(!g.ok){ console.error('GROUNDING FAIL\n'+g.problems.join('\n')); process.exitCode=1; return; }
   console.log('GROUNDING PASS: '+g.checked.length+' grounded article(s) checked'+(g.checked.length?' ('+g.checked.join(', ')+')':'')+' — every quantitative claim (VND/%/thời gian) has matching claim_evidence.');
 }
@@ -439,6 +440,13 @@ function publishRollback(reason){
   for(const f of (j.files||[])){
     if(f.archive&&!f.archive_existed&&fs.existsSync(path.join(ROOT,f.archive))) fs.rmSync(path.join(ROOT,f.archive));
     if(f.site&&!f.site_existed&&fs.existsSync(path.join(ROOT,f.site))) fs.rmSync(path.join(ROOT,f.site));
+    // the staged PUBLIC root page must vanish too (journal truth — never rely
+    // on the build manifest alone; the de-publish prune also rebuilds the site)
+    if(f.public&&!f.public_existed&&fs.existsSync(path.join(ROOT,f.public))){
+      fs.rmSync(path.join(ROOT,f.public));
+      let d=path.dirname(path.join(ROOT,f.public));
+      while(path.relative(ROOT,d)!==''){ try{ fs.rmdirSync(d); }catch(e){ break; } d=path.dirname(d); }
+    }
   }
   // 3) restore checkpoint bytes (pre-stage truth, incl. last_batch)
   if(j.checkpoint_before) fs.writeFileSync(path.join(STATE,'checkpoint.json'),j.checkpoint_before);
@@ -547,7 +555,33 @@ function promoteProduction(){
     console.log('PROMOTED PILOT -> PRODUCTION. published='+published.length+', chunk='+cfg.CHUNK+', bootstrap cap no longer binds.');
   } finally { releaseLock(); }
 }
-function consistency(){
+function consistency(args){
+  args=args||[];
+  // ---- staged-aware contract (atomic publish verification window) ----
+  // Normal mode keeps the production invariant untouched. Inside the STAGED
+  // publish window the ONLY accepted active transaction is EXACTLY the
+  // in-flight publish tx (id + operation + phase + journal), and any declared
+  // staged ids must be part of that journal. This is never a blanket bypass:
+  // any other active transaction still fails the check hard.
+  let staged=null;
+  const ti=args.indexOf('--staged-tx');
+  if(ti!==-1){
+    const txId=args[ti+1];
+    const tx=readTx();
+    if(!txId||!tx.active||tx.id!==txId||tx.operation!=='publish'||tx.phase!=='STAGED'||!(tx.journal&&Array.isArray(tx.journal.ids))){
+      console.error('CONSISTENCY FAIL (staged verify)\nno matching active STAGED publish transaction '+txId+' (active='+tx.active+', id='+tx.id+', operation='+(tx.operation||null)+', phase='+(tx.phase||null)+') — staged verification only accepts the exact in-flight transaction.');
+      process.exit(1);
+    }
+    let want=tx.journal.ids.slice();
+    const si=args.indexOf('--staged-ids');
+    if(si!==-1&&args[si+1]) want=args[si+1].split(',').map(s=>s.trim()).filter(Boolean);
+    const foreign=want.filter(id=>!tx.journal.ids.includes(id));
+    if(foreign.length){
+      console.error('CONSISTENCY FAIL (staged verify)\nstaged ids outside transaction '+txId+': '+foreign.join(', '));
+      process.exit(1);
+    }
+    staged={tx,ids:want};
+  }
   const rows=loadMatrix();
   const groundedIds=((cfg.grounding||{}).required_ids)||[];
   const errors=[];
@@ -575,6 +609,21 @@ function consistency(){
       }
     }
   });
+  if(staged){
+    const byId={};rows.forEach(r=>byId[r.article_id]=r);
+    for(const id of staged.ids){
+      const r=byId[id];
+      if(!r||r.status!=='PUBLISHED')errors.push('staged id not PUBLISHED in staged matrix: '+id);
+      if(!fs.existsSync(path.join(ROOT,'_drafts',id+'.html')))errors.push('staged draft missing pre-commit (drafts are removed only by publishCommit): '+id);
+      const ev=qaEvidence(id);
+      if(!ev)errors.push('staged id without QA evidence: '+id);
+      else{
+        if(ev.result!=='PASS'||Number(ev.score||0)<rubric.pass_min)errors.push('staged id QA evidence not PASS >= '+rubric.pass_min+': '+id);
+        const a=path.join(ROOT,'data','published',id+'.html');
+        if(!ev.draft_sha256||!fs.existsSync(a)||sha256Of(a)!==ev.draft_sha256)errors.push('staged archive sha256 != evidence draft_sha256: '+id);
+      }
+    }
+  }
   const draftLeak=[];
   // _drafts/ at the repo root is the canonical WRITER-side draft home: gitignored,
   // never committed, never promoted. A REAL leak is drafts inside the promotable

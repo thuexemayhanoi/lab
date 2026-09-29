@@ -1,9 +1,25 @@
 #!/usr/bin/env node
-/** prep-pilot.js — deterministic pilot prep: mark the 10 pilot rows PLANNED→RESEARCH. */
+/** prep-pilot.js — LEGACY / BOOTSTRAP-ONLY deterministic pilot prep: mark the
+ * 10 pilot rows PLANNED→RESEARCH. Hard guards (audit item: dangerous tool):
+ *  - REFUSES unless config.phase === 'PILOT' (production can NEVER re-run it);
+ *  - REFUSES unless checkpoint published_count === 0 (anything published ⇒
+ *    the bootstrap is over ⇒ refuse);
+ *  - refuses BEFORE touching a single file (matrix/checkpoint untouched).
+ * Normal production flow is `factory.js prepare-next [n]` (lock + transaction
+ * + chunk invariants). This script stays only as the recorded bootstrap path.
+ */
 'use strict';
-const { execSync } = require('child_process');
-execSync('node ' + __dirname + '/factory.js status', { stdio: 'inherit' }); // ensure matrix assembled
 const fs = require('fs');
+const path = require('path');
+const ROOT = path.join(__dirname, '..', '..');
+const refuse = msg => { console.error('REFUSED: prep-pilot ' + msg); process.exit(1); };
+const cfg = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'content-factory.json'), 'utf8'));
+const ck = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'state', 'checkpoint.json'), 'utf8'));
+if (cfg.phase !== 'PILOT')
+  refuse('is a PILOT-phase bootstrap-only legacy tool — config.phase=' + cfg.phase + '. Production state can never be re-prepared; use factory.js prepare-next. No file was touched.');
+if (Number(ck.published_count || 0) > 0)
+  refuse('bootstrap safety — checkpoint published_count=' + ck.published_count + ' > 0 (articles already published; the bootstrap window is over). No file was touched.');
+require('child_process').execSync('node ' + __dirname + '/factory.js status', { stdio: 'inherit' }); // ensure matrix assembled
 const p = 'data/content-matrix.csv';
 const lines = fs.readFileSync(p, 'utf8').split('\n');
 const ids = new Set(process.argv.slice(2).length ? process.argv.slice(2) :

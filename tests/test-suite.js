@@ -1118,9 +1118,13 @@ const tx4 = () => JSON.parse(fs.readFileSync(path.join(SB4, 'data', 'state', 'tr
 const lock4 = () => JSON.parse(fs.readFileSync(path.join(SB4, 'data', 'state', 'writer-lock.json'), 'utf8'));
 const expireLock4 = () => fs.writeFileSync(path.join(SB4, 'data', 'state', 'writer-lock.json'), JSON.stringify({ locked: true, holder: 'publish', acquired_at: new Date().toISOString(), expires_at: new Date(Date.now() - 1000).toISOString() }));
 const clean4 = (ctx) => { assert.strictEqual(tx4().active, false, ctx + ': tx must be inactive'); assert.strictEqual(lock4().locked, false, ctx + ': writer lock must be free'); };
+// build-site restores PUBLISHED pages from the durable archive and REQUIRES the
+// canonical site shell (header.site-head / footer.site-foot) — any draft that
+// will go through a BUILD must carry it.
+const shellHtml4 = id => '<header class="site-head"><nav class="menu"><a href="/lab/">Trang chủ</a></nav></header>\n<main><h1>Bài kiểm thử ' + id + '</h1><p>Nội dung kiểm thử deterministic cho quy trình atomic publish hai pha của bài ' + id + ': ghi nhận stage, verify và commit trong cùng một giao dịch, đảm bảo mọi bước đều được xác minh trước khi công bố.</p></main>\n<footer class="site-foot"><p>Chân trang kiểm thử.</p></footer>';
 
 test('hardening: QA-hash publish gate allows an exact PASS + hash-bound draft', () => {
-  ready4('A00015', '<h1>ok</h1>');
+  ready4('A00015', shellHtml4('A00015'));
   const r = FACT(['publish', 'A00015'], SB4);
   assert.strictEqual(r.status, 0, r.stderr);
   assert.match(r.stdout, /PUBLISHED 1: A00015/);
@@ -1176,7 +1180,7 @@ test('hardening: matrix qa_score below rubric => publish REFUSE (evidence alone 
   clean4('matrix-qa-score');
 });
 test('hardening: grounding gate — ungrounded VND claim => publish REFUSE', () => {
-  ready4('A00021', '<h1>ok</h1><p>Giá xe số khoảng 100.000đ/ngày tại đây.</p>');
+  ready4('A00021', '<header class="site-head"><nav class="menu"><a href="/lab/">Trang chủ</a></nav></header>\n<main><h1>ok</h1><p>Giá xe số khoảng 100.000đ/ngày tại đây.</p></main>\n<footer class="site-foot"><p>Chân trang.</p></footer>');
   const r = FACT(['publish', 'A00021'], SB4);
   assert.notStrictEqual(r.status, 0, 'ungrounded quantitative claim must REFUSE');
   assert.match(r.stderr, /GROUNDING_FAIL/);
@@ -1358,6 +1362,166 @@ test('hardening: workflows wire the grounding gate into CI', () => {
     assert.match(wfText(f), /factory\.js grounding/, f + ' must run the grounding gate');
   }
 });
+// =====================================================================
+// HARDENING SESSION 3 — staged-aware verify (success-path publish must
+// COMMIT, not self-rollback), deterministic public-output prune (build
+// manifest), and prep-pilot bootstrap guards.
+// =====================================================================
+const row4 = id => { const txt = fs.readFileSync(csvPath4, 'utf8'); const h = parseLine4(txt.split('\n')[0]);
+  for (const l of txt.split('\n').slice(1).filter(x => x.trim())) { const c = parseLine4(l); if (c[0] === id) { const o = {}; h.forEach((k, i) => o[k] = c[i] || ''); return o; } } return null; };
+const build4 = () => { const r = spawnSync(process.execPath, [path.join(SB4, 'scripts', 'site', 'build-site.js')], { cwd: SB4, encoding: 'utf8' });
+  assert.strictEqual(r.status, 0, 'SB4 build must succeed: ' + r.stdout + r.stderr); return r; };
+const manifest4 = () => JSON.parse(fs.readFileSync(path.join(SB4, 'data', 'state', 'build-manifest.json'), 'utf8'));
+const sitemapHas4 = canonical => fs.readdirSync(SB4).filter(f => /^sitemap-.*\.xml$/.test(f) && f !== 'sitemap-index.xml')
+  .some(f => fs.readFileSync(path.join(SB4, f), 'utf8').includes(canonical));
+const pageRel4 = r => r.output_path.replace(/^\/+/, '').replace(/\/+$/, '') + '/index.html';
+
+test('harden3: END-TO-END operator publish SUCCEEDS (staged verify no longer self-deadlocks)', () => {
+  ready4('A00028', shellHtml4('A00028'));
+  build4(); // promote pages for rows published by earlier bare-publish tests (A00015/A00021)
+  const before = JSON.parse(fs.readFileSync(path.join(SB4, 'data', 'state', 'throughput-ledger.json'), 'utf8'));
+  const pubBefore = before.events.filter(e => e.op === 'publish').length;
+  const r = OP(['publish', '--ids', 'A00028', '--scope', 'deep'], SB4);
+  assert.strictEqual(r.status, 0, 'operator publish success path must COMMIT, not self-rollback:\nSTDOUT ' + r.stdout + '\nSTDERR ' + r.stderr);
+  assert.match(r.stdout, /PUBLISHED \(atomic, build\+verify PASS\) 1: A00028/);
+  // engine state: tx inactive, lock free, draft removed, matrix PUBLISHED
+  clean4('e2e-success');
+  assert.strictEqual(status4('A00028').status, 'PUBLISHED');
+  assert.ok(!fs.existsSync(path.join(SB4, '_drafts', 'A00028.html')), 'draft removed at commit');
+  assert.ok(fs.existsSync(path.join(SB4, 'data', 'published', 'A00028.html')), 'durable archive written');
+  // public surface: root page + manifest + sitemap + hub + search + knowledge index
+  const row = row4('A00028');
+  const rel = pageRel4(row);
+  assert.ok(fs.existsSync(path.join(SB4, rel)), 'published public page exists at the repository root');
+  assert.ok(manifest4().files.includes(rel), 'build manifest tracks the published page');
+  assert.ok(sitemapHas4(row.canonical), 'published canonical present in a sitemap shard');
+  const hubSlug = rel.split('/')[0];
+  assert.ok(fs.readFileSync(path.join(SB4, hubSlug, 'index.html'), 'utf8').includes(row.output_path), 'article listed on its hub page');
+  const search = JSON.parse(fs.readFileSync(path.join(SB4, 'assets', 'search-index.json'), 'utf8'));
+  assert.ok(search.some(e => e.u === row.output_path), 'search index covers the published article');
+  const kidx = JSON.parse(fs.readFileSync(path.join(SB4, 'assets', 'knowledge-index.json'), 'utf8'));
+  assert.ok((kidx.records || []).some(e => e.u === row.output_path), 'knowledge index covers the published article');
+  // checkpoint truth + ledger: exactly ONE real publish event
+  const ck = JSON.parse(fs.readFileSync(path.join(SB4, 'data', 'state', 'checkpoint.json'), 'utf8'));
+  assert.deepStrictEqual(ck.last_batch, ['A00028']);
+  const pubCount = fs.readFileSync(csvPath4, 'utf8').split('\n').slice(1).filter(x => x.trim())
+    .map(l => parseLine4(l)).filter(c => c[24] === 'PUBLISHED').length;
+  assert.strictEqual(Number(ck.published_count), pubCount, 'checkpoint published_count = matrix truth');
+  const ledger = JSON.parse(fs.readFileSync(path.join(SB4, 'data', 'state', 'throughput-ledger.json'), 'utf8'));
+  const events28 = ledger.events.filter(e => e.op === 'publish' && JSON.stringify(e.ids) === JSON.stringify(['A00028']));
+  assert.strictEqual(events28.length, 1, 'exactly one real publish event for A00028');
+  assert.strictEqual(ledger.events.filter(e => e.op === 'publish').length, pubBefore + 1, 'ledger gained exactly one publish event');
+});
+
+test('harden3: de-published page VANISHES from the public tree after REPAIR + rebuild', () => {
+  const row = row4('A00028');
+  const rel = pageRel4(row);
+  assert.ok(fs.existsSync(path.join(SB4, rel)), 'precondition: A00028 public page exists');
+  setRow4('A00028', { status: 'REPAIR', qa_score: 80 }); // de-publish (repair path)
+  build4();
+  assert.ok(!fs.existsSync(path.join(SB4, rel)), 'old public URL must vanish once the row is de-published');
+  assert.ok(!manifest4().files.includes(rel), 'manifest no longer lists the de-published page');
+  assert.ok(!sitemapHas4(row.canonical), 'de-published canonical must leave the sitemaps');
+  // all legitimate published URLs remain after the prune
+  const rel5 = pageRel4(row4('A00005'));
+  assert.ok(fs.existsSync(path.join(SB4, rel5)), 'legitimate published page still present after prune');
+  assert.ok(manifest4().files.includes(rel5), 'legitimate published page still in the manifest');
+  // restore sandbox truth and re-sync derived pointers
+  setRow4('A00028', { status: 'PUBLISHED', qa_score: 100 });
+  build4();
+  assert.ok(fs.existsSync(path.join(SB4, rel)), 're-published page restored by rebuild');
+  assert.strictEqual(FACT(['recover'], SB4).status, 0, 'checkpoint re-synced from matrix truth');
+});
+
+test('harden3: staged public URL is pruned from the root after publish rollback', () => {
+  ready4('A00029', shellHtml4('A00029'));
+  const rel = pageRel4(row4('A00029'));
+  const rootPage = path.join(SB4, rel);
+  fact4.publishStage(['A00029']); // staged: lock + STAGED tx held in-process
+  build4(); // the staged build promotes the staged URL to the public root
+  assert.ok(fs.existsSync(rootPage), 'staged build promoted the staged URL to the root');
+  assert.ok(manifest4().files.includes(rel), 'manifest tracks the staged URL');
+  fact4.publishRollback('test: forced failure after the staged build');
+  assert.ok(!fs.existsSync(rootPage), 'staged public URL must VANISH from the root after rollback');
+  assert.ok(!manifest4().files.includes(rel), 'manifest no longer lists the rolled-back URL');
+  assert.ok(fs.existsSync(path.join(SB4, '_drafts', 'A00029.html')), 'draft intact after rollback');
+  assert.ok(!fs.existsSync(path.join(SB4, 'data', 'published', 'A00029.html')), 'staged archive removed by rollback');
+  assert.strictEqual(status4('A00029').status, 'PASS', 'matrix restored to pre-stage truth');
+  clean4('prune-after-rollback');
+});
+
+test('harden3: staged verify contract accepts ONLY the exact in-flight transaction', () => {
+  ready4('A00030', shellHtml4('A00030'));
+  const staged = fact4.publishStage(['A00030']);
+  const txId = staged.tx.id;
+  build4(); // the real operator flow builds the staged state BEFORE verifying it
+  // wrong tx id => refuse (never a blanket bypass of the tx invariant)
+  let r = FACT(['consistency', '--staged-tx', 'TX-NOT-MINE'], SB4);
+  assert.notStrictEqual(r.status, 0, 'consistency must refuse a foreign tx id');
+  assert.match(r.stderr, /no matching active STAGED publish transaction/);
+  // staged id outside the journal => refuse
+  r = FACT(['consistency', '--staged-tx', txId, '--staged-ids', 'A00099'], SB4);
+  assert.notStrictEqual(r.status, 0, 'consistency must refuse ids outside the journal');
+  assert.match(r.stderr, /staged ids outside transaction/);
+  // the exact in-flight tx + its journal ids => PASS (this un-deadlocks the
+  // operator success path WITHOUT weakening the production invariant)
+  r = FACT(['consistency', '--staged-tx', txId, '--staged-ids', 'A00030'], SB4);
+  assert.strictEqual(r.status, 0, 'staged consistency must PASS for the exact in-flight tx:\n' + r.stdout + r.stderr);
+  assert.match(r.stdout, /CONSISTENCY PASS/);
+  // capacity-check: foreign tx => FAIL; exact tx => PASS (publish lock accepted)
+  r = spawnSync(process.execPath, [path.join(SB4, 'scripts', 'factory', 'capacity-check.js'), '--staged-tx', 'TX-NOT-MINE'], { cwd: SB4, encoding: 'utf8' });
+  assert.notStrictEqual(r.status, 0, 'capacity-check must FAIL for a foreign staged tx');
+  r = spawnSync(process.execPath, [path.join(SB4, 'scripts', 'factory', 'capacity-check.js'), '--staged-tx', txId], { cwd: SB4, encoding: 'utf8' });
+  assert.strictEqual(r.status, 0, 'staged capacity-check must PASS for the exact in-flight tx:\n' + r.stdout + r.stderr);
+  // grounding narrowed to the staged id
+  r = FACT(['grounding', 'A00030'], SB4);
+  assert.strictEqual(r.status, 0, 'grounding of the staged id must PASS');
+  fact4.publishRollback('staged-contract test done');
+  clean4('staged-contract');
+});
+
+test('harden3: prep-pilot REFUSES outside the PILOT bootstrap (no state touched)', () => {
+  const ckB = fs.readFileSync(path.join(SB4, 'data', 'state', 'checkpoint.json'), 'utf8');
+  const csvB = fs.readFileSync(csvPath4, 'utf8');
+  const r = spawnSync(process.execPath, [path.join(SB4, 'scripts', 'factory', 'prep-pilot.js')], { cwd: SB4, encoding: 'utf8' });
+  assert.notStrictEqual(r.status, 0, 'prep-pilot must refuse in PRODUCTION phase');
+  assert.match(r.stderr, /REFUSED.*PILOT-phase bootstrap-only/);
+  assert.strictEqual(ckB, fs.readFileSync(path.join(SB4, 'data', 'state', 'checkpoint.json'), 'utf8'), 'checkpoint byte-identical after refusal');
+  assert.strictEqual(csvB, fs.readFileSync(csvPath4, 'utf8'), 'matrix byte-identical after refusal');
+});
+
+test('harden3: prep-pilot bootstrap path works ONLY inside a PILOT-phase, zero-published sandbox', () => {
+  const SB7 = path.join(os.tmpdir(), 'lab-preppilot-sandbox-' + process.pid);
+  fs.rmSync(SB7, { recursive: true, force: true });
+  fs.cpSync(ROOT, SB7, { recursive: true, filter: (s) => {
+    const rel = path.relative(ROOT, s);
+    return rel !== '_drafts' && !rel.startsWith('_drafts' + path.sep)
+      && !path.basename(s).startsWith('content-matrix.csv.part');
+  } });
+  try {
+    const cfg7 = path.join(SB7, 'config', 'content-factory.json');
+    const c7 = JSON.parse(fs.readFileSync(cfg7, 'utf8'));
+    c7.phase = 'PILOT';
+    fs.writeFileSync(cfg7, JSON.stringify(c7, null, 2));
+    const ck7 = path.join(SB7, 'data', 'state', 'checkpoint.json');
+    const k7 = JSON.parse(fs.readFileSync(ck7, 'utf8'));
+    k7.published_count = 0; // bootstrap window: nothing published yet
+    fs.writeFileSync(ck7, JSON.stringify(k7, null, 2));
+    let r = spawnSync(process.execPath, [path.join(SB7, 'scripts', 'factory', 'prep-pilot.js')], { cwd: SB7, encoding: 'utf8' });
+    assert.strictEqual(r.status, 0, 'PILOT bootstrap window must still run the legacy prep:\n' + r.stdout + r.stderr);
+    assert.match(r.stdout, /PREPARED/);
+    // once ANYTHING is published the bootstrap window is over => refuse
+    const k8 = JSON.parse(fs.readFileSync(ck7, 'utf8'));
+    k8.published_count = 1;
+    fs.writeFileSync(ck7, JSON.stringify(k8, null, 2));
+    const csvB = fs.readFileSync(path.join(SB7, 'data', 'content-matrix.csv'), 'utf8');
+    r = spawnSync(process.execPath, [path.join(SB7, 'scripts', 'factory', 'prep-pilot.js')], { cwd: SB7, encoding: 'utf8' });
+    assert.notStrictEqual(r.status, 0, 'published_count>0 must refuse');
+    assert.match(r.stderr, /REFUSED.*bootstrap safety/);
+    assert.strictEqual(csvB, fs.readFileSync(path.join(SB7, 'data', 'content-matrix.csv'), 'utf8'), 'matrix untouched by the refusal');
+  } finally { fs.rmSync(SB7, { recursive: true, force: true }); }
+});
+
 test('cleanup: remove hardening sandbox', () => { fs.rmSync(SB4, { recursive: true, force: true }); });
 
 test('cleanup: remove operator sandbox', () => { fs.rmSync(SB, { recursive: true, force: true }); });

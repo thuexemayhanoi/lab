@@ -1,6 +1,6 @@
 # PROC — RESEARCH
 
-1. Pick rows: `factory.js prepare-next [n]` (or pilot rows via `prep-pilot.js`).
+1. Pick rows: `factory.js prepare-next [n]` (pilot rows were claimed once via the legacy bootstrap-only `prep-pilot.js`, which now REFUSES outside PILOT phase with zero published articles).
    Rows move PLANNED → RESEARCH.
 2. For each row, search the primary keyword (web search). Capture:
    - page types ranking, local vs informational intent

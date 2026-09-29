@@ -30,18 +30,36 @@ production path is the operator, which commits ONLY after build + verify PASS.
    `site/<output_path>index.html`, flip matrix rows to PUBLISHED, and write the
    checkpoint. Drafts stay INTACT; the ledger is untouched.
 2. (operator) `build-site.js` → `editorial-audit --out` → `reports` →
-   `verifySteps(scope)` — all while the transaction is STAGED.
+   `verifyStepsStaged(scope, tx, ids)` — all while the transaction is STAGED.
+   The staged verify is a STAGED-AWARE contract: `factory.js consistency
+   --staged-tx <TXID> [--staged-ids ...]` and `capacity-check.js --staged-tx
+   <TXID>` accept EXACTLY the in-flight publish transaction (id + operation
+   `publish` + phase `STAGED` + journal ⊇ staged ids) and nothing else;
+   `grounding` is narrowed to the staged ids. Every non-staged caller still
+   requires transaction inactive + lock free — the production invariant is
+   never weakened, and a mismatched transaction inside the window FAILS hard.
+   `tests/test-suite.js` runs OUTSIDE the staged window: it is the CI gate on
+   the committed tree (post-commit), because its "tx inactive" invariant IS the
+   post-commit contract. The staged window never runs the suite against itself.
 3. `publishCommit` — only on full PASS: remove the drafts, append the REAL
    ledger event, add the ids to `grounding.required_ids` (audited forever),
    clear the transaction, release the lock.
 4. `publishRollback(reason)` — on ANY failure: restore matrix rows and the
-   checkpoint bytes from the journal, remove the files the stage created,
+   checkpoint bytes from the journal, remove the files the stage created
+   (durable archive, staged `site/` copy AND the promoted public root page),
    rebuild the site (deterministic self-heal), clear the transaction, release
    the lock. Never reports success after a rollback.
 
 ## PUBLISHED means (all must hold — consistency checks enforce)
 
 - public file exists at the repository root `<output_path>index.html` (promoted from `site/` by `scripts/site/build-site.js`)
+- a DE-PUBLISHED row (PUBLISHED → REPAIR/BLOCKED) must VANISH from the public
+  root: `build-site.js` writes a deterministic manifest of exactly the
+  generated public outputs (`data/state/build-manifest.json`) and prunes every
+  previous-build entry no longer in the current build (only generated pages —
+  scripts/, config/, data/, tests/, docs/, .github/, reports/ sources and
+  AGENTS.md are never touchable by the prune, hard guard). Sitemap, search,
+  hub and knowledge index regenerate from the current PUBLISHED set only.
 - canonical correct
 - matrix row status PUBLISHED
 - URL present in the correct sitemap shard
