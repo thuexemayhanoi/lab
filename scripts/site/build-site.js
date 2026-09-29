@@ -15,6 +15,11 @@ const facts = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'business-fac
 // editorial deep-content (canonical copy source for homepage / about / hub intros)
 const EDIT=JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'editorial.json'), 'utf8'));
 const EDIT_HUBS=JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'editorial-hubs.json'), 'utf8')).hubs;
+// sub-hub IA (parent hub -> sub hub -> article), prepared for 10k-article scale:
+// taxonomy + thresholds in config/subhubs.json, stable per-article mapping in
+// config/hub-map.json (overrides rules). Article URLs never change.
+const SUBHUB_CFG=JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'subhubs.json'), 'utf8'));
+const HUB_MAP=JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'hub-map.json'), 'utf8')).map;
 const secBlock=sec=>`<h2>${esc(sec.h)}</h2>\n${(sec.ps||[]).map(p=>`<p>${p}</p>`).join('\n')}`;
 const faqBlock=list=>`<h2>Câu hỏi thường gặp</h2>\n${(list||[]).map(f=>`<details class="faq glass"><summary>${esc(f.q)}</summary><p>${f.a}</p></details>`).join('\n')}`;
 const editorialBlock=o=>[(o.sections||[]).map(secBlock).join('\n'),o.faq?faqBlock(o.faq):''].filter(Boolean).join('\n');
@@ -26,8 +31,10 @@ function parseLine(line){const out=[];let cur='',q=false;for(let i=0;i<line.leng
  else{if(c==='"')q=true;else if(c===','){out.push(cur);cur='';}else cur+=c;}} 
  out.push(cur);return out;}
 const parts=fs.readdirSync(path.join(ROOT,'data')).filter(f=>/^content-matrix\.csv\.part/.test(f)).sort();
-let csvText=fs.readFileSync(path.join(ROOT,'data','content-matrix.csv'),'utf8');
-if(parts.length)csvText=parts.map(p=>fs.readFileSync(path.join(ROOT,'data',p),'utf8')).join('');
+// canonical committed form = shards; the assembled data/content-matrix.csv is a
+// local artifact (gitignored) — only read it when no shards are present.
+let csvText=parts.length?parts.map(p=>fs.readFileSync(path.join(ROOT,'data',p),'utf8')).join('')
+ :fs.readFileSync(path.join(ROOT,'data','content-matrix.csv'),'utf8');
 const rows=parseCSV(csvText);
 const published=rows.filter(r=>r.status==='PUBLISHED')
  .sort((a,b)=>(b.published_date||'').localeCompare(a.published_date||'')||b.article_id.localeCompare(a.article_id)); // newest first
@@ -43,9 +50,53 @@ const HUBS=GROUPS.flatMap(g=>g.children.map(c=>({
  fullTitle:c.fullTitle||c.nav})));
 const CLUSTER_SLUGS=['thue-xe-may','cuu-ho-xe-may','sua-xe-may','bang-lai-xe-may','dang-ky-xe-may','xe-may-dien','phu-tung'];
 const HUB_TITLE={'thue-xe-may':'Thuê xe máy','cuu-ho-xe-may':'Cứu hộ xe máy','sua-xe-may':'Sửa chữa & bảo dưỡng xe máy','bang-lai-xe-may':'Bằng lái xe máy','dang-ky-xe-may':'Đăng ký xe máy','xe-may-dien':'Xe máy điện','phu-tung':'Phụ tùng xe máy','kinh-nghiem':'Kinh nghiệm xe máy'};
-const HUB_DESC={'thue-xe-may':'Kinh nghiệm, giá và hướng dẫn thuê xe máy tại các tỉnh thành Việt Nam.','cuu-ho-xe-may':'Cách tìm và chọn cứu hộ xe máy nhanh, an toàn khi gặp sự cố trên đường.','sua-xe-may':'Hướng dẫn sửa chữa, bảo dưỡng xe máy các dòng phổ thông và xe điện.','bang-lai-xe-may':'Hồ sơ, lệ phí, quy trình thi bằng lái xe máy A1 và thủ tục đổi/cấp lại.','dang-ky-xe-may':'Thủ tục đăng ký, sang tên, lệ phí trước bạ và biển số xe máy theo quy định hiện hành.','xe-may-dien':'Xe máy điện Việt Nam: giá, pin, trạm sạc, chi phí và so sánh với xe xăng.','phu-tung':'Cách chọn lốp, ắc quy, bugi, nhông xích, dầu máy và phụ tùng xe điện.','kinh-nghiem':'Kinh nghiệm sử dụng, lái xe an toàn và vận hành xe máy dài hạn.'};
+// Hub meta descriptions synced from the live-site copy edit (commit deeba09) —
+// meta/og/JSON-LD all consume these values so the three stay identical.
+const HUB_DESC={'thue-xe-may':'Tổng hợp hướng dẫn thuê xe máy thực tế: chuẩn bị giấy tờ, chọn dòng xe, kiểm tra xe trước khi nhận và xử lý các tình huống phát sinh khi thuê xe.','kinh-nghiem':'Tổng hợp kinh nghiệm đi xe hai bánh: kỹ năng lái an toàn, vận hành xe máy dài hạn và cách chuẩn bị cho các chuyến đi xa tại Việt Nam.','cuu-ho-xe-may':'Hướng dẫn xử lý khi xe máy hỏng giữa đường: nhận biết hỏng hóc tự xử được, cách gọi và mô tả tình huống với cứu hộ, và cách tránh những bẫy phí phát sinh.','sua-xe-may':'Hướng dẫn sửa chữa và bảo dưỡng xe máy: lịch bảo dưỡng theo mốc thời gian và cây số, nhận biết phụ tùng tới hạn và cách làm việc hiệu quả với thợ sửa xe.','bang-lai-xe-may':'Hướng dẫn trọn vòng đời bằng lái xe máy A1: hồ sơ thi, ôn tập, lệ phí và quy trình thi, cùng thủ tục đổi bằng, cấp lại khi mất và quy định xử phạt hiện hành.','dang-ky-xe-may':'Thủ tục đăng ký xe máy theo quy định hiện hành: đăng ký xe mới, sang tên khi mua bán, cấp đổi biển số, nộp lệ phí trước bạ và xu hướng số hóa thủ tục.','xe-may-dien':'Phân tích xe máy điện Việt Nam theo góc nhìn chi phí: giá mua, chi phí sạc, độ bền pin, trạm sạc và điều cân nhắc trước khi chuyển từ xe xăng sang xe điện.','phu-tung':'Cách chọn và thay phụ tùng xe máy đúng lúc: lốp, ắc quy, bugi, nhông xích, dầu máy — dấu hiệu tới hạn và lựa chọn giữa hàng chính hãng và hàng thay thế.'};
 // articles belonging to a child hub (kinh-nghiem = catch-all for non-cluster slugs)
 const hubArts=slug=>published.filter(r=>r.output_path.startsWith(slug+'/')||(slug==='kinh-nghiem'&&!CLUSTER_SLUGS.some(x=>r.output_path.startsWith(x+'/'))));
+// ---------- sub-hub engine: parent hub -> sub hub -> article ----------
+// Deterministic classification: config/hub-map.json (stable article IDs) takes
+// precedence over the rule lists in config/subhubs.json. A sub-hub page is only
+// generated once it holds >= min_articles PUBLISHED articles; thinner groups keep
+// their articles listed on the parent hub (no empty or thin hubs, no URL moves).
+const SUB_MIN=SUBHUB_CFG.min_articles||3;
+const PAGE_SIZE=SUBHUB_CFG.page_size||20;
+const SUB_OF_PARENT={};Object.entries(SUBHUB_CFG.subhubs||{}).forEach(([parent,defs])=>{SUB_OF_PARENT[parent]=defs.map(d=>({...d,fullSlug:parent+'/'+d.slug}));});
+const SUB_BY_FULL={};Object.values(SUB_OF_PARENT).flat().forEach(d=>{SUB_BY_FULL[d.fullSlug]=d;});
+Object.entries(HUB_MAP).forEach(([id,target])=>{if(!SUB_BY_FULL[target])throw new Error('hub-map entry points to an undefined sub-hub: '+id+' -> '+target);});
+const kwHit=(r,kws)=>{const hay=((r.primary_keyword||'')+' '+(r.secondary_keywords||'')+' '+(r.parent_topic||'')).toLowerCase();return kws.some(k=>hay.includes(k.toLowerCase()));};
+const ruleMatch=(r,m)=>{if(!m)return false;
+ if(m.nonempty&&!m.nonempty.some(f=>(r[f]||'').trim()))return false;
+ if(m.empty&&!m.empty.every(f=>!(r[f]||'').trim()))return false;
+ if(m.part_in){const p=(r.part||'').toLowerCase();if(!m.part_in.some(x=>p.includes(x.toLowerCase())))return false;}
+ if(m.kw&&!kwHit(r,m.kw))return false;
+ return true;};
+const classifySub=r=>{const mapped=HUB_MAP[r.article_id];
+ if(mapped!==undefined)return SUB_BY_FULL[mapped];
+ const parent=r.output_path.split('/')[0];
+ return (SUB_OF_PARENT[parent]||[]).find(d=>ruleMatch(r,d.match))||null;};
+// URL guard: a sub-hub page must never collide with any article URL (planned or
+// published) — both live under /lab/<parent>/<slug>/.
+const allPaths=new Set(rows.map(r=>r.output_path));
+Object.values(SUB_OF_PARENT).flat().forEach(d=>{if(allPaths.has(d.fullSlug+'/'))throw new Error('sub-hub URL collides with a matrix article URL: '+d.fullSlug);});
+const SUB_ASSIGN={};published.forEach(r=>{SUB_ASSIGN[r.article_id]=classifySub(r);});
+const SUB_COUNT={};published.forEach(r=>{const d=SUB_ASSIGN[r.article_id];if(d)(SUB_COUNT[d.fullSlug]=SUB_COUNT[d.fullSlug]||[]).push(r);});
+const SUB_ACTIVE=new Set(Object.entries(SUB_COUNT).filter(([,a])=>a.length>=SUB_MIN).map(([f])=>f));
+const activeSubOf=r=>{const d=SUB_ASSIGN[r.article_id];return d&&SUB_ACTIVE.has(d.fullSlug)?d:null;};
+// ---------- pagination for long hub / sub-hub lists ----------
+// Page 1 keeps the canonical list URL; deeper pages get their own /p/<n>/ URL,
+// canonicalize to THEMSELVES and link sequentially (crawlable <a> links only).
+const pagesOf=arts=>{const n=Math.max(1,Math.ceil(arts.length/PAGE_SIZE));return Array.from({length:n},(_,i)=>({page:i+1,items:arts.slice(i*PAGE_SIZE,(i+1)*PAGE_SIZE)}));};
+const pageUrl=(base,p)=>p===1?base:base+'p/'+p+'/';
+const pagerNav=(base,total,cur)=>{if(total<=1)return'';
+ const prev=cur>1?`<a class="pg pg-prev" rel="prev" href="/lab/${pageUrl(base,cur-1)}">‹ Trước</a>`:'<span class="pg pg-off" aria-hidden="true">‹ Trước</span>';
+ const next=cur<total?`<a class="pg pg-next" rel="next" href="/lab/${pageUrl(base,cur+1)}">Tiếp ›</a>`:'<span class="pg pg-off" aria-hidden="true">Tiếp ›</span>';
+ const nums=Array.from({length:total},(_,i)=>i+1).map(p=>p===cur?`<span class="pg cur" aria-current="page">${p}</span>`:`<a class="pg" href="/lab/${pageUrl(base,p)}">${p}</a>`).join('');
+ return `<nav class="pager" aria-label="Phân trang">${prev}${nums}${next}</nav>`;};
+// BreadcrumbList JSON-LD built from the SAME items the visible breadcrumb shows.
+const ORIGIN=cfg.base_url.replace(/\/$/,'').replace(/\/lab$/,''); // scheme + host (root-absolute hrefs join here)
+const bcJsonLd=items=>`<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:items.map((b,i)=>({"@type":"ListItem",position:i+1,name:b.label,item:b.href?ORIGIN+b.href:undefined}))})}</script>`;
 const layout=(title,content,canonical,extra,desc)=>{
  return `<!DOCTYPE html>
 <html lang="vi">
@@ -63,6 +114,10 @@ const layout=(title,content,canonical,extra,desc)=>{
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Bản Đồ Xe 2 Bánh — cẩm nang xe máy Việt Nam">
+<meta property="og:site_name" content="Bản Đồ Xe 2 Bánh Việt Nam">
+<meta property="og:locale" content="vi_VN">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/lab/assets/favicon.svg">
 <meta name="google-site-verification" content="OIuEOzJFgjt8nxN2rgZaFNIW2n3fEMrC8iSrZdFHGDI" />
 ${extra||''}
 <link rel="stylesheet" href="/lab/assets/style.css">
@@ -81,14 +136,19 @@ fs.mkdirSync(path.join(SITE,'assets'),{recursive:true});
 fs.writeFileSync(path.join(SITE,'assets','style.css'),CSS());
 // Open Graph image asset (canonical source: scripts/site/og-image.svg)
 fs.copyFileSync(path.join(__dirname,'og-image.svg'),path.join(SITE,'assets','og-image.svg'));
+fs.copyFileSync(path.join(__dirname,'favicon.svg'),path.join(SITE,'assets','favicon.svg'));
 // inject the canonical shell into archived article pages (body/schema/canonical untouched)
 const SHELL_RE={head:/<header class="site-head">[\s\S]*?<\/header>/,foot:/<footer class="site-foot">[\s\S]*?<\/footer>/};
 // OG metadata derived from the archive's own canonical head (title/description/canonical).
+// OG metadata derived from the archive's own canonical head (title/description/canonical).
+// The site-name/locale/twitter/favicon head lines mirror the shared layout() head
+// (synced from the direct live-site edits so rebuilds keep them).
+const HEAD_TAIL=`<meta property="og:site_name" content="Bản Đồ Xe 2 Bánh Việt Nam">\n<meta property="og:locale" content="vi_VN">\n<meta name="twitter:card" content="summary_large_image">\n<link rel="icon" type="image/svg+xml" href="/lab/assets/favicon.svg">\n`;
 const ogFor=html=>{
  const t=(html.match(/<title>([\s\S]*?)<\/title>/)||[])[1]||'';
  const d=(html.match(/<meta name="description" content="([^"]*)"/)||[])[1]||t;
  const u=(html.match(/<link rel="canonical" href="([^"]*)"/)||[])[1]||'';
- return `<meta property="og:title" content="${esc(t)}">\n<meta property="og:description" content="${esc(d)}">\n<meta property="og:url" content="${u}">\n<meta property="og:type" content="article">\n<meta property="og:image" content="${cfg.base_url}assets/og-image.svg">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:alt" content="Bản Đồ Xe 2 Bánh — cẩm nang xe máy Việt Nam">\n`;
+ return `<meta property="og:title" content="${esc(t)}">\n<meta property="og:description" content="${esc(d)}">\n<meta property="og:url" content="${u}">\n<meta property="og:type" content="article">\n<meta property="og:image" content="${cfg.base_url}assets/og-image.svg">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:alt" content="Bản Đồ Xe 2 Bánh — cẩm nang xe máy Việt Nam">\n${HEAD_TAIL}`;
 };
 const withShell=html=>html
  .replace(SHELL_RE.head,headerHtml().replace(/\n\s+/g,'\n  '))
@@ -133,23 +193,61 @@ ${editorialBlock(EDIT.home)}
 `<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"WebSite",name:BRAND_FULL,url:cfg.base_url,inLanguage:'vi'})}</script>`,
 'Hướng dẫn, kinh nghiệm và thông tin thực tế về thuê xe máy, cứu hộ, sửa chữa, bằng lái, đăng ký xe, xe máy điện và phụ tùng tại Việt Nam.');
 fs.writeFileSync(path.join(SITE,'index.html'),home);
-// Topic hubs (child hubs — URLs unchanged) with sibling + home links
+// Topic hubs (parent hubs — URLs unchanged) with sibling + home links, active
+// sub-hub chips and paginated article lists. Articles inside an ACTIVE sub-hub are
+// listed on that sub-hub page, not repeated here (no duplication at scale).
 HUBS.forEach(h=>{
- const arts=hubArts(h.slug);
- const cards=arts.map(r=>artCard(r,CLUSTER_VI[r.cluster]+(r.province?' · '+r.province:''))).join('\n')||'<li class="card">Chủ đề này sẽ sớm có bài viết mới.</li>';
+ const arts=hubArts(h.slug).filter(r=>!activeSubOf(r));
  const group=GROUPS.find(g=>g.id===h.group);
  const sibs=group.children.filter(c=>c.slug!==h.slug);
  const title=HUB_TITLE[h.slug]||h.title;
  const desc=HUB_DESC[h.slug]||h.desc;
  const ed=EDIT_HUBS[h.slug]||{};
- const html=layout(title+' — Bản Đồ Xe 2 Bánh Việt Nam',`<nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › ${esc(title)}</nav>
+ const base=h.slug+'/';
+ const actSubs=(SUB_OF_PARENT[h.slug]||[]).filter(d=>SUB_ACTIVE.has(d.fullSlug));
+ const subChips=actSubs.length?`\n<div class="child-chips sub-chips" aria-label="Chuyên đề trong mục này">${actSubs.map(d=>`<a class="child-chip glass" href="/lab/${d.fullSlug}/"><span class="chip-title">${esc(d.title)}</span><span class="chip-count">${(SUB_COUNT[d.fullSlug]||[]).length} bài viết</span></a>`).join('')}</div>`:'';
+ const pages=pagesOf(arts);
+ pages.forEach(({page,items})=>{
+  const pgSfx=page>1?` — Trang ${page}`:'';
+  const bcHtml=page===1?`<nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › ${esc(title)}</nav>`
+   :`<nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › <a href="/lab/${base}">${esc(title)}</a> › Trang ${page}</nav>`;
+  const cards=items.map(r=>artCard(r,CLUSTER_VI[r.cluster]+(r.province?' · '+r.province:''))).join('\n')||(page===1?'<li class="card">Chủ đề này sẽ sớm có bài viết mới.</li>':'');
+  const html=layout(title+pgSfx+' — Bản Đồ Xe 2 Bánh Việt Nam',`${bcHtml}
 <h1>${esc(title)}</h1><p>${esc(ed.lead||desc)}</p>
-<p class="siblings">Cùng nhóm <strong>${esc(group.label)}</strong>: ${sibs.map(s=>`<a class="sib-link" href="/lab/${s.slug}/">${esc(s.nav)}</a>`).join('')}</p>
-<h2>Bài viết</h2><ul class="cards">${cards}</ul>
-<section class="editorial" aria-label="Hướng dẫn chủ đề">${editorialBlock(ed)}</section>`,cfg.base_url+h.slug+'/',
-`<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"CollectionPage",name:title,description:desc,url:cfg.base_url+h.slug+'/'})}</script>`+(arts.length?`\n<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"ItemList",itemListElement:arts.map((r,i)=>({"@type":"ListItem",position:i+1,name:titleOf(r),url:cfg.base_url+r.output_path}))})}</script>`:''),desc);
- fs.mkdirSync(path.join(SITE,h.slug),{recursive:true});
- fs.writeFileSync(path.join(SITE,h.slug,'index.html'),html);
+<p class="siblings">Cùng nhóm <strong>${esc(group.label)}</strong>: ${sibs.map(s=>`<a class="sib-link" href="/lab/${s.slug}/">${esc(s.nav)}</a>`).join('')}</p>${subChips}
+<h2>Bài viết</h2><ul class="cards">${cards}</ul>${pages.length>1?'\n'+pagerNav(base,pages.length,page):''}
+<section class="editorial" aria-label="Hướng dẫn chủ đề">${editorialBlock(ed)}</section>`,cfg.base_url+pageUrl(base,page),
+`<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"CollectionPage",name:title,description:desc,url:cfg.base_url+pageUrl(base,page)})}</script>`+(items.length?`\n<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"ItemList",itemListElement:items.map((r,i)=>({"@type":"ListItem",position:i+1,name:titleOf(r),url:cfg.base_url+r.output_path}))})}</script>`:'')+`\n${bcJsonLd([{href:'/lab/',label:'Trang chủ'},{href:'/lab/'+base,label:title},...(page>1?[{label:'Trang '+page}]:[])])}`,desc);
+  fs.mkdirSync(path.join(SITE,pageUrl(base,page).replace(/\/$/,'')),{recursive:true});
+  fs.writeFileSync(path.join(SITE,pageUrl(base,page),'index.html'),html);
+ });
+});
+// Sub-hub pages (only for groups meeting the min_articles threshold). Breadcrumb
+// mirrors the visible hierarchy home -> parent hub -> sub hub; every page carries
+// a self-referencing canonical and sequential crawlable pagination links.
+Object.values(SUB_OF_PARENT).flat().forEach(d=>{
+ if(!SUB_ACTIVE.has(d.fullSlug))return;
+ const parentSlug=d.fullSlug.split('/')[0];
+ const parentTitle=HUB_TITLE[parentSlug]||parentSlug;
+ const base=d.fullSlug+'/';
+ const arts=SUB_COUNT[d.fullSlug];
+ const sibSubs=(SUB_OF_PARENT[parentSlug]||[]).filter(x=>x.fullSlug!==d.fullSlug&&SUB_ACTIVE.has(x.fullSlug));
+ const pages=pagesOf(arts);
+ pages.forEach(({page,items})=>{
+  const pgSfx=page>1?` — Trang ${page}`:'';
+  const bcHtml=`<nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › <a href="/lab/${parentSlug}/">${esc(parentTitle)}</a> › ${page>1?`<a href="/lab/${base}">${esc(d.title)}</a> › Trang ${page}`:esc(d.title)}</nav>`;
+  const cards=items.map(r=>artCard(r,CLUSTER_VI[r.cluster]+(r.province?' · '+r.province:''))).join('\n');
+  const html=layout(d.title+' — '+parentTitle+pgSfx+' — Bản Đồ Xe 2 Bánh Việt Nam',`${bcHtml}
+<h1>${esc(d.title)}</h1><p>${esc(d.lead||d.desc)}</p>
+${sibSubs.length?`<p class="siblings">Cùng chuyên đề: ${sibSubs.map(s=>`<a class="sib-link" href="/lab/${s.fullSlug}/">${esc(s.title)}</a>`).join('')}</p>`:''}
+<p><a class="sib-link" href="/lab/${parentSlug}/">← Tất cả bài viết ${esc(parentTitle)}</a></p>
+<h2>Bài viết</h2><ul class="cards">${cards}</ul>${pages.length>1?'\n'+pagerNav(base,pages.length,page):''}`,cfg.base_url+pageUrl(base,page),
+`<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"CollectionPage",name:d.title,description:d.desc,url:cfg.base_url+pageUrl(base,page)})}</script>
+<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"ItemList",itemListElement:items.map((r,i)=>({"@type":"ListItem",position:i+1,name:titleOf(r),url:cfg.base_url+r.output_path}))})}</script>
+${bcJsonLd([{href:'/lab/',label:'Trang chủ'},{href:'/lab/'+parentSlug+'/',label:parentTitle},{href:'/lab/'+base,label:d.title},...(page>1?[{label:'Trang '+page}]:[])])}`,d.desc);
+  fs.mkdirSync(path.join(SITE,pageUrl(base,page).replace(/\/$/,'')),{recursive:true});
+  fs.writeFileSync(path.join(SITE,pageUrl(base,page),'index.html'),html);
+ });
 });
 // Geo hubs only where published content exists
 const byProv={};published.forEach(r=>{if(r.province){(byProv[r.province]=byProv[r.province]||[]).push(r);}});
@@ -209,7 +307,7 @@ fs.writeFileSync(path.join(SITE,'dieu-khoan-su-dung','index.html'),layout('Đi�
 <h2>Liên hệ</h2>
 <p>Thắc mắc về nội dung hoặc điều khoản: xin dùng thông tin trên trang <a href="/lab/lien-he/">Liên hệ</a>.</p>
 <p class="fine">Cập nhật lần cuối: 2026-09-28.</p>`,cfg.base_url+'dieu-khoan-su-dung/',null,
-'Điều khoản sử dụng của Bản Đồ Xe 2 Bánh Việt Nam: nội dung thông tin, nguồn chính thức, trách nhiệm người đọc.'));
+'Điều khoản sử dụng của Bản Đồ Xe 2 Bánh Việt Nam: nội dung thông tin, nguồn chính thức và trách nhiệm người đọc khi sử dụng thông tin trên trang.'));
 // Contact page — canonical trust/NAP page built from verified business facts
 // (config/business-facts.json is the single source of truth; nothing invented here).
 fs.mkdirSync(path.join(SITE,'lien-he'));
@@ -285,7 +383,11 @@ if(fs.existsSync(baselineSrc)){
  fs.copyFileSync(baselineSrc,path.join(SITE,'reports','experiments','baseline.md'));
 }
 // restore published article pages from durable archive (shell injected, content intact)
-published.forEach(r=>{
+// precomputed grouping keeps related-article context O(n) at 10k-article scale
+const ACTIVE_SUB_OF={};published.forEach(r=>{ACTIVE_SUB_OF[r.article_id]=activeSubOf(r);});
+const BY_HUB={};published.forEach(r=>{const h=r.output_path.split('/')[0];(BY_HUB[h]=BY_HUB[h]||[]).push(r);});
+const BY_SUB={};published.forEach(r=>{const sb=ACTIVE_SUB_OF[r.article_id];if(sb)(BY_SUB[sb.fullSlug]=BY_SUB[sb.fullSlug]||[]).push(r);});
+published.forEach((r,i)=>{
  const src=path.join(ROOT,'data','published',r.article_id+'.html');
  const dest=path.join(SITE,r.output_path.replace(/^\//,''),'index.html');
  fs.mkdirSync(path.dirname(dest),{recursive:true});
@@ -295,25 +397,43 @@ published.forEach(r=>{
  const hubSlug=r.output_path.split('/')[0];
  const grp=shell.groupOf(hubSlug)||shell.GROUPS[0];
  const words=((archiveHtml[r.article_id].replace(/<[^>]+>/g,' ').match(/[A-Za-zÀ-ỹ0-9]+/g)||[]).length);
- const sameHub=published.filter(x=>x.output_path.split('/')[0]===hubSlug&&x.article_id!==r.article_id).slice(0,4);
- const i=published.findIndex(x=>x.article_id===r.article_id);
+ const sub=ACTIVE_SUB_OF[r.article_id]; // null => article stays listed on its parent hub
+ const relMeta=x=>({href:x.output_path,title:titleOf(x),
+  meta:(x.published_date||'')+(x.province?' · '+x.province:''),category:CLUSTER_VI[x.cluster]||x.cluster,hubSlug:x.output_path.split('/')[0]});
+ const sameSub=sub?(BY_SUB[sub.fullSlug]||[]).filter(x=>x.article_id!==r.article_id):[];
+ const sameHub=(BY_HUB[hubSlug]||[]).filter(x=>x.article_id!==r.article_id&&(!sub||ACTIVE_SUB_OF[x.article_id]!==sub));
+ const related=[...sameSub,...sameHub].slice(0,4).map(relMeta);
  const pn={prev:i>0?{href:published[i-1].output_path,title:titleOf(published[i-1])}:null,
            next:i<published.length-1?{href:published[i+1].output_path,title:titleOf(published[i+1])}:null};
+ // breadcrumb mirrors the live hierarchy; when the article sits inside an active
+ // sub-hub the visible nav is rebuilt as home -> parent hub -> sub hub -> article.
+ const bcItems=[{href:'/lab/',label:'Trang chủ'},{href:'/lab/'+hubSlug+'/',label:HUB_TITLE[hubSlug]||hubSlug}];
+ if(sub)bcItems.push({href:'/lab/'+sub.fullSlug+'/',label:sub.title});
+ bcItems.push({label:titleOf(r)});
  const opt={category:CLUSTER_VI[r.cluster]||r.cluster,hubSlug,hubTitle:HUB_TITLE[hubSlug]||hubSlug,
   groupLabel:grp.label,readingMin:Math.max(1,Math.round(words/300)),
-  related:sameHub.map(x=>({href:x.output_path,title:titleOf(x),
-   meta:(x.published_date||'')+(x.province?' · '+x.province:''),category:CLUSTER_VI[x.cluster]||x.cluster,hubSlug:x.output_path.split('/')[0]})),
-  prev:pn.prev,next:pn.next};
+  related,prev:pn.prev,next:pn.next,
+  breadcrumb:sub?bcItems:null,breadcrumbJsonLd:sub?bcJsonLd(bcItems):null};
  fs.writeFileSync(dest,shell.decorateArticle(withShell(html),opt));
 });
-// sitemap: index + shards
+// sitemap: index + shards. Each URL appears in EXACTLY ONE sitemap: a cluster
+// shard owns its own published canonicals plus that cluster's hub pagination and
+// active sub-hub pages; the static sitemap owns the homepage, utility pages and
+// hub list pages (see extraUrls). Only canonical, indexable, published URLs.
 const shards={static:[]};
-published.forEach(r=>{const c=r.cluster.toLowerCase();(shards[c]=shards[c]||[]).push(r);});
+published.forEach(r=>{const c=r.cluster.toLowerCase();(shards[c]=shards[c]||[]).push(r.canonical);});
+const HUB_SHARD={'thue-xe-may':'rental','cuu-ho-xe-may':'rescue','sua-xe-may':'repair','bang-lai-xe-may':'licence','dang-ky-xe-may':'registration','xe-may-dien':'electric','phu-tung':'parts'};
+HUBS.forEach(h=>{const shard=HUB_SHARD[h.slug]||'static';
+ const arts=hubArts(h.slug).filter(r=>!activeSubOf(r));
+ const total=Math.max(1,Math.ceil(arts.length/PAGE_SIZE));
+ for(let p=2;p<=total;p++)shards[shard].push(cfg.base_url+pageUrl(h.slug+'/',p));});
+Object.values(SUB_OF_PARENT).flat().forEach(d=>{if(!SUB_ACTIVE.has(d.fullSlug))return;
+ const shard=HUB_SHARD[d.fullSlug.split('/')[0]]||'static';
+ const total=Math.max(1,Math.ceil((SUB_COUNT[d.fullSlug]||[]).length/PAGE_SIZE));
+ for(let p=1;p<=total;p++)shards[shard].push(cfg.base_url+pageUrl(d.fullSlug+'/',p));});
 let shardFiles=[];
 Object.entries(shards).forEach(([name,list])=>{
- // Each URL appears in EXACTLY ONE sitemap: category shards own only their own
- // published canonicals; the static sitemap owns the homepage (see extraUrls).
- const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${list.map(r=>r.canonical).map(u=>`<url><loc>${u}</loc></url>`).join('\n')}\n</urlset>`;
+ const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${list.map(u=>`<url><loc>${u}</loc></url>`).join('\n')}\n</urlset>`;
  const fn='sitemap-'+name+'.xml';
  fs.writeFileSync(path.join(SITE,fn),xml);
  shardFiles.push(fn);
@@ -333,6 +453,7 @@ fs.writeFileSync(path.join(SITE,'404.html'),`<!DOCTYPE html>
 <title>Không tìm thấy trang — ${esc(BRAND_FULL)}</title>
 <meta name="description" content="Trang bạn tìm không tồn tại hoặc đã được di chuyển.">
 <meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/svg+xml" href="/lab/assets/favicon.svg">
 <link rel="stylesheet" href="/lab/assets/style.css">
 </head>
 <body>
@@ -446,7 +567,10 @@ const SRC_GUARD=new Set(['scripts','config','data','tests','docs','.github','rep
 let promoted=0;
 const promoteFile=rel=>{ fs.mkdirSync(path.dirname(path.join(ROOT,rel)),{recursive:true});
  fs.copyFileSync(path.join(SITE,rel),path.join(ROOT,rel)); promoted++; };
-const promoteDir=dir=>{ (function walk(rel){ fs.readdirSync(path.join(SITE,rel),{withFileTypes:true}).forEach(e=>{
+const promoteDir=dir=>{ // deterministic root: clear the previous promoted copy first so
+ // stale pages (e.g. removed pagination/sub-hub pages) can never linger at root
+ fs.rmSync(path.join(ROOT,dir),{recursive:true,force:true});
+ (function walk(rel){ fs.readdirSync(path.join(SITE,rel),{withFileTypes:true}).forEach(e=>{
  const r=rel?rel+'/'+e.name:e.name;
  if(e.isDirectory()){ if(SRC_GUARD.has(e.name)) throw new Error('promotion guard hit source dir: '+r); walk(r); }
  else promoteFile(r); }); })(dir); };

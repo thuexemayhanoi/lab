@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "_comment": "Stable per-article sub-hub mapping (article_id -> '<parent-hub>/<sub-hub>'). This explicit mapping OVERRIDES the keyword/field rules in config/subhubs.json and never changes article URLs. Articles without an entry are classified by rules (or stay on the parent hub). Production status in the content matrix is never modified by this file.",
+  "map": {
+    "A00097": "thue-xe-may/dong-xe",
+    "A00465": "thue-xe-may/dong-xe",
+    "A06003": "sua-xe-may/bao-duong-dinh-ky",
+    "A06801": "bang-lai-xe-may/thi-bang-a1",
+    "A07602": "dang-ky-xe-may/dang-ky-moi-va-online",
+    "A08201": "xe-may-dien/mua-va-chi-phi",
+    "A09401": "phu-tung/lop-va-vanh"
+  }
+}

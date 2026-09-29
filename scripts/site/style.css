@@ -532,6 +532,16 @@ body.chat-open .chat-launcher{display:none}
 /* ---------- progress bar ---------- */
 .progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,rgba(23,142,94,.9),rgba(11,92,59,.9));
  z-index:100;border-radius:0 2px 2px 0;pointer-events:none;transition:width 60ms linear}
+/* ---------- pagination (hub & sub-hub article lists) ---------- */
+.pager{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:20px 0 6px;font-size:.92rem}
+.pager .pg{display:inline-flex;align-items:center;justify-content:center;min-height:38px;min-width:38px;
+ padding:6px 13px;border-radius:var(--radius-sm);background:rgba(255,255,255,.66);
+ border:1px solid var(--hairline);color:var(--text);text-decoration:none;line-height:1.2}
+a.pg:hover{transform:translateY(-1px);border-color:var(--accent);color:var(--accent)}
+.pager .pg.cur{font-weight:700;background:var(--text);color:#fff;border-color:transparent}
+.pager .pg-off{opacity:.38;pointer-events:none}
+/* sub-hub chips on parent hub pages reuse .child-chips/.child-chip */
+.sub-chips{margin:4px 0 6px}
 /* ---------- motion ---------- */
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}
- .card:hover,.child-chip:hover,.btn:hover,.pn-card:hover,.chat-launcher:hover,.chat-send:hover{transform:none}}
+ .card:hover,.child-chip:hover,.btn:hover,.pn-card:hover,.chat-launcher:hover,.chat-send:hover,a.pg:hover{transform:none}}
