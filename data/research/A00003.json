@@ -1,0 +1,30 @@
+{
+  "article_id": "A00003",
+  "primary_keyword": "thuê xe máy Huế",
+  "secondary_keywords": ["cho thuê xe máy Huế", "thuê xe máy ở Huế", "giá thuê xe máy Huế", "thuê xe máy Huế đi Đà Nẵng"],
+  "search_intent": "informational",
+  "research_date": "2026-09-29",
+  "geo_entities": ["Huế", "Phú Hội", "trường quốc học Huế", "đại nội Huế", "lăng Khải Định", "chùa Thiên Mụ", "đèo Hải Vân", "sông Hương"],
+  "vehicle_entities": ["xe số", "xe tay ga", "xe côn tay"],
+  "brand_entities": ["Honda", "Yamaha"],
+  "model_entities": ["Vision", "Sirius", "Janus", "Exciter"],
+  "questions_found": [
+    "thuê xe máy Huế giá bao nhiêu một ngày?",
+    "thuê xe máy ở Huế cần những giấy tờ gì?",
+    "thuê xe máy Huế có đi Đà Nẵng qua đèo Hải Vân được không?",
+    "một ngày thuê xe máy ở Huế đi được những đâu?",
+    "thuê xe theo giờ ở Huế có không, tính thế nào?",
+    "trả xe trễ giờ bị tính thêm bao nhiêu?"
+  ],
+  "related_queries": ["bảng giá thuê xe máy Huế", "thuê xe máy gần đại nội Huế", "kinh nghiệm thuê xe máy Huế", "thuê Exciter Huế đi Hải Vân"],
+  "serp_patterns": "SERP hỗn hợp: bài tổng hợp địa chỉ + bảng giá của các trang du lịch/cửa hàng địa phương, bài kinh nghiệm (AEON Mall Huế, vinwonders), trang dịch vụ. Intent chủ đạo informational — người tìm đang lên lịch trình du lịch cố đô, muốn giá, điều kiện đi xa (Hải Vân) và cách tính giờ.",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi", "source_domain": "vexere.com", "date_accessed": "2026-09-29", "claim_supported": "bảng giá tham khảo: xe số Sirius ~100.000đ/ngày, xe ga (Vision, Janus, AB) ~130.000đ/ngày, côn tay Exciter 150cc ~200.000đ/ngày; chu kỳ 24 giờ"},
+    {"source_url": "https://hue.aeonmall-vietnam.com/cam-nang-aeon-mall-hue/thue-xe-may-o-hue.html", "source_domain": "hue.aeonmall-vietnam.com", "date_accessed": "2026-09-29", "claim_supported": "cách tính ngày theo chu kỳ 24 tiếng và phí trễ giờ thường gặp tại Huế"}
+  ],
+  "existing_internal_pages": ["/lab/thue-xe-may/", "/lab/thue-xe-may/thue-xe-may-ha-noi/", "/lab/kinh-nghiem/", "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/"],
+  "potential_cannibalization": "CG-rental-loc-hue là nhóm gốc; các bài POI và bài so sánh model có intent khác biệt. Bài Đà Nẵng (A00004) cùng vùng miền Trung nhưng nhóm/nhu cầu khác — không trùng.",
+  "unique_angle": "Bài viết cho du khách tự lập khám phá cố đô bằng xe máy: dải giá thị trường theo loại xe (số ~80–100k, ga ~120–130k, côn tay ~200k), luật tính 24 giờ và phí trễ, giấy tờ (CCCD/hộ chiếu + GPLX khi tự lái), gợi ý hành trình 1 ngày (đại nội — chùa Thiên Mụ — lăng — vờ Tây Hồ), và phần riêng về đi xa: nhiều cửa hàng chỉ cho đi trong tỉnh, muốn đi Đà Nẵng/Hải Vân phải hỏi trước và thường tính thêm phí hoặc giữ cọc cao. Nhấn mạnh informational: không bán dịch vụ, chủ sở hữu chỉ phục vụ tại Hà Nội.",
+  "notes": "actual_service_area=informational_only: KHÔNG NAP, KHÔNG claim dịch vụ tại Huế, KHÔNG LocalBusiness schema. Giá là dải tham khảo thị trường có nguồn."
+}

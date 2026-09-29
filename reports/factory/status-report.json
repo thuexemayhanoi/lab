@@ -1,10 +1,14 @@
 {
-  "generated_at": "2026-09-28T05:44:58.597Z",
+  "generated_at": "2026-09-29T04:34:58.276Z",
   "total": 10000,
+  "by_status": {
+    "PUBLISHED": 13,
+    "PLANNED": 9987
+  },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 4,
-      "PLANNED": 4996
+      "PUBLISHED": 7,
+      "PLANNED": 4993
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -31,12 +35,35 @@
       "PLANNED": 599
     }
   },
+  "phase": "PRODUCTION",
+  "active_chunk": [],
+  "last_completed_id": "A09401",
+  "next_claimable_id": "A00005",
+  "blocked": [],
   "published": [
     {
       "id": "A00001",
       "pk": "thuê xe máy Hà Nội",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ha-noi/"
+    },
+    {
+      "id": "A00002",
+      "pk": "thuê xe máy Hải Phòng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-hai-phong/"
+    },
+    {
+      "id": "A00003",
+      "pk": "thuê xe máy Huế",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-hue/"
+    },
+    {
+      "id": "A00004",
+      "pk": "thuê xe máy Đà Nẵng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-da-nang/"
     },
     {
       "id": "A00052",

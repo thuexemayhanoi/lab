@@ -1,19 +1,15 @@
 {
-  "last_run": "2026-09-28T11:26:39.831Z",
+  "last_run": "2026-09-29T04:24:56.507Z",
   "phase": "PRODUCTION",
   "matrix_rows": 10000,
-  "published_count": 10,
+  "published_count": 13,
   "last_batch": [
-    "A00001",
-    "A00052",
-    "A00097",
-    "A00465",
-    "A05060",
-    "A06003",
-    "A06801",
-    "A07602",
-    "A08201",
-    "A09401"
+    "A00002",
+    "A00003",
+    "A00004"
   ],
-  "notes": "Bootstrap pilot complete (10/10, QA>=90). Promoted PILOT -> PRODUCTION via canonical promote-production command."
+  "last_completed_id": "A09401",
+  "next_claimable_id": "A00005",
+  "active_chunk": [],
+  "notes": "Published 3 articles."
 }

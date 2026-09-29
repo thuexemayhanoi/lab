@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "op": "research",
+      "started_at": "2026-09-29T04:20:19.396Z",
+      "finished_at": "2026-09-29T04:20:21.185Z",
+      "elapsed_ms": 1789,
+      "ids": [
+        "A00002",
+        "A00003",
+        "A00004"
+      ],
+      "count": 3
+    },
+    {
+      "op": "qa",
+      "started_at": "2026-09-29T04:23:14.269Z",
+      "finished_at": "2026-09-29T04:23:15.858Z",
+      "elapsed_ms": 1589,
+      "ids": [
+        "A00002",
+        "A00003",
+        "A00004"
+      ],
+      "count": 3
+    },
+    {
+      "op": "publish",
+      "started_at": "2026-09-29T04:24:55.878Z",
+      "finished_at": "2026-09-29T04:24:56.508Z",
+      "elapsed_ms": 630,
+      "ids": [
+        "A00002",
+        "A00003",
+        "A00004"
+      ],
+      "published": 3,
+      "phase": "PRODUCTION"
+    }
+  ]
+}
