@@ -751,3 +751,162 @@ test('audit: reports/editorial/audit-after.json matches current source (no stale
     assert.strictEqual(a.word_count, s.word_count, 'stale word count for ' + a.article_id);
   });
 });
+
+// ---------- SUB-HUB IA (parent hub -> sub hub -> article; 10k-scale) ----------
+// Classification is mirrored from scripts/site/build-site.js: config/hub-map.json
+// (stable article IDs) overrides the rule lists in config/subhubs.json.
+const SUBHUB_CFG = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'subhubs.json'), 'utf8'));
+const HUB_MAP = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'hub-map.json'), 'utf8')).map;
+const SUB_MIN = SUBHUB_CFG.min_articles || 3;
+const SUB_PAGE_SIZE = SUBHUB_CFG.page_size || 20;
+const subDefs = {};
+Object.entries(SUBHUB_CFG.subhubs || {}).forEach(([parent, defs]) => { subDefs[parent] = defs.map(d => ({ ...d, fullSlug: parent + '/' + d.slug })); });
+const subByFull = {};
+Object.values(subDefs).flat().forEach(d => { subByFull[d.fullSlug] = d; });
+const kwHitT = (r, kws) => { const hay = ((r.primary_keyword || '') + ' ' + (r.secondary_keywords || '') + ' ' + (r.parent_topic || '')).toLowerCase(); return kws.some(k => hay.includes(k.toLowerCase())); };
+const ruleMatchT = (r, m) => { if (!m) return false;
+  if (m.nonempty && !m.nonempty.some(f => (r[f] || '').trim())) return false;
+  if (m.empty && !m.empty.every(f => !(r[f] || '').trim())) return false;
+  if (m.part_in) { const p = (r.part || '').toLowerCase(); if (!m.part_in.some(x => p.includes(x.toLowerCase()))) return false; }
+  if (m.kw && !kwHitT(r, m.kw)) return false;
+  return true; };
+const classifyT = r => { const mapped = HUB_MAP[r.article_id];
+  if (mapped !== undefined) return subByFull[mapped];
+  const parent = r.output_path.split('/')[0];
+  return (subDefs[parent] || []).find(d => ruleMatchT(r, d.match)) || null; };
+const subCountT = {}; const subAssignT = {};
+published.forEach(r => { const d = classifyT(r); subAssignT[r.article_id] = d; if (d) (subCountT[d.fullSlug] = subCountT[d.fullSlug] || []).push(r); });
+const subActiveT = new Set(Object.entries(subCountT).filter(([, a]) => a.length >= SUB_MIN).map(([f]) => f));
+
+test('subhubs: config valid — real parent hubs, unique slugs, no article URL collision', () => {
+  const allPaths = new Set(rows.map(r => r.output_path));
+  Object.entries(subDefs).forEach(([parent, defs]) => {
+    assert.ok(fs.existsSync(path.join(SITE, parent, 'index.html')), 'sub-hub parent is not a real hub: ' + parent);
+    const slugs = defs.map(d => d.slug);
+    assert.strictEqual(new Set(slugs).size, slugs.length, 'duplicate sub-hub slug under ' + parent);
+    defs.forEach(d => {
+      assert.ok(d.title && d.desc, 'sub-hub missing title/desc: ' + d.fullSlug);
+      assert.ok(!allPaths.has(d.fullSlug + '/'), 'sub-hub URL collides with an article URL: ' + d.fullSlug);
+    });
+  });
+});
+test('subhubs: hub-map targets are defined sub-hubs of the article own parent hub', () => {
+  Object.entries(HUB_MAP).forEach(([id, target]) => {
+    const r = rows.find(x => x.article_id === id);
+    assert.ok(r, 'hub-map id not in matrix: ' + id);
+    assert.ok(subByFull[target], 'hub-map target undefined: ' + id + ' -> ' + target);
+    assert.strictEqual(target.split('/')[0], r.output_path.split('/')[0],
+      'hub-map parent mismatch for ' + id + ' (article lives in another hub)');
+  });
+});
+test('subhubs: threshold honored — active pages exist with >= min articles; dormant have no public page', () => {
+  Object.values(subDefs).flat().forEach(d => {
+    const n = (subCountT[d.fullSlug] || []).length;
+    const page = path.join(SITE, d.fullSlug, 'index.html');
+    if (n >= SUB_MIN) {
+      assert.ok(fs.existsSync(page), 'active sub-hub page missing: ' + d.fullSlug);
+      assert.ok(n >= SUB_MIN, 'thin active sub-hub: ' + d.fullSlug);
+    } else {
+      assert.ok(!fs.existsSync(page), 'dormant sub-hub must not have a public page: ' + d.fullSlug);
+    }
+  });
+});
+test('pagination: page size, self-canonicals and sequential links on every list page', () => {
+  const lists = []; // {base, count}
+  ['thue-xe-may','cuu-ho-xe-may','sua-xe-may','bang-lai-xe-may','dang-ky-xe-may','xe-may-dien','phu-tung','kinh-nghiem']
+    .forEach(h => { const arts = published.filter(r => r.output_path.startsWith(h + '/') && !(subAssignT[r.article_id] && subActiveT.has(subAssignT[r.article_id].fullSlug))); lists.push({ base: h + '/', count: arts.length }); });
+  Object.values(subActiveT).forEach(full => lists.push({ base: full + '/', count: (subCountT[full] || []).length }));
+  lists.forEach(({ base, count }) => {
+    const totalPages = Math.max(1, Math.ceil(count / SUB_PAGE_SIZE));
+    for (let p = 1; p <= totalPages; p++) {
+      const rel = p === 1 ? base : base + 'p/' + p + '/';
+      const file = path.join(SITE, rel, 'index.html');
+      assert.ok(fs.existsSync(file), 'missing list page ' + rel);
+      const t = fs.readFileSync(file, 'utf8');
+      const canon = (t.match(/<link rel="canonical" href="([^"]*)"/) || [])[1];
+      assert.strictEqual(canon, 'https://thuexemayhanoi.github.io/lab/' + rel,
+        'pagination page must canonicalize to ITSELF, not page 1: ' + rel);
+      const cardCount = (t.match(/<li class="card">/g) || []).length;
+      assert.ok(cardCount <= SUB_PAGE_SIZE, 'page exceeds page_size: ' + rel);
+      if (totalPages > 1) {
+        assert.ok(t.includes('class="pager"'), 'multi-page list missing pager: ' + rel);
+        if (p > 1) assert.ok(/rel="prev"/.test(t), 'missing sequential prev link: ' + rel);
+        if (p < totalPages) assert.ok(/rel="next"/.test(t), 'missing sequential next link: ' + rel);
+      }
+    }
+    assert.ok(!fs.existsSync(path.join(SITE, base, 'p', String(totalPages + 1))), 'stray page beyond total: ' + base);
+  });
+});
+test('breadcrumbs: visible trail matches BreadcrumbList JSON-LD on hub and sub-hub pages', () => {
+  Object.values(subActiveT).forEach(full => {
+    const t = fs.readFileSync(path.join(SITE, full, 'index.html'), 'utf8');
+    const bc = (t.match(/<nav class="breadcrumb">([\s\S]*?)<\/nav>/) || [])[1] || '';
+    assert.ok(bc.includes('href="/lab/' + full.split('/')[0] + '/"'), 'sub-hub breadcrumb misses parent hub: ' + full);
+    const ld = JSON.parse((t.match(/<script type="application\/ld\+json">(\{"@context":"https:\/\/schema\.org","@type":"BreadcrumbList"[\s\S]*?)<\/script>/) || [])[1]);
+    assert.ok(ld.itemListElement.length >= 3, 'sub-hub BreadcrumbList must show home > parent > sub: ' + full);
+    ld.itemListElement.forEach(it => assert.ok(it.name && it.item, 'BreadcrumbList item needs name+item: ' + full));
+  });
+  // hub pages: BreadcrumbList mirrors the visible 2-level trail
+  ['thue-xe-may','kinh-nghiem','phu-tung'].forEach(h => {
+    const t = fs.readFileSync(path.join(SITE, h, 'index.html'), 'utf8');
+    const ld = (t.match(/<script type="application\/ld\+json">\{"@context":"https:\/\/schema\.org","@type":"BreadcrumbList"/) || [])[0];
+    assert.ok(ld, 'hub page missing BreadcrumbList: ' + h);
+    assert.ok(!/\/lab\/lab\//.test(t), 'double /lab/ in breadcrumb data: ' + h);
+  });
+});
+test('breadcrumbs: article pages — sub-hub trail only when active; no duplicate BreadcrumbList otherwise', () => {
+  published.forEach(r => {
+    const file = path.join(SITE, r.output_path, 'index.html');
+    const t = fs.readFileSync(file, 'utf8');
+    const sub = subAssignT[r.article_id];
+    const active = sub && subActiveT.has(sub.fullSlug);
+    const count = (t.match(/"@type":"BreadcrumbList"/g) || []).length;
+    if (active) {
+      assert.ok(t.includes('href="/lab/' + sub.fullSlug + '/"'), 'active sub-hub missing from article breadcrumb: ' + r.article_id);
+      assert.ok(count >= 1, 'active sub-hub article needs an updated BreadcrumbList: ' + r.article_id);
+    } else {
+      assert.strictEqual(count, 1, 'non-sub article must keep exactly its archive BreadcrumbList: ' + r.article_id);
+    }
+  });
+});
+test('sitemap: hub/sub-hub/pagination URLs canonical, exactly-once, and only for live pages', () => {
+  const shardFiles = fs.readdirSync(SITE).filter(f => /^sitemap-.*\.xml$/.test(f) && f !== 'sitemap-index.xml');
+  const all = [];
+  shardFiles.forEach(f => { (fs.readFileSync(path.join(SITE, f), 'utf8').match(/<loc>([^<]*)<\/loc>/g) || []).forEach(l => all.push(l.slice(5, -6))); });
+  assert.strictEqual(new Set(all).size, all.length, 'duplicate URL across shards');
+  const live = new Set(all.map(u => u.replace('https://thuexemayhanoi.github.io/lab/', '')));
+  Object.values(subDefs).flat().forEach(d => {
+    const rel = d.fullSlug + '/';
+    if (subActiveT.has(d.fullSlug)) {
+      assert.ok(live.has(rel), 'active sub-hub missing from sitemap: ' + rel);
+      assert.ok(fs.existsSync(path.join(SITE, d.fullSlug, 'index.html')), 'sitemap lists non-existent page: ' + rel);
+    } else assert.ok(!live.has(rel), 'dormant sub-hub must not be in sitemap: ' + rel);
+  });
+});
+test('head-sync: every public page keeps og:site_name, og:locale, twitter:card and favicon', () => {
+  publicFiles().filter(f => f.endsWith('.html')).forEach(f => {
+    const t = fs.readFileSync(f, 'utf8');
+    if (f.endsWith('404.html')) { assert.ok(t.includes('href="/lab/assets/favicon.svg"'), '404 favicon: ' + f); return; }
+    assert.ok(t.includes('property="og:site_name" content="Bản Đồ Xe 2 Bánh Việt Nam"'), 'og:site_name missing: ' + f);
+    assert.ok(t.includes('property="og:locale" content="vi_VN"'), 'og:locale missing: ' + f);
+    assert.ok(t.includes('name="twitter:card" content="summary_large_image"'), 'twitter:card missing: ' + f);
+    assert.ok(t.includes('href="/lab/assets/favicon.svg"'), 'favicon link missing: ' + f);
+  });
+  assert.ok(fs.existsSync(path.join(SITE, 'assets', 'favicon.svg')), 'favicon.svg asset missing');
+});
+test('meta-sync: hub descriptions match the live-site copy edit (133-157 chars)', () => {
+  const expect = {
+    'thue-xe-may': 'Tổng hợp hướng dẫn thuê xe máy thực tế: chuẩn bị giấy tờ, chọn dòng xe, kiểm tra xe trước khi nhận và xử lý các tình huống phát sinh khi thuê xe.',
+    'kinh-nghiem': 'Tổng hợp kinh nghiệm đi xe hai bánh: kỹ năng lái an toàn, vận hành xe máy dài hạn và cách chuẩn bị cho các chuyến đi xa tại Việt Nam.',
+    'cuu-ho-xe-may': 'Hướng dẫn xử lý khi xe máy hỏng giữa đường: nhận biết hỏng hóc tự xử được, cách gọi và mô tả tình huống với cứu hộ, và cách tránh những bẫy phí phát sinh.',
+    'sua-xe-may': 'Hướng dẫn sửa chữa và bảo dưỡng xe máy: lịch bảo dưỡng theo mốc thời gian và cây số, nhận biết phụ tùng tới hạn và cách làm việc hiệu quả với thợ sửa xe.',
+    'bang-lai-xe-may': 'Hướng dẫn trọn vòng đời bằng lái xe máy A1: hồ sơ thi, ôn tập, lệ phí và quy trình thi, cùng thủ tục đổi bằng, cấp lại khi mất và quy định xử phạt hiện hành.',
+    'dang-ky-xe-may': 'Thủ tục đăng ký xe máy theo quy định hiện hành: đăng ký xe mới, sang tên khi mua bán, cấp đổi biển số, nộp lệ phí trước bạ và xu hướng số hóa thủ tục.',
+    'xe-may-dien': 'Phân tích xe máy điện Việt Nam theo góc nhìn chi phí: giá mua, chi phí sạc, độ bền pin, trạm sạc và điều cân nhắc trước khi chuyển từ xe xăng sang xe điện.',
+    'phu-tung': 'Cách chọn và thay phụ tùng xe máy đúng lúc: lốp, ắc quy, bugi, nhông xích, dầu máy — dấu hiệu tới hạn và lựa chọn giữa hàng chính hãng và hàng thay thế.' };
+  Object.entries(expect).forEach(([slug, desc]) => {
+    const t = fs.readFileSync(path.join(SITE, slug, 'index.html'), 'utf8');
+    assert.ok(t.includes('<meta name="description" content="' + desc + '">'), 'hub meta description out of sync: ' + slug);
+    assert.ok(desc.length >= 133 && desc.length <= 157, 'description length outside 133-157: ' + slug);
+  });
+});

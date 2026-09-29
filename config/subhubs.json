@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "_comment": "Sub-hub taxonomy (hub cha -> hub con -> bai viet). Rules are deterministic and grounded in content-matrix columns (brand/model/part) plus keyword lists; first matching sub-hub wins. A sub-hub page is only PUBLISHED when it has >= min_articles published articles; below that, articles stay listed on the parent hub (no empty/thin hubs). Explicit per-article mapping lives in config/hub-map.json and overrides these rules. Article URLs never change.",
+  "min_articles": 3,
+  "page_size": 20,
+  "subhubs": {
+    "thue-xe-may": [
+      {
+        "slug": "dong-xe",
+        "title": "Thuê theo dòng xe",
+        "desc": "So sánh và chọn dòng xe máy khi thuê: Honda Vision, Air Blade, Wave, Yamaha Sirius, Liberty và các mẫu xe ga, xe số phổ biến.",
+        "lead": "Chọn đúng dòng xe là bước quan trọng nhất khi thuê: mỗi mẫu có vóc dáng, bình xăng và mức tiêu hao khác nhau. Mục này nhóm các bài so sánh và đánh giá từng dòng xe để bạn chọn được xe phù hợp với chuyến đi.",
+        "match": { "nonempty": ["brand", "model"] }
+      },
+      {
+        "slug": "gia-va-thoi-han",
+        "title": "Giá & thời gian thuê",
+        "desc": "Giá thuê xe máy theo giờ, theo ngày, theo tuần, theo tháng và những yếu tố làm giá tăng giảm theo mùa.",
+        "lead": "Giá thuê thay đổi theo thời gian thuê và thời điểm cao điểm. Mục này tổng hợp các bài về khung giá, cách tính giá theo ngày/tuần/tháng và thời điểm thuê rẻ hơn.",
+        "match": { "empty": ["brand", "model"], "kw": ["giá", "bao nhiêu", "theo ngày", "theo tuần", "theo tháng", "thuê bao lâu"] }
+      }
+    ],
+    "cuu-ho-xe-may": [
+      {
+        "slug": "su-co-thuong-gap",
+        "title": "Sự cố thường gặp",
+        "desc": "Xử lý các sự cố xe máy hay gặp giữa đường: thủng lốp, hết xăng, cháy máy, mất điện, hỏng phanh và khi nào cần gọi cứu hộ.",
+        "lead": "Hầu hết sự cố giữa đường rơi vào vài nhóm quen thuộc. Nhận diện đúng sự cố giúp bạn tự xử được hoặc mô tả chính xác khi gọi cứu hộ — mục này nhóm bài theo từng loại sự cố.",
+        "match": { "nonempty": ["part"] }
+      }
+    ],
+    "sua-xe-may": [
+      {
+        "slug": "sua-theo-dong-xe",
+        "title": "Sửa theo dòng xe",
+        "desc": "Đặc thù hỏng hóc và bảo dưỡng theo từng dòng: Honda Vision, Air Blade, Wave, Yamaha Sirius, Exciter, Grande, Liberty.",
+        "lead": "Mỗi dòng xe có cấu tạo và điểm hỏng hóc đặc trưng. Mục này nhóm bài sửa chữa theo dòng xe để bạn tra nhanh đúng mẫu xe mình đang chạy.",
+        "match": { "nonempty": ["brand"] }
+      },
+      {
+        "slug": "sua-theo-phan-xe",
+        "title": "Sửa theo bộ phận",
+        "desc": "Hướng dẫn sửa và thay theo bộ phận: lốp, ắc quy, phanh, dầu máy, nhông xích, bugi, kim phun, chế hòa khí, đèn, ECU.",
+        "lead": "Khi đã biết hỏng ở bộ phận nào, việc tra theo bộ phận nhanh hơn theo triệu chứng. Mục này nhóm bài theo từng cụm chi tiết trên xe.",
+        "match": { "nonempty": ["part"] }
+      },
+      {
+        "slug": "trieu-chung-hu-hong",
+        "title": "Triệu chứng hư hỏng",
+        "desc": "Nhận biết triệu chứng xe máy hao xăng, đề không nổ, giật khi tăng ga, kêu khi phanh, yếu máy, rung và xử lý khi xe ngập nước.",
+        "lead": "Xe báo hỏng bằng triệu chứng trước khi hỏng hẳn. Mục này nhóm bài chẩn đoán theo triệu chứng để bạn xác định nguyên nhân và mức độ cần sửa.",
+        "match": { "kw": ["hao xăng", "không nổ", "khó nổ", "giật", "kêu khi", "yếu máy", "rung", "ngập nước", "cháy máy"] }
+      },
+      {
+        "slug": "bao-duong-dinh-ky",
+        "title": "Bảo dưỡng định kỳ",
+        "desc": "Lịch bảo dưỡng xe máy định kỳ: thay dầu, vệ sinh chế hòa khí, vệ sinh kim phun và chăm sóc xe mới mua theo mốc cây số.",
+        "lead": "Bảo dưỡng đúng hạn rẻ hơn sửa chữa lớn. Mục này nhóm bài về lịch bảo dưỡng và các việc cần làm theo mốc thời gian, mốc cây số.",
+        "match": { "kw": ["bảo dưỡng", "định kỳ", "thay dầu", "vệ sinh", "chăm sóc"] }
+      }
+    ],
+    "bang-lai-xe-may": [
+      {
+        "slug": "doi-va-cap-lai",
+        "title": "Đổi & cấp lại bằng lái",
+        "desc": "Thủ tục đổi bằng lái xe máy, cấp lại khi mất, và các bước cần làm khi bằng lái hư hỏng hoặc hết hạn.",
+        "lead": "Đổi và cấp lại bằng lái là thủ tục sau khi đã có bằng. Mục này nhóm bài hướng dẫn từng trường hợp đổi, cấp lại và giấy tờ cần chuẩn bị.",
+        "match": { "kw": ["đổi bằng", "cấp lại", "mất bằng"] }
+      },
+      {
+        "slug": "thi-bang-a1",
+        "title": "Thi bằng lái A1",
+        "desc": "Hồ sơ, lệ phí, địa điểm và quy trình thi bằng lái xe máy A1: ôn lý thuyết, luyện thực hành và những lỗi hay trượt.",
+        "lead": "Thi bằng A1 là bước đầu tiên của vòng đời giấy phép lái xe. Mục này nhóm bài về hồ sơ, lệ phí, ôn tập lý thuyết, thực hành và địa điểm thi.",
+        "match": { "kw": ["thi bằng", "thi ", "lý thuyết", "thực hành", "hồ sơ", "lệ phí thi", "địa điểm thi"] }
+      }
+    ],
+    "dang-ky-xe-may": [
+      {
+        "slug": "sang-ten-va-cap-lai",
+        "title": "Sang tên & cấp lại",
+        "desc": "Thủ tục sang tên xe cũ, đăng ký lại xe đã qua sử dụng, cấp lại giấy đăng ký khi mất và đổi đăng ký khi chuyển nơi cư trú.",
+        "lead": "Mua bán xe cũ và mất giấy tờ đều cần thủ tục sang tên hoặc cấp lại. Mục này nhóm bài hướng dẫn từng trường hợp chuyển quyền sở hữu và bổ sung giấy tờ.",
+        "match": { "kw": ["sang tên", "đăng ký lại", "cấp lại", "mất đăng ký", "mất biển"] }
+      },
+      {
+        "slug": "bien-so-va-le-phi",
+        "title": "Biển số & lệ phí",
+        "desc": "Quy định biển số xe máy, cấp đổi biển theo tỉnh, làm lại khi mất và cách tính lệ phí, thuế trước bạ khi đăng ký.",
+        "lead": "Biển số và lệ phí là phần hay thay đổi nhất của thủ tục đăng ký. Mục này nhóm bài về quy định biển số, lệ phí và thuế trước bạ theo quy định hiện hành.",
+        "match": { "kw": ["biển số", "lệ phí", "trước bạ"] }
+      },
+      {
+        "slug": "dang-ky-moi-va-online",
+        "title": "Đăng ký mới & online",
+        "desc": "Đăng ký xe máy mới mua, đăng ký online qua VNeID, giấy tờ cần chuẩn bị và nơi thực hiện thủ tục đăng ký xe.",
+        "lead": "Đăng ký lần đầu cho xe mới ngày càng làm được online. Mục này nhóm bài về hồ sơ đăng ký mới, kênh online và nơi nộp hồ sơ.",
+        "match": { "kw": ["online", "mới mua", "giấy tờ", "VNeID", "đăng ký xe máy cần"] }
+      }
+    ],
+    "xe-may-dien": [
+      {
+        "slug": "dong-xe-dien",
+        "title": "Dòng xe máy điện",
+        "desc": "Đánh giá từng dòng xe máy điện: VinFast Felis S, Klara S, Theon S, Yadea, Dat Bike Weaver, Honda CUV e: giá, tầm xa và độ bền.",
+        "lead": "Mỗi dòng xe điện có tầm xa, pin và chi phí khác nhau. Mục này nhóm bài đánh giá theo từng mẫu xe để bạn so sánh trước khi mua.",
+        "match": { "nonempty": ["brand", "model"] }
+      },
+      {
+        "slug": "pin-va-tram-sac",
+        "title": "Pin & trạm sạc",
+        "desc": "Pin xe máy điện: tuổi thọ, sạc bao lâu, trạm sạc ở đâu, thay pin bao nhiêu tiền và khác biệt giữa pin lithium và pin chì.",
+        "lead": "Pin là phần tốn kém nhất của xe điện. Mục này nhóm bài về cách sạc, tuổi thọ pin, trạm sạc và chi phí thay pin.",
+        "match": { "kw": ["pin", "sạc"] }
+      },
+      {
+        "slug": "mua-va-chi-phi",
+        "title": "Mua & chi phí",
+        "desc": "Có nên mua xe máy điện: giá, chi phí sử dụng, so sánh với xe xăng, trả góp và ưu đãi lệ phí trước bạ cho xe điện.",
+        "lead": "Quyết định chuyển sang xe điện phụ thuộc chi phí tổng thể. Mục này nhóm bài phân tích giá, chi phí sạc và so sánh với xe xăng.",
+        "match": { "kw": ["có nên mua", "đáng mua", "giá", "chi phí", "trả góp", "ưu đãi", "tốt nhất", "so với xe xăng", "chạy được bao xa"] }
+      }
+    ],
+    "phu-tung": [
+      {
+        "slug": "lop-va-vanh",
+        "title": "Lốp & vành",
+        "desc": "Chọn lốp xe máy, lốp không săm và vành xe: các loại, giá, khi nào cần thay và khác nhau giữa hàng chính hãng và hàng thay thế.",
+        "lead": "Lốp là phụ tùng ảnh hưởng trực tiếp đến an toàn. Mục này nhóm bài về chọn lốp, vành và thời điểm thay.",
+        "match": { "part_in": ["lốp xe máy", "lốp không săm", "vành xe"] }
+      },
+      {
+        "slug": "phanh",
+        "title": "Hệ thống phanh",
+        "desc": "Má phanh, dầu phanh và dây phanh xe máy: các loại, giá, cách kiểm tra và thay đúng lúc.",
+        "lead": "Phanh cần kiểm tra thường xuyên hơn mọi bộ phận khác. Mục này nhóm bài về má phanh, dầu phanh và dây phanh.",
+        "match": { "part_in": ["má phanh", "dầu phanh", "dây phanh"] }
+      },
+      {
+        "slug": "nhong-xich-dia",
+        "title": "Nhông, xích, đĩa",
+        "desc": "Nhông xích đĩa xe máy: chọn đúng cỡ, thay khi nào, cách chỉnh và kéo dài tuổi thọ bộ truyền động.",
+        "lead": "Bộ truyền động hao mòn dần và cần thay đúng lúc. Mục này nhóm bài về chọn và thay nhông, xích, đĩa.",
+        "match": { "part_in": ["nhông", "xích", "đĩa xe máy"] }
+      },
+      {
+        "slug": "dien-va-ac-quy",
+        "title": "Điện & ắc quy",
+        "desc": "Ắc quy xe máy, pin xe máy điện, đèn và ECU: các loại, giá, dấu hiệu yếu và cách thay đúng cách.",
+        "lead": "Hệ thống điện quyết định xe có nổ và sáng đèn hay không. Mục này nhóm bài về ắc quy, pin xe điện, đèn và ECU.",
+        "match": { "part_in": ["ắc quy xe máy", "pin xe máy điện", "đèn xe máy", "ECU xe máy"] }
+      }
+    ],
+    "kinh-nghiem": []
+  }
+}

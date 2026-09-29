@@ -222,13 +222,21 @@ function chatbotHtml() {
  * blocks before </main>. Purely visual wrappers: canonical, schema and body
  * text are untouched. inner = full page HTML; returns full page HTML. */
 function decorateArticle(inner, opt) {
-  // opt: { category, hubSlug, hubTitle, groupLabel, related:[{href,title,meta,category,hubSlug}], prev, next, readingMin }
+  // opt: { category, hubSlug, hubTitle, groupLabel, related:[{href,title,meta,category,hubSlug}], prev, next, readingMin,
+  //        breadcrumb?:[{href?,label}], breadcrumbJsonLd?:string }
+  // opt.breadcrumb (optional) rebuilds the visible breadcrumb from the live hub
+  // hierarchy; when absent the archive's own breadcrumb markup is preserved.
+  // opt.breadcrumbJsonLd (optional) injects a matching BreadcrumbList into <head>.
   if (/<header class="article-hero"/.test(inner)) return inner; // already decorated — idempotent
   const m = inner.match(/^([\s\S]*?)(<main[^>]*>)([\s\S]*?)(<\/main>)([\s\S]*)$/);
   if (!m) return inner;
   const [, head, open, bodyMain, close, tail] = m;
   const bm = bodyMain.match(/<nav class="breadcrumb">[\s\S]*?<\/nav>/);
   if (!bm) return inner;
+  // visible breadcrumb: rebuilt from opt.breadcrumb when provided, else archive's own
+  const bcHtml = (opt.breadcrumb && opt.breadcrumb.length)
+    ? `<nav class="breadcrumb">${opt.breadcrumb.map(b => b.href ? `<a href="${esc(b.href)}">${esc(b.label)}</a>` : esc(b.label)).join(' › ')}</nav>`
+    : bm[0];
   const pm = bodyMain.match(/<p class="postmeta">[\s\S]*?<\/p>/);
   const before = bodyMain.slice(0, bm.index);
   let after = bodyMain.slice(bm.index + bm[0].length).replace(pm ? pm[0] : '', '');
@@ -274,13 +282,15 @@ function decorateArticle(inner, opt) {
   const next = opt.next ? `<a class="pn-card glass pn-next" href="/lab/${esc(opt.next.href)}" rel="next"><span class="pn-label">Bài tiếp theo →</span><span class="pn-title">${esc(opt.next.title)}</span></a>` : '<span class="pn-card empty" aria-hidden="true"></span>';
   const pn = (opt.prev || opt.next) ? `\n<nav class="pn-row" aria-label="Điều hướng bài viết">${prev}${next}</nav>` : '';
   const hero = `<header class="article-hero glass-strong">
-${bm[0]}
+${bcHtml}
 <p class="article-chips"><a class="category-chip" href="/lab/${esc(opt.hubSlug)}/">${esc(opt.category)}</a></p>
 ${h1}
 ${lead}
 ${pm ? pm[0].replace(/<\/p>$/, ` · ~${opt.readingMin || '?'} phút đọc</p>`) : ''}
 </header>`;
-  return `${head}${open}${before}${hero}${toc}${rest}${related}${hubCta}${pn}${close}${tail}`;
+  // BreadcrumbList (optional) mirrors the visible breadcrumb; injected in <head>
+  const headOut = opt.breadcrumbJsonLd ? head.replace('</head>', opt.breadcrumbJsonLd + '\n</head>') : head;
+  return `${headOut}${open}${before}${hero}${toc}${rest}${related}${hubCta}${pn}${close}${tail}`;
 }
 
 module.exports = { GROUPS, BRAND_FULL, BRAND_SHORT, EYEBROW, INFO_LINKS, MAIN_LINKS, NAV_BY_SLUG, FOOTER_NAV, ICON, svg, esc, groupOf, headerHtml, footerHtml, chatbotHtml, decorateArticle };
