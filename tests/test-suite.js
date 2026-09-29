@@ -835,6 +835,17 @@ test('operator: invalid scope rejected; fast is the production default', () => {
   const r2 = OP(['validate', sbCmdFile({ op: 'verify', scope: 'deep' })], SB);
   assert.strictEqual(r2.status, 0);
 });
+test('operator: empty scope resolves to op-appropriate default (workflow $SCOPE unset)', () => {
+  // The workflow exports SCOPE from the command file; commands without an
+  // explicit scope export the empty string. Empty must resolve like missing:
+  // verify -> full (safest), production ops -> fast — never REFUSED.
+  const opMod = require(path.join(SB, 'scripts', 'factory', 'operator.js'));
+  assert.strictEqual(opMod.validateCommand({ op: 'qa', ids: 'A00002', scope: '' }).scope, 'fast', 'empty scope on production op resolves to fast');
+  assert.strictEqual(opMod.validateCommand({ op: 'verify', scope: '' }).scope, 'full', 'empty scope on standalone verify resolves to full');
+  const r = OP(['validate', sbCmdFile({ op: 'verify', scope: '' })], SB);
+  assert.strictEqual(r.status, 0, 'command-file verify with empty scope must not be refused');
+  assert.match(r.stdout, /"scope":"full"/, 'resolved scope is exported to the workflow env');
+});
 test('operator: publish requires ids (gate is explicit)', () => {
   assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'publish' })], SB).status, 0, 'publish without ids refused');
 });

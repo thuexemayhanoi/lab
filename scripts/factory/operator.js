@@ -68,6 +68,8 @@ function validateCommand(cmd){
     if(!Number.isInteger(cmd.count)) fail('count must be an integer');
     if(cmd.count<COUNT_MIN||cmd.count>COUNT_MAX) fail('count must be '+COUNT_MIN+'..'+COUNT_MAX+', got '+cmd.count);
   }
+  if (typeof cmd.scope==='string') cmd.scope=cmd.scope.trim();
+  if (cmd.scope==='') delete cmd.scope; // empty flag (e.g. $SCOPE unset in workflow env) -> op-appropriate default
   if (cmd.scope!==undefined && !SCOPES.includes(cmd.scope)) fail('scope must be fast|deep|full, got '+JSON.stringify(cmd.scope));
   if (cmd.command_id!==undefined && !/^[\w.-]{1,64}$/.test(String(cmd.command_id))) fail('bad command_id');
   if (cmd.coordinator!==undefined && (typeof cmd.coordinator!=='string'||cmd.coordinator.length>100||/[\r\n]/.test(cmd.coordinator))) fail('bad coordinator');
