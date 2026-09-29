@@ -1,0 +1,28 @@
+{
+  "article_id": "A00005",
+  "primary_keyword": "thuê xe máy TP.HCM",
+  "secondary_keywords": ["thuê xe máy Sài Gòn", "cho thuê xe máy TP.HCM", "thuê xe máy giá rẻ Sài Gòn", "thuê xe máy giao tận nơi TP.HCM"],
+  "search_intent": "informational",
+  "research_date": "2026-09-29",
+  "geo_entities": ["TP.HCM", "Sài Gòn", "sân bay Tân Sơn Nhất", "ga Sài Gòn", "bến xe Miền Đông", "bến xe Miền Tây", "bến xe An Sương", "Cần Giờ", "Côn Đảo"],
+  "vehicle_entities": ["xe tay ga", "xe số", "xe số phổ thông", "xe côn tay"],
+  "brand_entities": ["Honda", "Yamaha", "Suzuki"],
+  "model_entities": ["Vision", "Air Blade", "Wave", "Sirius", "Click", "Vario"],
+  "questions_found": [
+    "thuê xe máy ở TP.HCM giá bao nhiêu một ngày?",
+    "thuê xe máy Sài Gòn cần giấy tờ gì?",
+    "có nên thuê xe máy giao tận nơi ở TP.HCM không?",
+    "giá thuê xe máy tăng cao điểm lễ tết bao nhiêu?",
+    "điều kiện chạy ra ngoại thành, Cần Giờ khi thuê xe?"
+  ],
+  "related_queries": ["bảng giá thuê xe máy Sài Gòn 2026", "thuê xe máy gần sân bay Tân Sơn Nhất", "thuê xe máy tự lái TP.HCM giao xe tận nơi", "thuê xe máy theo tháng Sài Gòn"],
+  "serp_patterns": "SERP chủ đạo là trang dịch vụ cho thuê địa phương + bài tổng hợp 'top địa chỉ' có bảng giá, giao tận nơi là điểm cạnh tranh chính. Giá công khai rơi vào ~50.000–150.000đ/ngày tùy dòng xe; cao điểm lễ 30/4, 2/9, Tết giá tăng 30–50% theo các trang công khai. Intent hỗn hợp local/commercial nhưng nhóm bài này ở matrix là informational: viết dạng cẩm nang thị trường, không giới thiệu cửa hàng cụ thể.",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://vietnam.travel/", "source_domain": "vietnam.travel", "date_accessed": "2026-09-29", "claim_supported": "tham khảo chung về du lịch TP.HCM, Cần Giờ, đô thị Sài Gòn"}
+  ],
+  "existing_internal_pages": ["/lab/thue-xe-may/", "/lab/kinh-nghiem/", "/lab/ve-chung-toi/", "/lab/thue-xe-may/thue-xe-may-ha-noi/", "/lab/thue-xe-may/thue-xe-may-hai-phong/"],
+  "potential_cannibalization": "CG-rental-loc-tp-hcm: bài gốc của tỉnh; các bài POI (Tân Sơn Nhất) và model (Vision) có intent riêng — không trùng thực dụng.",
+  "unique_angle": "Cẩm nang thị trường cho thuê xe máy đô thị lớn nhất cả nước: mật độ cửa hàng cao dẫn đến giá cạnh tranh nhất nước, văn hóa giao xe tận nơi trong 15–30 phút, phụ thu cao điểm lễ 30–50%, kèm khung kiểm định xe trước khi nhận ở đô thị đông xe container/xe tải.",
+  "notes": "actual_service_area=informational_only: KHÔNG giới thiệu cửa hàng, KHÔNG địa chỉ/sđt bịa, giá chỉ ở dạng dải tham khảo thị trường."
+}

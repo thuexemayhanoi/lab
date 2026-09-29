@@ -1049,7 +1049,15 @@ test('factory: throughput ledger/report use real events only (no fabricated rate
   assert.strictEqual(FACT(['reports'], SB).status, 0);
   const thr = JSON.parse(fs.readFileSync(path.join(SB, 'reports', 'factory', 'throughput.json'), 'utf8'));
   assert.ok(typeof thr.chunks_completed === 'number' && thr.chunks_completed >= 0);
-  assert.strictEqual(thr.effective_articles_per_hour, null, 'no rate without ≥2 real measured events');
+  // no fabricated rates: the report must stay null while fewer than 2 real
+  // measured publish events exist, and expose the REAL measured rate (a
+  // positive number) once the ledger actually holds >= 2 of them.
+  if ((thr.publish_operations || 0) < 2) {
+    assert.strictEqual(thr.effective_articles_per_hour, null, 'no rate without ≥2 real measured events');
+  } else {
+    assert.ok(Number.isFinite(thr.effective_articles_per_hour) && thr.effective_articles_per_hour > 0,
+      'rate from ≥2 real measured publish events must be a positive number');
+  }
   assert.match(thr.note, /no backfill/i);
 });
 test('draft safety: _drafts is gitignored and operator ops never commit drafts', () => {

@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-29T04:34:58.276Z",
+  "generated_at": "2026-09-29T07:02:12.847Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 13,
-    "PLANNED": 9987
+    "PUBLISHED": 23,
+    "PLANNED": 9977
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 7,
-      "PLANNED": 4993
+      "PUBLISHED": 17,
+      "PLANNED": 4983
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -38,7 +38,7 @@
   "phase": "PRODUCTION",
   "active_chunk": [],
   "last_completed_id": "A09401",
-  "next_claimable_id": "A00005",
+  "next_claimable_id": "A00015",
   "blocked": [],
   "published": [
     {
@@ -64,6 +64,66 @@
       "pk": "thuê xe máy Đà Nẵng",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-da-nang/"
+    },
+    {
+      "id": "A00005",
+      "pk": "thuê xe máy TP.HCM",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-tp-hcm/"
+    },
+    {
+      "id": "A00006",
+      "pk": "thuê xe máy Cần Thơ",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-can-tho/"
+    },
+    {
+      "id": "A00007",
+      "pk": "thuê xe máy Lai Châu",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-lai-chau/"
+    },
+    {
+      "id": "A00008",
+      "pk": "thuê xe máy Điện Biên",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-dien-bien/"
+    },
+    {
+      "id": "A00009",
+      "pk": "thuê xe máy Sơn La",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-son-la/"
+    },
+    {
+      "id": "A00010",
+      "pk": "thuê xe máy Lạng Sơn",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-lang-son/"
+    },
+    {
+      "id": "A00011",
+      "pk": "thuê xe máy Cao Bằng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-cao-bang/"
+    },
+    {
+      "id": "A00012",
+      "pk": "thuê xe máy Tuyên Quang",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-tuyen-quang/"
+    },
+    {
+      "id": "A00013",
+      "pk": "thuê xe máy Lào Cai",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-lao-cai/"
+    },
+    {
+      "id": "A00014",
+      "pk": "thuê xe máy Thái Nguyên",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-thai-nguyen/"
     },
     {
       "id": "A00052",

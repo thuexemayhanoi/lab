@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-29T04:34:57.894Z",
-  "audited": 13,
+  "generated": "2026-09-29T07:02:23.109Z",
+  "audited": 23,
   "weights": {
     "depth": 25,
     "fact": 20,
@@ -11,8 +11,8 @@
     "tech": 5
   },
   "summary": {
-    "avg_total": 95.6,
-    "min_total": 94,
+    "avg_total": 93.4,
+    "min_total": 87,
     "max_total": 100
   },
   "articles": [
@@ -20,7 +20,7 @@
       "article_id": "A00001",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ha-noi/",
       "primary_intent": "local/commercial · thuê xe máy Hà Nội",
-      "word_count": 2160,
+      "word_count": 2179,
       "canonical_qa_score": 100,
       "editorial": {
         "total": 96,
@@ -38,7 +38,7 @@
       "article_id": "A00002",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-hai-phong/",
       "primary_intent": "informational · thuê xe máy Hải Phòng",
-      "word_count": 2878,
+      "word_count": 2893,
       "canonical_qa_score": 100,
       "editorial": {
         "total": 100,
@@ -56,7 +56,7 @@
       "article_id": "A00003",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-hue/",
       "primary_intent": "informational · thuê xe máy Huế",
-      "word_count": 2431,
+      "word_count": 2447,
       "canonical_qa_score": 100,
       "editorial": {
         "total": 100,
@@ -74,7 +74,7 @@
       "article_id": "A00004",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-da-nang/",
       "primary_intent": "informational · thuê xe máy Đà Nẵng",
-      "word_count": 2329,
+      "word_count": 2371,
       "canonical_qa_score": 100,
       "editorial": {
         "total": 100,
@@ -89,10 +89,208 @@
       "issues": []
     },
     {
+      "article_id": "A00005",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-tp-hcm/",
+      "primary_intent": "informational · thuê xe máy TP.HCM",
+      "word_count": 2007,
+      "canonical_qa_score": 100,
+      "editorial": {
+        "total": 93,
+        "depth": 22,
+        "fact": 20,
+        "read": 11,
+        "seo": 15,
+        "link": 10,
+        "ux": 10,
+        "tech": 5
+      },
+      "issues": [
+        "wall_paragraphs:1"
+      ]
+    },
+    {
+      "article_id": "A00006",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-can-tho/",
+      "primary_intent": "informational · thuê xe máy Cần Thơ",
+      "word_count": 1769,
+      "canonical_qa_score": 100,
+      "editorial": {
+        "total": 90,
+        "depth": 18,
+        "fact": 20,
+        "read": 12,
+        "seo": 15,
+        "link": 10,
+        "ux": 10,
+        "tech": 5
+      },
+      "issues": []
+    },
+    {
+      "article_id": "A00007",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-lai-chau/",
+      "primary_intent": "informational · thuê xe máy Lai Châu",
+      "word_count": 2156,
+      "canonical_qa_score": 100,
+      "editorial": {
+        "total": 94,
+        "depth": 22,
+        "fact": 20,
+        "read": 12,
+        "seo": 15,
+        "link": 10,
+        "ux": 10,
+        "tech": 5
+      },
+      "issues": []
+    },
+    {
+      "article_id": "A00008",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-dien-bien/",
+      "primary_intent": "informational · thuê xe máy Điện Biên",
+      "word_count": 2129,
+      "canonical_qa_score": 100,
+      "editorial": {
+        "total": 92,
+        "depth": 22,
+        "fact": 20,
+        "read": 12,
+        "seo": 13,
+        "link": 10,
+        "ux": 10,
+        "tech": 5
+      },
+      "issues": [
+        "title_len:120"
+      ]
+    },
+    {
+      "article_id": "A00009",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-son-la/",
+      "primary_intent": "informational · thuê xe máy Sơn La",
+      "word_count": 1806,
+      "canonical_qa_score": 100,
+      "editorial": {
+        "total": 87,
+        "depth": 18,
+        "fact": 20,
+        "read": 11,
+        "seo": 13,
+        "link": 10,
+        "ux": 10,
+        "tech": 5
+      },
+      "issues": [
+        "wall_paragraphs:1",
+        "title_len:115"
+      ]
+    },
+    {
+      "article_id": "A00010",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-lang-son/",
+      "primary_intent": "informational · thuê xe máy Lạng Sơn",
+      "word_count": 1984,
+      "canonical_qa_score": 100,
+      "editorial": {
+        "total": 89,
+        "depth": 18,
+        "fact": 20,
+        "read": 11,
+        "seo": 15,
+        "link": 10,
+        "ux": 10,
+        "tech": 5
+      },
+      "issues": [
+        "wall_paragraphs:1"
+      ]
+    },
+    {
+      "article_id": "A00011",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-cao-bang/",
+      "primary_intent": "informational · thuê xe máy Cao Bằng",
+      "word_count": 2004,
+      "canonical_qa_score": 100,
+      "editorial": {
+        "total": 92,
+        "depth": 22,
+        "fact": 20,
+        "read": 12,
+        "seo": 13,
+        "link": 10,
+        "ux": 10,
+        "tech": 5
+      },
+      "issues": [
+        "title_len:113"
+      ]
+    },
+    {
+      "article_id": "A00012",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-tuyen-quang/",
+      "primary_intent": "informational · thuê xe máy Tuyên Quang",
+      "word_count": 1924,
+      "canonical_qa_score": 100,
+      "editorial": {
+        "total": 87,
+        "depth": 18,
+        "fact": 20,
+        "read": 11,
+        "seo": 13,
+        "link": 10,
+        "ux": 10,
+        "tech": 5
+      },
+      "issues": [
+        "wall_paragraphs:1",
+        "title_len:111"
+      ]
+    },
+    {
+      "article_id": "A00013",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-lao-cai/",
+      "primary_intent": "informational · thuê xe máy Lào Cai",
+      "word_count": 2068,
+      "canonical_qa_score": 100,
+      "editorial": {
+        "total": 93,
+        "depth": 22,
+        "fact": 20,
+        "read": 11,
+        "seo": 15,
+        "link": 10,
+        "ux": 10,
+        "tech": 5
+      },
+      "issues": [
+        "wall_paragraphs:1"
+      ]
+    },
+    {
+      "article_id": "A00014",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-thai-nguyen/",
+      "primary_intent": "informational · thuê xe máy Thái Nguyên",
+      "word_count": 1962,
+      "canonical_qa_score": 100,
+      "editorial": {
+        "total": 88,
+        "depth": 18,
+        "fact": 20,
+        "read": 12,
+        "seo": 13,
+        "link": 10,
+        "ux": 10,
+        "tech": 5
+      },
+      "issues": [
+        "title_len:111"
+      ]
+    },
+    {
       "article_id": "A00052",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-noi-bai/",
       "primary_intent": "local · thuê xe máy gần Sân bay quốc tế Nội Bài",
-      "word_count": 2286,
+      "word_count": 2305,
       "canonical_qa_score": 100,
       "editorial": {
         "total": 95,
@@ -112,7 +310,7 @@
       "article_id": "A00097",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-honda-vision-ha-noi/",
       "primary_intent": "informational · thuê Honda Vision Hà Nội",
-      "word_count": 2099,
+      "word_count": 2118,
       "canonical_qa_score": 100,
       "editorial": {
         "total": 94,
@@ -130,7 +328,7 @@
       "article_id": "A00465",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/",
       "primary_intent": "comparison · Vision hay Air Blade nên thuê dòng nào",
-      "word_count": 2120,
+      "word_count": 2132,
       "canonical_qa_score": 100,
       "editorial": {
         "total": 94,

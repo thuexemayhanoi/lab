@@ -1,0 +1,28 @@
+{
+  "article_id": "A00008",
+  "primary_keyword": "thuê xe máy Điện Biên",
+  "secondary_keywords": ["cho thuê xe máy Điện Biên", "thuê xe máy Điện Biên Phủ", "thuê xe máy giá rẻ Điện Biên", "thuê xe đi Điện Biên Phủ"],
+  "search_intent": "informational",
+  "research_date": "2026-09-29",
+  "geo_entities": ["Điện Biên", "Điện Biên Phủ", "cửa khẩu Tây Trang", "mặt trận Điện Biên Phủ", "Tây Bắc", "ruộng bậc thang Mường Thanh"],
+  "vehicle_entities": ["xe số phổ thông", "xe tay ga", "xe côn tay"],
+  "brand_entities": ["Honda", "Yamaha"],
+  "model_entities": ["Wave", "Sirius", "Vision", "Air Blade"],
+  "questions_found": [
+    "Điện Biên Phủ có cho thuê xe máy không?",
+    "giá thuê xe máy ở Điện Biên bao nhiêu?",
+    "từ Điện Biên Phủ đi cửa khẩu Tây Trang bao xa, đường có dễ đi không?",
+    "xe cho thuê ở Điện Biên có cũ không, cần kiểm tra gì?",
+    "đi Điện Biên mùa nào đẹp?"
+  ],
+  "related_queries": ["bảng giá thuê xe máy Điện Biên 2026", "thuê xe máy gần bến xe Điện Biên Phủ", "kinh nghiệm du lịch Điện Biên tự túc", "phượt Điện Biên"],
+  "serp_patterns": "SERP: bài 'top 5 địa chỉ' + trang bảng giá theo tháng ghi nhận du lịch chưa phát triển mạnh nên xe cho thuê khá cũ, giá thuê ngày cao hơn mặt bằng chung. Thực thể lặp: Điện Biên Phủ, cửa khẩu Tây Trang, bản Kéo, các di tích lịch sử. Intent informational: cẩm nang thuê xe ở tỉnh du lịch lịch sử — xe cũ là rủi ro chính cần dạy kiểm tra.",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://vietnam.travel/", "source_domain": "vietnam.travel", "date_accessed": "2026-09-29", "claim_supported": "tham khảo chung về du lịch Điện Biên, di tích lịch sử"}
+  ],
+  "existing_internal_pages": ["/lab/thue-xe-may/", "/lab/kinh-nghiem/", "/lab/ve-chung-toi/", "/lab/thue-xe-may/thue-xe-may-lai-chau/", "/lab/kinh-nghiem/lop-xe-may-cac-loai-va-cach-chon/"],
+  "potential_cannibalization": "CG-rental-loc-dien-bien: nhóm gốc của tỉnh, không trùng bài khác.",
+  "unique_angle": "Thuê xe tại tỉnh du lịch lịch sử: chất lượng xe trung bình cũ hơn điểm du lịch lớn, quãng đường đi cửa khẩu Tây Trang và các di tích dài; bài tập trung vào checklist kiểm định xe cũ + kế hoạch tuyến ngày (thành phố – di tích – cửa khẩu).",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; mọi địa danh là di tích/địa danh nổi tiếng có thật, không ghi khoảng cách chính xác ảo — dùng 'ước tính phổ biến'."
+}

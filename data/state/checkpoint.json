@@ -1,15 +1,22 @@
 {
-  "last_run": "2026-09-29T04:24:56.507Z",
+  "last_run": "2026-09-29T06:58:20.205Z",
   "phase": "PRODUCTION",
   "matrix_rows": 10000,
-  "published_count": 13,
+  "published_count": 23,
   "last_batch": [
-    "A00002",
-    "A00003",
-    "A00004"
+    "A00005",
+    "A00006",
+    "A00007",
+    "A00008",
+    "A00009",
+    "A00010",
+    "A00011",
+    "A00012",
+    "A00013",
+    "A00014"
   ],
   "last_completed_id": "A09401",
-  "next_claimable_id": "A00005",
+  "next_claimable_id": "A00015",
   "active_chunk": [],
-  "notes": "Published 3 articles."
+  "notes": "Published 10 articles."
 }

@@ -1,0 +1,28 @@
+{
+  "article_id": "A00009",
+  "primary_keyword": "thuê xe máy Sơn La",
+  "secondary_keywords": ["cho thuê xe máy Sơn La", "thuê xe máy Mộc Châu", "thuê xe máy giá rẻ Sơn La", "thuê xe đi Mộc Châu"],
+  "search_intent": "informational",
+  "research_date": "2026-09-29",
+  "geo_entities": ["Sơn La", "Mộc Châu", "quốc lộ 6", "cao nguyên Mộc Châu", "Tây Bắc", "hồ Sơn La"],
+  "vehicle_entities": ["xe số phổ thông", "xe tay ga", "xe côn tay"],
+  "brand_entities": ["Honda", "Yamaha"],
+  "model_entities": ["Wave", "Sirius", "Vision", "Exciter"],
+  "questions_found": [
+    "thuê xe máy ở Sơn La giá bao nhiêu?",
+    "Mộc Châu có cho thuê xe máy không?",
+    "chạy xe máy quốc lộ 6 lên Sơn La có khó không?",
+    "thuê xe ở Sơn La cần giấy tờ gì?",
+    "đi Mộc Châu mùa nào đẹp nhất?"
+  ],
+  "related_queries": ["bảng giá thuê xe máy Sơn La 2025", "thuê xe máy gần bến xe Sơn La", "kinh nghiệm phượt Mộc Châu", "thuê xe máy Tây Bắc giá rẻ"],
+  "serp_patterns": "SERP: danh bạ '5-7 địa chỉ' ghi nhận giá xe số phổ thông (Wave/Sirius) quanh ~100.000–125.000đ/ngày, cửa hàng rải từ thành phố Sơn La đến thị trấn Mộc Châu (phục vụ khách du lịch cao nguyên). Thực thể lặp: QL6, Mộc Châu, đồi chè. Intent informational: cẩm nang thị trường + kế hoạch tuyến cao nguyên.",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://vietnam.travel/", "source_domain": "vietnam.travel", "date_accessed": "2026-09-29", "claim_supported": "tham khảo chung về du lịch cao nguyên Mộc Châu, Sơn La"}
+  ],
+  "existing_internal_pages": ["/lab/thue-xe-may/", "/lab/kinh-nghiem/", "/lab/ve-chung-toi/", "/lab/thue-xe-may/thue-xe-may-lao-cai/", "/lab/sua-xe-may/bao-duong-xe-may-dinh-ky/"],
+  "potential_cannibalization": "CG-rental-loc-son-la: nhóm gốc của tỉnh, không trùng.",
+  "unique_angle": "Thuê xe dọc trục QL6 và cao nguyên Mộc Châu: hai thị trường con (thành phố Sơn La cung giá rẻ quanh bến xe vs Mộc Châu phục vụ mùa du lịch), khung chọn xe cho đường đèo dài + cao nguyên sương sớm, kèm lưu ý mùa đông lạnh.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng/địa chỉ; dải giá tham khảo từ SERP công khai."
+}

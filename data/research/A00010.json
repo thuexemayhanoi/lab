@@ -1,0 +1,28 @@
+{
+  "article_id": "A00010",
+  "primary_keyword": "thuê xe máy Lạng Sơn",
+  "secondary_keywords": ["cho thuê xe máy Lạng Sơn", "thuê xe máy giá rẻ Lạng Sơn", "thuê xe máy gần cửa khẩu", "thuê xe đi Lạng Sơn"],
+  "search_intent": "informational",
+  "research_date": "2026-09-29",
+  "geo_entities": ["Lạng Sơn", "thành phố Lạng Sơn", "cửa khẩu Hữu Nghị", "chợ Đông Kinh", "đồi Mẫu Yên Tử (đền Mẫu Lạng Sơn)", "quốc lộ 1A", "vải thiều", "na Chi Lăng"],
+  "vehicle_entities": ["xe số phổ thông", "xe tay ga", "xe đạp điện", "xe máy điện"],
+  "brand_entities": ["Honda", "Yamaha", "VinFast"],
+  "model_entities": ["Wave", "Sirius", "Vision", "Air Blade"],
+  "questions_found": [
+    "Lạng Sơn có cho thuê xe máy không, giá bao nhiêu?",
+    "thuê xe máy ở Lạng Sơn cần giấy tờ gì?",
+    "từ thành phố Lạng Sơn có chạy ra cửa khẩu Hữu Nghị được không?",
+    "mùa vải, mùa na ở Lạng Sơn đi lại thế nào?",
+    "thời tiết Lạng Sơn mùa đông lạnh ra sao khi đi xe?"
+  ],
+  "related_queries": ["bảng giá thuê xe máy Lạng Sơn 2026", "thuê xe máy gần bến xe Lạng Sơn", "kinh nghiệm du lịch Lạng Sơn tự túc", "chợ cửa khẩu Lạng Sơn"],
+  "serp_patterns": "SERP: danh bạ '6-8 địa điểm' + trang bảng giá ghi nhận giá xe số quanh ~130.000–150.000đ/ngày (cao hơn mặt bằng đồng bằng, ít cửa hàng, cạnh tranh thấp). Thực thể lặp: chợ Đông Kinh, cửa khẩu, mùa trái cây. Intent informational: cẩm nang thị trường biên giới.",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://vietnam.travel/", "source_domain": "vietnam.travel", "date_accessed": "2026-09-29", "claim_supported": "tham khảo chung về du lịch Lạng Sơn, chợ biên giới"}
+  ],
+  "existing_internal_pages": ["/lab/thue-xe-may/", "/lab/kinh-nghiem/", "/lab/ve-chung-toi/", "/lab/thue-xe-may/thue-xe-may-cao-bang/", "/lab/dang-ky-xe-may/dang-ky-xe-may-online/"],
+  "potential_cannibalization": "CG-rental-loc-lang-son: nhóm gốc của tỉnh; bài Cao Bằng khác tỉnh khác tuyến (QL3 vs QL1A/QL4A).",
+  "unique_angle": "Thị trường thuê xe vùng biên giới: ít cửa hàng → giá cao hơn đồng bằng, mô hình thuê tại khách sạn/nhà nghỉ phổ biến; trọng tâm là mùa trái cây (vải, na Chi Lăng), khí hậu mùa đông lạnh đặc trưng, và quy tắc đi lại khu vực cửa khẩu.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; không đưa quy định cửa khẩu dạng pháp lý — chỉ khuyến nghị thông thường (mang giấy tờ đầy đủ, hỏi kỹ khu vực được phép)."
+}

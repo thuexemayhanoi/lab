@@ -1,0 +1,28 @@
+{
+  "article_id": "A00011",
+  "primary_keyword": "thuê xe máy Cao Bằng",
+  "secondary_keywords": ["cho thuê xe máy Cao Bằng", "thuê xe máy giá rẻ Cao Bằng", "thuê xe đi thác Bản Giốc", "thuê xe máy Cao Bằng giao tận nơi"],
+  "search_intent": "informational",
+  "research_date": "2026-09-29",
+  "geo_entities": ["Cao Bằng", "thác Bản Giốc", "huyện Trùng Khánh", "cầu Bằng Giang", "quốc lộ 3", "địa đầu Tổ quốc", "đèo lạnh vùng núi đá"],
+  "vehicle_entities": ["xe số phổ thông", "xe tay ga", "xe côn tay", "xe semi-automatic"],
+  "brand_entities": ["Honda", "Yamaha"],
+  "model_entities": ["Wave", "Sirius", "Vision", "Exciter", "Winner"],
+  "questions_found": [
+    "Cao Bằng có cho thuê xe máy không?",
+    "thuê xe máy ở Cao Bằng giá bao nhiêu một ngày?",
+    "từ thành phố Cao Bằng chạy xe lên thác Bản Giốc có xa không?",
+    "thuê xe ở Cao Bằng có được đi Trùng Khánh, các huyện xa không?",
+    "đường Cao Bằng có khó đi không, cần xe loại nào?"
+  ],
+  "related_queries": ["bảng giá thuê xe máy Cao Bằng 2026", "thuê xe máy gần bến xe Cao Bằng", "kinh nghiệm phượt Cao Bằng Bản Giốc", "thuê xe máy đi Bản Giốc tự túc"],
+  "serp_patterns": "SERP: trang dịch vụ 'chinh phục mọi nẻo đường' + danh bạ '10 địa chỉ kèm bảng giá' + bài cập nhật địa điểm. Thực thể lặp: thác Bản Giốc, cầu Bằng Giang, QL3, đường núi đá. Intent informational: cẩm nang thuê xe cho tuyến núi phía đông bắc.",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://vietnam.travel/", "source_domain": "vietnam.travel", "date_accessed": "2026-09-29", "claim_supported": "tham khảo chung về du lịch Cao Bằng, thác Bản Giốc"}
+  ],
+  "existing_internal_pages": ["/lab/thue-xe-may/", "/lab/kinh-nghiem/", "/lab/ve-chung-toi/", "/lab/thue-xe-may/thue-xe-may-lang-son/", "/lab/cuu-ho-xe-may/cuu-ho-xe-may-thu-duc/"],
+  "potential_cannibalization": "CG-rental-loc-cao-bang: nhóm gốc của tỉnh, không trùng.",
+  "unique_angle": "Thuê xe cho tuyến núi đá đông bắc: quãng thành phố Cao Bằng – Bản Giốc dài và có đèo, bài tập trung chọn xe có phanh/tải tốt, kiểm tra lốp trước tuyến dài, chính sách 'đi huyện xa phải hỏi trước', và mùa mưa đá trơn.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; liên kết nội bộ tới bài cứu hộ trong mục 'xe hỏng giữa đường cần xử lý thế nào'."
+}
