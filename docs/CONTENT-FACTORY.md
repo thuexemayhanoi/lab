@@ -58,6 +58,16 @@ factory.js reports            # regenerate reports/factory/*.json
 - Only one writer mutates production (writer lock + transaction marker).
 - Bootstrap publication cap: 10 pilot articles (`config/content-factory.json`).
 - Never rewrite PUBLISHED rows silently.
+- Operator orchestration (see `docs/PROC-PUBLISH.md` "Operator channel"):
+  whitelist command contract via `scripts/factory/operator.js`
+  (`data/state/operator-command.json`), recover-first, resume-before-claim,
+  QA scopes fast/deep/full (thresholds never change), final-tree verify +
+  safe push, single coordinator `lab-factory-production`.
+- Throughput ledger: `data/state/throughput-ledger.json` records REAL measured
+  events only (prepare/research/qa/publish, appended by the canonical ops).
+  `factory.js reports` derives `reports/factory/throughput.json` from it —
+  no backfill, no estimates; `effective_articles_per_hour` stays null until
+  ≥2 real publish events span a measurable window.
 
 ## Phase lifecycle: PILOT → PRODUCTION
 

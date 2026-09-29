@@ -43,7 +43,7 @@ const HUBS=GROUPS.flatMap(g=>g.children.map(c=>({
  fullTitle:c.fullTitle||c.nav})));
 const CLUSTER_SLUGS=['thue-xe-may','cuu-ho-xe-may','sua-xe-may','bang-lai-xe-may','dang-ky-xe-may','xe-may-dien','phu-tung'];
 const HUB_TITLE={'thue-xe-may':'Thuê xe máy','cuu-ho-xe-may':'Cứu hộ xe máy','sua-xe-may':'Sửa chữa & bảo dưỡng xe máy','bang-lai-xe-may':'Bằng lái xe máy','dang-ky-xe-may':'Đăng ký xe máy','xe-may-dien':'Xe máy điện','phu-tung':'Phụ tùng xe máy','kinh-nghiem':'Kinh nghiệm xe máy'};
-const HUB_DESC={'thue-xe-may':'Kinh nghiệm, giá và hướng dẫn thuê xe máy tại các tỉnh thành Việt Nam.','cuu-ho-xe-may':'Cách tìm và chọn cứu hộ xe máy nhanh, an toàn khi gặp sự cố trên đường.','sua-xe-may':'Hướng dẫn sửa chữa, bảo dưỡng xe máy các dòng phổ thông và xe điện.','bang-lai-xe-may':'Hồ sơ, lệ phí, quy trình thi bằng lái xe máy A1 và thủ tục đổi/cấp lại.','dang-ky-xe-may':'Thủ tục đăng ký, sang tên, lệ phí trước bạ và biển số xe máy theo quy định hiện hành.','xe-may-dien':'Xe máy điện Việt Nam: giá, pin, trạm sạc, chi phí và so sánh với xe xăng.','phu-tung':'Cách chọn lốp, ắc quy, bugi, nhông xích, dầu máy và phụ tùng xe điện.','kinh-nghiem':'Kinh nghiệm sử dụng, lái xe an toàn và vận hành xe máy dài hạn.'};
+const HUB_DESC={'thue-xe-may':'Tổng hợp hướng dẫn thuê xe máy thực tế: chuẩn bị giấy tờ, chọn dòng xe, kiểm tra xe trước khi nhận và xử lý các tình huống phát sinh khi thuê xe.','cuu-ho-xe-may':'Hướng dẫn xử lý khi xe máy hỏng giữa đường: nhận biết hỏng hóc tự xử được, cách gọi và mô tả tình huống với cứu hộ, và cách tránh những bẫy phí phát sinh.','sua-xe-may':'Hướng dẫn sửa chữa và bảo dưỡng xe máy: lịch bảo dưỡng theo mốc thời gian và cây số, nhận biết phụ tùng tới hạn và cách làm việc hiệu quả với thợ sửa xe.','bang-lai-xe-may':'Hướng dẫn trọn vòng đời bằng lái xe máy A1: hồ sơ thi, ôn tập, lệ phí và quy trình thi, cùng thủ tục đổi bằng, cấp lại khi mất và quy định xử phạt hiện hành.','dang-ky-xe-may':'Thủ tục đăng ký xe máy theo quy định hiện hành: đăng ký xe mới, sang tên khi mua bán, cấp đổi biển số, nộp lệ phí trước bạ và xu hướng số hóa thủ tục.','xe-may-dien':'Phân tích xe máy điện Việt Nam theo góc nhìn chi phí: giá mua, chi phí sạc, độ bền pin, trạm sạc và điều cân nhắc trước khi chuyển từ xe xăng sang xe điện.','phu-tung':'Cách chọn và thay phụ tùng xe máy đúng lúc: lốp, ắc quy, bugi, nhông xích, dầu máy — dấu hiệu tới hạn và lựa chọn giữa hàng chính hãng và hàng thay thế.','kinh-nghiem':'Tổng hợp kinh nghiệm đi xe hai bánh: kỹ năng lái an toàn, vận hành xe máy dài hạn và cách chuẩn bị cho các chuyến đi xa tại Việt Nam.'};
 // articles belonging to a child hub (kinh-nghiem = catch-all for non-cluster slugs)
 const hubArts=slug=>published.filter(r=>r.output_path.startsWith(slug+'/')||(slug==='kinh-nghiem'&&!CLUSTER_SLUGS.some(x=>r.output_path.startsWith(x+'/'))));
 const layout=(title,content,canonical,extra,desc)=>{
@@ -63,6 +63,10 @@ const layout=(title,content,canonical,extra,desc)=>{
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Bản Đồ Xe 2 Bánh — cẩm nang xe máy Việt Nam">
+<meta property="og:site_name" content="Bản Đồ Xe 2 Bánh Việt Nam">
+<meta property="og:locale" content="vi_VN">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/lab/assets/favicon.svg">
 <meta name="google-site-verification" content="OIuEOzJFgjt8nxN2rgZaFNIW2n3fEMrC8iSrZdFHGDI" />
 ${extra||''}
 <link rel="stylesheet" href="/lab/assets/style.css">
@@ -88,7 +92,7 @@ const ogFor=html=>{
  const t=(html.match(/<title>([\s\S]*?)<\/title>/)||[])[1]||'';
  const d=(html.match(/<meta name="description" content="([^"]*)"/)||[])[1]||t;
  const u=(html.match(/<link rel="canonical" href="([^"]*)"/)||[])[1]||'';
- return `<meta property="og:title" content="${esc(t)}">\n<meta property="og:description" content="${esc(d)}">\n<meta property="og:url" content="${u}">\n<meta property="og:type" content="article">\n<meta property="og:image" content="${cfg.base_url}assets/og-image.svg">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:alt" content="Bản Đồ Xe 2 Bánh — cẩm nang xe máy Việt Nam">\n`;
+ return `<meta property="og:title" content="${esc(t)}">\n<meta property="og:description" content="${esc(d)}">\n<meta property="og:url" content="${u}">\n<meta property="og:type" content="article">\n<meta property="og:image" content="${cfg.base_url}assets/og-image.svg">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:alt" content="Bản Đồ Xe 2 Bánh — cẩm nang xe máy Việt Nam">\n<meta property="og:site_name" content="Bản Đồ Xe 2 Bánh Việt Nam">\n<meta property="og:locale" content="vi_VN">\n<meta name="twitter:card" content="summary_large_image">\n<link rel="icon" type="image/svg+xml" href="/lab/assets/favicon.svg">\n`;
 };
 const withShell=html=>html
  .replace(SHELL_RE.head,headerHtml().replace(/\n\s+/g,'\n  '))
@@ -209,7 +213,7 @@ fs.writeFileSync(path.join(SITE,'dieu-khoan-su-dung','index.html'),layout('Đi�
 <h2>Liên hệ</h2>
 <p>Thắc mắc về nội dung hoặc điều khoản: xin dùng thông tin trên trang <a href="/lab/lien-he/">Liên hệ</a>.</p>
 <p class="fine">Cập nhật lần cuối: 2026-09-28.</p>`,cfg.base_url+'dieu-khoan-su-dung/',null,
-'Điều khoản sử dụng của Bản Đồ Xe 2 Bánh Việt Nam: nội dung thông tin, nguồn chính thức, trách nhiệm người đọc.'));
+'Điều khoản sử dụng của Bản Đồ Xe 2 Bánh Việt Nam: nội dung thông tin, nguồn chính thức và trách nhiệm người đọc khi sử dụng thông tin trên trang.'));
 // Contact page — canonical trust/NAP page built from verified business facts
 // (config/business-facts.json is the single source of truth; nothing invented here).
 fs.mkdirSync(path.join(SITE,'lien-he'));
@@ -333,6 +337,7 @@ fs.writeFileSync(path.join(SITE,'404.html'),`<!DOCTYPE html>
 <title>Không tìm thấy trang — ${esc(BRAND_FULL)}</title>
 <meta name="description" content="Trang bạn tìm không tồn tại hoặc đã được di chuyển.">
 <meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/svg+xml" href="/lab/assets/favicon.svg">
 <link rel="stylesheet" href="/lab/assets/style.css">
 </head>
 <body>

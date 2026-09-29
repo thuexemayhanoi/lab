@@ -1,0 +1,30 @@
+{
+  "article_id": "A00002",
+  "primary_keyword": "thuê xe máy Hải Phòng",
+  "secondary_keywords": ["cho thuê xe máy Hải Phòng", "thuê xe máy ở Hải Phòng", "giá thuê xe máy Hải Phòng", "thuê xe tay ga Hải Phòng"],
+  "search_intent": "informational",
+  "research_date": "2026-09-29",
+  "geo_entities": ["Hải Phòng", "Ngô Quyền", "Lê Chân", "Hồng Bàng", "đồ sân Đồ Sơn", "cảng Hải Phòng", "nhà hát lớn Hải Phòng"],
+  "vehicle_entities": ["xe số", "xe tay ga", "xe côn tay"],
+  "brand_entities": ["Honda", "Yamaha"],
+  "model_entities": ["Vision", "Sirius", "Air Blade", "Exciter"],
+  "questions_found": [
+    "thuê xe máy Hải Phòng giá bao nhiêu một ngày?",
+    "thuê xe máy ở Hải Phòng cần giấy tờ gì?",
+    "đặt cọc bao nhiêu khi thuê xe máy tại Hải Phòng?",
+    "nên thuê xe số hay xe tay ga khi đi Hải Phòng?",
+    "thuê xe máy ở Hải Phòng có đi Đồ Sơn, Cát Bà được không?",
+    "thuê xe máy Hải Phòng có giao xe tận nơi không?"
+  ],
+  "related_queries": ["bảng giá thuê xe máy Hải Phòng", "thuê xe máy gần ga Hải Phòng", "cho thuê xe máy Đồ Sơn", "thuê Honda Vision Hải Phòng"],
+  "serp_patterns": "SERP hỗn hợp: trang dịch vụ cho thuê địa phương (bảng giá, hotline, giao tận nơi), bài tổng hợp địa chỉ của các aggregator du lịch (motogo, mia, vexere), bài kinh nghiệm. Intent chủ đạo informational — người tìm muốn biết giá, giấy tờ, đặt cọc và lưu ý trước khi thuê ở một thành phố xa nơi mình sống.",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hai-phong.vi", "source_domain": "vexere.com", "date_accessed": "2026-09-29", "claim_supported": "bảng giá tham khảo và giấy tờ cần có (CCCD) khi thuê xe máy tại Hải Phòng"},
+    {"source_url": "https://motogo.vn/thue-xe-may-hai-phong/", "source_domain": "motogo.vn", "date_accessed": "2026-09-29", "claim_supported": "mức giá phổ biến từ khoảng 80.000đ/ngày với xe số, các đơn vị có dịch vụ giao tận nơi"}
+  ],
+  "existing_internal_pages": ["/lab/thue-xe-may/", "/lab/thue-xe-may/thue-xe-may-ha-noi/", "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/", "/lab/kinh-nghiem/"],
+  "potential_cannibalization": "CG-rental-loc-hai-phong là nhóm gốc. Bài Hà Nội (A00001) thuộc nhóm khác và được phép mang thông tin dịch vụ của chủ sở hữu; bài này KHÔNG được giả dịch vụ địa phương. Các bài POI (ga, sân bay) và model (Vision) có intent khác biệt — không trùng.",
+  "unique_angle": "Bài chỉ dẫn thực dụng dành cho người ĐI TỪ XA đến Hải Phòng: giải thích dải giá thị trường (xe số ~80–100k, xe ga ~120–150k, côn tay cao hơn), giấy tờ (CCCD/hộ chiếu, GPLX), đặt cọc phổ biến 100k–500k và khi nào bị yêu cầu cọc cao hơn, cùng cảnh báo lỗi thường gặp (không kiểm tra xe trước, không chụp hình hiện trạng). Nhấn mạnh: chủ sở hữu chỉ phục vụ tại Hà Nội — bài này không bán dịch vụ, mọi giá là giá tham khảo thị trường.",
+  "notes": "actual_service_area=informational_only: KHÔNG dùng NAP, KHÔNG có claim 'chúng tôi' về dịch vụ tại Hải Phòng, KHÔNG LocalBusiness schema. Mọi mệnh đề giá phải là dải tham khảo từ nguồn, không phải báo giá."
+}

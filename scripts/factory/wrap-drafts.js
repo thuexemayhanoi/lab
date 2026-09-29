@@ -48,6 +48,15 @@ for (const f of fs.readdirSync(path.join(ROOT, '_drafts'))) {
       { '@type': 'ListItem', position: 2, name: esc(r.parent_topic), item: cfg.base_url + r.output_path.split('/')[0] + '/' },
       { '@type': 'ListItem', position: 3, name: title, item: r.canonical } ] } ] };
   const bodyWithMeta = body.replace(/(<\/h1>)/, `$1\n<p class="postmeta">Cập nhật ${date}</p>`);
+  // canonical durable-archive format (matches data/published/A00001.html):
+  //  - a visible breadcrumb nav at the top of main — build-site decorateArticle
+  //    keys off it and the BreadcrumbList JSON-LD must match what is displayed
+  //  - the chatbot is RUNTIME chrome injected by the current shell at build
+  //    time (withShell replaces the footer); it must NOT live in the archive
+  const hubSlug = r.output_path.split('/')[0];
+  const hubTitle = String(r.parent_topic || hubSlug).toLowerCase().replace(/^./, c => c.toUpperCase());
+  const breadcrumb = `<nav class="breadcrumb"><a href="/lab/">Trang chủ</a> › <a href="/lab/${hubSlug}/">${esc(hubTitle)}</a> › ${title}</nav>`;
+  const footerNoChat = shell.footerHtml(facts).replace(/<button class="chat-launcher"[\s\S]*$/, '');
   const html = `<!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -61,8 +70,9 @@ for (const f of fs.readdirSync(path.join(ROOT, '_drafts'))) {
 </head>
 <body>
 ${shell.headerHtml()}
-<main class="wrap article">${bodyWithMeta}</main>
-${shell.footerHtml(facts)}
+<main class="wrap article">${breadcrumb}
+${bodyWithMeta}</main>
+${footerNoChat}
 <script src="/lab/assets/menu.js" defer></script>
 </body>
 </html>`;

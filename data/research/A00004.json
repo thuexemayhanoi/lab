@@ -1,0 +1,31 @@
+{
+  "article_id": "A00004",
+  "primary_keyword": "thuê xe máy Đà Nẵng",
+  "secondary_keywords": ["cho thuê xe máy Đà Nẵng", "thuê xe máy ở Đà Nẵng", "giá thuê xe máy Đà Nẵng", "thuê xe máy Đà Nẵng đi Hội An"],
+  "search_intent": "informational",
+  "research_date": "2026-09-29",
+  "geo_entities": ["Đà Nẵng", "Hải Châu", "Sơn Trà", "Ngũ Hành Sơn", "bãi biển Mỹ Khê", "cầu Rồng", "Hội An", "đèo Hải Vân"],
+  "vehicle_entities": ["xe số", "xe tay ga", "xe côn tay"],
+  "brand_entities": ["Honda", "Yamaha"],
+  "model_entities": ["Vision", "Air Blade", "Sirius", "Winner"],
+  "questions_found": [
+    "thuê xe máy Đà Nẵng giá bao nhiêu một ngày?",
+    "thuê xe máy ở Đà Nẵng cần giấy tờ gì?",
+    "thuê xe máy Đà Nẵng có đi Hội An được không, tính phí thế nào?",
+    "khách nước ngoài thuê xe máy ở Đà Nẵng cần gì?",
+    "thuê xe máy Đà Nẵng có giao xe tận sân bay/khách sạn không?",
+    "đặt cọc bao nhiêu và khi nào được hoàn?"
+  ],
+  "related_queries": ["bảng giá thuê xe máy Đà Nẵng", "thuê xe máy gần cầu Rồng", "thuê xe máy Đà Nẵng đi Sơn Trà", "cho thuê xe tự lái Đà Nẵng"],
+  "serp_patterns": "SERP hỗn hợp: trang dịch vụ tự lái địa phương (giá 79–150k, giao tận nơi, thủ tục 5–10 phút), bài thủ tục/kinh nghiệm, aggregator. Intent chủ đạo informational — người tìm là du khách (kể cả khách nước ngoài) muốn giá, giấy tờ, quy tắc đi xa (Hội An, Sơn Trà) và điều kiện đặt cọc.",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi", "source_domain": "vexere.com", "date_accessed": "2026-09-29", "claim_supported": "giấy tờ cần có khi thuê xe máy ở Đà Nẵng: GPLX, CCCD/CMND; hộ chiếu với khách nước ngoài"},
+    {"source_url": "https://vietnamtravelcar.com.vn/thue-xe-may-da-nang", "source_domain": "vietnamtravelcar.com.vn", "date_accessed": "2026-09-29", "claim_supported": "mức giá phổ biến từ khoảng 79.000đ/ngày, thủ tục chỉ cần CCCD/CMND + GPLX, hoàn tất trong 5–10 phút"},
+    {"source_url": "https://thuexemaybaoan.com/thue-xe-may-da-nang/", "source_domain": "thuexemaybaoan.com", "date_accessed": "2026-09-29", "claim_supported": "đặt cọc phổ biến tối thiểu ~500.000đ, hoàn cọc khi trả xe"}
+  ],
+  "existing_internal_pages": ["/lab/thue-xe-may/", "/lab/thue-xe-may/thue-xe-may-ha-noi/", "/lab/kinh-nghiem/", "/lab/xe-may-dien/xe-may-dien-co-nen-mua-khong/"],
+  "potential_cannibalization": "CG-rental-loc-da-nang là nhóm gốc; bài Huế (A00003) nhóm khác. Bài xe máy điện (A08201) nói về mua/chi phí — intent khác. Không trùng lặp.",
+  "unique_angle": "Bài cho du khách Đà Nẵng — thành phố du lịch xe máy mạnh nhất miền Trung: dải giá thị trường (xe số ~79–100k, ga ~100–150k), giấy tờ cho người Việt (CCCD + GPLX) và riêng cho khách nước ngoài (hộ chiếu + GPLD quốc tế — lưu ý GPLD không thay được GPLX Việt Nam), đặt cọc ~500k và cách kiểm tra hiện trạng xe (chụp video vòng xe), cùng mục đi xa: Hội An/Sơn Trà thường được phép nhưng một số nơi chặn đèo Hải Vân hoặc tính thêm. Bài không bán dịch vụ: chủ sở hữu chỉ phục vụ tại Hà Nội.",
+  "notes": "actual_service_area=informational_only: KHÔNG NAP, KHÔNG claim dịch vụ tại Đà Nẵng, KHÔNG LocalBusiness schema. Giá là dải tham khảo thị trường có nguồn."
+}
