@@ -861,6 +861,25 @@ test('factory: prepare-next refuses while unfinished chunk exists (resume first)
   assert.notStrictEqual(r.status, 0, 'must refuse to claim new work');
   assert.match(r.stderr, /unfinished chunk present/);
 });
+test('regression: REVIEW rows are unfinished — prepare-next refuses (repair first)', () => {
+  // REVIEW (qa 80–89) must NOT count as completed: isolate it as the only
+  // non-terminal state in the sandbox matrix and require the same refusal.
+  sbStatus('A00002', 'PUBLISHED'); // undo the WRITING mutation from the test above
+  sbStatus('A00005', 'REVIEW');
+  const r = FACT(['prepare-next', '3'], SB);
+  assert.notStrictEqual(r.status, 0, 'REVIEW must block claiming a new chunk');
+  assert.match(r.stderr, /unfinished chunk present/);
+  assert.match(r.stderr, /A00005=REVIEW/, 'refusal must name the REVIEW row');
+  // restore sandbox state for the tests below
+  sbStatus('A00005', 'PLANNED');
+  sbStatus('A00002', 'WRITING');
+});
+test('regression: operator publish ids capped at CHUNK (max 10)', () => {
+  const eleven = Array.from({ length: 11 }, (_, i) => 'A' + String(i + 5).padStart(5, '0')).join(',');
+  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'publish', ids: eleven })], SB).status, 0, '11 ids must be refused');
+  const ten = eleven.split(',').slice(0, 10).join(',');
+  assert.strictEqual(OP(['validate', sbCmdFile({ op: 'publish', ids: ten })], SB).status, 0, '10 ids allowed');
+});
 test('factory: prepare-next honors count 1..10', () => {
   assert.notStrictEqual(FACT(['prepare-next', '11'], SB).status, 0, 'count>CHUNK refused');
   assert.notStrictEqual(FACT(['prepare-next', '0'], SB).status, 0, 'count<1 refused');
@@ -875,6 +894,69 @@ test('factory: publish refuses non-PASS rows (gate never lowers)', () => {
   assert.match(r.stderr, /publish pre-check|not PASS/);
   const after = fs.readFileSync(path.join(SB, 'data', 'content-matrix.csv'), 'utf8');
   assert.strictEqual(before, after, 'matrix must be untouched by refused publish');
+});
+test('regression: qa scores REVIEW rows (REVIEW is not terminal — repair path)', () => {
+  sbStatus('A00002', 'REVIEW');
+  fs.mkdirSync(path.join(SB, '_drafts'), { recursive: true });
+  fs.writeFileSync(path.join(SB, '_drafts', 'A00002.html'), '<h1>x</h1>');
+  const r = FACT(['qa', 'A00002'], SB);
+  assert.strictEqual(r.status, 0, r.stderr);
+  assert.doesNotMatch(r.stdout + r.stderr, /protected/, 'REVIEW must be scorable, never protected/terminal');
+  assert.match(r.stdout, /QA A00002 score=/);
+  sbStatus('A00002', 'WRITING'); // restore for the tests below
+});
+test('regression: publish enforces CHUNK=10 (REFUSE >10 ids; no ids => at most the current chunk)', () => {
+  // Disposable sandbox — this test actually publishes inside the copy only.
+  const SB3 = path.join(os.tmpdir(), 'lab-chunk-sandbox-' + process.pid);
+  fs.rmSync(SB3, { recursive: true, force: true });
+  fs.cpSync(ROOT, SB3, { recursive: true, filter: (s) => {
+    const rel = path.relative(ROOT, s);
+    return rel !== '_drafts' && !rel.startsWith('_drafts' + path.sep)
+      && !path.basename(s).startsWith('content-matrix.csv.part');
+  } });
+  try {
+    const parseLine = l => { const out = []; let cur = '', q = false;
+      for (let i = 0; i < l.length; i++) { const c = l[i];
+        if (q) { if (c === '"') { if (l[i+1] === '"') { cur += '"'; i++; } else q = false; } else cur += c; }
+        else { if (c === '"') q = true; else if (c === ',') { out.push(cur); cur = ''; } else cur += c; } }
+      out.push(cur); return out; };
+    const csvPath = path.join(SB3, 'data', 'content-matrix.csv');
+    const csvSet = (id, status) => {
+      const lines = fs.readFileSync(csvPath, 'utf8').split('\n');
+      const out = [lines[0]];
+      for (const l of lines.slice(1).filter(x => x.trim())) {
+        const c = parseLine(l);
+        if (c[0] === id) c[24] = status;
+        out.push(c.map(v => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v).join(','));
+      }
+      fs.writeFileSync(csvPath, out.join('\n'));
+    };
+    const ids = Array.from({ length: 11 }, (_, i) => 'A' + String(i + 5).padStart(5, '0'));
+    fs.mkdirSync(path.join(SB3, '_drafts'), { recursive: true });
+    ids.forEach(id => { csvSet(id, 'PASS'); fs.writeFileSync(path.join(SB3, '_drafts', id + '.html'), '<h1>x</h1>'); });
+    // 1) more than CHUNK explicit ids => REFUSE (never silently publish a prefix)
+    const before = fs.readFileSync(csvPath, 'utf8');
+    const r = spawnSync(process.execPath, [path.join(SB3, 'scripts', 'factory', 'factory.js'), 'publish', ...ids], { cwd: SB3, encoding: 'utf8' });
+    assert.notStrictEqual(r.status, 0, 'publish with 11 ids must REFUSE');
+    assert.match(r.stderr, /REFUSED/);
+    assert.match(r.stderr, /CHUNK=10/, 'refusal must state the chunk invariant');
+    assert.strictEqual(before, fs.readFileSync(csvPath, 'utf8'), 'refused publish must not touch the matrix');
+    const tx = JSON.parse(fs.readFileSync(path.join(SB3, 'data', 'state', 'transaction.json'), 'utf8'));
+    assert.strictEqual(tx.active, false, 'refusal must not leave a transaction open');
+    const lock = JSON.parse(fs.readFileSync(path.join(SB3, 'data', 'state', 'writer-lock.json'), 'utf8'));
+    assert.strictEqual(lock.locked, false, 'refusal must release the writer lock');
+    // 2) no ids => publishes at most the current chunk (10), never the whole backlog
+    const r2 = spawnSync(process.execPath, [path.join(SB3, 'scripts', 'factory', 'factory.js'), 'publish'], { cwd: SB3, encoding: 'utf8' });
+    assert.strictEqual(r2.status, 0, r2.stderr);
+    assert.match(r2.stdout, /PUBLISHED 10/, 'exactly one chunk (10) may publish per operation');
+    const statuses = {};
+    for (const l of fs.readFileSync(csvPath, 'utf8').split('\n').slice(1).filter(x => x.trim())) {
+      const s = parseLine(l)[24];
+      statuses[s] = (statuses[s] || 0) + 1;
+    }
+    assert.strictEqual(statuses.PUBLISHED, 13 + 10, 'published set grows by exactly CHUNK');
+    assert.strictEqual(statuses.PASS, 1, 'leftover PASS row stays for the NEXT chunk — never swept');
+  } finally { fs.rmSync(SB3, { recursive: true, force: true }); }
 });
 test('operator: active writer lock is respected (STOP, no force-unlock)', () => {
   sbWrite('data/state/writer-lock.json', { locked: true, holder: 'someone-else', acquired_at: new Date().toISOString(), expires_at: new Date(Date.now() + 3600000).toISOString() });

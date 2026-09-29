@@ -41,9 +41,21 @@ node scripts/site/build-site.js              # build site/ then promote public o
 
 ## Deployment
 
-GitHub Actions workflow `.github/workflows/deploy.yml`:
-tests + consistency + site build → deploy to GitHub Pages (source: GitHub Actions).
-Set **Settings → Pages → Source: GitHub Actions** once, manually.
+GitHub Pages serves the **repository root of `main`** directly (branch
+deployment: Settings → Pages → Source *Deploy from a branch* → `main` /
+`(root)`). There is **no `deploy.yml`** and no Actions-based Pages deploy —
+do not create one; the current architecture is the working truth.
+
+`scripts/site/build-site.js` regenerates the site and promotes the public
+outputs (hubs, articles, sitemaps, search/chatbot indexes) to the repository
+root; a normal commit + push to `main` is the deployment.
+
+The workflows in `.github/workflows/` are validation-only (read-only checks,
+never commit): `ci-validate.yml` and `factory-validate.yml` run
+status/consistency/tests/deterministic-build on every push to `main`;
+`factory-capacity-validate.yml` audits the 10K capacity model + state
+invariants; `factory-operator.yml` executes whitelisted operator commands
+(`data/state/operator-command.json`) with final-tree verify + safe push.
 
 ## Experiment rules (short version)
 

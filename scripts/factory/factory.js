@@ -59,8 +59,10 @@ const write = (p,o) => fs.writeFileSync(path.join(ROOT,p), JSON.stringify(o,null
 const cfg = read('config/content-factory.json');
 const rubric = read('config/article-rubric.json');
 const phase = () => cfg.phase || 'PILOT'; // PILOT -> PRODUCTION via promote-production
-const UNFINISHED = ['RESEARCH','WRITING','QA','REPAIR','PASS']; // non-terminal chunk states
-const TERMINAL = new Set(['PLANNED','PUBLISHED','BLOCKED','REVIEW']);
+// Non-terminal chunk states. REVIEW (qa 80–89) is NOT a completion: it must be
+// repaired and re-QA'd to PASS or BLOCKED before the chunk counts as finished.
+const UNFINISHED = ['RESEARCH','WRITING','QA','REVIEW','REPAIR','PASS'];
+const TERMINAL = new Set(['PLANNED','PUBLISHED','BLOCKED']);
 
 function acquireLock(cmd){
   const lockPath=path.join(STATE,'writer-lock.json');
@@ -167,7 +169,7 @@ function qa(args){
   const rows=loadMatrix(); const id=args[0];
   const r=rows.find(x=>x.article_id===id);
   if(!r){console.error('NOT FOUND');process.exit(1);}
-  if(TERMINAL.has(r.status)&&r.status!=='REVIEW'){console.error('qa refused: '+id+' status '+r.status+' is protected (terminal); only WRITING/QA/REPAIR/REVIEW rows are scored');process.exit(1);}
+  if(TERMINAL.has(r.status)){console.error('qa refused: '+id+' status '+r.status+' is protected (terminal); only WRITING/QA/REVIEW/REPAIR rows are scored');process.exit(1);}
   const draft=path.join(ROOT,'_drafts',id+'.html');
   if(!fs.existsSync(draft)){console.error('NO DRAFT for '+id);process.exit(1);}
   const html=fs.readFileSync(draft,'utf8');
@@ -201,13 +203,24 @@ function qa(args){
   console.log('QA '+id+' score='+score+' words='+words+' status='+r.status+(fails.length?' fails: '+fails.join('; '):''));
 }
 function publish(args){
+  const CHUNK=cfg.CHUNK||10;
+  // Hard chunk invariant (canonical engine, not just the operator):
+  // a publish operation promotes AT MOST CHUNK articles. Explicit >CHUNK ids
+  // => REFUSE up front (never silently publish a prefix and drop the rest).
+  // Checked BEFORE acquiring the lock so a refusal leaves no held lock behind
+  // (process.exit does not run finally blocks).
+  if(args.length>CHUNK){
+    console.error('REFUSED: publish received '+args.length+' ids > CHUNK='+CHUNK+' (at most '+CHUNK+' articles per publish operation). Split the ids into chunks of <= '+CHUNK+' and publish each chunk separately.');
+    process.exit(1);
+  }
   acquireLock('publish');
   const started=Date.now();
   try{
     const rows=loadMatrix();
-    const ids=args.length?args:rows.filter(r=>r.status==='PASS').map(r=>r.article_id);
+    // No ids => take at most the current chunk of PASS rows — never sweep the whole backlog.
+    const ids=args.length?args:rows.filter(r=>r.status==='PASS').map(r=>r.article_id).slice(0,CHUNK);
     const published=rows.filter(r=>r.status==='PUBLISHED').length;
-    const room=phase()==='PILOT'?cfg.max_publication_in_bootstrap-published:ids.length;
+    const room=phase()==='PILOT'?Math.min(cfg.max_publication_in_bootstrap-published,CHUNK):CHUNK;
     let done=0; const doneIds=[];
     beginTx('publish',ids);
     for(const id of ids){

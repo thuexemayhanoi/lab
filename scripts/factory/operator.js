@@ -170,7 +170,7 @@ function opQa(cmd){
   for (const id of ids){
     const r=byId[id];
     if (!r) problems.push(id+' not in matrix');
-    else if (factory.TERMINAL.has(r.status)&&r.status!=='REVIEW') problems.push(id+' status '+r.status+' is protected');
+    else if (factory.TERMINAL.has(r.status)) problems.push(id+' status '+r.status+' is protected');
     else if (!fs.existsSync(path.join(ROOT,'_drafts',id+'.html'))) problems.push(id+' NO_DRAFT (drafts live in the writer environment, gitignored — never committed)');
   }
   if (problems.length) fail('qa pre-check: '+problems.join('; '));

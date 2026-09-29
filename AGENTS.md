@@ -48,6 +48,8 @@ XE MÁY ĐIỆN (electric) · PHỤ TÙNG (parts).
 - Only PUBLISHED pages may be publicly deployed. Drafts live in `_drafts/`
   (gitignored, never deployed).
 - Max publication during bootstrap: 10 pilot articles (config: `content-factory.json`).
+- Max publication per operation: `CHUNK` = 10 articles — the engine refuses
+  more than 10 ids and never sweeps the whole PASS backlog in one publish.
 - Phase lifecycle: `PILOT` → `PRODUCTION` via `node scripts/factory/factory.js promote-production`
   (canonical transition; bootstrap cap only binds in PILOT). See `docs/CONTENT-FACTORY.md`.
 - No autonomous AI writer in GitHub Actions; no API keys in Actions.
@@ -113,6 +115,10 @@ stop safely with NO_DRAFT (nothing mutated).
 
 PLANNED → RESEARCH → WRITING → QA → PASS → PUBLISHED
 Failure: QA → REPAIR → QA (max 3 repairs) → BLOCKED.
+QA 80–89 ⇒ REVIEW: never publish; repair and re-QA. REVIEW is a non-terminal
+state — `prepare-next` refuses while any RESEARCH/WRITING/QA/REVIEW/REPAIR/
+PASS row exists (a chunk is claimable only after every row reaches
+PUBLISHED or BLOCKED).
 
 Only ONE writer mutates production at a time (writer lock + transaction
 marker; see `docs/PROC-RECOVERY.md`).

@@ -82,8 +82,8 @@ jobs:
           diff /tmp/truth-before.txt /tmp/truth-after.txt
           echo "OK: matrix + state bảo toàn nguyên vẹn qua validation."
 
-      - name: Summary
-        if: always()
+      - name: Summary (PASS)
+        if: success()
         run: |
           {
             echo "## Factory validate — PASS"
@@ -95,4 +95,13 @@ jobs:
             echo "- Draft isolation: PASS"
             echo "- State preserved (read-only): PASS"
             echo "- Workflow: READ-ONLY (không commit về main)"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Summary (FAIL)
+        if: failure()
+        run: |
+          {
+            echo "## Factory validate — FAIL"
+            echo "Ít nhất một bước validation đã thất bại — xem log các bước phía trên."
+            echo "Summary này không thay thế exit code của job; không publish/claim chunk mới khi validation FAIL."
           } >> "$GITHUB_STEP_SUMMARY"

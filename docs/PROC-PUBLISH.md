@@ -31,6 +31,17 @@ Unpublished drafts live in `_drafts/` (gitignored, never deployed).
 `build-site.js` restores published articles only from `data/published/`.
 A "public draft leak" is a critical QA failure.
 
+## Chunk invariant (hard, canonical engine)
+
+- `factory.js publish` publishes AT MOST `CHUNK` (10) articles per operation
+  — enforced in the engine, not just the operator.
+- More than 10 explicit IDs ⇒ the engine REFUSES (exit 1); it never silently
+  publishes 10 and drops the rest. Split the ids into chunks of ≤ 10.
+- Without explicit IDs, publish takes at most the current chunk of PASS rows —
+  never the whole PASS backlog.
+- The operator command contract caps `ids`/`count` at 10 as well
+  (`scripts/factory/operator.js`).
+
 ## Bootstrap cap
 
 At most 10 pilot articles may be published during bootstrap
@@ -54,7 +65,7 @@ access. Channel: `data/state/operator-command.json`
   transaction is active or a live writer lock is held. Unclear lock ownership
   or an unsafe transaction ⇒ STOP (never force-clear).
 - RESUME BEFORE CLAIM: `prepare-next` refuses while an unfinished chunk
-  (RESEARCH/WRITING/QA/REPAIR/PASS rows) exists.
+  (RESEARCH/WRITING/QA/REVIEW/REPAIR/PASS rows) exists.
 - QA scopes (thresholds NEVER change): `fast` = consistency + tests
   (production default for prepare-next/qa/publish); `deep` = + capacity-check
   + editorial-audit; `full` = + site build (engine/workflow changes, final

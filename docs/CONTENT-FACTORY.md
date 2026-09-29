@@ -29,9 +29,15 @@ published_date.
 
 ```
 PLANNED → RESEARCH → WRITING → QA → PASS → PUBLISHED
-                     QA → REPAIR → QA (max 3) → BLOCKED
-REVIEW band: qa_score 80–89 (never publish; repair)
+                     QA → REPAIR → QA (max 3) → PASS/BLOCKED
+                     QA → REVIEW (80–89) → QA (max 3) → PASS/BLOCKED
 ```
+
+REVIEW (qa_score 80–89) is a **non-terminal** state: never publish a REVIEW
+row; repair and re-QA it. A chunk is unfinished while ANY row is
+`RESEARCH/WRITING/QA/REVIEW/REPAIR/PASS`; `prepare-next` refuses until every
+row of the current chunk reaches `PUBLISHED` or `BLOCKED` (only then may a
+new chunk be claimed).
 
 ## Commands
 
@@ -41,6 +47,8 @@ factory.js prepare-next [n]  # next n rows PLANNED -> RESEARCH (default chunk 10
 factory.js research <ID>      # mark research done (packet must exist)
 factory.js qa <ID>            # QA the draft; scores into matrix
 factory.js publish <ID>...    # PASS rows -> PUBLISHED, deploy file to site/, archive, drop draft
+                             #   (hard cap: at most CHUNK=10 per operation; >10 IDs => REFUSE;
+                             #    no IDs => at most the current chunk of PASS rows)
 factory.js recover            # resume interrupted transaction
 factory.js consistency        # invariants: uniques, sitemap match, published files exist
 factory.js reports            # regenerate reports/factory/*.json
@@ -84,5 +92,7 @@ factory.js reports            # regenerate reports/factory/*.json
   lock + transaction marker, and only flips `phase` (config + checkpoint).
   Matrix, article IDs, published set and QA evidence are untouched.
 - In `PRODUCTION`, the bootstrap cap no longer binds; the normal chunk size remains
-  `CHUNK` (10). The external AI writer remains the only prose writer; GitHub Actions
+  `CHUNK` (10) — enforced by the canonical engine: `publish` refuses more than
+  `CHUNK` ids and, without ids, takes at most the current chunk of PASS rows.
+  The external AI writer remains the only prose writer; GitHub Actions
   stays deterministic (no API keys, no autonomous writing).

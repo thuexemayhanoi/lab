@@ -71,7 +71,7 @@ ok('province refs exist in verified geography', geoBad.length===0, geoBad.slice(
 const ck=JSON.parse(fs.readFileSync(path.join(DATA,'state','checkpoint.json'),'utf8'));
 const published=rows.filter(r=>r.status==='PUBLISHED');
 const planned=rows.filter(r=>r.status==='PLANNED').map(r=>r.article_id).sort();
-const active=rows.filter(r=>['RESEARCH','WRITING','QA','REPAIR','PASS'].includes(r.status)).map(r=>r.article_id).sort();
+const active=rows.filter(r=>['RESEARCH','WRITING','QA','REVIEW','REPAIR','PASS'].includes(r.status)).map(r=>r.article_id).sort();
 ok('checkpoint matrix_rows = 10,000', Number(ck.matrix_rows)===rows.length, ck.matrix_rows);
 ok('checkpoint published_count matches matrix', Number(ck.published_count)===published.length, ck.published_count+' vs '+published.length);
 ok('checkpoint phase agrees with config', ck.phase===cfg.phase, ck.phase+' vs '+cfg.phase);
