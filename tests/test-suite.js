@@ -2,6 +2,12 @@
 /** test-suite.js — factory + site invariants. Run: node --test tests/test-suite.js
  *  Assembles the matrix from parts (canonical shards) before testing. */
 'use strict';
+// NEVER write to the runner's GITHUB_ENV: this suite spawns `operator.js
+// validate` on sandbox command files, and exportEnv() appends OP/SCOPE/etc.
+// to process.env.GITHUB_ENV when set. Inside a workflow's verify step that
+// would pollute/override the run's real command env (e.g. flip $SCOPE or the
+// operator commit message). Strip it for this process and every child.
+if (process.env.GITHUB_ENV) delete process.env.GITHUB_ENV;
 const { test } = require('node:test');
 const assert = require('node:assert');
 const fs = require('fs'), path = require('path');
