@@ -96,7 +96,13 @@ jobs:
           fi
 
       - name: Thực thi op (cố định theo file lệnh, không interpolation)
-        run: node scripts/factory/operator.js command data/state/operator-command.json
+        run: |
+          set -eu
+          if [ ! -f data/state/operator-command.json ]; then
+            echo "không có lệnh operator - không có gì để thực thi (skip)"
+            exit 0
+          fi
+          node scripts/factory/operator.js command data/state/operator-command.json
 
       - name: Xóa lệnh đã xử lý (trước verify để cây verify == cây commit)
         run: |
