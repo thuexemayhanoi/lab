@@ -38,6 +38,9 @@ jobs:
       - name: Capacity audit (10K model vs matrix + state + sitemap + draft leak)
         run: node scripts/factory/capacity-check.js
 
+      - name: Grounding (claim định lượng có evidence thật, READ-ONLY)
+        run: node scripts/factory/factory.js grounding
+
       - name: "Workflow YAML safety contract (operator: single coordinator, no force push, rebase re-verify)"
         run: node --test tests/test-suite.js
 
@@ -66,5 +69,6 @@ jobs:
             echo "- Sitemap coverage exactly-once, no non-published URL: PASS"
             echo "- No draft leak: PASS"
             echo "- Chunk max = 10, phase = PRODUCTION: PASS"
+            echo "- Grounding (claim định lượng VND/%/thời gian): PASS"
             echo "- Workflow: READ-ONLY (không commit về main)"
           } >> "$GITHUB_STEP_SUMMARY"

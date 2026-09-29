@@ -1,13 +1,40 @@
 {
   "article_id": "A00014",
   "primary_keyword": "thuê xe máy Thái Nguyên",
-  "secondary_keywords": ["cho thuê xe máy Thái Nguyên", "thuê xe máy giá rẻ Thái Nguyên", "thuê xe máy gần ga Thái Nguyên", "thuê xe đi hồ Núi Cốc"],
+  "secondary_keywords": [
+    "cho thuê xe máy Thái Nguyên",
+    "thuê xe máy giá rẻ Thái Nguyên",
+    "thuê xe máy gần ga Thái Nguyên",
+    "thuê xe đi hồ Núi Cốc"
+  ],
   "search_intent": "informational",
   "research_date": "2026-09-29",
-  "geo_entities": ["Thái Nguyên", "hồ Núi Cốc", "chè Tân Cương", "ga Thái Nguyên", "quốc lộ 3", "vùng trung du miền núi", "khu công nghiệp gang thép"],
-  "vehicle_entities": ["xe số phổ thông", "xe tay ga", "xe máy điện"],
-  "brand_entities": ["Honda", "Yamaha", "VinFast"],
-  "model_entities": ["Wave", "Sirius", "Vision", "Air Blade", "Vento"],
+  "geo_entities": [
+    "Thái Nguyên",
+    "hồ Núi Cốc",
+    "chè Tân Cương",
+    "ga Thái Nguyên",
+    "quốc lộ 3",
+    "vùng trung du miền núi",
+    "khu công nghiệp gang thép"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe máy điện"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "VinFast"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Vento"
+  ],
   "questions_found": [
     "Thái Nguyên có cho thuê xe máy không, giá bao nhiêu?",
     "thuê xe máy gần ga Thái Nguyên có không?",
@@ -15,14 +42,46 @@
     "thuê xe máy Thái Nguyên cần giấy tờ gì?",
     "xe máy điện có phổ biến cho thuê ở Thái Nguyên không?"
   ],
-  "related_queries": ["bảng giá thuê xe máy Thái Nguyên 2026", "thuê xe máy Thái Nguyên theo tháng", "kinh nghiệm du lịch hồ Núi Cốc", "thuê xe máy cho sinh viên Thái Nguyên"],
+  "related_queries": [
+    "bảng giá thuê xe máy Thái Nguyên 2026",
+    "thuê xe máy Thái Nguyên theo tháng",
+    "kinh nghiệm du lịch hồ Núi Cốc",
+    "thuê xe máy cho sinh viên Thái Nguyên"
+  ],
   "serp_patterns": "SERP: danh bạ '5-6 dịch vụ' + bài cập nhật địa điểm ghi nhận giá từ ~100.000đ/ngày; nhu cầu từ khách công tác (khu công nghiệp), sinh viên (đại học) và du lịch cuối tuần (hồ Núi Cốc, đồi chè Tân Cương). Intent informational: cẩm nang thị trường trung du gần Hà Nội.",
   "official_sources": [],
   "supporting_sources": [
-    {"source_url": "https://vietnam.travel/", "source_domain": "vietnam.travel", "date_accessed": "2026-09-29", "claim_supported": "tham khảo chung về du lịch Thái Nguyên, hồ Núi Cốc, chè Tân Cương"}
+    {
+      "source_url": "https://vietnam.travel/",
+      "source_domain": "vietnam.travel",
+      "date_accessed": "2026-09-29",
+      "claim_supported": "tham khảo chung về du lịch Thái Nguyên, hồ Núi Cốc, chè Tân Cương"
+    }
   ],
-  "existing_internal_pages": ["/lab/thue-xe-may/", "/lab/kinh-nghiem/", "/lab/ve-chung-toi/", "/lab/xe-may-dien/xe-may-dien-co-nen-mua-khong/", "/lab/thue-xe-may/thue-xe-may-ha-noi/"],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/kinh-nghiem/",
+    "/lab/ve-chung-toi/",
+    "/lab/xe-may-dien/xe-may-dien-co-nen-mua-khong/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/"
+  ],
   "potential_cannibalization": "CG-rental-loc-thai-nguyen: nhóm gốc của tỉnh, không trùng.",
   "unique_angle": "Thị trường hỗn hợp công tác – sinh viên – cuối tuần: khách ở dài ngày (thuê tháng rẻ hơn ngày), tuyến quốc lộ 3 gần Hà Nội, điểm cuối tuần hồ Núi Cốc + làng chè Tân Cương; bài nhấn mạnh khung thuê theo tuần/tháng và xe máy điện đang xuất hiện trong các danh sách cho thuê.",
-  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; liên kết bài xe máy điện và bài Hà Nội trong phần bối cảnh."
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; liên kết bài xe máy điện và bài Hà Nội trong phần bối cảnh.",
+  "claim_evidence": [
+    {
+      "claim": "Xe số (Sirius, Wave) khoảng 80.000–120.000đ/ngày",
+      "source_url": "https://giahuy.org/thue-xe-may-thai-nguyen/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-09-29",
+      "claim_supported": "bảng giá: Sirius 80.000 – 120.000; Wave S 80.000 – 120.000"
+    },
+    {
+      "claim": "Xe ga khoảng 100.000–180.000đ/ngày (Lead/Vision 110 100.000–130.000đ; Lead 125 150.000–180.000đ)",
+      "source_url": "https://giahuy.org/thue-xe-may-thai-nguyen/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-09-29",
+      "claim_supported": "bảng giá: Lead 110 100.000 – 130.000; Vision 110 100.000 – 130.000; Lead 125 150.000-180.000; Exciter 180.000-200.000"
+    }
+  ]
 }

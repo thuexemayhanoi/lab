@@ -46,7 +46,9 @@ factory.js status            # matrix stats + checkpoint; assembles CSV
 factory.js prepare-next [n]  # next n rows PLANNED -> RESEARCH (default chunk 10)
 factory.js research <ID>      # mark research done (packet must exist)
 factory.js qa <ID>            # QA the draft; scores into matrix
-factory.js publish <ID>...    # PASS rows -> PUBLISHED, deploy file to site/, archive, drop draft
+factory.js publish <ID>...    # atomic two-phase: stage (QA-hash + grounding gate) -> commit (drop draft, ledger)
+factory.js grounding          # claim grounding gate: quantitative claims need verified claim_evidence
+factory.js qa-repair <ID>     # re-score a PUBLISHED archive; binds fresh evidence to the exact archive bytes
                              #   (hard cap: at most CHUNK=10 per operation; >10 IDs => REFUSE;
                              #    no IDs => at most the current chunk of PASS rows)
 factory.js recover            # resume interrupted transaction

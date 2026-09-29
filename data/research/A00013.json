@@ -1,13 +1,45 @@
 {
   "article_id": "A00013",
   "primary_keyword": "thuê xe máy Lào Cai",
-  "secondary_keywords": ["cho thuê xe máy Lào Cai", "thuê xe máy Sa Pa", "thuê xe máy giá rẻ Sa Pa", "thuê xe máy gần ga Lào Cai"],
+  "secondary_keywords": [
+    "cho thuê xe máy Lào Cai",
+    "thuê xe máy Sa Pa",
+    "thuê xe máy giá rẻ Sa Pa",
+    "thuê xe máy gần ga Lào Cai"
+  ],
   "search_intent": "informational",
   "research_date": "2026-09-29",
-  "geo_entities": ["Lào Cai", "Sa Pa", "Fansipan", "Bắc Hà", "Y Tý", "Bảo Yên", "đèo Ô Quy Hồ", "ga Lào Cai", "núi Hàm Rồng"],
-  "vehicle_entities": ["xe tay ga", "xe số phổ thông", "xe côn tay", "xe địa hình"],
-  "brand_entities": ["Honda", "Yamaha", "Suzuki"],
-  "model_entities": ["Vision", "Air Blade", "Wave", "Sirius", "Exciter", "Winner", "XR"],
+  "geo_entities": [
+    "Lào Cai",
+    "Sa Pa",
+    "Fansipan",
+    "Bắc Hà",
+    "Y Tý",
+    "Bảo Yên",
+    "đèo Ô Quy Hồ",
+    "ga Lào Cai",
+    "núi Hàm Rồng"
+  ],
+  "vehicle_entities": [
+    "xe tay ga",
+    "xe số phổ thông",
+    "xe côn tay",
+    "xe địa hình"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki"
+  ],
+  "model_entities": [
+    "Vision",
+    "Air Blade",
+    "Wave",
+    "Sirius",
+    "Exciter",
+    "Winner",
+    "XR"
+  ],
   "questions_found": [
     "thuê xe máy ở Sa Pa giá bao nhiêu?",
     "Sa Pa có cho thuê xe máy tự lái không?",
@@ -15,14 +47,60 @@
     "chạy xe máy lên Sa Pa có khó không, đường ra sao?",
     "thuê xe Sa Pa đi Y Tý, Bắc Hà được không?"
   ],
-  "related_queries": ["bảng giá thuê xe máy Sa Pa 2026", "thuê xe máy Sa Pa giao tận nơi", "kinh nghiệm phượt Sa Pa tự lái", "thuê xe máy Lào Cai cứu hộ 24/7"],
+  "related_queries": [
+    "bảng giá thuê xe máy Sa Pa 2026",
+    "thuê xe máy Sa Pa giao tận nơi",
+    "kinh nghiệm phượt Sa Pa tự lái",
+    "thuê xe máy Lào Cai cứu hộ 24/7"
+  ],
   "serp_patterns": "SERP dày nhất nhóm Tây Bắc: cửa hàng tại Sa Pa (gần Sun Plaza, phố Hoàng Liên) và ga Lào Cai; nhiều đơn vị quảng cáo hỗ trợ cứu hộ 24/7 và giao tận nơi; sản phẩm du lịch săn mây Y Tý, tam giác mạch Bắc Hà. Intent informational: cẩm nang thị trường du lịch núi phát triển nhất vùng.",
   "official_sources": [],
   "supporting_sources": [
-    {"source_url": "https://vietnam.travel/", "source_domain": "vietnam.travel", "date_accessed": "2026-09-29", "claim_supported": "tham khảo chung về du lịch Sa Pa, Lào Cai"}
+    {
+      "source_url": "https://vietnam.travel/",
+      "source_domain": "vietnam.travel",
+      "date_accessed": "2026-09-29",
+      "claim_supported": "tham khảo chung về du lịch Sa Pa, Lào Cai"
+    }
   ],
-  "existing_internal_pages": ["/lab/thue-xe-may/", "/lab/kinh-nghiem/", "/lab/ve-chung-toi/", "/lab/thue-xe-may/thue-xe-may-lai-chau/", "/lab/sua-xe-may/cuu-ho-xe-may-thu-duc/"],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/kinh-nghiem/",
+    "/lab/ve-chung-toi/",
+    "/lab/thue-xe-may/thue-xe-may-lai-chau/",
+    "/lab/sua-xe-may/cuu-ho-xe-may-thu-duc/"
+  ],
   "potential_cannibalization": "CG-rental-loc-lao-cai: nhóm gốc của tỉnh (Sa Pa thuộc Lào Cai sau sáp nhập). Bài Lai Châu khác góc (thị trường mỏng vs Sa Pa phát triển) — hai bài phải khác cấu trúc và thực thể chính.",
   "unique_angle": "Thị trường thuê xe sôi động nhất Tây Bắc: hai cực (ga Lào Cai cho khách tàu + Sa Pa cho khách ở núi), dịch vụ cứu hộ theo xe phổ biến do tuyến đèo dài; bài tập trung khung so sánh thuê ở ga vs thị trấn núi, mùa săn mây, và chuẩn bị cho đèo Ô Quy Hồ.",
-  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; Sa Pa là POI đã verify trong data/geography."
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; Sa Pa là POI đã verify trong data/geography.",
+  "claim_evidence": [
+    {
+      "claim": "Thành phố Lào Cai: xe số khoảng 100.000–150.000đ/ngày",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-lao-cai",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-09-29",
+      "claim_supported": "bảng giá: Việt Sơn 90.000đ – 150.000đ; Y Tý 100.000đ – 180.000đ"
+    },
+    {
+      "claim": "Xe ga khoảng 200.000–250.000đ/ngày; côn tay 350.000đ",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-lao-cai",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-09-29",
+      "claim_supported": "Việt Lào Cai: xe ga là 200.000đ/ngày; 366: 120.000đ/xe số, 250.000đ/xe ga và 350.000đ/côn tay"
+    },
+    {
+      "claim": "Sa Pa: xe số khoảng 100.000–160.000đ/ngày",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-lao-cai",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-09-29",
+      "claim_supported": "Tiến VP (Sa Pa) 100.000đ – 160.000đ"
+    },
+    {
+      "claim": "Sa Pa: xe ga khoảng 150.000–250.000đ/ngày theo mùa",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sa-pa.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-09-29",
+      "claim_supported": "các listing công khai tại Sa Pa: xe ga từ 150.000đ, dòng cao hơn từ 250.000đ"
+    }
+  ]
 }

@@ -44,6 +44,9 @@ jobs:
       - name: Consistency (uniques, published files, no draft leak)
         run: node scripts/factory/factory.js consistency
 
+      - name: Grounding (mọi claim định lượng VND/%/thời gian có evidence khớp)
+        run: node scripts/factory/factory.js grounding
+
       - name: Operator command contract (whitelist validation negative tests)
         run: node --test tests/test-suite.js
 
@@ -88,6 +91,7 @@ jobs:
           {
             echo "## Factory validate — PASS"
             echo "- Factory status/consistency: PASS"
+            echo "- Grounding gate (claim_evidence khớp claim định lượng): PASS"
             echo "- Operator contract + engine tests: PASS"
             echo "- Capacity check: PASS"
             echo "- Editorial audit: PASS"

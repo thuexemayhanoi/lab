@@ -78,9 +78,12 @@ ok('checkpoint phase agrees with config', ck.phase===cfg.phase, ck.phase+' vs '+
 ok('checkpoint active_chunk matches non-terminal rows', JSON.stringify((ck.active_chunk||[]).slice().sort())===JSON.stringify(active), 'cp='+JSON.stringify(ck.active_chunk)+' truth='+JSON.stringify(active));
 const nextClaim=planned.length?planned[0]:null;
 ok('checkpoint next_claimable_id = first PLANNED', (ck.next_claimable_id||null)===nextClaim, ck.next_claimable_id+' vs '+nextClaim);
-const pubIds=published.map(r=>r.article_id).sort();
-const lastCompleted=pubIds.length?pubIds[pubIds.length-1]:null;
-ok('checkpoint last_completed_id = last PUBLISHED', (ck.last_completed_id||null)===lastCompleted, ck.last_completed_id+' vs '+lastCompleted);
+// last_completed_id contract: last id of the CONTIGUOUS COMPLETED PREFIX in
+// matrix order — NOT the lexicographic max of all published ids (pilot
+// articles like A09401 must never push the pointer past the production prefix).
+const factory=require(path.join(ROOT,'scripts','factory','factory.js'));
+const lastCompleted=factory.lastCompletedId(rows);
+ok('checkpoint last_completed_id = last contiguous completed prefix id', (ck.last_completed_id||null)===lastCompleted, ck.last_completed_id+' vs '+lastCompleted);
 
 // 5) state sanity
 const tx=JSON.parse(fs.readFileSync(path.join(DATA,'state','transaction.json'),'utf8'));

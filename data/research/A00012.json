@@ -1,13 +1,39 @@
 {
   "article_id": "A00012",
   "primary_keyword": "thuê xe máy Tuyên Quang",
-  "secondary_keywords": ["cho thuê xe máy Tuyên Quang", "thuê xe máy giá rẻ Tuyên Quang", "thuê xe máy Na Hang", "thuê xe đi Tuyên Quang"],
+  "secondary_keywords": [
+    "cho thuê xe máy Tuyên Quang",
+    "thuê xe máy giá rẻ Tuyên Quang",
+    "thuê xe máy Na Hang",
+    "thuê xe đi Tuyên Quang"
+  ],
   "search_intent": "informational",
   "research_date": "2026-09-29",
-  "geo_entities": ["Tuyên Quang", "Na Hang", "hồ Na Hang – Lâm Bình", "thành nhà Mạc", "lễ hội Thành Tuyên", "quốc lộ 2", "sông Lô", "vùng trung du núi thấp"],
-  "vehicle_entities": ["xe số phổ thông", "xe tay ga", "xe côn tay"],
-  "brand_entities": ["Honda", "Yamaha"],
-  "model_entities": ["Wave", "Sirius", "Vision", "Future"],
+  "geo_entities": [
+    "Tuyên Quang",
+    "Na Hang",
+    "hồ Na Hang – Lâm Bình",
+    "thành nhà Mạc",
+    "lễ hội Thành Tuyên",
+    "quốc lộ 2",
+    "sông Lô",
+    "vùng trung du núi thấp"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe côn tay"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Future"
+  ],
   "questions_found": [
     "Tuyên Quang có chỗ cho thuê xe máy không?",
     "giá thuê xe máy ở Tuyên Quang khoảng bao nhiêu?",
@@ -15,14 +41,46 @@
     "mùa lễ hội Thành Tuyên đi Tuyên Quang có khó thuê xe không?",
     "thuê xe máy Tuyên Quang cần để lại giấy tờ gì?"
   ],
-  "related_queries": ["bảng giá thuê xe máy Tuyên Quang 2026", "thuê xe máy gần bến xe Tuyên Quang", "kinh nghiệm du lịch Na Hang Lâm Bình", "phượt Tuyên Quang"],
+  "related_queries": [
+    "bảng giá thuê xe máy Tuyên Quang 2026",
+    "thuê xe máy gần bến xe Tuyên Quang",
+    "kinh nghiệm du lịch Na Hang Lâm Bình",
+    "phượt Tuyên Quang"
+  ],
   "serp_patterns": "SERP: danh bạ '5-6 địa chỉ' + bài kinh nghiệm ghi nhận giá khởi điểm ~90.000đ/ngày cho xe số — thấp hơn mặt bằng vùng núi cao. Thực thể lặp: Na Hang, Thành Tuyên (trung thu), thành nhà Mạc. Intent informational: cẩm nang thị trường trung du.",
   "official_sources": [],
   "supporting_sources": [
-    {"source_url": "https://vietnam.travel/", "source_domain": "vietnam.travel", "date_accessed": "2026-09-29", "claim_supported": "tham khảo chung về du lịch Tuyên Quang, hồ Na Hang"}
+    {
+      "source_url": "https://vietnam.travel/",
+      "source_domain": "vietnam.travel",
+      "date_accessed": "2026-09-29",
+      "claim_supported": "tham khảo chung về du lịch Tuyên Quang, hồ Na Hang"
+    }
   ],
-  "existing_internal_pages": ["/lab/thue-xe-may/", "/lab/kinh-nghiem/", "/lab/ve-chung-toi/", "/lab/thue-xe-may/thue-xe-may-thai-nguyen/", "/lab/bang-lai-xe-may/thi-bang-lai-xe-may-a1/"],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/kinh-nghiem/",
+    "/lab/ve-chung-toi/",
+    "/lab/thue-xe-may/thue-xe-may-thai-nguyen/",
+    "/lab/bang-lai-xe-may/thi-bang-lai-xe-may-a1/"
+  ],
   "potential_cannibalization": "CG-rental-loc-tuyen-quang: nhóm gốc của tỉnh, không trùng.",
   "unique_angle": "Thị trường trung du giá mềm dẻo: giá xe số khởi điểm thấp (~90K theo các bảng giá công khai), nhu cầu tăng vọt mùa lễ hội Thành Tuyên (trung thu) và mùa du lịch Na Hang; bài tập trung đặt xe sớm theo mùa + tuyến QL2 ven sông Lô.",
-  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; liên kết bài thi bằng A1 trong phần giấy tờ hợp lệ."
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; liên kết bài thi bằng A1 trong phần giấy tờ hợp lệ.",
+  "claim_evidence": [
+    {
+      "claim": "Xe số khoảng 90.000–120.000đ/ngày",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-tuyen-quang",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-09-29",
+      "claim_supported": "Giá thuê xe số là 90.000đ – 120.000đ/ngày (Mai Sơn); bảng giá 90.000đ – 150.000đ"
+    },
+    {
+      "claim": "Xe ga khoảng 120.000–150.000đ/ngày",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-tuyen-quang",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-09-29",
+      "claim_supported": "xe ga là 120.000đ – 150.000đ/ngày (Lô Giang); bảng 80.000đ – 140.000đ"
+    }
+  ]
 }

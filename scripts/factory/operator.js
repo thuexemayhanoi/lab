@@ -26,9 +26,19 @@
  *
  * QA SCOPES (docs/PROC-PUBLISH.md "QA modes" — thresholds NEVER change):
  * - fast  (production default for prepare-next/qa/publish): consistency +
- *          test suite (canonical/index/sitemap verification, QA gates, no draft leak).
+ *          grounding + test suite (canonical/index/sitemap verification,
+ *          QA gates, no draft leak).
  * - deep  : fast + capacity-check + editorial-audit.
  * - full  : deep + full site build (engine/workflow changes, final verification).
+ *
+ * ATOMIC PUBLISH (op publish): publishStage (QA-hash gate + grounding gate +
+ * staged archive/site/matrix/checkpoint inside a live transaction, drafts
+ * intact, pre-state journal) -> build-site + editorial-audit + reports +
+ * verify -> publishCommit ONLY when everything PASS (drafts removed, ledger
+ * event appended, transaction cleared). Any failure => publishRollback
+ * (deterministic restore; never reports success, never leaves a half-
+ * PUBLISHED state). Crash mid-flow => factory.js recover rolls the staged
+ * transaction back from the journal.
  */
 'use strict';
 const fs = require('fs'), path = require('path');
@@ -112,6 +122,7 @@ function runReportsChecked(ctx){
 function verifySteps(scope){
   const s=['fast','deep','full'].includes(scope)?scope:'full'; // unknown scope -> safest (full)
   const steps=[['node','scripts/factory/factory.js','consistency'],
+               ['node','scripts/factory/factory.js','grounding'],
                ['node','--test','tests/test-suite.js']];
   if (s==='deep'||s==='full') steps.push(['node','scripts/factory/capacity-check.js'],
                                          ['node','scripts/factory/editorial-audit.js']);
@@ -196,16 +207,28 @@ function opPublish(cmd){
     else if (!fs.existsSync(path.join(ROOT,'_drafts',id+'.html'))) problems.push(id+' NO_DRAFT (drafts live in the writer environment, gitignored — never committed)');
   }
   if (problems.length) fail('publish pre-check: '+problems.join('; '));
-  factory.publish(cmd.ids); // lock + tx + archive + matrix + checkpoint + ledger
-  // canonical PROC-PUBLISH step 6: rebuild hubs/sitemap/index and promote to root
-  const rc=run(['node','scripts/site/build-site.js']);
-  if (rc!==0){ console.error('publish: build FAIL — STOP before reporting success (state on disk is complete; resume: verify + commit).'); process.exit(1); }
-  // regenerate the stored editorial tracking report so it covers the newly
-  // published set (deterministic; the audit tracks quality, it never gates)
-  const rcAudit=run(['node','scripts/factory/editorial-audit.js','--out','reports/editorial/audit-after.json']);
-  if (rcAudit!==0){ console.error('publish: editorial-audit FAIL — STOP.'); process.exit(1); }
-  runReportsChecked('publish');
-  runVerify(cmd.scope||'fast');
+  // ATOMIC PUBLISH: stage all mutations (archive/site/matrix/checkpoint, drafts
+  // INTACT, ledger untouched, pre-state journal) -> build + editorial-audit +
+  // reports + verify on the staged state -> commit ONLY when everything PASS.
+  // Any failure => deterministic publishRollback (matrix/checkpoint/public
+  // restored to pre-publish truth) and NO success report.
+  const staged=factory.publishStage(cmd.ids); // exits non-zero on gate refusal
+  let failed=null;
+  const step=(name,rc)=>{ if(rc!==0&&!failed) failed=name+' (rc='+rc+')'; };
+  step('build-site', run(['node','scripts/site/build-site.js']));
+  if(!failed) step('editorial-audit', run(['node','scripts/factory/editorial-audit.js','--out','reports/editorial/audit-after.json']));
+  if(!failed) step('reports', run(['node','scripts/factory/factory.js','reports']));
+  if(!failed){
+    for (const st of verifySteps(cmd.scope||'fast')){ const rc=run(st); if(rc!==0){ failed='verify '+st.join(' '); break; } }
+  }
+  if(failed){
+    console.error('publish: '+failed+' — NOT committed. Rolling back the staged publish (deterministic restore to pre-publish truth; drafts intact).');
+    factory.publishRollback('operator publish: '+failed);
+    process.exit(1);
+  }
+  factory.publishCommit(staged);
+  runReportsChecked('publish'); // post-commit reports (ledger now holds the real event)
+  console.log('PUBLISHED (atomic, build+verify PASS) '+staged.ids.length+': '+staged.ids.join(', '));
 }
 
 function opRecover(){ factory.recover(); }

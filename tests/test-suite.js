@@ -931,9 +931,22 @@ test('regression: publish enforces CHUNK=10 (REFUSE >10 ids; no ids => at most t
       }
       fs.writeFileSync(csvPath, out.join('\n'));
     };
-    const ids = Array.from({ length: 11 }, (_, i) => 'A' + String(i + 5).padStart(5, '0'));
+    const csvSetScore = (id, status, score) => {
+      const lines = fs.readFileSync(csvPath, 'utf8').split('\n');
+      const out = [lines[0]];
+      for (const l of lines.slice(1).filter(x => x.trim())) {
+        const c = parseLine(l);
+        if (c[0] === id) { c[24] = status; c[26] = String(score); }
+        out.push(c.map(v => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v).join(','));
+      }
+      fs.writeFileSync(csvPath, out.join('\n'));
+    };
+    const ids = Array.from({ length: 11 }, (_, i) => 'A' + String(i + 15).padStart(5, '0'));
     fs.mkdirSync(path.join(SB3, '_drafts'), { recursive: true });
-    ids.forEach(id => { csvSet(id, 'PASS'); fs.writeFileSync(path.join(SB3, '_drafts', id + '.html'), '<h1>x</h1>'); });
+    const draftSha3 = require('crypto').createHash('sha256').update('<h1>x</h1>').digest('hex');
+    fs.mkdirSync(path.join(SB3, 'data', 'qa'), { recursive: true });
+    ids.forEach(id => { csvSetScore(id, 'PASS', 100); fs.writeFileSync(path.join(SB3, '_drafts', id + '.html'), '<h1>x</h1>');
+      fs.writeFileSync(path.join(SB3, 'data', 'qa', id + '.json'), JSON.stringify({ article_id: id, score: 100, words: 1, result: 'PASS', fails: [], draft_sha256: draftSha3, matrix_status_after: 'PASS' })); });
     // 1) more than CHUNK explicit ids => REFUSE (never silently publish a prefix)
     const before = fs.readFileSync(csvPath, 'utf8');
     const r = spawnSync(process.execPath, [path.join(SB3, 'scripts', 'factory', 'factory.js'), 'publish', ...ids], { cwd: SB3, encoding: 'utf8' });
@@ -954,7 +967,7 @@ test('regression: publish enforces CHUNK=10 (REFUSE >10 ids; no ids => at most t
       const s = parseLine(l)[24];
       statuses[s] = (statuses[s] || 0) + 1;
     }
-    assert.strictEqual(statuses.PUBLISHED, 13 + 10, 'published set grows by exactly CHUNK');
+    assert.strictEqual(statuses.PUBLISHED, 23 + 10, 'published set grows by exactly CHUNK');
     assert.strictEqual(statuses.PASS, 1, 'leftover PASS row stays for the NEXT chunk — never swept');
   } finally { fs.rmSync(SB3, { recursive: true, force: true }); }
 });
@@ -1066,4 +1079,285 @@ test('draft safety: _drafts is gitignored and operator ops never commit drafts',
   const y = wfText('factory-operator.yml');
   assert.match(y, /KHÔNG BAO GIỜ commit/, 'workflow must document the draft boundary');
 });
+// =====================================================================
+// FACTORY HARDENING — QA hash-bound publish gate, claim grounding gate,
+// atomic two-phase publish (stage/commit/rollback + fault injection), and
+// the contiguous-prefix last_completed_id contract.
+// =====================================================================
+const SB4 = path.join(os.tmpdir(), 'lab-harden-sandbox-' + process.pid);
+fs.rmSync(SB4, { recursive: true, force: true });
+fs.cpSync(ROOT, SB4, { recursive: true, filter: (s) => {
+  const rel = path.relative(ROOT, s);
+  return rel !== '_drafts' && !rel.startsWith('_drafts' + path.sep)
+    && !path.basename(s).startsWith('content-matrix.csv.part');
+} });
+const fact4 = require(path.join(SB4, 'scripts', 'factory', 'factory.js'));
+const csvPath4 = path.join(SB4, 'data', 'content-matrix.csv');
+const parseLine4 = l => { const out = []; let cur = '', q = false;
+  for (let i = 0; i < l.length; i++) { const c = l[i];
+    if (q) { if (c === '"') { if (l[i+1] === '"') { cur += '"'; i++; } else q = false; } else cur += c; }
+    else { if (c === '"') q = true; else if (c === ',') { out.push(cur); cur = ''; } else cur += c; } }
+  out.push(cur); return out; };
+function setRow4(id, fields) {
+  const lines = fs.readFileSync(csvPath4, 'utf8').split('\n');
+  const out = [lines[0]];
+  for (const l of lines.slice(1).filter(x => x.trim())) {
+    const c = parseLine4(l);
+    if (c[0] === id) { if (fields.status !== undefined) c[24] = fields.status; if (fields.qa_score !== undefined) c[26] = String(fields.qa_score); }
+    out.push(c.map(v => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v).join(','));
+  }
+  fs.writeFileSync(csvPath4, out.join('\n'));
+}
+const status4 = id => { for (const l of fs.readFileSync(csvPath4, 'utf8').split('\n').slice(1).filter(x => x.trim())) { const c = parseLine4(l); if (c[0] === id) return { status: c[24], qa_score: c[26] }; } return null; };
+const sha4 = s => require('crypto').createHash('sha256').update(s).digest('hex');
+const draft4 = (id, html) => { fs.mkdirSync(path.join(SB4, '_drafts'), { recursive: true }); fs.writeFileSync(path.join(SB4, '_drafts', id + '.html'), html); };
+const evidence4 = (id, ev) => { fs.mkdirSync(path.join(SB4, 'data', 'qa'), { recursive: true }); fs.writeFileSync(path.join(SB4, 'data', 'qa', id + '.json'), JSON.stringify(ev)); };
+const ready4 = (id, html) => { setRow4(id, { status: 'PASS', qa_score: 100 }); draft4(id, html);
+  evidence4(id, { article_id: id, score: 100, words: 1, result: 'PASS', fails: [], draft_sha256: sha4(html), matrix_status_after: 'PASS' }); };
+const tx4 = () => JSON.parse(fs.readFileSync(path.join(SB4, 'data', 'state', 'transaction.json'), 'utf8'));
+const lock4 = () => JSON.parse(fs.readFileSync(path.join(SB4, 'data', 'state', 'writer-lock.json'), 'utf8'));
+const expireLock4 = () => fs.writeFileSync(path.join(SB4, 'data', 'state', 'writer-lock.json'), JSON.stringify({ locked: true, holder: 'publish', acquired_at: new Date().toISOString(), expires_at: new Date(Date.now() - 1000).toISOString() }));
+const clean4 = (ctx) => { assert.strictEqual(tx4().active, false, ctx + ': tx must be inactive'); assert.strictEqual(lock4().locked, false, ctx + ': writer lock must be free'); };
+
+test('hardening: QA-hash publish gate allows an exact PASS + hash-bound draft', () => {
+  ready4('A00015', '<h1>ok</h1>');
+  const r = FACT(['publish', 'A00015'], SB4);
+  assert.strictEqual(r.status, 0, r.stderr);
+  assert.match(r.stdout, /PUBLISHED 1: A00015/);
+  assert.strictEqual(status4('A00015').status, 'PUBLISHED');
+  assert.ok(!fs.existsSync(path.join(SB4, '_drafts', 'A00015.html')), 'draft removed only at commit');
+  assert.ok(fs.existsSync(path.join(SB4, 'data', 'published', 'A00015.html')), 'durable archive written');
+  const ledger = JSON.parse(fs.readFileSync(path.join(SB4, 'data', 'state', 'throughput-ledger.json'), 'utf8'));
+  assert.ok(ledger.events.some(e => e.op === 'publish' && (e.ids || []).includes('A00015')), 'ledger records the real publish event');
+  clean4('gate-allow');
+});
+test('hardening: draft edited by 1 byte after QA => publish REFUSE (hash mismatch)', () => {
+  ready4('A00016', '<h1>ok</h1>');
+  fs.appendFileSync(path.join(SB4, '_drafts', 'A00016.html'), 'x'); // exactly 1 byte
+  const r = FACT(['publish', 'A00016'], SB4);
+  assert.notStrictEqual(r.status, 0, 'stale QA hash must REFUSE');
+  assert.match(r.stderr, /QA_EVIDENCE_STALE|DRAFT_CHANGED_AFTER_QA/);
+  assert.strictEqual(status4('A00016').status, 'PASS', 'matrix untouched by refusal');
+  assert.ok(fs.existsSync(path.join(SB4, '_drafts', 'A00016.html')), 'draft intact after refusal');
+  assert.ok(!fs.existsSync(path.join(SB4, 'data', 'published', 'A00016.html')), 'no archive from a refused publish');
+  clean4('hash-mismatch');
+});
+test('hardening: missing QA evidence => publish REFUSE', () => {
+  ready4('A00017', '<h1>ok</h1>');
+  fs.rmSync(path.join(SB4, 'data', 'qa', 'A00017.json'));
+  const r = FACT(['publish', 'A00017'], SB4);
+  assert.notStrictEqual(r.status, 0);
+  assert.match(r.stderr, /QA_EVIDENCE_MISSING/);
+  assert.strictEqual(status4('A00017').status, 'PASS');
+  clean4('evidence-missing');
+});
+test('hardening: QA evidence result != PASS => publish REFUSE', () => {
+  ready4('A00018', '<h1>ok</h1>');
+  evidence4('A00018', { article_id: 'A00018', score: 100, words: 1, result: 'REVIEW', fails: [], draft_sha256: sha4('<h1>ok</h1>'), matrix_status_after: 'PASS' });
+  const r = FACT(['publish', 'A00018'], SB4);
+  assert.notStrictEqual(r.status, 0);
+  assert.match(r.stderr, /QA_EVIDENCE_NOT_PASS/);
+  clean4('evidence-not-pass');
+});
+test('hardening: QA evidence score below rubric => publish REFUSE', () => {
+  ready4('A00019', '<h1>ok</h1>');
+  evidence4('A00019', { article_id: 'A00019', score: 85, words: 1, result: 'PASS', fails: [], draft_sha256: sha4('<h1>ok</h1>'), matrix_status_after: 'PASS' });
+  const r = FACT(['publish', 'A00019'], SB4);
+  assert.notStrictEqual(r.status, 0);
+  assert.match(r.stderr, /QA_EVIDENCE_BELOW_THRESHOLD/);
+  clean4('evidence-below-threshold');
+});
+test('hardening: matrix qa_score below rubric => publish REFUSE (evidence alone is not enough)', () => {
+  ready4('A00020', '<h1>ok</h1>');
+  setRow4('A00020', { status: 'PASS', qa_score: 80 });
+  const r = FACT(['publish', 'A00020'], SB4);
+  assert.notStrictEqual(r.status, 0);
+  assert.match(r.stderr, /matrix qa_score/);
+  clean4('matrix-qa-score');
+});
+test('hardening: grounding gate — ungrounded VND claim => publish REFUSE', () => {
+  ready4('A00021', '<h1>ok</h1><p>Giá xe số khoảng 100.000đ/ngày tại đây.</p>');
+  const r = FACT(['publish', 'A00021'], SB4);
+  assert.notStrictEqual(r.status, 0, 'ungrounded quantitative claim must REFUSE');
+  assert.match(r.stderr, /GROUNDING_FAIL/);
+  assert.strictEqual(status4('A00021').status, 'PASS', 'matrix untouched by grounding refusal');
+  assert.ok(fs.existsSync(path.join(SB4, '_drafts', 'A00021.html')), 'draft intact after grounding refusal');
+  clean4('grounding-refuse');
+});
+test('hardening: grounding gate — real claim_evidence => the same publish passes', () => {
+  // backfill genuine claim_evidence (verified source quote) for the draft above
+  fs.mkdirSync(path.join(SB4, 'data', 'research'), { recursive: true });
+  fs.writeFileSync(path.join(SB4, 'data', 'research', 'A00021.json'), JSON.stringify({ article_id: 'A00021', sources: [], claim_evidence: [{ claim: 'Giá xe số khoảng 100.000đ/ngày', source_url: 'https://example.com/bang-gia', source_domain: 'example.com', date_accessed: '2026-09-29', claim_supported: 'Bảng giá công khai: xe số 100.000đ/ngày' }] }));
+  const r = FACT(['publish', 'A00021'], SB4);
+  assert.strictEqual(r.status, 0, r.stderr);
+  assert.strictEqual(status4('A00021').status, 'PUBLISHED');
+  clean4('grounding-pass');
+});
+test('hardening: malformed claim_evidence (domain mismatch) => grounding REFUSE', () => {
+  ready4('A00022', '<h1>ok</h1><p>Xe tay ga khoảng 150.000đ/ngày.</p>');
+  fs.mkdirSync(path.join(SB4, 'data', 'research'), { recursive: true });
+  fs.writeFileSync(path.join(SB4, 'data', 'research', 'A00022.json'), JSON.stringify({ article_id: 'A00022', claim_evidence: [{ claim: 'Xe tay ga khoảng 150.000đ/ngày', source_url: 'https://other.org/bang-gia', source_domain: 'example.com', date_accessed: '2026-09-29', claim_supported: 'Xe tay ga 150.000đ/ngày' }] }));
+  const r = FACT(['publish', 'A00022'], SB4);
+  assert.notStrictEqual(r.status, 0, 'source_domain must match the source_url hostname');
+  assert.match(r.stderr, /malformed claim_evidence/);
+  assert.strictEqual(status4('A00022').status, 'PASS');
+  clean4('malformed-evidence');
+});
+test('hardening: last_completed_id = contiguous completed prefix (pristine truth)', () => {
+  const SB5 = path.join(os.tmpdir(), 'lab-prefix-sandbox-' + process.pid);
+  fs.rmSync(SB5, { recursive: true, force: true });
+  fs.cpSync(ROOT, SB5, { recursive: true, filter: (s) => {
+    const rel = path.relative(ROOT, s);
+    return rel !== '_drafts' && !rel.startsWith('_drafts' + path.sep)
+      && !path.basename(s).startsWith('content-matrix.csv.part');
+  } });
+  try {
+    const f5 = require(path.join(SB5, 'scripts', 'factory', 'factory.js'));
+    const prog = f5.progressOf(f5.loadMatrix());
+    // A00001..A00014 contiguous PUBLISHED + 9 pilot PUBLISHED far away (A09401...)
+    assert.strictEqual(prog.published_count, 23);
+    assert.strictEqual(prog.last_completed_id, 'A00014', 'prefix ends at A00014 — never the lexicographic max (A09401)');
+    assert.strictEqual(prog.next_claimable_id, 'A00015');
+  } finally { fs.rmSync(SB5, { recursive: true, force: true }); }
+});
+test('hardening: a hole in the prefix shortens last_completed_id; pilots never extend it', () => {
+  const SB5 = path.join(os.tmpdir(), 'lab-prefix-sandbox-' + process.pid);
+  fs.rmSync(SB5, { recursive: true, force: true });
+  fs.cpSync(ROOT, SB5, { recursive: true, filter: (s) => {
+    const rel = path.relative(ROOT, s);
+    return rel !== '_drafts' && !rel.startsWith('_drafts' + path.sep)
+      && !path.basename(s).startsWith('content-matrix.csv.part');
+  } });
+  try {
+    const csv5 = path.join(SB5, 'data', 'content-matrix.csv');
+    const lines = fs.readFileSync(csv5, 'utf8').split('\n');
+    const out = [lines[0]];
+    for (const l of lines.slice(1).filter(x => x.trim())) {
+      const c = parseLine4(l);
+      if (c[0] === 'A00010') c[24] = 'PLANNED';
+      out.push(c.map(v => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v).join(','));
+    }
+    fs.writeFileSync(csv5, out.join('\n'));
+    const f5p = path.join(SB5, 'scripts', 'factory', 'factory.js');
+    delete require.cache[require.resolve(f5p)];
+    const f5 = require(f5p);
+    const prog = f5.progressOf(f5.loadMatrix());
+    assert.strictEqual(prog.last_completed_id, 'A00009', 'prefix stops before the hole at A00010');
+    assert.strictEqual(prog.next_claimable_id, 'A00010');
+    assert.strictEqual(prog.published_count, 22);
+  } finally { fs.rmSync(SB5, { recursive: true, force: true }); }
+});
+test('hardening: fault injection — crash after stage => deterministic rollback via recover', () => {
+  ready4('A00024', '<h1>ok</h1>');
+  assert.strictEqual(FACT(['recover'], SB4).status, 0, 'pre-sync checkpoint from clean truth');
+  const ckBefore = fs.readFileSync(path.join(SB4, 'data', 'state', 'checkpoint.json'), 'utf8');
+  fact4.publishStage(['A00024']); // in-process stage = the crash window begins
+  assert.strictEqual(status4('A00024').status, 'PUBLISHED', 'staged row is PUBLISHED inside the staged window');
+  assert.ok(fs.existsSync(path.join(SB4, 'data', 'published', 'A00024.html')), 'staged archive exists mid-transaction');
+  assert.ok(fs.existsSync(path.join(SB4, '_drafts', 'A00024.html')), 'draft survives the stage (removed only at commit)');
+  assert.strictEqual(tx4().phase, 'STAGED');
+  expireLock4(); // the process "died"; the lock went stale
+  const r = FACT(['recover'], SB4);
+  assert.strictEqual(r.status, 0, r.stderr);
+  assert.match(r.stdout, /ROLLBACK COMPLETE/);
+  assert.strictEqual(status4('A00024').status, 'PASS', 'row restored to pre-stage truth');
+  assert.ok(!fs.existsSync(path.join(SB4, 'data', 'published', 'A00024.html')), 'staged archive removed by rollback');
+  assert.ok(fs.existsSync(path.join(SB4, '_drafts', 'A00024.html')), 'draft intact after rollback');
+  assert.strictEqual(ckBefore, fs.readFileSync(path.join(SB4, 'data', 'state', 'checkpoint.json'), 'utf8'), 'checkpoint restored byte-identical');
+  clean4('crash-after-stage');
+});
+test('hardening: fault injection — crash right after beginTx (journal, no files) => rollback', () => {
+  ready4('A00025', '<h1>ok</h1>');
+  assert.strictEqual(FACT(['recover'], SB4).status, 0, 'pre-sync checkpoint from clean truth');
+  const ckBefore = fs.readFileSync(path.join(SB4, 'data', 'state', 'checkpoint.json'), 'utf8');
+  fs.writeFileSync(path.join(SB4, 'data', 'state', 'transaction.json'), JSON.stringify({ active: true, id: 'TX-CRASH', started_at: new Date().toISOString(), operation: 'publish', articles: ['A00025'], phase: 'STAGED', journal: { rows_before: { A00025: 'PASS' }, checkpoint_before: ckBefore, files: [], drafts: ['A00025'], ids: ['A00025'] } }));
+  expireLock4();
+  const r = FACT(['recover'], SB4);
+  assert.strictEqual(r.status, 0, r.stderr);
+  assert.match(r.stdout, /ROLLBACK COMPLETE/);
+  assert.strictEqual(status4('A00025').status, 'PASS');
+  assert.ok(fs.existsSync(path.join(SB4, '_drafts', 'A00025.html')), 'draft intact');
+  assert.strictEqual(ckBefore, fs.readFileSync(path.join(SB4, 'data', 'state', 'checkpoint.json'), 'utf8'), 'checkpoint restored byte-identical');
+  clean4('crash-after-begintx');
+});
+test('hardening: STAGED transaction without a journal => RECOVER STOP (never force-clear)', () => {
+  fs.writeFileSync(path.join(SB4, 'data', 'state', 'transaction.json'), JSON.stringify({ active: true, id: 'TX-NOJ', started_at: new Date().toISOString(), operation: 'publish', articles: ['A00024'], phase: 'STAGED' }));
+  expireLock4();
+  const r = FACT(['recover'], SB4);
+  assert.notStrictEqual(r.status, 0, 'ambiguous staged tx must STOP');
+  assert.match(r.stderr, /RECOVER STOP/);
+  assert.strictEqual(tx4().active, true, 'transaction must NOT be force-cleared');
+  // resolve deterministically for the tests below: restore journal truth, then roll back
+  const ck = fs.readFileSync(path.join(SB4, 'data', 'state', 'checkpoint.json'), 'utf8');
+  fs.writeFileSync(path.join(SB4, 'data', 'state', 'transaction.json'), JSON.stringify({ active: true, id: 'TX-NOJ', started_at: new Date().toISOString(), operation: 'publish', articles: [], phase: 'STAGED', journal: { rows_before: {}, checkpoint_before: ck, files: [], drafts: [], ids: [] } }));
+  assert.strictEqual(FACT(['recover'], SB4).status, 0, 'journal-restored tx must roll back');
+  clean4('staged-no-journal');
+});
+test('hardening: atomic operator publish — build failure rolls back (never half-published)', () => {
+  ready4('A00026', '<h1>ok</h1>');
+  const bs = path.join(SB4, 'scripts', 'site', 'build-site.js');
+  const orig = fs.readFileSync(bs, 'utf8');
+  try {
+    fs.writeFileSync(bs, 'process.exit(1);\n' + orig);
+    const r = OP(['publish', '--ids', 'A00026', '--scope', 'fast'], SB4);
+    assert.notStrictEqual(r.status, 0, 'failed build must not commit');
+    assert.match(r.stderr, /NOT committed|Rolling back/);
+    assert.strictEqual(status4('A00026').status, 'PASS', 'row restored to pre-publish truth');
+    assert.ok(fs.existsSync(path.join(SB4, '_drafts', 'A00026.html')), 'draft intact after rollback');
+    assert.ok(!fs.existsSync(path.join(SB4, 'data', 'published', 'A00026.html')), 'staged archive removed by rollback');
+    const ledger = JSON.parse(fs.readFileSync(path.join(SB4, 'data', 'state', 'throughput-ledger.json'), 'utf8'));
+    assert.ok(!ledger.events.some(e => e.op === 'publish' && (e.ids || []).includes('A00026')), 'no ledger event for a rolled-back publish');
+    clean4('operator-build-fail');
+  } finally { fs.writeFileSync(bs, orig); }
+});
+test('hardening: atomic operator publish — editorial-audit failure rolls back', () => {
+  ready4('A00026', '<h1>ok</h1>');
+  const ea = path.join(SB4, 'scripts', 'factory', 'editorial-audit.js');
+  const orig = fs.readFileSync(ea, 'utf8');
+  try {
+    fs.writeFileSync(ea, 'process.exit(1);\n' + orig);
+    const r = OP(['publish', '--ids', 'A00026', '--scope', 'fast'], SB4);
+    assert.notStrictEqual(r.status, 0, 'failed editorial audit must not commit');
+    assert.match(r.stderr, /NOT committed|Rolling back/);
+    assert.strictEqual(status4('A00026').status, 'PASS');
+    assert.ok(fs.existsSync(path.join(SB4, '_drafts', 'A00026.html')), 'draft intact');
+    assert.ok(!fs.existsSync(path.join(SB4, 'data', 'published', 'A00026.html')), 'archive removed by rollback');
+    clean4('operator-audit-fail');
+  } finally { fs.writeFileSync(ea, orig); }
+});
+test('hardening: qa-repair refuses non-PUBLISHED rows (never fabricate evidence)', () => {
+  const r = FACT(['qa-repair', 'A00016'], SB4); // A00016 is PASS (draft flow), not PUBLISHED
+  assert.notStrictEqual(r.status, 0);
+  assert.match(r.stderr, /qa-repair refused/);
+  clean4('qa-repair-refuse');
+});
+test('hardening: qa-repair re-scores a PUBLISHED archive and binds its exact hash', () => {
+  const SB6 = path.join(os.tmpdir(), 'lab-qarepair-sandbox-' + process.pid);
+  fs.rmSync(SB6, { recursive: true, force: true });
+  fs.cpSync(ROOT, SB6, { recursive: true, filter: (s) => {
+    const rel = path.relative(ROOT, s);
+    return rel !== '_drafts' && !rel.startsWith('_drafts' + path.sep)
+      && !path.basename(s).startsWith('content-matrix.csv.part');
+  } });
+  try {
+    const r = FACT(['qa-repair', 'A00005'], SB6);
+    assert.strictEqual(r.status, 0, r.stderr);
+    assert.match(r.stdout, /QA-REPAIR A00005 score=/);
+    const ev = JSON.parse(fs.readFileSync(path.join(SB6, 'data', 'qa', 'A00005.json'), 'utf8'));
+    assert.strictEqual(ev.scored_artifact, 'published-archive');
+    assert.strictEqual(ev.result, 'PASS');
+    const archiveSha = require('crypto').createHash('sha256').update(fs.readFileSync(path.join(SB6, 'data', 'published', 'A00005.html'))).digest('hex');
+    assert.strictEqual(ev.draft_sha256, archiveSha, 'repaired evidence binds the exact archive bytes');
+    // matrix row stays PUBLISHED with the re-scored qa_score
+    const row = fs.readFileSync(path.join(SB6, 'data', 'content-matrix.csv'), 'utf8').split('\n').map(l => parseLine4(l)).find(c => c[0] === 'A00005');
+    assert.strictEqual(row[24], 'PUBLISHED');
+  } finally { fs.rmSync(SB6, { recursive: true, force: true }); }
+});
+test('hardening: workflows wire the grounding gate into CI', () => {
+  for (const f of ['ci-validate.yml', 'factory-validate.yml', 'factory-capacity-validate.yml']) {
+    assert.match(wfText(f), /factory\.js grounding/, f + ' must run the grounding gate');
+  }
+});
+test('cleanup: remove hardening sandbox', () => { fs.rmSync(SB4, { recursive: true, force: true }); });
+
 test('cleanup: remove operator sandbox', () => { fs.rmSync(SB, { recursive: true, force: true }); });

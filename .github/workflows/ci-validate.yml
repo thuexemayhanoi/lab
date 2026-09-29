@@ -26,6 +26,8 @@ jobs:
         run: node scripts/factory/factory.js status
       - name: Consistency check
         run: node scripts/factory/factory.js consistency
+      - name: Grounding check (quantitative claims vs evidence)
+        run: node scripts/factory/factory.js grounding
       - name: Tests
         run: node --test tests/test-suite.js
       - name: Build (regenerates site/ and idempotently promotes public outputs to root)

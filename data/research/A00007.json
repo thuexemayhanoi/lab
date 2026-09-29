@@ -1,13 +1,39 @@
 {
   "article_id": "A00007",
   "primary_keyword": "thuê xe máy Lai Châu",
-  "secondary_keywords": ["cho thuê xe máy Lai Châu", "thuê xe máy leo đèo Lai Châu", "thuê xe máy giá rẻ Lai Châu", "thuê xe đi Lai Châu du lịch"],
+  "secondary_keywords": [
+    "cho thuê xe máy Lai Châu",
+    "thuê xe máy leo đèo Lai Châu",
+    "thuê xe máy giá rẻ Lai Châu",
+    "thuê xe đi Lai Châu du lịch"
+  ],
   "search_intent": "informational",
   "research_date": "2026-09-29",
-  "geo_entities": ["Lai Châu", "Tam Đường", "đèo Ô Quy Hồ", "tỉnh Lai Châu", "Tây Bắc", "núi cao"],
-  "vehicle_entities": ["xe số phổ thông", "xe côn tay", "xe semi-automatic", "xe địa hình"],
-  "brand_entities": ["Honda", "Yamaha"],
-  "model_entities": ["Wave", "Sirius", "Vision", "Exciter", "XR"],
+  "geo_entities": [
+    "Lai Châu",
+    "Tam Đường",
+    "đèo Ô Quy Hồ",
+    "tỉnh Lai Châu",
+    "Tây Bắc",
+    "núi cao"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe côn tay",
+    "xe semi-automatic",
+    "xe địa hình"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Exciter",
+    "XR"
+  ],
   "questions_found": [
     "ở Lai Châu có chỗ nào cho thuê xe máy không?",
     "thuê xe máy ở Lai Châu giá bao nhiêu một ngày?",
@@ -15,14 +41,60 @@
     "thuê xe số hay xe ga để đi Lai Châu?",
     "đi Lai Châu mùa nào đẹp, cần chuẩn bị gì?"
   ],
-  "related_queries": ["thuê xe máy Lai Châu gần bến xe", "bảng giá thuê xe Lai Châu", "kinh nghiệm phượt đèo Ô Quy Hồ", "thuê xe máy Tây Bắc"],
+  "related_queries": [
+    "thuê xe máy Lai Châu gần bến xe",
+    "bảng giá thuê xe Lai Châu",
+    "kinh nghiệm phượt đèo Ô Quy Hồ",
+    "thuê xe máy Tây Bắc"
+  ],
   "serp_patterns": "SERP ít kết quả hơn các tỉnh đồng bằng: vài trang danh bạ 'top 5-6 địa chỉ' ghi nhận cửa hàng tập trung quanh bến xe thành phố Lai Châu (khu Tam Đường/phố cũ), nhấn mạnh 'xe khỏe để leo đèo'. Giá thường cao hơn đồng bằng do ít cửa hàng, xe phục vụ phượt. Intent informational: viết cẩm nang thuê xe phục vụ hành trình leo núi, đèo, sương mù.",
   "official_sources": [],
   "supporting_sources": [
-    {"source_url": "https://vietnam.travel/", "source_domain": "vietnam.travel", "date_accessed": "2026-09-29", "claim_supported": "tham khảo chung về du lịch vùng cao Tây Bắc, thời tiết núi"}
+    {
+      "source_url": "https://vietnam.travel/",
+      "source_domain": "vietnam.travel",
+      "date_accessed": "2026-09-29",
+      "claim_supported": "tham khảo chung về du lịch vùng cao Tây Bắc, thời tiết núi"
+    }
   ],
-  "existing_internal_pages": ["/lab/thue-xe-may/", "/lab/kinh-nghiem/", "/lab/ve-chung-toi/", "/lab/thue-xe-may/thue-xe-may-lao-cai/", "/lab/xe-may-dien/xe-may-dien-co-nen-mua-khong/"],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/kinh-nghiem/",
+    "/lab/ve-chung-toi/",
+    "/lab/thue-xe-may/thue-xe-may-lao-cai/",
+    "/lab/xe-may-dien/xe-may-dien-co-nen-mua-khong/"
+  ],
   "potential_cannibalization": "CG-rental-loc-lai-chau: nhóm gốc của tỉnh. Bài Lào Cai (Sa Pa) khác intent (trung tâm du lịch đông khách vs tỉnh núi ít cửa hàng) — mỗi bài giữ góc riêng.",
   "unique_angle": "Thị trường thuê xe mỏng nhất trong nhóm Tây Bắc: ít cửa hàng, tập trung quanh bến xe thành phố; trọng tâm bài là khung chọn xe bền cho đèo dốc quanh co (Ô Quy Hồ), thời tiết sương mù rét, và quy tắc an toàn khi thuê xe đời cũ ở vùng cao.",
-  "notes": "actual_service_area=informational_only: KHÔNG bịa tên cửa hàng/địa chỉ/sđt; giá dạng dải tham khảo."
+  "notes": "actual_service_area=informational_only: KHÔNG bịa tên cửa hàng/địa chỉ/sđt; giá dạng dải tham khảo.",
+  "claim_evidence": [
+    {
+      "claim": "Xe số (Sirius, Jupiter) khoảng 100.000–120.000đ/ngày; mức tổng thể từ 100.000đ",
+      "source_url": "https://giahuy.org/thue-xe-may-lai-chau/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-09-29",
+      "claim_supported": "bảng giá: Tay Số : Sirius – Jupiter – Sirius Fi | 120.000đ; Giá thuê \"Net\" cho xe số và xe ga từ 100-200k"
+    },
+    {
+      "claim": "Xe tay ga khoảng 120.000–150.000đ/ngày (đời cũ 120.000đ, đời mới 150.000đ)",
+      "source_url": "https://giahuy.org/thue-xe-may-lai-chau/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-09-29",
+      "claim_supported": "bảng giá: Tay Ga : Airblade 110 – Lead 110 – Vision 110 | 120.000đ; Tay Ga : Airblade – Lead – Vision Mới | 150.000đ"
+    },
+    {
+      "claim": "Xe khỏe / đời mới mức tổng thể tới 150.000–250.000đ/ngày",
+      "source_url": "https://giahuy.org/thue-xe-may-lai-chau/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-09-29",
+      "claim_supported": "mức giá từ 100k đến 250k; xe tay côn exciter thì 200-250k"
+    },
+    {
+      "claim": "Ưu đãi giảm giá 10% cho thuê xe từ 4–5 ngày",
+      "source_url": "https://giahuy.org/thue-xe-may-lai-chau/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-09-29",
+      "claim_supported": "ưu đãi giảm giá 10% cho thuê xe từ 4-5 ngày"
+    }
+  ]
 }

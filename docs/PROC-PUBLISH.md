@@ -6,16 +6,38 @@ Publishing is deterministic and reversible-safe.
 
 - Matrix row status = PASS (qa_score ≥ 90 recorded).
 - Draft `_drafts/<ID>.html` exists (wrapped by `wrap-drafts.js`).
-- Transaction + writer lock active (single writer).
+- QA evidence `data/qa/<ID>.json` exists with `result: "PASS"`, `score ≥ 90`,
+  and `draft_sha256` equal to the SHA-256 of the CURRENT draft bytes.
+  Any edit to the draft after QA changes the hash ⇒ publish REFUSES
+  (`QA_EVIDENCE_STALE / DRAFT_CHANGED_AFTER_QA`); the engine never auto-updates
+  the hash — re-run `qa` instead. Missing evidence ⇒ `QA_EVIDENCE_MISSING`;
+  `result != PASS` ⇒ `QA_EVIDENCE_NOT_PASS`; low score ⇒
+  `QA_EVIDENCE_BELOW_THRESHOLD`. An existing archive for a PASS row ⇒
+  `AMBIGUOUS` (resolve per docs/PROC-RECOVERY.md, never stage over it).
+- Grounding gate: every quantitative claim in the draft (VND amounts, %,
+  phút/giờ durations) must be covered by `claim_evidence` entries in
+  `data/research/<ID>.json` (see docs/SOURCE-POLICY.md). Ungrounded ⇒ REFUSE.
 
-## Steps (`factory.js publish <ID> [<ID>...]`)
+## Atomic two-phase publish (`factory.js publishStage` → `publishCommit`)
 
-1. Verify row PASS; else refuse.
-2. Copy the wrapped draft HTML to `site/<output_path>index.html`.
-3. Archive a copy to `data/published/<ID>.html` (restore source for rebuilds).
-4. Delete the draft files from `_drafts/`.
-5. Update matrix row: status=PUBLISHED, published_date=today; save shards.
-6. Rebuild hubs/sitemap/search index: `node scripts/site/build-site.js`.
+`publish` (bare) = stage + immediate commit (test/sandbox quick path). The
+production path is the operator, which commits ONLY after build + verify PASS.
+
+1. `publishStage(ids)` — gate (PASS + qa_score + hash-bound evidence +
+   grounding) BEFORE any mutation; then record a pre-state journal
+   (`rows_before`, `checkpoint_before` bytes, `files`), open a `phase: STAGED`
+   transaction, copy the draft to `data/published/<ID>.html` +
+   `site/<output_path>index.html`, flip matrix rows to PUBLISHED, and write the
+   checkpoint. Drafts stay INTACT; the ledger is untouched.
+2. (operator) `build-site.js` → `editorial-audit --out` → `reports` →
+   `verifySteps(scope)` — all while the transaction is STAGED.
+3. `publishCommit` — only on full PASS: remove the drafts, append the REAL
+   ledger event, add the ids to `grounding.required_ids` (audited forever),
+   clear the transaction, release the lock.
+4. `publishRollback(reason)` — on ANY failure: restore matrix rows and the
+   checkpoint bytes from the journal, remove the files the stage created,
+   rebuild the site (deterministic self-heal), clear the transaction, release
+   the lock. Never reports success after a rollback.
 
 ## PUBLISHED means (all must hold — consistency checks enforce)
 
@@ -30,6 +52,15 @@ Publishing is deterministic and reversible-safe.
 Unpublished drafts live in `_drafts/` (gitignored, never deployed).
 `build-site.js` restores published articles only from `data/published/`.
 A "public draft leak" is a critical QA failure.
+
+## last_completed_id contract
+
+`last_completed_id` = the last id of the CONTIGUOUS COMPLETED PREFIX in matrix
+order (rows from the top while status = PUBLISHED). It is NEVER the max id of
+all PUBLISHED rows: pilot articles published at far-away ids (e.g. A09401)
+must never push the pointer past the real production prefix. With
+A00001..A00014 published: `last_completed_id = A00014`,
+`next_claimable_id = A00015`.
 
 ## Chunk invariant (hard, canonical engine)
 

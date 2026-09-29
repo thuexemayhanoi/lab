@@ -26,12 +26,15 @@ truth.
 - `checkpoint.json` — progress pointers derived from the matrix:
   ```json
   { "last_run": "2026-09-29T04:24:56.507Z", "phase": "PRODUCTION",
-    "matrix_rows": 10000, "published_count": 13, "last_batch": ["A00002"],
-    "last_completed_id": "A09401", "next_claimable_id": "A00005",
+    "matrix_rows": 10000, "published_count": 23, "last_batch": ["A00014"],
+    "last_completed_id": "A00014", "next_claimable_id": "A00015",
     "active_chunk": [], "notes": "..." }
   ```
   `published_count`, `last_completed_id`, `next_claimable_id` and
   `active_chunk` are DERIVED from matrix truth; `recover` re-syncs them.
+  `last_completed_id` = last id of the CONTIGUOUS COMPLETED PREFIX in matrix
+  order — never the lexicographic max of PUBLISHED ids (a pilot at A09401 must
+  not move the pointer).
 
 ## Locking rules (factory.js)
 
@@ -52,7 +55,15 @@ truth.
 - Active transaction + LIVE lock ⇒ **STOP (exit 1)**: a writer may still be
   running; nothing is cleared.
 - Active transaction + no live lock ⇒ resolve **from repository truth**:
-  - `publish` — per article in `articles`:
+  - `publish` with `phase: STAGED` (two-phase publish interrupted anywhere
+    between beginTx and commit — after archive/site write, before/after matrix
+    save, before checkpoint, before commit): DETERMINISTIC ROLLBACK from the
+    pre-state journal (`rows_before`, `checkpoint_before`, `files`). Matrix
+    rows, checkpoint bytes and staged files are restored, the site is rebuilt
+    (self-heal of hub/sitemap/search index), drafts were never removed, and
+    the ledger was never touched. A STAGED transaction WITHOUT a journal is
+    ambiguous ⇒ **RECOVER STOP (exit 1)** — resolve manually, never force-clear.
+  - `publish` (legacy/committed phase) — per article in `articles`:
     - matrix PUBLISHED **and** archive `data/published/<ID>.html` **and**
       public file present ⇒ completed (roll forward);
     - draft `_drafts/<ID>.html` still present (matrix not PUBLISHED) ⇒ rolled

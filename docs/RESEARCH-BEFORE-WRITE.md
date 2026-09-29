@@ -8,7 +8,11 @@ No article is written without a research packet first:
 article_id, primary_keyword, secondary_keywords, search_intent, research_date,
 geo_entities, vehicle_entities, brand_entities, model_entities, questions_found,
 related_queries, serp_patterns, official_sources, supporting_sources,
-existing_internal_pages, potential_cannibalization, unique_angle, notes.
+existing_internal_pages, potential_cannibalization, unique_angle, notes,
+claim_evidence (REQUIRED for every quantitative claim — VND/%/phút/giờ — the
+publish grounding gate refuses without it; see docs/SOURCE-POLICY.md for the
+exact schema). Evidence sources must be verified (opened) before recording;
+single-source pricing claims must be phrased as that source's public listing.
 
 ## What to research
 
