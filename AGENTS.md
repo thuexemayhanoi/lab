@@ -78,7 +78,36 @@ node scripts/factory/factory.js reports
 node scripts/factory/wrap-drafts.js        # wrap _drafts/<ID>.body.html -> <ID>.html
 node scripts/factory/prep-pilot.js         # mark pilot rows PLANNED -> RESEARCH
 node scripts/site/build-site.js           # rebuild site/ from published pages
+node scripts/factory/capacity-check.js     # READ-ONLY capacity + state invariants
 ```
+
+## Factory operator (golden orchestration port)
+
+`scripts/factory/operator.js` is the whitelist command-contract operator
+(patterned on the /blog golden factory). Two equivalent ways to run it:
+
+- **Command file channel** (used by `.github/workflows/factory-operator.yml`):
+  a coordinator pushes `data/state/operator-command.json`
+  (`{op, ids, count, scope, command_id, coordinator}`); the workflow validates
+  it against the whitelist, runs recover-first, executes, then commits under a
+  final-tree-verify + safe-push (fetch/rebase, never force) discipline.
+- **Direct CLI** (writer environment):
+  `node scripts/factory/operator.js <op> [--ids A00001,A00002] [--count N] [--scope fast|deep|full]`
+
+Whitelist ops: `status, prepare-next, research, qa, publish, recover,
+consistency, reports, verify`. No arbitrary shell; ids must match `A#####`;
+count 1..10; scope `fast` (production default: consistency + tests),
+`deep` (+ capacity-check + editorial-audit) or `full` (+ site build).
+Thresholds NEVER change with scope. Mutating ops refuse while a transaction
+is active or a live writer lock is held (run `recover` first). Single
+coordinator: workflow concurrency group `lab-factory-production`, never
+cancel-in-progress; an unconsumed command is never overwritten.
+
+DRAFT BOUNDARY (/lab adaptation): Pages serves the repository ROOT, so
+committed drafts would be PUBLIC. `_drafts/` stays gitignored FOREVER and is
+NEVER committed. Ops that need draft prose (`qa`, `publish`) therefore run in
+the writer's environment via the same CLI; in a bare Actions checkout they
+stop safely with NO_DRAFT (nothing mutated).
 
 ## Status lifecycle
 

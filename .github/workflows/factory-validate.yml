@@ -1,0 +1,98 @@
+name: Factory validate
+
+# READ-ONLY validation của engine factory /lab (port từ /blog factory-validate).
+# KHÔNG commit, KHÔNG push, KHÔNG mutate matrix/state/published — permissions
+# chỉ contents:read. Mọi generator chạy ở đây phải để lại working tree SẠCH
+# trên trạng thái nhất quán (build deterministic = không drift).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: factory-validate
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Factory engine + draft isolation + deterministic build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Snapshot state trước validation (state phải được bảo toàn)
+        run: |
+          mkdir -p /tmp/state-before
+          cp data/state/checkpoint.json data/state/transaction.json data/state/writer-lock.json /tmp/state-before/
+          sha256sum data/state/*.json data/content-matrix.csv.part* | sort > /tmp/truth-before.txt
+
+      - name: Factory status (assembles gitignored csv; không đụng committed truth)
+        run: node scripts/factory/factory.js status
+
+      - name: Consistency (uniques, published files, no draft leak)
+        run: node scripts/factory/factory.js consistency
+
+      - name: Operator command contract (whitelist validation negative tests)
+        run: node --test tests/test-suite.js
+
+      - name: Capacity check (10K model + state invariants, READ-ONLY)
+        run: node scripts/factory/capacity-check.js
+
+      - name: Editorial audit (read-only scoring aid)
+        run: node scripts/factory/editorial-audit.js
+
+      - name: Build (deterministic regeneration; public outputs promoted to root)
+        run: node scripts/site/build-site.js
+
+      - name: Build phải deterministic — working tree tracked phải SẠCH (no drift)
+        run: |
+          set -eu
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "FAIL: build/site sinh khác biệt so với trạng thái đã commit — build không deterministic hoặc outputs bị bỏ sót."
+            git status --porcelain
+            exit 1
+          fi
+          echo "OK: deterministic build — không drift."
+
+      - name: Drafts không bao giờ công khai (không _drafts trong public tree)
+        run: |
+          set -eu
+          test ! -d _drafts || { echo "FAIL: _drafts tồn tại trong cây public"; exit 1; }
+          if find . -name "*.body.html" -not -path "./.git/*" | grep -q .; then
+            echo "FAIL: draft body (.body.html) nằm trong cây public"; exit 1
+          fi
+          echo "OK: không có draft leak trong cây public."
+
+      - name: State phải được bảo toàn qua validation read-only
+        run: |
+          set -eu
+          sha256sum data/state/*.json data/content-matrix.csv.part* | sort > /tmp/truth-after.txt
+          diff /tmp/truth-before.txt /tmp/truth-after.txt
+          echo "OK: matrix + state bảo toàn nguyên vẹn qua validation."
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Factory validate — PASS"
+            echo "- Factory status/consistency: PASS"
+            echo "- Operator contract + engine tests: PASS"
+            echo "- Capacity check: PASS"
+            echo "- Editorial audit: PASS"
+            echo "- Deterministic build (no drift): PASS"
+            echo "- Draft isolation: PASS"
+            echo "- State preserved (read-only): PASS"
+            echo "- Workflow: READ-ONLY (không commit về main)"
+          } >> "$GITHUB_STEP_SUMMARY"

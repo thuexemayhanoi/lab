@@ -138,6 +138,8 @@ test('published: internal links resolve to real files', () => {
     if (href.startsWith('/lab/assets/')) return fs.existsSync(path.join(SITE, href.replace(/^\/lab\//, '')));
     const p = href.replace(/^\/lab\//, '').replace(/\/$/, '');
     if (!p) return fs.existsSync(path.join(SITE, 'index.html'));
+    // real files (sitemap index, robots, reports) are not route directories
+    if (/\.(xml|txt|md|json)$/i.test(p)) return fs.existsSync(path.join(SITE, p));
     return fs.existsSync(path.join(SITE, p, 'index.html'));
   };
   published.forEach(r => {
@@ -256,8 +258,13 @@ test('footer: mobile layout collapses structurally — wrap, no overflow risk', 
   assert.ok(/\.foot-links\{[^}]*flex-wrap:wrap/.test(css), 'footer links must wrap (overflow risk)');
   assert.ok(css.includes('overflow-x:clip'), 'page-level horizontal overflow guard missing');
 });
-test('draft safety: no drafts directory in the public tree', () => {
-  assert.ok(!fs.existsSync(path.join(ROOT, '_drafts')), 'drafts directory at repository root');
+test('draft safety: drafts can never reach the public tree', () => {
+  // _drafts/ at the repo root is the canonical WRITER-side draft home: gitignored,
+  // never committed, never promoted — its local existence is NOT a leak. A real
+  // leak would be drafts inside the promotable staging tree or a missing gitignore.
+  const gi = fs.readFileSync(path.join(ROOT, '.gitignore'), 'utf8');
+  assert.match(gi, /(^|\n)_drafts\//, '.gitignore must exclude _drafts/ or drafts would go public');
+  assert.ok(!fs.existsSync(path.join(ROOT, 'site', '_drafts')), 'drafts inside site/ staging — would be promoted to the public root');
   assert.ok(publicFiles().every(f => !f.includes('_drafts')), 'drafts leaked into public root tree');
 });
 
@@ -469,7 +476,11 @@ test('branch-pages: factory state intact (PRODUCTION, 10,000 rows, published cou
   const st = JSON.parse(fs.readFileSync(path.join(DATA,'state','checkpoint.json'),'utf8'));
   assert.strictEqual(st.phase, 'PRODUCTION');
   assert.strictEqual(rows.length, 10000);
-  assert.strictEqual(published.length, 10);
+  // published count must agree across matrix truth, checkpoint and durable archives
+  assert.ok(published.length >= 10, 'the bootstrap published set must never shrink');
+  assert.strictEqual(st.published_count, published.length, 'checkpoint published_count drift vs matrix');
+  const archived = fs.readdirSync(path.join(DATA, 'published')).filter(f => f.endsWith('.html')).length;
+  assert.strictEqual(archived, published.length, 'archive count drift vs matrix published set');
 });
 
 // ---------- A11Y SKIP LINK / OG METADATA / 404 (audit AUD-02, AUD-03, AUD-09) ----------
@@ -751,3 +762,201 @@ test('audit: reports/editorial/audit-after.json matches current source (no stale
     assert.strictEqual(a.word_count, s.word_count, 'stale word count for ' + a.article_id);
   });
 });
+
+// =====================================================================
+// FACTORY OPERATOR — golden orchestration port (/blog pattern -> Node /lab)
+// Command contract (data/state/operator-command.json), single coordinator,
+// recover-first, resume-before-claim, publish gate, safe-push invariants.
+// Mutating tests run inside a throwaway sandbox (os.tmpdir), never on the
+// production tree.
+// =====================================================================
+const { execFileSync, spawnSync } = require('child_process');
+const os = require('os');
+// CRITICAL isolation rule: every spawned canonical script must be the SANDBOX's
+// own copy (scripts resolve their repo root from __dirname/../.., NOT cwd) —
+// spawning ROOT's scripts with cwd=SB would mutate the PRODUCTION tree.
+const OP = (args, cwd) => { const c = cwd || ROOT; return spawnSync(process.execPath, [path.join(c, 'scripts', 'factory', 'operator.js'), ...args], { cwd: c, encoding: 'utf8' }); };
+const FACT = (args, cwd) => { const c = cwd || ROOT; return spawnSync(process.execPath, [path.join(c, 'scripts', 'factory', 'factory.js'), ...args], { cwd: c, encoding: 'utf8' }); };
+const wfText = f => fs.readFileSync(path.join(ROOT, '.github', 'workflows', f), 'utf8');
+
+// sandbox: full copy of the repo with shards removed (single-csv mode) so
+// tests can mutate the matrix without touching shard splitting; _drafts is
+// also excluded so recover scenarios control draft presence explicitly.
+const SB = path.join(os.tmpdir(), 'lab-op-sandbox-' + process.pid);
+fs.rmSync(SB, { recursive: true, force: true });
+fs.cpSync(ROOT, SB, { recursive: true, filter: (s) => {
+  const rel = path.relative(ROOT, s);
+  return rel !== '_drafts' && !rel.startsWith('_drafts' + path.sep)
+    && !path.basename(s).startsWith('content-matrix.csv.part');
+} });
+function sbStatus(id, status) {
+  const p = path.join(SB, 'data', 'content-matrix.csv');
+  // quote-aware CSV parse (naive split(',') breaks on fields containing commas)
+  const parseLine = l => { const out = []; let cur = '', q = false;
+    for (let i = 0; i < l.length; i++) { const c = l[i];
+      if (q) { if (c === '"') { if (l[i+1] === '"') { cur += '"'; i++; } else q = false; } else cur += c; }
+      else { if (c === '"') q = true; else if (c === ',') { out.push(cur); cur = ''; } else cur += c; } }
+    out.push(cur); return out; };
+  const lines = fs.readFileSync(p, 'utf8').split('\n');
+  const out = [lines[0]];
+  for (const l of lines.slice(1).filter(x => x.trim())) {
+    const c = parseLine(l);
+    if (c[0] === id) c[24] = status;
+    out.push(c.map(v => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v).join(','));
+  }
+  fs.writeFileSync(p, out.join('\n'));
+}
+function sbWrite(rel, obj) { fs.writeFileSync(path.join(SB, rel), JSON.stringify(obj, null, 2)); }
+function sbCmdFile(obj) { const p = path.join(SB, 'data', 'state', 'operator-command.json'); fs.writeFileSync(p, JSON.stringify(obj)); return 'data/state/operator-command.json'; }
+
+test('operator: whitelist — invalid op rejected (no arbitrary shell)', () => {
+  const r = OP(['validate', sbCmdFile({ op: 'rm -rf /' })], SB);
+  assert.notStrictEqual(r.status, 0, 'invalid op must be refused');
+  assert.match(r.stderr, /unsupported op/);
+  const r2 = OP(['validate', sbCmdFile({ op: 'status', evil: 'injection' })], SB);
+  assert.notStrictEqual(r2.status, 0, 'unknown field must be refused');
+});
+test('operator: count must be 1..10', () => {
+  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'prepare-next', count: 11 })], SB).status, 0, 'count 11 refused');
+  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'prepare-next', count: 0 })], SB).status, 0, 'count 0 refused');
+  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'prepare-next', count: '3; rm -rf /' })], SB).status, 0, 'non-integer refused');
+  assert.strictEqual(OP(['validate', sbCmdFile({ op: 'prepare-next', count: 10 })], SB).status, 0, 'count 10 allowed');
+});
+test('operator: malformed article IDs rejected', () => {
+  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'publish', ids: 'A00001;rm -rf /' })], SB).status, 0, 'shell-ish ids refused');
+  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'publish', ids: ['../etc/passwd'] })], SB).status, 0, 'path id refused');
+  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'publish', ids: ['A1'] })], SB).status, 0, 'short id refused');
+});
+test('operator: invalid scope rejected; fast is the production default', () => {
+  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'qa', scope: 'yolo' })], SB).status, 0, 'bad scope refused');
+  const r = OP(['validate', sbCmdFile({ op: 'publish', ids: 'A00002,A00003', command_id: 'cmd-1', coordinator: 'external-writer' })], SB);
+  assert.strictEqual(r.status, 0);
+  assert.match(r.stdout, /"scope":"fast"/, 'production ops default to fast scope');
+  const r2 = OP(['validate', sbCmdFile({ op: 'verify', scope: 'deep' })], SB);
+  assert.strictEqual(r2.status, 0);
+});
+test('operator: publish requires ids (gate is explicit)', () => {
+  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'publish' })], SB).status, 0, 'publish without ids refused');
+});
+test('factory: prepare-next refuses while unfinished chunk exists (resume first)', () => {
+  sbStatus('A00002', 'WRITING');
+  const r = FACT(['prepare-next', '3'], SB);
+  assert.notStrictEqual(r.status, 0, 'must refuse to claim new work');
+  assert.match(r.stderr, /unfinished chunk present/);
+});
+test('factory: prepare-next honors count 1..10', () => {
+  assert.notStrictEqual(FACT(['prepare-next', '11'], SB).status, 0, 'count>CHUNK refused');
+  assert.notStrictEqual(FACT(['prepare-next', '0'], SB).status, 0, 'count<1 refused');
+});
+test('factory: publish refuses non-PASS rows (gate never lowers)', () => {
+  sbStatus('A00003', 'RESEARCH');
+  fs.mkdirSync(path.join(SB, '_drafts'), { recursive: true });
+  fs.writeFileSync(path.join(SB, '_drafts', 'A00003.html'), '<h1>x</h1>');
+  const before = fs.readFileSync(path.join(SB, 'data', 'content-matrix.csv'), 'utf8');
+  const r = OP(['publish', '--ids', 'A00003'], SB);
+  assert.notStrictEqual(r.status, 0, 'operator publish must refuse non-PASS');
+  assert.match(r.stderr, /publish pre-check|not PASS/);
+  const after = fs.readFileSync(path.join(SB, 'data', 'content-matrix.csv'), 'utf8');
+  assert.strictEqual(before, after, 'matrix must be untouched by refused publish');
+});
+test('operator: active writer lock is respected (STOP, no force-unlock)', () => {
+  sbWrite('data/state/writer-lock.json', { locked: true, holder: 'someone-else', acquired_at: new Date().toISOString(), expires_at: new Date(Date.now() + 3600000).toISOString() });
+  const r = OP(['prepare-next', '--count', '2'], SB);
+  assert.notStrictEqual(r.status, 0);
+  assert.match(r.stderr, /writer lock held/);
+  const lock = JSON.parse(fs.readFileSync(path.join(SB, 'data', 'state', 'writer-lock.json'), 'utf8'));
+  assert.strictEqual(lock.holder, 'someone-else', 'lock must not be force-cleared');
+});
+test('factory: ambiguous active transaction makes recover STOP safely', () => {
+  sbWrite('data/state/writer-lock.json', { locked: false, holder: null, acquired_at: null, expires_at: null });
+  sbStatus('A00004', 'PASS'); // not published, no draft => unresolvable from truth
+  sbWrite('data/state/transaction.json', { active: true, id: 'TX-TEST', started_at: new Date().toISOString(), operation: 'publish', articles: ['A00004'], notes: 'test' });
+  const r = FACT(['recover'], SB);
+  assert.notStrictEqual(r.status, 0, 'ambiguous transaction must STOP');
+  assert.match(r.stderr, /RECOVER STOP/);
+  const tx = JSON.parse(fs.readFileSync(path.join(SB, 'data', 'state', 'transaction.json'), 'utf8'));
+  assert.strictEqual(tx.active, true, 'transaction must NOT be force-cleared');
+});
+test('factory: resolvable transaction recovers deterministically; clean state recovers idempotently', () => {
+  // completed publish (matrix PUBLISHED + archive + public file) => roll forward, tx closed
+  sbStatus('A00001', 'PUBLISHED');
+  sbWrite('data/state/transaction.json', { active: true, id: 'TX-OK', started_at: new Date().toISOString(), operation: 'publish', articles: ['A00001'], notes: 'test' });
+  const r = FACT(['recover'], SB);
+  assert.strictEqual(r.status, 0, r.stderr);
+  const tx = JSON.parse(fs.readFileSync(path.join(SB, 'data', 'state', 'transaction.json'), 'utf8'));
+  assert.strictEqual(tx.active, false);
+  // idempotent: second recover on clean state changes nothing
+  const ckBefore = fs.readFileSync(path.join(SB, 'data', 'state', 'checkpoint.json'), 'utf8');
+  const r2 = FACT(['recover'], SB);
+  assert.strictEqual(r2.status, 0);
+  assert.strictEqual(ckBefore, fs.readFileSync(path.join(SB, 'data', 'state', 'checkpoint.json'), 'utf8'), 'recover must be deterministic');
+});
+test('operator: single coordinator — concurrency group serializes, never cancels', () => {
+  const y = wfText('factory-operator.yml');
+  assert.match(y, /group:\s*lab-factory-production/, 'must pin one production coordinator group');
+  assert.match(y, /cancel-in-progress:\s*false/, 'must never cancel an in-flight production run');
+  assert.match(y, /paths:\s*\['data\/state\/operator-command\.json'\]/, 'trigger must be the command file only');
+});
+test('operator: verified-tree invariant — commit must equal the verified tree', () => {
+  const y = wfText('factory-operator.yml');
+  assert.match(y, /OPERATOR_VERIFIED_TREE/, 'must capture the verified tree');
+  assert.match(y, /git write-tree/, 'must hash the staged tree');
+  assert.match(y, /cây commit khác cây đã verified/, 'must refuse commit on tree drift');
+});
+test('operator: no force push anywhere; rebase loop always re-verifies', () => {
+  for (const f of ['factory-operator.yml', 'factory-validate.yml', 'factory-capacity-validate.yml', 'ci-validate.yml']) {
+    const y = wfText(f);
+    assert.ok(!/--force|-f\s+git\s+push|push\s+-f/u.test(y), 'force push found in ' + f);
+  }
+  const y = wfText('factory-operator.yml');
+  assert.match(y, /git rebase origin\/main/, 'must fetch+rebase on push race');
+  assert.match(y, /OPERATOR_LOCAL_VERIFY_HEAD_POST_REBASE/, 'rebase must be followed by re-verify');
+  assert.match(y, /operator\.js verify --scope "\$SCOPE"\s*\n\s*if ! git diff --quiet/, 're-verify + clean-tree check after rebase');
+});
+test('factory: read-only validation preserves state and truth', () => {
+  // pristine copy: the shared SB matrix has drifted (scenario mutations above),
+  // while capacity-check validates the FULL consistent tree (matrix ↔ checkpoint ↔ sitemap)
+  const SB2 = path.join(os.tmpdir(), 'lab-ro-sandbox-' + process.pid);
+  fs.rmSync(SB2, { recursive: true, force: true });
+  fs.cpSync(ROOT, SB2, { recursive: true, filter: (s) => {
+    const rel = path.relative(ROOT, s);
+    return rel !== '_drafts' && !rel.startsWith('_drafts' + path.sep)
+      && !path.basename(s).startsWith('content-matrix.csv.part');
+  } });
+  try {
+    const snap = () => ['data/state/checkpoint.json', 'data/state/transaction.json', 'data/state/writer-lock.json']
+      .map(p => require('crypto').createHash('sha256').update(fs.readFileSync(path.join(SB2, p))).digest('hex')).join('.');
+    const before = snap();
+    assert.strictEqual(FACT(['status'], SB2).status, 0);
+    assert.strictEqual(FACT(['consistency'], SB2).status, 0);
+    assert.strictEqual(spawnSync(process.execPath, [path.join(SB2, 'scripts', 'factory', 'capacity-check.js')], { cwd: SB2, encoding: 'utf8' }).status, 0, 'capacity check must pass in sandbox');
+    assert.strictEqual(before, snap(), 'read-only ops must not touch state');
+  } finally { fs.rmSync(SB2, { recursive: true, force: true }); }
+});
+test('factory: build is deterministic (two runs, byte-identical tracked tree)', () => {
+  const hashTree = () => {
+    const list = [];
+    (function walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { if (e.name === '.git' || e.name === 'site' || e.name === '_drafts' || e.name === 'data' && false) continue; const q = path.join(d, e.name); if (e.isDirectory()) walk(q); else if (/\.(html|xml|json|js|css|txt|svg)$/i.test(e.name) && !q.includes(path.join('data', 'content-matrix.csv'))) list.push(q); } })(SB);
+    list.sort();
+    return require('crypto').createHash('sha256').update(list.map(p => p + ':' + require('crypto').createHash('sha256').update(fs.readFileSync(p)).digest('hex')).join('\n')).digest('hex');
+  };
+  assert.strictEqual(spawnSync(process.execPath, [path.join(SB, 'scripts', 'site', 'build-site.js')], { cwd: SB, encoding: 'utf8' }).status, 0, 'build 1');
+  const h1 = hashTree();
+  assert.strictEqual(spawnSync(process.execPath, [path.join(SB, 'scripts', 'site', 'build-site.js')], { cwd: SB, encoding: 'utf8' }).status, 0, 'build 2');
+  const h2 = hashTree();
+  assert.strictEqual(h1, h2, 'second build must not change a single byte');
+});
+test('factory: throughput ledger/report use real events only (no fabricated rates)', () => {
+  assert.strictEqual(FACT(['reports'], SB).status, 0);
+  const thr = JSON.parse(fs.readFileSync(path.join(SB, 'reports', 'factory', 'throughput.json'), 'utf8'));
+  assert.ok(typeof thr.chunks_completed === 'number' && thr.chunks_completed >= 0);
+  assert.strictEqual(thr.effective_articles_per_hour, null, 'no rate without ≥2 real measured events');
+  assert.match(thr.note, /no backfill/i);
+});
+test('draft safety: _drafts is gitignored and operator ops never commit drafts', () => {
+  const gi = fs.readFileSync(path.join(ROOT, '.gitignore'), 'utf8');
+  assert.match(gi, /(^|\n)_drafts\//, 'drafts must stay out of the public root tree');
+  const y = wfText('factory-operator.yml');
+  assert.match(y, /KHÔNG BAO GIỜ commit/, 'workflow must document the draft boundary');
+});
+test('cleanup: remove operator sandbox', () => { fs.rmSync(SB, { recursive: true, force: true }); });

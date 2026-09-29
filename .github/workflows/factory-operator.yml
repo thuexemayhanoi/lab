@@ -1,0 +1,185 @@
+name: Factory Operator
+
+# TAY DETERMINISTIC CHO WRITER NGOAI (docs/PROC-PUBLISH.md) — port từ /blog
+# (factory-operator.yml) sang engine Node chuẩn của /lab. KHÔNG chửa AI,
+# KHÔNG gọi API AI, KHÔNG secret AI, KHÔNG viết prose bài.
+#
+# KÊNH LỆNH: coordinator đẩy lệnh whitelist vào
+#   data/state/operator-command.json (commit lên main) -> workflow này là môi
+#   trường thực thi: checkout + Node 22 + tooling chuẩn của /lab
+#   (scripts/factory/operator.js + factory.js + build-site.js).
+#
+# OPS WHITELIST (scripts/factory/operator.js): status | prepare-next |
+# research | qa | publish | recover | consistency | reports | verify.
+# KHÔNG shell tùy ý: op/ids/count/scope được validate whitelist nghiêm ngặt
+# trước khi thực thi; input không bao giờ được nối vào chuỗi shell.
+#
+# RANH GIỚI DRAFT (/lab, KHÁC /blog — thích ứng bắt buộc): Pages của /lab
+# phục vụ NGÁN GỐC REPO (.nojekyll, branch main / (root)); mọi file commit
+# đều công khai. Vì vậy _drafts/ LUÔN gitignored và KHÔNG BAO GIỜ commit —
+# không thể dùng Jekyll-exclude như /blog. Hệ quả: các op cần đọc draft
+# (qa, publish) chạy trong MÔI TRƯỜNG WRITER qua cùng CLI operator.js này;
+# trong checkout Actions trần, chúng dừng an toàn NO_DRAFT (không mutate).
+# Op không cần draft (status, prepare-next, recover, consistency, reports,
+# verify) chạy đầy đủ qua kênh này.
+#
+# RECOVER FIRST: trước mọi op, chạy recover (transaction treo / lock không
+# rõ ownership -> STOP, không force-unlock, không force-clear).
+#
+# MỘT COORDINATOR DUY NHẤT: concurrency group lab-factory-production,
+# KHÔNG cancel đang chạy. File lệnh được tiêu thụ đúng một lần (workflow
+# xóa lệnh trong commit output); KHÔNG ghi đè lệnh mới khi lệnh cũ chưa
+# xong — rebase chỉ hòa giải conflict trên chính file lệnh (giữ lệnh MỚI
+# của origin), conflict khác STOP.
+#
+# QA SCOPE (docs/PROC-PUBLISH.md "QA modes"): prepare-next/qa/publish mặc
+# định FAST (consistency + tests: canonical/index/sitemap, publish gate,
+# draft-leak). KHÔNG hạ ngưỡng QA, KHÔNG bỏ publish gate/lock/transaction.
+# deep/full chạy khi lệnh chỉ định rõ; op verify riêng mặc định full.
+#
+# FINAL-TREE VERIFY + SAFE PUSH (port pattern /blog): commit GITHUB_TOKEN
+# không kích hoạt push workflow khác, nên mutation được verify CHÍNH XÁC
+# trên trạng thái sẽ commit: git add -A -> write-tree chốt
+# OPERATOR_VERIFIED_TREE -> verify canonical -> cây phải KHÔNG đổi ->
+# commit phải đúng cây đã verify -> push chỉ fast-forward. origin/main đổi
+# giữa chừng: fetch -> rebase -> CHẠY LẠI VERIFY trên trạng thái rebase ->
+# chỉ push khi PASS. Conflict/verify FAIL = STOP, KHÔNG force push.
+
+on:
+  push:
+    branches: [main]
+    paths: ['data/state/operator-command.json']
+
+concurrency:
+  group: lab-factory-production
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  operate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (full history for fetch/rebase safety)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Đọc và validate lệnh operator (whitelist, KHÔNG shell)
+        run: |
+          set -eu
+          if [ ! -f data/state/operator-command.json ]; then
+            echo "không có lệnh operator (file command không tồn tại) - skip"
+            exit 0
+          fi
+          node scripts/factory/operator.js validate data/state/operator-command.json
+          echo "operator command accepted"
+
+      - name: Preflight - trạng thái engine (read-only)
+        run: node scripts/factory/factory.js status
+
+      - name: Recover trước mọi op (transaction treo / lock không rõ = STOP)
+        run: |
+          set -eu
+          code=0
+          node scripts/factory/operator.js recover || code=$?
+          echo "recover exit: $code"
+          if [ "$code" != "0" ]; then
+            echo "::error::transaction/lock không thể recover an toàn - STOP"
+            exit 1
+          fi
+
+      - name: Thực thi op (cố định theo file lệnh, không interpolation)
+        run: node scripts/factory/operator.js command data/state/operator-command.json
+
+      - name: Xóa lệnh đã xử lý (trước verify để cây verify == cây commit)
+        run: |
+          git rm -f --ignore-unmatch --quiet data/state/operator-command.json || true
+          rm -f data/state/operator-command.json
+
+      - name: Verify chuẩn trên đúng trạng thái sẽ commit (fail = KHÔNG push)
+        run: |
+          set -eu
+          git add -A
+          VERIFIED_TREE=$(git write-tree)
+          echo "OPERATOR_VERIFIED_TREE=$VERIFIED_TREE" >> "$GITHUB_ENV"
+          echo "OPERATOR_LOCAL_VERIFY_TREE=$VERIFIED_TREE"
+          node scripts/factory/operator.js verify --scope "$SCOPE"
+          git add -A
+          if [ "$(git write-tree)" != "$VERIFIED_TREE" ]; then
+            echo "::error::index đổi sau verify — có output không deterministic, KHÔNG push"
+            exit 1
+          fi
+
+      - name: Commit và push fast-forward (rebase phải verify lại, KHÔNG force push)
+        run: |
+          set -eu
+          git config user.name "factory-operator-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if [ "$(git write-tree)" != "$OPERATOR_VERIFIED_TREE" ]; then
+            echo "::error::cây index khác cây đã verified — DỪNG, không commit"
+            exit 1
+          fi
+          if git diff --cached --quiet; then
+            echo "không có gì để commit"
+            exit 0
+          fi
+          git commit -m "factory-operator: ${OP}${COMMAND_ID:+ command ${COMMAND_ID}} (deterministic outputs of canonical tooling only)"
+          if [ "$(git rev-parse HEAD^{tree})" != "$OPERATOR_VERIFIED_TREE" ]; then
+            echo "::error::cây commit khác cây đã verified — DỪNG, không push"
+            exit 1
+          fi
+          if git push; then
+            git fetch origin main
+            git merge-base --is-ancestor HEAD origin/main
+            echo "FINAL_PUSHED_HEAD=$(git rev-parse HEAD)"
+            echo "ORIGIN_HEAD_AFTER=$(git rev-parse origin/main)"
+            exit 0
+          fi
+          for i in 1 2 3; do
+            echo "::warning::origin/main đổi giữa chừng (lần $i) — fetch, rebase rồi VERIFY LẠI trạng thái rebase"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              # Chỉ một trường hợp được hòa giải deterministic: conflict DUY NHẤT
+              # trên data/state/operator-command.json. Run này đã xử lý lệnh cũ
+              # (commit của run xóa file lệnh); origin mang lệnh MỚI chưa dispatch
+              # -> giữ nguyên lệnh mới của origin (run của nó sẽ tiêu thụ).
+              # Conflict ở file bất kỳ khác vẫn STOP, KHÔNG force push.
+              CONFLICTS=$(git diff --name-only --diff-filter=U || true)
+              OTHER=""
+              if echo "$CONFLICTS" | grep -v '^data/state/operator-command.json$' | grep -q .; then
+                OTHER="yes"
+              fi
+              if [ -n "$CONFLICTS" ] && [ -z "$OTHER" ]; then
+                git show origin/main:data/state/operator-command.json > data/state/operator-command.json
+                git add data/state/operator-command.json
+                GIT_EDITOR=true git rebase --continue
+              else
+                git rebase --abort || true
+                echo "::error::rebase conflict — STOP, KHÔNG force push; resume lần chạy sau từ repository truth"
+                exit 1
+              fi
+            fi
+            echo "OPERATOR_LOCAL_VERIFY_HEAD_POST_REBASE=$(git rev-parse HEAD)"
+            node scripts/factory/operator.js verify --scope "$SCOPE"
+            if ! git diff --quiet || ! git diff --cached --quiet; then
+              echo "::error::trạng thái sau rebase không clean — STOP, KHÔNG push trạng thái chưa hòa giải"
+              exit 1
+            fi
+            if git push; then
+              git fetch origin main
+              git merge-base --is-ancestor HEAD origin/main
+              echo "FINAL_PUSHED_HEAD=$(git rev-parse HEAD) (sau rebase, đã verify lại)"
+              echo "ORIGIN_HEAD_AFTER=$(git rev-parse origin/main)"
+              exit 0
+            fi
+          done
+          echo "::error::push vẫn conflict sau rebase + verify — STOP, không force push"
+          exit 1

@@ -244,9 +244,11 @@ function decorateArticle(inner, opt) {
   const heads = [];
   rest = rest.replace('<strong>Trả lời nhanh:</strong>', '<strong class="quick-label">Trả lời nhanh:</strong>');
   // responsive tables: every bare <table> gets a scroll wrapper (keyboard-focusable
-  // region). Writers never add CSS — this is shared article chrome.
-  rest = rest.replace(/<table>([\s\S]*?)<\/table>/g,
-    '<div class="table-scroll" role="region" aria-label="Bảng dữ liệu — cuộn ngang trên màn hình nhỏ" tabindex="0"><table>$1</table></div>');
+  // region). Idempotent single pass — a table already inside a writer-added
+  // table-scroll div is normalized to the canonical attributes instead of
+  // being wrapped a second time. Writers never add CSS — shared article chrome.
+  rest = rest.replace(/<div class="table-scroll"[^>]*>\s*<table>([\s\S]*?)<\/table>\s*<\/div>|<table>([\s\S]*?)<\/table>/g,
+    (all, wrapped, bare) => '<div class="table-scroll" role="region" aria-label="Bảng dữ liệu — cuộn ngang trên màn hình nhỏ" tabindex="0"><table>' + (wrapped ?? bare) + '</table></div>');
   rest = rest.replace(/<(h[23])>([^<]+)<\/\1>/g, (all, tag, txt) => {
     const id = 'sec-' + (heads.length + 1);
     heads.push({ id, tag, txt: txt.trim() });
