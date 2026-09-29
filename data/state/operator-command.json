@@ -1,0 +1,5 @@
+{
+  "op": "status",
+  "command_id": "smoke-002",
+  "coordinator": "port-verification"
+}
