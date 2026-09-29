@@ -38,7 +38,7 @@ jobs:
       - name: Capacity audit (10K model vs matrix + state + sitemap + draft leak)
         run: node scripts/factory/capacity-check.js
 
-      - name: Workflow YAML safety contract (operator: single coordinator, no force push, rebase re-verify)
+      - name: "Workflow YAML safety contract (operator: single coordinator, no force push, rebase re-verify)"
         run: node --test tests/test-suite.js
 
       - name: Validation phải thuần READ-ONLY (working tree + truth không đổi)
