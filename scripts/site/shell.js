@@ -183,7 +183,7 @@ ${chatbotHtml()}`;
  * only after an explicit user action. No inference API, no key, no NAP promotion. */
 function chatbotHtml() {
   return `<button class="chat-launcher" id="chat-launcher" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="chat-panel" aria-label="Mở trợ lý đọc" title="Trợ lý đọc">${svg('chat', 'lg')}</button>
-<section class="chat-panel" id="chat-panel" role="dialog" aria-modal="false" aria-label="Trợ lý Bản Đồ Xe 2 Bánh" hidden>
+<section class="chat-panel" id="chat-panel" role="dialog" aria-modal="true" aria-label="Trợ lý Bản Đồ Xe 2 Bánh" hidden>
   <div class="chat-handle" aria-hidden="true"></div>
   <div class="chat-head">
     <div class="chat-title">
