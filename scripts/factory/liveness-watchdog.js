@@ -267,6 +267,18 @@ function collectSnapshot(root, nowIso) {
   const matrix = guard(() => loadCanonicalMatrix(root));
   const statuses = matrix ? matrix.statuses : new Map();
 
+  // Cross-check repository truth: checkpoint.matrix_rows là con số row đã
+  // commit của matrix. Nếu số row đọc được khác — ví dụ shard CUỐI dãy bị
+  // thiếu (dãy part00..NN vẫn "liền mạch" nhưng không đủ row) — canonical
+  // matrix truth không đồng bộ => FAIL CLOSED, không thể giả HEALTHY.
+  if (checkpoint && matrix && Number.isFinite(checkpoint.matrix_rows)
+      && matrix.statuses.size !== checkpoint.matrix_rows) {
+    fatals.push({ code: 'STATE_INVALID', file: 'data/content-matrix.csv',
+      message: 'matrix rows đọc được (' + matrix.statuses.size +
+        ') != checkpoint.matrix_rows (' + checkpoint.matrix_rows +
+        ') — canonical matrix truth không đồng bộ với checkpoint (thiếu/thừa shard hoặc matrix drift) — FAIL CLOSED.' });
+  }
+
   // Progress event mới nhất trong ledger (mọi op đều là dấu hiệu tiến).
   const events = ledger && Array.isArray(ledger.events) ? ledger.events : [];
   let lastProgressMinutes = null;

@@ -1760,10 +1760,18 @@ test('S5 C: active_chunk PASS + progress quá ngưỡng -> STALLED exit 1', () =
   assert.match(r.stdout, /STALLED/);
 });
 
-test('S5 D: thiếu shard (gãy dãy part00..NN) -> FAIL CLOSED STATE_MISSING, không giả lành', () => {
-  const r = wdRun([wdFixture((sb) => fs.rmSync(path.join(sb, 'data', 'content-matrix.csv.part01')))]);
-  assert.strictEqual(r.status, 1, 'shard thiếu => FAIL CLOSED:\n' + r.stdout);
+test('S5 D: thiếu shard ĐẦU dãy (part00) -> contiguity break -> FAIL CLOSED STATE_MISSING', () => {
+  const r = wdRun([wdFixture((sb) => fs.rmSync(path.join(sb, 'data', 'content-matrix.csv.part00')))]);
+  assert.strictEqual(r.status, 1, 'shard đầu thiếu => FAIL CLOSED:\n' + r.stdout);
   assert.match(r.stdout, /STATE_MISSING/);
+  assert.match(r.stdout, /FAIL CLOSED/);
+});
+
+test('S5 D2: thiếu shard CUỐI dãy (part01) -> cross-check checkpoint.matrix_rows -> FAIL CLOSED, không giả HEALTHY với row thiếu', () => {
+  const r = wdRun([wdFixture((sb) => fs.rmSync(path.join(sb, 'data', 'content-matrix.csv.part01')))]);
+  assert.strictEqual(r.status, 1, 'dãy part00 "liền mạch" nhưng thiếu row — phải bị cross-check bắt:\n' + r.stdout);
+  assert.match(r.stdout, /STATE_INVALID/);
+  assert.match(r.stdout, /checkpoint\.matrix_rows/);
   assert.match(r.stdout, /FAIL CLOSED/);
 });
 
@@ -1869,12 +1877,17 @@ test('S5 static: soak workflow BẮT BUỘC Tier 4 trên push main + path contra
     '.github/workflows/factory-liveness-watchdog.yml', '.github/workflows/ci-validate.yml',
     'data/state/**', 'config/**', 'AGENTS.md', 'docs/PROC-PUBLISH.md', 'docs/CONTENT-FACTORY.md', 'docs/PROC-RECOVERY.md'];
   for (const p of requiredPaths) {
-    const count = (y.match(new RegExp("- '" + p.replace(/\./g, '\\.').replace(/\//g, '\\/') + "'", 'g')) || []).length;
+    const esc = p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const count = (y.match(new RegExp("- '" + esc + "'", 'g')) || []).length;
     assert.strictEqual(count, 2, "path '" + p + "' phải có trong CẢ pull_request lẫn push (thấy " + count + ')');
   }
   assert.match(y, /group:\s*factory-soak-\$\{\{ github\.ref \}\}/, 'soak concurrency phải per-ref');
   assert.match(y, /cancel-in-progress:\s*true/);
-  assert.ok(!/lab-factory-production/.test(y), 'soak KHÔNG được đụng global production mutation group');
+  // Chỉ khóa concurrency GROUP, không cấm nhắc tên trong comment giải thích.
+  const groupLines = y.split('\n').filter(l => /^\s*group:/.test(l));
+  assert.ok(groupLines.length > 0, 'soak phải có concurrency group');
+  assert.ok(groupLines.every(l => !/lab-factory-production/.test(l)),
+    'soak KHÔNG được đụng global production mutation group: ' + JSON.stringify(groupLines));
   assert.ok(!/&tier4_paths|\*tier4_paths/.test(y), 'GitHub Actions không hỗ trợ YAML anchors — nhân đôi paths');
 });
 
@@ -1899,7 +1912,7 @@ test('S5 docs contract: canonical matrix = shards, watchdog fail-closed, Tier 4 
   for (const [name, t] of [['AGENTS.md', agents], ['docs/CONTENT-FACTORY.md', factoryDoc]]) {
     assert.match(t, /canonical (form|committed form|matrix)[^.]*shard|shards?[^.]*canonical/i,
       name + ' phải ghi canonical matrix = shards');
-    assert.match(t, /fail[\s-]?closed/i, name + ' phải ghi watchdog fail closed khi canonical truth thiếu/hỏng');
+    assert.match(t, /fails?[\s-]?closed/i, name + ' phải ghi watchdog fail closed khi canonical truth thiếu/hỏng');
     assert.match(t, /STATE_MISSING|STATE_INVALID/, name + ' phải ghi tên finding deterministic của fail-closed');
   }
   for (const [name, t] of [['AGENTS.md', agents], ['docs/PROC-PUBLISH.md', proc], ['docs/PROC-RECOVERY.md', recovery]]) {
