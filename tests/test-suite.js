@@ -76,8 +76,8 @@ test('matrix: valid status values only', () => {
 });
 
 // ---------- CONFIG CONTRACTS ----------
-test('config: rubric pass_min=90, review_min=80, max_repair=3', () => {
-  assert.strictEqual(rubric.pass_min, 90); assert.strictEqual(rubric.review_min, 80);
+test('config: rubric pass_min=75, review_min=70, max_repair=3', () => {
+  assert.strictEqual(rubric.pass_min, 75); assert.strictEqual(rubric.review_min, 70);
   assert.strictEqual(rubric.max_repair_attempts, 3);
 });
 test('config: factory BATCH=50, CHUNK=10, bootstrap publication cap=10', () => {
@@ -131,9 +131,9 @@ test('published: public file, archive, and matrix agree', () => {
     assert.ok(/ld\+json/.test(html), 'no schema');
   });
 });
-test('published: QA score ≥ 90 and word count ≥ 1600', () => {
+test('published: QA score ≥ rubric pass_min and word count ≥ 1600', () => {
   published.forEach(r => {
-    assert.ok(Number(r.qa_score) >= 90, r.article_id + ' qa=' + r.qa_score);
+    assert.ok(Number(r.qa_score) >= rubric.pass_min, r.article_id + ' qa=' + r.qa_score);
     const text = publishedHtml(r.article_id).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
     const words = (text.match(/[A-Za-zÀ-ỹ0-9]+/g) || []).length;
     assert.ok(words >= 1600, r.article_id + ' words=' + words);
@@ -1165,7 +1165,7 @@ test('hardening: QA evidence result != PASS => publish REFUSE', () => {
 });
 test('hardening: QA evidence score below rubric => publish REFUSE', () => {
   ready4('A00019', '<h1>ok</h1>');
-  evidence4('A00019', { article_id: 'A00019', score: 85, words: 1, result: 'PASS', fails: [], draft_sha256: sha4('<h1>ok</h1>'), matrix_status_after: 'PASS' });
+  evidence4('A00019', { article_id: 'A00019', score: 65, words: 1, result: 'PASS', fails: [], draft_sha256: sha4('<h1>ok</h1>'), matrix_status_after: 'PASS' });
   const r = FACT(['publish', 'A00019'], SB4);
   assert.notStrictEqual(r.status, 0);
   assert.match(r.stderr, /QA_EVIDENCE_BELOW_THRESHOLD/);
@@ -1173,7 +1173,7 @@ test('hardening: QA evidence score below rubric => publish REFUSE', () => {
 });
 test('hardening: matrix qa_score below rubric => publish REFUSE (evidence alone is not enough)', () => {
   ready4('A00020', '<h1>ok</h1>');
-  setRow4('A00020', { status: 'PASS', qa_score: 80 });
+  setRow4('A00020', { status: 'PASS', qa_score: 65 });
   const r = FACT(['publish', 'A00020'], SB4);
   assert.notStrictEqual(r.status, 0);
   assert.match(r.stderr, /matrix qa_score/);

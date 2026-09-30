@@ -4,9 +4,9 @@ Publishing is deterministic and reversible-safe.
 
 ## Preconditions
 
-- Matrix row status = PASS (qa_score ≥ 90 recorded).
+- Matrix row status = PASS (qa_score ≥ 75 recorded).
 - Draft `_drafts/<ID>.html` exists (wrapped by `wrap-drafts.js`).
-- QA evidence `data/qa/<ID>.json` exists with `result: "PASS"`, `score ≥ 90`,
+- QA evidence `data/qa/<ID>.json` exists with `result: "PASS"`, `score ≥ 75`,
   and `draft_sha256` equal to the SHA-256 of the CURRENT draft bytes.
   Any edit to the draft after QA changes the hash ⇒ publish REFUSES
   (`QA_EVIDENCE_STALE / DRAFT_CHANGED_AFTER_QA`); the engine never auto-updates

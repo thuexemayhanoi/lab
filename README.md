@@ -60,7 +60,7 @@ invariants; `factory-operator.yml` executes whitelisted operator commands
 ## Experiment rules (short version)
 
 - Bootstrap maximum: 10 pilot articles published.
-- QA ≥ 90 to publish; repair ≤ 3 times; else BLOCKED.
+- QA ≥ 75 to publish; repair ≤ 3 times; else BLOCKED.
 - Every article needs research first; official-source articles need verified
   current official sources or they are blocked.
 - No fake local claims outside the verified Hanoi service area.

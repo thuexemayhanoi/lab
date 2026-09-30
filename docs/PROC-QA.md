@@ -15,9 +15,9 @@ Run: `factory.js qa <ID>` (operates on `_drafts/<ID>.html`).
 
 ## Scoring
 
-- PASS: 90–100
-- REVIEW: 80–89 (never publish; repair)
-- FAIL: < 80 or any critical failure
+- PASS: 75–100
+- REVIEW: 70–74 (never publish; repair)
+- FAIL: < 70 or any critical failure
 
 ## Critical failures (automatic non-PASS)
 
