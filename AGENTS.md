@@ -58,9 +58,20 @@ XE MÁY ĐIỆN (electric) · PHỤ TÙNG (parts).
 ## Data contracts
 
 - `data/content-matrix.csv` — EXACTLY 10,000 production rows.
-  It is ASSEMBLED from the 4 canonical shards
-  `data/content-matrix.csv.part00..03` (the assembled CSV is gitignored).
-  Any tool (`factory.js`) auto-assembles on load and rewrites shards on save.
+  The CANONICAL committed form is the 4 shards
+  `data/content-matrix.csv.part00..03`; the assembled CSV is gitignored and
+  is NOT repository truth. Per-tool behavior (precise — tools are NOT
+  interchangeable):
+  - `factory.js` (read-write engine) assembles the CSV from shards on load
+    and rewrites shards on save.
+  - `scripts/factory/liveness-watchdog.js` (READ-ONLY) NEVER writes the
+    assembled CSV: it uses the assembled CSV if it exists AND is valid,
+    otherwise assembles IN-MEMORY from the canonical shards (deterministic
+    part00..NN order). If the canonical matrix or any critical state file
+    (checkpoint/transaction/writer-lock/throughput-ledger) is missing or
+    malformed it FAILS CLOSED — STATE_MISSING / STATE_INVALID, exit 1 —
+    never silently falls back to matrixRows=0 or a fake healthy state.
+    Clean checkout (shards only) and writer checkout read the same truth.
 - `data/geography/*.json` — verified geography only (34 current provinces,
   63 legacy names, localities, hubs, POIs). Never invent places.
 - `data/research/<ID>.json` — research packets.
@@ -149,12 +160,18 @@ change is PASS. Never claim production-safe from unit tests alone.
 
 Rules:
 - Engine/workflow/recovery changes REQUIRE Tier 4 (soak + watchdog), not
-  just Tier 1.
+  just Tier 1. Tier 4 is ENFORCED on CI: `factory-soak.yml` runs on both
+  `pull_request` and `push` to `main` (path-filtered to reliability-relevant
+  files) — a direct push of engine/workflow/recovery changes to main cannot
+  land without Tier 4. CI green is NOT liveness green if Tier 4 has not run
+  for the change.
 - Tier 4 exists because CI/invariants can be green while the factory is
   stalled (unfinished work standing, command hanging, expired lock,
   over-age transaction). The watchdog closes that blind spot; it is
   READ-ONLY (never force-clears, claims or publishes; user resting is
-  never a failure: HEALTHY IDLE = PASS).
+  never a failure: HEALTHY IDLE = PASS) and FAILS CLOSED on missing/corrupt
+  canonical truth (STATE_MISSING / STATE_INVALID) — see the liveness
+  watchdog contract in `docs/PROC-RECOVERY.md`.
 - Failing a tier means: do NOT merge, do NOT lower thresholds or delete
   tests, do NOT mutate production truth to make tests green; fix the root
   cause and re-run the affected tier AND every tier above it.

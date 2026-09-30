@@ -14,6 +14,26 @@
  *   - Chỉ đọc repository truth: checkpoint + matrix + transaction +
  *     writer-lock + throughput-ledger + operator-command file.
  *
+ * CANONICAL MATRIX TRUTH (hardening session 5 — Finding 1):
+ *   - data/content-matrix.csv là assembled form (GITIGNORED); canonical
+ *     committed form = shards data/content-matrix.csv.part00..NN.
+ *   - Watchdog dùng assembled CSV nếu nó tồn tại VÀ hợp lệ; nếu KHÔNG tồn tại
+ *     (clean checkout CI chỉ có shards) thì assemble READ-ONLY IN-MEMORY từ
+ *     canonical shards — thứ tự deterministic (part00..NN liền mạch), verify
+ *     header + có row. KHÔNG BAO GIỜ ghi assembled CSV xuống production tree
+ *     chỉ để watchdog đọc; direct CLI và Actions đọc giống nhau.
+ *
+ * FAIL CLOSED (không fallback im lặng):
+ *   - Matrix thiếu (không assembled + không shards / shards gãy thứ tự)
+ *     => STATE_MISSING; malformed (header sai, 0 row, parse không được)
+ *     => STATE_INVALID. KHÔNG fallback matrixRows=0.
+ *   - State critical checkpoint.json / transaction.json / writer-lock.json /
+ *     throughput-ledger.json: missing => STATE_MISSING; JSON hỏng hoặc sai
+ *     schema tối thiểu => STATE_INVALID. KHÔNG fallback {active:false} hay
+ *     trạng thái lành giả. Mọi fatal => FAIL exit 1.
+ *   - operator-command.json vẫn OPTIONAL: KHÔNG có command = bình thường;
+ *     nếu TỒN TẠI nhưng hỏng => STATE_INVALID (FAIL CLOSED).
+ *
  * Trạng thái:
  *   HEALTHY IDLE  : active_chunk rỗng, không command pending, tx inactive,
  *                   không lock sống → PASS.
@@ -66,14 +86,6 @@ function readJson(file) {
   return JSON.parse(raw);
 }
 
-function readJsonSafe(file, missing) {
-  try {
-    return readJson(file);
-  } catch (e) {
-    return missing;
-  }
-}
-
 function parseMinutes(v, fallback) {
   const n = Number(v);
   return Number.isFinite(n) && n > 0 ? n : fallback;
@@ -86,48 +98,189 @@ function ageMinutes(nowMs, iso) {
   return (nowMs - t) / 60000;
 }
 
+// ---- FAIL-CLOSED critical truth (hardening session 5 — Finding 1) ----
+// Critical state files: missing => STATE_MISSING; invalid JSON / sai schema
+// tối thiểu => STATE_INVALID. KHÔNG BAO GIỜ fallback giá trị lành giả —
+// snapshot có fatals thì evaluate() luôn FAIL (exit 1).
+const CRITICAL_STATE = [
+  { rel: CHECKPOINT,
+    min: (v) => v && typeof v === 'object' && !Array.isArray(v) && Array.isArray(v.active_chunk),
+    need: 'object với active_chunk array' },
+  { rel: TRANSACTION,
+    min: (v) => v && typeof v === 'object' && !Array.isArray(v) && typeof v.active === 'boolean',
+    need: 'object với active boolean' },
+  { rel: WRITER_LOCK,
+    min: (v) => v && typeof v === 'object' && !Array.isArray(v) && typeof v.locked === 'boolean',
+    need: 'object với locked boolean' },
+  { rel: LEDGER,
+    min: (v) => v && typeof v === 'object' && !Array.isArray(v) && Array.isArray(v.events),
+    need: 'object với events array' },
+];
+
+function loadCritical(root, rel, minSchema, need) {
+  const abs = path.join(root, rel);
+  let raw;
+  try {
+    raw = fs.readFileSync(abs, 'utf8');
+  } catch (e) {
+    throw { code: 'STATE_MISSING', file: rel,
+      message: 'state critical ' + rel + ' không đọc được — FAIL CLOSED, không fallback trạng thái lành giả.' };
+  }
+  let v;
+  try {
+    v = JSON.parse(raw);
+  } catch (e) {
+    throw { code: 'STATE_INVALID', file: rel,
+      message: 'state critical ' + rel + ' không phải JSON hợp lệ — FAIL CLOSED.' };
+  }
+  if (!minSchema(v)) {
+    throw { code: 'STATE_INVALID', file: rel,
+      message: 'state critical ' + rel + ' sai schema tối thiểu (' + need + ') — FAIL CLOSED.' };
+  }
+  return v;
+}
+
+// ---- CANONICAL MATRIX LOADER (read-only, deterministic, fail-closed) ----
+// Ưu tiên assembled CSV nếu tồn tại và hợp lệ; nếu không tồn tại, assemble
+// IN-MEMORY từ canonical shards (clean checkout chỉ có shards). Không ghi
+// assembled matrix xuống production tree.
+function parseMatrixText(text, label) {
+  const lines = text.split(/\r?\n/);
+  if (!lines[0] || !lines[0].trim()) {
+    throw { code: 'STATE_INVALID', file: label,
+      message: 'matrix ' + label + ' thiếu header — FAIL CLOSED.' };
+  }
+  const header = lines[0].split(',');
+  const idIdx = header.indexOf('article_id');
+  const stIdx = header.indexOf('status');
+  if (idIdx < 0 || stIdx < 0) {
+    throw { code: 'STATE_INVALID', file: label,
+      message: 'matrix ' + label + ' header thiếu cột article_id/status — FAIL CLOSED.' };
+  }
+  const statuses = new Map();
+  for (let i = 1; i < lines.length; i++) {
+    if (!lines[i]) continue;
+    const cols = lines[i].split(','); // cột id/status không bao giờ chứa dấu phẩy
+    if (cols.length <= Math.max(idIdx, stIdx)) {
+      throw { code: 'STATE_INVALID', file: label,
+        message: 'matrix ' + label + ' row ' + (i + 1) + ' thiếu cột — FAIL CLOSED.' };
+    }
+    statuses.set(cols[idIdx], cols[stIdx]);
+  }
+  if (statuses.size === 0) {
+    throw { code: 'STATE_INVALID', file: label,
+      message: 'matrix ' + label + ' không có row nào — FAIL CLOSED.' };
+  }
+  return statuses;
+}
+
+function loadCanonicalMatrix(root) {
+  const dataDir = path.join(root, 'data');
+  const assembledRel = 'data/content-matrix.csv';
+  const assembled = path.join(dataDir, 'content-matrix.csv');
+  if (fs.existsSync(assembled)) {
+    return { statuses: parseMatrixText(fs.readFileSync(assembled, 'utf8'), assembledRel), source: 'assembled' };
+  }
+  // Clean checkout: chỉ có canonical shards. Thứ tự deterministic + verify
+  // shards liền mạch part00..partNN (thiếu shard => STATE_MISSING).
+  let entries = [];
+  try {
+    entries = fs.readdirSync(dataDir);
+  } catch (e) {
+    throw { code: 'STATE_MISSING', file: 'data/',
+      message: 'không đọc được data/ — matrix truth thiếu — FAIL CLOSED.' };
+  }
+  const shards = entries.filter((f) => /^content-matrix\.csv\.part\d+$/.test(f)).sort();
+  if (shards.length === 0) {
+    throw { code: 'STATE_MISSING', file: 'data/content-matrix.csv.part*',
+      message: 'không có assembled CSV và không có canonical shards — matrix truth thiếu — FAIL CLOSED (không fallback im lặng matrixRows=0).' };
+  }
+  for (let i = 0; i < shards.length; i++) {
+    const expected = 'content-matrix.csv.part' + String(i).padStart(2, '0');
+    if (shards[i] !== expected) {
+      throw { code: 'STATE_MISSING', file: 'data/content-matrix.csv.part*',
+        message: 'canonical shards không liền mạch — kỳ vọng ' + expected + ', thấy ' + shards[i] + ' — shard thiếu/sai thứ tự — FAIL CLOSED.' };
+    }
+  }
+  const label = 'data/content-matrix.csv.part00..' + String(shards.length - 1).padStart(2, '0');
+  const text = shards.map((f) => fs.readFileSync(path.join(dataDir, f), 'utf8')).join('');
+  return { statuses: parseMatrixText(text, label), source: 'shards' };
+}
+
 /**
  * Đọc toàn bộ repository truth cần thiết — READ-ONLY, không bao giờ ghi.
- * Trả về snapshot thuần dữ liệu để evaluate() thuần hàm dùng cho unit test.
+ * Trả về snapshot thuần dữ liệu, kèm `fatals` khi critical truth thiếu/hỏng
+ * (evaluate() FAIL CLOSED), để evaluate() thuần hàm dùng cho unit test.
  */
 function collectSnapshot(root, nowIso) {
   const now = nowIso ? Date.parse(nowIso) : Date.now();
   if (!Number.isFinite(now)) throw new Error('invalid --now: ' + nowIso);
   const abs = (p) => path.join(root, p);
 
-  const checkpoint = readJsonSafe(abs(CHECKPOINT), null);
-  const transaction = readJsonSafe(abs(TRANSACTION), null);
-  const lock = readJsonSafe(abs(WRITER_LOCK), null);
-  const ledger = readJsonSafe(abs(LEDGER), { events: [] });
+  const fatals = [];
+  const guard = (fn) => {
+    try { return fn(); }
+    catch (e) {
+      if (e && (e.code === 'STATE_MISSING' || e.code === 'STATE_INVALID')) { fatals.push(e); return null; }
+      throw e;
+    }
+  };
 
-  // Pending command + tuổi của FILE (thời điểm coordinator commit nó).
-  let command = null;
-  let commandFileMinutes = null;
-  try {
-    const st = fs.statSync(abs(COMMAND_FILE));
-    command = readJson(abs(COMMAND_FILE));
-    commandFileMinutes = (now - st.mtimeMs) / 60000;
-  } catch (e) {
-    /* không có command pending — bình thường */
+  let checkpoint = null;
+  let transaction = null;
+  let lock = null;
+  let ledger = null;
+  for (const c of CRITICAL_STATE) {
+    const v = guard(() => loadCritical(root, c.rel, c.min, c.need));
+    if (c.rel === CHECKPOINT) checkpoint = v;
+    else if (c.rel === TRANSACTION) transaction = v;
+    else if (c.rel === WRITER_LOCK) lock = v;
+    else ledger = v;
   }
 
-  // Matrix truth: map article_id -> status (split(',') an toàn vì các cột
-  // id/status không bao giờ chứa dấu phẩy).
-  const statuses = new Map();
-  if (fs.existsSync(abs(MATRIX))) {
-    const lines = fs.readFileSync(abs(MATRIX), 'utf8').split(/\r?\n/);
-    const header = lines[0].split(',');
-    const idIdx = header.indexOf('article_id');
-    const stIdx = header.indexOf('status');
-    for (let i = 1; i < lines.length; i++) {
-      if (!lines[i]) continue;
-      const cols = lines[i].split(',');
-      if (cols.length > Math.max(idIdx, stIdx)) statuses.set(cols[idIdx], cols[stIdx]);
+  // Pending command + tuổi của FILE (thời điểm coordinator commit nó).
+  // OPTIONAL: không có command = bình thường; command TỒN TẠI nhưng hỏng
+  // => STATE_INVALID (FAIL CLOSED) — không bỏ lọt command treo.
+  let command = null;
+  let commandFileMinutes = null;
+  let st = null;
+  try { st = fs.statSync(abs(COMMAND_FILE)); }
+  catch (e) {
+    if (e.code !== 'ENOENT') fatals.push({ code: 'STATE_INVALID', file: COMMAND_FILE,
+      message: 'operator-command.json stat lỗi: ' + e.message });
+  }
+  if (st !== null) {
+    commandFileMinutes = (now - st.mtimeMs) / 60000;
+    try {
+      command = readJson(abs(COMMAND_FILE));
+    } catch (e) {
+      fatals.push({ code: 'STATE_INVALID', file: COMMAND_FILE,
+        message: 'operator-command.json tồn tại nhưng không đọc/parse được — FAIL CLOSED (không có command là bình thường; command hỏng thì không).' });
+      command = null;
+      commandFileMinutes = null;
     }
   }
 
+  // Matrix truth qua canonical loader. Giá trị neutral bên dưới (Map rỗng /
+  // {active:false}) CHỈ để in báo cáo khi đã có fatal — fatals khác rỗng thì
+  // evaluate() luôn FAIL; không bao giờ được dùng để "giả lành".
+  const matrix = guard(() => loadCanonicalMatrix(root));
+  const statuses = matrix ? matrix.statuses : new Map();
+
+  // Cross-check repository truth: checkpoint.matrix_rows là con số row đã
+  // commit của matrix. Nếu số row đọc được khác — ví dụ shard CUỐI dãy bị
+  // thiếu (dãy part00..NN vẫn "liền mạch" nhưng không đủ row) — canonical
+  // matrix truth không đồng bộ => FAIL CLOSED, không thể giả HEALTHY.
+  if (checkpoint && matrix && Number.isFinite(checkpoint.matrix_rows)
+      && matrix.statuses.size !== checkpoint.matrix_rows) {
+    fatals.push({ code: 'STATE_INVALID', file: 'data/content-matrix.csv',
+      message: 'matrix rows đọc được (' + matrix.statuses.size +
+        ') != checkpoint.matrix_rows (' + checkpoint.matrix_rows +
+        ') — canonical matrix truth không đồng bộ với checkpoint (thiếu/thừa shard hoặc matrix drift) — FAIL CLOSED.' });
+  }
+
   // Progress event mới nhất trong ledger (mọi op đều là dấu hiệu tiến).
-  const events = Array.isArray(ledger.events) ? ledger.events : [];
+  const events = ledger && Array.isArray(ledger.events) ? ledger.events : [];
   let lastProgressMinutes = null;
   let lastProgressAt = null;
   for (const ev of events) {
@@ -144,10 +297,12 @@ function collectSnapshot(root, nowIso) {
 
   return {
     nowIso: new Date(now).toISOString(),
+    fatals,
     checkpoint,
     activeChunk,
     activeChunkUnfinished: activeChunk.filter((id) => UNFINISHED.includes(statuses.get(id))).length,
     matrixRows: statuses.size,
+    matrixSource: matrix ? matrix.source : null,
     transaction: transaction || { active: false },
     lock: lock || { locked: false },
     ledgerEvents: events.length,
@@ -182,6 +337,12 @@ function evaluate(snap, thresholdsIn) {
     if (code === EXIT_FAIL) worst = EXIT_FAIL;
     else if (code === EXIT_WARN && worst === EXIT_PASS) worst = EXIT_WARN;
   };
+
+  // 0) FAIL CLOSED — critical repository truth thiếu/hỏng: snapshot mang
+  // fatals thì KHÔNG thể HEALTHY, bất kể phần còn lại trông thế nào.
+  for (const f of snap.fatals || []) {
+    add(f.code, EXIT_FAIL, f.file + ': ' + f.message);
+  }
 
   const tx = snap.transaction || {};
   const lock = snap.lock || {};
@@ -291,7 +452,11 @@ function main(argv) {
     console.log(JSON.stringify({ snapshot: snap, result }, null, 2));
   } else {
     console.log('FACTORY LIVENESS WATCHDOG — ' + result.status + ' (exit ' + result.exitCode + ')');
-    console.log('  now: ' + snap.nowIso + ' | matrix rows: ' + snap.matrixRows + ' | ledger events: ' + snap.ledgerEvents);
+    console.log('  now: ' + snap.nowIso + ' | matrix rows: ' + snap.matrixRows +
+      ' (source: ' + (snap.matrixSource || 'UNAVAILABLE — FAIL CLOSED') + ')' + ' | ledger events: ' + snap.ledgerEvents);
+    if (snap.fatals && snap.fatals.length) {
+      console.log('  FAIL CLOSED: ' + snap.fatals.length + ' critical truth issue(s) — trạng thái này KHÔNG thể coi là HEALTHY.');
+    }
     console.log('  active_chunk: ' + snap.activeChunk.length + ' row(s) | unfinished: ' + snap.activeChunkUnfinished +
       ' | tx active: ' + Boolean(snap.transaction.active) + ' | lock held: ' + Boolean(snap.lock.locked) +
       ' | pending command: ' + (snap.command !== null));

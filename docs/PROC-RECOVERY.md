@@ -79,6 +79,40 @@ truth.
   rewrites PUBLISHED rows, and NEVER force-clears an ambiguous transaction or
   a live lock.
 
+## Liveness watchdog contract (READ-ONLY, FAIL CLOSED)
+
+`scripts/factory/liveness-watchdog.js` detects "workflows green but the
+factory is NOT moving" and is the liveness half of Tier 4. Contract:
+
+- READ-ONLY absolute: never writes, never commits, never pushes, never
+  force-clears a lock/transaction, never claims or publishes. On a clean
+  checkout it assembles the matrix IN-MEMORY from the canonical shards
+  (`data/content-matrix.csv.part00..03`; the assembled CSV is gitignored) —
+  direct CLI and GitHub Actions read the same truth, and the workflow
+  proves read-only by asserting a clean tree before AND after, plus
+  sha256-identical production truth before/after.
+- FAIL CLOSED on critical truth: missing file ⇒ `STATE_MISSING`; invalid
+  JSON or wrong minimal schema ⇒ `STATE_INVALID` — for the matrix AND for
+  `checkpoint.json`, `transaction.json`, `writer-lock.json`,
+  `throughput-ledger.json`. It NEVER falls back to `matrixRows=0`,
+  `{active:false}` or any fake healthy state: a fatal means FAIL (exit 1),
+  even if everything else looks fine. `operator-command.json` is OPTIONAL
+  (no command pending is normal), but a command file that exists and cannot
+  be parsed is `STATE_INVALID` (FAIL) — a hung command must not be missed.
+- Detections: HEALTHY IDLE (exit 0 — user resting is never a failure),
+  HEALTHY ACTIVE (exit 0), PENDING_COMMAND_STALE (exit 1), STALLED active
+  chunk incl. RESEARCH/WRITING/QA/REVIEW/REPAIR/PASS rows (exit 1),
+  EXPIRED_LOCK_UNFINISHED_WORK (exit 1; expired lock while idle is WARN —
+  hygiene via recover, never force-cleared by the watchdog),
+  ACTIVE_TX_TOO_OLD (exit 1).
+- Recovery actions stay with the operator: run `recover` through the
+  standard channel. The watchdog only reports.
+
+Tier 4 enforcement: engine/workflow/recovery changes REQUIRE the soak
+suite + watchdog, and `factory-soak.yml` runs on both `pull_request` and
+`push` to `main` (path-filtered) — direct pushes to main cannot skip
+Tier 4. CI green is NOT liveness green until Tier 4 has run.
+
 ## Interrupted run procedure
 
 1. `node scripts/factory/factory.js recover` (or
