@@ -85,15 +85,26 @@ node scripts/factory/capacity-check.js     # READ-ONLY capacity + state invarian
 ## Factory operator (golden orchestration port)
 
 `scripts/factory/operator.js` is the whitelist command-contract operator
-(patterned on the /blog golden factory). Two equivalent ways to run it:
+(patterned on the /blog golden factory). Two DIFFERENT channels — they are
+NOT interchangeable:
 
-- **Command file channel** (used by `.github/workflows/factory-operator.yml`):
-  a coordinator pushes `data/state/operator-command.json`
-  (`{op, ids, count, scope, command_id, coordinator}`); the workflow validates
-  it against the whitelist, runs recover-first, executes, then commits under a
-  final-tree-verify + safe-push (fetch/rebase, never force) discipline.
-- **Direct CLI** (writer environment):
+- **Actions command-file channel** (`--channel actions`, used by
+  `.github/workflows/factory-operator.yml`): a coordinator pushes
+  `data/state/operator-command.json` (`{op, ids, count, scope, command_id,
+  coordinator}`); the workflow validates it with `--channel actions`, runs
+  recover-first, executes, then commits under a final-tree-verify + safe-push
+  (fetch/rebase, never force) discipline. A clean checkout has NO `_drafts/`,
+  so this channel only accepts ops that run without drafts:
+  `status, prepare-next, research, recover, consistency, reports, verify`.
+  A draft-bound op (`qa`, `publish`) is REFUSED EARLY at validation with
+  exit code 3 — nothing executed, nothing mutated — and the workflow then
+  CONSUMES the refused command (commit removing the file) so
+  `operator-command.json` can never hang.
+- **Writer direct CLI** (`--channel cli`, the default when invoked directly):
   `node scripts/factory/operator.js <op> [--ids A00001,A00002] [--count N] [--scope fast|deep|full]`
+  The writer environment HAS `_drafts/`, so the full whitelist
+  `status, prepare-next, research, qa, publish, recover, consistency, reports,
+  verify` is available here. `qa`/`publish` are writer direct-CLI ONLY.
 
 Whitelist ops: `status, prepare-next, research, qa, publish, recover,
 consistency, reports, verify`. No arbitrary shell; ids must match `A#####`;
@@ -114,8 +125,39 @@ cancel-in-progress; an unconsumed command is never overwritten.
 DRAFT BOUNDARY (/lab adaptation): Pages serves the repository ROOT, so
 committed drafts would be PUBLIC. `_drafts/` stays gitignored FOREVER and is
 NEVER committed. Ops that need draft prose (`qa`, `publish`) therefore run in
-the writer's environment via the same CLI; in a bare Actions checkout they
-stop safely with NO_DRAFT (nothing mutated).
+the writer's environment via the writer direct CLI. On the Actions
+command-file channel they are refused EARLY (exit 3, never a mid-run NO_DRAFT
+with a hanging command file); the workflow then consumes the refused command.
+
+
+## Validation model (4 tiers — MANDATORY)
+
+"CI green" is only valid when every tier that applies to the scope of the
+change is PASS. Never claim production-safe from unit tests alone.
+
+- **Tier 1 — Unit**: `node --test tests/test-suite.js`
+  deterministic unit/regression contracts (gates, whitelists, rollback,
+  channel contract, concurrency contract, watchdog states).
+- **Tier 2 — Integration**: operator sandbox E2E + deterministic build
+  (sandbox copies prove the real pipeline runs end to end without drift).
+- **Tier 3 — Production invariant**: consistency + grounding +
+  capacity-check + state preservation + no-drift (checkpoint ↔ matrix ↔
+  sitemap ↔ archive ↔ public tree; exactly-once ledger; contiguous prefix).
+- **Tier 4 — Long-run / Failure recovery / Liveness**: multi-chunk soak
+  (`node --test tests/soak/factory-soak.js`) + fault injection + recover +
+  liveness watchdog (`scripts/factory/liveness-watchdog.js`).
+
+Rules:
+- Engine/workflow/recovery changes REQUIRE Tier 4 (soak + watchdog), not
+  just Tier 1.
+- Tier 4 exists because CI/invariants can be green while the factory is
+  stalled (unfinished work standing, command hanging, expired lock,
+  over-age transaction). The watchdog closes that blind spot; it is
+  READ-ONLY (never force-clears, claims or publishes; user resting is
+  never a failure: HEALTHY IDLE = PASS).
+- Failing a tier means: do NOT merge, do NOT lower thresholds or delete
+  tests, do NOT mutate production truth to make tests green; fix the root
+  cause and re-run the affected tier AND every tier above it.
 
 ## Status lifecycle
 

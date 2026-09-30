@@ -14,8 +14,15 @@ on:
 permissions:
   contents: read
 
+# Per-ref concurrency (hardening F2): nhóm tách theo ref/branch để PR
+# KHÔNG thể cancel production-invariant run của main và main KHÔNG cancel
+# validation của PR. Trong CÙNG một ref thì cancel-in-progress: true vẫn
+# hợp lệ (chỉ tự hủy các run cũ của chính ref đó, ví dụ push liên tiếp).
+# LƯU Ý: factory-operator.yml GIỮ NGUYÊN concurrency group toàn cục
+# lab-factory-production + cancel-in-progress: false (serialize mọi
+# production mutation) — KHÔNG được tách theo ref.
 concurrency:
-  group: factory-capacity-validate
+  group: factory-capacity-validate-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:

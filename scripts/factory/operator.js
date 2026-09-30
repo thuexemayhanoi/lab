@@ -8,6 +8,15 @@
  * .github/workflows/factory-operator.yml executes it here. The same CLI runs
  * identically in the writer's local canonical environment.
  *
+ * CHANNEL CONTRACT (draft boundary): the Actions command-file channel is NOT
+ * the writer direct CLI. It runs `--channel actions` and only accepts ops that
+ * can run in a CLEAN CHECKOUT (no _drafts/): status, prepare-next, research,
+ * recover, consistency, reports, verify. Draft-bound ops (qa, publish) are
+ * REFUSED EARLY at validation (exit code 3, nothing executed, nothing
+ * mutated) — the workflow then consumes the refused command so it never hangs.
+ * On the writer direct CLI (default channel 'cli') every whitelisted op,
+ * including qa/publish, stays available.
+ *
  * HARD BOUNDARIES (same as the engine, docs/PROC-PUBLISH.md):
  * - NO AI calls, NO API keys, NO prose writing. Deterministic tooling only.
  * - NO arbitrary shell: op/ids/count/scope are validated against strict
@@ -48,6 +57,16 @@ const CMD_FILE = path.join(ROOT, 'data', 'state', 'operator-command.json');
 
 const OPS = ['status','prepare-next','research','qa','publish','recover','consistency','reports','verify'];
 const SCOPES = ['fast','deep','full'];
+// DRAFT BOUNDARY (channel contract): ops that read `_drafts/<ID>.html`.
+// `_drafts/` is gitignored and NEVER committed, so a GitHub Actions clean
+// checkout can never run them. On the ACTIONS channel they are REFUSED EARLY
+// (exit code 3) at validate time — never accepted only to die NO_DRAFT mid-run
+// and leave operator-command.json hanging. The writer direct CLI (default
+// channel) keeps full access: drafts exist there.
+const DRAFT_OPS = ['qa','publish'];
+const CHANNELS = ['actions','cli'];
+const EXIT_CHANNEL_REFUSED = 3;
+const ACTIONS_OPS = () => OPS.filter(o => !DRAFT_OPS.includes(o));
 const PRODUCTION_OPS = ['prepare-next','qa','publish']; // default scope fast
 const MUTATING = new Set(['prepare-next','research','qa','publish']);
 const ID_RE = /^A\d{5}$/;
@@ -55,6 +74,7 @@ const COUNT_MIN = 1, COUNT_MAX = 10;
 const factory = require(path.join(__dirname, 'factory.js'));
 
 function fail(msg){ console.error('OPERATOR REFUSED: ' + msg); process.exit(1); }
+function failChannel(msg){ console.error('OPERATOR CHANNEL REFUSED: ' + msg); process.exit(EXIT_CHANNEL_REFUSED); }
 function resolveScope(cmd){ return cmd.scope || (PRODUCTION_OPS.includes(cmd.op) ? 'fast' : (cmd.op==='verify'?'full':'')); }
 
 function parseIds(v){
@@ -70,9 +90,17 @@ function parseIds(v){
   return list;
 }
 
-function validateCommand(cmd){
+function validateCommand(cmd, channel){
+  const ch = channel || 'cli'; // default: writer direct CLI (drafts exist there)
+  if (!CHANNELS.includes(ch)) fail('unknown channel '+JSON.stringify(ch)+' (expected: '+CHANNELS.join('|')+')');
   if (!cmd || typeof cmd!=='object' || Array.isArray(cmd)) fail('command must be a JSON object');
   if (!OPS.includes(cmd.op)) fail('unsupported op: '+JSON.stringify(cmd.op)+' (whitelist: '+OPS.join(', ')+')');
+  if (ch==='actions' && DRAFT_OPS.includes(cmd.op)) {
+    // REFUSE EARLY, nothing executed, nothing mutated: a clean checkout has no
+    // _drafts/ — accepting this command would only die NO_DRAFT mid-run and
+    // leave the command file hanging. qa/publish run via the writer direct CLI.
+    failChannel('op "'+cmd.op+'" requires _drafts/ (gitignored, never committed) — it cannot run in an Actions clean checkout. The Actions command-file channel only accepts: '+ACTIONS_OPS().join(', ')+'. Run "'+cmd.op+'" via the writer direct CLI (node scripts/factory/operator.js '+cmd.op+' ...).');
+  }
   if (cmd.ids!==undefined) cmd.ids=parseIds(cmd.ids);
   if (cmd.count!==undefined){
     if(!Number.isInteger(cmd.count)) fail('count must be an integer');
@@ -90,12 +118,12 @@ function validateCommand(cmd){
   return Object.assign({}, cmd, {scope:resolveScope(cmd)});
 }
 
-function loadCommandFile(p){
+function loadCommandFile(p, channel){
   let raw;
   try { raw=fs.readFileSync(p,'utf8'); } catch(e){ fail('cannot read command file '+p+': '+e.message); }
   let cmd;
   try { cmd=JSON.parse(raw); } catch(e){ fail('command file is not valid JSON: '+e.message); }
-  return validateCommand(cmd);
+  return validateCommand(cmd, channel);
 }
 
 // ---- engine state preflight: repository truth first, recover BEFORE mutate ----
@@ -276,9 +304,11 @@ function execute(cmd){
 
 function usage(){
   console.error('Usage:');
-  console.error('  operator.js validate <command.json>          # whitelist validation, prints resolution (exports GITHUB_ENV when present)');
-  console.error('  operator.js command <command.json>           # validate + execute one command file');
+  console.error('  operator.js validate <command.json> [--channel actions|cli]  # whitelist validation, prints resolution (exports GITHUB_ENV when present)');
+  console.error('  operator.js command <command.json> [--channel actions|cli]   # validate + execute one command file');
   console.error('  operator.js <op> [--ids A00001,A00002] [--count N] [--scope fast|deep|full] [--command-id ID] [--coordinator NAME]');
+  console.error('Channels: actions = GitHub Actions command-file channel (clean checkout, no _drafts/ — draft ops qa/publish are REFUSED early, exit 3).');
+  console.error('          cli     = writer direct CLI (default; drafts exist, all ops available).');
   process.exit(1);
 }
 
@@ -292,13 +322,21 @@ function exportEnv(cmd){
 function main(argv){
   const [a,b,...rest]=argv;
   if (a==='validate'||a==='command'){
-    if (!b) usage();
-    const cmd=loadCommandFile(path.isAbsolute(b)?b:path.join(process.cwd(),b));
-    if (a==='validate'){ exportEnv(cmd); console.log('COMMAND OK '+JSON.stringify({op:cmd.op,ids:cmd.ids,count:cmd.count,scope:cmd.scope,command_id:cmd.command_id,coordinator:cmd.coordinator})); return; }
+    if (!b||b.startsWith('--')) usage();
+    // channel flag: the Actions command-file workflow passes --channel actions
+    // so draft-bound ops (qa/publish) are refused EARLY (exit 3) instead of
+    // being accepted and dying NO_DRAFT mid-run with a hanging command file.
+    let channel='cli';
+    for (let i=0;i<rest.length;i++){
+      if (rest[i]==='--channel'){ channel=rest[++i]; if(!CHANNELS.includes(channel)) fail('unknown channel '+JSON.stringify(channel)+' (expected: '+CHANNELS.join('|')+')'); }
+      else fail('unknown flag for '+a+': '+rest[i]);
+    }
+    const cmd=loadCommandFile(path.isAbsolute(b)?b:path.join(process.cwd(),b), channel);
+    if (a==='validate'){ exportEnv(cmd); console.log('COMMAND OK '+JSON.stringify({op:cmd.op,ids:cmd.ids,count:cmd.count,scope:cmd.scope,command_id:cmd.command_id,coordinator:cmd.coordinator,channel})); return; }
     execute(cmd);
     return;
   }
-  // direct CLI op: op name is argv[0]; flags start at argv[1]
+  // direct CLI op: op name is argv[0]; flags start at argv[1] (writer channel — drafts exist)
   if (!OPS.includes(a)) usage();
   const cmd={op:a};
   const flags=argv.slice(1);
@@ -315,4 +353,4 @@ function main(argv){
 }
 
 if (require.main===module) main(process.argv.slice(2));
-module.exports={validateCommand,loadCommandFile,parseIds,OPS,SCOPES,verifySteps,verifyStepsStaged,preflight,CMD_FILE};
+module.exports={validateCommand,loadCommandFile,parseIds,OPS,DRAFT_OPS,CHANNELS,EXIT_CHANNEL_REFUSED,ACTIONS_OPS,SCOPES,verifySteps,verifyStepsStaged,preflight,CMD_FILE};

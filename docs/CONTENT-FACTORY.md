@@ -69,8 +69,13 @@ factory.js reports            # regenerate reports/factory/*.json
 - Bootstrap publication cap: 10 pilot articles (`config/content-factory.json`).
 - Never rewrite PUBLISHED rows silently.
 - Operator orchestration (see `docs/PROC-PUBLISH.md` "Operator channel"):
-  whitelist command contract via `scripts/factory/operator.js`
-  (`data/state/operator-command.json`), recover-first, resume-before-claim,
+  whitelist command contract via `scripts/factory/operator.js` with TWO
+  NON-INTERCHANGEABLE channels — the Actions command-file channel
+  (`--channel actions`: clean checkout, no `_drafts/`, accepts only
+  status/prepare-next/research/recover/consistency/reports/verify; draft-bound
+  qa/publish are REFUSED EARLY with exit 3 and the refused command is consumed
+  by the workflow) and the writer direct CLI (`--channel cli`, default: full
+  whitelist including qa/publish). Recover-first, resume-before-claim,
   QA scopes fast/deep/full (thresholds never change), final-tree verify +
   safe push, single coordinator `lab-factory-production`.
 - Build manifest: `data/state/build-manifest.json` records EXACTLY the
@@ -109,3 +114,25 @@ factory.js reports            # regenerate reports/factory/*.json
   `CHUNK` ids and, without ids, takes at most the current chunk of PASS rows.
   The external AI writer remains the only prose writer; GitHub Actions
   stays deterministic (no API keys, no autonomous writing).
+
+## Validation model (4 tiers — MANDATORY)
+
+"CI green" is only valid when every tier that applies to the scope of the
+change is PASS. Never claim production-safe from unit tests alone.
+
+- **Tier 1 — Unit**: `node --test tests/test-suite.js`
+  (deterministic unit/regression contracts).
+- **Tier 2 — Integration**: operator sandbox E2E + deterministic build.
+- **Tier 3 — Production invariant**: consistency + grounding + capacity-check
+  + state preservation + no-drift.
+- **Tier 4 — Long-run / Failure recovery / Liveness**: multi-chunk soak
+  (`node --test tests/soak/factory-soak.js`) with fault injection +
+  deterministic recover + liveness watchdog
+  (`scripts/factory/liveness-watchdog.js`, READ-ONLY: HEALTHY IDLE is PASS —
+  user resting is never a failure; stale command, stalled active chunk,
+  expired lock + unfinished work and over-age transactions are detected).
+
+Engine/workflow/recovery changes REQUIRE Tier 4. A failing tier means: do NOT
+merge, do NOT lower thresholds or delete tests, do NOT mutate production truth
+to make tests green; fix the root cause and re-run the affected tier and every
+tier above it.

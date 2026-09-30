@@ -4,24 +4,25 @@ name: Factory Operator
 # (factory-operator.yml) sang engine Node chuẩn của /lab. KHÔNG chửa AI,
 # KHÔNG gọi API AI, KHÔNG secret AI, KHÔNG viết prose bài.
 #
-# KÊNH LỆNH: coordinator đẩy lệnh whitelist vào
-#   data/state/operator-command.json (commit lên main) -> workflow này là môi
-#   trường thực thi: checkout + Node 22 + tooling chuẩn của /lab
-#   (scripts/factory/operator.js + factory.js + build-site.js).
+# KÊNH LỆNH + CHANNEL CONTRACT (draft boundary — hardening F1): coordinator
+#   đẩy lệnh whitelist vào data/state/operator-command.json (commit lên main)
+#   -> workflow này là môi trường thực thi: checkout + Node 22 + tooling
+#   chuẩn của /lab. Workflow chạy với --channel actions.
 #
-# OPS WHITELIST (scripts/factory/operator.js): status | prepare-next |
-# research | qa | publish | recover | consistency | reports | verify.
-# KHÔNG shell tùy ý: op/ids/count/scope được validate whitelist nghiêm ngặt
-# trước khi thực thi; input không bao giờ được nối vào chuỗi shell.
+#   HAI KÊNH KHÁC NHAU, KHÔNG thay thế cho nhau:
+#   - Kênh Actions command-file (--channel actions): checkout trần KHÔNG có
+#     _drafts/ (gitignored, KHÔNG BAO GIỜ commit) nên nó CHỈ nhận các op
+#     chạy được trong clean checkout: status | prepare-next | research |
+#     recover | consistency | reports | verify. Op cần draft (qa, publish)
+#     bị REFUSE EARLY tại bước validate (exit 3), KHÔNG thực thi, KHÔNG
+#     mutate — sau đó workflow TIÊU THỤ lệnh bị refuse (commit xóa file lệnh)
+#     để không bao giờ có operator-command.json treo.
+#   - Writer direct CLI (--channel cli, mặc định khi gọi trực tiếp): môi
+#     trường writer có _drafts/, nhận ĐẦY ĐỦ whitelist kể cả qa/publish.
 #
-# RANH GIỚI DRAFT (/lab, KHÁC /blog — thích ứng bắt buộc): Pages của /lab
-# phục vụ NGÁN GỐC REPO (.nojekyll, branch main / (root)); mọi file commit
-# đều công khai. Vì vậy _drafts/ LUÔN gitignored và KHÔNG BAO GIỜ commit —
-# không thể dùng Jekyll-exclude như /blog. Hệ quả: các op cần đọc draft
-# (qa, publish) chạy trong MÔI TRƯỜNG WRITER qua cùng CLI operator.js này;
-# trong checkout Actions trần, chúng dừng an toàn NO_DRAFT (không mutate).
-# Op không cần draft (status, prepare-next, recover, consistency, reports,
-# verify) chạy đầy đủ qua kênh này.
+# OPS WHITELIST (scripts/factory/operator.js). KHÔNG shell tùy ý: op/ids/
+# count/scope được validate whitelist nghiêm ngặt trước khi thực thi; input
+# không bao giờ được nối vào chuỗi shell.
 #
 # RECOVER FIRST: trước mọi op, chạy recover (transaction treo / lock không
 # rõ ownership -> STOP, không force-unlock, không force-clear).
@@ -71,15 +72,25 @@ jobs:
         with:
           node-version: 22
 
-      - name: Đọc và validate lệnh operator (whitelist, KHÔNG shell)
+      - name: Đọc và validate lệnh operator (whitelist, KHÔNG shell; kênh Actions)
         run: |
           set -eu
           if [ ! -f data/state/operator-command.json ]; then
             echo "không có lệnh operator (file command không tồn tại) - skip"
             exit 0
           fi
-          node scripts/factory/operator.js validate data/state/operator-command.json
-          echo "operator command accepted"
+          code=0
+          node scripts/factory/operator.js validate data/state/operator-command.json --channel actions || code=$?
+          if [ "$code" = "3" ]; then
+            echo "CHANNEL_REFUSED=1" >> "$GITHUB_ENV"
+            echo "::error::operator command REFUSED on the Actions channel: op cần _drafts/ (gitignored) không chạy được trong clean checkout — hãy chạy qa/publish qua writer direct CLI. Lệnh sẽ được tiêu thụ (commit xóa) để không treo."
+            exit 3
+          fi
+          if [ "$code" != "0" ]; then
+            echo "::error::operator command validate fail (exit $code)"
+            exit "$code"
+          fi
+          echo "operator command accepted (kênh Actions: chỉ op chạy được trong clean checkout)"
 
       - name: Preflight - trạng thái engine (read-only)
         run: node scripts/factory/factory.js status
@@ -95,14 +106,21 @@ jobs:
             exit 1
           fi
 
-      - name: Thực thi op (cố định theo file lệnh, không interpolation)
+      - name: Thực thi op (cố định theo file lệnh, không interpolation; kênh Actions)
         run: |
           set -eu
           if [ ! -f data/state/operator-command.json ]; then
             echo "không có lệnh operator - không có gì để thực thi (skip)"
             exit 0
           fi
-          node scripts/factory/operator.js command data/state/operator-command.json
+          code=0
+          node scripts/factory/operator.js command data/state/operator-command.json --channel actions || code=$?
+          if [ "$code" = "3" ]; then
+            echo "CHANNEL_REFUSED=1" >> "$GITHUB_ENV"
+            echo "::error::operator command REFUSED on the Actions channel (op cần _drafts/) — không có gì được thực thi/mutate. Lệnh sẽ được tiêu thụ để không treo."
+            exit 3
+          fi
+          exit "$code"
 
       - name: Xóa lệnh đã xử lý (trước verify để cây verify == cây commit)
         run: |
@@ -188,4 +206,39 @@ jobs:
             fi
           done
           echo "::error::push vẫn conflict sau rebase + verify — STOP, không force push"
+          exit 1
+
+      - name: Tiêu thụ lệnh bị từ chối sớm (op cần _drafts/) — không để command file treo
+        if: failure() && env.CHANNEL_REFUSED == '1'
+        run: |
+          set -eu
+          echo "::warning::Lệnh bị Actions channel REFUSE EARLY (op cần _drafts/: qa/publish là writer direct-CLI only). Tiêu thụ lệnh: commit xóa operator-command.json — KHÔNG có gì đã được thực thi, KHÔNG mutate production truth."
+          git config user.name "factory-operator-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm -f --ignore-unmatch --quiet data/state/operator-command.json || true
+          rm -f data/state/operator-command.json
+          git add -A
+          if git diff --cached --quiet; then
+            echo "command file không còn trong cây — đã được tiêu thụ ở nơi khác, skip"
+            exit 1
+          fi
+          git commit -m "factory-operator: consume refused draft-bound command (qa/publish are writer-env direct-CLI only; refused early on the Actions channel, nothing executed, nothing mutated)"
+          if git push; then
+            echo "REFUSED_COMMAND_CONSUMED=$(git rev-parse HEAD)"
+            exit 1
+          fi
+          for i in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main; then
+              node scripts/factory/operator.js verify --scope fast || true
+              if git push; then
+                echo "REFUSED_COMMAND_CONSUMED=$(git rev-parse HEAD) (sau rebase)"
+                exit 1
+              fi
+            else
+              git rebase --abort || true
+              echo "::error::không tiêu thụ được lệnh bị refuse (rebase conflict) — KHÔNG force push; xóa thủ công qua writer khi cần"
+              exit 1
+            fi
+          done
           exit 1
