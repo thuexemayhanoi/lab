@@ -404,6 +404,37 @@ test('chatbot: panel has dialog semantics + accessible controls', () => {
   assert.ok(/aria-label="Câu hỏi cho trợ lý"/.test(t), 'input not labelled');
   assert.ok(/aria-label="Xóa hội thoại"/.test(t), 'clear button not labelled');
 });
+// ---------- ACCESSIBLE DYNAMIC SEARCH (issue #3) ----------
+// Homepage search mutates #search-results innerHTML for loading / error /
+// no-result / result states. Screen readers must hear ONE concise, debounced
+// textual announcement per settled state — never the full result list.
+test('search: dynamic search announces loading, errors, and result updates accessibly (issue #3)', () => {
+  const home = fs.readFileSync(path.join(SITE, 'index.html'), 'utf8');
+  // dedicated polite live region for concise announcements
+  assert.ok(/id="search-status"[^>]*role="status"[^>]*aria-live="polite"|role="status"[^>]*aria-live="polite"[^>]*id="search-status"/.test(home),
+    'homepage needs a polite live status region (#search-status) for search announcements');
+  // the raw result list is NOT itself a live region (AT hears the summary, not 10 cards)
+  assert.ok(/<ul id="search-results"/.test(home), 'search results list missing');
+  assert.ok(!/<ul id="search-results"[^>]*aria-live/.test(home),
+    'raw result list must not be a live region — announce concise state text in #search-status instead');
+  // visually-hidden utility exists in the canonical design system
+  const css = fs.readFileSync(path.join(ROOT, 'scripts', 'site', 'style.css'), 'utf8');
+  assert.ok(/\.sr-only\{[^}]*clip/.test(css), 'canonical style.css missing the visually-hidden .sr-only utility');
+  const promotedCss = fs.readFileSync(path.join(SITE, 'assets', 'style.css'), 'utf8');
+  assert.strictEqual(promotedCss, css, 'assets/style.css must be the verbatim promotion of scripts/site/style.css — run node scripts/site/build-site.js');
+  // generated search behavior: every state announces a concise text message
+  const js = fs.readFileSync(path.join(SITE, 'assets', 'search.js'), 'utf8');
+  ['Đang tải chỉ mục tìm kiếm.', 'Không tải được chỉ mục tìm kiếm', 'Không tìm thấy bài đã xuất bản nào.', 'Tìm thấy '].forEach(m =>
+    assert.ok(js.includes(m), 'search.js must announce state: ' + m));
+  assert.ok(/getElementById\('search-status'\)/.test(js), 'search.js must target #search-status');
+  assert.ok(/st\.textContent=/.test(js) && !/st\.innerHTML=/.test(js), 'announcements must be plain text (textContent), never HTML');
+  // debounced + no announcement spam: one announcement per settled state
+  assert.ok(/STATUS_TIMER/.test(js) && /setTimeout\(/.test(js), 'search announcements must be debounced');
+  assert.ok(/st\.textContent!==msg/.test(js), 'must not re-announce identical settled states');
+  // canonical generator must keep emitting the contract
+  const gen = fs.readFileSync(path.join(ROOT, 'scripts', 'site', 'build-site.js'), 'utf8');
+  assert.ok(gen.includes('id="search-status" class="sr-only" role="status" aria-live="polite"'), 'build-site homepage template missing the live status region');
+});
 test('chatbot: knowledge index covers published articles + static pages only', () => {
   const kb = JSON.parse(fs.readFileSync(path.join(SITE,'assets','knowledge-index.json'),'utf8'));
   assert.ok(kb.version === 1 && Array.isArray(kb.records) && kb.records.length >= 19, 'unexpected index shape');
