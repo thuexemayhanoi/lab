@@ -34,20 +34,32 @@
  *   unconsumed one (rebase keeps origin's new command).
  *
  * QA SCOPES (docs/PROC-PUBLISH.md "QA modes" — thresholds NEVER change):
- * - fast  (production default for prepare-next/qa/publish): consistency +
- *          grounding + test suite (canonical/index/sitemap verification,
- *          QA gates, no draft leak).
- * - deep  : fast + capacity-check + editorial-audit.
- * - full  : deep + full site build (engine/workflow changes, final verification).
+ * - fast  (production default for prepare-next/qa/publish — the NORMAL
+ *          2-article content loop): scoped consistency of the CURRENT ids
+ *          only (factory.js consistency --ids | --chunk: tx/lock sanity,
+ *          matrix uniqueness, checkpoint<->matrix coherence, selected-id
+ *          invariants). For publish: staged consistency + selected-ID
+ *          grounding (+ the deterministic build needed to promote the
+ *          staged pages). NO full test-suite, NO capacity-check, NO
+ *          editorial-audit, NO full-site audit — a 2-article pair must not
+ *          pay for a whole-site verification. Critical factual/legal gates
+ *          (publish gate, QA evidence hash, grounding) are UNCHANGED.
+ * - deep  : fast + test-suite (node --test tests/test-suite.js) +
+ *          capacity-check + editorial-audit.
+ * - full  : deep + full-site grounding + deterministic rebuild
+ *          (build-site). Engine/workflow changes, final verification.
+ * - Tier 4 (soak + watchdog) is for engine/workflow/recovery changes or
+ *          scheduled maintenance — NEVER part of the per-pair content loop.
  *
  * ATOMIC PUBLISH (op publish): publishStage (QA-hash gate + grounding gate +
  * staged archive/site/matrix/checkpoint inside a live transaction, drafts
- * intact, pre-state journal) -> build-site + editorial-audit + reports +
- * verify -> publishCommit ONLY when everything PASS (drafts removed, ledger
- * event appended, transaction cleared). Any failure => publishRollback
+ * intact, pre-state journal) -> build-site + reports + staged verify ->
+ * publishCommit ONLY when everything PASS (drafts removed, ledger event
+ * appended, transaction cleared). Any failure => publishRollback
  * (deterministic restore; never reports success, never leaves a half-
  * PUBLISHED state). Crash mid-flow => factory.js recover rolls the staged
- * transaction back from the journal.
+ * transaction back from the journal. editorial-audit runs pre-commit ONLY
+ * in deep/full scope — it never blocks a normal FAST publish.
  */
 'use strict';
 const fs = require('fs'), path = require('path');
@@ -147,17 +159,41 @@ function runReportsChecked(ctx){
   if (rc!==0){ console.error(ctx+': reports FAIL (rc='+rc+') — STOP, not reporting success.'); process.exit(1); }
 }
 
-function verifySteps(scope){
+// Normal (non-staged) verification. FAST is scoped to the CURRENT working
+// ids (explicit ids, or the current chunk when none are given) - the normal
+// 2-article loop never pays for a full-site sweep or the static test suite.
+function verifySteps(scope, ids){
   const s=['fast','deep','full'].includes(scope)?scope:'full'; // unknown scope -> safest (full)
-  const steps=[['node','scripts/factory/factory.js','consistency'],
-               ['node','scripts/factory/factory.js','grounding'],
-               ['node','--test','tests/test-suite.js']];
-  if (s==='deep'||s==='full') steps.push(['node','scripts/factory/capacity-check.js'],
-                                         ['node','scripts/factory/editorial-audit.js']);
-  if (s==='full') steps.push(['node','scripts/site/build-site.js']);
-  return steps;
+  const idList=(Array.isArray(ids)?ids:[]).filter(Boolean);
+  if(s==='fast'){
+    // FAST: scoped consistency ONLY (tx/lock sanity, matrix uniques,
+    // checkpoint<->matrix coherence, selected-id invariants). No test-suite,
+    // no grounding sweep, no capacity-check, no editorial-audit.
+    const cons=idList.length
+      ? ['node','scripts/factory/factory.js','consistency','--ids',idList.join(',')]
+      : ['node','scripts/factory/factory.js','consistency','--chunk'];
+    return [cons];
+  }
+  if(s==='deep'){
+    // DEEP: FAST + test-suite + capacity-check + editorial-audit.
+    const cons=idList.length
+      ? ['node','scripts/factory/factory.js','consistency','--ids',idList.join(',')]
+      : ['node','scripts/factory/factory.js','consistency','--chunk'];
+    return [cons,
+            ['node','--test','tests/test-suite.js'],
+            ['node','scripts/factory/capacity-check.js'],
+            ['node','scripts/factory/editorial-audit.js']];
+  }
+  // FULL: global consistency + full grounding + test-suite + capacity-check +
+  // editorial-audit + deterministic rebuild.
+  return [['node','scripts/factory/factory.js','consistency'],
+          ['node','scripts/factory/factory.js','grounding'],
+          ['node','--test','tests/test-suite.js'],
+          ['node','scripts/factory/capacity-check.js'],
+          ['node','scripts/factory/editorial-audit.js'],
+          ['node','scripts/site/build-site.js']];
 }
-// Staged-window verification (atomic publish): every step is STAGED-AWARE —
+// Staged-window verification (atomic publish): every step is STAGED-AWARE -
 // consistency and capacity-check accept EXACTLY the in-flight STAGED publish
 // transaction (id/operation/phase/journal/ids) instead of requiring "no
 // transaction active". The production invariants are NOT weakened: every
@@ -165,21 +201,27 @@ function verifySteps(scope){
 // transaction inside the staged window FAILS. tests/test-suite.js deliberately
 // runs OUTSIDE the staged window (it is a CI gate on the committed tree; its
 // tx-inactive invariant is exactly the post-commit production contract).
+// FAST publish = staged consistency + selected-ID grounding ONLY (the
+// deterministic build already ran before verify). editorial-audit and
+// capacity-check join at deep/full - they NEVER block a normal FAST publish.
 function verifyStepsStaged(scope, txId, ids){
   const s=['fast','deep','full'].includes(scope)?scope:'full'; // unknown scope -> safest (full)
   const idList=(Array.isArray(ids)?ids:[]).filter(Boolean);
   const cons=['node','scripts/factory/factory.js','consistency','--staged-tx',String(txId)];
   if(idList.length) cons.push('--staged-ids',idList.join(','));
-  const steps=[cons,['node','scripts/factory/factory.js','grounding',...idList]];
-  if(s==='deep'||s==='full') steps.push(['node','scripts/factory/capacity-check.js','--staged-tx',String(txId)],
-                                        ['node','scripts/factory/editorial-audit.js']);
-  if(s==='full') steps.push(['node','scripts/site/build-site.js']);
+  const ground=['node','scripts/factory/factory.js','grounding',...idList];
+  if(s==='fast') return [cons,ground];
+  const steps=[cons,ground,
+              ['node','scripts/factory/capacity-check.js','--staged-tx',String(txId)],
+              ['node','scripts/factory/editorial-audit.js','--out','reports/editorial/audit-after.json']];
+  if(s==='full') steps.push(['node','scripts/factory/factory.js','grounding'],
+                            ['node','scripts/site/build-site.js']);
   return steps;
 }
-function runVerify(scope){
-  const steps=verifySteps(scope);
+function runVerify(scope, ids){
+  const steps=verifySteps(scope, ids);
   const failed=[];
-  for (const st of steps){ const rc=run(st); if (rc!==0) failed.push(st.join(' ')); }
+  for (const st of steps){ const rc=run(st); if(rc!==0) failed.push(st.join(' ')); }
   if (failed.length){ console.error('VERIFY FAIL (scope='+scope+'): '+failed.join(' | ')); process.exit(1); }
   console.log('VERIFY PASS (scope='+scope+')');
 }
@@ -192,6 +234,8 @@ function opPrepareNext(cmd){
   const args=cmd.count?[String(cmd.count)]:[];
   factory.prepareNext(args); // acquires lock + tx internally; exits non-zero on refusal
   runReportsChecked('prepare-next');
+  // FAST = scoped consistency of the JUST-CLAIMED chunk (checkpoint active
+  // chunk). No test-suite / capacity-check / editorial-audit per micro-op.
   runVerify(cmd.scope||'fast');
 }
 
@@ -214,7 +258,9 @@ function opResearch(cmd){
   factory.appendLedger({op:'research',started_at:new Date(started).toISOString(),finished_at:new Date().toISOString(),
     elapsed_ms:Date.now()-started,ids:cmd.ids,count:cmd.ids.length});
   runReportsChecked('research');
-  runVerify(cmd.scope||'fast');
+  // FAST = scoped consistency of the researched ids + their research contract
+  // (the engine already validated packets/official sources). No test-suite.
+  runVerify(cmd.scope||'fast', cmd.ids);
 }
 
 function opQa(cmd){
@@ -239,7 +285,10 @@ function opQa(cmd){
   factory.appendLedger({op:'qa',started_at:new Date(started).toISOString(),finished_at:new Date().toISOString(),
     elapsed_ms:Date.now()-started,ids,count:ids.length});
   runReportsChecked('qa');
-  runVerify(cmd.scope||'fast');
+  // FAST = scoped consistency of the scored ids (QA scores + hash-bound
+  // evidence are written by the engine itself). No test-suite, no editorial
+  // sweep — critical factual/legal failures still FAIL the QA score hard.
+  runVerify(cmd.scope||'fast', ids);
 }
 
 function opPublish(cmd){
@@ -254,17 +303,19 @@ function opPublish(cmd){
     else if (!fs.existsSync(path.join(ROOT,'_drafts',id+'.html'))) problems.push(id+' NO_DRAFT (drafts live in the writer environment, gitignored — never committed)');
   }
   if (problems.length) fail('publish pre-check: '+problems.join('; '));
-  // ATOMIC PUBLISH: stage all mutations (archive/site/matrix/checkpoint, drafts
-  // INTACT, ledger untouched, pre-state journal) -> build + editorial-audit +
-  // reports + verify on the staged state -> commit ONLY when everything PASS.
-  // Any failure => deterministic publishRollback (matrix/checkpoint/public
+  // ATOMIC PUBLISH (Simple Production Mode): stage all mutations
+  // (archive/site/matrix/checkpoint, drafts INTACT, ledger untouched,
+  // pre-state journal) -> build + reports + staged verify on the staged state
+  // -> commit ONLY when everything PASS. FAST staged verify = staged
+  // consistency + selected-ID grounding (editorial-audit and capacity-check
+  // are deep/full gates — they NEVER block a normal FAST publish). Any
+  // failure => deterministic publishRollback (matrix/checkpoint/public
   // restored to pre-publish truth) and NO success report.
   const staged=factory.publishStage(cmd.ids); // exits non-zero on gate refusal
   let failed=null;
   const step=(name,rc)=>{ if(rc!==0&&!failed) failed=name+' (rc='+rc+')'; };
   if(!staged.noop){
     step('build-site', run(['node','scripts/site/build-site.js']));
-    if(!failed) step('editorial-audit', run(['node','scripts/factory/editorial-audit.js','--out','reports/editorial/audit-after.json']));
     if(!failed) step('reports', run(['node','scripts/factory/factory.js','reports']));
     // STAGED-AWARE VERIFY (was the success-path deadlock): the verification
     // runs against the staged contract — exactly THIS transaction + journal —

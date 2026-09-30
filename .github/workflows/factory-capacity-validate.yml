@@ -5,10 +5,58 @@ name: Factory capacity validate
 # ra log va step summary. Moi kiem dua tren repository truth (shards matrix,
 # state, cay public, sitemap), khong so lieu bịa.
 
+# SIMPLE PRODUCTION MODE: full validation (Tier 1+3 battery) chạy CHỈ khi thay
+# engine/workflow/reliability files (path-filtered). Normal content publishes
+# (matrix shards, data/state, data/published, data/qa, reports, public pages,
+# config/content-factory.json runtime grounding ids) KHÔNG trigger workflow
+# này — mỗi content push chỉ chạy đúng MỘT lightweight content validation
+# (ci-validate.yml). Chạy thủ công bất cứ lúc nào qua workflow_dispatch.
 on:
   push:
     branches: [main]
+    paths:
+      - 'scripts/factory/**'
+      - 'scripts/site/**'
+      - 'tests/**'
+      - 'config/article-rubric.json'
+      - 'config/business-facts.json'
+      - 'config/editorial.json'
+      - 'config/editorial-hubs.json'
+      - 'config/seo-experiment.json'
+      - 'config/site.json'
+      - 'config/source-policy.json'
+      - '.github/workflows/factory-operator.yml'
+      - '.github/workflows/factory-validate.yml'
+      - '.github/workflows/factory-capacity-validate.yml'
+      - '.github/workflows/factory-soak.yml'
+      - '.github/workflows/factory-liveness-watchdog.yml'
+      - '.github/workflows/ci-validate.yml'
+      - 'AGENTS.md'
+      - 'docs/PROC-PUBLISH.md'
+      - 'docs/CONTENT-FACTORY.md'
+      - 'docs/PROC-RECOVERY.md'
   pull_request:
+    paths:
+      - 'scripts/factory/**'
+      - 'scripts/site/**'
+      - 'tests/**'
+      - 'config/article-rubric.json'
+      - 'config/business-facts.json'
+      - 'config/editorial.json'
+      - 'config/editorial-hubs.json'
+      - 'config/seo-experiment.json'
+      - 'config/site.json'
+      - 'config/source-policy.json'
+      - '.github/workflows/factory-operator.yml'
+      - '.github/workflows/factory-validate.yml'
+      - '.github/workflows/factory-capacity-validate.yml'
+      - '.github/workflows/factory-soak.yml'
+      - '.github/workflows/factory-liveness-watchdog.yml'
+      - '.github/workflows/ci-validate.yml'
+      - 'AGENTS.md'
+      - 'docs/PROC-PUBLISH.md'
+      - 'docs/CONTENT-FACTORY.md'
+      - 'docs/PROC-RECOVERY.md'
   workflow_dispatch:
 
 permissions:

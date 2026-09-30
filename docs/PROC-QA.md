@@ -2,6 +2,17 @@
 
 Run: `factory.js qa <ID>` (operates on `_drafts/<ID>.html`).
 
+## QA scope (normal loop = FAST)
+
+Normal 2-article production uses FAST verification scoped to the current
+pair only: transaction/lock sanity, selected IDs, QA score contract,
+critical failures, grounding where the row requires it, checkpoint↔matrix
+coherence for the pair. FAST never runs the full test-suite,
+capacity-check or editorial audit — those are DEEP/FULL gates, and Tier 4
+(soak) is engine-change maintenance only. Thresholds are identical in
+every scope: PASS ≥ 75, REVIEW 70–74, below 70 REPAIR/BLOCKED; critical
+factual/legal failures FAIL hard regardless of scope.
+
 ## Automated checks
 
 - word count ≥ 1,600 (regex `[A-Za-zÀ-ỹ0-9]+` on stripped text; 3,000 soft max)

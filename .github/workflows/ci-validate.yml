@@ -1,5 +1,12 @@
-# ci-validate — non-Pages validation only. Pages is served from branch main / (root).
-# This workflow never touches Pages: no pages/id-token permissions, no artifacts.
+# ci-validate — THE ONE lightweight content validation path (Simple Production Mode).
+# This is the ONLY workflow a normal 2-article content publish has to pay for:
+#   matrix assemble + scoped consistency + grounding of the CHANGED article ids
+#   (derived from the push diff — never a full historical audit) + deterministic
+#   build + draft-leak guard. NO test-suite, NO capacity-check, NO editorial
+#   audit, NO soak — those are engine-change gates (factory-validate /
+#   factory-capacity-validate / factory-soak, all path-filtered) or DEEP/FULL
+#   operator scopes. Pages is served from branch main / (root); this workflow
+#   never touches Pages: no pages/id-token permissions, no artifacts.
 name: ci-validate
 on:
   push:
@@ -16,19 +23,46 @@ concurrency:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - uses: actions/setup-node@v4
         with:
           node-version: 22
       - name: Assemble matrix + status
         run: node scripts/factory/factory.js status
-      - name: Consistency check
+      - name: Consistency check (uniques, published files, no draft leak)
         run: node scripts/factory/factory.js consistency
-      - name: Grounding check (quantitative claims vs evidence)
-        run: node scripts/factory/factory.js grounding
-      - name: Tests
-        run: node --test tests/test-suite.js
+      - name: Grounding check — ONLY the article ids changed by this push
+        run: |
+          set -eu
+          CHANGED_IDS=$( (git diff --name-only HEAD~1 HEAD -- data/published/ 2>/dev/null || true) \
+            | sed -n 's#^data/published/\(A[0-9]\{5\}\)\.html$#\1#p' | sort -u | paste -sd, - )
+          if [ -n "$CHANGED_IDS" ]; then
+            echo "grounding scope (changed articles): $CHANGED_IDS"
+            node scripts/factory/factory.js grounding $CHANGED_IDS
+          else
+            echo "no changed article archives in this push — grounding scope empty (light content path)"
+          fi
       - name: Build (regenerates site/ and idempotently promotes public outputs to root)
         run: node scripts/site/build-site.js
+      - name: Build phải deterministic — working tree phải SẠCH (no drift)
+        run: |
+          set -eu
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "FAIL: build/site sinh khác biệt so với trạng thái đã commit — build không deterministic hoặc outputs bị bỏ sót."
+            git status --porcelain
+            exit 1
+          fi
+          echo "OK: deterministic build — không drift."
+      - name: Drafts không bao giờ công khai (không _drafts / .body.html trong public tree)
+        run: |
+          set -eu
+          test ! -d _drafts || { echo "FAIL: _drafts tồn tại trong cây public"; exit 1; }
+          if find . -name "*.body.html" -not -path "./.git/*" | grep -q .; then
+            echo "FAIL: draft body (.body.html) nằm trong cây public"
+            exit 1
+          fi
+          echo "OK: không có draft leak trong cây public."

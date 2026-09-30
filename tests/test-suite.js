@@ -748,7 +748,13 @@ test('privacy: contact transparency block (verified NAP) at the end', () => {
 });
 
 // ---------- EDITORIAL AUDIT REPORT SYNC ----------
-test('audit: reports/editorial/audit-after.json matches current source (no stale report)', () => {
+test('audit: stored editorial entries match a fresh re-audit of the same articles (audit-after.json is a DEEP/FULL artifact)', () => {
+  // Simple Production Mode: FAST publishes no longer regenerate
+  // reports/editorial/audit-after.json (editorial-audit is a deep/full gate).
+  // The freshness contract is therefore per-article: every STORED entry must
+  // still match a fresh re-audit of THAT article (drift = stale report);
+  // coverage lag (articles published after the last DEEP pass) is allowed and
+  // refreshed by the next deep publish / node scripts/factory/editorial-audit.js --out.
   const { execFileSync } = require('child_process');
   const os = require('os');
   const tmp = path.join(os.tmpdir(), 'lab-audit-check-' + process.pid + '.json');
@@ -756,16 +762,15 @@ test('audit: reports/editorial/audit-after.json matches current source (no stale
   const fresh = JSON.parse(fs.readFileSync(tmp, 'utf8'));
   fs.rmSync(tmp, { force: true });
   const stored = JSON.parse(fs.readFileSync(path.join(ROOT, 'reports', 'editorial', 'audit-after.json'), 'utf8'));
-  assert.strictEqual(fresh.audited, stored.audited, 'audited count drift');
-  assert.strictEqual(fresh.summary.avg_total, stored.summary.avg_total, 'stale audit avg — regenerate with: node scripts/factory/editorial-audit.js --out reports/editorial/audit-after.json');
-  assert.strictEqual(fresh.summary.min_total, stored.summary.min_total, 'stale audit min');
-  assert.strictEqual(fresh.summary.max_total, stored.summary.max_total, 'stale audit max');
-  fresh.articles.forEach(a => {
-    const s = stored.articles.find(x => x.article_id === a.article_id);
-    assert.ok(s, 'article missing from stored audit: ' + a.article_id);
-    assert.strictEqual(a.editorial.total, s.editorial.total, 'stale editorial score for ' + a.article_id);
-    assert.deepStrictEqual(a.issues || [], s.issues || [], 'stale issues for ' + a.article_id);
-    assert.strictEqual(a.word_count, s.word_count, 'stale word count for ' + a.article_id);
+  assert.ok(Number(stored.audited) > 0, 'stored audit must exist (run editorial-audit --out once)');
+  assert.ok(Number(stored.audited) <= Number(fresh.audited),
+    'stored audit covers ' + stored.audited + ' but only ' + fresh.audited + ' are auditable now');
+  stored.articles.forEach(s => {
+    const a = fresh.articles.find(x => x.article_id === s.article_id);
+    assert.ok(a, 'stored audit references an article no longer auditable: ' + s.article_id);
+    assert.strictEqual(a.editorial.total, s.editorial.total, 'stale editorial score for ' + s.article_id);
+    assert.deepStrictEqual(a.issues || [], s.issues || [], 'stale issues for ' + s.article_id);
+    assert.strictEqual(a.word_count, s.word_count, 'stale word count for ' + s.article_id);
   });
 });
 
@@ -1314,13 +1319,13 @@ test('hardening: atomic operator publish — build failure rolls back (never hal
     clean4('operator-build-fail');
   } finally { fs.writeFileSync(bs, orig); }
 });
-test('hardening: atomic operator publish — editorial-audit failure rolls back', () => {
+test('hardening: atomic operator publish — editorial-audit failure rolls back (DEEP scope still gates on it)', () => {
   ready4('A00026', '<h1>ok</h1>');
   const ea = path.join(SB4, 'scripts', 'factory', 'editorial-audit.js');
   const orig = fs.readFileSync(ea, 'utf8');
   try {
     fs.writeFileSync(ea, 'process.exit(1);\n' + orig);
-    const r = OP(['publish', '--ids', 'A00026', '--scope', 'fast'], SB4);
+    const r = OP(['publish', '--ids', 'A00026', '--scope', 'deep'], SB4);
     assert.notStrictEqual(r.status, 0, 'failed editorial audit must not commit');
     assert.match(r.stderr, /NOT committed|Rolling back/);
     assert.strictEqual(status4('A00026').status, 'PASS');
@@ -1867,7 +1872,7 @@ test('S5 static: watchdog workflow chứng minh read-only (clean tree TRƯỚC+S
   assert.ok(!/push --force|push -f/.test(y), 'không force push');
 });
 
-test('S5 static: soak workflow BẮT BUỘC Tier 4 trên push main + path contract đầy đủ', () => {
+test('S5 static: soak workflow BẮT BUỘC Tier 4 trên push main + path contract đầy đủ (không trigger trên content runtime)', () => {
   const y = wfText('factory-soak.yml');
   assert.match(y, /push:/, 'soak phải trigger cả trên push');
   assert.match(y, /branches:\s*\[main\]/, 'push phải filter branch main');
@@ -1875,12 +1880,19 @@ test('S5 static: soak workflow BẮT BUỘC Tier 4 trên push main + path contra
     '.github/workflows/factory-operator.yml', '.github/workflows/factory-validate.yml',
     '.github/workflows/factory-capacity-validate.yml', '.github/workflows/factory-soak.yml',
     '.github/workflows/factory-liveness-watchdog.yml', '.github/workflows/ci-validate.yml',
-    'data/state/**', 'config/**', 'AGENTS.md', 'docs/PROC-PUBLISH.md', 'docs/CONTENT-FACTORY.md', 'docs/PROC-RECOVERY.md'];
+    'config/article-rubric.json', 'config/business-facts.json', 'config/source-policy.json',
+    'AGENTS.md', 'docs/PROC-PUBLISH.md', 'docs/CONTENT-FACTORY.md', 'docs/PROC-RECOVERY.md'];
   for (const p of requiredPaths) {
     const esc = p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const count = (y.match(new RegExp("- '" + esc + "'", 'g')) || []).length;
     assert.strictEqual(count, 2, "path '" + p + "' phải có trong CẢ pull_request lẫn push (thấy " + count + ')');
   }
+  // SIMPLE PRODUCTION MODE: normal content runtime updates (matrix shards,
+  // checkpoint/transaction/lock/ledger, published archives, qa evidence,
+  // config/content-factory.json runtime grounding ids) KHÔNG trigger Tier 4.
+  assert.ok(!/- 'data\/state\/\*\*'/.test(y), 'data/state/** phải RA KHỎI path contract (thay sau mỗi publish)');
+  assert.ok(!/- 'config\/\*\*'/.test(y), 'config/** phải RA KHỎI path contract (content-factory.json thay sau mỗi publish)');
+  assert.ok(!/- 'config\/content-factory\.json'/.test(y), 'config/content-factory.json là runtime state, không phải tín hiệu thay engine');
   assert.match(y, /group:\s*factory-soak-\$\{\{ github\.ref \}\}/, 'soak concurrency phải per-ref');
   assert.match(y, /cancel-in-progress:\s*true/);
   // Chỉ khóa concurrency GROUP, không cấm nhắc tên trong comment giải thích.
@@ -1928,3 +1940,214 @@ test('cleanup: remove hardening session 5 sandboxes', () => {
   fs.rmSync(WS5, { recursive: true, force: true });
   fs.rmSync(WS5_REPO, { recursive: true, force: true });
 });
+
+// =====================================================================
+// SIMPLE PRODUCTION MODE — vanchinh-style hot path (FAST must be FAST).
+// The normal content loop is FETCH -> RECOVER -> RESUME -> NEXT 2 ->
+// RESEARCH -> WRITE -> WRAP -> QA FAST -> REPAIR -> PUBLISH -> PUSH ->
+// CI/PAGES -> NEXT 2. These regressions prove the loop no longer pays for
+// whole-engine verification per micro-op while every hard safety gate
+// (atomic publish, rollback, QA evidence, critical failures, draft
+// isolation, PASS 75 / REVIEW 70) stays exactly as hard as before.
+// =====================================================================
+const SB7 = path.join(os.tmpdir(), 'lab-simple-prod-' + process.pid);
+const sb7Copy = () => {
+  fs.rmSync(SB7, { recursive: true, force: true });
+  fs.cpSync(ROOT, SB7, { recursive: true, filter: (s) => {
+    const rel = path.relative(ROOT, s);
+    return rel !== '_drafts' && !rel.startsWith('_drafts' + path.sep)
+      && !path.basename(s).startsWith('content-matrix.csv.part');
+  } });
+};
+const OPmod7 = require(path.join(ROOT, 'scripts', 'factory', 'operator.js'));
+const stepStr7 = st => st.join(' ');
+const csv7 = () => fs.readFileSync(path.join(SB7, 'data', 'content-matrix.csv'), 'utf8');
+const ck7 = () => JSON.parse(fs.readFileSync(path.join(SB7, 'data', 'state', 'checkpoint.json'), 'utf8'));
+
+test('simple-prod: FAST verify steps never run test-suite / capacity-check / editorial-audit / build', () => {
+  const fastSets = [OPmod7.verifySteps('fast'),
+                    OPmod7.verifySteps('fast', ['A00015', 'A00016']),
+                    OPmod7.verifyStepsStaged('fast', 'TX-1', ['A00015'])];
+  for (const steps of fastSets) {
+    for (const st of steps) {
+      const s = stepStr7(st);
+      assert.ok(!/--test/.test(s), 'FAST must not run the full test-suite: ' + s);
+      assert.ok(!/capacity-check/.test(s), 'FAST must not run capacity-check: ' + s);
+      assert.ok(!/editorial-audit/.test(s), 'FAST must not run editorial-audit: ' + s);
+      assert.ok(!/build-site/.test(s), 'FAST verify must not rebuild the whole site: ' + s);
+    }
+  }
+  // FAST scope = exactly the CURRENT working scope (chunk / selected ids /
+  // staged tx) — never a full historical audit.
+  assert.match(stepStr7(OPmod7.verifySteps('fast')[0]), /consistency --chunk/);
+  assert.match(stepStr7(OPmod7.verifySteps('fast', ['A00015', 'A00016'])[0]), /consistency --ids A00015,A00016/);
+  const stagedFast = OPmod7.verifyStepsStaged('fast', 'TX-1', ['A00015', 'A00016']).map(stepStr7);
+  assert.ok(stagedFast.some(s => /consistency --staged-tx TX-1/.test(s)), 'FAST publish keeps STAGED consistency');
+  assert.ok(stagedFast.some(s => /grounding A00015 A00016/.test(s)), 'FAST publish keeps selected-ID grounding');
+});
+test('simple-prod: DEEP still runs test-suite + capacity + editorial; FULL adds full grounding + rebuild', () => {
+  const deep = OPmod7.verifySteps('deep').map(stepStr7).join(' | ');
+  assert.match(deep, /--test tests\/test-suite\.js/, 'DEEP must keep the static suite');
+  assert.match(deep, /capacity-check/, 'DEEP must keep capacity-check');
+  assert.match(deep, /editorial-audit/, 'DEEP must keep editorial-audit');
+  const stagedDeep = OPmod7.verifyStepsStaged('deep', 'TX-1', ['A00015']).map(stepStr7).join(' | ');
+  assert.match(stagedDeep, /capacity-check\.js --staged-tx TX-1/, 'DEEP publish keeps staged capacity-check');
+  assert.match(stagedDeep, /editorial-audit/, 'DEEP publish keeps editorial-audit');
+  const full = OPmod7.verifySteps('full').map(stepStr7).join(' | ');
+  assert.match(full, /--test tests\/test-suite\.js/);
+  assert.match(full, /grounding/);
+  assert.match(full, /build-site/);
+});
+test('simple-prod: FAST prepare-next / research / qa succeed even while test-suite, capacity-check and editorial-audit would FAIL (they are not in the fast path)', () => {
+  sb7Copy();
+  // Sabotage the heavy gates. If FAST still ran any of them, these ops fail.
+  for (const rel of ['tests/test-suite.js', 'scripts/factory/capacity-check.js', 'scripts/factory/editorial-audit.js']) {
+    const p = path.join(SB7, rel);
+    fs.writeFileSync(p, 'process.exit(1);\n' + fs.readFileSync(p, 'utf8'));
+  }
+  // NEXT 2 — the standard production pair
+  let r = OP(['prepare-next', '--count', '2'], SB7);
+  assert.strictEqual(r.status, 0, 'FAST prepare-next must never run the sabotaged suite:\nSTDOUT ' + r.stdout + '\nSTDERR ' + r.stderr);
+  assert.match(r.stdout, /VERIFY PASS \(scope=fast\)/);
+  const pair = ck7().active_chunk;
+  assert.strictEqual(pair.length, 2, 'the standard chunk is a 2-article pair');
+  assert.deepStrictEqual(pair, ['A00015', 'A00016']);
+  // RESEARCH — light packet per the row contract (requires_official_sources=0)
+  for (const id of pair) {
+    fs.writeFileSync(path.join(SB7, 'data', 'research', id + '.json'), JSON.stringify({
+      article_id: id, primary_keyword: 'thue xe may ' + id, search_intent: 'informational',
+      research_date: '2026-09-30', questions_found: ['q1'], official_sources: [],
+      supporting_sources: [], unique_angle: 'sandbox light packet' }));
+  }
+  r = OP(['research', '--ids', pair.join(',')], SB7);
+  assert.strictEqual(r.status, 0, 'FAST research must never run the sabotaged suite:\nSTDOUT ' + r.stdout + '\nSTDERR ' + r.stderr);
+  assert.match(r.stdout, /VERIFY PASS \(scope=fast\)/);
+  // QA FAST — drafts exist; scores may land wherever they land (repair path is
+  // part of the loop); the op must complete WITHOUT the heavy gates.
+  for (const id of pair) {
+    fs.mkdirSync(path.join(SB7, '_drafts'), { recursive: true });
+    fs.writeFileSync(path.join(SB7, '_drafts', id + '.html'),
+      '<h1>x</h1><p>Giới thiệu nội dung kiểm thử cho quy trình sản xuất đơn giản.</p>');
+  }
+  r = OP(['qa', '--ids', pair.join(',')], SB7);
+  assert.strictEqual(r.status, 0, 'FAST qa must never run the sabotaged suite:\nSTDOUT ' + r.stdout + '\nSTDERR ' + r.stderr);
+  assert.match(r.stdout, /VERIFY PASS \(scope=fast\)/);
+  // engine truth moved exactly as the loop expects: RESEARCH -> WRITING -> QA/REPAIR
+  const states = {};
+  for (const l of csv7().split('\n').slice(1).filter(x => x.trim())) {
+    const c = parseLine4(l);
+    if (pair.includes(c[0])) states[c[0]] = c[24];
+  }
+  for (const id of pair) assert.match(states[id], /^(QA|REVIEW|REPAIR|PASS|BLOCKED)$/, id + ' must be scored (got ' + states[id] + ')');
+});
+test('simple-prod: FAST publish stays ATOMIC and is NOT blocked by editorial-audit; DEEP publish still is', () => {
+  sb7Copy();
+  // a PASS pair with hash-bound evidence (the wrap+qa outcome of the loop)
+  const shaOf = s => require('crypto').createHash('sha256').update(s).digest('hex');
+  const html = id => '<header class="site-head"><nav class="menu"><a href="/lab/">Trang chủ</a></nav></header>\n<main><h1>Bài ' + id + '</h1><p>Nội dung kiểm thử deterministic cho quy trình atomic publish của bài ' + id + ' theo đường sản xuất đơn giản hai bài mỗi lượt.</p></main>\n<footer class="site-foot"><p>Chân trang kiểm thử.</p></footer>';
+  const pair = ['A00015', 'A00016'];
+  const lines = csv7().split('\n');
+  const out = [lines[0]];
+  for (const l of lines.slice(1).filter(x => x.trim())) {
+    const c = parseLine4(l);
+    if (pair.includes(c[0])) { c[24] = 'PASS'; c[26] = '100'; }
+    out.push(c.map(v => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v).join(','));
+  }
+  fs.writeFileSync(path.join(SB7, 'data', 'content-matrix.csv'), out.join('\n'));
+  fs.mkdirSync(path.join(SB7, '_drafts'), { recursive: true });
+  fs.mkdirSync(path.join(SB7, 'data', 'qa'), { recursive: true });
+  for (const id of pair) {
+    const h = html(id);
+    fs.writeFileSync(path.join(SB7, '_drafts', id + '.html'), h);
+    fs.writeFileSync(path.join(SB7, 'data', 'qa', id + '.json'),
+      JSON.stringify({ article_id: id, score: 100, words: 30, result: 'PASS', fails: [], draft_sha256: shaOf(h), matrix_status_after: 'PASS' }));
+  }
+  // sabotage editorial-audit + capacity-check: FAST must not care
+  for (const rel of ['scripts/factory/editorial-audit.js', 'scripts/factory/capacity-check.js']) {
+    const p = path.join(SB7, rel);
+    fs.writeFileSync(p, 'process.exit(1);\n' + fs.readFileSync(p, 'utf8'));
+  }
+  const auditBefore = fs.readFileSync(path.join(SB7, 'reports', 'editorial', 'audit-after.json'), 'utf8');
+  const r = OP(['publish', '--ids', pair.join(','), '--scope', 'fast'], SB7);
+  assert.strictEqual(r.status, 0, 'editorial-audit must NOT block a normal FAST publish:\nSTDOUT ' + r.stdout + '\nSTDERR ' + r.stderr);
+  assert.match(r.stdout, /PUBLISHED \(atomic, build\+verify PASS\) 2: A00015, A00016/);
+  // atomic truth: rows PUBLISHED, drafts removed, exactly one ledger event, tx/lock clean
+  const states = {};
+  for (const l of csv7().split('\n').slice(1).filter(x => x.trim())) {
+    const c = parseLine4(l);
+    if (pair.includes(c[0])) states[c[0]] = c[24];
+  }
+  assert.deepStrictEqual(states, { A00015: 'PUBLISHED', A00016: 'PUBLISHED' });
+  for (const id of pair) {
+    assert.ok(!fs.existsSync(path.join(SB7, '_drafts', id + '.html')), 'draft removed at commit');
+    assert.ok(fs.existsSync(path.join(SB7, 'data', 'published', id + '.html')), 'durable archive written');
+  }
+  const ledger = JSON.parse(fs.readFileSync(path.join(SB7, 'data', 'state', 'throughput-ledger.json'), 'utf8'));
+  const events = ledger.events.filter(e => e.op === 'publish' && JSON.stringify(e.ids) === JSON.stringify(pair));
+  assert.strictEqual(events.length, 1, 'exactly one real publish event');
+  const tx = JSON.parse(fs.readFileSync(path.join(SB7, 'data', 'state', 'transaction.json'), 'utf8'));
+  assert.strictEqual(tx.active, false, 'transaction cleared after commit');
+  // sitemap sanity for the staged ids (public surface)
+  for (const id of pair) {
+    const row = (function(){ for (const l of csv7().split('\n').slice(1).filter(x=>x.trim())) { const c=parseLine4(l); if (c[0]===id) return { out: c[22], canon: c[23] }; } return null; })();
+    assert.ok(fs.existsSync(path.join(SB7, row.out.replace(/^\//,''), 'index.html')), 'public page promoted for ' + id);
+    assert.ok(fs.readdirSync(SB7).filter(f=>/^sitemap-.*\.xml$/.test(f)&&f!=='sitemap-index.xml')
+      .some(f=>fs.readFileSync(path.join(SB7,f),'utf8').includes(row.canon)), 'canonical in sitemap for ' + id);
+  }
+  // FAST publish does NOT regenerate the editorial report (deep/full artifact)
+  assert.strictEqual(auditBefore, fs.readFileSync(path.join(SB7, 'reports', 'editorial', 'audit-after.json'), 'utf8'),
+    'FAST publish must not run the editorial audit');
+  // DEEP still gates: with editorial-audit sabotaged, a deep publish rolls back.
+  // (A00017 becomes the probe; restore capacity sabotage only for the probe row.)
+  const probe = 'A00017';
+  const h17 = html(probe);
+  const lines2 = csv7().split('\n');
+  const out2 = [lines2[0]];
+  for (const l of lines2.slice(1).filter(x => x.trim())) {
+    const c = parseLine4(l);
+    if (c[0] === probe) { c[24] = 'PASS'; c[26] = '100'; }
+    out2.push(c.map(v => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v).join(','));
+  }
+  fs.writeFileSync(path.join(SB7, 'data', 'content-matrix.csv'), out2.join('\n'));
+  fs.writeFileSync(path.join(SB7, '_drafts', probe + '.html'), h17);
+  fs.writeFileSync(path.join(SB7, 'data', 'qa', probe + '.json'),
+    JSON.stringify({ article_id: probe, score: 100, words: 30, result: 'PASS', fails: [], draft_sha256: shaOf(h17), matrix_status_after: 'PASS' }));
+  const rd = OP(['publish', '--ids', probe, '--scope', 'deep'], SB7);
+  assert.notStrictEqual(rd.status, 0, 'DEEP publish must still fail when editorial-audit fails');
+  assert.match(rd.stderr, /NOT committed|Rolling back/);
+  let st17 = null;
+  for (const l of csv7().split('\n').slice(1).filter(x => x.trim())) { const c = parseLine4(l); if (c[0] === probe) st17 = c[24]; }
+  assert.strictEqual(st17, 'PASS', 'rolled back to pre-publish truth');
+  assert.ok(fs.existsSync(path.join(SB7, '_drafts', probe + '.html')), 'draft intact after rollback');
+  assert.ok(!fs.existsSync(path.join(SB7, 'data', 'published', probe + '.html')), 'staged archive removed by rollback');
+});
+test('simple-prod: ONE lightweight content validation path — ci-validate is light; deep batteries are path-filtered', () => {
+  // Assert on EXECUTED steps only: strip YAML comment lines first (the header
+  // comment documents what the light path does NOT run — those literal names
+  // must not be mistaken for executed commands).
+  const ci = wfText('ci-validate.yml').replace(/^\s*#.*$/gm, '');
+  assert.ok(!/node --test/.test(ci), 'ci-validate must not run the full test-suite');
+  assert.ok(!/capacity-check/.test(ci), 'ci-validate must not run capacity-check');
+  assert.ok(!/editorial-audit/.test(ci), 'ci-validate must not run editorial-audit');
+  assert.ok(!/factory-soak/.test(ci), 'ci-validate must not run soak');
+  assert.match(ci, /factory\.js consistency/, 'light path keeps consistency');
+  assert.match(ci, /factory\.js grounding/, 'light path keeps (scoped) grounding');
+  assert.match(ci, /build-site\.js/, 'light path keeps the deterministic build');
+  assert.match(ci, /data\/published\//, 'grounding scope is derived from the push diff (changed ids only)');
+  // the deep batteries only run when engine/reliability files change
+  for (const f of ['factory-validate.yml', 'factory-capacity-validate.yml']) {
+    const y = wfText(f);
+    assert.match(y, /paths:/, f + ' must be path-filtered (content pushes must not run the full battery)');
+    assert.ok(!/- 'data\/published\/\*\*'/.test(y), f + ' must not trigger on published archives');
+    assert.ok(!/- 'data\/state\/\*\*'/.test(y), f + ' must not trigger on runtime state');
+    assert.ok(!/- 'config\/\*\*'/.test(y), f + ' must not trigger on runtime config');
+    assert.ok(!/- 'config\/content-factory\.json'/.test(y), f + ' must not trigger on runtime grounding ids');
+  }
+});
+test('simple-prod: rubric stays owner-approved (PASS >= 75, REVIEW 70–74) — never 90, never lowered', () => {
+  const rub = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'article-rubric.json'), 'utf8'));
+  assert.strictEqual(rub.pass_min, 75);
+  assert.strictEqual(rub.review_min, 70);
+  assert.strictEqual(rub.max_repair_attempts, 3);
+});
+test('cleanup: remove simple-prod sandbox', () => { fs.rmSync(SB7, { recursive: true, force: true }); });

@@ -19,13 +19,20 @@ name: Factory Soak (Long-run / Failure recovery)
 # pull_request lẫn push vào main (path-filtered) — direct push thay
 # engine/workflow/recovery KHÔNG thể vào main mà không có Tier 4. Prose
 # article changes KHÔNG trigger (chỉ những gì ảnh hưởng reliability).
-# Path contract (giống nhau cho PR và push main):
+# Path contract (giống nhau cho PR và push main) — SIMPLE PRODUCTION MODE:
 #   - engine + site builder + soak suite + static regression suite;
 #   - toàn bộ workflows liên quan reliability (operator/validate/capacity/
 #     soak/watchdog/ci-validate);
-#   - data/state/** (production truth state) + config/** (engine contract);
+#   - static engine-contract configs (rubric, source policy, business facts,
+#     editorial, seo-experiment, site) — KHÔNG gồm config/content-factory.json
+#     (runtime grounding ids tự append theo mỗi publish nên KHÔNG phải tín
+#     hiệu thay engine);
 #   - docs contract files được pin bởi static regression tests trong
 #     tests/test-suite.js (AGENTS.md, PROC-PUBLISH, CONTENT-FACTORY, PROC-RECOVERY).
+# NORMAL CONTENT RUNTIME UPDATES KHÔNG TRIGGER TIER 4: matrix shards, data/state/**
+# (checkpoint/transaction/lock/ledger), data/published/**, data/qa/** và
+# config/content-factory.json thay đổi sau MỖI publish 2 bài bình thường —
+# đó là dữ liệu sản xuất, không phải thay đổi engine/workflow/recovery.
 on:
   workflow_dispatch:
   schedule:
@@ -42,8 +49,13 @@ on:
       - '.github/workflows/factory-soak.yml'
       - '.github/workflows/factory-liveness-watchdog.yml'
       - '.github/workflows/ci-validate.yml'
-      - 'data/state/**'
-      - 'config/**'
+      - 'config/article-rubric.json'
+      - 'config/business-facts.json'
+      - 'config/editorial.json'
+      - 'config/editorial-hubs.json'
+      - 'config/seo-experiment.json'
+      - 'config/site.json'
+      - 'config/source-policy.json'
       - 'AGENTS.md'
       - 'docs/PROC-PUBLISH.md'
       - 'docs/CONTENT-FACTORY.md'
@@ -61,8 +73,13 @@ on:
       - '.github/workflows/factory-soak.yml'
       - '.github/workflows/factory-liveness-watchdog.yml'
       - '.github/workflows/ci-validate.yml'
-      - 'data/state/**'
-      - 'config/**'
+      - 'config/article-rubric.json'
+      - 'config/business-facts.json'
+      - 'config/editorial.json'
+      - 'config/editorial-hubs.json'
+      - 'config/seo-experiment.json'
+      - 'config/site.json'
+      - 'config/source-policy.json'
       - 'AGENTS.md'
       - 'docs/PROC-PUBLISH.md'
       - 'docs/CONTENT-FACTORY.md'

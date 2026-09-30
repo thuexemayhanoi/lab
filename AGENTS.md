@@ -14,6 +14,49 @@ ecosystem, published as a static GitHub Pages site:
   local + long-tail queries can rank WITHOUT active backlink building.
 - Zero-active-backlink baseline: **YES** (see `config/seo-experiment.json`).
 
+## NORMAL WRITER FLOW (Simple Production Mode — the ONLY loop a writer needs)
+
+Standard working pair = **2 articles per turn** (`--count 2`). Every writer
+run follows this loop and does NOT stop after one pair:
+
+```
+FETCH FRESH MAIN
+→ RECOVER (if txn/lock pending)
+→ RESUME (finish REPAIR/QA/PASS pending of the current chunk first)
+→ NEXT 2        operator.js prepare-next --count 2
+→ RESEARCH      operator.js research --ids <pair>   (light packet for evergreen
+                 rows; OFFICIAL sources mandatory when requires_official_sources=1)
+→ WRITE 2       drafts in _drafts/<ID>.body.html
+→ WRAP          node scripts/factory/wrap-drafts.js
+→ QA FAST       operator.js qa --ids <pair>         (PASS ≥ 75 / REVIEW 70–74 / repair)
+→ REPAIR        (only if needed — max 3 attempts, then BLOCKED)
+→ PUBLISH       operator.js publish --ids <pair>   (atomic, FAST scope)
+→ PUSH + CI/PAGES  (commit public outputs; ONE lightweight content validation runs)
+→ FETCH FRESH MAIN → NEXT 2 → REPEAT
+```
+
+FAST = the production default scope. It verifies ONLY the current scope:
+transaction/lock sanity, selected ids, research/QA contracts, QA score +
+hash-bound evidence, grounding of the published ids, staged consistency,
+checkpoint/matrix coherence of the current chunk. It NEVER runs the full
+test-suite, capacity-check, editorial audit or soak — those are DEEP/FULL/
+Tier-4 gates (see "Validation model" below). Writer boundary: `qa`/`publish`
+run via the writer direct CLI (drafts are gitignored, never committed).
+
+A writer does NOT need to read the whole reliability system before every
+2-article pair. Deep hardening details live in `docs/CONTENT-FACTORY.md`,
+`docs/PROC-PUBLISH.md` and `docs/PROC-RECOVERY.md`.
+
+## QA modes (thresholds NEVER change with scope)
+
+- **FAST** — normal 2-article production (default for prepare-next/research/
+  qa/publish): scoped consistency of the current ids only + publish gates.
+- **DEEP** — FAST + `node --test tests/test-suite.js` + capacity-check +
+  editorial-audit.
+- **FULL** — DEEP + full-site grounding + deterministic rebuild (build-site).
+- **TIER 4** — soak + liveness watchdog. For engine/workflow/recovery changes
+  or scheduled maintenance ONLY — never per article pair.
+
 ## Core topic clusters
 
 THUÊ XE MÁY (rental — dominant cluster) · CỨU HỘ (rescue) · SỬA CHỮA / BẢO DƯỠNG
@@ -41,15 +84,21 @@ XE MÁY ĐIỆN (electric) · PHỤ TÙNG (parts).
 - Non-Hanoi pages are informational/directory only — no fake local service
   claims, no "chúng tôi" service claims outside the verified Hanoi service area.
 - Every article needs a research packet (`data/research/<ID>.json`) BEFORE writing.
+- Research depth follows the MATRIX requirement, not habit: low-risk evergreen
+  rows need only a light packet; `requires_official_sources=1` rows must cite
+  current authoritative sources or be BLOCKED; quantitative claims (VND/%/
+  durations) need `claim_evidence` (grounding gate).
 - Official-source articles (`requires_official_sources=1`) must cite current
   authoritative sources or be BLOCKED.
-- QA pass threshold ≥ 75. Repair ≤ 3 attempts, then BLOCKED.
+- QA pass threshold ≥ 75. REVIEW 70–74 (never publish; repair). Repair ≤ 3
+  attempts, then BLOCKED. Critical factual/legal failures FAIL hard at any score.
 - Word range 1,600–3,000 Vietnamese words. No filler/keyword stuffing.
 - Only PUBLISHED pages may be publicly deployed. Drafts live in `_drafts/`
   (gitignored, never deployed).
 - Max publication during bootstrap: 10 pilot articles (config: `content-factory.json`).
 - Max publication per operation: `CHUNK` = 10 articles — the engine refuses
   more than 10 ids and never sweeps the whole PASS backlog in one publish.
+  The standard production pair is 2 (`prepare-next --count 2`).
 - Phase lifecycle: `PILOT` → `PRODUCTION` via `node scripts/factory/factory.js promote-production`
   (canonical transition; bootstrap cap only binds in PILOT). See `docs/CONTENT-FACTORY.md`.
 - No autonomous AI writer in GitHub Actions; no API keys in Actions.
@@ -86,7 +135,7 @@ node scripts/factory/factory.js research <ID>
 node scripts/factory/factory.js qa <ID>
 node scripts/factory/factory.js publish <ID> [<ID>...]
 node scripts/factory/factory.js recover
-node scripts/factory/factory.js consistency
+node scripts/factory/factory.js consistency [--ids A,B | --chunk]
 node scripts/factory/factory.js reports
 node scripts/factory/wrap-drafts.js        # wrap _drafts/<ID>.body.html -> <ID>.html
 node scripts/site/build-site.js           # rebuild site/ from published pages
@@ -119,13 +168,16 @@ NOT interchangeable:
 
 Whitelist ops: `status, prepare-next, research, qa, publish, recover,
 consistency, reports, verify`. No arbitrary shell; ids must match `A#####`;
-count 1..10; scope `fast` (production default: consistency + tests),
-`deep` (+ capacity-check + editorial-audit) or `full` (+ site build).
-Inside an atomic (STAGED) publish the operator runs the STAGED-AWARE verify
-contract instead — consistency/capacity-check accept EXACTLY the in-flight
-publish transaction (`--staged-tx`), grounding is narrowed to the staged ids,
-and the test suite stays a CI gate on the committed tree (its tx-inactive
-invariant is never weakened). `prep-pilot.js` is a LEGACY bootstrap-only tool
+count 1..10; scope `fast` (production default: scoped consistency of the
+current chunk only — never a full test-suite per micro-op), `deep` (+ test
+suite + capacity-check + editorial-audit) or `full` (+ full-site grounding +
+deterministic rebuild). Inside an atomic (STAGED) publish the operator runs
+the STAGED-AWARE verify contract instead — consistency/capacity-check accept
+EXACTLY the in-flight publish transaction (`--staged-tx`), grounding is
+narrowed to the staged ids, and the test suite stays a CI gate on the
+committed tree (its tx-inactive invariant is never weakened). editorial-audit
+joins only at deep/full — it NEVER blocks a normal FAST publish.
+`prep-pilot.js` is a LEGACY bootstrap-only tool
 (PILOT phase + zero published articles, else it REFUSES); production uses
 `prepare-next` only.
 Thresholds NEVER change with scope. Mutating ops refuse while a transaction
@@ -175,6 +227,24 @@ Rules:
 - Failing a tier means: do NOT merge, do NOT lower thresholds or delete
   tests, do NOT mutate production truth to make tests green; fix the root
   cause and re-run the affected tier AND every tier above it.
+
+## Scope → gates (Simple Production Mode)
+
+- **Content-only change (the normal 2-article pair)** → FAST only: scoped QA
+  per article (PASS ≥ 75, no critical), publish gate (QA evidence + grounding
+  + atomic transaction), scoped consistency, ONE lightweight content
+  validation workflow (`ci-validate.yml`) on push. NO full-site audit, NO
+  soak, NO test-suite per pair.
+- **Engine/workflow/recovery/config-contract change** → full gates BEFORE
+  merge: Tier 1 (`node --test tests/test-suite.js`) + Tier 2 + Tier 3 +
+  Tier 4 (soak + watchdog), plus the path-filtered deep CI batteries
+  (`factory-validate.yml`, `factory-capacity-validate.yml`, `factory-soak.yml`).
+- **Normal content runtime state updates** (matrix shards, `data/state/**`,
+  published archives, qa evidence, `config/content-factory.json` grounding
+  ids) are PRODUCTION DATA, not engine changes — they do NOT trigger Tier 4
+  or the deep batteries.
+- Do NOT run a full audit after every 2-article pair. DEEP/FULL verification
+  is for engine changes and periodic maintenance, not the content loop.
 
 ## Status lifecycle
 
