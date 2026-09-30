@@ -1,0 +1,67 @@
+name: Factory Liveness Watchdog
+
+# FACTORY LIVENESS WATCHDOG — hardening F3 (Tier 4 liveness).
+#
+# Phát hiện trạng thái "workflow xanh nhưng factory KHÔNG tiến": command
+# treo (operator-command.json quá tuổi chưa consume), active chunk đứng,
+# active transaction quá tuổi, lock hết hạn + unfinished work, ledger
+# ngừng tiến. CI/invariant xanh không chứng minh factory còn tiến —
+# watchdog này là lớp kiểm đó.
+#
+# HỢP ĐỒNG READ-ONLY TUYỆT ĐỐI:
+#   - permissions: contents: read — KHÔNG commit, KHÔNG push, KHÔNG mutate
+#     production truth, KHÔNG force-clear lock/transaction, KHÔNG claim/publish.
+#   - Watchdog chỉ ĐỌC repository truth (checkpoint + matrix + transaction +
+#     writer-lock + throughput-ledger + command file) và báo cáo.
+#   - Người dùng chủ động nghỉ KHÔNG phải lỗi (HEALTHY IDLE = PASS).
+#
+# Exit code của scripts/factory/liveness-watchdog.js: 0=PASS, 2=WARN, 1=FAIL.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *' # mỗi 6 giờ
+
+concurrency:
+  group: factory-liveness-watchdog
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  liveness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (read-only watchdog input)
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Liveness watchdog (READ-ONLY, exit 0=PASS 2=WARN 1=FAIL)
+        run: |
+          set -eu
+          code=0
+          node scripts/factory/liveness-watchdog.js || code=$?
+          echo "watchdog exit: $code"
+          if [ "$code" = "0" ]; then
+            echo "LIVENESS PASS (HEALTHY)"
+          elif [ "$code" = "2" ]; then
+            echo "::warning::LIVENESS WARN — chạy op recover qua kênh chuẩn khi cần (watchdog không tự clear/claim/publish)"
+          else
+            echo "::error::LIVENESS FAIL — factory có unfinished work đứng/command treo/tx-lock bất thường; chạy op recover qua kênh chuẩn, KHÔNG force-clear"
+            exit 1
+          fi
+
+      - name: Xác nhận watchdog KHÔNG mutate cây (read-only contract)
+        run: |
+          set -eu
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::watchdog làm cây đổi — vi phạm hợp đồng read-only"
+            git status --porcelain
+            exit 1
+          fi
+          echo "cây sạch — watchdog hoàn toàn read-only"

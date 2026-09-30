@@ -1,0 +1,51 @@
+name: Factory Soak (Long-run / Failure recovery)
+
+# FACTORY SOAK — hardening F4 (Tier 4: long-run + failure recovery).
+#
+# Multi-chunk soak test trong SANDBOX (os.tmpdir), KHÔNG đụng production
+# truth: 6 chunks × 10 articles, mỗi chunk một kịch bản fault-injection có
+# kiểm soát (clean, crash-after-beginTx, build-failure, editorial-audit
+# failure, verify failure, stale lock + restart/recover + retry publish).
+# Sau MỖI iteration: assert transaction inactive, lock free, checkpoint khớp
+# matrix, contiguous prefix, exactly-once ledger publish, không duplicate
+# publish, không orphan archive/page, không draft leak, deterministic
+# rebuild không drift.
+#
+# Kết thúc soak: không stale tx/lock, không URL non-PUBLISHED trong sitemap,
+# checkpoint + matrix + sitemap + search-index + knowledge-index đồng bộ.
+# Tier 4 BẮT BUỘC cho mọi thay đổi engine/workflow/recovery.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * 1' # hàng tuần, thứ Hai 03:00 UTC
+  pull_request:
+    paths:
+      - 'scripts/factory/**'
+      - 'scripts/site/**'
+      - 'tests/soak/**'
+      - '.github/workflows/factory-soak.yml'
+      - '.github/workflows/factory-operator.yml'
+
+concurrency:
+  group: factory-soak-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  soak:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Soak test (sandbox — không đụng production truth)
+        run: node --test tests/soak/factory-soak.js

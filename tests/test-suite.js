@@ -1525,3 +1525,167 @@ test('harden3: prep-pilot bootstrap path works ONLY inside a PILOT-phase, zero-p
 test('cleanup: remove hardening sandbox', () => { fs.rmSync(SB4, { recursive: true, force: true }); });
 
 test('cleanup: remove operator sandbox', () => { fs.rmSync(SB, { recursive: true, force: true }); });
+
+// =====================================================================
+// HARDENING SESSION 4 — 4-tier validation model (channel contract F1,
+// per-ref concurrency F2, liveness watchdog F3, soak F4, docs contract F5).
+// =====================================================================
+const SBH = path.join(os.tmpdir(), 'lab-hardening-sandbox-' + process.pid);
+fs.rmSync(SBH, { recursive: true, force: true });
+fs.cpSync(ROOT, SBH, { recursive: true, filter: (s) => {
+  const rel = path.relative(ROOT, s);
+  return rel !== '_drafts' && !rel.startsWith('_drafts' + path.sep)
+    && rel !== 'site' && !rel.startsWith('site' + path.sep)
+    && !path.basename(s).startsWith('content-matrix.csv.part');
+} });
+const sbhCmdFile = (obj) => { const p = path.join(SBH, 'data', 'state', 'operator-command.json'); fs.writeFileSync(p, JSON.stringify(obj)); return 'data/state/operator-command.json'; };
+const wd = require(path.join(ROOT, 'scripts', 'factory', 'liveness-watchdog.js'));
+
+test('F1 channel contract: Actions channel refuses qa/publish EARLY (exit 3, nothing executed)', () => {
+  for (const op of ['qa', 'publish']) {
+    const cmd = op === 'publish' ? { op, ids: 'A00001' } : { op };
+    const f = sbhCmdFile(cmd);
+    const v = OP(['validate', f, '--channel', 'actions'], SBH);
+    assert.strictEqual(v.status, 3, op + ' on actions channel must exit exactly 3 (channel refused), got ' + v.status);
+    assert.match(v.stderr, /OPERATOR CHANNEL REFUSED/, 'must name the refusal contract');
+    assert.match(v.stderr, /_drafts/, 'must explain the draft boundary');
+    assert.doesNotMatch(v.stdout, /COMMAND OK/, 'refused command must not be accepted');
+    // command path: refused too, and it must NOT execute anything
+    const before = fs.readFileSync(path.join(SBH, 'data', 'content-matrix.csv'), 'utf8');
+    const c = OP(['command', f, '--channel', 'actions'], SBH);
+    assert.strictEqual(c.status, 3, 'command path must also refuse early with exit 3');
+    assert.strictEqual(before, fs.readFileSync(path.join(SBH, 'data', 'content-matrix.csv'), 'utf8'), 'refusal must not mutate the matrix');
+  }
+  // the command file is still on disk (consume is the WORKFLOW's job) — the
+  // contract is: refuse EARLY + workflow consumes; never die NO_DRAFT mid-run
+  assert.ok(fs.existsSync(path.join(SBH, 'data', 'state', 'operator-command.json')), 'refusal leaves consuming to the workflow (documented contract)');
+  fs.rmSync(path.join(SBH, 'data', 'state', 'operator-command.json'), { force: true });
+});
+test('F1 channel contract: Actions channel accepts clean-checkout ops only', () => {
+  const allowed = ['status', 'prepare-next', 'recover', 'consistency', 'reports', 'verify'];
+  for (const op of allowed) {
+    const v = OP(['validate', sbhCmdFile({ op }), '--channel', 'actions'], SBH);
+    assert.strictEqual(v.status, 0, op + ' must be accepted on the actions channel');
+    assert.match(v.stdout, /COMMAND OK/, op + ' must print COMMAND OK');
+    assert.match(v.stdout, /"channel":"actions"/, 'resolution must record the channel');
+  }
+  fs.rmSync(path.join(SBH, 'data', 'state', 'operator-command.json'), { force: true });
+});
+test('F1 channel contract: writer direct CLI (default channel) keeps full access', () => {
+  const qa = OP(['validate', sbhCmdFile({ op: 'qa' })], SBH);
+  assert.strictEqual(qa.status, 0, 'qa must validate on the default (writer) channel');
+  const pub = OP(['validate', sbhCmdFile({ op: 'publish', ids: 'A00001' })], SBH);
+  assert.strictEqual(pub.status, 0, 'publish must validate on the default (writer) channel');
+  assert.match(pub.stdout, /"channel":"cli"/, 'default channel must be cli');
+  const bad = OP(['validate', sbhCmdFile({ op: 'status' }), '--channel', 'smoke'], SBH);
+  assert.notStrictEqual(bad.status, 0, 'unknown channel must be refused');
+  fs.rmSync(path.join(SBH, 'data', 'state', 'operator-command.json'), { force: true });
+});
+test('F1 workflow contract: factory-operator.yml runs --channel actions and consumes refused commands', () => {
+  const y = wfText('factory-operator.yml');
+  assert.match(y, /validate data\/state\/operator-command\.json --channel actions/, 'validate step must pin the actions channel');
+  assert.match(y, /command data\/state\/operator-command\.json --channel actions/, 'execute step must pin the actions channel');
+  assert.match(y, /CHANNEL_REFUSED=1/, 'must capture the refusal flag');
+  assert.match(y, /Tiêu thụ lệnh bị từ chối sớm/, 'must have a consume step so the command file never hangs');
+  assert.match(y, /if: failure\(\) && env\.CHANNEL_REFUSED == '1'/, 'consume step must run exactly on early refusal');
+  assert.match(y, /qa\/publish are writer-env direct-CLI only/, 'consume commit message must document the channel contract');
+});
+test('F2 concurrency contract: validation workflows are per-ref; production stays globally serialized', () => {
+  for (const f of ['factory-validate.yml', 'factory-capacity-validate.yml']) {
+    const y = wfText(f);
+    assert.match(y, new RegExp('group:\\s*' + f.replace('.yml', '') + '-\\$\\{\\{ github\\.ref \\}\\}'),
+      f + ' must key its concurrency group per ref/branch');
+    assert.match(y, /cancel-in-progress:\s*true/, f + ' may still cancel within the same ref');
+  }
+  const op = wfText('factory-operator.yml');
+  assert.match(op, /group:\s*lab-factory-production/, 'production operator must keep the GLOBAL serialization group');
+  assert.match(op, /cancel-in-progress:\s*false/, 'production operator must never cancel in-flight runs');
+  assert.ok(!/lab-factory-production-\$\{\{/.test(op), 'production group must NOT be per-ref');
+});
+test('F3 watchdog unit: HEALTHY IDLE -> PASS (user resting is never a failure)', () => {
+  const r = wd.evaluate({ nowIso: '2026-09-30T00:00:00Z', activeChunk: [], activeChunkUnfinished: 0,
+    transaction: { active: false }, lock: { locked: false }, command: null, commandFileMinutes: null,
+    lastProgressMinutes: 100000 }, {});
+  assert.strictEqual(r.status, 'HEALTHY IDLE');
+  assert.strictEqual(r.exitCode, wd.EXIT_PASS);
+});
+test('F3 watchdog unit: HEALTHY ACTIVE (unfinished work + fresh progress) -> PASS', () => {
+  const r = wd.evaluate({ nowIso: '2026-09-30T00:00:00Z', activeChunk: ['A00015'], activeChunkUnfinished: 1,
+    transaction: { active: false }, lock: { locked: true, holder: 'publish', expires_at: '2026-09-30T01:00:00Z' },
+    command: null, commandFileMinutes: null, lastProgressMinutes: 5 }, {});
+  assert.strictEqual(r.status, 'HEALTHY ACTIVE');
+  assert.strictEqual(r.exitCode, wd.EXIT_PASS);
+});
+test('F3 watchdog unit: stale pending command -> FAIL', () => {
+  const r = wd.evaluate({ nowIso: '2026-09-30T00:00:00Z', activeChunk: [], activeChunkUnfinished: 0,
+    transaction: { active: false }, lock: { locked: false }, command: { op: 'status' }, commandFileMinutes: 200,
+    lastProgressMinutes: 1 }, {});
+  assert.strictEqual(r.exitCode, wd.EXIT_FAIL);
+  assert.ok(r.findings.some(f => f.status === 'PENDING_COMMAND_STALE'), 'must flag PENDING_COMMAND_STALE');
+});
+test('F3 watchdog unit: stalled active chunk (no fresh progress) -> FAIL', () => {
+  const r = wd.evaluate({ nowIso: '2026-09-30T00:00:00Z', activeChunk: ['A00015'], activeChunkUnfinished: 1,
+    transaction: { active: false }, lock: { locked: false }, command: null, commandFileMinutes: null,
+    lastProgressMinutes: 800 }, {});
+  assert.strictEqual(r.exitCode, wd.EXIT_FAIL);
+  assert.ok(r.findings.some(f => f.status === 'STALLED'), 'must flag STALLED');
+});
+test('F3 watchdog unit: expired lock + unfinished work -> FAIL; expired lock idle -> WARN', () => {
+  const bad = wd.evaluate({ nowIso: '2026-09-30T00:00:00Z', activeChunk: ['A00015'], activeChunkUnfinished: 1,
+    transaction: { active: false }, lock: { locked: true, holder: 'writer', expires_at: '2026-09-29T23:00:00Z' },
+    command: null, commandFileMinutes: null, lastProgressMinutes: 1 }, {});
+  assert.strictEqual(bad.exitCode, wd.EXIT_FAIL);
+  assert.ok(bad.findings.some(f => f.status === 'EXPIRED_LOCK_UNFINISHED_WORK'));
+  const idle = wd.evaluate({ nowIso: '2026-09-30T00:00:00Z', activeChunk: [], activeChunkUnfinished: 0,
+    transaction: { active: false }, lock: { locked: true, holder: 'writer', expires_at: '2026-09-29T23:00:00Z' },
+    command: null, commandFileMinutes: null, lastProgressMinutes: 1 }, {});
+  assert.strictEqual(idle.exitCode, wd.EXIT_WARN, 'idle expired lock is hygiene (WARN), never force-cleared by the watchdog');
+});
+test('F3 watchdog unit: over-age active transaction -> FAIL', () => {
+  const r = wd.evaluate({ nowIso: '2026-09-30T00:00:00Z', activeChunk: [], activeChunkUnfinished: 0,
+    transaction: { active: true, id: 'TX-1', operation: 'publish', started_at: '2026-09-29T21:00:00Z' },
+    lock: { locked: false }, command: null, commandFileMinutes: null, lastProgressMinutes: 1 }, {});
+  assert.strictEqual(r.exitCode, wd.EXIT_FAIL);
+  assert.ok(r.findings.some(f => f.status === 'ACTIVE_TX_TOO_OLD'));
+});
+test('F3 watchdog CLI: read-only on the real repo, PASS on healthy idle, state byte-identical', () => {
+  const snap = () => ['data/state/checkpoint.json', 'data/state/transaction.json', 'data/state/writer-lock.json', 'data/state/throughput-ledger.json']
+    .map(p => require('crypto').createHash('sha256').update(fs.readFileSync(path.join(ROOT, p))).digest('hex')).join('.');
+  const before = snap();
+  const r = spawnSync(process.execPath, [path.join(ROOT, 'scripts', 'factory', 'liveness-watchdog.js')], { cwd: ROOT, encoding: 'utf8' });
+  assert.strictEqual(r.status, 0, 'watchdog must PASS on the healthy idle production state:\n' + r.stdout);
+  assert.match(r.stdout, /HEALTHY IDLE/, 'production is idle: user resting is not a failure');
+  assert.strictEqual(before, snap(), 'watchdog must never mutate repository truth');
+});
+test('F3 watchdog workflow contract: read-only, scheduled, contents: read, never commits/pushes', () => {
+  const y = wfText('factory-liveness-watchdog.yml');
+  assert.match(y, /contents:\s*read/, 'watchdog workflow must be read-only (contents: read)');
+  assert.match(y, /workflow_dispatch:/, 'must be manually dispatchable');
+  assert.match(y, /cron:\s*'0 \*\/6 \* \* \*'/, 'must run on a periodic schedule');
+  assert.ok(!/git push|git commit/.test(y), 'watchdog must never commit or push');
+  assert.match(y, /git status --porcelain/, 'must self-verify the read-only contract');
+});
+test('F4 soak workflow contract: dedicated long-run suite, read-only, dispatch + scheduled', () => {
+  const y = wfText('factory-soak.yml');
+  assert.match(y, /node --test tests\/soak\/factory-soak\.js/, 'must run the soak suite');
+  assert.match(y, /contents:\s*read/, 'soak runs in its own sandbox: contents read only');
+  assert.match(y, /workflow_dispatch:/, 'must be manually dispatchable');
+  assert.match(y, /schedule:/, 'must run on a schedule');
+  assert.ok(fs.existsSync(path.join(ROOT, 'tests', 'soak', 'factory-soak.js')), 'soak suite must exist');
+});
+test('F5 docs contract: 4-tier validation model documented in canonical docs', () => {
+  const agents = fs.readFileSync(path.join(ROOT, 'AGENTS.md'), 'utf8');
+  const proc = fs.readFileSync(path.join(ROOT, 'docs', 'PROC-PUBLISH.md'), 'utf8');
+  const factory = fs.readFileSync(path.join(ROOT, 'docs', 'CONTENT-FACTORY.md'), 'utf8');
+  for (const [name, t] of [['AGENTS.md', agents], ['docs/PROC-PUBLISH.md', proc], ['docs/CONTENT-FACTORY.md', factory]]) {
+    assert.match(t, /Tier 1/i, name + ' must document Tier 1 (unit)');
+    assert.match(t, /Tier 4/i, name + ' must document Tier 4 (long-run/recovery/liveness)');
+    assert.match(t, /node --test tests\/test-suite\.js/, name + ' must pin the Tier 1 command');
+    assert.match(t, /soak/i, name + ' must require the soak suite');
+  }
+  assert.match(agents, /--channel actions/i, 'AGENTS.md must document the actions channel contract');
+  assert.match(agents, /writer direct CLI/i, 'AGENTS.md must document the writer direct CLI');
+  assert.match(proc, /Actions command-file channel/i, 'PROC-PUBLISH must distinguish the two command channels');
+});
+
+test('cleanup: remove hardening session 4 sandbox', () => { fs.rmSync(SBH, { recursive: true, force: true }); });

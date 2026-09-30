@@ -101,10 +101,20 @@ command refuses to exceed it. Mass publishing waits for pilot learnings.
 
 `scripts/factory/operator.js` wraps every canonical publish-flow step behind a
 whitelist command contract, so a coordinator drives the factory without shell
-access. Channel: `data/state/operator-command.json`
-(`{op, ids, count, scope, command_id, coordinator}`), consumed by
-`.github/workflows/factory-operator.yml`, or the equivalent direct CLI
-(`operator.js publish --ids A00002,A00003 --scope deep`).
+access. TWO DIFFERENT channels (NOT interchangeable):
+
+- **Actions command-file channel** (`--channel actions`):
+  `data/state/operator-command.json`
+  (`{op, ids, count, scope, command_id, coordinator}`), consumed by
+  `.github/workflows/factory-operator.yml`. A clean checkout has no `_drafts/`,
+  so it only accepts `status, prepare-next, research, recover, consistency,
+  reports, verify`; draft-bound ops (`qa`, `publish`) are REFUSED EARLY
+  (exit 3, nothing executed/mutated) and the workflow then CONSUMES the
+  refused command so the command file can never hang.
+- **Writer direct CLI** (`--channel cli`, default):
+  `operator.js publish --ids A00002,A00003 --scope deep` in the writer
+  environment, where `_drafts/` exists — the FULL whitelist including
+  `qa`/`publish` is available (and `qa`/`publish` are writer direct-CLI only).
 
 - Ops: `status, prepare-next, research, qa, publish, recover, consistency,
   reports, verify`. Validation: op whitelist, `ids` match `A#####`, `count`
@@ -122,8 +132,10 @@ access. Channel: `data/state/operator-command.json`
   (`operator.js verify --scope`), never in YAML.
 - DRAFT BOUNDARY (/lab): Pages serves the repo ROOT, so `_drafts/` is
   gitignored FOREVER and never committed; `qa`/`publish` run in the writer
-  environment via this same CLI (a bare Actions checkout stops safely with
-  NO_DRAFT, mutating nothing).
+  environment via the writer direct CLI. The Actions command-file channel
+  refuses them EARLY at validation (exit 3) and consumes the refused command —
+  a draft-bound op is never accepted and then left to die NO_DRAFT mid-run
+  with `operator-command.json` hanging.
 - FINAL-TREE VERIFY + SAFE PUSH (workflow): stage canonical outputs →
   `git write-tree` (verified tree hash) → run canonical verify on exactly the
   tree to be committed → commit only if the tree is unchanged; push is
@@ -132,3 +144,27 @@ access. Channel: `data/state/operator-command.json`
 - Single coordinator: concurrency group `lab-factory-production`,
   `cancel-in-progress: false`; an unconsumed command file is never overwritten
   by a newer one.
+
+## Validation model (4 tiers — MANDATORY)
+
+"CI green" is only valid when every tier that applies to the scope of the
+change is PASS. Never claim production-safe from unit tests alone.
+
+- **Tier 1 — Unit**: `node --test tests/test-suite.js`
+  (deterministic unit/regression contracts: gates, whitelists, rollback,
+  channel contract, concurrency contract, watchdog states).
+- **Tier 2 — Integration**: operator sandbox E2E + deterministic build.
+- **Tier 3 — Production invariant**: consistency + grounding + capacity-check
+  + state preservation + no-drift.
+- **Tier 4 — Long-run / Failure recovery / Liveness**: multi-chunk soak
+  (`node --test tests/soak/factory-soak.js`) with fault injection
+  (crash-after-beginTx, crash-after-publishStage, build/audit/verify failure,
+  stale lock) + deterministic recover + liveness watchdog
+  (`scripts/factory/liveness-watchdog.js`, READ-ONLY).
+
+Engine/workflow/recovery changes REQUIRE Tier 4. CI/invariants can be green
+while the factory is stalled (unfinished work standing, command hanging,
+expired lock, over-age transaction) — Tier 4 closes that blind spot. A failing
+tier means: do NOT merge, do NOT lower thresholds or delete tests, do NOT
+mutate production truth; fix the root cause and re-run the affected tier and
+every tier above it.
