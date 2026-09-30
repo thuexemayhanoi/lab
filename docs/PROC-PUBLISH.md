@@ -162,9 +162,23 @@ change is PASS. Never claim production-safe from unit tests alone.
   stale lock) + deterministic recover + liveness watchdog
   (`scripts/factory/liveness-watchdog.js`, READ-ONLY).
 
-Engine/workflow/recovery changes REQUIRE Tier 4. CI/invariants can be green
-while the factory is stalled (unfinished work standing, command hanging,
-expired lock, over-age transaction) — Tier 4 closes that blind spot. A failing
-tier means: do NOT merge, do NOT lower thresholds or delete tests, do NOT
-mutate production truth; fix the root cause and re-run the affected tier and
-every tier above it.
+Engine/workflow/recovery changes REQUIRE Tier 4 — and CI ENFORCES it:
+`.github/workflows/factory-soak.yml` runs the soak suite on both
+`pull_request` and `push` to `main` (path-filtered to reliability-relevant
+files: engine, site builder, soak suite, static regression suite, all
+reliability workflows, `data/state/**`, `config/**`, docs contract files).
+A direct push of engine/workflow/recovery changes to main therefore cannot
+land without Tier 4; a prose-only article change does NOT trigger the soak.
+
+CI/invariants can be green while the factory is stalled (unfinished work
+standing, command hanging, expired lock, over-age transaction) — Tier 4 +
+the liveness watchdog close that blind spot. CI green is NOT liveness green
+until Tier 4 has actually run for the change. The watchdog is READ-ONLY and
+FAILS CLOSED (STATE_MISSING / STATE_INVALID, exit 1) when canonical truth
+(matrix shards or checkpoint/transaction/writer-lock/throughput-ledger) is
+missing or corrupt — it never silently reports a fake healthy state
+(see `docs/PROC-RECOVERY.md`).
+
+A failing tier means: do NOT merge, do NOT lower thresholds or delete tests,
+do NOT mutate production truth; fix the root cause and re-run the affected
+tier and every tier above it.

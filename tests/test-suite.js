@@ -1689,3 +1689,229 @@ test('F5 docs contract: 4-tier validation model documented in canonical docs', (
 });
 
 test('cleanup: remove hardening session 4 sandbox', () => { fs.rmSync(SBH, { recursive: true, force: true }); });
+
+// ---------- HARDENING SESSION 5: canonical matrix truth + fail-closed watchdog + Tier 4 main enforcement ----------
+const WS5 = path.join(os.tmpdir(), 'lab-hardening5-' + process.pid);
+const WS5_REPO = path.join(os.tmpdir(), 'lab-hardening5-repo-' + process.pid);
+function wdFixture(mutate) {
+  fs.rmSync(WS5, { recursive: true, force: true });
+  fs.mkdirSync(path.join(WS5, 'data', 'state'), { recursive: true });
+  const H = 'article_id,slug,cluster,status\n';
+  const fr = ['A00001,s1,RENTAL,PLANNED', 'A00002,s2,RENTAL,RESEARCH', 'A00003,s3,RENTAL,PASS',
+    'A00004,s4,RENTAL,QA', 'A00005,s5,RENTAL,PUBLISHED', 'A00006,s6,RENTAL,PASS'];
+  fs.writeFileSync(path.join(WS5, 'data', 'content-matrix.csv.part00'), H + fr.slice(0, 4).join('\n') + '\n');
+  fs.writeFileSync(path.join(WS5, 'data', 'content-matrix.csv.part01'), fr.slice(4).join('\n') + '\n');
+  const st = {
+    'checkpoint.json': { last_run: '2026-09-29T00:00:00Z', phase: 'PRODUCTION', matrix_rows: 6, published_count: 1,
+      last_batch: [], last_completed_id: 'A00005', next_claimable_id: 'A00006', active_chunk: [], notes: 'fixture' },
+    'transaction.json': { active: false, id: null, started_at: null, operation: null, articles: [], notes: 'Committed.' },
+    'writer-lock.json': { locked: false, holder: null, acquired_at: null, expires_at: null },
+    'throughput-ledger.json': { version: 1, events: [{ op: 'qa', started_at: '2026-09-28T23:00:00Z',
+      finished_at: '2026-09-29T00:01:00Z', ids: ['A00005'], count: 1 }] },
+  };
+  for (const [f, o] of Object.entries(st)) fs.writeFileSync(path.join(WS5, 'data', 'state', f), JSON.stringify(o));
+  if (mutate) mutate(WS5);
+  return WS5;
+}
+const wdRun = (args) => spawnSync(process.execPath,
+  [path.join(ROOT, 'scripts', 'factory', 'liveness-watchdog.js'), ...args], { encoding: 'utf8' });
+const wdStalledMut = (id) => (sb) => {
+  const cp = JSON.parse(fs.readFileSync(path.join(sb, 'data', 'state', 'checkpoint.json'), 'utf8'));
+  cp.active_chunk = [id];
+  fs.writeFileSync(path.join(sb, 'data', 'state', 'checkpoint.json'), JSON.stringify(cp));
+};
+
+test('S5 A: clean checkout chỉ có canonical shards (không assembled CSV) — watchdog đọc đủ 10,000 rows repo thật', () => {
+  fs.rmSync(WS5_REPO, { recursive: true, force: true });
+  fs.mkdirSync(path.join(WS5_REPO, 'data', 'state'), { recursive: true });
+  let shards = 0;
+  for (const f of fs.readdirSync(DATA)) {
+    if (/^content-matrix\.csv\.part/.test(f)) { fs.copyFileSync(path.join(DATA, f), path.join(WS5_REPO, 'data', f)); shards++; }
+  }
+  assert.ok(shards >= 2, 'fixture cần ít nhất 2 shards thật');
+  assert.ok(!fs.existsSync(path.join(WS5_REPO, 'data', 'content-matrix.csv')),
+    'clean checkout simulation: assembled CSV (gitignored) phải KHÔNG tồn tại');
+  for (const f of ['checkpoint.json', 'transaction.json', 'writer-lock.json', 'throughput-ledger.json']) {
+    fs.copyFileSync(path.join(ROOT, 'data', 'state', f), path.join(WS5_REPO, 'data', 'state', f));
+  }
+  const snap = wd.collectSnapshot(WS5_REPO, '2026-09-30T00:00:00Z');
+  assert.strictEqual(snap.matrixRows, rows.length, 'phải đọc đủ SỐ ROW THẬT từ canonical shards (' + rows.length + ')');
+  assert.strictEqual(snap.matrixSource, 'shards', 'phải tự nhận diện nguồn canonical shards');
+  assert.strictEqual(snap.fatals.length, 0, 'không được có fatal trên canonical truth đầy đủ');
+  assert.strictEqual(wd.evaluate(snap, {}).exitCode, wd.EXIT_PASS, 'repo idle + shards đầy đủ => PASS, không bỏ lọt');
+});
+
+test('S5 I: HEALTHY IDLE với canonical shards đầy đủ (không assembled CSV) -> exit 0', () => {
+  const r = wdRun([wdFixture()]);
+  assert.strictEqual(r.status, 0, 'shards đầy đủ + state valid + idle => PASS:\n' + r.stdout + r.stderr);
+  assert.match(r.stdout, /HEALTHY IDLE/);
+  assert.match(r.stdout, /source: shards/);
+});
+
+test('S5 B: active_chunk RESEARCH + progress quá ngưỡng -> STALLED exit 1 (không bỏ lọt nhờ canonical loader)', () => {
+  const r = wdRun([wdFixture(wdStalledMut('A00002')), '--now', '2026-09-30T06:00:00Z']);
+  assert.strictEqual(r.status, 1, 'RESEARCH đứng >720p phải FAIL:\n' + r.stdout);
+  assert.match(r.stdout, /STALLED/);
+});
+
+test('S5 C: active_chunk PASS + progress quá ngưỡng -> STALLED exit 1', () => {
+  const r = wdRun([wdFixture(wdStalledMut('A00003')), '--now', '2026-09-30T06:00:00Z']);
+  assert.strictEqual(r.status, 1, 'PASS đứng >720p phải FAIL:\n' + r.stdout);
+  assert.match(r.stdout, /STALLED/);
+});
+
+test('S5 D: thiếu shard (gãy dãy part00..NN) -> FAIL CLOSED STATE_MISSING, không giả lành', () => {
+  const r = wdRun([wdFixture((sb) => fs.rmSync(path.join(sb, 'data', 'content-matrix.csv.part01')))]);
+  assert.strictEqual(r.status, 1, 'shard thiếu => FAIL CLOSED:\n' + r.stdout);
+  assert.match(r.stdout, /STATE_MISSING/);
+  assert.match(r.stdout, /FAIL CLOSED/);
+});
+
+test('S5 E: shard malformed (row thiếu cột) -> FAIL CLOSED STATE_INVALID', () => {
+  const r = wdRun([wdFixture((sb) => fs.writeFileSync(path.join(sb, 'data', 'content-matrix.csv.part01'), 'A00006\n'))]);
+  assert.strictEqual(r.status, 1, 'shard hỏng => FAIL CLOSED:\n' + r.stdout);
+  assert.match(r.stdout, /STATE_INVALID/);
+});
+
+test('S5 E2: assembled CSV tồn tại nhưng hỏng -> FAIL CLOSED STATE_INVALID (không fallback im lặng sang shards)', () => {
+  const r = wdRun([wdFixture((sb) => fs.writeFileSync(path.join(sb, 'data', 'content-matrix.csv'),
+    'wrong,header\nx,y\n'))]);
+  assert.strictEqual(r.status, 1, 'assembled hỏng => FAIL CLOSED, không âm thầm dùng shards:\n' + r.stdout);
+  assert.match(r.stdout, /STATE_INVALID/);
+});
+
+test('S5 F: thiếu checkpoint.json -> FAIL CLOSED STATE_MISSING (không fallback {active:false})', () => {
+  const r = wdRun([wdFixture((sb) => fs.rmSync(path.join(sb, 'data', 'state', 'checkpoint.json')))]);
+  assert.strictEqual(r.status, 1, 'checkpoint thiếu => FAIL CLOSED:\n' + r.stdout);
+  assert.match(r.stdout, /STATE_MISSING/);
+  assert.match(r.stdout, /checkpoint\.json/);
+});
+
+test('S5 G: transaction.json JSON hỏng -> FAIL CLOSED STATE_INVALID', () => {
+  const r = wdRun([wdFixture((sb) => fs.writeFileSync(path.join(sb, 'data', 'state', 'transaction.json'), '{ broken'))]);
+  assert.strictEqual(r.status, 1, 'tx hỏng => FAIL CLOSED:\n' + r.stdout);
+  assert.match(r.stdout, /STATE_INVALID/);
+});
+
+test('S5 G2: transaction.json sai schema tối thiểu -> FAIL CLOSED STATE_INVALID', () => {
+  const r = wdRun([wdFixture((sb) => fs.writeFileSync(path.join(sb, 'data', 'state', 'transaction.json'), '{}'))]);
+  assert.strictEqual(r.status, 1, 'tx thiếu `active` boolean => FAIL CLOSED:\n' + r.stdout);
+  assert.match(r.stdout, /STATE_INVALID/);
+});
+
+test('S5 H: thiếu writer-lock.json -> FAIL CLOSED STATE_MISSING', () => {
+  const r = wdRun([wdFixture((sb) => fs.rmSync(path.join(sb, 'data', 'state', 'writer-lock.json')))]);
+  assert.strictEqual(r.status, 1, 'writer-lock thiếu => FAIL CLOSED:\n' + r.stdout);
+  assert.match(r.stdout, /STATE_MISSING/);
+});
+
+test('S5 H2: throughput-ledger.json hỏng -> FAIL CLOSED STATE_INVALID', () => {
+  const r = wdRun([wdFixture((sb) => fs.writeFileSync(path.join(sb, 'data', 'state', 'throughput-ledger.json'), 'not json'))]);
+  assert.strictEqual(r.status, 1, 'ledger hỏng => FAIL CLOSED:\n' + r.stdout);
+  assert.match(r.stdout, /STATE_INVALID/);
+});
+
+test('S5 K: operator-command.json optional — thiếu = bình thường; tồn tại nhưng hỏng = STATE_INVALID', () => {
+  const ok = wdRun([wdFixture()]);
+  assert.strictEqual(ok.status, 0, 'không có command là bình thường:\n' + ok.stdout);
+  const bad = wdRun([wdFixture((sb) => fs.writeFileSync(path.join(sb, 'data', 'state', 'operator-command.json'), '{ nope'))]);
+  assert.strictEqual(bad.status, 1, 'command file hỏng => FAIL CLOSED:\n' + bad.stdout);
+  assert.match(bad.stdout, /STATE_INVALID/);
+});
+
+test('S5 J: watchdog KHÔNG đổi byte nào trong cây nó đọc (read-only tuyệt đối)', () => {
+  const sb = wdFixture();
+  const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => {
+    const q = path.join(d, e.name);
+    return e.isDirectory() ? walk(q) : [q];
+  });
+  const fp = () => walk(sb).map((f) =>
+    require('crypto').createHash('sha256').update(fs.readFileSync(f)).digest('hex')).join('.');
+  const before = fp();
+  const r = wdRun([sb]);
+  assert.strictEqual(r.status, 0, r.stdout + r.stderr);
+  assert.strictEqual(before, fp(), 'watchdog phải byte-identical toàn bộ cây sau khi chạy');
+  assert.ok(!fs.existsSync(path.join(sb, 'data', 'content-matrix.csv')),
+    'watchdog KHÔNG được ghi assembled CSV xuống production tree');
+});
+
+test('S5 static: watchdog source có canonical-shard loader, fail-closed, và KHÔNG có lệnh ghi/mutate nào', () => {
+  const src = fs.readFileSync(path.join(ROOT, 'scripts', 'factory', 'liveness-watchdog.js'), 'utf8');
+  assert.match(src, /loadCanonicalMatrix/, 'phải có canonical matrix loader riêng');
+  assert.match(src, /content-matrix\.csv\.part/, 'phải đọc canonical shards');
+  assert.match(src, /STATE_MISSING/);
+  assert.match(src, /STATE_INVALID/);
+  assert.ok(!/fs\.(writeFile|writeFileSync|appendFile|appendFileSync|rm|rmSync|unlink|unlinkSync|rename|renameSync|mkdir|mkdirSync|truncate|open|openSync)\s*\(/.test(src),
+    'watchdog là READ-ONLY: không được có bất kỳ lệnh ghi/xóa nào');
+  assert.ok(!/git\s+push/.test(src), 'watchdog không được push');
+});
+
+test('S5 static: watchdog workflow chứng minh read-only (clean tree TRƯỚC+SAU, sha256 truth trước/sau)', () => {
+  const y = wfText('factory-liveness-watchdog.yml');
+  const cleanChecks = (y.match(/git status --porcelain/g) || []).length;
+  assert.ok(cleanChecks >= 2, 'phải có clean-tree check TRƯỚC và SAU watchdog (có ' + cleanChecks + ')');
+  assert.match(y, /watchdog-truth-before/, 'phải fingerprint truth TRƯỚC');
+  assert.match(y, /watchdog-truth-after/, 'phải fingerprint truth SAU');
+  assert.match(y, /diff \/tmp\/watchdog-truth-before\.txt \/tmp\/watchdog-truth-after\.txt/,
+    'phải assert truth byte-identical');
+  assert.match(y, /contents:\s*read/);
+  assert.ok(!/git push|git commit/.test(y), 'watchdog workflow không được commit/push');
+  assert.ok(!/push --force|push -f/.test(y), 'không force push');
+});
+
+test('S5 static: soak workflow BẮT BUỘC Tier 4 trên push main + path contract đầy đủ', () => {
+  const y = wfText('factory-soak.yml');
+  assert.match(y, /push:/, 'soak phải trigger cả trên push');
+  assert.match(y, /branches:\s*\[main\]/, 'push phải filter branch main');
+  const requiredPaths = ['scripts/factory/**', 'scripts/site/**', 'tests/soak/**', 'tests/test-suite.js',
+    '.github/workflows/factory-operator.yml', '.github/workflows/factory-validate.yml',
+    '.github/workflows/factory-capacity-validate.yml', '.github/workflows/factory-soak.yml',
+    '.github/workflows/factory-liveness-watchdog.yml', '.github/workflows/ci-validate.yml',
+    'data/state/**', 'config/**', 'AGENTS.md', 'docs/PROC-PUBLISH.md', 'docs/CONTENT-FACTORY.md', 'docs/PROC-RECOVERY.md'];
+  for (const p of requiredPaths) {
+    const count = (y.match(new RegExp("- '" + p.replace(/\./g, '\\.').replace(/\//g, '\\/') + "'", 'g')) || []).length;
+    assert.strictEqual(count, 2, "path '" + p + "' phải có trong CẢ pull_request lẫn push (thấy " + count + ')');
+  }
+  assert.match(y, /group:\s*factory-soak-\$\{\{ github\.ref \}\}/, 'soak concurrency phải per-ref');
+  assert.match(y, /cancel-in-progress:\s*true/);
+  assert.ok(!/lab-factory-production/.test(y), 'soak KHÔNG được đụng global production mutation group');
+  assert.ok(!/&tier4_paths|\*tier4_paths/.test(y), 'GitHub Actions không hỗ trợ YAML anchors — nhân đôi paths');
+});
+
+test('S5 static: factory-operator vẫn giữ global serialization lab-factory-production, cancel=false, không force push', () => {
+  const y = wfText('factory-operator.yml');
+  assert.match(y, /group:\s*lab-factory-production/);
+  assert.match(y, /cancel-in-progress:\s*false/);
+  assert.ok(!/lab-factory-production-\$\{\{/.test(y), 'operator group phải là global, không per-ref');
+  assert.ok(!/push --force|push -f/.test(y), 'operator không force push');
+});
+
+test('S5 docs contract: canonical matrix = shards, watchdog fail-closed, Tier 4 chạy cả push main', () => {
+  const agents = fs.readFileSync(path.join(ROOT, 'AGENTS.md'), 'utf8');
+  const factoryDoc = fs.readFileSync(path.join(ROOT, 'docs', 'CONTENT-FACTORY.md'), 'utf8');
+  const proc = fs.readFileSync(path.join(ROOT, 'docs', 'PROC-PUBLISH.md'), 'utf8');
+  const recovery = fs.readFileSync(path.join(ROOT, 'docs', 'PROC-RECOVERY.md'), 'utf8');
+  // Sửa drift: không còn nói mơ hồ "All tools auto-assemble on load"
+  assert.ok(!/All tools auto-assemble on load/.test(factoryDoc),
+    'CONTENT-FACTORY không được nói "All tools auto-assemble on load" nếu không đúng — phải ghi chính xác từng tool');
+  assert.ok(!/Any tool .*auto-assembles on load and rewrites shards on save/.test(agents),
+    'AGENTS không được ghép chung mọi tool vào một hành vi assemble/rewrite');
+  for (const [name, t] of [['AGENTS.md', agents], ['docs/CONTENT-FACTORY.md', factoryDoc]]) {
+    assert.match(t, /canonical (form|committed form|matrix)[^.]*shard|shards?[^.]*canonical/i,
+      name + ' phải ghi canonical matrix = shards');
+    assert.match(t, /fail[\s-]?closed/i, name + ' phải ghi watchdog fail closed khi canonical truth thiếu/hỏng');
+    assert.match(t, /STATE_MISSING|STATE_INVALID/, name + ' phải ghi tên finding deterministic của fail-closed');
+  }
+  for (const [name, t] of [['AGENTS.md', agents], ['docs/PROC-PUBLISH.md', proc], ['docs/PROC-RECOVERY.md', recovery]]) {
+    assert.match(t, /Tier 4/i, name + ' phải ghi Tier 4');
+    assert.match(t, /push[^.]*main|main[^.]*push/i, name + ' phải ghi Tier 4 chạy cả trên push vào main (path-relevant), không chỉ PR');
+    assert.match(t, /liveness|watchdog/i, name + ' phải nhắc liveness/watchdog');
+  }
+  assert.match(proc, /CI green[^\n]*liveness|liveness[^\n]*CI green/i,
+    'PROC-PUBLISH phải ghi rõ: CI green KHÔNG đồng nghĩa liveness green nếu Tier 4 chưa chạy');
+});
+
+test('cleanup: remove hardening session 5 sandboxes', () => {
+  fs.rmSync(WS5, { recursive: true, force: true });
+  fs.rmSync(WS5_REPO, { recursive: true, force: true });
+});

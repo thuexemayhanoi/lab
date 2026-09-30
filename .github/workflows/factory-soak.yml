@@ -15,6 +15,17 @@ name: Factory Soak (Long-run / Failure recovery)
 # checkpoint + matrix + sitemap + search-index + knowledge-index đồng bộ.
 # Tier 4 BẮT BUỘC cho mọi thay đổi engine/workflow/recovery.
 
+# TIER 4 ENFORCEMENT (hardening session 5 — Finding 2): soak chạy trên CẢ
+# pull_request lẫn push vào main (path-filtered) — direct push thay
+# engine/workflow/recovery KHÔNG thể vào main mà không có Tier 4. Prose
+# article changes KHÔNG trigger (chỉ những gì ảnh hưởng reliability).
+# Path contract (giống nhau cho PR và push main):
+#   - engine + site builder + soak suite + static regression suite;
+#   - toàn bộ workflows liên quan reliability (operator/validate/capacity/
+#     soak/watchdog/ci-validate);
+#   - data/state/** (production truth state) + config/** (engine contract);
+#   - docs contract files được pin bởi static regression tests trong
+#     tests/test-suite.js (AGENTS.md, PROC-PUBLISH, CONTENT-FACTORY, PROC-RECOVERY).
 on:
   workflow_dispatch:
   schedule:
@@ -24,10 +35,43 @@ on:
       - 'scripts/factory/**'
       - 'scripts/site/**'
       - 'tests/soak/**'
-      - '.github/workflows/factory-soak.yml'
+      - 'tests/test-suite.js'
       - '.github/workflows/factory-operator.yml'
+      - '.github/workflows/factory-validate.yml'
+      - '.github/workflows/factory-capacity-validate.yml'
+      - '.github/workflows/factory-soak.yml'
+      - '.github/workflows/factory-liveness-watchdog.yml'
+      - '.github/workflows/ci-validate.yml'
+      - 'data/state/**'
+      - 'config/**'
+      - 'AGENTS.md'
+      - 'docs/PROC-PUBLISH.md'
+      - 'docs/CONTENT-FACTORY.md'
+      - 'docs/PROC-RECOVERY.md'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/factory/**'
+      - 'scripts/site/**'
+      - 'tests/soak/**'
+      - 'tests/test-suite.js'
+      - '.github/workflows/factory-operator.yml'
+      - '.github/workflows/factory-validate.yml'
+      - '.github/workflows/factory-capacity-validate.yml'
+      - '.github/workflows/factory-soak.yml'
+      - '.github/workflows/factory-liveness-watchdog.yml'
+      - '.github/workflows/ci-validate.yml'
+      - 'data/state/**'
+      - 'config/**'
+      - 'AGENTS.md'
+      - 'docs/PROC-PUBLISH.md'
+      - 'docs/CONTENT-FACTORY.md'
+      - 'docs/PROC-RECOVERY.md'
 
 concurrency:
+  # PER-REF: PR không cancel soak run của main, main không cancel PR;
+  # cancel-in-progress chỉ trong CÙNG ref (chạy lại liên tiếp trên 1 branch).
+  # KHÔNG đụng global production mutation group lab-factory-production.
   group: factory-soak-${{ github.ref }}
   cancel-in-progress: true
 

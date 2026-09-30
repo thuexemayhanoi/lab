@@ -13,10 +13,22 @@ and publishes articles from a fixed 10,000-row matrix.
 
 `data/content-matrix.csv` — exactly 10,000 production rows.
 
-Committed as 4 shards (`data/content-matrix.csv.part00..03`); the assembled
-CSV is gitignored. All tools auto-assemble on load (byte-identical
-concatenation of shards) and rewrite shards on save. Never edit the CSV by
-hand — use the factory CLI.
+The CANONICAL committed form is the 4 shards
+(`data/content-matrix.csv.part00..03`); the assembled CSV is gitignored and
+is NOT repository truth. Any tool that needs the matrix must read/assemble
+the canonical shards deterministically (byte-identical concatenation,
+part00..NN order). Per-tool behavior is precise, NOT interchangeable:
+- `factory.js` (read-write engine) assembles the CSV from shards on load and
+  rewrites shards on save.
+- `scripts/factory/liveness-watchdog.js` (READ-ONLY) never writes the
+  assembled CSV: it uses the assembled CSV if it exists AND is valid,
+  otherwise assembles IN-MEMORY from the canonical shards; if the canonical
+  matrix is missing/malformed or a critical state file
+  (checkpoint/transaction/writer-lock/throughput-ledger) is missing/invalid
+  it FAILS CLOSED (STATE_MISSING / STATE_INVALID, exit 1) — no silent
+  fallback to matrixRows=0 or a fake healthy state. Clean checkout (shards
+  only) and writer checkout read the same truth.
+Never edit the CSV by hand — use the factory CLI.
 
 Required fields: article_id, cluster, parent_topic, primary_keyword,
 secondary_keywords, search_intent, geo_id, geo_level, province, locality,
@@ -132,7 +144,14 @@ change is PASS. Never claim production-safe from unit tests alone.
   user resting is never a failure; stale command, stalled active chunk,
   expired lock + unfinished work and over-age transactions are detected).
 
-Engine/workflow/recovery changes REQUIRE Tier 4. A failing tier means: do NOT
+Engine/workflow/recovery changes REQUIRE Tier 4 — and CI ENFORCES it:
+`factory-soak.yml` runs on both `pull_request` and `push` to `main`
+(path-filtered to reliability-relevant files), so a direct push of
+engine/workflow/recovery changes to main cannot land without Tier 4. CI
+green is NOT liveness green if Tier 4 has not run for the change. The
+liveness watchdog reads canonical truth and FAILS CLOSED
+(STATE_MISSING / STATE_INVALID) when that truth is missing or corrupt.
+A failing tier means: do NOT
 merge, do NOT lower thresholds or delete tests, do NOT mutate production truth
 to make tests green; fix the root cause and re-run the affected tier and every
 tier above it.
