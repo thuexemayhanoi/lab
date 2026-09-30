@@ -47,5 +47,8 @@ jobs:
         with:
           node-version: 22
 
+      - name: Assemble matrix + status (gitignored csv từ canonical shards — như ci-validate)
+        run: node scripts/factory/factory.js status
+
       - name: Soak test (sandbox — không đụng production truth)
         run: node --test tests/soak/factory-soak.js

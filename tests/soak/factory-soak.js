@@ -46,6 +46,18 @@ fs.cpSync(ROOT, SB, { recursive: true, filter: (s) => {
 } });
 fs.mkdirSync(path.join(SB, '_drafts'), { recursive: true });
 
+// Clean checkout CI không có data/content-matrix.csv (gitignored; canonical
+// committed form = 4 shards part00..03 — .gitignore). Assemble trong SANDBOX
+// từ shards của ROOT để soak tự chạy được ở mọi môi trường (writer local hoặc
+// CI clean checkout). Chỉ đọc ROOT, không ghi ROOT — production truth bất biến.
+const sbCsv = path.join(SB, 'data', 'content-matrix.csv');
+if (!fs.existsSync(sbCsv)) {
+  const shards = fs.readdirSync(path.join(ROOT, 'data'))
+    .filter((f) => f.startsWith('content-matrix.csv.part')).sort();
+  if (!shards.length) throw new Error('FATAL: không có data/content-matrix.csv và không có shards part00..03 để assemble');
+  fs.writeFileSync(sbCsv, shards.map((f) => fs.readFileSync(path.join(ROOT, 'data', f))).join(''));
+}
+
 const FACT = (args) => spawnSync(process.execPath, [path.join(SB, 'scripts', 'factory', 'factory.js'), ...args], { cwd: SB, encoding: 'utf8' });
 const OP = (args) => spawnSync(process.execPath, [path.join(SB, 'scripts', 'factory', 'operator.js'), ...args], { cwd: SB, encoding: 'utf8' });
 const NODE = (rel, args) => spawnSync(process.execPath, [path.join(SB, rel), ...(args || [])], { cwd: SB, encoding: 'utf8' });
