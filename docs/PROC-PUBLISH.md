@@ -29,13 +29,16 @@ production path is the operator, which commits ONLY after build + verify PASS.
    transaction, copy the draft to `data/published/<ID>.html` +
    `site/<output_path>index.html`, flip matrix rows to PUBLISHED, and write the
    checkpoint. Drafts stay INTACT; the ledger is untouched.
-2. (operator) `build-site.js` → `editorial-audit --out` → `reports` →
+2. (operator, Simple Production Mode) `build-site.js` → `reports` →
    `verifyStepsStaged(scope, tx, ids)` — all while the transaction is STAGED.
-   The staged verify is a STAGED-AWARE contract: `factory.js consistency
-   --staged-tx <TXID> [--staged-ids ...]` and `capacity-check.js --staged-tx
-   <TXID>` accept EXACTLY the in-flight publish transaction (id + operation
-   `publish` + phase `STAGED` + journal ⊇ staged ids) and nothing else;
-   `grounding` is narrowed to the staged ids. Every non-staged caller still
+   FAST staged verify = staged consistency + grounding of the staged ids ONLY:
+   `factory.js consistency --staged-tx <TXID> [--staged-ids ...]` accepts
+   EXACTLY the in-flight publish transaction (id + operation `publish` +
+   phase `STAGED` + journal ⊇ staged ids) and nothing else; `grounding` is
+   narrowed to the staged ids. DEEP/FULL staged verify additionally runs
+   `capacity-check.js --staged-tx <TXID>` and `editorial-audit` (deep) /
+   full-site grounding + deterministic rebuild (full). editorial-audit NEVER
+   blocks a normal FAST publish. Every non-staged caller still
    requires transaction inactive + lock free — the production invariant is
    never weakened, and a mismatched transaction inside the window FAILS hard.
    `tests/test-suite.js` runs OUTSIDE the staged window: it is the CI gate on
@@ -125,11 +128,17 @@ access. TWO DIFFERENT channels (NOT interchangeable):
   or an unsafe transaction ⇒ STOP (never force-clear).
 - RESUME BEFORE CLAIM: `prepare-next` refuses while an unfinished chunk
   (RESEARCH/WRITING/QA/REVIEW/REPAIR/PASS rows) exists.
-- QA scopes (thresholds NEVER change): `fast` = consistency + tests
-  (production default for prepare-next/qa/publish); `deep` = + capacity-check
-  + editorial-audit; `full` = + site build (engine/workflow changes, final
-  verification). The scope abstraction lives in canonical tooling
-  (`operator.js verify --scope`), never in YAML.
+- QA scopes (thresholds NEVER change — Simple Production Mode):
+  `fast` = production default for prepare-next/research/qa/publish =
+  scoped consistency of the CURRENT ids only (`factory.js consistency --ids`
+  / `--chunk`: tx/lock sanity, matrix uniques, checkpoint↔matrix coherence,
+  selected-id invariants) — for publish: staged consistency + selected-ID
+  grounding. FAST never runs the full test-suite, capacity-check,
+  editorial-audit or a whole-site audit; the normal 2-article pair pays only
+  for its own scope. `deep` = fast + `node --test tests/test-suite.js` +
+  capacity-check + editorial-audit. `full` = deep + full-site grounding +
+  deterministic rebuild (build-site). The scope abstraction lives in
+  canonical tooling (`operator.js verify --scope`), never in YAML.
 - DRAFT BOUNDARY (/lab): Pages serves the repo ROOT, so `_drafts/` is
   gitignored FOREVER and never committed; `qa`/`publish` run in the writer
   environment via the writer direct CLI. The Actions command-file channel
@@ -166,9 +175,17 @@ Engine/workflow/recovery changes REQUIRE Tier 4 — and CI ENFORCES it:
 `.github/workflows/factory-soak.yml` runs the soak suite on both
 `pull_request` and `push` to `main` (path-filtered to reliability-relevant
 files: engine, site builder, soak suite, static regression suite, all
-reliability workflows, `data/state/**`, `config/**`, docs contract files).
+reliability workflows, static engine-contract configs, docs contract files).
 A direct push of engine/workflow/recovery changes to main therefore cannot
-land without Tier 4; a prose-only article change does NOT trigger the soak.
+land without Tier 4. Normal content runtime state updates (matrix shards,
+`data/state/**`, published archives, qa evidence, runtime
+`config/content-factory.json` grounding ids) are production DATA, not engine
+changes — they do NOT trigger the soak. A prose-only article change does NOT
+trigger the soak; its push runs exactly ONE lightweight content validation
+(`ci-validate.yml`: scoped consistency + grounding of the changed ids +
+deterministic build + draft-leak guard). The deep batteries
+(`factory-validate.yml`, `factory-capacity-validate.yml`) are path-filtered
+to the same reliability contract and never run on a content-only push.
 
 CI/invariants can be green while the factory is stalled (unfinished work
 standing, command hanging, expired lock, over-age transaction) — Tier 4 +

@@ -6,8 +6,35 @@ and publishes articles from a fixed 10,000-row matrix.
 ## Units
 
 - BATCH = 50 articles
-- CHUNK = 10 articles (a writer processes 10 at a time, never 50 in one go)
+- CHUNK = 10 articles (the ENGINE hard cap: `publish` refuses more than CHUNK ids)
+- Standard production pair = 2 articles (the normal loop claims 2 at a time)
 - 10,000 articles = 200 batches × 50
+
+## Simple production loop (normal content)
+
+The NORMAL writer flow is a light 2-article pair loop — FAST by default:
+
+```
+FETCH → RECOVER/RESUME → PREPARE 2 → RESEARCH per row requirement →
+WRITE 2 → WRAP → QA FAST (scoped to the pair) → REPAIR if needed →
+PUBLISH (atomic, FAST) → LIGHT VERIFY → COMMIT/PUSH → CI/PAGES → NEXT 2
+```
+
+- Standard pair = 2 articles (`factory.js prepare-next --count 2`); CHUNK=10
+  stays the engine hard cap.
+- FAST checks only what the current pair touches: transaction/lock sanity,
+  selected IDs, research/QA contracts, grounding where required, staged
+  consistency, checkpoint↔matrix coherence for the pair. FAST NEVER runs the
+  full test-suite, capacity-check, editorial audit or soak.
+- DEEP = FAST + `node --test tests/test-suite.js` + capacity-check +
+  editorial audit.
+- FULL = DEEP + full grounding + full deterministic rebuild + full production
+  invariants.
+- Tier 4 (soak + watchdog) is for engine/workflow/recovery changes or
+  scheduled maintenance — never per pair.
+- Normal content pushes use ONE lightweight content validation path
+  (`ci-validate.yml`); full engine validation runs only when engine files
+  change.
 
 ## Matrix contract
 
@@ -146,7 +173,12 @@ change is PASS. Never claim production-safe from unit tests alone.
 
 Engine/workflow/recovery changes REQUIRE Tier 4 — and CI ENFORCES it:
 `factory-soak.yml` runs on both `pull_request` and `push` to `main`
-(path-filtered to reliability-relevant files), so a direct push of
+(path-filtered to reliability-relevant files: `scripts/factory/**`,
+`.github/workflows/**`, `tests/soak/**`, `tests/test-suite.js`, recovery
+config/contracts). Normal content runtime updates (matrix status, `data/state/**`,
+research packets, drafts, `config/content-factory.json` grounding ids) are
+deliberately OUTSIDE that path filter — publishing a pair must NOT trigger
+Tier 4, and engine changes must not be able to skip it. A direct push of
 engine/workflow/recovery changes to main cannot land without Tier 4. CI
 green is NOT liveness green if Tier 4 has not run for the change. The
 liveness watchdog reads canonical truth and FAILS CLOSED

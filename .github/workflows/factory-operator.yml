@@ -33,10 +33,13 @@ name: Factory Operator
 # xong — rebase chỉ hòa giải conflict trên chính file lệnh (giữ lệnh MỚI
 # của origin), conflict khác STOP.
 #
-# QA SCOPE (docs/PROC-PUBLISH.md "QA modes"): prepare-next/qa/publish mặc
-# định FAST (consistency + tests: canonical/index/sitemap, publish gate,
-# draft-leak). KHÔNG hạ ngưỡng QA, KHÔNG bỏ publish gate/lock/transaction.
-# deep/full chạy khi lệnh chỉ định rõ; op verify riêng mặc định full.
+# QA SCOPE (docs/PROC-PUBLISH.md "QA modes" — SIMPLE PRODUCTION MODE):
+# prepare-next/qa/publish mặc định FAST = scoped consistency của đúng ids
+# đang làm (tx/lock sanity, uniques, checkpoint<->matrix, publish gate,
+# grounding staged ids khi publish). KHÔNG chạy full test-suite trên mỗi
+# micro-op. KHÔNG hạ ngưỡng QA, KHÔNG bỏ publish gate/lock/transaction.
+# deep = FAST + test-suite + capacity-check + editorial-audit; full = deep +
+# grounding toàn site + deterministic rebuild; op verify riêng mặc định full.
 #
 # FINAL-TREE VERIFY + SAFE PUSH (port pattern /blog): commit GITHUB_TOKEN
 # không kích hoạt push workflow khác, nên mutation được verify CHÍNH XÁC

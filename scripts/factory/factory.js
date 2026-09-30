@@ -300,6 +300,7 @@ function research(args){
   if(missing.length){console.error('research packet missing fields: '+missing.join(','));process.exit(1);}
   r.status='WRITING'; r.research_status='DONE';
   saveMatrix(rows);
+  syncCheckpoint(rows); // derived pointers always follow matrix truth (cheap, deterministic)
   console.log('RESEARCH PASS '+id);
 }
 function qa(args){
@@ -337,6 +338,7 @@ function qa(args){
     scorer:'factory-qa-deterministic-v1',score,words,result:r.status,
     fails, draft_sha256:require('crypto').createHash('sha256').update(html).digest('hex'),
     matrix_status_after:r.status},null,2));
+  syncCheckpoint(rows); // derived pointers always follow matrix truth (cheap, deterministic)
   console.log('QA '+id+' score='+score+' words='+words+' status='+r.status+(fails.length?' fails: '+fails.join('; '):''));
 }
 // ---- atomic publish: stage -> (build+verify, operator path) -> commit ----
@@ -560,7 +562,7 @@ function consistency(args){
   // ---- staged-aware contract (atomic publish verification window) ----
   // Normal mode keeps the production invariant untouched. Inside the STAGED
   // publish window the ONLY accepted active transaction is EXACTLY the
-  // in-flight publish tx (id + operation + phase + journal), and any declared
+  // in-flight publish tx (id + operation + phase + journal/ids), and any declared
   // staged ids must be part of that journal. This is never a blanket bypass:
   // any other active transaction still fails the check hard.
   let staged=null;
@@ -582,14 +584,35 @@ function consistency(args){
     }
     staged={tx,ids:want};
   }
+  // ---- scoped FAST contract (Simple Production Mode — vanchinh-style loop) ----
+  // `--ids A,B` / `--chunk` narrow the check to the CURRENT working scope:
+  // transaction/lock sanity, in-memory matrix uniqueness, checkpoint<->matrix
+  // pointer coherence and the selected ids' own invariants. NO full-site
+  // per-published-row sweep, NO test suite — those are DEEP/FULL/CI gates.
+  let scopedIds=null;
+  const ii=args.indexOf('--ids');
+  if(ii!==-1&&args[ii+1]&&args[ii+1]!=='--chunk'){
+    scopedIds=args[ii+1].split(',').map(s=>s.trim()).filter(Boolean);
+  } else if(args.includes('--chunk')){
+    // the operational current chunk = derived UNFINISHED rows (matrix truth);
+    // it must equal the checkpoint's active_chunk exactly (derived state).
+    scopedIds='CHUNK';
+  }
   const rows=loadMatrix();
   const groundedIds=((cfg.grounding||{}).required_ids)||[];
   const errors=[];
   const ids=new Set(),cans=new Set(),paths=new Set(),sl=new Set(),pks=new Set();
+  let scopedList=null;
+  if(scopedIds==='CHUNK'){
+    scopedList=rows.filter(r=>UNFINISHED.includes(r.status)).map(r=>r.article_id).sort();
+  } else if(Array.isArray(scopedIds)){
+    scopedList=scopedIds.slice();
+  }
   rows.forEach(r=>{
     [[ids,r.article_id],[cans,r.canonical],[paths,r.output_path],[sl,r.slug]].forEach(([s,v])=>{if(s.has(v))errors.push('dup '+v);s.add(v);});
     const pk=r.primary_keyword.toLowerCase();
     if(pks.has(pk))errors.push('dup primary_keyword '+r.primary_keyword);pks.add(pk);
+    if(scopedList) return; // FAST scoped mode: no per-published-row file sweep
     if(r.status==='PUBLISHED'){
       // Branch Pages: the public tree is the repository root (main / (root)).
       const f=path.join(ROOT,r.output_path.replace(/^\//,''),'index.html');
@@ -603,18 +626,60 @@ function consistency(args){
         else{
           if(ev.result!=='PASS') errors.push('QA evidence result='+ev.result+' for published '+r.article_id+' (must be PASS)');
           if(Number(ev.score||0)<rubric.pass_min) errors.push('QA evidence score='+ev.score+' < '+rubric.pass_min+' for published '+r.article_id);
-          if(!ev.draft_sha256) errors.push('QA evidence missing draft_sha256 for '+r.article_id);
+          if(!ev.draft_sha256) errors.push('QA evidence missing draft_sha256 for published '+r.article_id);
           else if(sha256Of(a)!==ev.draft_sha256) errors.push('QA_EVIDENCE_STALE for '+r.article_id+' — archive sha256 != evidence draft_sha256 (archive changed after scoring; run qa-repair, never fake the hash)');
         }
       }
     }
   });
+  if(scopedList){
+    // ---- FAST scoped contract: selected ids + checkpoint coherence ----
+    const byId={};rows.forEach(r=>byId[r.article_id]=r);
+    const tx=readTx(); // scoped (non-staged) mode runs outside any tx window
+    if(tx.active){ errors.push('scoped consistency refused: active transaction '+tx.id+' (op='+tx.operation+') — run recover first'); }
+    for(const id of scopedList){
+      const r=byId[id];
+      if(!r){ errors.push('scoped id not in matrix: '+id); continue; }
+      if(scopedIds==='CHUNK'&&r.status==='PUBLISHED') errors.push('chunk id already PUBLISHED but still in the unfinished set: '+id);
+      if(r.status==='PUBLISHED'){ // published ids in scope keep their hard invariants
+        const f=path.join(ROOT,r.output_path.replace(/^\//,''),'index.html');
+        if(!fs.existsSync(f))errors.push('PUBLISHED but no public file: '+r.output_path);
+        const a=path.join(ROOT,'data','published',r.article_id+'.html');
+        if(!fs.existsSync(a))errors.push('PUBLISHED but no archive: '+r.article_id);
+      }
+    }
+    // checkpoint <-> matrix pointer coherence (derived state must match truth)
+    const ckPath=path.join(STATE,'checkpoint.json');
+    let ck=null;
+    try{ ck=JSON.parse(fs.readFileSync(ckPath,'utf8')); }
+    catch(e){ errors.push('checkpoint unreadable: '+e.message); }
+    if(ck){
+      const prog=progressOf(rows);
+      if(Number(ck.published_count)!==prog.published_count)errors.push('checkpoint published_count '+ck.published_count+' != matrix '+prog.published_count);
+      if(String(ck.last_completed_id||'')!==String(prog.last_completed_id||''))errors.push('checkpoint last_completed_id '+ck.last_completed_id+' != matrix '+prog.last_completed_id);
+      if(String(ck.next_claimable_id||'')!==String(prog.next_claimable_id||''))errors.push('checkpoint next_claimable_id '+ck.next_claimable_id+' != matrix '+prog.next_claimable_id);
+      const ckActive=(ck.active_chunk||[]).slice().sort();
+      const derivedActive=prog.active_chunk.slice().sort();
+      if(JSON.stringify(ckActive)!==JSON.stringify(derivedActive))errors.push('checkpoint active_chunk ['+ckActive.join(',')+'] != matrix unfinished ['+derivedActive.join(',')+']');
+    }
+    if(scopedIds==='CHUNK'){
+      const lock=lockState();
+      if(lock.held)errors.push('scoped consistency refused: writer lock held by '+lock.raw.holder+' — run recover');
+    }
+  }
   if(staged){
     const byId={};rows.forEach(r=>byId[r.article_id]=r);
+    const sitemapShards=fs.readdirSync(ROOT).filter(f=>/^sitemap-.*\.xml$/.test(f)&&f!=='sitemap-index.xml');
     for(const id of staged.ids){
       const r=byId[id];
       if(!r||r.status!=='PUBLISHED')errors.push('staged id not PUBLISHED in staged matrix: '+id);
       if(!fs.existsSync(path.join(ROOT,'_drafts',id+'.html')))errors.push('staged draft missing pre-commit (drafts are removed only by publishCommit): '+id);
+      // staged public/index/sitemap sanity: the staged canonical must already be
+      // in a sitemap shard (build-site regenerates them inside the staged window)
+      if(r&&!sitemapShards.some(f=>fs.readFileSync(path.join(ROOT,f),'utf8').includes(r.canonical)))
+        errors.push('staged canonical not present in any sitemap shard: '+r.canonical);
+      if(r&&!fs.existsSync(path.join(ROOT,r.output_path.replace(/^\//,''),'index.html')))
+        errors.push('staged public root page missing: '+r.output_path);
       const ev=qaEvidence(id);
       if(!ev)errors.push('staged id without QA evidence: '+id);
       else{
@@ -630,8 +695,15 @@ function consistency(args){
   // staging tree (site/) or a .gitignore that no longer keeps _drafts/ out.
   if(fs.existsSync(path.join(ROOT,'site','_drafts')))draftLeak.push('drafts inside site/ staging tree — would be promoted to the public root!');
   if(!/(^|\n)_drafts\//.test(fs.readFileSync(path.join(ROOT,'.gitignore'),'utf8')))draftLeak.push('.gitignore no longer excludes _drafts/ — drafts would become public!');
-  console.log(errors.length?'CONSISTENCY FAIL\n'+errors.join('\n'):'CONSISTENCY PASS: '+rows.length+' rows, all unique, no leaks.');
-  process.exitCode = errors.length||draftLeak.length?1:0;
+  if(errors.length){
+    console.error((staged?'CONSISTENCY FAIL (staged verify)\n':scopedList?'CONSISTENCY FAIL (scoped: '+scopedList.join(',')+')\n':'CONSISTENCY FAIL\n')+errors.join('\n'));
+    process.exitCode=1;
+  } else {
+    console.log(staged?'CONSISTENCY PASS (staged verify): '+staged.ids.join(', ')
+      :scopedList?'CONSISTENCY PASS (scoped: '+scopedList.join(',')+') — selected ids + checkpoint/matrix coherence OK'
+      :'CONSISTENCY PASS: '+rows.length+' rows, all unique, no leaks.');
+  }
+  if(draftLeak.length){ console.error(draftLeak.join('\n')); process.exitCode=1; }
 }
 // Re-score a PUBLISHED article's durable archive (content repair path).
 // Deterministic: same scoring rules as qa(), but the scored artifact is the

@@ -21,3 +21,12 @@
 
 Rules: no copying competitors; original writing only; packets are committed
 to the repository (data/research/) as evidence.
+
+Research depth follows the row's REAL requirement in the matrix — do not
+turn every article into legal research:
+- Low-risk evergreen rows (`requires_research=0`,
+  `requires_official_sources=0`): light research per this contract is enough.
+- `requires_official_sources=1` rows: current official sources are
+  MANDATORY (step 4).
+- Quantitative/current claims: grounding evidence is MANDATORY
+  (`factory.js grounding`). Factual safety is never lowered.
