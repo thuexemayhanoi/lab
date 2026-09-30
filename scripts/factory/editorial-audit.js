@@ -10,7 +10,7 @@
  *   UX / SCANNABILITY                      10
  *   TECHNICAL / SCHEMA / META               5
  * This editorial score is a tracking aid, NOT a replacement for the canonical
- * factory QA gate (factory.js qa — pass >= 90). It never mutates matrix/state.
+ * factory QA gate (factory.js qa — pass >= rubric pass_min). It never mutates matrix/state.
  * Usage: node scripts/factory/editorial-audit.js [--out reports/editorial/audit.json]
  */
 'use strict';

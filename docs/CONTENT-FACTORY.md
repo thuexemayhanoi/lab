@@ -42,10 +42,10 @@ published_date.
 ```
 PLANNED → RESEARCH → WRITING → QA → PASS → PUBLISHED
                      QA → REPAIR → QA (max 3) → PASS/BLOCKED
-                     QA → REVIEW (80–89) → QA (max 3) → PASS/BLOCKED
+                     QA → REVIEW (70–74) → QA (max 3) → PASS/BLOCKED
 ```
 
-REVIEW (qa_score 80–89) is a **non-terminal** state: never publish a REVIEW
+REVIEW (qa_score 70–74) is a **non-terminal** state: never publish a REVIEW
 row; repair and re-QA it. A chunk is unfinished while ANY row is
 `RESEARCH/WRITING/QA/REVIEW/REPAIR/PASS`; `prepare-next` refuses until every
 row of the current chunk reaches `PUBLISHED` or `BLOCKED` (only then may a

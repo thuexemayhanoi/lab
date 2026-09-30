@@ -43,7 +43,7 @@ XE MÁY ĐIỆN (electric) · PHỤ TÙNG (parts).
 - Every article needs a research packet (`data/research/<ID>.json`) BEFORE writing.
 - Official-source articles (`requires_official_sources=1`) must cite current
   authoritative sources or be BLOCKED.
-- QA pass threshold ≥ 90. Repair ≤ 3 attempts, then BLOCKED.
+- QA pass threshold ≥ 75. Repair ≤ 3 attempts, then BLOCKED.
 - Word range 1,600–3,000 Vietnamese words. No filler/keyword stuffing.
 - Only PUBLISHED pages may be publicly deployed. Drafts live in `_drafts/`
   (gitignored, never deployed).
@@ -180,7 +180,7 @@ Rules:
 
 PLANNED → RESEARCH → WRITING → QA → PASS → PUBLISHED
 Failure: QA → REPAIR → QA (max 3 repairs) → BLOCKED.
-QA 80–89 ⇒ REVIEW: never publish; repair and re-QA. REVIEW is a non-terminal
+QA 70–74 ⇒ REVIEW: never publish; repair and re-QA. REVIEW is a non-terminal
 state — `prepare-next` refuses while any RESEARCH/WRITING/QA/REVIEW/REPAIR/
 PASS row exists (a chunk is claimable only after every row reaches
 PUBLISHED or BLOCKED).

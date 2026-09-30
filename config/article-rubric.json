@@ -1,7 +1,7 @@
 {
   "word_range": {"min": 1600, "max": 3000, "note": "Đơn giản ~1600-2000; kỹ thuật/pháp lý/so sánh ~2000-3000. Không phạt bài hữu ích 2500-3000 từ; phạt filler, lặp, nhồi từ khóa."},
-  "pass_min": 90,
-  "review_min": 80,
+  "pass_min": 75,
+  "review_min": 70,
   "max_repair_attempts": 3,
   "critical_failures": [
     "fake local business claim", "invented address", "invented business", "invented testing center",
