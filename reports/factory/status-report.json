@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T16:51:47.273Z",
+  "generated_at": "2026-10-01T17:02:48.322Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 65,
-    "PLANNED": 9935
+    "PUBLISHED": 67,
+    "PLANNED": 9933
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 59,
-      "PLANNED": 4941
+      "PUBLISHED": 61,
+      "PLANNED": 4939
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00057",
-  "next_claimable_id": "A00058",
+  "last_completed_id": "A00059",
+  "next_claimable_id": "A00060",
   "blocked": [],
   "published": [
     {
@@ -382,6 +382,18 @@
       "pk": "thuê xe máy gần Sân bay quốc tế Phú Quốc",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-phu-quoc/"
+    },
+    {
+      "id": "A00058",
+      "pk": "thuê xe máy gần Ga Hà Nội",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ga-ha-noi/"
+    },
+    {
+      "id": "A00059",
+      "pk": "thuê xe máy gần Ga Sài Gòn",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ga-sai-gon/"
     },
     {
       "id": "A00097",
