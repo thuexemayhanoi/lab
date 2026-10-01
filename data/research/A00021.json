@@ -1,0 +1,146 @@
+{
+  "article_id": "A00021",
+  "primary_keyword": "thuê xe máy Nghệ An",
+  "secondary_keywords": [
+    "cho thuê xe máy Nghệ An",
+    "thuê xe máy Vinh",
+    "thuê xe máy Cửa Lò",
+    "thuê xe máy gần sân bay Vinh"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Nghệ An",
+    "thành phố Vinh",
+    "Cửa Lò",
+    "quảng trường Hồ Chí Minh",
+    "sân bay Vinh",
+    "ga Vinh",
+    "biển Cửa Lò",
+    "Nghi Sơn",
+    "Quỳnh Lưu"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe dưới 50cc"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Jupiter",
+    "Dream"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Vinh giá bao nhiêu một ngày?",
+    "đi biển Cửa Lò thuê xe máy ở đâu, giá thế nào?",
+    "thuê xe máy tại Vinh cần giấy tờ gì, đặt cọc bao nhiêu?",
+    "có nên thuê xe máy từ Vinh đi Cửa Lò không?",
+    "mùa hè và dịp lễ giá thuê xe máy ở Nghệ An có tăng không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Vinh",
+    "cho thuê xe máy tự lái Vinh giao tận nơi",
+    "thuê xe máy Vinh đi Cửa Lò",
+    "kinh nghiệm du lịch Vinh Cửa Lò bằng xe máy"
+  ],
+  "serp_patterns": "SERP gồm nền tảng đặt thuê xe vận tải (vexere có trang riêng cho TP Vinh với bảng giá theo mùa), danh sách cửa hàng của motogo.vn (địa chỉ + giá công khai từng cơ sở), cẩm nang du lịch Cửa Lò của dulichgiatot; thị trường tập trung ở TP Vinh, dịch vụ giao xe tận nơi phổ biến, giá theo ngày, phân tầng xe số/xe ga.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-vinh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng giá các đơn vị cho thuê xe máy tại TP Vinh theo mùa (ngày thường, lễ 30/4-1/5, Tết), điều khoản đặt cọc và giới hạn quãng đường"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-o-vinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng giá xe số/xe ga của các cơ sở cho thuê tại TP Vinh kèm địa chỉ"
+    },
+    {
+      "source_url": "https://dulichgiatot.com.vn/kinh-nghiem-thue-xe-may-tham-quan-o-cua-lo.html",
+      "source_domain": "dulichgiatot.com.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "mặt bằng giá thuê xe máy tại Cửa Lò và cảnh báo bị độn giá mùa cao điểm"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-thanh-hoa/",
+    "/lab/thue-xe-may/thue-xe-may-quang-ninh/",
+    "/lab/kinh-nghiem/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/",
+    "/lab/cuu-ho-xe-may/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-nghe-an: nhóm gốc cấp tỉnh. Các intent hẹp hơn (Cửa Lò, sân bay Vinh, Quỳnh Lưu…) chưa có row riêng trong phân bổ hiện tại; bài này giữ vai trò tổng quan thị trường tỉnh — giá theo khu vực (Vinh, Cửa Lò), giấy tờ, cọc — và chỉ nhắc POI ở mức định hướng lịch trình, không lấn intent POI.",
+  "unique_angle": "Bài tỉnh gốc cho thị trường có cấu trúc 'trung tâm tỉnh + bãi biển gần': Vinh là nơi dense cửa hàng nhất, Cửa Lò là điểm thuê theo mùa hè; góc viết là 'chọn điểm nhận xe theo hành trình' — khách bay vào sân bay Vinh hoặc đi tàu thì nhận xe ở trung tâm Vinh, khách nghỉ biển thì thuê tại lưu trú Cửa Lò — kèm lưu ý giá mùa cao điểm và quy định cọc/giữ giấy tờ của các đơn vị.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; các mức giá chỉ dẫn theo nguồn công khai (vexere, motogo, dulichgiatot). Nghệ An không đổi sau sắp xếp hành chính 2025 (legacy-names LG-027 UNCHANGED, geo VN-021 CURRENT). Thành phố Vinh là locality đã verify (LC-045 CURRENT). Cửa Lò là thị xã biển ven TP Vinh — chỉ nêu như POI du lịch, không kèm số liệu chưa verify. Sân bay Vinh, ga Vinh là hạ tầng nổi tiếng phổ biến, không kèm claim định lượng.",
+  "claim_evidence": [
+    {
+      "claim": "Các đơn vị cho thuê xe máy trên nền tảng Vexere tại TP Vinh niêm yết giá ngày thường từ 110.000đ đến 200.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-vinh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Trang liệt kê các đơn vị tại Thành phố Vinh với giá «từ 110.000 đ», «từ 120.000 đ», «từ 130.000 đ», «từ 150.000 đ», «từ 170.000 đ», «từ 180.000 đ», «từ 200.000 đ» (ngày thường) — tức 110.000đ, 120.000đ, 130.000đ, 150.000đ, 170.000đ, 180.000đ, 200.000đ/ngày."
+    },
+    {
+      "claim": "Dịp lễ 30/4-1/5, giá tại các đơn vị này tăng lên khoảng 150.000đ–250.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-vinh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá theo mùa ghi «Lễ 30/4-1/5» lần lượt 150.000đ, 130.000đ, 180.000đ, 250.000đ cho các đơn vị có ngày thường 110.000đ, 120.000đ, 170.000đ, 180.000đ."
+    },
+    {
+      "claim": "Điều khoản chung của nhiều đơn vị: đặt cọc 500k–1000k/xe (tức 500.000đ–1.000.000đ) và giữ CCCD hoặc hộ chiếu",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-vinh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Các điều khoản ghi «Cọc 500k/xe và giữ lại CCCD hoặc Passport», «Chụp hình CCCD và Cọc 500k/xe», «Cọc 1000k/xe và giữ lại CCCD hoặc Passport»."
+    },
+    {
+      "claim": "Một số đơn vị tại Vinh giới hạn quãng đường chạy dưới 110km mỗi ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-vinh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điều khoản ghi «* Vui lòng chỉ sử dụng xe trong phạm vi Dưới 110km/ngày»."
+    },
+    {
+      "claim": "Các cơ sở cho thuê tại TP Vinh niêm yết xe số 80.000đ–120.000đ/ngày, xe ga 120.000đ–160.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-o-vinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá các cơ sở tại Vinh: «Giá thuê xe số: 80.000đ – 100.000đ/ngày; Giá thuê xe ga: 130.000đ – 140.000đ/ngày», cơ sở khác «80.000đ – 120.000đ/ngày; xe ga 120.000đ -160.000đ/ngày», cơ sở «xe số 90.000đ – 120.000đ/ngày; xe ga 140.000đ – 150.000đ/ngày»."
+    },
+    {
+      "claim": "Có đơn vị tại Vinh cho thuê chỉ từ 80.000đ/ngày, đơn vị khác từ 100.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-o-vinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Gía thuê xe tại đây chỉ từ 100k/ngày» (đơn vị gần trung tâm, hỗ trợ giao nhận xe tận nơi) và «Nơi đây cung cấp những dòng xe với giá chỉ từ 80k/ngày» — tức 100.000đ/ngày và 80.000đ/ngày."
+    },
+    {
+      "claim": "Tại Cửa Lò, giá thuê xe máy dao động 150.000đ–200.000đ/ngày",
+      "source_url": "https://dulichgiatot.com.vn/kinh-nghiem-thue-xe-may-tham-quan-o-cua-lo.html",
+      "source_domain": "dulichgiatot.com.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê xe máy tại Cửa Lò dao động từ 150k – 200k/ngày» — tức 150.000đ–200.000đ/ngày; bài cũng khuyên chọn địa điểm uy tín để tránh bị độn giá vào mùa cao điểm."
+    },
+    {
+      "claim": "Hầu hết các điểm lưu trú tại Cửa Lò có dịch vụ cho thuê xe máy",
+      "source_url": "https://dulichgiatot.com.vn/kinh-nghiem-thue-xe-may-tham-quan-o-cua-lo.html",
+      "source_domain": "dulichgiatot.com.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Hầu hết tại tất cả các địa điểm lưu trú ở Cửa Lò đều có dịch vụ cho thuê xe máy.»"
+    }
+  ]
+}

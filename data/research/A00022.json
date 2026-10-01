@@ -1,0 +1,147 @@
+{
+  "article_id": "A00022",
+  "primary_keyword": "thuê xe máy Hà Tĩnh",
+  "secondary_keywords": [
+    "cho thuê xe máy Hà Tĩnh",
+    "thuê xe máy thành phố Hà Tĩnh",
+    "thuê xe máy Hà Tĩnh giao tận nơi",
+    "thuê xe máy Kỳ Anh Vũng Áng"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Hà Tĩnh",
+    "thành phố Hà Tĩnh",
+    "Hồng Lĩnh",
+    "Nghi Xuân",
+    "Cẩm Xuyên",
+    "biển Thiên Cầm",
+    "Kỳ Anh",
+    "Vũng Áng",
+    "hồ Trại Tiểu",
+    "quốc lộ 1A"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe tay côn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Attila",
+    "Jupiter",
+    "Nouvo"
+  ],
+  "questions_found": [
+    "thuê xe máy ở thành phố Hà Tĩnh giá bao nhiêu một ngày?",
+    "thuê xe máy Hà Tĩnh cần giấy tờ gì?",
+    "đi biển Thiên Cầm, Vũng Áng nên thuê xe ở đâu?",
+    "thuê xe máy Hà Tĩnh theo tuần, theo tháng có giảm giá không?",
+    "khách sạn ở Hà Tĩnh có cho thuê xe máy không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Hà Tĩnh",
+    "cho thuê xe máy tự lái thành phố Hà Tĩnh",
+    "thuê xe máy Hà Tĩnh đi Thiên Cầm",
+    "kinh nghiệm du lịch Hà Tĩnh tự túc"
+  ],
+  "serp_patterns": "SERP gồm danh sách cửa hàng của motogo.vn (địa chỉ + bảng giá từng cơ sở), danh sách của dulichhatinh.com.vn (gồm cả dịch vụ cho thuê tại khách sạn), 2trip.vn (toplist cửa hàng kèm mức giá từng đơn vị, có chính sách giảm giá thuê dài hạn); thị trường tập trung ở thành phố Hà Tĩnh, mở rộng dọc xuống Cẩm Xuyên (Thiên Cầm) và Kỳ Anh (Vũng Áng); giá rẻ hơn mặt bằng các điểm du lịch phía Bắc.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-ha-tinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng giá xe số/xe ga của các cơ sở cho thuê tại thành phố Hà Tĩnh, Nghi Xuân, Kỳ Anh kèm địa chỉ"
+    },
+    {
+      "source_url": "https://dulichhatinh.com.vn/tin-tuc/thue-xe-may-ha-tinh/",
+      "source_domain": "dulichhatinh.com.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "dịch vụ cho thuê xe máy tại khách sạn Hà Tĩnh với các dòng xe phổ thông và giá tham khảo"
+    },
+    {
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-ha-tinh",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "mức giá từng đơn vị cho thuê tại Hà Tĩnh và chính sách ưu đãi thuê dài hạn, phụ phí khách ngoài lưu trú"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-nghe-an/",
+    "/lab/thue-xe-may/thue-xe-may-thanh-hoa/",
+    "/lab/kinh-nghiem/",
+    "/lab/sua-xe-may/bao-duong-xe-may-dinh-ky/",
+    "/lab/cuu-ho-xe-may/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-ha-tinh: nhóm gốc cấp tỉnh. Các intent hẹp hơn (Thiên Cầm, Vũng Áng, Hồng Lĩnh…) chưa có row riêng; bài này giữ vai trò tổng quan thị trường tỉnh — giá theo khu vực (thành phố Hà Tĩnh, Cẩm Xuyên, Kỳ Anh), giấy tờ, cọc, thuê dài hạn — và chỉ nhắc POI ở mức định hướng lịch trình, không lấn intent POI.",
+  "unique_angle": "Bài tỉnh gốc cho thị trường 'tỉnh du lịch giá rẻ': mặt bằng giá thấp hơn hẳn các điểm du lịch phía Bắc, nhiều cơ sở hỗ trợ giảm giá thuê dài hạn và khách sạn kiêm cho thuê xe; góc viết là 'chọn đơn vị theo độ dài chuyến đi' — đi lại trong nội thành phố Hà Tĩnh thì chọn cửa hàng gần trung tâm kèm giao xe, đi Thiên Cầm/Vũng Áng thì ưu tiên thuê tại nơi lưu trú hoặc chốt giá tuần để được ưu đãi.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; các mức giá chỉ dẫn theo nguồn công khai (motogo, dulichhatinh, 2trip). Hà Tĩnh không đổi sau sắp xếp hành chính 2025 (legacy-names LG-028 UNCHANGED, geo VN-022 CURRENT). Thành phố Hà Tĩnh là locality đã verify; Kỳ Anh ghi là LEGACY_SEARCH (LC-040, tên cũ vẫn được tìm kiếm phổ biến). Biển Thiên Cầm, Vũng Áng chỉ nêu như POI du lịch nổi tiếng, không kèm claim định lượng chưa verify. Đường Hà Huy Tập, đường 26/3 là địa chỉ cửa hàng theo nguồn.",
+  "claim_evidence": [
+    {
+      "claim": "Các cơ sở cho thuê xe máy tại thành phố Hà Tĩnh niêm yết xe số 80.000đ–120.000đ/ngày, xe ga 120.000đ–160.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-tinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá các cơ sở: «Giá thuê xe số: 80.000đ – 100.000đ/ngày; Giá thuê xe ga: 130.000đ – 140.000đ/ngày» (255 Đường Hà Huy Tập; số nhà 7 đường 26/3), «80.000đ – 120.000đ/ngày; xe ga 120.000đ -160.000đ/ngày» (Nghi Xuân), «90.000đ – 120.000đ/ngày; xe ga 140.000đ – 150.000đ/ngày» (352 Hà Huy Tập)."
+    },
+    {
+      "claim": "Tại Kỳ Anh có cơ sở cho thuê xe số 100.000đ/ngày, xe ga 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-tinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cơ sở tại «Kỳ Phong, Kỳ Anh, Hà Tĩnh» ghi «Giá thuê xe số: 100.000đ/ngày; Giá thuê xe ga: 150.000đ/ngày»."
+    },
+    {
+      "claim": "Mức giá chung khi thuê xe máy tại Hà Tĩnh khoảng 80.000đ–150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-tinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê xe tại đây tương đối hợp lý, chỉ khoảng 80.000đ – 150.000đ/ngày» và «Chỉ cần bỏ ra từ 80.000đ/ngày là bạn đã thuê ngay được một chiếc xe máy tốt»."
+    },
+    {
+      "claim": "Khách sạn và điểm lưu trú tại Hà Tĩnh cung cấp xe ga (Vision, Air Blade, Attila) và xe số (Sirius, Nouvo, Jupiter) với giá dao động 80.000đ–150.000đ/ngày",
+      "source_url": "https://dulichhatinh.com.vn/tin-tuc/thue-xe-may-ha-tinh/",
+      "source_domain": "dulichhatinh.com.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Bạn có thể chọn các dòng tay ga nhẹ nhàng như Vision, Air-black, Attila,… hay các dòng xe số, thể thao như Sirius, Nouvo, Jupiter,… Giá thuê dao động từ 80.000 – 150.000đ/ngày.» — tức 80.000đ–150.000đ/ngày."
+    },
+    {
+      "claim": "Giá thuê xe máy tại Hà Tĩnh nhìn chung rẻ hơn các điểm du lịch phía Bắc như Ninh Bình",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-ha-tinh",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Nhìn chung giá cho thuê xe máy tại Hà Tĩnh rẻ hơn hẳn so với thuê xe máy Ninh Bình.»"
+    },
+    {
+      "claim": "Mặt bằng giá các đơn vị cho thuê xe máy tại Hà Tĩnh dao động 80.000đ–200.000đ/ngày tùy dòng xe",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-ha-tinh",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Hồng Nghị cung cấp hệ thống xe vô cùng đa dạng… Giá thuê cho các dòng xe số sẽ dao động từ 80.000đ – 120.000đ/xe/ngày. Còn đối với dòng xe tay ga và tay con giá thuê sẽ cao hơn chút khoảng 120.000đ – 200.000đ/xe/ngày» và tổng quan «giá thuê cũng rất phải chăng chỉ từ 80.000đ – 200.000đ/xe»."
+    },
+    {
+      "claim": "Thuê xe máy dài hạn tại Hà Tĩnh có thể được giảm 10.000đ–25.000đ/xe/ngày",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-ha-tinh",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Đức Hùng chuyên cho thuê những dòng xe máy bình dân và phổ biến như Honda Wave, Yamaha Sirius, Jupiter, Nouvo,… Với giá thuê đối với các dòng này cực rẻ chỉ từ 80.000đ/ngày. Tuy nhiên, nếu bạn thuê xe trong thời gian dài thì sẽ được tính theo giá ưu đãi hơn. Có thể giảm từ 10.000đ – 25.000đ/xe/ngày.»"
+    },
+    {
+      "claim": "Một số khách sạn tại Hà Tĩnh tính giá thuê cao hơn khoảng 10.000đ–20.000đ cho khách không lưu trú",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-ha-tinh",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«khách sạn vẫn chấp nhận cho khách hàng ở ngoài thuê nhưng với chi phí sẽ cao hơn khoảng 10.000đ – 20.000đ.»"
+    }
+  ]
+}
