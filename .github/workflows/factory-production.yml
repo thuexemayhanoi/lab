@@ -1,0 +1,201 @@
+name: Factory production
+
+# XƯỞNG SẢN XUẤT ĐƠN GIẢN — mô hình /vanchinh cho /lab.
+# Writer ngoài (Mistral) chỉ cần push CẶP BÀI vào _drafts/ (wrapped
+# _drafts/<ID>.html + _drafts/<ID>.body.html + data/research/<ID>.json),
+# workflow tự hoàn tất: select EXACT ID → recover → claim → research →
+# QA (ngưỡng 75/70 KHÔNG đổi, config/article-rubric.json) → publish
+# CHỈ hàng PASS (atomic stage → build → staged verify) → smoke nhẹ →
+# 1 commit duy nhất → assert trạng thái sạch.
+#
+# KHÔNG full-site audit, KHÔNG soak, KHÔNG test-suite trong hot loop —
+# publish op đã verify staged nội bộ; smoke chỉ là scoped consistency
+# + liveness. Commit publish xoá draft (diff D-only) → lần trigger
+# kế tiếp push-selection trả mode=skip → exit 0 sạch, không vòng lặp.
+#
+# Writer loop (không đổi): next_claimable_id (checkpoint) → research
+# packet → body → node scripts/factory/wrap-drafts.js → push.
+# Repair: sửa _drafts/<ID>.body.html → wrap → push lại (mode=repair).
+
+on:
+  push:
+    branches: [main]
+    paths: ['_drafts/**']
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'status | recover | diagnostics'
+        required: true
+        type: string
+
+concurrency:
+  group: lab-factory-production
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: github.repository == 'thuexemayhanoi/lab'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ACTION: ${{ inputs.action || 'push' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Chọn phạm vi push (EXACT ID từ _drafts/ vừa push)
+        id: select
+        if: github.event_name == 'push'
+        run: |
+          set -eu -o pipefail
+          git diff --name-only --diff-filter=A HEAD~1 HEAD -- _drafts/ > /tmp/added.txt || true
+          git diff --name-only --diff-filter=M HEAD~1 HEAD -- _drafts/ > /tmp/modified.txt || true
+          echo "drafts added: $(wc -l < /tmp/added.txt || echo 0), modified: $(wc -l < /tmp/modified.txt || echo 0)"
+          code=0
+          node scripts/factory/push-selection.js --added /tmp/added.txt --modified /tmp/modified.txt | tee /tmp/selection.json || code=$?
+          if [ "$code" = "3" ]; then
+            echo "::error::push REFUSED (vi phạm hợp đồng draft — xem log push-selection). KHÔNG có gì được claim/QA/publish."
+            exit 3
+          fi
+          if [ "$code" != "0" ]; then
+            echo "::error::push-selection FAIL (exit $code)"
+            exit "$code"
+          fi
+          node <<'EOF'
+          const fs = require('fs');
+          const sel = JSON.parse(fs.readFileSync('/tmp/selection.json', 'utf8').split('\n')[0]);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,
+            'proceed=' + String(sel.proceed).toLowerCase() + '\n' +
+            'mode=' + sel.mode + '\n' +
+            'claim_ids=' + sel.claim_ids.join(',') + '\n' +
+            'qa_ids=' + sel.qa_ids.join(',') + '\n');
+          const label = sel.mode === 'skip' ? 'skip-noop'
+            : 'push-' + sel.mode + '-' + (sel.claim_ids.concat(sel.qa_ids).join(',') || 'none');
+          fs.appendFileSync(process.env.GITHUB_ENV, 'COMMIT_LABEL=' + label + '\n');
+          console.log('selection: mode=' + sel.mode + ' claim=' + sel.claim_ids.join(',') + ' qa=' + sel.qa_ids.join(','));
+          if (sel.mode === 'paused') console.log('production-control: enabled=false — DỪNG SẠCH trước khi claim.');
+          EOF
+
+      - name: Bảo trì (dispatch: status | recover | diagnostics)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          set -eu
+          case "$ACTION" in
+            status)      node scripts/factory/factory.js status ;;
+            recover)     node scripts/factory/operator.js recover ;;
+            diagnostics) node scripts/factory/factory.js consistency
+                          node scripts/factory/liveness-watchdog.js || true ;;
+            *) echo "::error::action không hỗ trợ: $ACTION (chỉ status|recover|diagnostics)"; exit 1 ;;
+          esac
+
+      - name: Recover transaction nếu treo (trước mọi op mutating; FAIL-CLOSED)
+        if: github.event_name == 'push' && steps.select.outputs.proceed == 'true'
+        run: node scripts/factory/operator.js recover
+
+      - name: Claim EXACT ID vừa push (KHÔNG claim hàng PLANNED khác)
+        if: github.event_name == 'push' && steps.select.outputs.proceed == 'true' && steps.select.outputs.claim_ids != ''
+        run: node scripts/factory/operator.js prepare-next --ids "${{ steps.select.outputs.claim_ids }}" --scope fast
+
+      - name: Research các row RESEARCH trong scope (packet đã push cùng draft)
+        if: github.event_name == 'push' && steps.select.outputs.proceed == 'true' && steps.select.outputs.qa_ids != ''
+        env:
+          QA_IDS: ${{ steps.select.outputs.qa_ids }}
+        run: |
+          set -eu
+          RESEARCH_IDS=$(node <<'EOF'
+          const fs = require('fs');
+          const dir = 'data';
+          const parts = fs.readdirSync(dir).filter(f => /^content-matrix\.csv\.part/.test(f)).sort();
+          let text = parts.length ? parts.map(p => fs.readFileSync(dir + '/' + p, 'utf8')).join('') : '';
+          if (!text) text = fs.readFileSync('data/content-matrix.csv', 'utf8');
+          const lines = text.split('\n');
+          const H = lines[0].split(',');
+          const iI = H.indexOf('article_id'), sI = H.indexOf('status');
+          const want = new Set((process.env.QA_IDS || '').split(',').filter(Boolean));
+          const ids = [];
+          for (const l of lines.slice(1)) { if (!l.trim()) continue; const c = l.split(','); if (want.has(c[iI]) && c[sI] === 'RESEARCH') ids.push(c[iI]); }
+          console.log(ids.join(','));
+          EOF
+          )
+          if [ -n "$RESEARCH_IDS" ]; then
+            node scripts/factory/operator.js research --ids "$RESEARCH_IDS" --scope fast
+          else
+            echo "không có row RESEARCH trong scope (repair push hoặc đã research xong)"
+          fi
+
+      - name: QA scope fast (ngưỡng PASS>=75 / REVIEW 70-74 KHÔNG đổi)
+        if: github.event_name == 'push' && steps.select.outputs.proceed == 'true' && steps.select.outputs.qa_ids != ''
+        run: node scripts/factory/operator.js qa --ids "${{ steps.select.outputs.qa_ids }}" --scope fast
+
+      - name: Publish CHỈ hàng PASS (atomic stage → build → staged verify)
+        if: github.event_name == 'push' && steps.select.outputs.proceed == 'true' && steps.select.outputs.qa_ids != ''
+        env:
+          QA_IDS: ${{ steps.select.outputs.qa_ids }}
+        run: |
+          set -eu
+          PASS_IDS=$(node <<'EOF'
+          const fs = require('fs');
+          const dir = 'data';
+          const parts = fs.readdirSync(dir).filter(f => /^content-matrix\.csv\.part/.test(f)).sort();
+          let text = parts.length ? parts.map(p => fs.readFileSync(dir + '/' + p, 'utf8')).join('') : '';
+          if (!text) text = fs.readFileSync('data/content-matrix.csv', 'utf8');
+          const lines = text.split('\n');
+          const H = lines[0].split(',');
+          const iI = H.indexOf('article_id'), sI = H.indexOf('status');
+          const want = new Set((process.env.QA_IDS || '').split(',').filter(Boolean));
+          const ids = [];
+          for (const l of lines.slice(1)) { if (!l.trim()) continue; const c = l.split(','); if (want.has(c[iI]) && c[sI] === 'PASS') ids.push(c[iI]); }
+          console.log(ids.join(','));
+          EOF
+          )
+          if [ -n "$PASS_IDS" ]; then
+            node scripts/factory/operator.js publish --ids "$PASS_IDS" --scope fast
+          else
+            echo "không có hàng PASS trong lần QA này — hàng REPAIR chờ writer sửa draft rồi push lại (repair push)"
+          fi
+
+      - name: Light smoke (scoped consistency + liveness — KHÔNG full verify)
+        if: github.event_name == 'push' && steps.select.outputs.proceed == 'true'
+        run: |
+          set -eu
+          node scripts/factory/factory.js consistency --ids "${{ steps.select.outputs.qa_ids }}"
+          code=0
+          node scripts/factory/liveness-watchdog.js || code=$?
+          if [ "$code" != "0" ] && [ "$code" != "2" ]; then
+            echo "::error::liveness watchdog FAIL (exit $code)"
+            exit 1
+          fi
+          echo "liveness watchdog exit $code (0 = PASS, 2 = WARN hygiene)"
+
+      - name: Commit + push (1 commit duy nhất, KHÔNG force push)
+        if: github.event_name == 'push' && steps.select.outputs.proceed == 'true'
+        run: |
+          set -eu
+          git config user.name "factory-operator-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "không có gì để commit"
+            exit 0
+          fi
+          git commit -m "factory-production: ${COMMIT_LABEL:-$ACTION} (deterministic outputs of canonical tooling only)"
+          git push
+
+      - name: Xác nhận trạng thái sạch (txn inactive, lock free)
+        if: github.event_name == 'push' && steps.select.outputs.proceed == 'true'
+        run: |
+          set -eu
+          node -e 'const fs=require("fs");
+          const t=JSON.parse(fs.readFileSync("data/state/transaction.json","utf8"));
+          const l=JSON.parse(fs.readFileSync("data/state/writer-lock.json","utf8"));
+          if (t.active) { console.error("txn còn active:", t.id, t.operation); process.exit(1); }
+          if (l.locked) { console.error("writer lock còn held:", l.holder); process.exit(1); }
+          console.log("FACTORY CLEAN: txn inactive, lock free");'
