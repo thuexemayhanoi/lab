@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T16:15:10.417Z",
+  "generated_at": "2026-10-01T16:31:07.389Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 61,
-    "PLANNED": 9939
+    "PUBLISHED": 63,
+    "PLANNED": 9937
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 55,
-      "PLANNED": 4945
+      "PUBLISHED": 57,
+      "PLANNED": 4943
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00053",
-  "next_claimable_id": "A00054",
+  "last_completed_id": "A00055",
+  "next_claimable_id": "A00056",
   "blocked": [],
   "published": [
     {
@@ -358,6 +358,18 @@
       "pk": "thuê xe máy gần Sân bay quốc tế Tân Sơn Nhất",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-tan-son-nhat/"
+    },
+    {
+      "id": "A00054",
+      "pk": "thuê xe máy gần Sân bay quốc tế Đà Nẵng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-da-nang/"
+    },
+    {
+      "id": "A00055",
+      "pk": "thuê xe máy gần Sân bay quốc tế Cát Bi",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-cat-bi/"
     },
     {
       "id": "A00097",
