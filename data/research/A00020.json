@@ -1,0 +1,113 @@
+{
+  "article_id": "A00020",
+  "primary_keyword": "thuê xe máy Thanh Hóa",
+  "secondary_keywords": [
+    "cho thuê xe máy Thanh Hóa",
+    "thuê xe máy Sầm Sơn",
+    "thuê xe máy thành phố Thanh Hóa",
+    "thuê xe máy gần ga Thanh Hóa"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Thanh Hóa",
+    "thành phố Thanh Hóa",
+    "Sầm Sơn",
+    "Nghi Sơn",
+    "ga Thanh Hóa",
+    "thành nhà Hồ",
+    "Pù Luông"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe đạp điện"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki"
+  ],
+  "model_entities": [
+    "Wave",
+    "Vision",
+    "Air Blade",
+    "Sirius"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Thanh Hóa giá bao nhiêu một ngày?",
+    "thuê xe máy ở Sầm Sơn có đắt hơn thành phố không?",
+    "đi từ ga Thanh Hóa có thuê xe gần đó không?",
+    "thuê xe máy Thanh Hóa đi Pù Luông, thành nhà Hồ có được không?",
+    "tiền cọc thuê xe máy Thanh Hóa thường bao nhiêu?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Thanh Hóa",
+    "cho thuê xe máy tự lái Thanh Hóa giao tận nơi",
+    "thuê xe máy Sầm Sơn giá rẻ",
+    "kinh nghiệm du lịch Thanh Hóa bằng xe máy"
+  ],
+  "serp_patterns": "SERP gồm cẩm nang tổng hợp (giahuy, tripbike, motogo, wikidulich), trang giá của nền tảng đặt xe (vexere) và bài của Sun World Sầm Sơn; hai cực nhu cầu: thành phố Thanh Hóa (khách đi tàu, công tác, thăm người) và biển Sầm Sơn (khách nghỉ biển mùa hè); dịch vụ giao xe tận nơi phổ biến với phí theo khoảng cách, tiền cọc cao hơn vùng du lịch nhỏ.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "tham khảo chung về các cơ sở cho thuê xe máy tại thành phố Thanh Hóa"
+    },
+    {
+      "source_url": "https://wikidulich.com/thue-xe-may-o-sam-son.html",
+      "source_domain": "wikidulich.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "tham khảo chung về cửa hàng cho thuê xe máy phục vụ khu Sầm Sơn và thành phố Thanh Hóa"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ninh-binh/",
+    "/lab/kinh-nghiem/",
+    "/lab/cuu-ho-xe-may/",
+    "/lab/sua-xe-may/bao-duong-xe-may-dinh-ky/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-thanh-hoa: nhóm gốc cấp tỉnh. Row POI Sầm Sơn và các row model/giá riêng là intent hẹp hơn — bài này giữ tổng quan thị trường hai cực (thành phố vs biển Sầm Sơn), không lấn intent POI biển.",
+  "unique_angle": "Bài tỉnh gốc cho thị trường 'hai cực': thành phố Thanh Hóa (ga đường sắt Bắc – Nam, khách công tác và thăm người, giá ổn định quanh 150.000đ/ngày) và biển Sầm Sơn (khách nghỉ biển, giá mềm hơn 120.000–180.000 đồng/ngày, phụ thu giao xe theo khoảng cách) — kèm khối cọc cao và kinh nghiệm thuê đi Pù Luông, thành nhà Hồ cho lịch trình xa trung tâm.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng, chỉ nêu đơn vị được nguồn công khai ghi. Nghi Sơn là thị xã đã verify trong data/geography (LEGACY_SEARCH). Thanh Hóa không đổi sau sắp xếp hành chính 2025. Ga Thanh Hóa nằm trên tuyến đường sắt Bắc – Nam. Thành nhà Hồ là di sản được biết đến rộng rãi; Pù Luông là khu thiên nhiên quen thuộc với khách phượt.",
+  "claim_evidence": [
+    {
+      "claim": "Mức giá thuê xe máy phổ biến ở Thanh Hóa khoảng 150.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-thanh-hoa.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Dù bạn chọn thuê xe số hay xe tay ga, mức giá phổ biến đều khoảng 150.000đ/ngày. Vào các dịp cao điểm như Lễ 30/4, Quốc khánh 2/9, Tết Dương Lịch, Tết Âm Lịch,… giá thuê xe máy ở Thanh Hóa có thể tăng.»"
+    },
+    {
+      "claim": "Ở Sầm Sơn giá thuê khoảng 120.000–180.000 đồng/ngày",
+      "source_url": "https://sunworld.vn/vi/sam-son/di-chuyen/thue-xe-may-thanh-hoa-gia-dia-chi-uy-tin-va-meo-can-biet-12880",
+      "source_domain": "sunworld.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Tại biển Sầm Sơn, giá thuê có phần “mềm” hơn, chỉ khoảng 120.000 - 180.000 đồng/ngày, phù hợp với du khách muốn dạo quanh bãi biển hoặc di chuyển ngắn giữa các điểm tham quan.»"
+    },
+    {
+      "claim": "Phí giao xe tận nơi ở Thanh Hóa khoảng 20.000–50.000 đồng tùy khoảng cách",
+      "source_url": "https://sunworld.vn/vi/sam-son/di-chuyen/thue-xe-may-thanh-hoa-gia-dia-chi-uy-tin-va-meo-can-biet-12880",
+      "source_domain": "sunworld.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Hầu hết các cửa hàng thuê xe máy Thanh Hóa đều cung cấp dịch vụ giao xe tận nơi, với mức phí khoảng 20.000 - 50.000 đồng, tùy theo khoảng cách. Một số đơn vị còn miễn phí giao xe trong phạm vi 3-5 km.»"
+    },
+    {
+      "claim": "Tiền cọc phổ biến ở Thanh Hóa dao động 1.000.000–5.000.000 đồng tùy loại xe",
+      "source_url": "https://sunworld.vn/vi/sam-son/di-chuyen/thue-xe-may-thanh-hoa-gia-dia-chi-uy-tin-va-meo-can-biet-12880",
+      "source_domain": "sunworld.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Về đặt cọc, mức phổ biến dao động 1.000.000 - 5.000.000 đồng tùy loại xe. Xe số yêu cầu cọc thấp hơn, xe ga và xe đời mới cọc cao hơn.»"
+    },
+    {
+      "claim": "Cẩm nang giahuy ghi mức giá thuê xe máy Thanh Hóa từ khoảng 110.000đ/ngày",
+      "source_url": "https://giahuy.org/thue-xe-may-thanh-hoa/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiêu đề cẩm nang: «#12 Địa Điểm Thuê Xe Máy Thanh Hóa giá rẻ chỉ giá 110k/ngày» — tức mức khởi điểm khoảng 110.000đ/ngày; bài cũng ghi đơn giá xe máy và xe đạp điện «chỉ từ 200k/ngày» với «giảm giá 50k/ngày khi thuê từ ngày thứ hai»."
+    }
+  ]
+}

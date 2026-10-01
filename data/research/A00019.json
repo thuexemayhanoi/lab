@@ -1,0 +1,117 @@
+{
+  "article_id": "A00019",
+  "primary_keyword": "thuê xe máy Quảng Ninh",
+  "secondary_keywords": [
+    "cho thuê xe máy Quảng Ninh",
+    "thuê xe máy Hạ Long",
+    "thuê xe máy Bãi Cháy",
+    "thuê xe máy gần bến tàu Hạ Long"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Quảng Ninh",
+    "Hạ Long",
+    "Bãi Cháy",
+    "Hòn Gai",
+    "Tuần Châu",
+    "Cẩm Phả",
+    "Uông Bí",
+    "Yên Tử",
+    "Vịnh Hạ Long",
+    "bến tàu Hạ Long"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe 50cc"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Vision",
+    "Air Blade",
+    "Click",
+    "Wave",
+    "Sirius",
+    "Dream"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Hạ Long giá bao nhiêu một ngày?",
+    "thuê xe máy ở Bãi Cháy gần bến tàu có không?",
+    "đi Vịnh Hạ Long nên thuê xe gì, có cần đặt trước không?",
+    "thuê xe máy từ Hạ Long đi Yên Tử, Cẩm Phả có được không?",
+    "phí giao xe tận nơi ở Hạ Long là bao nhiêu?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Hạ Long",
+    "cho thuê xe máy tự lái Hạ Long giao tận nơi",
+    "thuê xe máy Quảng Ninh đi Móng Cái",
+    "kinh nghiệm du lịch Hạ Long tự túc bằng xe máy"
+  ],
+  "serp_patterns": "SERP đậm đặc dịch vụ thực thụ (website riêng của các đơn vị cho thuê tại Bãi Cháy với bảng giá công khai, fanpage Facebook, cẩm nang của sunparadiseland, motogo, motortrip, vexere); thị trường chuyên nghiệp hóa cao: giao xe tận nơi, bảng giá theo ngày/tuần/tháng; giá cao hơn mặt bằng chung các điểm du lịch khác, đặc biệt xe ga; mùa lễ tăng giá.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-ha-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "tham khảo chung về các cơ sở cho thuê xe máy tại Hạ Long, Quảng Ninh"
+    },
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ha-long.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "nhận xét về mặt bằng giá Hạ Long cao hơn các điểm du lịch khác và tăng giá dịp lễ"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-hai-phong/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/kinh-nghiem/",
+    "/lab/cuu-ho-xe-may/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-quang-ninh: nhóm gốc cấp tỉnh. Các row POI (Vịnh Hạ Long, Yên Tử, bến tàu…) và row 'Hạ Long có không' là intent hẹp hơn — bài này giữ tổng quan thị trường và hướng dẫn chọn điểm nhận xe (Bãi Cháy, trung tâm, gần bến tàu), không lấn intent POI.",
+  "unique_angle": "Bài tỉnh gốc cho thị trường du lịch biển đảo chuyên nghiệp nhất phía Bắc: dịch vụ có website riêng, bảng giá công khai phân tầng (xe số rẻ, xe ga đội giá), giao xe tận nơi tính phí; góc viết là 'chọn điểm nhận xe theo lịch trình': Bãi Cháy cho khách vịnh, gần bến tàu cho khách du thuyền, hướng Yên Tử/Cẩm Phả cho khách núi và phía đông tỉnh.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng, chỉ nêu đơn vị được nguồn công khai ghi (Kim's Motorbike tại Bãi Cháy, Đông's Motorbike, Minh's…). Vịnh Hạ Long, Yên Tử, bến tàu Hạ Long là POI đã verify trong data/geography (tỉnh Quảng Ninh). Quảng Ninh không đổi sau sắp xếp hành chính 2025. Hạ Long, Cẩm Phả, Uông Bí là các thành phố đã verify trong localities.json.",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá một đơn vị cho thuê tại Bãi Cháy (Kim's Motorbike) ghi xe số 80.000đ/ngày, dòng 50cc 70.000đ/ngày",
+      "source_url": "https://dichvuthuexehalong.com/",
+      "source_domain": "dichvuthuexehalong.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá công khai: «Thuê xe máy Sirius 80.000 ₫ Thuê xe máy Dream 80.000 ₫ Thuê xe máy Jupiter 80.000 ₫ Thuê xe HondaCub Classic 50cc 70.000 ₫» — địa chỉ 129 Vườn Đào, Bãi Cháy, Quảng Ninh."
+    },
+    {
+      "claim": "Cùng bảng ghi xe ga (Click, Air Blade, Vision) 100.000đ/ngày",
+      "source_url": "https://dichvuthuexehalong.com/",
+      "source_domain": "dichvuthuexehalong.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Thuê xe máy Honda Click 100.000 ₫ Thuê xe máy Honda Air Blade 100.000 ₫ Thuê xe máy Honda Vision 100.000 ₫»."
+    },
+    {
+      "claim": "Mặt bằng thuê xe máy cả ngày ở Hạ Long dao động khoảng 100.000–200.000 VNĐ",
+      "source_url": "https://sunparadiseland.com/tin-tuc/bo-tui-7-dia-chi-thue-xe-may-ha-long-gia-re-uy-tin-an-toan-6782",
+      "source_domain": "sunparadiseland.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«thuê xe máy cả ngày chỉ dao động từ 100.000 VNĐ - 150.000 VNĐ đối với cả xe ga»… «Chi phí thuê xe máy Hạ Long đa dạng, dao động từ 100.000 VNĐ/ngày trở lên» và «thuê xe máy cả ngày chỉ dao động từ 100.000 VNĐ - 200.000 VNĐ»."
+    },
+    {
+      "claim": "Phí giao xe tận nơi ở Hạ Long khoảng 20.000–50.000 VNĐ tùy khoảng cách",
+      "source_url": "https://sunparadiseland.com/tin-tuc/bo-tui-7-dia-chi-thue-xe-may-ha-long-gia-re-uy-tin-an-toan-6782",
+      "source_domain": "sunparadiseland.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Một số địa điểm còn tính thêm phí giao xe tận nơi từ 20.000 - 50.000 VNĐ tùy khoảng cách. Nếu thuê từ 3 ngày trở lên, nhiều chủ xe sẽ có chính sách ưu đãi.»"
+    },
+    {
+      "claim": "Dịp lễ, giá thuê xe máy Hạ Long có thể tăng thêm khoảng 20%",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ha-long.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Vào các dịp lễ như Tết, Lễ 30/4, Lễ 2/9, giá thuê thậm chí có thể tăng thêm khoảng 20%.»"
+    }
+  ]
+}
