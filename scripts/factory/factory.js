@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
  * factory.js — deterministic content-factory CLI (canonical engine of /lab).
- * Commands: status | prepare-next [n] | research | qa | qa-repair |
- *           publish | grounding | recover | promote-production |
+ * Commands: status | prepare-next [n | --ids A00015,A00016] | research | qa |
+ *           qa-repair | publish | grounding | recover | promote-production |
  *           consistency | reports
  * Only ONE writer mutates production at a time (writer-lock + transaction marker).
  * The AI writer is EXTERNAL. This tool never writes prose; it validates and promotes.
@@ -12,6 +12,9 @@
  * - prepare-next [n] claims at most n PLANNED rows (1..CHUNK, default CHUNK=10)
  *   and REFUSES while an unfinished chunk exists (RESEARCH/WRITING/QA/REPAIR/PASS
  *   rows must reach a terminal state first — resume before claiming new work).
+ * - prepare-next --ids A00015,A00016 claims EXACT those PLANNED rows only
+ *   (push-driven production: the ids come from push-selection.js; unknown,
+ *   non-PLANNED, duplicate or >CHUNK ids are REFUSED).
  * - qa writes deterministic evidence to data/qa/<ID>.json (score, fails, draft hash).
  * - publish is GATE-BINDED and ATOMIC (two-phase):
  *     publishStage  : publish gate (status=PASS, qa_score>=90, QA evidence
@@ -252,22 +255,42 @@ function status(){
   console.log(JSON.stringify({matrix_rows:rows.length,allocation:alloc,by_status:by,checkpoint:ck,writer_lock:lock.locked?lock.holder:'free'},null,1));
 }
 function prepareNext(args){
-  const nArg = args&&args.length?parseInt(args[0],10):NaN;
   const CHUNK = cfg.CHUNK||10;
-  const n = isNaN(nArg) ? CHUNK : nArg;
-  if(!Number.isInteger(n)||n<1||n>CHUNK){
-    console.error('prepare-next count must be an integer 1..'+CHUNK); process.exit(1);
+  // push-driven production: --ids claims EXACT the pushed draft ids (derived by
+  // push-selection.js) — never random PLANNED rows. The legacy count path
+  // (writer CLI) is unchanged and still honored below.
+  let exactIds=null;
+  let n=CHUNK;
+  if(args&&args[0]==='--ids'){
+    if(args.length<2||!String(args[1]).trim()){ console.error('prepare-next --ids requires a comma-separated article id list'); process.exit(1); }
+    exactIds=String(args[1]).split(',').map(s=>s.trim()).filter(Boolean);
+    if(exactIds.some(id=>!/^A\d{5}$/.test(id))){ console.error('REFUSED: prepare-next --ids: malformed article id (expected A#####): '+JSON.stringify(exactIds)); process.exit(1); }
+    if(exactIds.some((id,i)=>exactIds.indexOf(id)!==i)){ console.error('REFUSED: prepare-next --ids: duplicate article id in '+exactIds.join(',')); process.exit(1); }
+    if(exactIds.length>CHUNK){ console.error('REFUSED: prepare-next --ids received '+exactIds.length+' ids > CHUNK='+CHUNK+' (at most '+CHUNK+' articles per claim).'); process.exit(1); }
+  } else {
+    const nArg = args&&args.length?parseInt(args[0],10):NaN;
+    n = isNaN(nArg) ? CHUNK : nArg;
+    if(!Number.isInteger(n)||n<1||n>CHUNK){
+      console.error('prepare-next count must be an integer 1..'+CHUNK); process.exit(1);
+    }
   }
   const pre=loadMatrix();
   const unfinished=pre.filter(r=>UNFINISHED.includes(r.status));
   if(unfinished.length){
-    console.error('REFUSED: unfinished chunk present ('+unfinished.map(r=>r.article_id+'='+r.status).join(', ')+'). Complete/QA/publish or release the current chunk before claiming a new one (resume first).');
-    process.exit(1);
+    console.error('REFUSED: unfinished chunk present ('+unfinished.map(r=>r.article_id+'='+r.status).join(', ')+'). Complete/QA/publish or release the current chunk before claiming a new one (resume first).'); process.exit(1);
+  }
+  if(exactIds){
+    const by={}; pre.forEach(r=>by[r.article_id]=r);
+    const bad=exactIds.filter(id=>!by[id]||by[id].status!=='PLANNED');
+    if(bad.length){ console.error('REFUSED: prepare-next --ids claims EXACT PLANNED rows only — not claimable: '+bad.map(id=>id+(by[id]?'='+by[id].status:' (unknown id)')).join(', ')); process.exit(1); }
   }
   acquireLock('prepare-next');
   try{
     const rows=loadMatrix(); const batch=[];
-    if(phase()==='PILOT'&&rows.filter(r=>r.status==='PUBLISHED').length<cfg.max_publication_in_bootstrap){
+    if(exactIds){
+      const by={}; rows.forEach(r=>by[r.article_id]=r);
+      exactIds.forEach(id=>batch.push(by[id]));
+    } else if(phase()==='PILOT'&&rows.filter(r=>r.status==='PUBLISHED').length<cfg.max_publication_in_bootstrap){
       const clusters=['RENTAL','RESCUE','REPAIR','ELECTRIC','LICENCE','REGISTRATION','PARTS'];
       const used=new Set(rows.filter(r=>r.status!=='PLANNED').map(r=>r.cluster));
       for(const c of clusters){ if(!used.has(c)||batch.length===0){ const cand=rows.find(r=>r.cluster===c&&r.status==='PLANNED'); if(cand)batch.push(cand); } }

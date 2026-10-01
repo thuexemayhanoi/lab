@@ -1,0 +1,5 @@
+{
+  "enabled": true,
+  "chunk_size": 2,
+  "note": "push-driven production control (factory-production.yml + scripts/factory/push-selection.js): enabled=false stops NEW claims cleanly (repair pushes still proceed); chunk_size caps the article ids per push."
+}

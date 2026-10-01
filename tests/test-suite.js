@@ -1098,6 +1098,237 @@ test('draft safety: _drafts is committed (not gitignored) and Pages never publis
   assert.match(y, /KHÔNG BAO GIỜ commit/, 'workflow must document the draft boundary');
 });
 // =====================================================================
+// PUSH-DRIVEN PRODUCTION — push-selection.js (EXACT ids derived from the
+// pushed _drafts/ files; /blog & /vanchinh model) + prepare-next --ids
+// (exact claims). The writer pushes drafts; the workflow derives ids from
+// the push — NEVER random PLANNED rows, NEVER a PUBLISHED row.
+// =====================================================================
+const SBP = path.join(os.tmpdir(), 'lab-pushsel-sandbox-' + process.pid);
+fs.rmSync(SBP, { recursive: true, force: true });
+fs.cpSync(ROOT, SBP, { recursive: true, filter: (s) => {
+  const rel = path.relative(ROOT, s);
+  return rel !== '_drafts' && !rel.startsWith('_drafts' + path.sep)
+    && !path.basename(s).startsWith('content-matrix.csv.part');
+} });
+const PUSHSEL = (args, cwd) => { const c = cwd || SBP;
+  return spawnSync(process.execPath, [path.join(c, 'scripts', 'factory', 'push-selection.js'), ...args], { cwd: c, encoding: 'utf8' }); };
+function sbpStatus(id, status) {
+  const p = path.join(SBP, 'data', 'content-matrix.csv');
+  const parseLineSbp = l => { const out = []; let cur = '', q = false;
+    for (let i = 0; i < l.length; i++) { const c = l[i];
+      if (q) { if (c === '"') { if (l[i + 1] === '"') { cur += '"'; i++; } else q = false; } else cur += c; }
+      else { if (c === '"') q = true; else if (c === ',') { out.push(cur); cur = ''; } else cur += c; } }
+    out.push(cur); return out; };
+  const lines = fs.readFileSync(p, 'utf8').split('\n');
+  const out = [lines[0]];
+  for (const l of lines.slice(1).filter(x => x.trim())) {
+    const c = parseLineSbp(l);
+    if (c[0] === id) c[24] = status;
+    out.push(c.map(v => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v).join(','));
+  }
+  fs.writeFileSync(p, out.join('\n'));
+}
+function sbpControl(obj) { fs.writeFileSync(path.join(SBP, 'data', 'state', 'production-control.json'), JSON.stringify(obj, null, 2) + '\n'); }
+function sbpDraft(id) {
+  fs.mkdirSync(path.join(SBP, '_drafts'), { recursive: true });
+  fs.writeFileSync(path.join(SBP, '_drafts', id + '.html'), '<!doctype html><html><body><h1>' + id + '</h1></body></html>');
+  fs.writeFileSync(path.join(SBP, '_drafts', id + '.body.html'), '<h2>' + id + ' body</h2>');
+}
+function sbpPacket(id) {
+  fs.mkdirSync(path.join(SBP, 'data', 'research'), { recursive: true });
+  fs.writeFileSync(path.join(SBP, 'data', 'research', id + '.json'), JSON.stringify({
+    article_id: id, primary_keyword: 'kw ' + id, search_intent: 'informational',
+    research_date: '2026-10-01', questions_found: ['q1'], official_sources: [], unique_angle: 'angle'
+  }));
+}
+function sbpSel(added, modified) {
+  const a = path.join(SBP, 'added.txt'), m = path.join(SBP, 'modified.txt');
+  fs.writeFileSync(a, added.join('\n') + (added.length ? '\n' : ''));
+  fs.writeFileSync(m, modified.join('\n') + (modified.length ? '\n' : ''));
+  return PUSHSEL(['--added', a, '--modified', m]);
+}
+const selJson = r => JSON.parse(r.stdout.split('\n')[0]);
+
+test('push-selection: skip — no _drafts file in the push (tooling commit)', () => {
+  sbpControl({ enabled: true, chunk_size: 2 });
+  const r = sbpSel(['scripts/factory/push-selection.js'], ['README.md']);
+  assert.strictEqual(r.status, 0, r.stderr);
+  const sel = selJson(r);
+  assert.strictEqual(sel.proceed, false);
+  assert.strictEqual(sel.mode, 'skip');
+  assert.strictEqual(sel.refuse, null);
+});
+test('push-selection: new — EXACT pushed PLANNED ids are selected (added + modified)', () => {
+  sbpControl({ enabled: true, chunk_size: 2 });
+  sbpDraft('A00015'); sbpDraft('A00016');
+  sbpPacket('A00015'); sbpPacket('A00016');
+  const r = sbpSel(['_drafts/A00015.html', '_drafts/A00015.body.html'], ['_drafts/A00016.html']);
+  assert.strictEqual(r.status, 0, r.stderr);
+  const sel = selJson(r);
+  assert.strictEqual(sel.mode, 'new');
+  assert.strictEqual(sel.proceed, true);
+  assert.deepStrictEqual(sel.claim_ids, ['A00015', 'A00016']);
+  assert.deepStrictEqual(sel.qa_ids, ['A00015', 'A00016']);
+});
+test('push-selection: refuse — unknown id never claimed (fail-closed, exit 3)', () => {
+  sbpDraft('A99999');
+  const r = sbpSel(['_drafts/A99999.html'], []);
+  assert.strictEqual(r.status, 3, 'refuse must exit 3');
+  assert.match(selJson(r).refuse || '', /A99999 not in matrix/);
+  assert.match(r.stderr, /REFUSED/);
+});
+test('push-selection: refuse — PUBLISHED rows are never re-published via push', () => {
+  sbpDraft('A00001'); // A00001 is PUBLISHED in the matrix
+  const r = sbpSel(['_drafts/A00001.html'], []);
+  assert.strictEqual(r.status, 3);
+  assert.match(selJson(r).refuse, /PUBLISHED/);
+});
+test('push-selection: refuse — BLOCKED rows are protected', () => {
+  sbpStatus('A00017', 'BLOCKED'); sbpDraft('A00017');
+  const r = sbpSel(['_drafts/A00017.html'], []);
+  assert.strictEqual(r.status, 3);
+  assert.match(selJson(r).refuse, /BLOCKED/);
+  sbpStatus('A00017', 'PLANNED'); // restore
+});
+test('push-selection: refuse — mixed new + repair push (finish the open chunk first)', () => {
+  sbpStatus('A00017', 'REPAIR'); sbpDraft('A00015'); sbpDraft('A00017');
+  const r = sbpSel(['_drafts/A00015.html'], ['_drafts/A00017.html']);
+  assert.strictEqual(r.status, 3);
+  assert.match(selJson(r).refuse, /new .* and repair/);
+  sbpStatus('A00017', 'PLANNED'); // restore
+});
+test('push-selection: refuse — more ids than chunk_size (the push is deterministic)', () => {
+  sbpControl({ enabled: true, chunk_size: 2 });
+  sbpDraft('A00018'); sbpDraft('A00019'); sbpDraft('A00020');
+  const r = sbpSel(['_drafts/A00018.html', '_drafts/A00019.html', '_drafts/A00020.html'], []);
+  assert.strictEqual(r.status, 3);
+  assert.match(selJson(r).refuse, /chunk_size 2/);
+});
+test('push-selection: refuse — body-only push needs the wrapped draft', () => {
+  fs.mkdirSync(path.join(SBP, '_drafts'), { recursive: true });
+  fs.writeFileSync(path.join(SBP, '_drafts', 'A00021.body.html'), '<h2>body</h2>');
+  const r = sbpSel(['_drafts/A00021.body.html'], []);
+  assert.strictEqual(r.status, 3);
+  assert.match(selJson(r).refuse, /wrapped draft/);
+});
+test('push-selection: refuse — stray _drafts filename (only A#####.html|.body.html)', () => {
+  fs.mkdirSync(path.join(SBP, '_drafts'), { recursive: true });
+  fs.writeFileSync(path.join(SBP, '_drafts', 'notes.txt'), 'x');
+  const r = sbpSel(['_drafts/notes.txt'], []);
+  assert.strictEqual(r.status, 3);
+  assert.match(selJson(r).refuse, /A#####/);
+  fs.rmSync(path.join(SBP, '_drafts', 'notes.txt'), { force: true });
+});
+test('push-selection: paused — production-control disabled stops NEW pushes cleanly (exit 0)', () => {
+  sbpControl({ enabled: false, chunk_size: 2 });
+  sbpDraft('A00018'); sbpPacket('A00018');
+  const r = sbpSel(['_drafts/A00018.html'], []);
+  assert.strictEqual(r.status, 0, r.stderr);
+  const sel = selJson(r);
+  assert.strictEqual(sel.mode, 'paused');
+  assert.strictEqual(sel.proceed, false);
+  assert.deepStrictEqual(sel.claim_ids, []);
+  assert.strictEqual(sel.control_enabled, false);
+});
+test('push-selection: repair — push of a WRITING draft targets qa only (no new claims)', () => {
+  sbpControl({ enabled: true, chunk_size: 2 });
+  sbpStatus('A00019', 'WRITING'); sbpDraft('A00019');
+  const r = sbpSel([], ['_drafts/A00019.html']);
+  assert.strictEqual(r.status, 0, r.stderr);
+  const sel = selJson(r);
+  assert.strictEqual(sel.mode, 'repair');
+  assert.strictEqual(sel.proceed, true);
+  assert.deepStrictEqual(sel.claim_ids, []);
+  assert.deepStrictEqual(sel.qa_ids, ['A00019']);
+  sbpStatus('A00019', 'PLANNED'); // restore
+});
+test('push-selection: repair proceeds even when production-control is disabled', () => {
+  sbpControl({ enabled: false, chunk_size: 2 });
+  sbpStatus('A00019', 'REPAIR'); sbpDraft('A00019');
+  const r = sbpSel([], ['_drafts/A00019.html']);
+  assert.strictEqual(r.status, 0, r.stderr);
+  const sel = selJson(r);
+  assert.strictEqual(sel.mode, 'repair');
+  assert.strictEqual(sel.proceed, true, 'repair of open work stays allowed while paused');
+  sbpStatus('A00019', 'PLANNED'); // restore
+});
+test('push-selection: repair of a RESEARCH row needs a parseable research packet', () => {
+  sbpControl({ enabled: true, chunk_size: 2 });
+  sbpStatus('A00019', 'RESEARCH'); sbpDraft('A00019');
+  const rMissing = sbpSel([], ['_drafts/A00019.html']);
+  assert.strictEqual(rMissing.status, 3);
+  assert.match(selJson(rMissing).refuse, /research packet/);
+  sbpPacket('A00019');
+  const rOk = sbpSel([], ['_drafts/A00019.html']);
+  assert.strictEqual(rOk.status, 0, rOk.stderr);
+  assert.strictEqual(selJson(rOk).mode, 'repair');
+  sbpStatus('A00019', 'PLANNED'); // restore
+});
+test('push-selection: new push without a research packet is refused (research BEFORE write)', () => {
+  sbpControl({ enabled: true, chunk_size: 2 });
+  sbpDraft('A00020');
+  const r = sbpSel(['_drafts/A00020.html'], []);
+  assert.strictEqual(r.status, 3);
+  assert.match(selJson(r).refuse, /research packet/);
+});
+test('push-selection: contract — shards-first matrix read; refuse exits 3', () => {
+  const src = fs.readFileSync(path.join(ROOT, 'scripts', 'factory', 'push-selection.js'), 'utf8');
+  assert.ok(src.includes('content-matrix\\.csv\\.part'), 'must read the canonical shards (a clean checkout has no assembled CSV)');
+  assert.match(src, /process\.exit\(3\)/, 'refuse must exit 3 (fail-closed)');
+});
+test('push-driven: production-control contract (enabled, chunk_size 1..10)', () => {
+  const c = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'state', 'production-control.json'), 'utf8'));
+  assert.strictEqual(c.enabled, true, 'production must be enabled');
+  assert.ok(Number.isInteger(c.chunk_size) && c.chunk_size >= 1 && c.chunk_size <= 10, 'chunk_size must be an integer 1..10');
+});
+test('prepare-next --ids: EXACT claims of PLANNED rows (push-driven)', () => {
+  const r = FACT(['prepare-next', '--ids', 'A00015,A00016'], SBP);
+  assert.strictEqual(r.status, 0, r.stderr);
+  assert.match(r.stdout, /PREPARED 2/);
+  const preparedLine = r.stdout.split('\n').find(l => l.startsWith('PREPARED'));
+  assert.ok(preparedLine, 'PREPARED line must exist');
+  assert.match(preparedLine, /A00015/);
+  assert.match(preparedLine, /A00016/);
+  assert.strictEqual(preparedLine.includes('A00017'), false, 'must not claim anything beyond the exact ids');
+});
+test('prepare-next --ids: refuses while an unfinished chunk exists (resume first)', () => {
+  const r = FACT(['prepare-next', '--ids', 'A00017'], SBP); // A00015/A00016 are now RESEARCH
+  assert.notStrictEqual(r.status, 0, 'must refuse to claim new work');
+  assert.match(r.stderr, /unfinished chunk present/);
+});
+// fresh sandbox for the exact-claim refusal matrix (no unfinished rows)
+const SBP2 = path.join(os.tmpdir(), 'lab-pushsel2-sandbox-' + process.pid);
+fs.rmSync(SBP2, { recursive: true, force: true });
+fs.cpSync(ROOT, SBP2, { recursive: true, filter: (s) => {
+  const rel = path.relative(ROOT, s);
+  return rel !== '_drafts' && !rel.startsWith('_drafts' + path.sep)
+    && !path.basename(s).startsWith('content-matrix.csv.part');
+} });
+test('prepare-next --ids: non-PLANNED / unknown / malformed / duplicate / >CHUNK refused', () => {
+  const rPub = FACT(['prepare-next', '--ids', 'A00001'], SBP2); // A00001 is PUBLISHED
+  assert.notStrictEqual(rPub.status, 0, 'PUBLISHED row must be refused');
+  assert.match(rPub.stderr, /PUBLISHED/);
+  const rUnknown = FACT(['prepare-next', '--ids', 'A99999'], SBP2);
+  assert.notStrictEqual(rUnknown.status, 0, 'unknown id must be refused');
+  assert.match(rUnknown.stderr, /unknown id/);
+  assert.notStrictEqual(FACT(['prepare-next', '--ids', 'a1'], SBP2).status, 0, 'malformed id must be refused');
+  assert.notStrictEqual(FACT(['prepare-next', '--ids', 'A00015,A00015'], SBP2).status, 0, 'duplicate id must be refused');
+  const eleven = Array.from({ length: 11 }, (_, i) => 'A' + String(i + 20).padStart(5, '0')).join(',');
+  const rChunk = FACT(['prepare-next', '--ids', eleven], SBP2);
+  assert.notStrictEqual(rChunk.status, 0, '>CHUNK ids must be refused');
+  assert.match(rChunk.stderr, /CHUNK/);
+});
+test('operator: prepare-next --ids passthrough (validate + execute path)', () => {
+  const sbp2CmdFile = (obj) => { const p = path.join(SBP2, 'data', 'state', 'operator-command.json'); fs.writeFileSync(p, JSON.stringify(obj)); return 'data/state/operator-command.json'; };
+  assert.notStrictEqual(OP(['validate', sbp2CmdFile({ op: 'prepare-next', ids: 'A00015,A00016', count: 2 })], SBP2).status, 0, 'ids+count must be refused (mutually exclusive)');
+  // full operator path: preflight -> EXACT claim -> reports -> scoped fast verify
+  const r = OP(['prepare-next', '--ids', 'A00015,A00016', '--scope', 'fast'], SBP2);
+  assert.strictEqual(r.status, 0, r.stdout + r.stderr);
+  assert.match(r.stdout, /PREPARED 2/);
+  assert.match(r.stdout, /VERIFY PASS \(scope=fast\)/);
+});
+
+// =====================================================================
 // FACTORY HARDENING — QA hash-bound publish gate, claim grounding gate,
 // atomic two-phase publish (stage/commit/rollback + fault injection), and
 // the contiguous-prefix last_completed_id contract.

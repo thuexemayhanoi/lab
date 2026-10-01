@@ -125,6 +125,7 @@ function validateCommand(cmd, channel){
   if (cmd.coordinator!==undefined && (typeof cmd.coordinator!=='string'||cmd.coordinator.length>100||/[\r\n]/.test(cmd.coordinator))) fail('bad coordinator');
   if (cmd.op==='publish' && (!cmd.ids||!cmd.ids.length)) fail('publish requires ids (only PASS rows are promoted)');
   if (cmd.op==='research' && (!cmd.ids||!cmd.ids.length)) fail('research requires ids');
+  if (cmd.op==='prepare-next' && cmd.ids && cmd.ids.length && cmd.count!==undefined) fail('prepare-next: --ids and --count are mutually exclusive (exact push-driven claim vs legacy count claim)');
   if (cmd.op==='qa' && cmd.ids===undefined) cmd.ids=null; // null => all actionable rows
   for (const k of Object.keys(cmd)) if (!['op','ids','count','scope','command_id','coordinator'].includes(k)) fail('unknown command field: '+k);
   return Object.assign({}, cmd, {scope:resolveScope(cmd)});
@@ -231,7 +232,9 @@ function opStatus(){ factory.status(); }
 
 function opPrepareNext(cmd){
   preflight();
-  const args=cmd.count?[String(cmd.count)]:[];
+  // push-driven production: --ids claims EXACT PLANNED rows (the pushed draft
+  // ids from push-selection.js); the legacy --count path is unchanged.
+  const args=(cmd.ids&&cmd.ids.length)?['--ids',cmd.ids.join(',')]:cmd.count?[String(cmd.count)]:[];
   factory.prepareNext(args); // acquires lock + tx internally; exits non-zero on refusal
   runReportsChecked('prepare-next');
   // FAST = scoped consistency of the JUST-CLAIMED chunk (checkpoint active
@@ -358,6 +361,7 @@ function usage(){
   console.error('  operator.js validate <command.json> [--channel actions|cli]  # whitelist validation, prints resolution (exports GITHUB_ENV when present)');
   console.error('  operator.js command <command.json> [--channel actions|cli]   # validate + execute one command file');
   console.error('  operator.js <op> [--ids A00001,A00002] [--count N] [--scope fast|deep|full] [--command-id ID] [--coordinator NAME]');
+  console.error('    prepare-next --ids A00015,A00016 — push-driven EXACT claim (ids from push-selection.js); --ids and --count are mutually exclusive');
   console.error('Channels: actions = GitHub Actions command-file channel (clean checkout, no _drafts/ — draft ops qa/publish are REFUSED early, exit 3).');
   console.error('          cli     = writer direct CLI (default; drafts exist, all ops available).');
   process.exit(1);
