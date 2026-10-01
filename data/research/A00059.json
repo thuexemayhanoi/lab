@@ -1,0 +1,132 @@
+{
+  "article_id": "A00059",
+  "primary_keyword": "thuê xe máy gần Ga Sài Gòn",
+  "secondary_keywords": [
+    "thuê xe máy ga Sài Gòn",
+    "cho thuê xe máy gần ga Sài Gòn",
+    "thuê xe máy quận 3",
+    "thuê xe máy gần Nguyễn Thông",
+    "thuê xe máy giao tận nơi Sài Gòn"
+  ],
+  "search_intent": "local",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Ga Sài Gòn",
+    "Nguyễn Thông",
+    "quận 3",
+    "Quận 1",
+    "Phú Nhuận",
+    "Tân Bình",
+    "Hồ Chí Minh",
+    "Sài Gòn"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe số 50cc",
+    "xe tay ga",
+    "xe tay côn",
+    "xe cao cấp"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Lead",
+    "Air Blade",
+    "Nouvo",
+    "Exciter",
+    "Winner",
+    "SH",
+    "Vario"
+  ],
+  "questions_found": [
+    "thuê xe máy gần ga Sài Gòn giá bao nhiêu một ngày?",
+    "ga Sài Gòn có dịch vụ giao xe tận nơi không?",
+    "thuê xe máy Sài Gòn cần giấy tờ gì, cọc bao nhiêu?",
+    "thuê xe máy ở ga Sài Gòn được chạy ra ngoại thành không?",
+    "ga Sài Gòn ở quận nào, giao xe ở cổng nào thuận tiện?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy ga Sài Gòn",
+    "thuê xe máy gần ga Sài Gòn giao tận nơi",
+    "thuê xe máy quận 3 Sài Gòn",
+    "Gia Bảo cho thuê xe máy TPHCM",
+    "thuê xe máy Sài Gòn không cần cọc"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy gần Ga Sài Gòn\": vexere.com có trang chuyên cho điểm Ga Sài Gòn (khu vực giao xe Ga Sài Gòn, Phường Nhiêu Lộc), mô tả Ga Sài Gòn là điểm dừng chính của tuyến đường sắt Bắc - Nam, nằm ở quận 3, giáp Quận 1, Phú Nhuận, Tân Bình; cổng chính số 1 Nguyễn Thông là nơi đón trả khách và mua vé, nên yêu cầu giao xe ở Cổng chính Nguyễn Thông để dễ tìm; các listing ghi nhà xe Gia Bảo (xe ga Vision/Airblade đời từ 2015, từ 200.000đ, giao tận nơi, không cần cọc trước, giữ CCCD và cọc 1.000.000đ/xe, nhận trả xe 07:30 - 21:00), Thành Đạt (Lead/Click/Nouvo 2013-2014, từ 150.000đ, cọc 1.000.000đ/xe và giữ CCCD/GPLX hoặc 4.000.000đ/xe), xe số Sirius đời 2012-2014 từ 150.000đ hoặc từ 100.000đ (07:00 - 20:00, chưa quá 5 giờ tính 1/2 ngày); motogo.vn bài 9 địa điểm Sài Gòn ghi giá dao động 80.000đ - 150.000đ, Bike Saigon giao xe tận nơi chỉ từ 15 đến 30 phút, Hoàng Đăng (quận 3) từ 80k/ngày; chothuexemaysaigon59.com (Mô tô Gia Bảo) niêm yết xe số 100.000 VND/ngày, xe ga 150.000 VND/ngày, xe côn 200.000 VND/ngày, SH 550.000đ giảm còn 500.000đ, Vario 250.000đ, Exciter 150cc 200.000đ, Winner 200.000đ, thuê từ 3 ngày giảm giá, giao tận nơi miễn phí, cọc CCCD/hộ chiếu kèm tiền cọc nhỏ hoàn lại.",
+  "official_sources": [
+    {
+      "name": "Ga Sài Gòn (tham khảo địa lý)",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi",
+      "note": "Địa lý theo nguồn tổng hợp: ga ở quận 3 (khu vực Phường Nhiêu Lộc hiện hành), cổng chính số 1 Nguyễn Thông; các con số khác chỉ dùng khi nằm trong claim_evidence."
+    }
+  ],
+  "supporting_sources": [
+    {
+      "name": "Vexere — Thuê xe máy ở Sài Gòn",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi"
+    },
+    {
+      "name": "MOTOGO — Thuê xe máy Sài Gòn (9 địa điểm)",
+      "url": "https://motogo.vn/thue-xe-may-tai-sai-gon/"
+    },
+    {
+      "name": "Mô tô Gia Bảo — Cho thuê xe máy Sài Gòn",
+      "url": "https://chothuexemaysaigon59.com/"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-tan-son-nhat/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-da-nang/",
+    "/lab/thue-xe-may/thue-xe-may-gan-ga-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-cam-ranh/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-poi-ga-sai-gon: 1 row cho Ga Sài Gòn; khác với row sân bay Tân Sơn Nhất (POI sân bay, đã publish) — ga tàu và sân bay là hai POI khác nhau tại Sài Gòn, từ khóa và intent khác nhau, không tranh chấp; link chéo hợp lệ.",
+  "unique_angle": "Ga Sài Gòn là ga đường sắt lớn nhất miền nam, đầu tàu tuyến Bắc - Nam: khách xuống tàu sau hành trình dài (từ Huế, Đà Nẵng, Nha Trang, Hà Nội) thường mệt và cần xe ngay; khác với sân bay Tân Sơn Nhất, khu vực ga thuộc quận 3 nội đô sát Quận 1 nên xe máy gần như là phương án duy nhất đáng tiền; bài đi theo luồng xuống tàu - giao xe tại cổng chính Nguyễn Thông - di chuyển nội đô; điểm nhấn: hệ số cọc linh hoạt (giữ CCCD + 1.000.000đ/xe hoặc cọc tiền thay thế), quy tắc 24 giờ và nửa ngày khi trả trễ 5-6 giờ, phạm vi chỉ trong TP Hồ Chí Minh (cũ), và bảng giá SH/Vario cao cấp cho khách muốn xê dịch.",
+  "notes": "Bài informational_only (owner KHÔNG phục vụ TP Hồ Chí Minh): sec dịch vụ chủ trang chỉ là disclosure ranh giới (dịch vụ chỉ tại Hà Nội Long Biên - phố cổ), KHÔNG chào dịch vụ, KHÔNG LocalBusiness schema, KHÔNG dùng cụm chúng tôi cứu hộ. Mọi con số lấy đúng claim_evidence. Sau sắp xếp đơn vị hành chính 2025 không liệt kê tên phường mới ngoài mức nguồn ghi (Ga Sài Gòn, Phường Nhiêu Lộc theo vexere); giữ tên quận 3, Quận 1 quen thuộc. Tránh dùng '15 đến 30 phút' nếu không kèm claim; duration token chỉ dùng khi nằm trong claim_evidence (claim đã chứa '15 đến 30 phút').",
+  "claim_evidence": [
+    {
+      "claim": "Vexere mô tả khu vực Ga Sài Gòn: Ga Sài Gòn là điểm dừng chính của tuyến đường sắt Bắc - Nam, đón hành khách từ Huế, Đà Nẵng, Nha Trang, Hà Nội; ga nằm ở quận 3, giáp ranh các quận trung tâm như Quận 1, Phú Nhuận, Tân Bình; cổng chính của Ga Sài Gòn ngay mặt tiền số 1 Nguyễn Thông, là nơi hành khách đến đón, trả khách và mua vé; khi đặt thuê xe máy giao tận nơi nên yêu cầu giao xe ở Cổng chính Nguyễn Thông để dễ tìm và thuận tiện nhất; khu vực giao xe của nền tảng có điểm Ga Sài Gòn, Phường Nhiêu Lộc; thuê xe máy tại khu vực Ga Sài Gòn giúp tiết kiệm thời gian, không phải chen chúc bắt taxi hay lo giá xe ôm tăng giờ cao điểm.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe máy gần Ga Sài Gòn Ga Sài Gòn là điểm dừng chính của tuyến đường sắt Bắc - Nam, đón hàng ngàn lượt khách mỗi ngày. Nơi đây phục vụ hành khách đến từ các tỉnh miền Trung, miền Bắc như Huế, Đà Nẵng, Nha Trang, Hà Nội... Ga Sài Gòn nằm ở quận 3, giáp ranh với các quận trung tâm như Quận 1, Phú Nhuận, Tân Bình... Cổng chính của Ga Sài Gòn ngay mặt tiền số 1 Nguyễn Thông, đây là cổng lớn, hướng thẳng ra đường Nguyễn Thông. Đây cũng là nơi hành khách có thể đến đón và trả khách, cũng như mua vé. Khi đặt thuê xe máy giao tận nơi, bạn nên yêu cầu giao xe ở Cổng chính Nguyễn Thông để dễ tìm và thuận tiện nhất. Việc thuê xe máy tại khu vực Ga Sài Gòn giúp bạn tiết kiệm thời gian, không phải chen chúc bắt taxi hay lo giá xe ôm tăng giờ cao điểm... Khu vực giao xe: Ga Sài Gòn, Phường Nhiêu Lộc."
+    },
+    {
+      "claim": "Các nhà xe trên nền tảng Vexere khu vực Sài Gòn ghi nhận: Gia Bảo cho thuê xe tay ga Honda Vision hoặc Honda Airblade đời xe từ 2015, mũ bảo hiểm, xăng 1 lít, giao xe tận nơi, không cần cọc trước, giá từ 200.000đ, nhận xe và trả xe mỗi ngày từ 07:30 đến 21:00, mỗi ngày thuê tính bằng 24 giờ, trả xe quá mỗi 24 giờ tính thêm 1 ngày, trả xe chưa quá 6 giờ chỉ tính thêm 1/2 ngày, thủ tục cần CCCD hoặc hộ chiếu và GPLX bản gốc, giữ CCCD và cọc 1.000.000đ/xe, chỉ sử dụng xe trong phạm vi Thành phố Hồ Chí Minh (cũ); Thành Đạt cho thuê Honda Lead hoặc Honda Click, Yamaha Nouvo đời 2013-2014, giá từ 150.000đ, nhận trả xe 08:00 đến 20:00, cọc 1.000.000đ/xe và giữ CCCD/GPLX hoặc cọc 4.000.000đ/xe.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Xe tay ga phổ thông Gia Bảo 4.9 Honda Vision hoặc dòng xe tương tự Honda Vision, Honda Airblade (giao ngẫu nhiên tùy tình trạng xe thực tế) Đời xe: từ 2015 Mũ bảo hiểm, Xăng (1 lít) Giao xe tận nơi Không cần cọc trước từ 200.000 đ... Thời gian nhận xe và trả xe hằng ngày từ 07:30 đến 21:00. Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe... Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 6 giờ → chỉ tính thêm 1/2 ngày... Giấy tờ cần chuẩn bị: CCCD/Passport & GPLX (bản gốc) - Giữ CCCD & cọc 1.000.000đ/xe (CCCD đã tích hợp VNeID) - Làm hợp đồng thuê xe * Vui lòng chỉ sử dụng xe trong phạm vi Thành phố Hồ Chí Minh (cũ)... Xe tay ga phổ thông Thành Đạt 4.6 Honda Lead hoặc dòng xe tương tự Honda Lead, Honda Click, Yamaha Nouvo (giao ngẫu nhiên tùy tình trạng xe thực tế) Đời xe: 2013-2014 Mũ bảo hiểm Không cần cọc trước từ 150.000 đ... từ 08:00 đến 20:00... Cọc 1.000.000đ/xe và Giữ CCCD/GPLX. Hoặc cọc 4.000.000đ/xe."
+    },
+    {
+      "claim": "Xe số phổ thông trên nền tảng Vexere khu vực Sài Gòn ghi nhận: một nhà xe cho thuê xe số Yamaha Sirius đời 2012 - 2014, mũ bảo hiểm, không cần cọc trước, giá từ 150.000đ, nhận trả xe 07:00 đến 20:00, trả xe chưa quá 5 giờ chỉ tính thêm 1/2 ngày, cọc 1.000.000đ/xe và giữ CCCD hoặc cọc 3.000.000đ/xe; nhà xe khác cho thuê xe số từ 100.000đ, nhận trả xe 08:00 đến 20:00, mỗi ngày tính 24 giờ.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "ius (giao ngẫu nhiên tùy tình trạng xe thực tế) Đời xe: 2012-2014 Mũ bảo hiểm Không cần cọc trước từ 150.000 đ... từ 07:00 đến 20:00... Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 5 giờ → chỉ tính thêm 1/2 ngày... Cọc 1.000.000đ/xe và Giữ CCCD. Hoặc Cọc 3.000.000đ/xe... 4.6 Đời xe: 2012-2014 Mũ bảo hiểm Không cần cọc trước từ 100.000 đ... từ 08:00 đến 20:00. Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe."
+    },
+    {
+      "claim": "MOTOGO tổng hợp 9 địa điểm cho thuê xe máy Sài Gòn: giá thuê dao động từ 80.000đ - 150.000đ tùy loại xe; Bike Saigon có giao nhận xe tận nơi cho khách ở sân bay, bến xe khách hay khách sạn theo yêu cầu, thời gian giao xe chỉ từ 15 đến 30 phút, tùy địa điểm có tính thêm phí cước hoặc không; Hoàng Đăng (khu vực quận 3) niêm yết giá thuê chỉ từ 80k/ngày, là mức khá rẻ so với mặt bằng chung Sài Gòn; alothuexemay có địa chỉ 134 Bùi Thị Xuân (quận 1) và 16 Lê Hồng Phong (quận 10).",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-sai-gon/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "TOP 9 địa điểm cho thuê xe máy uy tín, giá rẻ tại Sài Gòn Giá thuê xe dao động từ 80.000đ -150.000đ tùy vào từng loại xe... Bike Saigon... đơn vị giao nhận xe tận nơi cho khách hàng ở sân bay, bến xe khách hay tại khách sạn theo yêu cầu riêng của khách hàng. Thời gian giao xe vô cùng nhanh chóng chỉ từ 15 đến 30 phút. Tùy theo địa điểm giao nhận xe tận nơi mà cửa hàng Bike Saigon có tính thêm phí cước hoặc không... Dịch vụ cho thuê xe máy Hoàng Đăng Quận 3... Mức giá thuê xe tại đây cực ổn, chỉ từ 80k/ngày. So với mặt bằng chung giá thuê xe máy tại Sài Gòn thì mức giá này khá rẻ... Địa chỉ 1: 134 Bùi Thị Xuân, quận 1 Địa chỉ 2: 16 Lê Hồng Phong, quận 10."
+    },
+    {
+      "claim": "Mô tô Gia Bảo (chothuexemaysaigon59.com) niêm yết cho thuê xe máy Sài Gòn: xe số (Honda Wave RSX/RS, Honda Future, Yamaha Sirius) 100.000 VND/ngày; xe tay ga (Honda AirBlade, Honda Vision, Honda Lead) 150.000 VND/ngày; xe tay côn (Exciter 125, Exciter 150, Honda Winner) 200.000 VND/ngày; thuê từ 3 ngày trở lên được giảm giá; giao xe tận nơi miễn phí trong TPHCM; thủ tục để lại CCCD hoặc hộ chiếu kèm khoản tiền cọc nhỏ được hoàn lại; bảng dịch vụ cao cấp ghi SH Việt Nam 550.000đ giảm còn 500.000đ, Xe Vario 280.000đ giảm còn 250.000đ, SH mode 350.000đ giảm còn 300.000đ, Exciter 150cc 250.000đ giảm còn 200.000đ, Winner x 250.000đ giảm còn 200.000đ; tiêu đề trang giới thiệu giá thuê từ 60k/ngày.",
+      "source_url": "https://chothuexemaysaigon59.com/",
+      "source_domain": "chothuexemaysaigon59.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cho Thuê Xe Máy ở Sài Gòn, TPHCM 60k/Ngày Giá Rẻ, Giao Tận Nơi... Giao xe tận nơi miễn phí: hỗ trợ cho thuê xe máy giao tận nơi TPHCM... Xe tay ga (Vision, Lead, AirBlade...): 150.000 VNĐ/ngày... Xe côn tay & xe cao cấp (Exciter, SH...):... XE SỐ Thuê 1 Ngày: 100.000 VND/Ngày Trở Lên Thu Ngày, Thu Tuần, Thu Tháng. CÁC LOẠI XE Honda Wave RSX/RS Honda Future Yamaha Sirius... XE TAY GA Thuê 1 Ngày: 150.000 VND/Ngày Trở Lên. Thu Từ 3 Ngày Trở Lên Sẽ Được Giảm Giá. CÁC LOẠI XE Honda AirBlade Honda Vision Honda Lead... XE TAY CÔN Thuê 1 Ngày: 200.000 VND/Ngày Trở Lên Thu Cùng Lâu Giá Càng Ưu Đãi. CÁC LOẠI XE Exciter 125 Exciter 150 Honda Winner... SH Việt Nam 550.000 đ 500.000 đ... Xe Vario 280.000 đ 250.000 đ... sh mode 350.000 đ 300.000 đ... Ex 150cc 250.000 đ 200.000 đ... Winner x 250.000 đ 200.000 đ... Cần đặt cọc bao nhiêu khi thuê xe? Bạn chỉ cần để lại CCCD/Passport và một khoản tiền cọc nhỏ (sẽ được hoàn lại)."
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "article_id": "A00058",
+  "primary_keyword": "thuê xe máy gần Ga Hà Nội",
+  "secondary_keywords": [
+    "thuê xe máy ga Hà Nội",
+    "cho thuê xe máy gần ga Hà Nội",
+    "thuê xe máy Lê Duẩn",
+    "thuê xe máy giao tận nơi ga Hà Nội",
+    "thuê xe máy giá rẻ gần ga"
+  ],
+  "search_intent": "local",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Ga Hà Nội",
+    "đường Lê Duẩn",
+    "Trần Quý Cáp",
+    "Hoàn Kiếm",
+    "Đống Đa",
+    "Văn Miếu - Quốc Tử Giám",
+    "Tôn Đức Thắng",
+    "Hàng Bông",
+    "Hồ Gươm",
+    "Hoàng Thành Thăng Long",
+    "Hà Nội"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe máy điện",
+    "xe tay côn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "VinFast"
+  ],
+  "model_entities": [
+    "Wave Alpha",
+    "Sirius",
+    "Blade",
+    "Vision",
+    "Lead",
+    "Air Blade",
+    "Janus",
+    "Exciter",
+    "Winner",
+    "Evo 200"
+  ],
+  "questions_found": [
+    "thuê xe máy gần ga Hà Nội giá bao nhiêu một ngày?",
+    "gần ga Hà Nội có shop cho thuê xe máy không cần cọc không?",
+    "thuê xe máy ở ga Hà Nội cần giấy tờ gì?",
+    "thuê xe máy Hà Nội tính ngày thế nào?",
+    "nhận xe quanh ga Hà Nội rồi chạy vào phố cổ có gần không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy ga Hà Nội",
+    "thuê xe máy gần ga Hà Nội không cần cọc",
+    "Mototrip thuê xe máy ga Hà Nội",
+    "thuê xe máy Văn Minh Lê Duẩn",
+    "thuê xe máy Hà Nội 24h"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy gần Ga Hà Nội\" dẫn đầu là trang thuê xe của vexere.com chuyên trang cho điểm Ga Hà Nội: liệt kê nhà xe Mototrip (29 Tôn Đức Thắng, Văn Miếu - Quốc Tử Giám) có dịch vụ đón khách miễn phí tại Ga Hà Nội về cửa hàng nhận xe, bổ sung dòng xe điện Vinfast Evo 200, giá từ 120.000đ đến 270.000đ tùy loại xe, tính tròn 24 giờ, cọc 1tr/xe đến 2tr/xe hoặc 500k/xe đến 1tr/xe nếu có thẻ sinh viên/vé máy bay; bảng giá chung ghi xe số 130.000 - 150.000, xe ga 150.000 - 200.000, xe điện 200.000; Motogo (108 Hàng Bông) xe số Sirius, Wave 120.000đ/ngày, xe ga Air Blade, Vision 150.000đ/ngày; Văn Minh (Ngõ 106 Lê Duẩn) ngay sát ga, xe số từ 100.000đ/ngày, xe ga từ 130.000đ/ngày, tính khung 24h; lưu ý đường Lê Duẩn một chiều. Bên cạnh là các bài tổng hợp thuê xe máy Hà Nội nói chung (motogo.vn/ha-noi: Sirius 130.000đ/ngày, Vision 180.000đ/ngày, Air Blade 200.000đ/ngày, giao miễn phí quận Hoàn Kiếm, Ba Đình 30.000đ/lượt; wikidulich: 13535 xe số 100.000-150.000 VND/ngày, xe ga 120.000-150.000 VND/ngày, Exciter 200.000-250.000 VND, cọc 2 triệu, một số cửa hàng giao tận Ga Hà Nội). Intent local nghiêng hành khách vừa xuống tàu muốn nhận xe ngay quanh ga hoặc giao tận khách sạn trong phố cổ.",
+  "official_sources": [
+    {
+      "name": "Ga Hà Nội (tham khảo địa lý)",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-ga-ha-noi.vi",
+      "note": "Địa lý theo nguồn tổng hợp: cửa ga nằm trên đường Lê Duẩn, tuyến một chiều; các con số khác chỉ dùng khi nằm trong claim_evidence."
+    }
+  ],
+  "supporting_sources": [
+    {
+      "name": "Vexere — Thuê xe máy ở Ga Hà Nội",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-ga-ha-noi.vi"
+    },
+    {
+      "name": "MOTOGO — Thuê xe máy Hà Nội",
+      "url": "https://motogo.vn/ha-noi/"
+    },
+    {
+      "name": "Wiki Dulich — Kinh nghiệm thuê xe máy tại Hà Nội",
+      "url": "https://wikidulich.com/thue-xe-may-ha-noi.html"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-noi-bai/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-tan-son-nhat/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-da-nang/",
+    "/lab/thue-xe-may/thue-xe-may-gan-ga-sai-gon/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-poi-ga-ha-noi: 1 row cho Ga Hà Nội; khác với row thue-xe-may-ha-noi (địa bàn toàn thành phố, đã publish) — bài ga tập trung POI quanh cửa ga trên trục Lê Duẩn - Trần Quý Cáp, không tranh chấp từ khóa chính; các row sân bay khác là POI khác nhau; link chéo hợp lệ.",
+  "unique_angle": "Ga Hà Nội nằm ngay mép trung tâm: cửa ga trên đường Lê Duẩn một chiều, cách Hồ Gươm và phố cổ chỉ vài phút chạy xe, gần Văn Miếu, Hoàng Thành Thăng Long — khác với Nội Bài (cách xa 30km), nhận xe quanh ga gần như là lựa chọn mặc định của khách đường sắt; bài đi theo luồng xuống tàu - nhận xe quanh ga hoặc giao tận khách sạn - di chuyển phố cổ; điểm nhấn: quy tắc tính 24 tiếng (quá 6 giờ tính nửa ngày), cọc 500k/xe nếu có vé máy bay/thẻ sinh viên, đường một chiều quanh ga cần lưu ý, và dòng xe điện Vinfast Evo 200 xuất hiện trong đội xe cho thuê.",
+  "notes": "Bài informational_only: dịch vụ chủ trang chỉ tại Hà Nội Long Biên - phố cổ, KHÔNG chào dịch vụ trong bài, KHÔNG LocalBusiness schema, KHÔNG dùng cụm chúng tôi cứu hộ; nhưng vì địa bàn Hà Nội là địa bàn owner, sec-3 disclosure viết theo hướng 'bài là trang thông tin lab, dịch vụ riêng của chủ trang xem bài thuê xe máy Hà Nội' — không tự nhận điểm nhận tại ga. Mọi con số lấy đúng claim_evidence. Sau sắp xếp đơn vị hành chính 2025 không liệt kê tên phường mới, giữ tên địa danh quen thuộc (Hoàn Kiếm, Đống Đa, Văn Miếu). KHÔNG dùng khoảng cách km ngoài claim (không có số km từ ga tới Hồ Gươm trong nguồn — chỉ dùng 'vài trăm mét' cho Văn Minh và 'khoảng 600m' cho di tích gần ga nếu quote).",
+  "claim_evidence": [
+    {
+      "claim": "Vexere chuyên trang thuê xe tại Ga Hà Nội giới thiệu 3 nhà xe quanh ga: Mototrip (29 Tôn Đức Thắng, Văn Miếu - Quốc Tử Giám) có dịch vụ đón khách miễn phí tại Ga Hà Nội về cửa hàng để nhận xe, tiên phong bổ sung dòng xe máy điện Vinfast Evo 200 đời 2024, cung cấp xe số, xe tay ga đến xe côn tay Exciter, Winner với mức giá dao động từ 120.000đ đến 270.000đ tùy loại xe và thời điểm thuê, quy định thời gian thuê tính tròn 24 giờ; Motogo (108 Hàng Bông, Hoàn Kiếm) 100% xe mới, trang bị 2 mũ bảo hiểm 1/2 đầu chất lượng cao và áo mưa, giá xe số Sirius, Wave khoảng 120.000đ/ngày, xe ga Air Blade, Vision khoảng 150.000đ/ngày, một ngày tính 24 tiếng; Văn Minh (Ngõ 106 Lê Duẩn, Đống Đa) nằm ngay sát Ga Hà Nội, chỉ cách cửa ga vài trăm mét đi bộ, có dòng xe số phổ thông giá rẻ chỉ từ 100.000đ/ngày và các dòng xe ga đời mới giá từ 130.000đ/ngày, cách tính ngày thuê theo khung 24h.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ga-ha-noi.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cho thuê xe máy Mototrip Địa chỉ: 29 Tôn Đức Thắng, Phường Văn Miếu - Quốc Tử Giám, Thành phố Hà Nội. Mototrip ghi điểm tuyệt đối nhờ dịch vụ đón khách miễn phí tại Ga Hà Nội về cửa hàng để nhận xe... đây là đơn vị tiên phong bổ sung dòng xe máy điện Vinfast Evo 200 đời 2024 vào đội xe... Cửa hàng cung cấp đa dạng từ xe số, xe tay ga đến xe côn tay (Exciter, Winner) với mức giá dao động từ 120.000đ đến 270.000đ tùy vào loại xe và thời điểm thuê... Quy định thời gian thuê xe tại đây được tính tròn 24 giờ... Cho thuê xe máy Motogo Địa chỉ: 108 Hàng Bông, Hoàn Kiếm, Hà Nội... 100% xe cho thuê là xe mới... trang bị đầy đủ 2 mũ bảo hiểm 1/2 đầu chất lượng cao và áo mưa... giá thuê xe số (Sirius, Wave) khoảng 120.000đ/ngày và xe ga (Air Blade, Vision) khoảng 150.000đ/ngày... Một ngày thuê xe cũng được tính là 24 tiếng kể từ lúc nhận xe... Cửa hàng thuê xe máy Văn Minh Địa chỉ: Ngõ 106 Lê Duẩn, Đống Đa, Hà Nội. Nằm ngay sát Ga Hà Nội, Văn Minh là địa chỉ thuận tiện nhất cho những ai muốn nhận xe ngay lập tức (chỉ cách cửa ga vài trăm mét đi bộ)... Cửa hàng có sẵn các dòng xe số phổ thông giá rẻ chỉ từ 100.000đ/ngày và các dòng xe ga đời mới giá từ 130.000đ/ngày. Cách tính ngày thuê xe áp dụng theo khung 24h."
+    },
+    {
+      "claim": "Bảng giá tham khảo tại khu vực Ga Hà Nội (đường Lê Duẩn, Trần Quý Cáp): xe số phổ thông Honda Wave Alpha, Yamaha Sirius, Honda Blade dao động 130.000đ - 150.000đ/ngày; xe tay ga phổ thông Honda Vision, Lead, Air Blade, Yamaha Janus 150.000đ - 200.000đ/ngày tùy độ mới; xe máy điện Vinfast Evo 200 khoảng 200.000đ/ngày; chính sách thuê trên nền tảng ghi nhận xe và trả xe mỗi ngày từ 08:00 đến 21:00, mỗi ngày thuê tính bằng 24 giờ kể từ thời điểm nhận xe, thuê tối thiểu từ 1 ngày, trả xe quá mỗi 24 giờ tính thêm 1 ngày, trả xe chưa quá 6 giờ chỉ tính thêm 1/2 ngày.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ga-ha-noi.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Mức giá thuê xe số rất bình dân, thường thấp nhất trong bảng giá, chỉ dao động từ 130.000đ - 150.000đ/ngày... Giá thuê dòng xe này thường nhỉnh hơn, nằm trong khoảng 150.000 - 200.000đ/ngày tùy vào độ mới của xe... Tuy mức giá thuê có phần cao hơn, khoảng 200.000đ/ngày... Loại xe Giá thuê Xe tay ga phổ thông (Honda Airblade, Honda Vision, Yamaha Janus) 150.000 - 200.000 Xe số phổ thông (Honda Wave Alpha, Yamaha Sirius) 130.000 - 150.000 Xe máy điện Vinfast 200.000... Chính sách thuê xe 1. Quy định về thời gian thuê xe - Thời gian nhận xe và trả xe hằng ngày từ 08:00 đến 21:00. Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe. - Thuê tối thiểu từ 1 ngày. - Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 6 giờ → chỉ tính thêm 1/2 ngày."
+    },
+    {
+      "claim": "Thủ tục nhận xe tại các nhà xe khu vực Ga Hà Nội qua nền tảng Vexere: giấy tờ cần chuẩn bị CCCD hoặc hộ chiếu và GPLX bản gốc; cọc 1tr/xe đến 2tr/xe, hoặc cọc 500k/xe đến 1tr/xe nếu có thẻ sinh viên hoặc vé máy bay; chụp ảnh CCCD/hộ chiếu; chỉ sử dụng xe trong phạm vi Thành phố Hà Nội (cũ), nhà xe có quyền từ chối giao xe nếu khách di chuyển ngoài phạm vi trên; thanh toán tổng giá trị thuê xe cho nhà xe khi làm thủ tục nhận xe, nhà xe không tính phí hủy.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ga-ha-noi.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "2. Thủ tục khi nhận xe - Giấy tờ cần chuẩn bị: CCCD/Passport & GPLX (bản gốc) - Cọc 1tr/xe đến 2tr/xe - Cọc 500k/xe đến 1tr/xe (nếu có thẻ sinh viên/vé máy bay) - Chụp ảnh CCCD/Passport * Vui lòng chỉ sử dụng xe trong phạm vi Thành phố Hà Nội (cũ). Nhà xe có quyền từ chối giao xe nếu khách hàng di chuyển ngoài phạm vi trên. 3. Thanh toán và Hủy - Thanh toán Tổng giá trị thuê xe cho nhà xe khi làm thủ tục nhận xe. - Nhà xe không tính phí hủy."
+    },
+    {
+      "claim": "Lưu ý đặc thù Ga Hà Nội: cửa ga nằm ngay trên mặt đường Lê Duẩn — một tuyến đường một chiều rất lớn và đông đúc, cần quan sát kỹ biển báo và luồng giao thông để tránh đi ngược chiều ngay khi vừa nhận xe; từ Ga Hà Nội chỉ cần chạy khoảng 600m là tới một địa điểm lịch sử nổi tiếng ở phố cổ; chỉ mất khoảng 5-7 phút di chuyển là có thể gửi xe tại bãi đỗ của khu di tích Hoàng Thành Thăng Long gần đó.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ga-ha-noi.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cẩn trọng với đường một chiều. Cửa Ga Hà Nội nằm ngay trên mặt đường Lê Duẩn - một tuyến đường một chiều rất lớn và đông đúc, bạn cần quan sát kỹ biển báo và luồng giao thông để tránh đi ngược chiều ngay khi vừa nhận xe... Từ Ga Hà Nội, bạn chỉ cần vít ga nhẹ khoảng 600m là tới địa điểm lịch sử nổi tiếng này mà không lo lạc đường hay tắc nghẽn... Chỉ mất khoảng 5-7 phút di chuyển, bạn có thể gửi xe tại bãi đỗ của khu di tích Hoàng Thành Thăng Long gần đó."
+    },
+    {
+      "claim": "MOTOGO Hà Nội niêm yết: xe số Yamaha Sirius 110cc 130.000đ/ngày, Honda Vision 110cc 180.000đ/ngày, Honda Air Blade 125cc 200.000đ/ngày, mỗi ngày thuê xe là 24h tính từ thời điểm thuê; kèm 2 mũ bảo hiểm, 2 áo mưa, giá đỡ điện thoại, baga và dây chằng đồ; giao xe miễn phí tại quận Hoàn Kiếm, Ba Đình tính 30.000đ/lượt, ngoài phạm vi miễn phí 3 - 5km tính 30.000đ/lượt và trên 5km tính 40.000đ/lượt; thuê theo tháng Yamaha Sirius 2.400.000 VND, Honda AirBlade 3.600.000 VND; khách không có sổ hộ khẩu thay thế bằng đặt cọc 3 triệu đồng, khách nước ngoài dùng ID card hoặc hộ chiếu.",
+      "source_url": "https://motogo.vn/ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Xe xăng · Xe số Yamaha Sirius 110cc 130.000đ/ngày... 02 Mũ bảo hiểm 02 Áo mưa 1 lần Có Giá đỡ điện thoại Có Baga & dây chằng đồ 130.000đ/ngày 1 ngày thuê xe là 24h, tính từ thời điểm thuê xe... Xe xăng · Tay ga Honda Vision 110cc 180.000đ/ngày... Xe xăng · Tay ga Honda Air Blade 125cc 200.000đ/ngày... Phí giao nhận ngoài phạm vi miễn phí: 3 - 5km: 30.000đ/lượt. 5km: 40.000đ/lượt. Địa điểm thuê xe máy Phí giao hoặc nhận xe/lượt Quận Hoàn Kiếm Miễn phí Ba Đình 30.000đ... Loại xe Giá/tháng Yamaha Sirius 2.400.000 VND Honda AirBlade 3.600.000 VND... Nếu không có sổ hộ khẩu sẽ thay thế bằng đặt cọc 3 triệu đồng. Khách nước ngoài, sẽ là ID card hoặc passport."
+    },
+    {
+      "claim": "Theo Wikidulich, 13535 Motorbike Rental Hanoi ghi giá thuê xe số dao động 100.000 - 150.000 VND/ngày, xe ga 120.000 - 150.000 VND/ngày, xe Exciter khoảng 200.000 - 250.000 VND; khi thuê cần CCCD và bằng lái photo, tiền cọc 2 triệu; khách nhận một bản hợp đồng thuê xe, 2 mũ bảo hiểm, khóa xe, dây buộc đồ nếu có nhu cầu; cửa hàng có dịch vụ giao xe tận sân bay Nội Bài và Ga Hà Nội; thuê xe máy ở khách sạn Hà Nội thường đắt hơn 20-30k/ngày so với thuê ngoài nhưng không cần đặt cọc tiền và giấy tờ.",
+      "source_url": "https://wikidulich.com/thue-xe-may-ha-noi.html",
+      "source_domain": "wikidulich.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "13535 Motorbike Rental Hanoi Giá thuê xe ở đây giao động từ xe số 100.000-150.000VND/ngày, xe ga 120.000-150.000 VND/ngày, xe Exciter giá khoảng 200.000-250.000VND. Khi bạn cần CCCD bằng lái xe photo, tiền cọc 2 triệu. Khách sẽ được nhận một bản hợp đồng thuê xe, 2 mũ bảo hiểm, khóa xe, dây buộc đồ nếu có nhu cầu... thuê xe máy ở Hà Nội cũng có dịch vụ giao xe tận sân bay Nội Bài, Ga Hà Nội... Thuê xe máy ở khách sạn Hà Nội các bạn không phải đặt cọc tiền và giấy tờ... giá thường đắt hơn 20-30k/ngày so với thuê ngoài."
+    }
+  ]
+}
