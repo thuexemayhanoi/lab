@@ -1,0 +1,149 @@
+{
+  "article_id": "A00073",
+  "primary_keyword": "thuê xe máy Hồ Hoàn Kiếm",
+  "secondary_keywords": [
+    "thuê xe máy quanh hồ Gươm",
+    "thuê xe máy gần hồ Hoàn Kiếm",
+    "cho thuê xe máy quanh hồ Gươm",
+    "thuê xe máy tự lái quanh hồ Hoàn Kiếm",
+    "giá thuê xe máy quanh hồ Gươm"
+  ],
+  "search_intent": "informational-research — du khách lưu trú quanh hồ Gươm cần biết điểm nhận xe trong bán kính quanh hồ, bảng giá niêm yết và khung giờ vùng lõi cấm xe hai bánh vào tối cuối tuần",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Hà Nội",
+    "Hồ Hoàn Kiếm",
+    "hồ Gươm",
+    "phường Hoàn Kiếm",
+    "khu vực 1 phường Hoàn Kiếm",
+    "Hàng Khay",
+    "Lê Thái Tổ",
+    "Đinh Tiên Hoàng",
+    "Tràng Tiền",
+    "Ngõ Huyện",
+    "Thọ Xương",
+    "Hàng Trống",
+    "Bạch Đằng",
+    "Lương Ngọc Quyến",
+    "Hàng Buồm",
+    "Đường Láng",
+    "Khâm Thiên",
+    "chợ Đồng Xuân",
+    "cầu Long Biên",
+    "Hồ Tây",
+    "ga Hà Nội"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe tay ga",
+    "xe máy tự lái"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "MOTOGO",
+    "13535",
+    "Gia Hưng",
+    "Hanoibiker",
+    "Tâm Việt"
+  ],
+  "model_entities": [
+    "Honda Wave",
+    "Honda Vision",
+    "Honda Lead",
+    "Honda Air Blade",
+    "Honda Dream",
+    "Yamaha Jupiter",
+    "Yamaha Sirius"
+  ],
+  "questions_found": [
+    "Thuê xe máy quanh hồ Gươm giá bao nhiêu một ngày?",
+    "Tối cuối tuần có chạy xe máy được quanh hồ Gươm không?",
+    "Cho thuê xe máy quanh hồ Hoàn Kiếm có cần đặt cọc không?",
+    "Có cửa hàng nào giao xe tận khách sạn quanh hồ Gươm không?"
+  ],
+  "related_queries": [
+    "thuê xe máy quanh hồ gươm",
+    "thuê xe máy hà nội không cần cọc",
+    "phố đi bộ hồ gươm giờ nào",
+    "cho thuê xe máy hoàn kiếm giao tận nơi"
+  ],
+  "serp_patterns": "SERP \"thuê xe máy Hà Nội\" và \"thuê xe máy Hoàn Kiếm\" gồm danh sách cửa hàng (Motogo, Giahuy.org, Phượt 3 Miền) và website cửa hàng; truy vấn POI \"hồ Hoàn Kiếm / quanh hồ Gươm\" chưa có bài riêng trong repo — bài này chiếm intent bằng danh sách điểm nhận xe trong bán kính quanh hồ và lưu ý vùng lõi cấm xe 19 đến 24 giờ tối cuối tuần, tách biệt với trang quận-level thue-xe-may-hoan-kiem.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "Motogo — Thuê xe máy phố cổ Hà Nội (bảng giá cửa hàng quanh hồ Gươm)",
+      "url": "https://motogo.vn/thue-xe-may-pho-co-ha-noi/"
+    },
+    {
+      "name": "Giahuy.org — 6 địa chỉ thuê xe máy quận Hoàn Kiếm Hà Nội",
+      "url": "https://giahuy.org/thue-xe-may-hoan-kiem-ha-noi/"
+    },
+    {
+      "name": "Phượt 3 Miền — 10 chỗ cho thuê xe máy ở Hà Nội uy tín",
+      "url": "https://phuot3mien.com/tong-hop-dia-diem-thue-xe-may-o-ha-noi.html"
+    },
+    {
+      "name": "Hanoibiker — Thuê xe máy Hà Nội (giá, thủ tục, giao xe)",
+      "url": "https://hanoibiker.com/"
+    },
+    {
+      "name": "VietnamPlus (via Baomoi) — Hà Nội thí điểm cấm phương tiện vùng lõi Hoàn Kiếm",
+      "url": "https://baomoi.com/ha-noi-thi-diem-cam-phuong-tien-vung-loi-hoan-kiem-nhieu-nguoi-dan-bo-ngo-xuong-xe-dat-bo-c55547271.epi"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-hoan-kiem/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ga-ha-noi/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/"
+  ],
+  "potential_cannibalization": "Khác biệt với trang quận-level thue-xe-may-hoan-kiem (intent \"quận Hoàn Kiếm\") và trang tổng quan thue-xe-may-ha-noi: bài này nhắm POI \"hồ Hoàn Kiếm / quanh hồ Gươm\" — điểm nhận xe trong bán kính quanh hồ, khung giờ vùng lõi cấm 12 tuyến phố 19 đến 24 giờ tối cuối tuần và cách hẹn nhận/trả xe ngoài vùng cấm. Không cross-link bài phố cổ (cùng cặp push, chống doorway-pair).",
+  "unique_angle": "Góc nhìn \"nhận xe ngay tại vành hồ nhưng trả xe ngoài vùng cấm\": danh sách cửa hàng quanh hồ Gươm theo niêm yết công khai, phí giao xe tận khách sạn 15.000đ – 50.000đ và kế hoạch giờ nhận xe quanh khung phố đi bộ cuối tuần.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không claim dịch vụ; disclosure P2 chuẩn (bản Hà Nội). requires_official_sources=0. Mọi claim định lượng có claim_evidence từ nguồn đã mở 2026-10-01 (cùng bộ nguồn đã xác minh cho bài phố cổ cùng vùng).",
+  "claim_evidence": [
+    {
+      "claim": "Cửa hàng 13535 (12 Lương Ngọc Quyến, Hàng Buồm) niêm yết xe số 130.000đ/ngày, xe ga 220.000đ/ngày; \"Thuê xe máy Hoàn Kiếm\" (38 Thọ Xương) ghi xe số 150.000đ/ngày, xe ga 180.000đ – 300.000đ/ngày; Gia Hưng (41 Ngõ Huyện) ghi xe số 150.000đ/ngày, xe ga 250.000đ/ngày; MOTOGO (1081 Hồng Hà; 81 Nguyễn Khả Trạc; sân bay Nội Bài) ghi xe số 80.000đ – 130.000đ/ngày, xe ga 120.000đ – 200.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-pho-co-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá Motogo phố cổ: \"13535 — 12 Lương Ngọc Quyến, Hàng Buồm — Giá thuê xe số: 130.000đ/ngày; Giá thuê xe ga: 220.000đ/ngày\"; \"Thuê xe máy Hoàn Kiếm Hà Nội — 38 Thọ Xương — xe số 150.000đ/ngày; xe ga 180.000đ – 300.000đ/ngày\"; \"Gia Hưng — 41 Ng. Huyện — xe số 150.000đ/ngày; xe ga 250.000đ/ngày\"; \"MOTOGO — 1081 Hồng Hà / 81 Nguyễn Khả Trạc / Sân bay Nội Bài — xe số 80.000đ – 130.000đ/ngày; xe ga 120.000đ – 200.000đ/ngày\"."
+    },
+    {
+      "claim": "Gia Hưng Motorbike (28 Ngõ Thọ Xương, Hàng Trống) niêm yết 100.000đ – 150.000đ/ngày tùy loại xe; cửa hàng 85 Bạch Đằng (Hoàn Kiếm) mở cửa từ 7:00 sáng, giá xe số 80.000đ – 130.000đ/ngày, xe ga 120.000đ – 200.000đ/ngày.",
+      "source_url": "https://giahuy.org/thue-xe-may-hoan-kiem-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giahuy.org: Gia Hưng \"địa chỉ tại 28 Ng. Thọ Xương, Hàng Trống, Hoàn Kiếm... dao động từ 100.000đ – 150.000đ/ngày tùy loại xe\"; mục 85 Bạch Đằng: \"thời gian mở cửa từ 7:00 sáng các ngày trong tuần... giá thuê từ 80.000đ đến 130.000đ/ngày cho xe số, và 120.000đ đến 200.000đ/ngày cho xe ga\"."
+    },
+    {
+      "claim": "Hanoibiker (cơ sở 37 Đường Láng, 30 Khâm Thiên) niêm yết xe số thuê 1-4 ngày 120.000đ/ngày, thuê 5-7 ngày 100.000đ/ngày; xe ga 1-3 ngày 180.000đ/ngày, 4-7 ngày 160.000đ/ngày; giao xe nhanh 30 phút, chi phí giao xe 20.000đ – 50.000đ tùy khoảng cách; thủ tục cần CMND/CCCD cùng tiền cọc từ 1 triệu, khách có vé máy bay khứ hồi chỉ cần cọc CCCD hoặc 500.000đ; miễn phí 2 mũ bảo hiểm, 1 lít xăng, áo mưa, dây chằng.",
+      "source_url": "https://hanoibiker.com/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Hanoibiker: \"Cơ sở 1: 37 Đường Láng – Hà Nội. Cơ sở 2: 30 Khâm Thiên – Hà Nội\"; \"Giao xe nhanh 30 phút... (chi phí ship xe từ 20k- 50k)\"; \"bạn chỉ cần chuẩn bị CMT + tiền từ 1 triệu. Với khách có vé máy bay khứ hồi bạn chỉ cần cọc CCCD hoặc 500k\"; xe số \"1-4 ngày 120k/ngày; thuê từ 5 -7 ngày: 100k/ngày\"; xe ga \"1-3 ngày: 180k/ngày; thuê từ 4-7 ngày giá 160k/ngày\"; \"Miễn phí: 2 mũ bảo hiểm, 1L xăng, dây chằng\"."
+    },
+    {
+      "claim": "Tâm Việt (35 Đường Láng, Đống Đa) không cần đặt cọc tiền, chỉ cần CMND và bằng lái là nhận xe; giao xe nội thành phí 20.000đ – 30.000đ; miễn phí 2 mũ bảo hiểm, áo mưa đôi, 1 lít xăng; xe số Wave, Dream, Jupiter 120.000đ/ngày; xe ga Vision, Lead, Air Blade 180.000đ/ngày. Gia Hưng hỗ trợ giao xe tận khách sạn, bến xe, bến tàu khu phố cổ với chi phí giao xe khoảng 15.000đ.",
+      "source_url": "https://phuot3mien.com/tong-hop-dia-diem-thue-xe-may-o-ha-noi.html",
+      "source_domain": "phuot3mien.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Phượt 3 Miền: Tâm Việt \"Không cần đặt cọc thuê xe – chỉ cần CMND – Bằng Lái là nhận xe... phí giao xe từ 20k -30k... Miễn phí: 2 mũ bảo hiểm – áo mưa đôi... 1L xăng theo xe... Giá cho thuê xe số: Wave, dream, Jupiter – 120k/ngày; Giá cho thuê xe tay ga: Vision, lead, Airblade – 180k/ngày\"; địa chỉ \"35 đường láng\"; Gia Hưng \"Giao xe tận nơi... khu vực phố cổ Hà nội chi phí giao xe khoảng 15k\"."
+    },
+    {
+      "claim": "Từ tối 3/7, Hà Nội cấm các phương tiện giao thông đường bộ (xe môtô, xe gắn máy và ô tô) tại 12 tuyến phố thuộc khu vực 1 của phường Hoàn Kiếm, khung giờ cấm từ 19 đến 24 giờ vào các tối cuối tuần; các tuyến phố gồm Tràng Tiền, Hàng Khay, Lê Thái Tổ, Hàng Đào, Hàng Ngang, Hàng Buồm, Mã Mây, Hàng Bạc, Hàng Mắm, Nguyễn Hữu Huân, Lý Thái Tổ, Ngô Quyền; người dân trong khu vực xuống xe dắt bộ qua chốt.",
+      "source_url": "https://baomoi.com/ha-noi-thi-diem-cam-phuong-tien-vung-loi-hoan-kiem-nhieu-nguoi-dan-bo-ngo-xuong-xe-dat-bo-c55547271.epi",
+      "source_domain": "baomoi.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Báo VietnamPlus (05/7/2026, qua Baomoi): \"Từ tối 3/7, Hà Nội bắt đầu cấm các phương tiện giao thông đường bộ (xe môtô, xe gắn máy và các loại ôtô) tại 12 tuyến phố thuộc khu vực 1 của phường Hoàn Kiếm, khung giờ cấm từ 19 đến 24 giờ\"; \"cấm các phương tiện giao thông tại lõi phường Hoàn Kiếm vào tối cuối tuần\"; danh sách 12 phố như trên; \"nhân viên trực chốt sẽ yêu cầu người dân xuống xe dắt bộ về nhà\"."
+    },
+    {
+      "claim": "Mặt bằng thuê xe quanh hồ Gươm dao động khoảng 80.000đ – 220.000đ/ngày: xe số phổ thông 80.000đ – 150.000đ/ngày, xe tay ga 120.000đ – 220.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-pho-co-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tổng hợp niêm yết: MOTOGO xe số từ 80.000đ/ngày; 13535 xe ga tới 220.000đ/ngày; các cửa hàng xe số tới 150.000đ/ngày (38 Thọ Xương, Gia Hưng) — khoảng dao động chung từ niêm yết các cửa hàng trên Motogo."
+    }
+  ]
+}
