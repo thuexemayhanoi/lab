@@ -1,0 +1,108 @@
+{
+  "article_id": "A00018",
+  "primary_keyword": "thuê xe máy Ninh Bình",
+  "secondary_keywords": [
+    "cho thuê xe máy Ninh Bình",
+    "thuê xe máy Tam Cốc",
+    "thuê xe máy gần ga Ninh Bình",
+    "thuê xe máy đi Tràng An"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Ninh Bình",
+    "Hà Nam",
+    "Nam Định",
+    "Tam Cốc – Bích Động",
+    "Tràng An",
+    "Cố đô Hoa Lư",
+    "ga Ninh Bình",
+    "thành phố Ninh Bình"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe ga cao cấp",
+    "xe côn tay"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki"
+  ],
+  "model_entities": [
+    "Wave",
+    "Vision",
+    "Air Blade",
+    "Winner"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Ninh Bình giá bao nhiêu một ngày?",
+    "nên nhận xe ở thành phố Ninh Bình hay ở khu Tam Cốc?",
+    "sau sáp nhập, 'thuê xe máy Hà Nam', 'thuê xe máy Nam Định' tìm ở đâu?",
+    "thuê xe máy đi Tràng An, Hoa Lư có cần đặt trước không?",
+    "ga Ninh Bình có cho thuê xe gần đó không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Ninh Bình",
+    "cho thuê xe máy tự lái Ninh Bình giao tận nơi",
+    "thuê xe máy đi Tam Cốc Tràng An",
+    "kinh nghiệm phượt Ninh Bình bằng xe máy"
+  ],
+  "serp_patterns": "SERP dày đặc nhất nhóm du lịch: cẩm nang tổng hợp quanh Tam Cốc – Tràng An – Hoa Lư (motogo, wikidulich, ninhbinhlocaltour, dulichtoday, bookninhbinh, baoninhbinh); dịch vụ giao xe tận khách sạn/homestay phổ biến; giá phân tầng rõ theo loại xe (xe số → xe ga → xe ga cao cấp/côn tay); khối lượng khách lớn cuối tuần và mùa lúa vàng.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-ninh-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "tham khảo chung về các cơ sở cho thuê xe máy tại Ninh Bình, giao xe tận nơi"
+    },
+    {
+      "source_url": "https://baoninhbinh.org.vn/10-dia-diem-cho-thue-xe-may-ninh-binh-gia-re-giao-tan-noi/d20230216142021508.htm",
+      "source_domain": "baoninhbinh.org.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "báo tỉnh ghi nhận dịch vụ cho thuê xe máy ở Ninh Bình khá phát triển, giao xe tận nơi"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/kinh-nghiem/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/",
+    "/lab/cuu-ho-xe-may/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-ninh-binh: nhóm gốc cấp tỉnh (nay bao gồm Hà Nam, Nam Định cũ). Các row POI riêng (Tràng An, Tam Cốc, Hoa Lư…) và row 'ga Ninh Bình' là intent hẹp hơn — bài này giữ tổng quan thị trường và so sánh hai khu nhận xe chính (thành phố vs Tam Cốc), không lấn intent POI.",
+  "unique_angle": "Bài tỉnh gốc cho thị trường du lịch trưởng thành bậc nhất đồng bằng Bắc Bộ sau sáp nhập 2025 (Ninh Bình + Hà Nam + Nam Định): góc viết là 'hai đầu nhận xe' — thành phố Ninh Bình quanh ga (khách đi tàu, khởi hành sớm) và khu Tam Cốc (khách ở homestay, đi lại gần Tràng An – Hoa Lư) — kèm bảng giá phân tầng theo loại xe.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng, chỉ nêu đơn vị được nguồn công khai ghi (MOTOGO, Ninh Bình Local Tour, Phương Tiến, Dung Mạnh…). Tràng An, Tam Cốc – Bích Động, Cố đô Hoa Lư là POI đã verify trong data/geography (tỉnh Ninh Bình). Sáp nhập hành chính 2025: Ninh Bình + Hà Nam + Nam Định = tỉnh Ninh Bình. Ga Ninh Bình nằm trên tuyến đường sắt Bắc – Nam.",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá khu Tam Cốc (Ninh Bình Local Tour): xe số từ 100.000đ/ngày, xe ga từ 120.000đ/ngày",
+      "source_url": "https://ninhbinhlocaltour.com/thue-xe-may-tam-coc/",
+      "source_domain": "ninhbinhlocaltour.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá công khai: «Xe số … Từ 100.000đ/ngày; Xe ga … Từ 120.000đ/ngày; Xe ga cao cấp … Từ 150.000đ/ngày; Xe côn tay … Từ 150.000đ/ngày» — kèm mức nửa ngày «Từ 70.000đ» cho xe số và «Từ 90.000đ» cho xe ga."
+    },
+    {
+      "claim": "Mức nửa ngày khu Tam Cốc: xe số từ 70.000đ, xe ga từ 90.000đ",
+      "source_url": "https://ninhbinhlocaltour.com/thue-xe-may-tam-coc/",
+      "source_domain": "ninhbinhlocaltour.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá tham khảo từ 70.000đ cho nửa ngày với xe số … từ 120.000đ/ngày với xe ga và từ 150.000đ/ngày với xe ga cao cấp hoặc xe côn tay»; bảng giá ghi «Xe ga Từ 90.000đ» cho nửa ngày."
+    },
+    {
+      "claim": "Mặt bằng giá thuê xe máy Ninh Bình khá đồng đều, khoảng 100.000–180.000đ/ngày",
+      "source_url": "https://wikidulich.com/thue-xe-may-o-ninh-binh.html",
+      "source_domain": "wikidulich.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê xe máy Ninh Bình khá đồng đều (100-180k/ngày), nhưng MOTOGO đắt hơn (120-200k) lại có lợi thế lớn: thuê không cọc nếu có booking. Phương Tiến và Dung Mạnh rẻ nhất (100k)» — tức khoảng 100.000đ đến 180.000đ/ngày mặt bằng chung."
+    },
+    {
+      "claim": "MOTOGO tại Ninh Bình công khai 120.000 đồng/ngày cho xe số",
+      "source_url": "https://wikidulich.com/thue-xe-may-o-ninh-binh.html",
+      "source_domain": "wikidulich.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê là 120.000 đồng cho xe số và 200k cho xe ga. Địa chỉ của họ cách ga Ninh Bình 100m»."
+    }
+  ]
+}

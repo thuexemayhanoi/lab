@@ -1,0 +1,99 @@
+{
+  "article_id": "A00017",
+  "primary_keyword": "thuê xe máy Hưng Yên",
+  "secondary_keywords": [
+    "cho thuê xe máy Hưng Yên",
+    "thuê xe máy phố cổ Hưng Yên",
+    "thuê xe máy Thái Bình",
+    "thuê xe máy Phố Nối"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Hưng Yên",
+    "Thái Bình",
+    "phố cổ Hưng Yên",
+    "Phố Nối",
+    "Yên Mỹ",
+    "Khoái Châu",
+    "Văn Lâm",
+    "quốc lộ 5"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Wave",
+    "Vision",
+    "Air Blade",
+    "Sirius"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Hưng Yên giá bao nhiêu một ngày?",
+    "sau sáp nhập, 'thuê xe máy Thái Bình' tìm ở đâu?",
+    "đi phố cổ Hưng Yên nên thuê xe gì, nhận xe ở đâu?",
+    "khách công tác khu Phố Nối, Yên Mỹ có thuê xe được không?",
+    "thuê xe máy Hưng Yên có giao tận nơi không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Hưng Yên",
+    "cho thuê xe máy tự lái Hưng Yên",
+    "thuê xe máy đi phố cổ Hưng Yên",
+    "thuê xe máy dài hạn Hưng Yên"
+  ],
+  "serp_patterns": "SERP là cẩm nang danh sách cửa hàng (giahuy, motogo, tripbike, thuexemayhaiphong) và trang giá của đơn vị địa phương; dịch vụ tập trung quanh thành phố Hưng Yên và các huyện dọc quốc lộ 5 (Văn Lâm, Yên Mỹ, Khoái Châu); hai nhóm khách: công tác khu công nghiệp và du lịch phố cổ, mùa nhãn.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-hung-yen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "tham khảo chung về các cơ sở cho thuê xe máy tại Hưng Yên và chính sách ưu đãi thuê dài ngày"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/kinh-nghiem/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-hai-phong/",
+    "/lab/cuu-ho-xe-may/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-hung-yen: nhóm gốc cấp tỉnh (nay bao gồm Thái Bình cũ sau sáp nhập). Các row POI, model, giá riêng là intent hẹp hơn — bài này giữ tổng quan thị trường dọc trục QL5, không lấn intent POI phố cổ hay giá từng model.",
+  "unique_angle": "Bài tỉnh gốc nằm giữa hai cực Hà Nội – Hải Phòng dọc quốc lộ 5: thị trường nhỏ nhưng chiến lược cho khách công tác các khu công nghiệp Phố Nối, Yên Mỹ, Khoái Châu; sau sáp nhập với Thái Bình, các tìm kiếm 'thuê xe máy Thái Bình' giờ cũng rơi về tỉnh Hưng Yên — bài hướng dẫn chọn điểm thuê theo trục: phố cổ, thành phố Hưng Yên và cụm KCN.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng, chỉ nêu địa điểm được nguồn tổng hợp công khai ghi (Thanh Hà Hotel ở Yên Mỹ, Gia Hưng ở Khoái Châu). Sáp nhập hành chính 2025: Thái Bình + Hưng Yên = tỉnh Hưng Yên. Quốc lộ 5 và cao tốc Hà Nội – Hải Phòng đi qua địa bàn Hưng Yên.",
+  "claim_evidence": [
+    {
+      "claim": "Thanh Hà Hotel (huyện Yên Mỹ, Hưng Yên) công khai giá thuê xe số 80.000–100.000đ/ngày",
+      "source_url": "https://thuexemayhaiphong.com/4-dia-diem-thue-xe-may-hung-yen-uy-tin-chat-luong/",
+      "source_domain": "thuexemayhaiphong.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê xe số: 80.000 – 100.000 đ/ngày» tại Thanh Hà Hotel, Thôn Ông Hảo, Liễu Xá, Huyện Yên Mỹ, Hưng Yên."
+    },
+    {
+      "claim": "Cùng nguồn ghi giá thuê xe ga ở đây 130.000–140.000đ/ngày",
+      "source_url": "https://thuexemayhaiphong.com/4-dia-diem-thue-xe-may-hung-yen-uy-tin-chat-luong/",
+      "source_domain": "thuexemayhaiphong.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê xe ga: 130.000 – 140.000 đ/ngày» tại Thanh Hà Hotel."
+    },
+    {
+      "claim": "Gia Hưng (huyện Khoái Châu, Hưng Yên) công khai giá xe số 80.000–120.000đ/ngày và xe ga 120.000–160.000đ/ngày",
+      "source_url": "https://thuexemayhaiphong.com/4-dia-diem-thue-xe-may-hung-yen-uy-tin-chat-luong/",
+      "source_domain": "thuexemayhaiphong.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Gia Hưng … Giá thuê xe số: 80.000 – 120.000 đ/ngày, Giá thuê xe ga: 120.000 – 160.000 đ/ngày, Thôn Lôi Cầu, Khoái Châu, Hưng Yên»."
+    },
+    {
+      "claim": "Cẩm nang giahuy ghi giá thuê xe máy Hưng Yên chỉ từ khoảng 90.000đ",
+      "source_url": "https://giahuyorg.gitbook.io/thue-xe-may-1/thue-xe-may-hung-yen",
+      "source_domain": "giahuyorg.gitbook.io",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiêu đề bài tổng hợp: «5 Địa Điểm Thuê xe máy Hưng Yên Giá Rẻ Chỉ từ 90k» — tức mức khởi điểm khoảng 90.000đ."
+    }
+  ]
+}
