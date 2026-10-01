@@ -1,0 +1,186 @@
+{
+  "article_id": "A00089",
+  "primary_keyword": "thuê xe máy Thác Datanla",
+  "secondary_keywords": [],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Thác Datanla",
+    "Đà Lạt",
+    "Lâm Đồng",
+    "đèo Prenn",
+    "quốc lộ 20",
+    "chợ Đà Lạt",
+    "Nguyễn Văn Cừ",
+    "Trần Phú (Đà Lạt)",
+    "Thiền viện Trúc Lâm",
+    "hồ Tuyền Lâm",
+    "Ga Đà Lạt",
+    "Bảo Lộc"
+  ],
+  "vehicle_entities": [
+    "xe máy",
+    "xe buýt",
+    "taxi",
+    "cano du lịch"
+  ],
+  "brand_entities": [
+    "Honda"
+  ],
+  "model_entities": [
+    "Honda Wave",
+    "Honda Air Blade",
+    "Honda Vision",
+    "Honda Lead"
+  ],
+  "questions_found": [
+    "Thác Datanla cách trung tâm Đà Lạt bao xa?",
+    "Giá vé thác Datanla bao nhiêu?",
+    "Đi Datanla nên thuê xe máy hay đi tour?",
+    "Có xe buýt đi thác Datanla không?",
+    "Thác Datanla có gì chơi?"
+  ],
+  "related_queries": [
+    "giá vé thác Datanla",
+    "đường đi thác Datanla",
+    "máng trượt thác Datanla",
+    "thuê xe máy Đà Lạt đi Datanla",
+    "Datanla cách trung tâm bao xa"
+  ],
+  "serp_patterns": "SERP gồm cẩm nang du lịch (blog vexere, hoadalattravel) mô tả vé và đường đi. Bài informational cần bảng giá trò chơi có nguồn + so sánh chi phí đi lại (xe máy/taxi/buýt/tour) — góc mà các cẩm nang thuần du lịch chưa làm rõ.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "Vexere Blog — Khu du lịch thác Datanla: giá vé, kinh nghiệm tham quan",
+      "url": "https://blog.vexere.com/khu-du-lich-thac-datanla/"
+    },
+    {
+      "name": "Hoa Dalat Travel — Thác Datanla Đà Lạt: giá vé, máng trượt",
+      "url": "https://hoadalattravel.vn/dia-diem-du-lich/thac-datanla-da-lat/"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/",
+    "https://thuexemayhanoi.github.io/lab/kinh-nghiem/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-lam-dong/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ba-na-hills/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-sa-pa/"
+  ],
+  "potential_cannibalization": "Bài \"thuê xe máy Đà Lạt\" (A00088) cùng được sản xuất nhưng chưa publish — không nội liên chéo đến trang chưa publish. Bài Datanla tập trung POI, giá vé, đường đi cụ thể; không lặp bảng giá cửa hàng thành phố.",
+  "unique_angle": "Góc \"so sánh chi phí đi lại\": thuê xe máy 100.000 – 150.000đ/ngày so với taxi 100.000 – 150.000đ/chiều, buýt 15.000 – 20.000đ, tour 250.000 – 300.000đ — giúp người đọc chọn phương án theo nhóm và lịch trình.",
+  "notes": "Hai nguồn ghi vé trẻ em khác nhau (50.000đ vs 60.000đ) — bài nêu cả hai và khuyến nghị hỏi lại tại quầy, không khẳng định một số duy nhất. Không dùng \"chúng tôi\".",
+  "claim_evidence": [
+    {
+      "claim": "Thác Datanla nằm trên quốc lộ 20, đoạn đèo Prenn, cách trung tâm Đà Lạt khoảng 4–5 km",
+      "source_url": "https://hoadalattravel.vn/dia-diem-du-lich/thac-datanla-da-lat/",
+      "source_domain": "hoadalattravel.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thác Datanla nằm tại QL20 Đèo Prenn, Phường 3, Đà Lạt, Lâm Đồng, cách trung tâm thành phố khoảng 4–5 km."
+    },
+    {
+      "claim": "Dòng nước thác Datanla đổ từ độ cao 20m",
+      "source_url": "https://blog.vexere.com/khu-du-lich-thac-datanla/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Dòng nước trắng xóa đổ từ độ cao 20m tạo nên cảnh quan ngoạn mục."
+    },
+    {
+      "claim": "Từ trung tâm Đà Lạt đến thác Datanla mất khoảng 15 – 20 phút đi xe máy",
+      "source_url": "https://blog.vexere.com/khu-du-lich-thac-datanla/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thời gian di chuyển từ trung tâm Đà Lạt đến khu du lịch thác Datanla thường mất khoảng 15 – 20 phút."
+    },
+    {
+      "claim": "Từ chợ Đà Lạt đi đường Nguyễn Văn Cừ, rẽ Trần Phú, lên quốc lộ 20 hướng Bảo Lộc khoảng 4km rồi rẽ vào đường dài khoảng 1km tới khu du lịch",
+      "source_url": "https://blog.vexere.com/khu-du-lich-thac-datanla/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Từ chợ Đà Lạt, bạn di chuyển theo đường Nguyễn Văn Cừ. Sau đó rẽ vào đường Trần Phú và tiếp tục đi theo quốc lộ 20 (còn gọi là đường Prenn) hướng đi Bảo Lộc. Sau khi đi khoảng 4km trên quốc lộ 20, bạn sẽ bắt gặp biển chỉ dẫn rẽ vào khu du lịch thác Datanla nằm bên tay phải. Cung đường từ quốc lộ vào đến khu du lịch dài khoảng 1km."
+    },
+    {
+      "claim": "Xe buýt tuyến số 5 từ chợ Đà Lạt đi ngang khu du lịch Datanla; vé khoảng 15.000 – 20.000đ/người, tần suất 30 phút/chuyến",
+      "source_url": "https://blog.vexere.com/khu-du-lich-thac-datanla/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tuyến số 5 từ chợ Đà Lạt đi ngang qua khu du lịch Datanla. Giá vé chỉ khoảng 15.000 – 20.000 đồng/người. Xe buýt hoạt động từ 5:30 sáng đến 17:30 chiều, với tần suất 30 phút/chuyến."
+    },
+    {
+      "claim": "Vé vào cổng thác Datanla 80.000đ/người lớn và 50.000đ/trẻ em; trẻ cao dưới 1 m được miễn phí",
+      "source_url": "https://hoadalattravel.vn/dia-diem-du-lich/thac-datanla-da-lat/",
+      "source_domain": "hoadalattravel.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Vé tham quan đang được niêm yết ở mức 80.000 đồng/người lớn và 50.000 đồng/trẻ em, trẻ cao dưới 1 m được miễn phí."
+    },
+    {
+      "claim": "Một bảng giá tổng hợp khác ghi vé trẻ em vào cổng thác Datanla là 60.000đ",
+      "source_url": "https://blog.vexere.com/khu-du-lich-thac-datanla/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Người lớn: 80.000 VNĐ/vé. Trẻ em: 60.000 VNĐ/vé."
+    },
+    {
+      "claim": "Xe trượt thác 1 một chiều 110.000đ người lớn và 80.000đ trẻ em; khứ hồi 130.000đ và 90.000đ; xe trượt thác 3 là 350.000đ người lớn và 250.000đ trẻ em",
+      "source_url": "https://blog.vexere.com/khu-du-lich-thac-datanla/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Xe trượt thác 1 (1 chiều) | 110.000 VNĐ | 80.000 VNĐ | Xe trượt thác 1 (khứ hồi) | 130.000 VNĐ | 90.000 VNĐ | Xe trượt thác 3 (Đường trượt dài nhất Đông Nam Á) | 350.000 VNĐ | 250.000 VNĐ"
+    },
+    {
+      "claim": "Cáp treo tại khu du lịch Datanla giá 80.000đ người lớn và 40.000đ trẻ em",
+      "source_url": "https://blog.vexere.com/khu-du-lich-thac-datanla/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cáp treo | 80.000 VNĐ | 40.000 VNĐ"
+    },
+    {
+      "claim": "Tour canyoning tại Datanla dao động 600.000 – 900.000đ/người cho hành trình kéo dài khoảng 4-5 giờ",
+      "source_url": "https://blog.vexere.com/khu-du-lich-thac-datanla/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá vé canyoning Datanla dao động từ 600.000 – 900.000 đồng/người cho một hành trình kéo dài khoảng 4-5 giờ."
+    },
+    {
+      "claim": "Thuê xe máy ở Đà Lạt để đi Datanla dao động từ 100.000 – 150.000đ/ngày tùy loại xe",
+      "source_url": "https://blog.vexere.com/khu-du-lich-thac-datanla/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bạn có thể thuê xe máy Đà Lạt để chủ động khám phá. Giá thuê xe dao động từ 100.000 – 150.000 đồng/ngày tùy loại xe."
+    },
+    {
+      "claim": "Taxi từ trung tâm Đà Lạt đến thác Datanla khoảng 100.000 – 150.000đ một chiều",
+      "source_url": "https://blog.vexere.com/khu-du-lich-thac-datanla/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chuyến đi từ trung tâm đến thác thường có giá khoảng 100.000 – 150.000 đồng cho một chiều, tùy vào điểm xuất phát cụ thể và thời điểm trong ngày."
+    },
+    {
+      "claim": "Tour một ngày quanh Đà Lạt ghé thác Datanla giá trọn gói từ 250.000 – 300.000đ/người",
+      "source_url": "https://blog.vexere.com/khu-du-lich-thac-datanla/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "các tour du lịch một ngày quanh Đà Lạt thường bao gồm điểm dừng chân tại thác Datanla trong lịch trình, với mức giá trọn gói từ 250.000 – 300.000 đồng/người bao gồm hướng dẫn viên và các điểm tham quan lân cận."
+    },
+    {
+      "claim": "Tham quan thác Datanla mất khoảng 90 phút; đi kèm máng trượt thì từ 2 đến 3 giờ",
+      "source_url": "https://hoadalattravel.vn/dia-diem-du-lich/thac-datanla-da-lat/",
+      "source_domain": "hoadalattravel.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Khoảng 90 phút nếu chỉ tham quan, từ 2 đến 3 giờ nếu đi máng trượt, lâu hơn nếu tham gia hoạt động chuyên biệt"
+    },
+    {
+      "claim": "Khu du lịch thác Datanla mở cửa đón khách từ 7:30 đến 16:30 hằng ngày",
+      "source_url": "https://hoadalattravel.vn/dia-diem-du-lich/thac-datanla-da-lat/",
+      "source_domain": "hoadalattravel.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "ngày từ 7:30 đến 16:30. Du khách nên đến sớm để tránh đông, đặc biệt vào mùa cao điểm."
+    },
+    {
+      "claim": "Thiền viện Trúc Lâm cách thác Datanla khoảng 4km; Ga Đà Lạt cách khoảng 7km",
+      "source_url": "https://blog.vexere.com/khu-du-lich-thac-datanla/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thiền viện Trúc Lâm Đà Lạt nằm cách thác Datanla khoảng 4km. Ga Đà Lạt cách thác Datanla khoảng 7km. Là nhà ga xe lửa cổ nhất Đông Dương"
+    }
+  ]
+}

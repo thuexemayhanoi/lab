@@ -1,0 +1,164 @@
+{
+  "article_id": "A00088",
+  "primary_keyword": "thuê xe máy Đà Lạt",
+  "secondary_keywords": [],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Đà Lạt",
+    "Lâm Đồng",
+    "đèo Prenn",
+    "chợ Đà Lạt",
+    "Ga Đà Lạt",
+    "Phan Đình Phùng",
+    "Phan Bội Châu",
+    "Lý Tự Trọng",
+    "Trần Hưng Đạo",
+    "Nguyễn Chí Thanh",
+    "Tô Hiến Thành",
+    "bến xe Phương Trang",
+    "quốc lộ 20"
+  ],
+  "vehicle_entities": [
+    "xe máy",
+    "xe số",
+    "xe tay ga",
+    "xe tay côn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Honda Wave",
+    "Honda Air Blade",
+    "Honda Vision",
+    "Honda Lead",
+    "Yamaha Sirius",
+    "Yamaha Jupiter",
+    "Yamaha Exciter",
+    "Honda Winner"
+  ],
+  "questions_found": [
+    "Thuê xe máy Đà Lạt giá bao nhiêu?",
+    "Thuê xe máy Đà Lạt có cần cọc không?",
+    "Nhận xe máy ở đâu ở Đà Lạt?",
+    "Nên thuê xe số hay xe ga ở Đà Lạt?",
+    "Giao xe mất bao lâu?"
+  ],
+  "related_queries": [
+    "giá thuê xe máy Đà Lạt",
+    "cho thuê xe máy Đà Lạt giao tận nơi",
+    "thuê xe máy Đà Lạt không cần cọc",
+    "thuê xe côn Đà Lạt",
+    "thuê xe máy đi đèo Prenn"
+  ],
+  "serp_patterns": "SERP gồm bài tổng hợp giá của các bên cho thuê (agotourist, motogo) và danh sách cửa hàng. Bài informational cần bảng giá theo nhóm xe có nguồn, cảnh báo giá rẻ rủi ro và kinh nghiệm chạy dốc — phần lớn trang hiện tại bỏ qua.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "AGO Tourist — Thuê xe máy Đà Lạt (bảng giá)",
+      "url": "https://agotourist.com/thue-xe-may/"
+    },
+    {
+      "name": "MOTOGO — Thuê xe máy Đà Lạt: các đơn vị giao nhận tận tay",
+      "url": "https://motogo.vn/thue-xe-may-tai-da-lat/"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/",
+    "https://thuexemayhanoi.github.io/lab/kinh-nghiem/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-lam-dong/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-sa-pa/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-tam-dao/"
+  ],
+  "potential_cannibalization": "Đã có bài \"thuê xe máy Lâm Đồng\" cấp tỉnh. Bài Đà Lạt viết sâu cấp thành phố (giá theo nhóm xe, cửa hàng cụ thể, địa hình dốc); dẫn liên kết sang bài tỉnh, không lặp nội dung tỉnh.",
+  "unique_angle": "Gắn mặt bằng giá với địa hình dốc: giải thích vì sao ở Đà Lạt nên chọn xe theo phanh và thân xe thay vì chỉ theo giá, kèm cảnh báo quảng cáo giá rẻ 70.000 – 80.000đ đi kèm rủi ro.",
+  "notes": "Không dùng \"chúng tôi\", không chào dịch vụ. Địa chỉ cửa hàng chỉ nêu nơi nguồn công khai ghi rõ; không bịa số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Giá thuê xe máy ở Đà Lạt dao động từ 100.000 – 180.000đ/ngày tùy loại xe số, xe ga hoặc xe tay côn",
+      "source_url": "https://agotourist.com/thue-xe-may/",
+      "source_domain": "agotourist.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy ở Đà Lạt năm 2026 dao động từ 100.000 – 180.000 đ/ngày, tùy vào loại xe số, xe ga hoặc xe tay côn."
+    },
+    {
+      "claim": "Xe số (Wave, Sirius, Jupiter) 100.000 – 120.000đ/ngày; xe tay ga (Air Blade, Vision, Lead) 120.000 – 140.000đ/ngày; xe tay côn (Exciter, Winner) 150.000 – 180.000đ/ngày",
+      "source_url": "https://agotourist.com/thue-xe-may/",
+      "source_domain": "agotourist.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Xe số (Wave, Sirius, Jupiter…) | 100.000 – 120.000 đ/ngày | Xe tay ga (Air Blade, Vision, Lead…) | 120.000 – 140.000 đ/ngày | Xe tay côn (Exciter, Winner…) | 150.000 – 180.000 đ/ngày"
+    },
+    {
+      "claim": "Nhiều đơn vị giao xe tận khách sạn, homestay trong trung tâm Đà Lạt hoặc bến xe trong 15-30 phút",
+      "source_url": "https://agotourist.com/thue-xe-may/",
+      "source_domain": "agotourist.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "AGO Tourist hỗ trợ giao xe tận khách sạn, homestay trong khu vực trung tâm Đà Lạt hoặc bến xe chỉ trong 15 – 30 phút. Thời gian giao xe nhanh từ 15-30 phút."
+    },
+    {
+      "claim": "Giá thuê giữa các cửa hàng ở Đà Lạt thường chỉ chênh nhau khoảng 20.000 – 30.000đ/ngày",
+      "source_url": "https://agotourist.com/thue-xe-may/",
+      "source_domain": "agotourist.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy tại Đà Lạt thường chỉ chênh nhau khoảng 20.000 – 30.000 đ/ngày. Nhưng chất lượng xe và dịch vụ có thể khác biệt rất lớn."
+    },
+    {
+      "claim": "Quảng cáo thuê xe chỉ 70.000 – 80.000đ/ngày ở Đà Lạt thường đi kèm nhiều rủi ro",
+      "source_url": "https://agotourist.com/thue-xe-may/",
+      "source_domain": "agotourist.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nhiều du khách bị thu hút bởi các quảng cáo như \"thuê xe chỉ 70.000 – 80.000 đ/ngày\", nhưng thực tế mức giá này thường đi kèm với nhiều rủi ro."
+    },
+    {
+      "claim": "Go HAPPY (Phan Bội Châu) cho thuê xe số 100.000đ/ngày, xe ga 120.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-da-lat/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe máy Go HAPPY Địa chỉ: 40 Phan Bội Châu, phường 2, TP. Đà Lạt Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 120.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "Mr Din (Lý Tự Trọng) cho thuê xe số 80.000đ/ngày, xe ga 120.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-da-lat/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe máy Mr Din Đà Lạt Địa chỉ: số 78 đường Lý Tự Trọng, phường 2, TP. Đà Lạt Giá thuê xe số: 80.000đ/ngày Giá thuê xe ga: 120.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "Cub50 (Phan Đình Phùng) cho thuê xe số 80.000đ/ngày, xe ga 100.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-da-lat/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe máy Cub50 Đà Lạt Địa chỉ: 340 Phan Đình Phùng, phường 2, thành phố Đà Lạt Giá thuê xe số: 80.000đ/ngày Giá thuê xe ga: 100.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "Ngọc Anh (Trần Hưng Đạo) cho thuê xe số 100.000đ/ngày, xe ga 130.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-da-lat/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe Ngọc Anh Đà Lạt Địa chỉ: 2 Trần Hưng Đạo, Phường 3, Thành phố Đà Lạt Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 130.000đ/ngày"
+    },
+    {
+      "claim": "Một số đơn vị ở Đà Lạt cam kết giao nhận xe tận tay trong 10 phút",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-da-lat/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe máy Đà Lạt: 15+ đơn vị xe đời mới, giao nhận tận tay trong 10 phút"
+    },
+    {
+      "claim": "Có đơn vị công bố cho thuê xe không cần cọc với giá từ 100.000đ/ngày kèm hỗ trợ suốt hành trình",
+      "source_url": "https://agotourist.com/thue-xe-may/",
+      "source_domain": "agotourist.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tại AGO Tourist, bạn có thể thuê xe máy nhanh chóng – giao tận nơi – không cần cọc, với mức giá chỉ từ 100.000 đ/ngày và hỗ trợ 24/7 trong suốt hành trình."
+    },
+    {
+      "claim": "Có điểm nhận xe gần bến xe liên tỉnh (Tô Hiến Thành, sau bến xe Phương Trang) giá xe số 100.000đ/ngày, xe ga 120.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-da-lat/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Địa chỉ CS2: 01 Tô Hiến Thành. Phường 3, tp Đà Lạt (sau lưng bến xe Phương Trang) Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 120.000đ/ngày"
+    }
+  ]
+}
