@@ -1,0 +1,151 @@
+{
+  "article_id": "A00071",
+  "primary_keyword": "thuê xe máy gần Cảng Hòn Gai / Bến tàu Hạ Long",
+  "secondary_keywords": [
+    "thuê xe máy Hạ Long",
+    "thuê xe máy Bãi Cháy",
+    "thuê xe máy Hòn Gai",
+    "giá thuê xe máy Hạ Long",
+    "thuê xe máy gần bến tàu Hạ Long"
+  ],
+  "search_intent": "informational-research — du khách xuống tàu ở Cảng Hòn Gai / bến tàu Hạ Long cần biết bảng giá thuê xe quanh hai bờ, cách đặt giao xe và sự dịch chuyển bến tàu sau 2016",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Hạ Long",
+    "Quảng Ninh",
+    "Cảng Hòn Gai",
+    "bến khách Hòn Gai",
+    "Bãi Cháy",
+    "cầu Bãi Cháy",
+    "đường Thương Cảng",
+    "đường bao biển Kỳ Quan",
+    "đảo Tuần Châu",
+    "Vịnh Hạ Long",
+    "Bái Tử Long",
+    "Sun World Hạ Long Complex"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe tay ga",
+    "xe côn",
+    "xe máy tự lái"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Kim's Motorbike",
+    "Sun World Quảng Ninh",
+    "Nest Travel",
+    "Ruby's Motorbike Rentals",
+    "Minh's",
+    "Tân Trường Phát Travel",
+    "Motogo"
+  ],
+  "model_entities": [
+    "Honda Vision",
+    "Honda Air Blade",
+    "Honda Lead",
+    "Honda Click",
+    "Honda Wave",
+    "Yamaha Sirius",
+    "Yamaha Jupiter",
+    "Yamaha Nouvo",
+    "Honda Dream",
+    "Yamaha Luvias",
+    "Honda Luvius"
+  ],
+  "questions_found": [
+    "Thuê xe máy gần cảng Hòn Gai giá bao nhiêu?",
+    "Từ bến tàu Hòn Gai sang Bãi Chây bao xa?",
+    "Tàu thăm vịnh Hạ Long giờ đón khách ở đâu?",
+    "Thuê xe theo giờ ở Hạ Long có không?",
+    "Cảng Hòn Gai là cảng loại gì?"
+  ],
+  "related_queries": [
+    "bến tàu khách Hòn Gai",
+    "cảng tàu khách quốc tế Hạ Long ở đâu",
+    "thuê xe máy Hạ Long giá rẻ",
+    "xe máy Hạ Long giao tận nơi"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy Hạ Long\" gồm danh sách cửa hàng (Motogo) và website cửa hàng (dichvuthuexehalong.com); truy vấn POI \"gần cảng Hòn Gai / bến tàu\" chưa có bài riêng — bài này chiếm intent bằng bảng giá hai khung giờ (theo tiếng / theo ngày) và mốc dịch chuyển bến tàu 2016.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "Wikipedia tiếng Việt — Cảng Hòn Gai",
+      "url": "https://vi.wikipedia.org/wiki/C%E1%BA%A3ng_H%C3%B2n_Gai"
+    },
+    {
+      "name": "Báo Chính phủ — Chuyển toàn bộ tàu du lịch Vịnh Hạ Long về Cảng Tuần Châu (24/12/2015)",
+      "url": "https://baochinhphu.vn/chuyen-toan-bo-tau-du-lich-vinh-ha-long-ve-cang-tuan-chau-102195941.htm"
+    },
+    {
+      "name": "AZgo Travel — Có bao nhiêu bến tàu tại Hạ Long?",
+      "url": "https://azgotravel.vn/tin-tuc/co-bao-nhieu-ben-tau-tai-ha-long"
+    },
+    {
+      "name": "Halongtourist — Cảng tàu khách quốc tế Hạ Long: Địa chỉ, Lịch trình, Review chi tiết",
+      "url": "https://halongtourist.net/cang-tau-khach-quoc-te-ha-long"
+    },
+    {
+      "name": "Kim's Motorbike — Thuê xe máy tại Hạ Long (bảng giá, thủ tục)",
+      "url": "https://dichvuthuexehalong.com/"
+    },
+    {
+      "name": "Motogo — Thuê xe máy Hạ Long: 9 địa chỉ có giá rẻ và chất lượng xe tốt nhất",
+      "url": "https://motogo.vn/thue-xe-may-ha-long/"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-quang-ninh/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-hai-phong/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-cat-bi/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/"
+  ],
+  "potential_cannibalization": "Trang tổng quan thue-xe-may-quang-ninh (đã publish) nhắm từ khóa tỉnh; bài này nhắm intent POI \"gần Cảng Hòn Gai / Bến tàu Hạ Long\" với bảng giá theo khung giờ và bối cảnh dịch chuyển bến tàu — khác thực thể, link một chiều từ bài POI sang trang tỉnh.",
+  "unique_angle": "Bài duy nhất gắn thuê xe với lịch sử bến tàu: mốc 1/1/2016 toàn bộ tàu du lịch chuyển về Tuần Châu (nguồn Báo Chính phủ), bến khu Hòn Gai giờ chỉ còn tuyến Bái Tử Long — từ đó tư vấn nhận xe theo hai bờ cầu Bãi Cháy với bảng giá theo 1 – 6 tiếng và theo ngày.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không claim dịch vụ; disclosure P2 chuẩn. requires_official_sources=0. Mọi claim định lượng có claim_evidence từ nguồn đã mở 2026-10-01.",
+  "claim_evidence": [
+    {
+      "claim": "Cảng Hòn Gai là cảng biển tổng hợp quốc gia, đầu mối khu vực (cảng loại I) trong vịnh Hạ Long; gồm khu bến cảng chính Cái Lân, bến xi măng Thăng Long, bến dầu B12 và bến khách Hòn Gai chuyên vận chuyển hành khách du lịch, hành khách Bắc-Nam, có khả năng tiếp nhận tàu 80 nghìn đến 100 nghìn GRT.",
+      "source_url": "https://vi.wikipedia.org/wiki/C%E1%BA%A3ng_H%C3%B2n_Gai",
+      "source_domain": "vi.wikipedia.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Wikipedia: \"Cảng Hòn Gai là một cảng biển tổng hợp quốc gia, đầu mối khu vực (cảng loại I) của Việt Nam, trong vịnh Hạ Long\"; liệt kê khu bến chính Cái Lân, bến xi măng Thăng Long, bến dầu B12; \"Bến khách Hòn Gai: chuyên dùng để vận chuyển hành khách du lịch, hành khách Bắc-Nam... khả năng tiếp nhận tàu 80 nghìn đến 100 nghìn GRT\"."
+    },
+    {
+      "claim": "Từ 1/1/2016, toàn bộ tàu du lịch tham quan Vịnh Hạ Long chuyển về cảng tàu khách quốc tế Tuần Châu; Cảng tàu khách du lịch Bãi Cháy và Cảng tàu du lịch Hòn Gai được đưa ra khỏi quy hoạch và dừng đón khách du lịch từ thời điểm đó.",
+      "source_url": "https://baochinhphu.vn/chuyen-toan-bo-tau-du-lich-vinh-ha-long-ve-cang-tuan-chau-102195941.htm",
+      "source_domain": "baochinhphu.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Báo Chính phủ (24/12/2015): \"Từ ngày 1/1/2016, toàn bộ tàu du lịch thăm quan Vịnh Hạ Long sẽ chuyển về Cảng tàu khách quốc tế Tuần Châu\" theo Quyết định 4036/QĐ-UBND của UBND tỉnh Quảng Ninh; \"hai cảng tàu... Cảng tàu khách du lịch Bãi Cháy và Cảng tàu du lịch Hòn Gai được đưa ra khỏi quy hoạch... và dừng hoạt động của các tàu tại hai cảng này từ ngày 1/1/2016\"."
+    },
+    {
+      "claim": "Bến tàu khách Vinashin Hòn Gai nằm cạnh bến phà Hòn Gai cũ, từng nổi tiếng cùng con tàu Hoa Sen mua của Ý; từ năm 2016 hơn 500 con tàu của bến này và Bến tàu du lịch Bãi Cháy đã chuyển về cảng tàu khách quốc tế Tuần Châu; hiện chủ yếu còn tàu ngủ đêm và tàu cao tốc tuyến Bái Tử Long. Cảng tàu khách quốc tế Hạ Long (Sun Group) ở trung tâm Bãi Cháy, giữa Tuần Châu và Hòn Gai, cách công viên Sun World Hạ Long Complex 500m, có 6 cầu bến gồm 4 bến đón tàu du lịch và du thuyền, 2 bến đón tàu khách quốc tế, đón được tàu lớn tới 230.000 GRT.",
+      "source_url": "https://azgotravel.vn/tin-tuc/co-bao-nhieu-ben-tau-tai-ha-long",
+      "source_domain": "azgotravel.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "AZgo Travel: bến tàu khách Vinashin Hòn Gai \"nằm ở gần bến pha Hòn Gai cũ... con tàu Hoa Sen mua của Ý khai thác khách du lịch quốc tế. Từ năm 2016 hơn 500 con tàu của cảng này và Bến tàu du lịch Bãi Cháy phải chuyển về cảng tàu khách quốc tế Tuần Châu\"; \"bến tàu khách quốc tế Hạ Long... nằm ngay trung tâm Bãi Cháy... giữa trung tâm du lịch Tuần Châu và Hòn Gai, cách công viên Sun World Hạ Long Complex 500m... quy mô lớn nhất tỉnh Quảng Ninh với 6 cầu bến trong đó có 4 bến đón tàu du lịch và du thuyền, 2 bến đón tiếp tàu du lịch quốc tế... đón các tàu du lịch trọng tải lớn lên tới 230.000 GRT\"; bến Vinashin Hòn Gai \"chỉ cho phép tàu chạy tuyến Bái Tử Long (gồm tàu ngủ đêm và tàu cao tốc)\"."
+    },
+    {
+      "claim": "Cảng tàu khách quốc tế Hạ Long nằm trên đường Thương Cảng, Bãi Cháy; từ Hòn Gai qua cầu Bãi Cháy rồi rẽ phải xuống đường bao biển là tới nơi, khoảng 10-15 phút; từ trung tâm Bãi Cháy đi taxi hoặc xe điện theo đường bao biển Kỳ Quan, rẽ vào đường Thương Cảng. Vé hành khách qua cảng 40.000 VNĐ/người (áp dụng cả đi và về); vé tham quan Vịnh tuyến 1 (4 tiếng) và tuyến 2 (6 – 8 tiếng) 290.000 VNĐ/người, đã bao gồm vé cảng.",
+      "source_url": "https://halongtourist.net/cang-tau-khach-quoc-te-ha-long",
+      "source_domain": "halongtourist.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Halongtourist: \"Vị trí: Đường Thương Cảng, Bãi Cháy, TP. Hạ Long, Quảng Ninh\"; \"Từ Hòn Gai: Đi qua cầu Bãi Cháy, rẽ phải xuống đường bao biển là tới nơi. Nếu bạn đang lưu trú tại các Nhà Nghỉ tại Hòn Gai, chỉ mất khoảng 10-15 phút di chuyển\"; \"Từ trung tâm Bãi Cháy: Du khách có thể đi taxi hoặc xe điện theo đường bao biển Kỳ Quan, rẽ vào đường Thương Cảng\"; bảng giá: \"Vé hành khách qua cảng 40.000 VNĐ/người — Áp dụng cho cả khách đi và về\"; \"Vé tham quan Vịnh (Tuyến 1) 290.000 VNĐ/người\", \"Vé tham quan Vịnh (Tuyến 2) 290.000 VNĐ/người — Đã bao gồm vé cảng\"; tuyến 1 (4 tiếng), tuyến 2 (6 – 8 tiếng)."
+    },
+    {
+      "claim": "Bảng giá Kim's Motorbike: Nouvo thuê 1 – 6 tiếng 70.000 VNĐ, 1 ngày (từ 6 tiếng) 120.000 VNĐ, từ 3 ngày 110.000 VNĐ, từ 1 tháng 2.000.000 VNĐ; Wave, Sirius, Jupiter, Dream 1 – 6 tiếng 80.000 VNĐ, 1 ngày 130.000 VNĐ, từ 3 ngày 120.000 VNĐ, từ 1 tháng 2.000.000 VNĐ; Vision, Air Blade, Lead 1 – 6 tiếng 100.000 VNĐ, 1 ngày 160.000 VNĐ, từ 3 ngày 150.000 VNĐ, từ 1 tháng 3.000.000 VNĐ; Click, Luvius 1 – 6 tiếng 100.000 VNĐ, 1 ngày 150.000 VNĐ, từ 3 ngày 130.000 VNĐ, từ 1 tháng 2.400.000 VNĐ; giá thay đổi ngày lễ và cuối tuần, xe bảo dưỡng định kỳ theo tuần; giao xe tận nơi chỉ 10–15 phút trong khu vực Bãi Cháy; thủ tục: xuất trình CCCD, hộ chiếu hoặc bằng lái hợp lệ, đặt cọc theo giá trị và dòng xe, giao nhận tận nơi khách sạn, homestay hoặc bến xe; sinh viên cần thẻ sinh viên còn thời hạn.",
+      "source_url": "https://dichvuthuexehalong.com/",
+      "source_domain": "dichvuthuexehalong.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá Kim's Motorbike: Nouvo 70.000 VNĐ (1–6 tiếng) / 120.000 VNĐ (1 ngày) / 110.000 VNĐ (từ 3 ngày) / 2.000.000 VNĐ (từ 1 tháng); Wave 80.000 / 130.000 / 120.000 / 2.000.000 VNĐ; Sirius, Jupiter, Dream như Wave; Vision, Air Blade, Lead 100.000 / 160.000 / 150.000 / 3.000.000 VNĐ; Click, Luvius 100.000 / 150.000 / 130.000 / 2.400.000 VNĐ; 'Giá thuê xe máy ở Hạ Long có thể thay đổi vào ngày lễ và ngày cuối tuần – Xe được bảo dưỡng định kỳ theo tuần'; 'Giao xe tận nơi chỉ 10 phút... Chỉ cần gọi là có xe trong 10–15 phút'; mục thủ tục: 'Xuất trình CCCD, hộ chiếu hoặc bằng lái xe hợp lệ', 'Đặt cọc theo giá trị và dòng xe', 'Giao nhận xe tận nơi khách sạn, homestay hoặc bến xe'; sinh viên: 'Thẻ sinh viên còn thời hạn'."
+    },
+    {
+      "claim": "Kim's Motorbike (ngõ 86 Vườn Đào, phường Bãi Cháy): xe số 80.000đ – 130.000đ/ngày, xe ga 160.000đ – 180.000đ/ngày; giao xe miễn phí trong khu vực Bãi Cháy, cam kết giao trong 20 phút, các khu vực còn lại tính phí giao nhận 30.000đ/xe; tính giá theo nửa ngày, 1 ngày và hơn 1 ngày, thuê từ 3 ngày trở lên được giảm giá. Sun World Quảng Ninh: xe số 130.000đ/ngày, xe ga 180.000đ/ngày; Nest Travel: xe số 100.000đ/ngày, xe ga 150.000đ/ngày; Ruby's Motorbike Rentals (54 Bãi Cháy): xe số 100.000đ/ngày, xe ga 130.000đ – 150.000đ/ngày. Mặt bằng chung tại Hạ Long khoảng 80.000đ – 180.000đ/ngày tùy loại xe.",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng TOP 9 của Motogo: Kim's Motorbike 'ngõ 86 Vườn Đào, P. Bãi Cháy — Giá thuê xe số: 80.000đ – 130.000đ/ngày; Giá thuê xe ga: 160.000đ -180.000đ/ngày'; Sun World Quảng Ninh 130.000đ/ngày số, 180.000đ/ngày ga; Nest Travel 100.000đ/ngày số, 150.000đ/ngày ga; Ruby's 100.000đ/ngày số, 130.000đ – 150.000đ/ngày ga; mô tả: 'giao xe miễn phí trong khu vực Bãi Cháy và cam kết giao xe trong 20 phút, các khu vực còn lại sẽ tính phí giao nhận là 30k/xe'; 'áp dụng cách tính giá cho nửa ngày, 1 ngày và hơn 1 ngày. Nếu khách thuê từ 3 ngày trở lên sẽ được giảm giá'."
+    }
+  ]
+}

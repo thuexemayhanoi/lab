@@ -1,0 +1,151 @@
+{
+  "article_id": "A00070",
+  "primary_keyword": "thuê xe máy gần Bến xe Cà Mau",
+  "secondary_keywords": [
+    "thuê xe máy Cà Mau",
+    "giá thuê xe máy Cà Mau",
+    "thuê xe máy tự lái Cà Mau",
+    "bến xe Cà Mau ở đâu",
+    "cho thuê xe máy gần bến xe Cà Mau"
+  ],
+  "search_intent": "informational-research — khách xuống xe khách tại Cà Mau cần biết giá thuê xe quanh bến, cách nhận xe, giấy tờ và phạm vi chạy phép",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Cà Mau",
+    "Bến xe Cà Mau",
+    "Quốc lộ 1A",
+    "đường Lý Thường Kiệt",
+    "phường 6",
+    "thị trấn Năm Căn",
+    "Thới Bình",
+    "Sông Đốc",
+    "U Minh",
+    "Khánh Hội",
+    "Phước Long",
+    "Ngã Năm",
+    "Mũi Cà Mau",
+    "Đầm Thị Tường",
+    "Hòn Đá Bạc",
+    "Bạc Liêu",
+    "Cần Thơ"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe tay ga",
+    "xe máy tự lái"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Vexere",
+    "Nipu",
+    "Ngọc Phong",
+    "Triển Lê",
+    "Trọng Nguyễn",
+    "Anh Cường",
+    "Quý Cọp",
+    "Khách sạn Ánh Nguyệt",
+    "Motogo"
+  ],
+  "model_entities": [
+    "Honda Wave Alpha",
+    "Honda Wave RSX",
+    "Honda Vision",
+    "Honda Air Blade",
+    "Honda Vario",
+    "Yamaha Sirius"
+  ],
+  "questions_found": [
+    "Thuê xe máy gần bến xe Cà Mau giá bao nhiêu?",
+    "Bến xe Cà Mau ở đâu, cách trung tâm bao xa?",
+    "Có cửa hàng cho thuê xe gần bến giao xe tận nơi không?",
+    "Thuê xe máy Cà Mau cần giấy tờ gì, có phải cọc không?",
+    "Bến xe Cà Mau có những tuyến xe buýt nào?"
+  ],
+  "related_queries": [
+    "bến xe Cà Mau đi Mũi Cà Mau",
+    "xe buýt bến xe Cà Mau",
+    "giá thuê xe máy Cà Mau 2026",
+    "thuê xe máy Cà Mau rẻ"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy Cà Mau\" bị chiếm bởi bài danh sách cửa hàng (Motogo, Toplist) và nền tảng đặt xe (Vexere); truy vấn POI \"gần bến xe\" chưa có bài riêng — khoảng trống cho trang đầu mối với bảng giá niêm yết.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "Xelimou — Bến xe Cà Mau: Địa chỉ, điện thoại và lộ trình xe khách",
+      "url": "https://xelimou.vn/ben-xe-ca-mau/"
+    },
+    {
+      "name": "Blog Vexere — Bến xe khách Cà Mau ở đâu? Đón xe khách như thế nào?",
+      "url": "https://blog.vexere.com/ben-xe-khach-ca-mau/"
+    },
+    {
+      "name": "Vexere — Thuê xe máy Cà Mau (danh sách niêm yết)",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-ca-mau.vi"
+    },
+    {
+      "name": "Motogo — Thuê xe máy Cà Mau: 7 địa điểm uy tín",
+      "url": "https://motogo.vn/thue-xe-may-ca-mau/"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ca-mau/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-can-tho/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ben-xe-giap-bat/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ben-xe-nuoc-ngam/"
+  ],
+  "potential_cannibalization": "Trang tổng quan thue-xe-may-ca-mau (đã publish) nhắm từ khóa tỉnh; bài này nhắm intent POI \"gần Bến xe Cà Mau\" với bảng giá, địa chỉ cửa hàng phường 6 và lưới buýt — khác thực thể, link một chiều từ bài POI sang trang tỉnh.",
+  "unique_angle": "Ghép ba lớp dữ liệu tại chỗ: vị trí bến trên QL1A (9,3 km / 15-17 phút), lưới 6 tuyến buýt hoạt động 5:00-17:00 và bảng giá niêm yết 2026 của các cửa hàng dọc Lý Thường Kiệt / phường 6 — góc nhìn đầu mối xe khách cực Nam.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không claim dịch vụ; disclosure P2 chuẩn. requires_official_sources=0 — không claim pháp lý/thủ tục chính phủ. Mọi claim định lượng có claim_evidence từ nguồn đã mở 2026-10-01.",
+  "claim_evidence": [
+    {
+      "claim": "Bến xe Cà Mau có địa chỉ trên Quốc lộ 1A, đường Lý Thường Kiệt, phường 6, thành phố Cà Mau; cách trung tâm thành phố 9,3 km, di chuyển khoảng 15-17 phút bằng ô tô theo tuyến đường Lý Thường Kiệt/QL1A.",
+      "source_url": "https://xelimou.vn/ben-xe-ca-mau/",
+      "source_domain": "xelimou.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Xelimou ghi: \"Khoảng cách từ Bến xe Cà Mau đến trung tâm thành phố là 9,3 km, với thời gian di chuyển chỉ khoảng 15-17 phút bằng ô tô... đi theo tuyến đường Lý Thường Kiệt/QL1A\"; địa chỉ \"Quốc lộ 1A, đường Lý Thường Kiệt, phường 6, thành phố Cà Mau\"."
+    },
+    {
+      "claim": "Bến xe Cà Mau có 6 tuyến buýt: tuyến 01 (Bến xe Năm Căn – Bến xe Cà Mau, lộ trình qua Cầu Đầm Dùng, thị trấn Cái Nước, Quốc lộ 1A, Nguyễn Tất Thành, Hùng Vương, Lý Thường Kiệt), tuyến 02 đi thị trấn Thới Bình, tuyến 03 đi thị trấn Sông Đốc, tuyến 04 đi U Minh – Khánh Hội, tuyến 05 đi thị trấn Phước Long, tuyến 06 đi thị trấn Ngã Năm; các tuyến hoạt động từ 5:00 đến 17:00 hàng ngày, tần suất 15 phút/chuyến.",
+      "source_url": "https://blog.vexere.com/ben-xe-khach-ca-mau/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Blog Vexere liệt kê 6 tuyến buýt 01–06 với lộ trình và ghi \"Thời gian: 5:00 đến 17:00 hàng ngày. Tần suất: 15 phút/chuyến.\"; tuyến 01 có lộ trình \"Bến xe Nam Căn <> Cầu Đầm Dùng <> Thị trấn Cái Nước <> Quốc lộ 1A <> Nguyễn Tất Thành <> Hùng Vương <> Lý Thường Kiệt <> Bến xe Cà Mau\"."
+    },
+    {
+      "claim": "Mặt bằng giá thuê xe máy niêm yết công khai tại Cà Mau dao động khoảng 80.000đ – 250.000đ/ngày tùy loại xe, từ xe số phổ thông đến xe tay ga đời mới.",
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tổng hợp niêm yết: Motogo ghi các cửa hàng xe số từ 80.000đ – 100.000đ/ngày (Quý Cọp, Ánh Nguyệt, Trọng Nguyễn); Vexere niêm yết Honda Vario tới 250.000đ — khoảng dao động chung của thị trường từ xe số phổ thông đến xe ga."
+    },
+    {
+      "claim": "Trọng Nguyễn (389 Lý Thường Kiệt, khóm 2, phường 6, TP. Cà Mau): xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày; Anh Cường (398 Lý Thường Kiệt, Khóm 2): xe số 80.000đ – 120.000đ/ngày, xe ga 120.000đ – 160.000đ/ngày; Triển Lê (8 Bùi Thị Xuân, K2, Phường 4): xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 150.000đ/ngày, kèm mũ bảo hiểm và 1 lít xăng miễn phí; Quý Cọp (Trần Quang Diệu, Phường 9): xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày, hỗ trợ giao xe 24/7; Khách sạn Ánh Nguyệt (207 Phan Ngọc Hiển, Phường 6): xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày; cửa hàng 35 Nguyễn Hữu Lê (Phường 2): xe số 100.000đ/ngày, xe ga 150.000đ/ngày, có chính sách giao nhận xe trong khu vực thành phố, bến xe.",
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng \"TOP 7 địa điểm thuê xe máy Cà Mau\" của Motogo niêm yết đúng các mức giá và địa chỉ trên; mô tả Triển Lê ghi \"khi thuê xe bạn xe được nhận kèm mũ bảo hiểm và 1 lít xăng miễn phí\"; cửa hàng 35 Nguyễn Hữu Lê \"thực hiện chính sách giao nhận xe trong khu vực thành phố, bến xe\"; Quý Cọp \"chỗ trợ giao xe 24/7\"."
+    },
+    {
+      "claim": "Trên Vexere, xe số Honda Wave Alpha (Nipu) niêm yết từ 150.000đ kèm mũ bảo hiểm, 1 lít xăng, giao xe tận nơi không cần cọc trước; Honda Air Blade/Vision (Nipu) từ 200.000đ; Honda Vario đời từ 2017 (Nipu) từ 250.000đ; Honda Vision (Ngọc Phong) từ 170.000đ; Honda Wave RSX (Ngọc Phong) từ 130.000đ; xe số đời từ 2017 (Trọng Nguyễn) từ 150.000đ.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ca-mau.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Danh sách thuê xe máy Cà Mau trên Vexere niêm yết \"từ 150.000đ\" (Nipu Wave Alpha), \"từ 200.000đ\" (Nipu Air Blade/Vision), \"từ 250.000đ\" (Nipu Vario), \"từ 170.000đ\" (Ngọc Phong Vision), \"từ 130.000đ\" (Ngọc Phong Wave RSX), \"từ 150.000đ\" (Trọng Nguyễn xe số đời từ 2017); xe Nipu ghi \"Giao xe tận nơi – Không cần cọc trước\", kèm \"Mũ bảo hiểm, Xăng (1 lít)\"."
+    },
+    {
+      "claim": "Điều khoản phổ biến: Nipu nhận - trả xe từ 00:00 đến 23:59, giữ lại CCCD hoặc Passport, không cần cọc trước, phạm vi sử dụng không giới hạn; Triển Lê nhận - trả từ 09:00 đến 20:00, giữ lại CCCD và cọc 500.000đ/xe, phạm vi Tỉnh Cà Mau (cũ); Ngọc Phong mở 06:00 đến 21:00; Trọng Nguyễn nhận - trả từ 06:30 đến 20:00, giữ lại CCCD và cọc 500.000đ – 1.000.000đ/xe; mỗi ngày thuê tính bằng 24 giờ, trả xe nếu chưa quá 6 giờ chỉ tính thêm 1/2 ngày; giấy tờ cần CCCD/Passport & GPLX bản gốc.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ca-mau.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chính sách thuê xe từng nhà trên Vexere: Nipu \"từ 00:00 đến 23:59\", \"Giữ lại CCCD hoặc Passport\", \"Không giới hạn\"; Triển Lê \"từ 09:00 đến 20:00\", \"Giữ lại CCCD và cọc 500.000đ/xe\", \"Tỉnh Cà Mau (cũ)\"; Ngọc Phong \"từ 06:00 đến 21:00\"; Trọng Nguyễn \"từ 06:30 đến 20:00\", \"Giữ lại CCCD và cọc 500.000 – 1.000.000đ/xe\"; chung: \"Mỗi ngày thuê được tính bằng 24 giờ\", \"Trả xe nếu chưa quá 6 giờ → chỉ tính thêm 1/2 ngày\", \"CCCD/Passport & GPLX (bản gốc)\"."
+    },
+    {
+      "claim": "Cà Mau có mùa khô từ tháng 12 đến tháng 4 và mùa mưa từ tháng 5 đến tháng 11; các điểm đi phổ biến gồm Cột mốc Mũi Cà Mau, chùa Bà Thiên Hậu, rừng U Minh Hạ, Đầm Thị Tường, bãi biển Khai Long, Hòn Đá Bạc, chùa Monivongsa Bopharam.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ca-mau.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Vexere ghi: \"Mùa khô từ tháng 12 đến tháng 4... mùa mưa từ tháng 5 đến tháng 11\"; mục \"Gợi ý các điểm phượt xe máy tại Cà Mau\" liệt kê Chợ nổi Cà Mau, Chùa Bà Thiên Hậu, Cột mốc Mũi Cà Mau, Rừng U Minh Hạ, Đầm Thị Tường, Bãi Biển Khai Long; phần mở đầu nhắc Mũi Cà Mau, rừng U Minh Hạ, Hòn Đá Bạc, chùa Monivongsa Bopharam."
+    }
+  ]
+}
