@@ -1,0 +1,251 @@
+{
+  "article_id": "A00033",
+  "primary_keyword": "thuê xe máy An Giang",
+  "secondary_keywords": [
+    "cho thuê xe máy Châu Đốc không cần cọc",
+    "thuê xe máy Long Xuyên giá rẻ",
+    "bảng giá thuê xe máy An Giang",
+    "thuê xe máy Núi Sam Châu Đốc"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "An Giang",
+    "Long Xuyên",
+    "Châu Đốc",
+    "Núi Sam",
+    "Chùa Bà Châu Đốc",
+    "rừng tràm Trà Sư",
+    "Bảy Núi",
+    "Tịnh Biên",
+    "Kiên Giang",
+    "Rạch Giá"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe tay côn",
+    "xe phân khối lớn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Lead",
+    "Exciter"
+  ],
+  "questions_found": [
+    "thuê xe máy An Giang giá bao nhiêu một ngày?",
+    "thuê xe máy Châu Đốc có cần đặt cọc không?",
+    "ở An Giang có chỗ cho thuê xe nhận CMND photo không?",
+    "thuê xe máy Long Xuyên có được giao xe tận nơi không?",
+    "sau sáp nhập 2025, Kiên Giang có thuộc An Giang không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy An Giang 2026",
+    "cho thuê xe máy Châu Đốc giao tận nơi",
+    "thuê xe máy phượt Núi Sam",
+    "thuê xe PKL An Giang"
+  ],
+  "serp_patterns": "SERP cho An Giang xoay quanh hai cụm Long Xuyên và Châu Đốc: motogo có bài 5 địa chỉ kèm bảng giá từng cơ sở (Mr Tủm, Hải Nhân, Thuê xe máy phượt Châu Đốc, Thuê xe máy Long Xuyên, Anh Chí) và bảng giá theo loại xe (Xe số 80k – 120k, Xe ga 120k – 200k, Xe côn 250k), 2trip liệt kê 7 cửa hàng kèm dải giá từng nơi (Thuê xe máy Long Xuyên, Anh Chí, Mr Tủm, Hải Nhân, Thuê xe máy phượt Châu Đốc, Nguyên Vũ, Thanh Trúc) cùng ghi nhận mặt bằng 90.000đ – 150.000đ, royalenfieldvietnam tổng hợp 10 cửa hàng Long Xuyên – Châu Đốc kèm cọc 500.000 – 1.000.000 VNĐ, mia có bài riêng cho Châu Đốc với 6 địa chỉ quanh Núi Sam – Chùa Bà. Điểm nhấn thị trường: Anh Chí hoàn toàn không cần cọc, nhận giấy tờ photo ở Hải Nhân, cơ sở giao xe chưa đầy 10 phút trong khu vực.",
+  "official_sources": [
+    {
+      "source_url": "https://luatvietnam.vn/hanh-chinh/nghi-quyet-202-2025-qh15-cua-quoc-hoi-ve-viec-sap-xep-don-vi-hanh-chinh-cap-tinh-402728-d1.html",
+      "source_domain": "luatvietnam.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nghị quyết 202/2025/QH15: «Tỉnh An Giang: Sáp nhập tỉnh Kiên Giang và An Giang, diện tích 9.888,91 km², dân số 4.952.238 người.»"
+    }
+  ],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-an-giang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "danh sách 5 địa chỉ cho thuê tại Long Xuyên – Châu Đốc kèm bảng giá theo cơ sở (Mr Tủm, Hải Nhân, Thuê xe máy phượt Châu Đốc, Thuê xe máy Long Xuyên, Anh Chí), bảng giá theo loại xe và mô tả chính sách cọc, giấy tờ photo, giao xe tận nơi"
+    },
+    {
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-an-giang",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng tổng hợp 7 cửa hàng kèm dải giá từng nơi, mặt bằng chung 90.000đ – 150.000đ, mô tả Anh Chí giao xe chưa đầy 10 phút trong khu vực, 30 phút ngoài khu vực, không mất phí giao xe, Hải Nhân thủ tục khoảng 10 phút cần 1 CCCD/CMND và 1 bằng lái"
+    },
+    {
+      "source_url": "https://royalenfieldvietnam.com/cua-hang-xe-may-long-xuyen/",
+      "source_domain": "royalenfieldvietnam.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "tổng hợp 10 cửa hàng Long Xuyên – Châu Đốc kèm mức giá 100.000 – 300.000 VNĐ/ngày, giá theo dòng xe, chính sách đặt cọc 500.000 – 1.000.000 VNĐ, mô tả Nguyên Vũ, Thanh Trúc, Anh Duy"
+    },
+    {
+      "source_url": "https://mia.vn/cam-nang-du-lich/dia-diem-thue-xe-may-chau-doc-18891",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "6 địa chỉ cho thuê xe máy tại Châu Đốc quanh Núi Sam – Chùa Bà kèm giá từng nơi, mô tả Motorbike For Rent mở cửa 24/7, dịch vụ 450 Hoàng Diệu, cho thuê xe lôi tại 79 Lê Đại Cương, cơ sở Long Xuyên giao xe tận nơi tại Châu Đốc"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-tp-hcm/",
+    "/lab/thue-xe-may/thue-xe-may-can-tho/",
+    "/lab/thue-xe-may/thue-xe-may-dong-thap/",
+    "/lab/kinh-nghiem/",
+    "/lab/cuu-ho-xe-may/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-an-giang: nhóm gốc cấp tỉnh. Bài tỉnh gốc chỉ nêu giá theo dòng xe ở mức tham khảo tổng hợp, không lạm bàn riêng từng mẫu — các row hẹp theo dòng xe tại An Giang (nếu có trong matrix) sẽ xử lý riêng. Cụm 'thuê xe máy Châu Đốc', 'thuê xe máy Long Xuyên' hiện chưa có row riêng nên chỉ đề cập định tính trong bài.",
+  "unique_angle": "Bài tỉnh gốc cho thị trường sông nước gộp đôi sau sáp nhập 2025: An Giang nay rộng thêm cả Kiên Giang cũ (Rạch Giá), nhưng thị trường thuê xe vẫn chia đôi giữa Long Xuyên (tỉnh lỵ) và Châu Đốc (hub tâm linh Núi Sam – Chùa Bà – rừng tràm Trà Sư). Điểm đáng viết: Anh Chí hoàn toàn không cần cọc, giao xe tận nơi chưa đầy 10 phút trong khu vực và còn đón khách tại điểm xuống xe khách; Hải Nhân nhận bản photo CMND thay bản gốc, cọc 1 triệu hoàn lại đầy đủ; cơ sở 574A Võ Thị Sáu cho thuê tới xe PKL 300.000đ/ngày; mặt bằng chung 90.000đ – 150.000đ thuộc hàng dễ chịu của miền Tây.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; mọi mức giá dẫn theo nguồn công khai. An Giang CURRENT giữ tên (LG-057 UNCHANGED); Kiên Giang (LG-058) MERGED_INTO An Giang theo Nghị quyết 202/2025/QH15 — nguồn luatvietnam ghi nguyên văn dòng sáp nhập. Nguồn dùng k-notation (80k – 120k, 120k – 200k, 250k) — giữ nguyên dạng k trong claim_supported để grounding khớp khi bài dùng k-notation. Địa chỉ dẫn theo bảng công khai: Mr Tủm 183 Châu Thị Tế P. Núi Sam Châu Đốc; Hải Nhân TP Long Xuyên; Thuê xe máy phượt Châu Đốc 89 Phan Văn Vàng Châu Phú A; Thuê xe máy Long Xuyên 574A Võ Thị Sáu P. Đông Xuyên; Anh Chí 227 Nguyễn Tri Phương khóm Hoà Bình Châu Đốc; Nguyên Vũ 58A Cao Thắng P. Bình Khánh; Thanh Trúc 166 Lê Lợi P. Châu Phú B; Anh Duy 452/12 Hà Hoàng Hổ; dịch vụ mia tại 450 Hoàng Diệu và 79 Lê Đại Cương Châu Đốc. POI: Núi Sam, Chùa Bà, rừng tràm Trà Sư chỉ nêu định tính.",
+  "claim_evidence": [
+    {
+      "claim": "Mặt bằng giá thuê xe máy An Giang hiện dao động trong khoảng 90.000đ – 150.000đ",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-an-giang",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Gía cả thuê hiện tại đang dao động trong khoảng 90.000đ – 150.000đ.»"
+    },
+    {
+      "claim": "Mr Tủm (183 Châu Thị Tế, P. Núi Sam, Châu Đốc) ghi giá thuê xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 150.000đ/ngày; cửa hàng nằm đối diện chùa Bà Châu Đốc, hotline hoạt động 24/24, cho kiểm tra xe kỹ trước khi thuê và đổi xe miễn phí nếu có vấn đề",
+      "source_url": "https://motogo.vn/thue-xe-may-an-giang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng ghi «Mr Tủm Địa chỉ: 183 Châu Thị Tế, P. Núi Sam, Châu Đốc, An Giang Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày»; «Cơ sở thuê xe máy này nằm ngay đối diện chùa Bà Châu Đốc»; «Hotline hoạt động 24/24 của cửa hàng luôn sẵn sàng tiếp đón bạn bất cứ lúc nào»; «anh chủ còn cho bạn kiểm tra kỹ xe trước khi thuê nữa. Nếu có bất cứ vấn đề gì thì bạn sẽ được yêu cầu đổi xe miễn phí»."
+    },
+    {
+      "claim": "Hải Nhân (Thành phố Long Xuyên) ghi giá thuê xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày; khoảng giá niêm yết của cửa hàng từ 120.000đ – 250.000đ/ngày tùy loại xe",
+      "source_url": "https://motogo.vn/thue-xe-may-an-giang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng ghi «Hải Nhân Địa chỉ: Thành phố Long Xuyên, An Giang Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày»; «Khoảng giá trong mức từ 120.000đ – 250.000đ/ngày tùy loại xe.»"
+    },
+    {
+      "claim": "Hải Nhân nhận bản photo CMND/Passport thay bản gốc; giá cọc xe là 1 triệu và được hoàn lại đầy đủ sau khi trả xe, ghi rõ trong hợp đồng",
+      "source_url": "https://motogo.vn/thue-xe-may-an-giang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Thay vì để lại CMND/Passport bản gốc, bạn có thể để lại bản photo hoặc chụp ảnh. ... Giá cọc xe là 1 triệu, sẽ được hoàn lại đầy đủ sau khi trả xe. Những điều này đều được ghi rõ trong hợp đồng.»"
+    },
+    {
+      "claim": "Thuê xe máy phượt Châu Đốc (89 Phan Văn Vàng, Châu Phú A, Châu Đốc) ghi giá thuê xe 150.000đ/ngày, chủ yếu xe số, kèm sẵn mũ bảo hiểm và áo mưa",
+      "source_url": "https://motogo.vn/thue-xe-may-an-giang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng ghi «Thuê xe máy phượt Châu Đốc Địa chỉ: 89, Phan Văn Vàng, Châu Phú A, Châu Đốc, An Giang Giá thuê xe: 150.000đ/ngày»; 2trip ghi «Thuê xe máy phượt Châu Đốc chủ yếu cung cấp xe số với mức giá là 150.000đ/xe» và «cửa hàng cho rất tâm lí khi chuẩn bị đầy đủ mũ bảo hiểm và áo mưa đi kèm cho khách khi thuê xe»."
+    },
+    {
+      "claim": "Thuê xe máy Long Xuyên (574A Võ Thị Sáu, Phường Đông Xuyên) ghi giá thuê xe số 100.000đ/ngày, xe ga 120.000đ -180.000đ/ngày, xe PKL 300.000đ/ngày; giá thuê đồng giá 100.000đ/ngày và nhận bản photo CMND thay bản gốc",
+      "source_url": "https://motogo.vn/thue-xe-may-an-giang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng ghi «Thuê xe máy Long Xuyên ... Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 120.000đ -180.000đ/ngày Giá thuê xe PKL: 300.000đ/ngày»; «Không những thế giá thuê còn rất mềm, đồng giá 100.000đ/ngày»; «Bạn không nhất thiết phải để lai CMND, sử dụng bản photo cũng được. Sau đó cho nhân viên xem GPLX và đặt cọc tiền là xong.»"
+    },
+    {
+      "claim": "Anh Chí (227 Nguyễn Tri Phương, khóm Hoà Bình, Châu Đốc) ghi giá thuê xe số 100.000đ/ngày, xe ga 120.000đ -180.000đ/ngày; thuê tại đây hoàn toàn không cần cọc, có dịch vụ giao xe tận nơi và liên hệ với nhà xe đón khách tại điểm xuống xe khách",
+      "source_url": "https://motogo.vn/thue-xe-may-an-giang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng ghi «Anh Chí Địa chỉ: 227 Nguyễn Tri Phương, khóm Hoà Bình, Châu Đốc, An Giang Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 120.000đ -180.000đ/ngày»; «nếu bạn thuê xe máy An Giang tại địa chỉ này thì hoàn toàn không cần cọc»; «Trong trường hợp bận, bạn có thể sử dụng dịch vụ giao xe tận nơi. Thậm chí cửa hàng còn liên hệ với nhà xe để đón bạn tại điểm xuống xe khách luôn.»"
+    },
+    {
+      "claim": "Anh Chí giao xe nhanh: trong khu vực chưa đầy 10 phút xe đã tới nơi, ngoài khu vực khoảng 30 phút, không mất bất kì khoản phí giao xe nào; theo 2trip dải giá nơi này 100.000đ – 180.000đ/ xe",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-an-giang",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Nếu như trong khu vực thì chưa đầy 10 phút xe đã tới nơi. Còn ngoài khu vực thì mất khoảng 30 phút để nhân viên giao xe đến điểm nhận. Đặc biệt là bạn sẽ không mất bất kì một khoản phí giao xe nào.»; «Mức giá: 100.000đ – 180.000đ/ xe»."
+    },
+    {
+      "claim": "Thủ tục thuê xe tại Hải Nhân chỉ khoảng 10 phút, thường cần 1 CCCD/CMND và 1 bằng lái xe; khách thuê nhiều được chiết khấu theo số lượng",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-an-giang",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Chỉ khoảng chừng 10 phút là bạn đã có ngay một chiếc xe máy để vi vu trên khắp các con đường. ... Thường thường thì sẽ cần 1 CCCD/CMND và 1 bằng lái xe theo quy định hiện hành của luật giao thông.»; «đối với trường hợp thuê với số lượng lớn thì Hải Nhân sẽ áp dụng chính sách chiết khấu tùy theo số lượng thuê.»"
+    },
+    {
+      "claim": "Giá thuê xe máy tại Thuê xe máy Long Xuyên theo 2trip là 100.000đ – 300.000đ/ xe, xe trung bình 1 đến 2 năm tuổi được bảo dưỡng đều đặn",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-an-giang",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Hiện nay giá thuê xe máy tại Thuê xe máy Long Xuyên đang là 100.000đ – 300.000đ/ xe.»; «Hệ thống xe máy tại Thuê xe máy Long Xuyên đã được đưa vào sử dụng trung bình từ 1 – 2 năm. Tuy nhiên, nhờ vào chế độ bảo dưỡng xe đều đặn nên chất lượng xe được đánh giá rất tốt.»"
+    },
+    {
+      "claim": "Bảng giá thuê xe máy An Giang theo loại xe: Xe số 80k – 120k, Xe ga 120k – 200k, Xe côn 250k",
+      "source_url": "https://motogo.vn/thue-xe-may-an-giang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng «Giá thuê xe máy An Giang» ghi «Xe số 80k – 120k; Xe ga 120k – 200k; Xe côn 250k»."
+    },
+    {
+      "claim": "Mức giá thuê tại Long Xuyên chỉ từ 100.000 – 300.000 VNĐ/ngày, đủ chạy các điểm Núi Sam, Chợ Châu Đốc, Rừng tràm Trà Sư; xe số phổ thông từ 100.000 – 150.000 VNĐ/ngày, xe tay ga từ 150.000 – 300.000 VNĐ/ngày, dòng côn tay hoặc phân khối lớn có thể lên đến 500.000 VNĐ/ngày tùy model",
+      "source_url": "https://royalenfieldvietnam.com/cua-hang-xe-may-long-xuyen/",
+      "source_domain": "royalenfieldvietnam.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Với mức giá chỉ từ 100.000 – 300.000 VNĐ/ngày, bạn có thể tự do di chuyển đến các điểm du lịch nổi tiếng như Núi Sam, Chợ Châu Đốc, Rừng tràm Trà Sư»; «xe số phổ thông (Honda Sirius, Wave) từ 100.000 – 150.000 VNĐ/ngày, xe tay ga (Vision, Airblade) từ 150.000 – 300.000 VNĐ/ngày, và các dòng côn tay hoặc xe phân khối lớn có thể lên đến 500.000 VNĐ/ngày tùy model»."
+    },
+    {
+      "claim": "Một số cửa hàng giữ GPLX hoặc yêu cầu đặt cọc 500.000 – 1.000.000 VNĐ, nhiều nơi áp dụng cọc online hoặc miễn cọc nếu khách có giấy tờ rõ ràng; kèm 2 mũ bảo hiểm và áo mưa",
+      "source_url": "https://royalenfieldvietnam.com/cua-hang-xe-may-long-xuyen/",
+      "source_domain": "royalenfieldvietnam.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Một số cửa hàng có thể giữ GPLX hoặc yêu cầu đặt cọc 500.000 – 1.000.000 VNĐ, nhưng nhiều nơi uy tín đã áp dụng hình thức cọc online hoặc miễn cọc nếu khách hàng có giấy tờ rõ ràng. Các dịch vụ kèm theo thường gồm mũ bảo hiểm (2 mũ cho người lái và phụ), áo mưa»."
+    },
+    {
+      "claim": "Nguyên Vũ (58A Cao Thắng, P. Bình Khánh, Long Xuyên) giá dao động từ 100.000 VNĐ/ngày với xe số đến 300.000 VNĐ/ngày với xe tay ga đời mới, làm hợp đồng trong 5-10 phút, cuối tuần dễ hết xe nên đặt trước",
+      "source_url": "https://royalenfieldvietnam.com/cua-hang-xe-may-long-xuyen/",
+      "source_domain": "royalenfieldvietnam.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá cả cạnh tranh, dao động từ 100.000 VNĐ/ngày với xe số đến 300.000 VNĐ/ngày với xe tay ga đời mới»; «chỉ cần CMND/CCCD và GPLX là có thể làm hợp đồng trong 5-10 phút»; «Đôi khi hết xe vào cuối tuần, nên đặt trước.»"
+    },
+    {
+      "claim": "Thanh Trúc (166 Lê Lợi, P. Châu Phú B, Châu Đốc) giá từ 100.000 VNĐ/ngày, cho thuê cả xe du lịch 4-16 chỗ",
+      "source_url": "https://royalenfieldvietnam.com/cua-hang-xe-may-long-xuyen/",
+      "source_domain": "royalenfieldvietnam.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê cực kỳ cạnh tranh, từ 100.000 VNĐ/ngày»; «Thanh Trúc không chỉ cho thuê xe máy mà còn có dịch vụ cho thuê xe du lịch 4-16 chỗ»."
+    },
+    {
+      "claim": "Anh Duy (452/12 Hà Hoàng Hổ, Long Xuyên) giá 150.000 – 500.000 VNĐ/ngày, chuyên xe mới tiết kiệm xăng, đa dạng phân khúc",
+      "source_url": "https://royalenfieldvietnam.com/cua-hang-xe-may-long-xuyen/",
+      "source_domain": "royalenfieldvietnam.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng ghi «Cửa hàng Anh Duy | 452/12 Hà Hoàng Hổ, P. Mỹ Hòa | Long Xuyên | 150.000 – 500.000 | Chuyên xe mới, tiết kiệm xăng, đa dạng phân khúc»."
+    },
+    {
+      "claim": "Motorbike For Rent (227 Nguyễn Tri Phương, khóm Hòa Bình, TP. Châu Đốc) mở cửa 24/7, cho thuê xe số xe ga đời mới mức giá chỉ từ 150.000 đồng/ngày, thủ tục chỉ cần xuất trình CMND hoặc bằng lái xe, hỗ trợ giao xe tận nơi và tư vấn lộ trình",
+      "source_url": "https://mia.vn/cam-nang-du-lich/dia-diem-thue-xe-may-chau-doc-18891",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Nằm tại 227 Nguyễn Tri Phương, cơ sở này mở cửa 24/7 và cho thuê nhiều loại xe số, xe ga đời mới với mức giá chỉ từ 150.000 đồng/ngày. Thủ tục thuê đơn giản, chỉ cần xuất trình CMND hoặc bằng lái xe là có thể nhận xe ngay»; «chủ xe còn hỗ trợ giao xe tận nơi, tư vấn lộ trình và gợi ý các điểm check-in đẹp quanh Châu Đốc»."
+    },
+    {
+      "claim": "Các cơ sở cho thuê quanh Chùa Bà Châu Đốc giá tham khảo dao động từ 100.000/ ngày đối với xe số và khoảng 150.000 đồng/ngày cho xe ga; cơ sở tại 450 Hoàng Diệu cho thuê từ 150.000 - 190.000 đồng/ngày, chỉ cần CCCD và bằng lái xe, không yêu cầu đặt cọc phức tạp, giao xe tận nơi trong nội ô",
+      "source_url": "https://mia.vn/cam-nang-du-lich/dia-diem-thue-xe-may-chau-doc-18891",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê xe tham khảo dao động từ 100.000/ ngày đối với xe số, và khoảng 150.000 đồng/ngày cho xe ga.»; «Với mức giá chỉ từ 150.000 - 190.000 đồng/ngày, nơi đây cung cấp các dòng xe số và xe ga đời mới»; «Thủ tục thuê xe nhanh gọn, bạn chỉ cần có CCCD và bằng lái xe, không yêu cầu đặt cọc phức tạp. Chủ xe nhiệt tình, sẵn sàng giao xe tận nơi trong nội ô»."
+    },
+    {
+      "claim": "Cơ sở cho thuê xe lôi và xe gắn máy tại 79 Lê Đại Cương, P. Núi Sam: giá thuê xe gắn máy dao động từ 140.000 đồng/ngày, có cả xe lôi truyền thống, hỗ trợ giao xe tận nơi trong khu vực Núi Sam",
+      "source_url": "https://mia.vn/cam-nang-du-lich/dia-diem-thue-xe-may-chau-doc-18891",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Tại đây, bạn có thể thuê cả xe lôi truyền thống để di chuyển nhẹ nhàng quanh khu vực Chùa Bà, hoặc lựa chọn xe gắn máy»; «Giá thuê tham khảo cho xe gắn máy dao động từ 140.000 đồng/ngày»; «dịch vụ còn hỗ trợ giao xe tận nơi trong khu vực Núi Sam nếu khách có nhu cầu»."
+    },
+    {
+      "claim": "Dịch vụ thuê xe máy Long Xuyên (574A Võ Thị Sáu) hỗ trợ giao xe tận nơi tại Châu Đốc, bao gồm cả khu vực Núi Sam và Chùa Bà; giá từ 100.000 - 150.000 đồng/ngày cho xe số và 150.000 - 170.000 đồng/ngày cho xe ga",
+      "source_url": "https://mia.vn/cam-nang-du-lich/dia-diem-thue-xe-may-chau-doc-18891",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«dịch vụ thuê xe máy Long Xuyên vẫn hỗ trợ giao xe tận nơi tại Châu Đốc, bao gồm cả khu vực Núi Sam và Chùa Bà»; «Giá thuê hợp lý, từ 100.000 - 150.000 đồng/ngày cho xe số và 150.000 - 170.000 đồng/ngày cho xe ga»."
+    },
+    {
+      "claim": "Sau sáp nhập hành chính 2025, tỉnh Kiên Giang và An Giang hợp nhất thành tỉnh An Giang mới, diện tích 9.888,91 km², dân số 4.952.238 người",
+      "source_url": "https://luatvietnam.vn/hanh-chinh/nghi-quyet-202-2025-qh15-cua-quoc-hoi-ve-viec-sap-xep-don-vi-hanh-chinh-cap-tinh-402728-d1.html",
+      "source_domain": "luatvietnam.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Tỉnh An Giang: Sáp nhập tỉnh Kiên Giang và An Giang, diện tích 9.888,91 km², dân số 4.952.238 người.»"
+    }
+  ]
+}

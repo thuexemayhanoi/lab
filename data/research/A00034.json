@@ -1,0 +1,273 @@
+{
+  "article_id": "A00034",
+  "primary_keyword": "thuê xe máy Cà Mau",
+  "secondary_keywords": [
+    "cho thuê xe máy TP. Cà Mau giao tận nơi",
+    "thuê xe máy Năm Căn",
+    "bảng giá thuê xe máy Cà Mau",
+    "thuê xe máy Đất Mũi giá rẻ"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Cà Mau",
+    "TP. Cà Mau",
+    "Năm Căn",
+    "Đất Mũi",
+    "Hòn Đá Bạc",
+    "rừng U Minh Hạ",
+    "Bạc Liêu",
+    "Phan Ngọc Hiển",
+    "Lý Thường Kiệt"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe tay côn",
+    "xe lôi"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Lead",
+    "Exciter",
+    "Jupiter",
+    "Winner"
+  ],
+  "questions_found": [
+    "thuê xe máy Cà Mau giá bao nhiêu một ngày?",
+    "thuê xe máy Cà Mau có cần đặt cọc không, cọc bao nhiêu?",
+    "thuê xe máy ở Năm Căn có cơ sở nào không?",
+    "thuê xe máy TP. Cà Mau có được giao xe tận nơi không?",
+    "sau sáp nhập 2025, Bạc Liêu có thuộc Cà Mau không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Cà Mau 2026",
+    "cho thuê xe máy tự lái Cà Mau",
+    "thuê xe máy đi Đất Mũi",
+    "thuê Exciter Cà Mau"
+  ],
+  "serp_patterns": "SERP cho Cà Mau xoay quanh cụm TP. Cà Mau và vùng Năm Căn: motogo có bài 7 địa điểm kèm bảng giá từng cơ sở (Triển Lê, Anh Cường, Quý Cọp, khách sạn Ánh Nguyệt, cửa hàng 35 Nguyễn Hữu Lễ, Trọng Nguyễn, Hồng Thắm) và ghi nhận giá thuê xe số từ 100k/ngày, xe ga từ 120k/ngày, 2trip liệt kê 7 cửa hàng kèm dải giá (Trọng Nguyễn, Triển Lê, Bảo Anh, Quý Cọp, Anh Cường, Hồng Thắm, Air Blade Cà Mau) kèm mô tả Triển Lê không cần đặt cọc thanh toán khi trả xe, tripbike có bảng giá theo hãng (Sirius 80.000 – 120.000 đến Exciter 130.000-180.000) và mô tả các khách sạn cho thuê kèm (Ánh Nguyệt, Hồng Thắm, Địa Ốc, Hạnh Phúc Guest house), mia tổng hợp 5 địa chỉ kèm lưu ý thủ tục khoảng 30 phút và mặt bằng 100.000 VNĐ đến 200.000 VNĐ. Điểm nhấn thị trường: ít cửa hàng chuyên nghiệp, nhiều cơ sở gắn với khách sạn nhà nghỉ; Triển Lê không cần cọc; Anh Cường không cần đặt cọc tiền nếu đủ giấy tờ.",
+  "official_sources": [
+    {
+      "source_url": "https://luatvietnam.vn/hanh-chinh/nghi-quyet-202-2025-qh15-cua-quoc-hoi-ve-viec-sap-xep-don-vi-hanh-chinh-cap-tinh-402728-d1.html",
+      "source_domain": "luatvietnam.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nghị quyết 202/2025/QH15: «Tỉnh Cà Mau: Sáp nhập tỉnh Bạc Liêu và Cà Mau, diện tích 7.942,39 km², dân số 2.606.672 người.»"
+    }
+  ],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "danh sách 7 địa điểm cho thuê tại TP. Cà Mau – Năm Căn kèm bảng giá theo cơ sở, bảng giá theo dòng xe Air Blade, mô tả Triển Lê tặng kèm mũ bảo hiểm và 1 lít xăng miễn phí, Anh Cường không cần đặt cọc tiền nếu đủ giấy tờ, Quý Cọp giao xe 24/7"
+    },
+    {
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-ca-mau",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng tổng hợp 7 cửa hàng kèm dải giá từng nơi, mô tả Trọng Nguyễn giao nhận tận nơi và tính thêm phí nếu không trả xe sau 24h, Triển Lê không cần đặt cọc thanh toán khi trả xe kèm mũ bảo hiểm áo mưa bản đồ 1 chai nước lọc, Bảo Anh giao tận nơi với khoản nhỏ tùy gần xa, khách nước ngoài cần hộ chiếu"
+    },
+    {
+      "source_url": "https://tripbike.net/thue-xe-may-ca-mau/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng giá theo hãng xe (Sirius, Wave Rsx, Lead, Vision, Airblade, Exciter, Winer 150), thủ tục cần giấy tờ tùy thân bản gốc và đặt cọc 1-2 triệu, mô tả các cơ sở Trọng Nguyễn, Triển Lê, Bảo Anh hỗ trợ hư hỏng 24/7, Anh Quý, Anh Khôi chỉ giao trong trung tâm phố, Hồng Thắm và khách sạn Địa Ốc không có giao xe tận nơi"
+    },
+    {
+      "source_url": "https://mia.vn/cam-nang-du-lich/thue-xe-may-ca-mau-9666",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "5 địa chỉ cho thuê xe máy ở Cà Mau kèm giá từng nơi, lưu ý thủ tục chỉ cần CMND/CCCD, bằng lái xe và đặt cọc, cả quá trình thường chỉ mất khoảng 30 phút, mặt bằng giá 100.000 VNĐ đến 200.000 VNĐ, chính sách giao nhận trong khu vực thành phố bến xe sân bay của cửa hàng 35 Nguyễn Hữu Lễ"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-an-giang/",
+    "/lab/thue-xe-may/thue-xe-may-can-tho/",
+    "/lab/thue-xe-may/thue-xe-may-dong-thap/",
+    "/lab/kinh-nghiem/",
+    "/lab/cuu-ho-xe-may/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-ca-mau: nhóm gốc cấp tỉnh. Bài tỉnh gốc chỉ nêu giá theo dòng xe ở mức tham khảo tổng hợp, không lạm bàn riêng từng mẫu — các row hẹp theo dòng xe tại Cà Mau (nếu có trong matrix) sẽ xử lý riêng. Cụm 'thuê xe máy Năm Căn' hiện chưa có row riêng nên chỉ đề cập định tính trong bài.",
+  "unique_angle": "Bài tỉnh gốc cho thị trường cực Nam Tổ quốc sau sáp nhập 2025: Cà Mau nay rộng thêm cả Bạc Liêu cũ, nhưng thị trường thuê xe vẫn gói trong TP. Cà Mau, với ngoại lệ là Năm Căn gần Đất Mũi. Đặc trưng khác biệt: dịch vụ cho thuê ở đây không phát triển mạnh như Đà Nẵng Nha Trang Đà Lạt, nhiều cơ sở gắn với khách sạn nhà nghỉ (Ánh Nguyệt, Hồng Thắm, Địa Ốc) nên đặt trước là khuyến nghị chung. Điểm đáng viết: Triển Lê cho thuê không cần đặt cọc, thanh toán toàn bộ khi trả xe, tặng mũ bảo hiểm áo mưa bản đồ và 1 chai nước lọc miễn phí; Anh Cường không cần đặt cọc tiền nếu đáp ứng đủ giấy tờ; bảng giá theo hãng từ Sirius 80.000 – 120.000 tới Exciter 130.000-180.000; mặt bằng chung 100.000 VNĐ đến 200.000 VNĐ dễ chịu bậc miền Tây.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; mọi mức giá dẫn theo nguồn công khai. Cà Mau CURRENT giữ tên (LG-063 UNCHANGED); Bạc Liêu (LG-062) MERGED_INTO Cà Mau theo Nghị quyết 202/2025/QH15 — nguồn luatvietnam ghi nguyên văn dòng sáp nhập. Nguồn dùng k-notation (100k/ngày, 120k/ngày, 130-180k, 80-120k, 100k, 150k) — giữ nguyên dạng k trong claim_supported để grounding khớp khi bài dùng k-notation. Địa chỉ dẫn theo bảng công khai: Trọng Nguyễn 389 Lý Thường Kiệt khóm 2 phường 6 (motogo/mia) và 398 Lý Thường Kiệt (2trip ghi cho Anh Cường — lưu ý 2 nguồn ghi hai số nhà khác nhau trên cùng trục, dẫn theo từng nguồn); Triển Lê 8 Bùi Thị Xuân K2 Phường 4; Bảo Anh Số 43 Chung Thành Châu Khóm 5; Quý Cọp Trần Quang Diệu Phường 9; Anh Cường 398 Lý Thường Kiệt Khóm 2; Air Blade Cà Mau / Anh Khôi 35 Nguyễn Hữu Lễ Phường 2; Hồng Thắm TT. Năm Căn; khách sạn Ánh Nguyệt 207 Phan Ngọc Hiển Phường 6; khách sạn Địa Ốc 11-16 Cao Thắng Phường 8. POI: Hòn Đá Bạc, rừng U Minh Hạ, cột mốc tọa độ cực Nam chỉ nêu định tính.",
+  "claim_evidence": [
+    {
+      "claim": "Triển Lê (8 Bùi Thị Xuân, K2, Phường 4, TP. Cà Mau) ghi giá thuê xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 150.000đ/ngày; thuê xe được nhận kèm mũ bảo hiểm và 1 lít xăng miễn phí, giấy tờ xe chuẩn bị đầy đủ",
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng ghi «Triển Lê ... Địa chỉ: 8 Bùi Thị Xuân, K2, Phường 4, TP. Cà Mau. Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày»; «Khi thuê xe bạn xe được nhận kèm mũ bảo hiểm và 1 lít xăng miễn phí. Giấy tờ xe cũng được chuẩn bị đầy đủ cho bạn.»"
+    },
+    {
+      "claim": "Anh Cường (398 Lý Thường Kiệt, Khóm 2, TP. Cà Mau) ghi giá thuê xe số 80.000đ – 120.000đ/ngày, xe ga 120.000đ -160.000đ/ngày; chỉ với từ 100.000đ/ngày đã thuê được xe chất lượng, nếu đáp ứng đủ giấy tờ thì không cần đặt cọc tiền",
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng ghi «Anh Cường ... Địa chỉ: 398 Lý Thường Kiệt, Khóm 2, Thành phố Cà Mau, Cà Mau. Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày»; «Chỉ với từ 100.000đ/ngày, bạn đã có thể thuê được những chiếc xe cực chất lượng.»; «Nếu đáp ứng đủ giấy tờ bạn còn không cần phải đặt cọc tiền khi thuê xe.»"
+    },
+    {
+      "claim": "Quý Cọp (Trần Quang Diệu, Phường 9, TP. Cà Mau) ghi giá thuê xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày; hỗ trợ giao xe 24/7",
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng ghi «Qúy Cọp ... Địa chỉ: Trần Quang Diệu, Phường 9, TP. Cà Mau. Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày»; «Ngoài ra Quý Cọp còn chỗ trợ giao xe 24/7.»"
+    },
+    {
+      "claim": "Khách sạn Ánh Nguyệt (207 Đường Phan Ngọc Hiển, Phường 6, TP. Cà Mau) ghi giá thuê xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày; xe được vệ sinh và bảo dưỡng chu đáo, chủ gợi ý điểm vui chơi",
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng ghi «Khách sạn Anh Nguyệt ... Địa chỉ: 207 Đường Phan Ngọc Hiển, Phường 6, Thành phố Cà Mau, Cà Mau Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày»; «Những chiếc xe cho thuê tại đây tuy không quá mới nhưng chất lượng rất ổn. Chị chủ rất quan tâm vấn đề vệ sinh nên các xe trông rất sạch sẽ.»"
+    },
+    {
+      "claim": "Cửa hàng cho thuê xe máy tại số 35 Nguyễn Hữu Lễ, Phường 2, TP. Cà Mau ghi giá thuê xe số 100.000đ/ngày, xe ga 150.000đ/ngày; có chính sách giao nhận xe trong khu vực thành phố, bến xe; dòng chủ lực là Air Blade kèm các loại xe phổ biến khác, bảo dưỡng định kỳ",
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng ghi «Cửa hàng cho thuê xe máy tại Cà Mau ... Địa chỉ: Số 35 Nguyễn Hữu Lê, Phường 2, TP. Cà Mau. Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày»; «Đặc biệt cơ sở này còn có chính sách giao nhận xe trong khu vực thành phố, bến xe.»; «Ngoài dòng xe chính là Air Blade thì nơi đây còn có các loại xe phổ biến khác. Cửa hàng này còn thực hiện bảo dưỡng xe định kì.»"
+    },
+    {
+      "claim": "Trọng Nguyễn (389 Lý Thường Kiệt, khóm 2, phường 6, TP. Cà Mau) ghi giá thuê xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày; tất cả xe nằm trong khoảng 100.000đ đến 150.000đ/ngày, nằm ngay trung tâm thành phố, đặt xe qua điện thoại",
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng ghi «Trọng Nguyễn ... Địa chỉ: 389 Lý Thường Kiệt, khóm 2, phường 6, TP. Cà Mau. Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày»; «Cửa hàng cho thuê xe máy Trọng Nguyễn có vị trí nằm ngay tại trung tâm thành phố Cà Mau.»; «Tất cả cá xe đều nằm trong khoảng 100.000đ đến 150.000đ/ngày.»; «bạn sẽ đặt được xe qua điện thoại mà không cần đến tận nơi.»"
+    },
+    {
+      "claim": "Hồng Thắm (TT. Năm Căn, Năm Căn, Cà Mau) ghi giá thuê xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày; Năm Căn xa trung tâm nên ít cửa hàng chuyên nghiệp, có thể chọn thuê tại nhà nghỉ",
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng ghi «Hồng Thắm ... Địa chỉ: TT. Năm Căn, Năm Căn, Cà Mau Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày»; «Năm Căn nằm cách khá xa trung tâm thành phố nên có rất ít cửa hàng cho thuê xe chuyên nghiệp tại đây. Vì thế bạn có thể chọn thuê xe tại các nhà nghỉ như Hồng Thắm.»"
+    },
+    {
+      "claim": "Mặt bằng giá thuê xe máy tại Cà Mau: giá thuê xe số từ 100k/ngày, xe ga từ 120k/ngày; bảng theo đời xe ghi Honda Airblade 2012 là 120.000 vnd, Airblade 2013-2015 là 140.000 vnd, Airblade 2016- 2017 – 2018 là 160.000 vnd",
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê xe số từ 100k/ngày, xe ga từ 120k/ngày.»; Bảng giá ghi «Xe tay ga Honda Airblade 2012 | 120.000 vnd», «Xe tay ga Honda Airblade 2013-2015 | 140.000 vnd», «Xe tay ga Honda Airblade 2016- 2017 – 2018 | 160.000 vnd»."
+    },
+    {
+      "claim": "Bảng tổng hợp 2trip: Trọng Nguyễn (389 Lý Thường Kiệt) 100.000đ – 120.000đ; Triển Lê 100.000đ – 150.000đ; Bảo Anh 100.000đ – 120.000đ; Quý Cọp 100.000đ – 150.000đ; Anh Cường (398 Lý Thường Kiệt) 80.000đ – 160.000đ; Hồng Thắm 80.000đ – 140.000đ; Air Blade Cà Mau (35 Nguyễn Hữu Lễ) 100.000đ – 150.000đ",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-ca-mau",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng ghi «Trọng Nguyễn | 389 Lý Thường Kiệt, khóm 2, phường 6, TP. Cà Mau | 100.000đ – 120.000đ», «Triển Lê | 8 Bùi Thị Xuân, K2, Phường 4, TP. Cà Mau | 100.000đ – 150.000đ», «Bảo Anh | Số 43, Chung Thành Châu, Khóm 5, TP. Cà Mau | 100.000đ – 120.000đ», «Quý Cọp | Trần Quang Diệu, Phường 9, TP. Cà Mau | 100.000đ – 150.000đ», «Anh Cường | 398 Lý Thường Kiệt, Khóm 2, Thành phố Cà Mau | 80.000đ – 160.000đ», «Hồng Thắm | TT. Năm Căn, Năm Căn, Cà Mau | 80.000đ – 140.000đ», «Air Blade Cà Mau | Số 35 Nguyễn Hữu Lễ, Phường 2, TP.Cà Mau | 100.000đ – 150.000đ»."
+    },
+    {
+      "claim": "Trọng Nguyễn áp dụng giá xe số 100.000đ/xe, xe tay ga nhỉnh hơn khoảng 20.000đ; nếu không trả xe sau 24h thì tính thêm phí thuê thêm giờ; có bộ phận nhân viên chuyên giao và nhận xe tận nơi cho khách hàng",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-ca-mau",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Đối với các loại xe số thì mức giá được áp dụng là 100.000đ/xe , còn với xe tay ga thì giá nhỉnh hơn chỉ khoảng 20.000đ so với xe số.»; «Nếu quý khách không trả xe sau 24h thì cửa hàng sẽ tính thêm phí thuê thêm giờ.»; «Trọng Nguyễn có cả 1 bộ phận nhân viên chuyên giao và nhận xe cho khách hàng nên quá trình này diễn ra nhanh chóng.»"
+    },
+    {
+      "claim": "Triển Lê cho thuê không cần đặt cọc hay đóng khoản nào trước, thanh toán khi sử dụng xe xong và trả về cửa hàng; thuê xe được tặng mũ bảo hiểm, áo mưa, bản đồ và 1 chai nước lọc miễn phí; cần chuẩn bị căn cước công dân/chứng minh thư/Hộ chiếu hoặc bằng lái xe",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-ca-mau",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«bạn sẽ không cần đặt cọc hay đóng bất kỳ một khoản nào cho dịch vụ thuê xe ở đây. Tất cả sẽ được thanh toán khi bạn đã sử dụng xe xong và trả về cửa hàng.»; «quý khách thuê xe tại Triển Lê còn được tặng thêm mũ bảo hiểm, áo mưa để tránh gặp trời mưa bất chợt khi đi đường»; «bạn sẽ được phát thêm một chiếc bản đồ khu vực»; «nhân viên cửa hàng cũng hỗ trợ cho mỗi khách 1 chai nước lọc miễn phí.»; «bạn sẽ cần chuẩn bị căn cước công dân/chứng minh thư/Hộ chiếu hoặc bằng lái xe để có thể thê xe tại đây.»"
+    },
+    {
+      "claim": "Bảo Anh (Số 43, Chung Thành Châu, Khóm 5, TP. Cà Mau) giá cho thuê chỉ từ 100.000đ/xe/ngày; có dịch vụ giao xe máy tận nơi nhưng cần chi một khoản nhỏ tùy độ gần xa; khách trong nước cần căn cước công dân/chứng minh thư và bằng lái xe, khách nước ngoài cần hộ chiếu",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-ca-mau",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Bạn có thể tìm cho mình những chiếc xe tốt bất ngờ nhưng mức giá cho thuê chỉ từ 100.000đ/xe/ngày.»; «Bảo Anh cũng triển khai dịch vụ giao xe máy tận nơi để tối ưu hoá thời gian cho khách hàng. Tuy nhiên, để sử dụng dịch vụ này bạn sẽ cần chi một khoản nhỏ cho chi phí giao xe tuỳ vào độ gần, xa.»; «Bảo Anh yêu cầu khách thuê xe cung cấp căn cước công dân/chứng minh thư và bằng lái xe đối với khách trong nước. Khách nước ngoài cần xuất trình hộ chiếu để hoàn thiện hồ sơ thuê xe.»"
+    },
+    {
+      "claim": "Quý Cọp chỉ từ 100.000đ đã thuê được xe máy chất lượng đi vi vu khắp thành phố; cửa hàng chủ yếu cho thuê xe tay ga như Honda airblade, vision, Jupiter",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-ca-mau",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Chỉ từ 100.000đ là bạn đã có thể \"gói\" về cho mình một chiếc xe máy chất lượng đi vi vu khắp thành phố.»; «Hiện nay cửa hàng đang cho thuê chủ yếu 2 dòng xe máy chính là xe ga và xe số. ... Cửa hàng cung cấp đa số là các loại xe tay ga như Honda airblade, vision, Jupiter,….»"
+    },
+    {
+      "claim": "Bảng giá thuê xe máy Cà Mau theo hãng: Sirius 80.000 – 120.000; Sirius Fi 80.000 – 120.000; Wave Rsx 80.000 – 120.000; Lead 110 100.000 – 130.000; Vision 110 100.000 – 130.000; Airblade 110 100.000 – 130.000; Lead 125 130.000-160.000; Vision 125 130.000-160.000; Airblade 125 130.000-160.000; Exciter 130.000-180.000; Winer 150 130.000-180.000",
+      "source_url": "https://tripbike.net/thue-xe-may-ca-mau/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng «Bảng giá Thuê xe máy Cà Mau» ghi «Sirius 80.000 – 120.000», «Sirius Fi 80.000 – 120.000», «Wave Rsx 80.000 – 120.000», «Lead 110 100.000 – 130.000», «Vision 110 100.000 – 130.000», «Airblade 110 100.000 – 130.000», «Lead 125 130.000-160.000», «Vision 125 130.000-160.000», «Airblade 125 130.000-160.000», «Exciter 130.000-180.000», «Winer 150 130.000-180.000»."
+    },
+    {
+      "claim": "Thủ tục thuê xe máy Cà Mau theo tripbike: cần giấy tờ tùy thân bản gốc, đặt cọc 1-2 triệu, giao xe tận nơi theo yêu cầu, thanh toán tiền như hợp đồng đã ký",
+      "source_url": "https://tripbike.net/thue-xe-may-ca-mau/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Mục «Thủ Tục Thuê xe máy Cà Mau» ghi «Cần giấy tờ tùy thân bản gốc», «Đặt cọc 1-2 triệu», «Giao xe tận nơi theo yêu cầu», «Thanh toán tiền như hợp đồng đã ký»."
+    },
+    {
+      "claim": "Bảo Anh: các mẫu xe mới có giá cao hơn các mẫu xe cũ, khoảng 130-180k đối với xe tay ga, còn các mẫu xe số 80-120k; có dịch vụ hỗ trợ hư hỏng 24/7 kèm giao xe tận nơi",
+      "source_url": "https://tripbike.net/thue-xe-may-ca-mau/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Những mẫu xe mới thường có giao cao hơn các mẫu xe cũ giá 130-180k đối với xe tay ga. Còn các mẫu xe số 80-120k.»; «Dịch vụ hỗ trợ hư hỏng 24/7»; «Bên cạnh đó nơi đây cũng có dịch vụ giao xe tận nơi, bạn không phải di chuyển đến cửa hàng, mà có đội ngũ nhân viên đem xe đến.»"
+    },
+    {
+      "claim": "Anh Quý (Trần Quang Diệu, Phường 9): giá từ 100k xe tay số, 150k xe tay ga các loại; khi thuê được trang bị mũ bảo hiểm áo mưa; cửa hàng làm việc từ sáng đến chiều tối",
+      "source_url": "https://tripbike.net/thue-xe-may-ca-mau/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá từ 100k xe tay số, 150k xe tay ga các loại. Nhiều hãng xe nên bạn cũng dễ chọn lựa hơn. Khi thuê được trang bị mũ bảo hiểm áo mưa, xăn xe di chuyển. Cửa hàng làm việc từ sáng bến chiều tối nên cần hỗ trợ dịch vụ bạn nhắm khung giờ để đến nhé !»"
+    },
+    {
+      "claim": "Anh Khôi (35 Nguyễn Hữu Lễ, Phường 2, TP. Cà Mau) có dịch vụ giao xe tận nơi, lưu ý chỉ giao trong trung tâm phố",
+      "source_url": "https://tripbike.net/thue-xe-may-ca-mau/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Đến Cà Mau chưa có phương tiện đi lại bạn có thể liên hệ 0814162162 để được giao xe tận nơi. Lưu ý chỉ giao trong trung tâm phố.»; «Địa chỉ : 35 Nguyễn Hữu Lễ, Phường 2, Thành phố Cà Mau»."
+    },
+    {
+      "claim": "Hồng Thắm ở Năm Căn vừa cho thuê phòng nghỉ vừa cho thuê xe máy, xe không nhiều nên cần đặt trước, tại nơi này không có giao xe tận nơi; khách sạn Địa Ốc (11-16 Cao Thắng, Phường 8) giá thuê khoảng 150.000 vnđ/ngày, phải đến trực tiếp nhận xe, không có giao tận nơi",
+      "source_url": "https://tripbike.net/thue-xe-may-ca-mau/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Vừa cho thuê phòng nghĩ, vừa cho thuê xe máy. ... Những con xe ở nơi đây không nhiều, nên cần xe bạn phải đặt trước. ... Tại nơi này không có giao xe tận nơi»; «Giá thuê khoảng 150.000 vnđ/ngày, khi thê bạn đến trực tiếp nhận xe , không có giao tận nơi»; «Địa chỉ : 11-16 Cao Thắng, Phường 8, Thành phố Cà Mau»."
+    },
+    {
+      "claim": "Trọng Nguyên theo mia: giá xe số 80.000 VNĐ - 100.000 VNĐ/ngày, xe ga 130.000 VNĐ - 140.000 VNĐ/ngày, dao động trong khoảng 80.000 VNĐ tới 140.000 VNĐ/ngày; cơ sở hỗ trợ sửa xe khi bị hỏng và bàn giao tận nơi",
+      "source_url": "https://mia.vn/cam-nang-du-lich/thue-xe-may-ca-mau-9666",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Xe số: 80.000 VNĐ - 100.000 VNĐ/ngày; Xe ga: 130.000 VNĐ - 140.000 VNĐ/ngày»; «mức giá còn rất hấp dẫn, phải chăng dao động trong khoảng 80.000 VNĐ tới 140.000 VNĐ/ngày»; «Cơ sở cho thuê xe này cũng hỗ trợ sửa xe khi bị hỏng và bàn giao tận nơi cho người sử dụng dịch vụ.»"
+    },
+    {
+      "claim": "Cửa hàng 35 Nguyễn Hữu Lễ: dòng Nouvo, Mio, Attila rơi vào khoảng 100.000 VNĐ đến 150.000 VNĐ/ngày, dòng Future, Jupiter, Wave S, Sirius Fi, Vision, Lead tầm 120.000 VNĐ tới 200.000 VNĐ/ngày; chính sách giao nhận xe trong khu vực thành phố, bến xe, sân bay",
+      "source_url": "https://mia.vn/cam-nang-du-lich/thue-xe-may-ca-mau-9666",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«nếu những dòng như Nouvo, Mio, Attila rơi vào khoảng 100.000 VNĐ đến 150.000 VNĐ/ngày thì Future, Jupiter, Wave S, Sirius Fi, Vision, Lead sẽ tầm 120.000 VNĐ tới 200.000 VNĐ/ngày.»; «Chính sách giao nhận xe trong khu vực thành phố, bến xe, sân bay của cửa hàng này cũng được đánh giá rất cao về độ nhanh nhẹn, thuận tiện.»"
+    },
+    {
+      "claim": "Anh Cường theo mia: chỉ cần cung cấp CMND/CCCD và một khoản đặt cọc là đã có thể thuê xe, tiền cọc được hoàn trả đầy đủ sau khi hết thời hạn thuê theo hợp đồng; thủ tục tại hầu hết địa chỉ ở Cà Mau khá nhanh gọn, cả quá trình thường chỉ mất khoảng 30 phút",
+      "source_url": "https://mia.vn/cam-nang-du-lich/thue-xe-may-ca-mau-9666",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Bạn chỉ cần cung cấp CMND/CCCD và một khoản đặt cọc là đã có thể thuê xe. Tiền cọc sẽ được cửa hàng hoàn trả đầy đủ sau khi hết thời hạn thuê theo hợp đồng.»; «Bạn chỉ cần cung cấp CMND/CCCD, bằng lái xe (tùy chỗ) và một khoản đặt cọc là đã có thể ký hợp đồng giao nhận xe. Cả quá trình thường chỉ mất khoảng 30 phút.»"
+    },
+    {
+      "claim": "Giá thuê xe ở Cà Mau thường rất rẻ, chỉ dao động từ 100.000 VNĐ đến 200.000 VNĐ tùy theo loại xe ga hay xe số",
+      "source_url": "https://mia.vn/cam-nang-du-lich/thue-xe-may-ca-mau-9666",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê xe ở Cà Mau thường rất rẻ, chỉ dao động từ 100.000 VNĐ đến 200.000 VNĐ tùy theo loại xe ga hay xe số. Bạn nên chủ động hỏi trước giá và so sánh với mức thị trường để tránh bị chặt chém.»"
+    },
+    {
+      "claim": "Sau sáp nhập hành chính 2025, tỉnh Bạc Liêu và Cà Mau hợp nhất thành tỉnh Cà Mau mới, diện tích 7.942,39 km², dân số 2.606.672 người",
+      "source_url": "https://luatvietnam.vn/hanh-chinh/nghi-quyet-202-2025-qh15-cua-quoc-hoi-ve-viec-sap-xep-don-vi-hanh-chinh-cap-tinh-402728-d1.html",
+      "source_domain": "luatvietnam.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Tỉnh Cà Mau: Sáp nhập tỉnh Bạc Liêu và Cà Mau, diện tích 7.942,39 km², dân số 2.606.672 người.»"
+    }
+  ]
+}
