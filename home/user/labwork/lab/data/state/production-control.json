@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "chunk_size": 2,
+  "queue_min": 2,
+  "queue_max": 20,
+  "note": "push-driven TURBO write-ahead queue (factory-production.yml + scripts/factory/push-selection.js): a NEW writer push carries queue_min..queue_max consecutive PLANNED ids (claimed as ONE queue, consumed as sequential pairs of 2 in the same run); enabled=false stops NEW claims cleanly (repair pushes still proceed); chunk_size caps repair ids per push."
+}
