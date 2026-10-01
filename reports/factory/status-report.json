@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T21:58:56.602Z",
+  "generated_at": "2026-10-01T22:10:44.460Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 81,
-    "PLANNED": 9919
+    "PUBLISHED": 83,
+    "PLANNED": 9917
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 75,
-      "PLANNED": 4925
+      "PUBLISHED": 77,
+      "PLANNED": 4923
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00073",
-  "next_claimable_id": "A00074",
+  "last_completed_id": "A00075",
+  "next_claimable_id": "A00076",
   "blocked": [],
   "published": [
     {
@@ -478,6 +478,18 @@
       "pk": "thuê xe máy Hồ Hoàn Kiếm",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ho-hoan-kiem/"
+    },
+    {
+      "id": "A00074",
+      "pk": "thuê xe máy Hồ Tây",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ho-tay/"
+    },
+    {
+      "id": "A00075",
+      "pk": "thuê xe máy Tam Đảo",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-tam-dao/"
     },
     {
       "id": "A00097",
