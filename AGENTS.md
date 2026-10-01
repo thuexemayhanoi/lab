@@ -230,6 +230,18 @@ Rules:
 - Failing a tier means: do NOT merge, do NOT lower thresholds or delete
   tests, do NOT mutate production truth to make tests green; fix the root
   cause and re-run the affected tier AND every tier above it.
+- Reading Actions in the push-driven model: every push runs the LIGHT
+  battery (`ci-validate.yml`); the deep batteries (factory-validate,
+  capacity, soak) are PATH-FILTERED to engine/workflow/doc files, so a
+  draft push only runs `factory-production.yml`. Two red-looking results
+  are BY DESIGN, not engine failures: (a) a REFUSED draft push —
+  `push-selection.js` exits 3 and the production job goes RED while
+  NOTHING is mutated (fix the draft contract on the writer side, push
+  again); (b) a pure-delete/retire commit (D-only diff, e.g. removing a
+  retired workflow) matches no path filter, so the deep batteries stay
+  pinned to the PREVIOUS commit — when the head tree itself must be
+  demonstrated green, re-dispatch the affected battery manually (all
+  three accept `workflow_dispatch`).
 
 ## Scope → gates (Simple Production Mode)
 
