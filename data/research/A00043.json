@@ -1,0 +1,239 @@
+{
+  "article_id": "A00043",
+  "primary_keyword": "thuê xe máy Hai Bà Trưng",
+  "secondary_keywords": [
+    "cho thuê xe máy Hai Bà Trưng",
+    "thuê xe máy quận Hai Bà Trưng",
+    "thuê xe máy Bạch Mai",
+    "thuê xe máy Lê Đại Hành",
+    "cho thuê xe máy giá rẻ Hai Bà Trưng"
+  ],
+  "search_intent": "local/commercial",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Hai Bà Trưng",
+    "Bạch Mai",
+    "Lê Đại Hành",
+    "Trương Định",
+    "Minh Khai",
+    "Kim Ngưu",
+    "Phố Huế",
+    "Tương Mai",
+    "Tân Mai",
+    "Vĩnh Tuy",
+    "cầu Vĩnh Tuy",
+    "chợ Mơ",
+    "Đại Cồ Việt",
+    "Nguyễn Đình Chiểu",
+    "khu Bách Khoa"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe ga",
+    "xe máy địa hình"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Click",
+    "Mio",
+    "Honda XR"
+  ],
+  "questions_found": [
+    "thuê xe máy Hai Bà Trưng giá bao nhiêu một ngày?",
+    "thuê xe máy ở Hai Bà Trưng có cần đặt cọc không?",
+    "quanh Bách Khoa và khu trọ Tương Mai có nơi nào cho thuê xe máy không?",
+    "thuê xe máy theo tháng ở Hai Bà Trưng giá thế nào?",
+    "có dịch vụ giao xe tận nơi tại Hai Bà Trưng không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Hai Bà Trưng",
+    "cho thuê xe máy Bạch Mai",
+    "thuê xe máy Lê Đại Hành",
+    "thuê xe máy sinh viên Bách Khoa",
+    "cho thuê xe máy Hai Bà Trưng không cần cọc"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy Hai Bà Trưng\" gồm thư mục tổng hợp và trang nhà xe: 2trip.vn tổng hợp các địa điểm cho thuê xe máy tại Hai Bà Trưng với dải giá tham khảo 80.000 - 150.000 đồng/chiếc/ngày; motogo.vn có cả bài giá thuê theo mẫu xe toàn Hà Nội (Sirius 130.000đ/ngày cho gói 1-5 ngày) lẫn bài tổng hợp cơ sở tại Hai Bà Trưng; hanoibiker.com niêm yết 120k cho 1-4 ngày và 100k cho 5-7 ngày, cọc bằng CCCD hoặc 500k kèm vé máy bay khứ hồi; hanoireview.vn và timthosuaxe.com liệt kê các cơ sở quanh trục Bạch Mai - Lê Đại Hành - Trương Định, Nguyễn Đình Chiểu (có cơ sở Duy Hùng cho thuê cả Honda XR 150cc); motorbike.vn khuyên gọi điện trước để hỏi giảm giá và cọc; giahuy.org ghi nhận dịch vụ giao xe tận nơi khu vực Hai Bà Trưng. Intent local/commercial nhấn mạnh sinh viên khu Bách Khoa, khu trọ Tương Mai - Tân Mai - Vĩnh Tuy, thuê theo tháng, giao tận nơi.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-tai-hai-ba-trung-ha-noi/",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bài tổng hợp các địa điểm cho thuê xe máy tại Hai Bà Trưng ghi nhận giá thuê dao động từ 80.000 - 150.000 đồng/chiếc/ngày tùy dòng xe và thời gian thuê."
+    },
+    {
+      "source_url": "https://motogo.vn/ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá thuê xe máy Hà Nội của MOTOGO ghi Yamaha Sirius 130.000đ/ngày cho gói thuê 1-5 ngày và 120.000vnd cho gói 6-10 ngày; đặt cọc 3 triệu, không cần hộ khẩu."
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-hai-ba-trung/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bài tổng hợp của MOTOGO liệt kê 6 địa chỉ cho thuê xe máy tại quận Hai Bà Trưng kèm giá công khai theo từng cơ sở."
+    },
+    {
+      "source_url": "https://hanoibiker.com/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Hanoi Biker niêm yết giá thuê 120k cho gói 1-4 ngày và 100k cho gói 5-7 ngày; đặt cọc bằng CCCD hoặc 500k nếu khách có vé máy bay khứ hồi."
+    },
+    {
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-thue-xe-may-tai-q-hai-ba-trung",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bài tổng hợp các địa chỉ cho thuê xe máy tại quận Hai Bà Trưng, tập trung quanh các trục phố chính như Bạch Mai, Lê Đại Hành, Trương Định, Nguyễn Đình Chiểu."
+    },
+    {
+      "source_url": "https://timthosuaxe.com/thue-xe-may-quan-hai-ba-trung/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Các cơ sở cho thuê xe máy tại Hai Bà Trưng được ghi nhận gồm Duy Hùng (quay quanh khu Nguyễn Đình Chiểu, Lê Đại Hành), ngoài dòng xe số phổ thông còn có cả Honda XR 150cc phục vụ khách đi đường trường."
+    },
+    {
+      "source_url": "https://motorbike.vn/thue-xe-may-hai-ba-trung/",
+      "source_domain": "motorbike.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nhiều nhà xe tại Hai Bà Trưng ghi nhận sẵn sàng giảm giá thuê hoặc giảm tiền cọc nếu khách gọi điện đặt xe trước."
+    },
+    {
+      "source_url": "https://giahuy.org/thue-xe-may-hai-ba-trung-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Gia Huy hỗ trợ giao xe tận nơi cho khách thuê tại khu vực Hai Bà Trưng, nhận xe tại nhà hoặc theo địa điểm khách yêu cầu."
+    },
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "trang chính thức của nhà xe Nguyễn Tú: bảng giá công khai theo ngày/tuần/tháng, tiền cọc tham khảo, giao tận nơi Long Biên/Hoàn Kiếm/Phố Cổ/Ba Đình và các quận nội thành, giờ 09:00 - 21:00"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-dong-da/",
+    "/lab/thue-xe-may/thue-xe-may-thanh-xuan/",
+    "/lab/thue-xe-may/thue-xe-may-hoan-kiem/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-hai-ba-trung riêng biệt: A00001 (thuê xe máy Hà Nội) là bài thành phố tổng quát; A00038 (Đống Đa) gắn khu cửa ngõ tây nam trục Láng - Thái Hà; A00040 (Thanh Xuân) gắn sinh viên cửa ngõ tây nam; A00043 này gắn khu Hai Bà Trưng với đặc thù sinh viên Bách Khoa, khu trọ Tương Mai - Tân Mai - Vĩnh Tuy, trục Bạch Mai - Lê Đại Hành - Trương Định — khác intent, khác geo, không trùng primary intent.",
+  "unique_angle": "Bài Hai Bà Trưng duy nhất định vị theo nhóm khách trọ và sinh viên phía nam trung tâm: khu trọ Tương Mai - Tân Mai - Vĩnh Tuy, sinh viên Bách Khoa trên Đại Cồ Việt, trục Bạch Mai - Lê Đại Hành - Trương Định, chợ Mơ, Phố Huế, cầu Vĩnh Tuy sang Long Biên; nhấn mạnh mẹo gọi điện trước để giảm giá/cọc và các cơ sở giao tận nơi — khác hẳn bài Hà Nội tổng quát và các bài quận phía tây.",
+  "notes": "actual_service_area=hanoi_owner_verified: được phép dùng NAP đã xác minh từ config/business-facts.json và bảng giá công khai trên trang nhà xe; KHÔNG bịa giá ngoài bảng. Tên gọi \"quận Hai Bà Trưng\" là địa danh quen thuộc (sau sắp xếp đơn vị hành chính 2025 không còn là cấp hành chính riêng) — bài dùng tên địa danh quen thuộc và nêu rõ bối cảnh. Giá của từng nhà xe ngoài luôn dẫn theo công bố công khai của chính nhà xe đó hoặc bài tổng hợp ghi nhận, không tổng quát hóa ngoài khoảng ghi nhận.",
+  "claim_evidence": [
+    {
+      "claim": "Mức giá cho thuê xe máy tại Hai Bà Trưng được ghi nhận dao động khoảng 80.000 - 150.000 đồng/chiếc/ngày tùy dòng xe và thời gian thuê.",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-tai-hai-ba-trung-ha-noi/",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy tại Hai Bà Trưng dao động từ 80.000 - 150.000 đồng/chiếc/ngày, tùy thuộc vào loại xe và thời gian thuê."
+    },
+    {
+      "claim": "MOTOGO ghi giá thuê Yamaha Sirius 130.000đ/ngày cho gói 1-5 ngày và 120.000vnd cho gói 6-10 ngày; đặt cọc 3 triệu, không cần hộ khẩu.",
+      "source_url": "https://motogo.vn/ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Yamaha Sirius: 130.000đ/ngày (thuê 1-5 ngày), 120.000vnd (thuê 6-10 ngày). Đặt cọc 3 triệu, không cần hộ khẩu."
+    },
+    {
+      "claim": "Bài tổng hợp của MOTOGO liệt kê 6 địa chỉ cho thuê xe máy tại quận Hai Bà Trưng kèm thông tin từng cơ sở.",
+      "source_url": "https://motogo.vn/thue-xe-may-hai-ba-trung/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "MOTOGO tổng hợp 6 địa chỉ cho thuê xe máy uy tín tại quận Hai Bà Trưng, Hà Nội, kèm địa chỉ và giá công khai."
+    },
+    {
+      "claim": "Hanoi Biker niêm yết giá thuê 120k cho gói 1-4 ngày và 100k cho gói 5-7 ngày; đặt cọc bằng CCCD hoặc 500k kèm vé máy bay khứ hồi.",
+      "source_url": "https://hanoibiker.com/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe: 120k/ngày cho gói 1-4 ngày, 100k/ngày cho gói 5-7 ngày. Đặt cọc bằng CCCD hoặc 500k nếu khách có vé máy bay khứ hồi."
+    },
+    {
+      "claim": "Các cơ sở cho thuê xe tại Hai Bà Trưng tập trung quanh trục Bạch Mai, Lê Đại Hành, Trương Định và Nguyễn Đình Chiểu.",
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-thue-xe-may-tai-q-hai-ba-trung",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Các địa chỉ cho thuê xe máy tại quận Hai Bà Trưng tập trung quanh các trục phố chính như Bạch Mai, Lê Đại Hành, Trương Định, Nguyễn Đình Chiểu — gần khu dân cư và khu trọ sinh viên."
+    },
+    {
+      "claim": "Cơ sở Duy Hùng tại Hai Bà Trưng cho thuê cả dòng xe số phổ thông lẫn xe máy địa hình Honda XR 150cc; điểm nhận xe ghi nhận quanh Nguyễn Đình Chiểu và Lê Đại Hành.",
+      "source_url": "https://timthosuaxe.com/thue-xe-may-quan-hai-ba-trung/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Duy Hùng cho thuê xe máy tại Hai Bà Trưng, ngoài các dòng xe số phổ thông còn có Honda XR 150cc; khu vực đón xe quanh Nguyễn Đình Chiểu, Lê Đại Hành."
+    },
+    {
+      "claim": "Nhiều nhà xe tại Hai Bà Trưng ghi nhận sẵn sàng giảm giá thuê hoặc giảm tiền cọc nếu khách gọi điện đặt xe trước.",
+      "source_url": "https://motorbike.vn/thue-xe-may-hai-ba-trung/",
+      "source_domain": "motorbike.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Kinh nghiệm thuê xe máy ở Hai Bà Trưng: gọi điện trước cho nhà xe để hỏi giá, nhiều nơi sẵn sàng giảm giá thuê hoặc giảm tiền cọc cho khách đặt xe trước."
+    },
+    {
+      "claim": "Có dịch vụ giao xe tận nơi cho khách thuê tại khu vực Hai Bà Trưng, nhận xe tại nhà hoặc theo địa điểm khách yêu cầu.",
+      "source_url": "https://giahuy.org/thue-xe-may-hai-ba-trung-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Gia Huy hỗ trợ giao xe tận nơi khu vực Hai Bà Trưng, Hà Nội; khách được nhận xe tại nhà, khách sạn hoặc theo địa điểm yêu cầu."
+    },
+    {
+      "claim": "Dịch vụ của chủ trang web công bố giá thuê Honda Wave và Yamaha Sirius (xe số): 150.000đ/ngày; giá tuần 700.000đ; giá tháng 900.000-1.200.000đ.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 150.000đ/ngày. Giá tuần 700.000đ; giá tháng 900.000-1.200.000đ."
+    },
+    {
+      "claim": "Honda Click / Yamaha Mio (xe ga giá rẻ): 150.000đ/ngày; 700.000đ/tuần; 900.000-1.200.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Click / Yamaha Mio - xe ga giá rẻ: 150.000đ/ngày; 700.000đ/tuần; 900.000-1.200.000đ/tháng."
+    },
+    {
+      "claim": "Honda Vision: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000-2.000.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Vision - xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000-2.000.000đ/tháng."
+    },
+    {
+      "claim": "Honda Air Blade: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Air Blade - xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Xe máy điện: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy điện tại Nguyễn Tú: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Tiền đặt cọc tham khảo của dịch vụ chủ trang web: Honda Wave 2-3 triệu; Honda Vision 4-5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiền đặt cọc tham khảo: Honda Wave 2-3 triệu; Honda Vision 4-5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu."
+    },
+    {
+      "claim": "Dịch vụ của chủ trang web giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành; giờ làm việc 09:00 - 21:00 và không giao xe ngoài khung giờ này.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chúng tôi giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành. Điện thoại: 0942 467 674 - 09:00 - 21:00 - Không giao xe máy ngoài giờ."
+    }
+  ]
+}

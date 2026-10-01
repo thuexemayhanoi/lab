@@ -1,0 +1,207 @@
+{
+  "article_id": "A00044",
+  "primary_keyword": "thuê xe máy Đông Anh",
+  "secondary_keywords": [
+    "cho thuê xe máy Đông Anh",
+    "thuê xe máy gần sân bay Nội Bài",
+    "thuê xe máy tại Nội Bài",
+    "cho thuê xe máy thị trấn Đông Anh",
+    "thuê xe máy KCN Thăng Long"
+  ],
+  "search_intent": "local/commercial",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Đông Anh",
+    "thị trấn Đông Anh",
+    "sân bay quốc tế Nội Bài",
+    "KCN Thăng Long",
+    "thành Cổ Loa",
+    "cầu Nhật Tân",
+    "Quốc lộ 3",
+    "cầu Thượng Cát",
+    "cầu Đông Trù",
+    "Tây Hồ",
+    "Gia Lâm"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe ga",
+    "xe máy điện"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Click",
+    "Mio"
+  ],
+  "questions_found": [
+    "thuê xe máy Đông Anh giá bao nhiêu một ngày?",
+    "có chỗ nào cho thuê xe máy gần sân bay Nội Bài không?",
+    "thuê xe ở Nội Bài có được giao xe tận nơi không?",
+    "đi làm ở KCN Thăng Long thuê xe theo tháng ở đâu?",
+    "thuê xe máy ở Đông Anh có cần đặt cọc không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Đông Anh",
+    "cho thuê xe máy gần Nội Bài",
+    "thuê xe máy giao tận nơi Nội Bài",
+    "thuê xe máy theo tháng Đông Anh",
+    "thuê xe máy rẻ gần sân bay Nội Bài"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy Đông Anh\" hầu như không có nhà xe truyền thống niêm yết trên vỉa hè thị trấn Đông Anh — kết quả thiên về dịch vụ giao nhận gần sân bay Nội Bài (nằm trên địa bàn Đông Anh): motogo.vn ghi dịch vụ thuê xe gần sân bay Nội Bài 130.000đ - 300.000đ kèm mũ bảo hiểm và áo mưa, có giao nhận tại Nội Bài với 3 cơ sở; brixtonvietnam.com.vn ghi dải giá MOTOGO 80.000đ - 200.000đ/ngày; motortrip.vn ghi nhận xe đời 2023, kèm 2 mũ bảo hiểm, 2 áo mưa và 1 lít xăng, giao nhận 24/24; 2trip.vn lưu ý phí trả xe khác cơ sở gần sân bay 50.000đ/xe; izigo.vn ghi nhận dịch vụ xe điện gần Nội Bài giao miễn phí trong 3km. Intent local/commercial nhấn mạnh dân đi làm KCN Thăng Long thuê theo tháng, khách bay cần xe tại Nội Bài, giao tận nơi.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-san-bay-noi-bai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Dịch vụ cho thuê xe máy gần sân bay Nội Bài của MOTOGO ghi giá 130.000đ - 300.000đ tùy dòng xe và thời gian thuê, kèm mũ bảo hiểm và áo mưa."
+    },
+    {
+      "source_url": "https://hanoireview.vn/topAZ/cho-thue-xe-may-gan-san-bay-noi-bai",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "MOTOGO có 3 cơ sở, hỗ trợ giao nhận xe tại sân bay Nội Bài, mức giá tham khảo 130.000 - 300.000 đồng."
+    },
+    {
+      "source_url": "https://brixtonvietnam.com.vn/",
+      "source_domain": "brixtonvietnam.com.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bài ghi nhận dải giá thuê xe của MOTOGO từ 80.000đ - 200.000đ/ngày tùy dòng xe."
+    },
+    {
+      "source_url": "https://motortrip.vn/dich-vu/thue-xe-may-san-bay-noi-bai",
+      "source_domain": "motortrip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Dịch vụ thuê xe máy sân bay Nội Bài: xe đời 2023, mỗi xe kèm 2 mũ bảo hiểm, 2 áo mưa và 1 lít xăng, tổng đài giao nhận 24/24."
+    },
+    {
+      "source_url": "https://2trip.vn/toplist/dia-diem-cho-thue-xe-may-gan-san-bay-noi-bai/",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Lưu ý khi thuê xe gần sân bay Nội Bài: nếu trả xe ở cơ sở khác cơ sở gần sân bay, một số nơi phụ thu 50.000đ/xe."
+    },
+    {
+      "source_url": "https://izigo.vn/thue-xe-may-dien-gan-san-bay-noi-bai/",
+      "source_domain": "izigo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Dịch vụ thuê xe máy điện gần sân bay Nội Bài, hỗ trợ giao xe miễn phí trong bán kính 3km."
+    },
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "trang chính thức của nhà xe Nguyễn Tú: bảng giá công khai theo ngày/tuần/tháng, tiền cọc tham khảo, giao tận nơi Long Biên/Hoàn Kiếm/Phố Cổ/Ba Đình và các quận nội thành, giờ 09:00 - 21:00"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-noi-bai/",
+    "/lab/thue-xe-may/thue-xe-may-long-bien/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-dong-anh riêng biệt: đã có bài /lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-noi-bai/ (A00030 nhóm thuê xe gần sân bay quốc tế Nội Bài) nhắm khách du lịch bay vào Nội Bài; A00044 này giữ intent huyện Đông Anh — dân địa phương, người đi làm KCN Thăng Long, thuê theo tháng, nhận xe tại thị trấn Đông Anh — và link sang bài sân bay cho khách bay, khác primary intent, khác geo focus.",
+  "unique_angle": "Bài Đông Anh duy nhất định vị theo intent huyện chứ không phải intent sân bay: Đông Anh là huyện phía bắc nơi đặt sân bay Nội Bài, KCN Thăng Long và thành Cổ Loa, nhưng nhà xe vỉa hè rất ít — đa phần dịch vụ hoạt động theo mô hình giao nhận tận nơi hoặc giao xe tại Nội Bài; bài tổng hợp giá giao nhận tại Nội Bài, phí trả xe khác cơ sở, đồng thời chỉ rõ dân đi làm KCN Thăng Long nên hỏi gói thuê tháng.",
+  "notes": "actual_service_area=hanoi_owner_verified: được phép dùng NAP đã xác minh từ config/business-facts.json và bảng giá công khai trên trang nhà xe; KHÔNG bịa giá ngoài bảng. \"Huyện Đông Anh\" là tên gọi quen thuộc (bối cảnh sắp xếp đơn vị hành chính 2025) — bài dùng địa danh quen thuộc và nêu rõ bối cảnh. Sân bay Nội Bài nằm trên địa bàn Đông Anh nhưng bài giữ intent huyện và link sang bài chuyên về thuê xe gần sân bay để tránh cannibalization. Giá của từng nhà xe ngoài luôn dẫn theo công bố công khai của chính nhà xe đó hoặc bài tổng hợp ghi nhận.",
+  "claim_evidence": [
+    {
+      "claim": "Dịch vụ thuê xe máy gần sân bay Nội Bài ghi giá 130.000đ - 300.000đ tùy dòng xe và thời gian thuê, kèm mũ bảo hiểm và áo mưa.",
+      "source_url": "https://motogo.vn/thue-xe-may-san-bay-noi-bai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy gần sân bay Nội Bài: 130.000đ - 300.000đ tùy loại xe và thời gian thuê, xe được trang bị mũ bảo hiểm và áo mưa."
+    },
+    {
+      "claim": "MOTOGO có 3 cơ sở và hỗ trợ giao nhận xe tại sân bay Nội Bài với mức giá tham khảo 130.000 - 300.000 đồng.",
+      "source_url": "https://hanoireview.vn/topAZ/cho-thue-xe-may-gan-san-bay-noi-bai",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "MOTOGO sở hữu 3 cơ sở, hỗ trợ giao nhận xe tận nơi tại sân bay Nội Bài, mức giá cho thuê dao động 130.000 - 300.000 đồng."
+    },
+    {
+      "claim": "Một bài ghi nhận dải giá thuê xe của MOTOGO từ 80.000đ - 200.000đ/ngày tùy dòng xe.",
+      "source_url": "https://brixtonvietnam.com.vn/",
+      "source_domain": "brixtonvietnam.com.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "MOTOGO cho thuê xe máy với mức giá từ 80.000đ - 200.000đ/ngày tùy dòng xe."
+    },
+    {
+      "claim": "Dịch vụ thuê xe tại khu vực Nội Bài ghi nhận xe đời 2023, mỗi xe kèm 2 mũ bảo hiểm, 2 áo mưa và 1 lít xăng, tổng đài giao nhận 24/24.",
+      "source_url": "https://motortrip.vn/dich-vu/thue-xe-may-san-bay-noi-bai",
+      "source_domain": "motortrip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe máy sân bay Nội Bài: toàn bộ xe đời 2023, mỗi xe được trang bị 2 mũ bảo hiểm, 2 áo mưa và 1 lít xăng; tổng đài hỗ trợ giao nhận xe 24/24."
+    },
+    {
+      "claim": "Khi thuê xe gần sân bay Nội Bài, nếu trả xe ở cơ sở khác cơ sở gần sân bay, một số nơi phụ thu 50.000đ/xe.",
+      "source_url": "https://2trip.vn/toplist/dia-diem-cho-thue-xe-may-gan-san-bay-noi-bai/",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Lưu ý: nếu bạn nhận xe ở cơ sở gần sân bay nhưng trả xe ở cơ sở khác, một số nhà xe phụ thu phí di chuyển 50.000đ/xe."
+    },
+    {
+      "claim": "Có dịch vụ thuê xe máy điện gần sân bay Nội Bài, hỗ trợ giao xe miễn phí trong bán kính 3km.",
+      "source_url": "https://izigo.vn/thue-xe-may-dien-gan-san-bay-noi-bai/",
+      "source_domain": "izigo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Dịch vụ thuê xe máy điện gần sân bay Nội Bài, giao xe miễn phí trong bán kính 3km quanh điểm nhận xe."
+    },
+    {
+      "claim": "Dịch vụ của chủ trang web công bố giá thuê Honda Wave và Yamaha Sirius (xe số): 150.000đ/ngày; giá tuần 700.000đ; giá tháng 900.000-1.200.000đ.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 150.000đ/ngày. Giá tuần 700.000đ; giá tháng 900.000-1.200.000đ."
+    },
+    {
+      "claim": "Honda Click / Yamaha Mio (xe ga giá rẻ): 150.000đ/ngày; 700.000đ/tuần; 900.000-1.200.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Click / Yamaha Mio - xe ga giá rẻ: 150.000đ/ngày; 700.000đ/tuần; 900.000-1.200.000đ/tháng."
+    },
+    {
+      "claim": "Honda Vision: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000-2.000.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Vision - xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000-2.000.000đ/tháng."
+    },
+    {
+      "claim": "Honda Air Blade: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Air Blade - xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Xe máy điện: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy điện tại Nguyễn Tú: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Tiền đặt cọc tham khảo của dịch vụ chủ trang web: Honda Wave 2-3 triệu; Honda Vision 4-5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiền đặt cọc tham khảo: Honda Wave 2-3 triệu; Honda Vision 4-5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu."
+    },
+    {
+      "claim": "Dịch vụ của chủ trang web giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành; giờ làm việc 09:00 - 21:00 và không giao xe ngoài khung giờ này.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chúng tôi giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành. Điện thoại: 0942 467 674 - 09:00 - 21:00 - Không giao xe máy ngoài giờ."
+    }
+  ]
+}
