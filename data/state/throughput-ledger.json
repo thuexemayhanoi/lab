@@ -1260,6 +1260,28 @@
       ],
       "published": 2,
       "phase": "PRODUCTION"
+    },
+    {
+      "op": "research",
+      "started_at": "2026-10-01T23:05:54.019Z",
+      "finished_at": "2026-10-01T23:05:54.485Z",
+      "elapsed_ms": 466,
+      "ids": [
+        "A00080",
+        "A00081"
+      ],
+      "count": 2
+    },
+    {
+      "op": "qa",
+      "started_at": "2026-10-01T23:05:55.427Z",
+      "finished_at": "2026-10-01T23:05:55.899Z",
+      "elapsed_ms": 472,
+      "ids": [
+        "A00080",
+        "A00081"
+      ],
+      "count": 2
     }
   ]
 }

@@ -1,14 +1,16 @@
 {
-  "generated_at": "2026-10-01T22:58:52.166Z",
+  "generated_at": "2026-10-01T23:05:56.196Z",
   "total": 10000,
   "by_status": {
     "PUBLISHED": 87,
-    "PLANNED": 9913
+    "PASS": 2,
+    "PLANNED": 9911
   },
   "by_cluster": {
     "RENTAL": {
       "PUBLISHED": 81,
-      "PLANNED": 4919
+      "PASS": 2,
+      "PLANNED": 4917
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -36,9 +38,12 @@
     }
   },
   "phase": "PRODUCTION",
-  "active_chunk": [],
+  "active_chunk": [
+    "A00080",
+    "A00081"
+  ],
   "last_completed_id": "A00079",
-  "next_claimable_id": "A00080",
+  "next_claimable_id": "A00082",
   "blocked": [],
   "published": [
     {
