@@ -2,159 +2,136 @@
   "article_id": "A00066",
   "primary_keyword": "thuê xe máy gần Bến xe Miền Tây",
   "secondary_keywords": [
-    "thuê xe máy Miền Tây",
+    "thuê xe máy Bến xe Miền Tây",
     "cho thuê xe máy gần bến xe Miền Tây",
     "thuê xe máy Bình Tân",
-    "thuê xe máy giá rẻ gần Kinh Dương Vương",
-    "gửi xe máy bến xe Miền Tây"
+    "thuê xe máy Kinh Dương Vương",
+    "thuê xe máy giá rẻ Quận 6"
   ],
   "search_intent": "local",
   "research_date": "2026-10-01",
   "geo_entities": [
     "Bến xe Miền Tây",
     "Kinh Dương Vương",
-    "An Lạc",
+    "Phường An Lạc",
     "Bình Tân",
-    "Vòng xoay An Lạc",
+    "Tân Phú",
+    "Quận 6",
+    "vòng xoay An Lạc",
     "Quốc lộ 1A",
-    "Đại lộ Võ Văn Kiệt",
-    "Hồ Học Lãm",
-    "Đầm Sen",
-    "Bến Thành",
+    "Đồng bằng sông Cửu Long",
     "Tiền Giang",
     "Bến Tre",
     "Cần Thơ",
     "Vĩnh Long",
-    "Cà Mau",
-    "Kiên Giang",
     "TP.HCM"
   ],
   "vehicle_entities": [
     "xe số phổ thông",
     "xe tay ga",
-    "xe máy điện",
-    "xe côn tay"
+    "xe côn tay",
+    "xe máy điện"
   ],
   "brand_entities": [
     "Honda",
     "Yamaha",
-    "VinFast",
-    "Vespa"
+    "Suzuki",
+    "SYM",
+    "VinFast"
   ],
   "model_entities": [
-    "Wave",
-    "Wave RSX",
+    "Wave Alpha",
     "Sirius",
-    "Future",
-    "Air Blade",
-    "Nouvo",
-    "Lead",
+    "Blade",
     "Vision",
+    "Air Blade",
+    "Lead",
+    "Nouvo",
     "Liberty",
+    "Evo200 Lite",
+    "Feliz",
     "SH",
     "PS",
-    "Exciter",
-    "Evo200 Lite",
-    "Feliz"
+    "Vespa",
+    "Exciter"
   ],
   "questions_found": [
-    "thuê xe máy gần bến xe Miền Tây giá bao nhiêu một ngày?",
-    "có nhà xe nào giao xe tận bến xe Miền Tây không?",
-    "gửi xe máy ở bến xe Miền Tây giá bao nhiêu, có nhận qua đêm không?",
-    "từ bến xe Miền Tây về Quận 1 đi bằng tuyến buýt nào?",
-    "thuê xe máy ở Sài Gòn cần giấy tờ gì và tính ngày thuê ra sao?"
+    "thuê xe máy gần Bến xe Miền Tây giá bao nhiêu một ngày?",
+    "có nhà xe nào giao xe tận Bến xe Miền Tây không?",
+    "thuê xe quanh Miền Tây cần giấy tờ gì, cọc bao nhiêu?",
+    "có được mang xe thuê về tỉnh miền Tây không?",
+    "trả xe trễ có bị tính thêm nguyên ngày không?"
   ],
   "related_queries": [
     "bảng giá thuê xe máy Sài Gòn",
-    "gửi xe máy bến xe Miền Tây",
-    "tuyến buýt số 02 Bến Thành Miền Tây",
-    "thuê xe máy quận Bình Tân",
-    "bến xe Miền Tây giờ hoạt động"
+    "bến xe Miền Tây ở đâu",
+    "thuê xe máy Bình Tân giá rẻ",
+    "giao xe tận nơi bến xe Miền Tây",
+    "thuê xe số Sài Gòn"
   ],
-  "serp_patterns": "SERP cho \"thuê xe máy gần Bến xe Miền Tây\" chủ yếu là trang tổng hợp thuê xe máy TP.HCM (vexere.com có mục riêng \"Thuê xe máy Bến xe Miền Tây\", mô tả bến là đầu mối phía Tây chuyên tuyến đi ĐBSCL: Tiền Giang, Bến Tre, Cần Thơ, Vĩnh Long) và các bài về gửi xe máy quanh bến (khainamtransport.com: bãi trong khu vực bến, bãi tư nhân đường Kinh Dương Vương, giá khởi điểm từ 10.000đ). Trang thông tin bến (blog.vexere.com, saigonstartravel.com, mia.vn) cho địa chỉ 395 Kinh Dương Vương, phường An Lạc, quận Bình Tân; giờ hoạt động 4h00-22h00; buýt tuyến 02 Bến Thành - Miền Tây 4h45-19h30, 10-15 phút/chuyến; tuyến 151 Miền Tây - An Sương; tuyến 139 Đầm Sen. Nhà xe công khai giá Sài Gòn: thanhphat 60k-100k xe số, 90k-150k xe ga, ~200k cao cấp, giao xe 15-20 phút; vexere xe ga 100-150k/ngày, phí giao nhận 20-50k/lượt, xe điện 120-180k, Evo200 Lite 140k, nhận/trả 07:30-21:00, ngày thuê tính 24 giờ. Intent local: khách tỉnh lên qua cửa ngõ phía Tây cần nhận xe nhanh; dân nội thành cần gửi xe đi xe khách về miền Tây.",
-  "official_sources": [
-    {
-      "name": "Bến xe Miền Tây (tham khảo địa lý - trang thông tin bến)",
-      "url": "https://blog.vexere.com/ben-xe-mien-tay/",
-      "note": "Địa chỉ 395 Kinh Dương Vương, Phường An Lạc, Quận Bình Tân; bãi giữ xe sảnh chính có thẻ từ thông minh, camera giám sát; các tuyến buýt 02/14/151/139. Các con số gửi xe/thuê xe trong bài được trình bày đúng theo claim_evidence."
-    }
-  ],
+  "serp_patterns": "SERP cho \"thuê xe máy gần Bến xe Miền Tây\" chủ yếu là trang tổng hợp thuê xe TP.HCM (vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi có mục riêng cho Bến xe Miền Tây: khu vực quận Bình Tân giáp Tân Phú - Quận 6, nhiều cửa hàng giá mềm, giao xe tận bến/khách sạn lân cận), danh sách địa chỉ thuê xe của phuot3mien.com, và các bài về chính bến (blog.vexere.com/ben-xe-mien-tay: địa chỉ 395 Kinh Dương Vương, Phường An Lạc, Quận Bình Tân, sát vòng xoay An Lạc và QL1A). Intent local: khách tỉnh ĐBSCL lên thành phố cần nhận xe nhanh tại bến hoặc giao tận nơi, đi lại trong thành phố vài ngày; ít trang chuyên về mảnh POI này nên góc riêng cho Miền Tây là hợp lệ.",
+  "official_sources": [],
   "supporting_sources": [
     {
-      "name": "Vexere — Thuê xe máy ở Sài Gòn",
+      "name": "Vexere — Thuê xe máy ở Sài Gòn (mục Bến xe Miền Tây + bảng giá nhà xe)",
       "url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi"
     },
     {
-      "name": "Vexere Blog — Bến xe Miền Tây",
+      "name": "Vexere Blog — Bến xe Miền Tây ở đâu",
       "url": "https://blog.vexere.com/ben-xe-mien-tay/"
     },
     {
-      "name": "Saigon Star Travel — Bến xe Miền Tây",
-      "url": "https://saigonstartravel.com/ben-xe-mien-tay"
-    },
-    {
-      "name": "Thuê xe máy Thạnh Phát — Giá cho thuê TPHCM",
+      "name": "Thạnh Phát — Cho thuê xe máy tại các quận TP.HCM",
       "url": "https://thuexemaythanhphat.com/cho-thue-xe-may-tphcm-gia-re/"
-    },
-    {
-      "name": "KhaiNam Transport — Gửi xe máy bến xe Miền Tây",
-      "url": "https://khainamtransport.com/3-dia-diem-gui-xe-may-ben-xe-mien-tay-an-toan-tu-10-000d/"
     }
   ],
   "existing_internal_pages": [
     "/lab/thue-xe-may/",
     "/lab/thue-xe-may/thue-xe-may-tp-hcm/",
-    "/lab/thue-xe-may/thue-xe-may-tay-ninh/",
     "/lab/thue-xe-may/thue-xe-may-gan-ben-xe-mien-dong-cu/",
+    "/lab/thue-xe-may/thue-xe-may-gan-ben-xe-an-suong/",
     "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-tan-son-nhat/",
-    "/lab/kinh-nghiem/",
-    "/lab/lien-he/"
+    "/lab/thue-xe-may/thue-xe-may-gan-ga-sai-gon/",
+    "/lab/kinh-nghiem/"
   ],
-  "potential_cannibalization": "CG-rental-poi-ben-xe-mien-tay: 1 row cho Bến xe Miền Tây; khác row thue-xe-may-tp-hcm (toàn thành phố, bài tổng quan) và CG-rental-poi-ben-xe-an-suong (bến khác cùng phía Tây) — bài tập trung POI trên trục Kinh Dương Vương - An Lạc - Bình Tân, không tranh chấp từ khóa chính; link chéo hợp lệ tới các bài đã PUBLISHED.",
-  "unique_angle": "Miền Tây là cửa ngõ phía Tây trên trục Kinh Dương Vương (395 KDV, An Lạc, Bình Tân; hoạt động 4h00-22h00): bài tách ba nhu cầu thường bị trộn — thuê xe đi lại sau khi xuống bến (nhà xe Sài Gòn giao tận nơi, xe ga 100.000-150.000đ/ngày, phí giao nhận 20.000-50.000đ/lượt), thuê ở cửa hàng khu trung tâm rồi chạy ra bến (nhận/trả 07:30-21:00, ngày thuê tính 24 giờ), và gửi xe tại bến khi đi xe khách về miền Tây (bãi sảnh chính có thẻ từ + camera; bãi tư nhân Kinh Dương Vương khởi điểm 10.000đ); kèm khung buýt 02 Bến Thành (4h45-19h30, 10-15 phút/chuyến), 151 sang An Sương, 139 từ Đầm Sen và hướng đi Võ Văn Kiệt - Hồ Học Lãm.",
-  "notes": "Bài informational_only: KHÔNG \"chúng tôi\", KHÔNG chào dịch vụ, KHÔNG LocalBusiness schema; disclosure đầu bài như A00064. Mọi con số lấy đúng claim_evidence. Không nêu diện tích bến (hai nguồn ghi số lệch nhau: mia.vn hơn 47.000m2 vs saigonstartravel gần 40.000 m2). Sau sắp xếp hành chính 2025 giữ tên gọi quen thuộc (An Lạc, Bình Tân, Bến Thành, Đầm Sen). Link nội bộ chỉ trỏ trang đã PUBLISHED (kiểm tra sitemap); KHÔNG link bài An Sương (A00067) vì cùng đợt publish.",
+  "potential_cannibalization": "CG-rental-poi-ben-xe-mien-tay: 1 row cho Bến xe Miền Tây; khác row thue-xe-may-tp-hcm (toàn thành phố) và các row bến khác (Miền Đông cũ, An Sương, Nước Ngầm, Giáp Bát, Mỹ Đình). Bài tập trung đúng POI Miền Tây trên trục Kinh Dương Vương - vòng xoay An Lạc (cửa ngõ ĐBSCL) nên không tranh chấp từ khóa chính; link chéo sang bài An Sương hợp lệ vì cùng push pair.",
+  "unique_angle": "Miền Tây là cửa ngõ ĐBSCL của Sài Gòn: bài tách ba nhu cầu thường bị trộn lẫn — nhận xe ngay tại bến (cho khách tỉnh lên), giao tận nơi theo giờ hẹn (khách xuống bến lúc khuya/sớm), và lưu ý đặc thù \"nhiều nhà xe giới hạn phạm vi trong TP.HCM (cũ)\" khiến câu hỏi \"chạy xe về quê được không\" thành điểm quyết định ở đúng bến này.",
+  "notes": "Bài informational_only: KHÔNG \"chúng tôi\", KHÔNG chào dịch vụ, KHÔNG LocalBusiness schema; disclosure đầu bài. Mọi con số (giá, cọc, 24h/6h/5h, 1 lít, 395 Kinh Dương Vương) đều có claim_evidence từ nguồn đã mở hôm nay. Tên địa danh dùng dạng quen thuộc trước sắp xếp 2025 (Bình Tân, Tân Phú, Quận 6) theo đúng văn phong nguồn. Link sang A00067 (An Sương) dùng vì cùng pair push.",
   "claim_evidence": [
     {
-      "claim": "Bến xe Miền Tây tọa lạc tại số 395 Kinh Dương Vương, Phường An Lạc, Quận Bình Tân; từ trung tâm đi trục đại lộ Võ Văn Kiệt hướng Tây, rẽ phải vào Hồ Học Lãm rồi rẽ trái sang Kinh Dương Vương; khu sảnh chính có bãi trông giữ xe máy, ô tô với hệ thống thẻ từ thông minh và camera giám sát.",
+      "claim": "Bến xe Miền Tây tọa lạc tại số 395 Kinh Dương Vương, khu vực Phường An Lạc (Bình Tân, quận cũ của Thành phố Hồ Chí Minh), nằm sát vòng xoay An Lạc và trục đường lớn Quốc lộ 1A.",
       "source_url": "https://blog.vexere.com/ben-xe-mien-tay/",
       "source_domain": "blog.vexere.com",
       "date_accessed": "2026-10-01",
-      "claim_supported": "Địa chỉ chính xác của Bến xe Miền Tây nằm tại số 395 Kinh Dương Vương, Phường An Lạc, Quận Bình Tân. ... Từ trục đại lộ Võ Văn Kiệt, bạn chỉ cần đi thẳng hướng về phía Tây, rẽ phải vào Hồ Học Lãm rồi rẽ trái sang Kinh Dương Vương ... Bãi giữ xe: Toàn bộ khu vực sảnh chính đều có bố trí bãi trông giữ xe máy, ô tô rộng rãi dành cho hành khách và người nhà đưa tiễn. Bãi xe có hệ thống thẻ từ thông minh, camera giám sát"
+      "claim_supported": "Địa chỉ chính xác của Bến xe Miền Tây nằm tại số 395 Kinh Dương Vương, Phường An Lạc, Quận Bình Tân. Vị trí này nằm sát ngay cạnh vòng xoay An Lạc huyết mạch và trục đường lớn Quốc lộ 1A."
     },
     {
-      "claim": "Bến xe Miền Tây hoạt động từ 4h00 sáng đến 22h00 tối hằng ngày; là điểm khởi hành của các chuyến xe đi các tỉnh như Cần Thơ, Bến Tre, Vĩnh Long, Cà Mau, Kiên Giang; buýt tuyến 151 (Miền Tây - An Sương), tuyến 139 (Đầm Sen - Miền Tây) chạy tần suất trung bình 10-20 phút/chuyến.",
-      "source_url": "https://saigonstartravel.com/ben-xe-mien-tay",
-      "source_domain": "saigonstartravel.com",
-      "date_accessed": "2026-10-01",
-      "claim_supported": "Hiện nay, bến xe Miền Tây hoạt động từ 4h00 sáng đến 22h00 tối hàng ngày ... là điểm khởi hành của hàng trăm chuyến xe đi về các tỉnh miền Tây Nam Bộ mỗi ngày như Cần Thơ, Bến Tre, Vĩnh Long, Cà Mau, Kiên Giang ... Tuyến 151: Bến xe Miền Tây – Bến xe An Sương ... Tuyến 139: Đầm Sen – Bến xe Miền Tây Các tuyến này hoạt động với tần suất trung bình từ 10–20 phút/chuyến"
-    },
-    {
-      "claim": "Buýt tuyến số 02 chạy Bến Thành - Bến xe Miền Tây từ 4h45 đến 19h30, tần suất khoảng 10-15 phút/chuyến; tuyến số 14 nối bến xe Miền Đông (cũ) qua đường 3/2 tới bến xe Miền Tây.",
-      "source_url": "https://blog.vexere.com/ben-xe-mien-tay/",
-      "source_domain": "blog.vexere.com",
-      "date_accessed": "2026-10-01",
-      "claim_supported": "Tuyến số 02: Bến Thành ↔ Bến xe Miền Tây. Xe hoạt động xuyên tâm thành phố từ 4h45 đến 19h30, tần suất chạy khoảng 10 – 15 phút/chuyến. Tuyến số 14: Bến xe Miền Đông (cũ) ↔ Đường 3/2 ↔ Bến xe Miền Tây."
-    },
-    {
-      "claim": "Theo trang tổng hợp thuê xe máy Sài Gòn của Vexere: giá xe tay ga phổ thông dao động 100.000đ - 150.000đ/ngày, chưa gồm phí giao nhận tận nơi thường từ 20.000đ - 50.000đ/lượt nếu giao xa trung tâm; xe máy điện dao động khoảng 120.000đ - 180.000đ/ngày; VinFast Evo200 Lite cho thuê khoảng 140.000đ/ngày, nhận/trả tại cửa hàng Quận 1, Quận 3, Quận 5 hoặc giao tận nơi phí 30.000đ - 70.000đ/lượt tùy quận; nhiều cửa hàng nhận/trả xe hằng ngày từ 07:30 đến 21:00; mỗi ngày thuê tính bằng 24 giờ kể từ thời điểm nhận xe.",
+      "claim": "Theo trang tổng hợp thuê xe của Vexere, Bến xe Miền Tây là đầu mối giao thông lớn ở phía Tây Sài Gòn, chuyên phục vụ các tuyến xe khách đi các tỉnh Đồng bằng sông Cửu Long như Tiền Giang, Bến Tre, Cần Thơ, Vĩnh Long; khu vực quanh bến xe thuộc địa phận quận Bình Tân, tiếp giáp Tân Phú và Quận 6, có khá nhiều cửa hàng cho thuê xe máy với giá mềm; một số cửa hàng có dịch vụ giao xe tận nơi ngay tại bến xe hoặc các khách sạn, nhà trọ lân cận.",
       "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi",
       "source_domain": "vexere.com",
       "date_accessed": "2026-10-01",
-      "claim_supported": "Giá thuê xe tay ga phổ thông ở Sài Gòn dao động từ 100.000đ đến 150.000đ/ngày ... Mức giá này chưa bao gồm phí giao nhận xe tận nơi, thường từ 20.000đ – 50.000đ/lượt nếu giao ở xa trung tâm ... Giá thuê trung bình dao động khoảng 120.000đ – 180.000đ/ngày ... Vinfast Evo200 Lite, đời xe từ 2023, hiện đang được cho thuê với giá khoảng 140.000đ/ngày ... Bạn có thể nhận/trả xe tại cửa hàng ở Quận 1, Quận 3 hoặc Quận 5 hoặc chọn giao tận nơi với mức phí từ 30.000đ – 70.000đ/lượt, tùy quận và địa điểm ... Thời gian nhận xe và trả xe hằng ngày từ 07:30 đến 21:00. Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe."
+      "claim_supported": "Bến xe Miền Tây là đầu mối giao thông lớn ở phía Tây Sài Gòn, chuyên phục vụ các tuyến xe khách đi các tỉnh Đồng bằng sông Cửu Long như Tiền Giang, Bến Tre, Cần Thơ, Vĩnh Long… Khu vực quanh bến xe thuộc địa phận quận Bình Tân, tiếp giáp Tân Phú và Quận 6. Tại đây có khá nhiều cửa hàng cho thuê xe máy với giá mềm… Một số cửa hàng có dịch vụ giao xe tận nơi ngay tại bến xe hoặc các khách sạn, nhà trọ lân cận."
     },
     {
-      "claim": "Theo bảng giá nhà xe Thạnh Phát: cho thuê xe máy tại TP.HCM chỉ từ 60.000vnđ - 150.000vnđ/ngày tùy loại xe; xe số bình dân (Wave, Sirius, Future, Wave S, Wave RSX) 60k - 100k; xe tay ga đời mới (Air Blade, Nouvo LX, Lead, Vision, Liberty) 90k - 150k; dòng cao cấp (SH, PS, Vespa, Exciter) khoảng 200k; nhà xe hỗ trợ nhận giao xe cho khách tại các khu vực đầu mối thành phố (ngã tư Hàng Xanh, bến xe Miền Đông, Cầu Sài Gòn, bến xe An Sương, Chợ Bến Thành) trong khoảng thời gian 15 - 20 phút sau khi liên hệ.",
+      "claim": "Trên Vexere, giá thuê xe số phổ thông ở Sài Gòn trung bình từ 80.000 đồng/ngày với xe đời cũ và khoảng 100.000 đồng/ngày với xe đời mới; xe tay ga phổ thông dao động 100.000đ - 150.000đ/ngày (chưa gồm phí giao nhận tận nơi, thường 20.000đ - 50.000đ/lượt nếu giao ở xa trung tâm); xe điện dao động khoảng 120.000đ - 180.000đ/ngày với VinFast Evo200 Lite khoảng 140.000đ/ngày.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê các dòng xe số phổ thông ở Sài Gòn trung bình từ 80.000 đồng/ngày với xe đời cũ và khoảng 100.000 đồng/ngày với xe đời mới. … Giá thuê xe tay ga phổ thông ở Sài Gòn dao động từ 100.000đ đến 150.000đ/ngày… Mức giá này chưa bao gồm phí giao nhận xe tận nơi, thường từ 20.000đ – 50.000đ/lượt nếu giao ở xa trung tâm. … Giá thuê trung bình dao động khoảng 120.000đ – 180.000đ/ngày … Vinfast Evo200 Lite, đời xe từ 2023, hiện đang được cho thuê với giá khoảng 140.000đ/ngày."
+    },
+    {
+      "claim": "Theo niêm yết trên Vexere, nhà xe Thành Đạt ghi cọc 1.000.000đ/xe kèm giữ CCCD/GPLX, hoặc cọc 4.000.000đ/xe nếu không muốn để lại giấy tờ; My My ghi giữ CCCD và cọc 1.000.000đ/xe; Bike Saigon ghi cọc 1.000.000đ kèm giữ CCCD hoặc cọc 3.000.000đ/xe; Hào ghi không cần cọc trước cho dòng Sirius từ 2016, giá từ 150.000đ kèm sẵn một lít xăng; các nhà xe yêu cầu trả xe quá mỗi 24 tiếng tính thêm một ngày, trả trễ chưa quá 6 giờ chỉ tính thêm nửa ngày (My My ghi ngưỡng 5 giờ); phần lớn nhà xe chỉ cho sử dụng xe trong phạm vi Thành phố Hồ Chí Minh (cũ) và có quyền từ chối giao xe nếu khách định đi ngoài phạm vi.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thủ tục khi nhận xe – Giấy tờ cần chuẩn bị: CCCD/Passport & GPLX (bản gốc). – Cọc 1.000.000đ/xe và Giữ CCCD/GPLX. Hoặc cọc 4.000.000đ/xe. (Thành Đạt) … – Giữ CCCD và Cọc: 1.000.000đ/xe (My My) … – Cọc 1.000.000đ/xe và Giữ CCCD. Hoặc Cọc 3.000.000đ/xe (Bike Saigon) … Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 6 giờ → chỉ tính thêm 1/2 ngày. … Trả xe nếu chưa quá 5 giờ → chỉ tính thêm 1/2 ngày. … Vui lòng chỉ sử dụng xe trong phạm vi Thành phố Hồ Chí Minh (cũ). Nhà xe có quyền từ chối giao xe nếu…"
+    },
+    {
+      "claim": "Trên trang Thạnh Phát, chi phí thuê xe máy tại TP.HCM dao động từ 60.000đ - 250.000VNĐ/xe/ngày đối với xe số, xe tay ga hoặc côn tay; dòng xe ga như Airblade, Nouvo LX, Lead, Vision, Liberty dao động từ 90k - 150k/xe; dòng cao cấp như SH, PS, Vespa, tay côn Exciter có mức giá cho thuê cao nhất khoảng 200k/xe.",
       "source_url": "https://thuexemaythanhphat.com/cho-thue-xe-may-tphcm-gia-re/",
       "source_domain": "thuexemaythanhphat.com",
       "date_accessed": "2026-10-01",
-      "claim_supported": "Cho thuê xe máy tại thành phố Hồ Chí Minh chỉ từ 60.000vnđ – 500.000vnđ/ngày tuỳ vào loại xe ... giá cho thuê dao động từ 60k – 100k/xe ... dao động từ 90k – 150k/xe ... mức giá cho thuê cao nhất, khoảng 200k/xe ... Cho thuê xe máy tại Tân Sơn Nhất và các khu vực ngã tư hàng xanh, bến xe miền đông, Cầu Sài Gòn, bến xe An Sương, Chợ Bến Thành, rất thuận tiện và dễ dàng cho khách hàng cho thể liên hệ để lấy xe ngay trong khoảng thời gian từ 15 – 20 phút."
-    },
-    {
-      "claim": "Theo trang vận tải Khai Nam Transport, quanh bến xe Miền Tây có các bãi giữ xe tư nhân trên đường Kinh Dương Vương hoạt động theo giờ hoặc theo ngày; mức giá khởi điểm từ 10.000đ phù hợp nhu cầu gửi ngắn giờ, một số điểm tính cao hơn theo ngày.",
-      "source_url": "https://khainamtransport.com/3-dia-diem-gui-xe-may-ben-xe-mien-tay-an-toan-tu-10-000d/",
-      "source_domain": "khainamtransport.com",
-      "date_accessed": "2026-10-01",
-      "claim_supported": "Dưới đây là những địa điểm được nhiều người lựa chọn khi cần gửi xe máy ở bến xe Miền Tây. Mức giá khởi điểm từ 10.000đ phù hợp với nhu cầu gửi ngắn giờ, trong khi một số điểm có ... Bãi giữ xe tư nhân trên đường Kinh Dương Vương Khu vực đường Kinh Dương Vương quanh bến xe Miền Tây có khá nhiều điểm trông giữ xe máy, phù hợp cho người cần linh hoạt về thời gian ... Chi phí ở mức từ 10.000đ thường"
+      "claim_supported": "Còn với chi phí thuê xe máy dao động từ 60.000đ – 250.000VNĐ/xe/ngày đối với xe số, xe tay ga hoặc côn tay. … như: Airblade, Nouvo LX, Lead, Vision, Liberty… lại có giá cao hơn một chút, dao động từ 90k – 150k/xe. Đối với những dòng xe cao cấp như: SH, PS, Vespa, tay côn exciter…thì mức giá cho thuê cao nhất, khoảng 200k/xe."
     }
   ]
 }

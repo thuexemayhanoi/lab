@@ -2,92 +2,75 @@
   "article_id": "A00067",
   "primary_keyword": "thuê xe máy gần Bến xe An Sương",
   "secondary_keywords": [
-    "thuê xe máy An Sương",
+    "thuê xe máy Bến xe An Sương",
     "cho thuê xe máy gần bến xe An Sương",
+    "thuê xe máy quận 12",
     "thuê xe máy Hóc Môn",
-    "thuê xe máy quốc lộ 22 Bà Điểm",
-    "gửi xe máy bến xe An Sương"
+    "giao xe tận nơi An Sương"
   ],
   "search_intent": "local",
   "research_date": "2026-10-01",
   "geo_entities": [
     "Bến xe An Sương",
-    "Ngã tư An Sương",
-    "Quốc lộ 22",
-    "Bà Điểm",
+    "quận 12",
+    "phường Trung Mỹ Tây",
+    "khu phố 2",
     "Hóc Môn",
-    "Củ Chi",
-    "Lê Quang Đạo",
-    "Âu Cơ",
+    "Bình Chánh",
+    "Nhà Bè",
     "Tây Ninh",
-    "Bình Phước",
-    "Bến xe Miền Tây",
-    "Bến Thành",
-    "Cách Mạng Tháng Tám",
-    "Đồng Xoài",
-    "Hậu Nghĩa",
+    "Châu Đốc",
+    "Sài Gòn",
     "TP.HCM"
   ],
   "vehicle_entities": [
     "xe số phổ thông",
     "xe tay ga",
-    "xe máy điện",
     "xe côn tay"
   ],
   "brand_entities": [
     "Honda",
     "Yamaha",
-    "VinFast",
-    "Vespa"
+    "SYM",
+    "Suzuki"
   ],
   "model_entities": [
-    "Wave",
+    "Wave Alpha",
     "Sirius",
-    "Future",
+    "Blade",
     "Air Blade",
-    "Nouvo",
+    "Nouvo LX",
     "Lead",
     "Vision",
     "Liberty",
     "SH",
     "PS",
-    "Exciter",
-    "Evo200 Lite",
-    "Feliz"
+    "Vespa",
+    "Exciter"
   ],
   "questions_found": [
-    "thuê xe máy gần bến xe An Sương giá bao nhiêu một ngày?",
-    "có nhà xe nào giao xe tận bến xe An Sương không?",
-    "gửi xe máy ở bến xe An Sương giá bao nhiêu một ngày?",
-    "bến xe An Sương có những tuyến xe nào?",
-    "từ An Sương về trung tâm TP.HCM đi bằng gì?"
+    "thuê xe máy gần Bến xe An Sương giá bao nhiêu một ngày?",
+    "xuống bến An Sương lúc khuya có thuê được xe không?",
+    "có nhà xe giao xe tận bến xe An Sương không, mất bao lâu?",
+    "thuê xe ở An Sương có chạy về Tây Ninh được không?",
+    "thuê xe quanh An Sương cần giấy tờ gì, cọc bao nhiêu?"
   ],
   "related_queries": [
-    "bảng giá thuê xe máy TP.HCM",
-    "gửi xe máy bến xe An Sương",
-    "tuyến buýt bến xe An Sương",
-    "nhà xe An Sương đi Tây Ninh",
-    "thuê xe máy Hóc Môn Củ Chi"
+    "bến xe An Sương ở đâu",
+    "bến xe An Sương giờ hoạt động",
+    "thuê xe máy quận 12 giá rẻ",
+    "giao xe tận nơi quận 12",
+    "bến xe An Sương tuyến xe đi Tây Ninh"
   ],
-  "serp_patterns": "SERP cho \"thuê xe máy gần Bến xe An Sương\" chủ yếu là trang nhà xe (thanhphat ghi bến An Sương trong khu vực nhận giao xe 15-20 phút, giá 60k-150k), trang thông tin bến (benbaivantaisaigon.com.vn - trang của đơn vị quản lý: 1,7ha, bến loại 1 từ 2020, 121 đơn vị vận tải/94 tuyến/884 xe, 470 lượt xe liên tỉnh/ngày, 1.800 lượt khách, 20 tỉnh thành, 13 tuyến buýt/1.300 lượt xe/8.000 lượt khách), trang tổng hợp nhà xe tại bến (zappiamotors: gửi xe máy 5.000 VNĐ/chiếc/ngày, ô tô 100.000 VNĐ/chiếc/ngày; nhà xe Lê Khánh đi Tây Ninh 3 chuyến/ngày xe 29 chỗ; buýt 27 5h30-19h cách 15 phút) và vexere tổng hợp thuê xe Sài Gòn (xe ga 100-150k/ngày, phí giao nhận 20-50k/lượt, nhận/trả 07:30-21:00, ngày tính 24 giờ). Intent local: khách từ Tây Ninh/Bình Phước xuống bến cần nhận xe nhanh; dân Hóc Môn - Củ Chi cần thuê dài ngày; khách nội thành cần gửi xe đi liên tỉnh.",
-  "official_sources": [
-    {
-      "name": "Bến xe An Sương - trang đơn vị quản lý (tham khảo quy mô, tuyến buýt)",
-      "url": "https://benbaivantaisaigon.com.vn/ben-xe-an-suong/",
-      "note": "Trang của Cổ phần Bến bãi Vận tải Sài Gòn (đơn vị quản lý bến): địa chỉ 16 Lê Quang Đạo, xã Bà Điểm; 1,7 ha; bến loại 1 từ 2020; 121 đơn vị vận tải/94 tuyến/884 xe; 470 lượt xe liên tỉnh + 1.800 lượt khách/ngày đến 20 tỉnh thành; 13 tuyến buýt. Các con số thuê xe trong bài lấy đúng claim_evidence từ nguồn khác."
-    }
-  ],
+  "serp_patterns": "SERP cho \"thuê xe máy gần Bến xe An Sương\" chủ yếu là bài về chính bến (motortrip.vn/dich-vu/ben-xe-an-suong: khu phố 2, phường Trung Mỹ Tây, quận 12; hoạt động 24/7, cao điểm đêm và sáng sớm; tuyến đi Tây Ninh, Châu Đốc, miền Tây, miền Trung, Tây Nguyên) và các trang tổng hợp thuê xe TP.HCM (thuexemaythanhphat.com ghi nhận giao xe khu vực bến xe An Sương trong 15-20 phút; vexere.com có bảng giá Sài Gòn). Intent local: khách xuống bến lúc đêm/sớm cần giao xe theo giờ hẹn; dân quận 12 - Hóc Môn thuê ngắn ngày. Không trang nào riêng cho mảnh POI này.",
+  "official_sources": [],
   "supporting_sources": [
     {
-      "name": "Cổ phần Bến bãi Vận tải Sài Gòn — Bến xe An Sương",
-      "url": "https://benbaivantaisaigon.com.vn/ben-xe-an-suong/"
+      "name": "MotorTrip — Bến xe An Sương: vị trí, giờ hoạt động, tuyến xe",
+      "url": "https://motortrip.vn/dich-vu/ben-xe-an-suong"
     },
     {
-      "name": "Zappia Motors — Bến xe An Sương",
-      "url": "https://zappiamotors.com/ben-xe-an-suong/"
-    },
-    {
-      "name": "Thuê xe máy Thạnh Phát — Giá cho thuê TPHCM",
+      "name": "Thạnh Phát — Cho thuê xe máy tại các quận TP.HCM",
       "url": "https://thuexemaythanhphat.com/cho-thue-xe-may-tphcm-gia-re/"
     },
     {
@@ -98,56 +81,42 @@
   "existing_internal_pages": [
     "/lab/thue-xe-may/",
     "/lab/thue-xe-may/thue-xe-may-tp-hcm/",
-    "/lab/thue-xe-may/thue-xe-may-tay-ninh/",
+    "/lab/thue-xe-may/thue-xe-may-gan-ben-xe-mien-tay/",
     "/lab/thue-xe-may/thue-xe-may-gan-ben-xe-mien-dong-cu/",
-    "/lab/kinh-nghiem/",
-    "/lab/lien-he/"
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-tan-son-nhat/",
+    "/lab/kinh-nghiem/"
   ],
-  "potential_cannibalization": "CG-rental-poi-ben-xe-an-suong: 1 row cho Bến xe An Sương; khác row thue-xe-may-tp-hcm (toàn thành phố) và CG-rental-poi-ben-xe-mien-tay (bến khác cùng phía Tây) — bài tập trung POI trên trục QL22 - Bà Điểm - Hóc Môn, không tranh chấp từ khóa chính; link chéo hợp lệ tới các bài đã PUBLISHED.",
-  "unique_angle": "An Sương là cửa ngõ Tây Bắc trên quốc lộ 22 (16 Lê Quang Đạo, Bà Điểm; bến loại 1 từ 2020; 1,7 ha; 121 đơn vị vận tải, 94 tuyến, 884 xe; 470 lượt xe liên tỉnh + 1.800 lượt khách/ngày đi 20 tỉnh thành): bài tách ba nhu cầu — hẹn nhà xe nội thành giao xe tận bến/tận nhà Hóc Môn - Củ Chi trong 15-20 phút (Thạnh Phát; xe số từ 60.000đ, xe ga 90.000-150.000đ/ngày), đi buýt về trung tâm rồi thuê ở cửa hàng (buýt 27/65/151; nhận/trả 07:30-21:00, ngày tính 24 giờ), và gửi xe đi liên tỉnh (bãi bến 5.000đ/chiếc/ngày xe máy, 100.000đ ô tô); kèm tuyến nhà xe đi Tây Ninh (Lê Khánh 3 chuyến/ngày, xe 29 chỗ) và Củ Chi.",
-  "notes": "Bài informational_only: KHÔNG \"chúng tôi\", KHÔNG chào dịch vụ, KHÔNG LocalBusiness schema; disclosure đầu bài. Mọi con số lấy đúng claim_evidence. Trang đơn vị quản lý bến có hai bộ số liệu gần nhau (121/94/884 vs 119/115/859) — bài dùng bộ số liệu chính nhất quán (121 đơn vị/94 tuyến/884 xe) và trình bày \"theo trang giới thiệu của đơn vị quản lý\". Sau sắp xếp hành chính 2025 giữ tên gọi quen thuộc (Hóc Môn, Bà Điểm, Bến Thành, Củ Chi, Tây Ninh). Link nội bộ chỉ trỏ trang đã PUBLISHED; KHÔNG link bài Miền Tây (A00066) vì cùng đợt publish.",
+  "potential_cannibalization": "CG-rental-poi-ben-xe-an-suong: 1 row cho Bến xe An Sương; khác row thue-xe-may-tp-hcm (toàn thành phố) và các row bến khác (Miền Tây, Miền Đông cũ). Bài tập trung đúng POI An Sương (quận 12, hoạt động 24/7, hướng Tây Ninh) nên không tranh chấp từ khóa chính; link chéo sang A00066 (Miền Tây) hợp lệ vì cùng pair push.",
+  "unique_angle": "An Sương là bến 24/7 ở cửa ngõ Tây Bắc: điểm khác biệt là nhu cầu nhận xe lúc nửa đêm về sáng (cao điểm nhà xe rơi vào ban đêm - sáng sớm), khoảng cách xa trung tâm làm phí giao xe nhích lên đầu dải, và câu hỏi \"chạy về Tây Ninh được không\" va chạm chính sách \"phạm vi TP.HCM (cũ)\" của nhiều nhà xe.",
+  "notes": "Bài informational_only: KHÔNG \"chúng tôi\", KHÔNG chào dịch vụ, KHÔNG LocalBusiness schema; disclosure đầu bài. Mọi con số (giá, cọc, 24/7, 24 giờ/6 giờ/5 giờ, 15-20 phút, 90k-150k, 200k) đều có claim_evidence từ nguồn đã mở hôm nay. Tên địa danh theo nguồn (quận 12, phường Trung Mỹ Tây - dạng quen thuộc trước sắp xếp 2025).",
   "claim_evidence": [
     {
-      "claim": "Theo trang giới thiệu của đơn vị quản lý bến (Cổ phần Bến bãi Vận tải Sài Gòn): bến xe An Sương đặt tại số 16 đường Lê Quang Đạo, xã Bà Điểm, Thành phố Hồ Chí Minh; tổng diện tích khoảng 1,7 ha; năm 2020 được đầu tư nâng cấp đạt tiêu chuẩn Bến xe khách loại 1; hiện có 121 đơn vị vận tải đang hoạt động, khai thác trên 94 tuyến với khoảng 884 xe; mỗi ngày hơn 470 lượt xe khách liên tỉnh xuất bến, phục vụ gần 1.800 lượt hành khách đi đến 20 tỉnh, thành; bến có 13 tuyến xe buýt đang hoạt động, mỗi ngày hơn 1.300 lượt xe xuất bến phục vụ hơn 8.000 lượt hành khách.",
-      "source_url": "https://benbaivantaisaigon.com.vn/ben-xe-an-suong/",
-      "source_domain": "benbaivantaisaigon.com.vn",
+      "claim": "Bến xe An Sương nằm trên mặt đường chính tại quận 12, phía Tây Bắc Thành phố Hồ Chí Minh, theo khu phố 2, phường Trung Mỹ Tây; bến hoạt động 24/7, giờ cao điểm của các nhà xe thường tập trung vào ban đêm và sáng sớm; bến nối Sài Gòn với các tuyến đi Tây Ninh, Châu Đốc và các tỉnh miền Tây, miền Trung, Tây Nguyên.",
+      "source_url": "https://motortrip.vn/dich-vu/ben-xe-an-suong",
+      "source_domain": "motortrip.vn",
       "date_accessed": "2026-10-01",
-      "claim_supported": "Địa chỉ: Số 16 Đường Lê Quang Đạo, xã Bà Điểm, Thành phố Hồ Chí Minh ... Bến xe An Sương tổng diện tích khoảng 1,7Ha ... Năm 2020, Bến xe được đầu tư, nâng cấp đạt tiêu chuẩn Bến xe khách loại 1 ... bến xe An Sương hiện có 121 Đơn vị vận tải đang hoạt động, khai thác trên 94 tuyến với số lượng khoảng 884 xe. Mỗi ngày tại Bến xe An Sương có hơn 470 lượt xe khách liên tỉnh xuất bến, phục vụ gần 1.800 lượt hành khách, đi đến 20 tỉnh, thành trong cả nước ... bến xe An Sương hiện có 13 tuyến xe buýt đang hoạt động. Mỗi ngày có hơn 1.300 lượt xe xuất bến, phục vụ hơn 8.000 lượt hành khách."
+      "claim_supported": "Bến xe An Sương là một trong những bến xe quan trọng nhất của Thành phố Hồ Chí Minh… Nằm ở phía Tây Bắc của thành phố Hồ Chí Minh. Đây là một vị trí đắc địa, nằm trên mặt đường chính tại quận 12 … Vị trí: Bến xe An Sương nằm ở Khu phố 2, phường Trung Mỹ Tây, quận 12, Thành phố Hồ Chí Minh. Giờ hoạt động: Bến xe hoạt động 24/7, tuy nhiên giờ cao điểm của các nhà xe thường tập trung vào ban đêm và sáng sớm. … nhà xe Đức Thành … Thành phố Hồ Chí Minh – Châu Đốc … Nhà xe Thống Nhất … Thành phố Hồ Chí Minh – Tây Ninh … Tuyến xe đi các tỉnh miền Tây"
     },
     {
-      "claim": "Tại bến xe An Sương có các tuyến buýt: tuyến 151 (Bến xe Miền Tây - Ngã tư Bốn Xã - Bến xe An Sương, 50 phút/lượt), tuyến 65 (Bến Thành - Cách Mạng Tháng Tám - Bến xe An Sương, 50-70 phút/lượt).",
-      "source_url": "https://benbaivantaisaigon.com.vn/ben-xe-an-suong/",
-      "source_domain": "benbaivantaisaigon.com.vn",
-      "date_accessed": "2026-10-01",
-      "claim_supported": "Bến xe Miền Tây – Ngã tư Bốn Xã – Bến xe An Sương | 60 phút/lượt ... Bến Thành – Cách Mạng Tháng Tám – Bến xe An Sương | 50 – 70 phút/lượt. ... Số xe: 151 | Bến xe Miền Tây – Bến xe An Sương | 50 phút/lượt"
-    },
-    {
-      "claim": "Theo trang thông tin bến xe An Sương: bến có bãi gửi xe rộng rãi cho xe máy và ô tô; giá dịch vụ gửi xe máy là 5.000 VNĐ/chiếc/ngày, gửi ô tô là 100.000 VNĐ/chiếc/ngày; bến đặt tại Ngã tư An Sương, quốc lộ 22, Bà Điểm, Hóc Môn, Thành phố Hồ Chí Minh.",
-      "source_url": "https://zappiamotors.com/ben-xe-an-suong/",
-      "source_domain": "zappiamotors.com",
-      "date_accessed": "2026-10-01",
-      "claim_supported": "Bến xe An Sương, số điện thoại liên hệ 0985573573, địa chỉ tại Ngã tư An Sương, quốc lộ 22, Bà Điểm, Hóc Môn, Thành phố Hồ Chí Minh ... BX này hiện nay đang có bãi gửi xe rộng rãi, có sự có chỗ cho xe máy, ô tô. Ngoài ra, giá dịch vụ gửi xe máy là 5.000 VNĐ/chiếc/ngày, giá gửi ô tô là 100.000 VNĐ/chiếc/ngày."
-    },
-    {
-      "claim": "Từ bến xe An Sương có nhà xe chạy tuyến Tây Ninh: nhà xe Lê Khánh mỗi ngày cung cấp 3 chuyến phục vụ hành khách bằng xe 29 chỗ ngồi, lộ trình bến xe An Sương - quốc lộ 22 - QL 1A - bến xe thị xã Tây Ninh; buýt tuyến 27 chạy từ Sài Gòn qua Âu Cơ tới bến An Sương, mỗi ngày từ 5h30 đến 19h, từng chuyến cách nhau 15 phút; buýt tuyến 62-5 chạy bến xe An Sương - bến xe Hậu Nghĩa.",
-      "source_url": "https://zappiamotors.com/ben-xe-an-suong/",
-      "source_domain": "zappiamotors.com",
-      "date_accessed": "2026-10-01",
-      "claim_supported": "Nhà xe Lê Khánh: Số điện thoại 02838830478, địa chỉ bến xe khách An Sương. Mỗi ngày, họ cung cấp 3 chuyến phục vụ hành khách bằng xe 29 chỗ ngồi. Lộ trình di chuyển: BX An Sương – Quốc lộ 22 – QL 1A – Bến xe thị xã Tây Ninh ... Tuyến xe buýt số 27 ... xe số 27 sẽ di chuyển từ Sài Gòn – Âu Cơ – bến An Sương. Mỗi ngày sẽ chạy từ 5h30 – 19h, từng chuyến cách nhau 15 phút ... Tuyến xe buýt số 62-5 Tuyến này di chuyển từ bến xe khách An Sương đến bến xe Hậu Nghĩa"
-    },
-    {
-      "claim": "Nhà xe Thạnh Phát ghi trong bài giá cho thuê xe máy tại TP.HCM: dịch vụ nhận giao xe cho khách tại các khu vực đầu mối gồm ngã tư Hàng Xanh, bến xe Miền Đông, Cầu Sài Gòn, bến xe An Sương, Chợ Bến Thành, khách liên hệ để lấy xe ngay trong khoảng 15 - 20 phút; giá chỉ từ 60.000vnđ - 150.000vnđ/ngày tùy loại xe; xe số (Wave, Sirius, Future, Wave S, Wave RSX) 60k - 100k; xe tay ga đời mới (Air Blade, Nouvo LX, Lead, Vision, Liberty) 90k - 150k; dòng cao cấp (SH, PS, Vespa, Exciter) khoảng 200k.",
+      "claim": "Theo trang Thạnh Phát, nhà xe nhận giao xe tại các khu vực quen thuộc (Tân Sơn Nhất, bến xe Miền Đông, Cầu Sài Gòn, bến xe An Sương, chợ Bến Thành) với thời gian lấy xe trong khoảng 15 - 20 phút; khu vực phục vụ trải từ các quận trung tâm đến Hóc Môn, Bình Chánh, Nhà Bè; chi phí thuê dao động từ 60.000đ - 250.000VNĐ/xe/ngày với xe số, xe tay ga hoặc côn tay; dòng ga Airblade, Nouvo LX, Lead, Vision, Liberty dao động 90k - 150k/xe; dòng cao cấp SH, PS, Vespa, Exciter khoảng 200k/xe.",
       "source_url": "https://thuexemaythanhphat.com/cho-thue-xe-may-tphcm-gia-re/",
       "source_domain": "thuexemaythanhphat.com",
       "date_accessed": "2026-10-01",
-      "claim_supported": "Cho thuê xe máy tại Tân Sơn Nhất và các khu vực ngã tư hàng xanh, bến xe miền đông, Cầu Sài Gòn, bến xe An Sương, Chợ Bến Thành, rất thuận tiện và dễ dàng cho khách hàng cho thể liên hệ để lấy xe ngay trong khoảng thời gian từ 15 – 20 phút ... Cho thuê xe máy tại thành phố Hồ Chí Minh chỉ từ 60.000vnđ – 500.000vnđ/ngày tuỳ vào loại xe ... giá cho thuê dao động từ 60k – 100k/xe ... dao động từ 90k – 150k/xe ... mức giá cho thuê cao nhất, khoảng 200k/xe"
+      "claim_supported": "Cho thuê xe máy tại Tân Sơn Nhất và các khu vực ngã tư hàng xanh, bến xe miền đông, Cầu Sài Gòn, bến xe An Sương, Chợ Bến Thành, rất thuận tiện và dễ dàng cho khách hàng cho thể liên hệ để lấy xe ngay trong khoảng thời gian từ 15 – 20 phút. … GIÁ RẺ, THỦ TỤC ĐƠN GIẢN, GIAO XE NHANH tại các khu vực: Quận 1… quận 12, quận bình thạnh, quận gò vấp, quận thủ đức, quận phú nhuận, quận tân bình, huyện hóc môn, huyện bình chánh, nhà bè … chi phí thuê xe máy dao động từ 60.000đ – 250.000VNĐ/xe/ngày đối với xe số, xe tay ga hoặc côn tay … Airblade, Nouvo LX, Lead, Vision, Liberty… dao động từ 90k – 150k/xe … SH, PS, Vespa, tay côn exciter…thì mức giá cho thuê cao nhất, khoảng 200k/xe."
     },
     {
-      "claim": "Theo trang tổng hợp thuê xe máy Sài Gòn của Vexere: xe tay ga phổ thông 100.000đ - 150.000đ/ngày, chưa gồm phí giao nhận tận nơi thường từ 20.000đ - 50.000đ/lượt nếu giao xa trung tâm; xe máy điện khoảng 120.000đ - 180.000đ/ngày, VinFast Evo200 Lite khoảng 140.000đ/ngày; nhiều cửa hàng nhận/trả xe hằng ngày từ 07:30 đến 21:00; mỗi ngày thuê tính bằng 24 giờ kể từ thời điểm nhận xe.",
+      "claim": "Trên Vexere, giá thuê xe số phổ thông ở Sài Gòn trung bình từ 80.000 đồng/ngày với xe đời cũ và khoảng 100.000 đồng/ngày với xe đời mới; xe tay ga phổ thông 100.000đ - 150.000đ/ngày; phí giao nhận tận nơi thường 20.000đ - 50.000đ/lượt nếu giao ở xa trung tâm.",
       "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi",
       "source_domain": "vexere.com",
       "date_accessed": "2026-10-01",
-      "claim_supported": "Giá thuê xe tay ga phổ thông ở Sài Gòn dao động từ 100.000đ đến 150.000đ/ngày ... Mức giá này chưa bao gồm phí giao nhận xe tận nơi, thường từ 20.000đ – 50.000đ/lượt nếu giao ở xa trung tâm ... Giá thuê trung bình dao động khoảng 120.000đ – 180.000đ/ngày ... Vinfast Evo200 Lite ... cho thuê với giá khoảng 140.000đ/ngày ... Thời gian nhận xe và trả xe hằng ngày từ 07:30 đến 21:00. Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe."
+      "claim_supported": "Giá thuê các dòng xe số phổ thông ở Sài Gòn trung bình từ 80.000 đồng/ngày với xe đời cũ và khoảng 100.000 đồng/ngày với xe đời mới. … Giá thuê xe tay ga phổ thông ở Sài Gòn dao động từ 100.000đ đến 150.000đ/ngày … thường từ 20.000đ – 50.000đ/lượt nếu giao ở xa trung tâm."
+    },
+    {
+      "claim": "Theo niêm yết trên Vexere, nhà xe Thành Đạt ghi cọc 1.000.000đ/xe kèm giữ CCCD/GPLX, hoặc cọc 4.000.000đ/xe nếu không muốn để lại giấy tờ; My My ghi giữ CCCD và cọc 1.000.000đ/xe; Bike Saigon ghi cọc 1.000.000đ kèm giữ CCCD hoặc cọc 3.000.000đ/xe; Hào ghi không cần cọc trước cho dòng Sirius từ 2016, giá từ 150.000đ kèm sẵn một lít xăng; trả xe quá mỗi 24 tiếng tính thêm một ngày, trả trễ chưa quá 6 giờ chỉ tính thêm nửa ngày (My My ghi ngưỡng 5 giờ); phần lớn nhà xe chỉ cho sử dụng xe trong phạm vi Thành phố Hồ Chí Minh (cũ).",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cọc 1.000.000đ/xe và Giữ CCCD/GPLX. Hoặc cọc 4.000.000đ/xe. … Giữ CCCD và Cọc: 1.000.000đ/xe … Cọc 1.000.000đ/xe và Giữ CCCD. Hoặc Cọc 3.000.000đ/xe … Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 6 giờ → chỉ tính thêm 1/2 ngày. … Trả xe nếu chưa quá 5 giờ → chỉ tính thêm 1/2 ngày. … Vui lòng chỉ sử dụng xe trong phạm vi Thành phố Hồ Chí Minh (cũ)."
     }
   ]
 }
