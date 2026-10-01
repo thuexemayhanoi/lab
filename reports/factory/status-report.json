@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T20:42:16.972Z",
+  "generated_at": "2026-10-01T20:45:54.381Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 71,
-    "PLANNED": 9929
+    "PUBLISHED": 73,
+    "PLANNED": 9927
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 65,
-      "PLANNED": 4935
+      "PUBLISHED": 67,
+      "PLANNED": 4933
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00063",
-  "next_claimable_id": "A00064",
+  "last_completed_id": "A00065",
+  "next_claimable_id": "A00066",
   "blocked": [],
   "published": [
     {
@@ -418,6 +418,18 @@
       "pk": "thuê xe máy gần Bến xe Giáp Bát",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ben-xe-giap-bat/"
+    },
+    {
+      "id": "A00064",
+      "pk": "thuê xe máy gần Bến xe Nước Ngầm",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ben-xe-nuoc-ngam/"
+    },
+    {
+      "id": "A00065",
+      "pk": "thuê xe máy gần Bến xe Miền Đông (cũ)",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ben-xe-mien-dong-cu/"
     },
     {
       "id": "A00097",
