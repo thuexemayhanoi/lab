@@ -104,20 +104,34 @@ command refuses to exceed it. Mass publishing waits for pilot learnings.
 
 `scripts/factory/operator.js` wraps every canonical publish-flow step behind a
 whitelist command contract. The production loop is PUSH-DRIVEN (the
-/vanchinh + /blog model): the writer commits the pair into `_drafts/`
-(`A#####.html` wrapped + `A#####.body.html` + `data/research/<ID>.json`) and
+/vanchinh + /blog model): the writer commits a TURBO WRITE-AHEAD QUEUE into
+`_drafts/` (2..20 consecutive PLANNED ids — `A#####.html` wrapped +
+`A#####.body.html` + `data/research/<ID>.json` each, all in ONE commit) and
 pushes; `.github/workflows/factory-production.yml` does the rest — the old
 command-file channel is retired.
 
 - **Push contract**: `scripts/factory/push-selection.js` derives the EXACT
-  article ids from the `_drafts/` diff of the push. PLANNED rows → new claims;
-  RESEARCH/WRITING/QA/REVIEW/REPAIR/PASS rows → repair (QA only, no new
-  claims). REFUSED (exit 3, nothing executed, nothing mutated): unknown id,
-  PUBLISHED/BLOCKED row, mixed new+repair, more than `chunk_size` ids
-  (`data/state/production-control.json`), body-only push, missing research
-  packet. No drafts in the push → skip (the publish commit deletes drafts — a
-  D-only diff — so the loop never re-triggers itself).
+  article ids from the `_drafts/` diff of the push, validates them (no
+  duplicate, no PUBLISHED/BLOCKED row, no skip against matrix order — the
+  queue must start at the first PLANNED row and be contiguous), sorts them by
+  repository/matrix order and splits them into sequential 2-article PAIRS.
+  PLANNED rows → new claims (the queue, 2..20 ids); RESEARCH/WRITING/QA/
+  REVIEW/REPAIR/PASS rows → repair (QA only, no new claims, ≤ `chunk_size`).
+  REFUSED (exit 3, nothing executed, nothing mutated): unknown id,
+  PUBLISHED/BLOCKED row, mixed new+repair, fewer than `queue_min` (2) or more
+  than `queue_max` (20) ids (`data/state/production-control.json`), a hole
+  inside the queue span, body-only push, missing research packet. No drafts in
+  the push → skip (the publish commit deletes drafts — a D-only diff — so the
+  loop never re-triggers itself).
   production-control `enabled=false` → clean stop BEFORE claiming (paused).
+- **Pair consumption**: the workflow recovers, claims the WHOLE queue with ONE
+  `prepare-next --ids`, then processes the pairs sequentially inside the SAME
+  production run: research → QA fast (PASS ≥ 75 / REVIEW 70–74 → repair) →
+  publish PASS rows only (atomic stage → build → staged verify) → checkpoint
+  → next pair. A FAILED pair is kept recoverable (draft intact, open row,
+  reported with its exact ids) and NEVER rolls back pairs already published;
+  the run continues with the remaining pairs and the final commit still
+  pushes every successfully published pair. QA thresholds are unchanged.
 - **Writer direct CLI** (same tooling, local/maintenance):
   `operator.js publish --ids A00002,A00003 --scope deep` — the FULL whitelist
   including `qa`/`publish`; the workflow calls the same CLI.

@@ -16,27 +16,33 @@ ecosystem, published as a static GitHub Pages site:
 
 ## NORMAL WRITER FLOW (push-driven — the ONLY loop a writer needs)
 
-Standard working pair = **2 articles per push** (`chunk_size` in
-`data/state/production-control.json`). Every writer run pushes pairs and
-does NOT stop after one:
+Standard push = **a TURBO write-ahead queue of 2..20 articles**
+(`queue_min`..`queue_max` in `data/state/production-control.json`; the legacy
+`chunk_size=2` still caps REPAIR pushes). The factory consumes the queue as
+sequential 2-article pairs inside ONE production run. Every writer run pushes
+and does NOT stop after one:
 
 ```
 FETCH FRESH MAIN → RECOVER (if txn/lock pending) → RESUME (finish the open
-chunk first — repair pushes BEFORE pushing new pairs)
-→ PICK PAIR      the next claimable pair (next_claimable_id, PLANNED rows)
+chunk first — repair pushes BEFORE pushing new queues)
+→ PICK QUEUE     2..20 CONSECUTIVE claimable PLANNED rows starting at
+                 next_claimable_id (repository/matrix order — no skips)
 → RESEARCH       write data/research/<ID>.json (light packet for evergreen
                  rows; OFFICIAL sources mandatory when requires_official_sources=1)
-→ WRITE 2        drafts in _drafts/<ID>.body.html
+→ WRITE QUEUE    drafts in _drafts/<ID>.body.html (every queued id)
 → WRAP           node scripts/factory/wrap-drafts.js
 → COMMIT + PUSH  _drafts/<ID>.html + <ID>.body.html + research packets
-→ FACTORY RUNS ITSELF (factory-production.yml): push-selection.js derives the
-  EXACT ids → recover → prepare-next --ids → research → qa fast
-  (PASS ≥ 75 / REVIEW 70–74 → repair) → publish PASS only (atomic) →
-  light smoke → commit + push
+                 (the whole queue in ONE commit)
+→ FACTORY RUNS ITSELF (factory-production.yml): push-selection.js validates
+  + sorts the queue ids and splits them into PAIRS → recover → ONE
+  prepare-next --ids claim for the whole queue → per PAIR sequentially:
+  research → qa fast (PASS ≥ 75 / REVIEW 70–74 → repair) → publish PASS only
+  (atomic) → checkpoint → NEXT PAIR. A failed pair stays recoverable and is
+  reported; already-published pairs are NEVER rolled back.
 → REPAIR         (only if QA < 75 — fix _drafts/<ID>.body.html, wrap, PUSH
   again; max 3 attempts, then BLOCKED)
 → CI/PAGES       (ONE lightweight content validation runs per push)
-→ FETCH FRESH MAIN → NEXT PAIR → REPEAT
+→ FETCH FRESH MAIN → NEXT QUEUE → REPEAT
 ```
 
 FAST = the production default scope. It verifies ONLY the current scope:
@@ -154,15 +160,21 @@ node scripts/factory/capacity-check.js     # READ-ONLY capacity + state invarian
 ONE CLI — the old command-file channel is retired:
 
 - **Push-driven production** (`.github/workflows/factory-production.yml`,
-  triggered by `_drafts/**` pushes): the writer commits the pair
-  (`_drafts/<ID>.html` + `<ID>.body.html` + `data/research/<ID>.json`) and
-  pushes. `scripts/factory/push-selection.js` derives the EXACT ids from the
-  push (REFUSES unknown/PUBLISHED/BLOCKED ids, mixed new+repair, more than
-  `chunk_size` ids, body-only, missing research packets — exit 3, nothing
-  executed, nothing mutated). The workflow then runs recover-first, claims the
-  exact ids (`prepare-next --ids`), researches RESEARCH rows, QAs, publishes
-  PASS rows only, and commits under a final-tree-verify + safe-push
-  (fetch/rebase, never force) discipline.
+  triggered by `_drafts/**` pushes): the writer commits a WRITE-AHEAD QUEUE
+  (`_drafts/<ID>.html` + `<ID>.body.html` + `data/research/<ID>.json` for
+  2..20 consecutive PLANNED ids in ONE commit) and pushes.
+  `scripts/factory/push-selection.js` derives the EXACT ids from the push,
+  sorts them by repository/matrix order and splits them into 2-article PAIRS
+  (REFUSES unknown/PUBLISHED/BLOCKED ids, mixed new+repair, < `queue_min` 2 or
+  > `queue_max` 20 ids, a skip against matrix order (the queue must start at
+  the first PLANNED row and leave no unclaimed PLANNED row inside its span),
+  body-only, missing research packets — exit 3, nothing executed, nothing
+  mutated). The workflow then runs recover-first, claims the whole queue with
+  ONE `prepare-next --ids`, and processes the pairs sequentially — per pair:
+  research RESEARCH rows, QA, publish PASS rows only (atomic), checkpoint —
+  a failed pair stays recoverable and never rolls back published pairs — and
+  commits under a final-tree-verify + safe-push (fetch/rebase, never force)
+  discipline.
 - **Writer direct CLI** (same tooling, for local/maintenance runs):
   `node scripts/factory/operator.js <op> [--ids A00001,A00002] [--count N] [--scope fast|deep|full]`
   The full whitelist `status, prepare-next, research, qa, publish, recover,

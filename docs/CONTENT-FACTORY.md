@@ -7,21 +7,30 @@ and publishes articles from a fixed 10,000-row matrix.
 
 - BATCH = 50 articles
 - CHUNK = 10 articles (the ENGINE hard cap: `publish` refuses more than CHUNK ids)
-- Standard production pair = 2 articles (the normal loop claims 2 at a time)
+- QUEUE_MAX = 20 articles (the TURBO write-ahead queue cap: one writer push
+  may claim 2..20 consecutive PLANNED ids; consumed as sequential 2-article
+  pairs inside ONE production run)
 - 10,000 articles = 200 batches × 50
 
 ## Simple production loop (normal content)
 
-The NORMAL writer flow is a light 2-article pair loop — FAST by default:
+The NORMAL writer flow is a light TURBO queue loop — FAST by default:
 
 ```
-FETCH → RECOVER/RESUME → PREPARE 2 → RESEARCH per row requirement →
-WRITE 2 → WRAP → QA FAST (scoped to the pair) → REPAIR if needed →
-PUBLISH (atomic, FAST) → LIGHT VERIFY → COMMIT/PUSH → CI/PAGES → NEXT 2
+FETCH → RECOVER/RESUME → PICK QUEUE (2..20 consecutive PLANNED rows) →
+RESEARCH per row requirement → WRITE all queued bodies → WRAP →
+PUSH (one commit) → factory-production.yml runs itself: validate/sort/pair
+the queue → ONE claim → per PAIR: research → QA FAST (scoped) →
+PUBLISH PASS only (atomic, FAST) → checkpoint → NEXT PAIR →
+COMMIT/PUSH (verified tree) → CI/PAGES → NEXT QUEUE
 ```
 
-- Standard pair = 2 articles (`factory.js prepare-next --count 2`); CHUNK=10
-  stays the engine hard cap.
+- Standard queue = 2..20 consecutive PLANNED ids per push
+  (`data/state/production-control.json`: queue_min 2, queue_max 20; legacy
+  `prepare-next --count 2` writer CLI unchanged); CHUNK=10 stays the engine
+  hard cap per publish op (pairs are 2).
+- A failed pair stays recoverable (repair push) and never rolls back pairs
+  already published in the same run.
 - FAST checks only what the current pair touches: transaction/lock sanity,
   selected IDs, research/QA contracts, grounding where required, staged
   consistency, checkpoint↔matrix coherence for the pair. FAST NEVER runs the
@@ -109,12 +118,14 @@ factory.js reports            # regenerate reports/factory/*.json
 - Bootstrap publication cap: 10 pilot articles (`config/content-factory.json`).
 - Never rewrite PUBLISHED rows silently.
 - Push-driven production (see `docs/PROC-PUBLISH.md` "Push-driven
-  production"): the writer commits `_drafts/` drafts + research packets and
-  pushes; `factory-production.yml` derives the EXACT ids via
-  `scripts/factory/push-selection.js` (refuses unknown/PUBLISHED/BLOCKED/mixed/
-  >chunk_size ids) and drives the whitelist CLI `scripts/factory/operator.js`
-  — recover-first, `prepare-next --ids` (resume-before-claim, EXACT rows),
-  QA scopes fast/deep/full (thresholds never change), atomic publish,
+  production"): the writer commits a write-ahead queue of `_drafts/` drafts +
+  research packets and pushes; `factory-production.yml` derives the EXACT ids
+  via `scripts/factory/push-selection.js` (refuses unknown/PUBLISHED/BLOCKED/
+  mixed/<queue_min/>queue_max/non-contiguous-queue ids) and drives the
+  whitelist CLI `scripts/factory/operator.js`
+  — recover-first, ONE `prepare-next --ids` claim for the whole queue
+  (resume-before-claim, EXACT rows), then sequential pairs, QA scopes
+  fast/deep/full (thresholds never change), atomic publish,
   final-tree verify + safe push, single coordinator
   `lab-factory-production`. `_drafts/` is committed but Jekyll never serves
   underscore directories — drafts are never public.
