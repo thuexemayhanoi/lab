@@ -1,0 +1,120 @@
+{
+  "article_id": "A00079",
+  "primary_keyword": "thuê xe máy Tràng An",
+  "secondary_keywords": [
+    "thuê xe máy tại Tràng An",
+    "giá thuê xe máy Ninh Bình",
+    "thuê xe máy gần bến thuyền Tràng An",
+    "vé thuyền Tràng An",
+    "thuê xe máy ga Ninh Bình"
+  ],
+  "search_intent": "informational-research — du khách đi Tràng An cần vé thuyền, quãng đường từ ga Ninh Bình, mặt bằng giá thuê xe tại Ninh Bình và cách xếp lịch một ngày thuyền + xe máy",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Tràng An",
+    "huyện Hoa Lư",
+    "Ninh Bình",
+    "ga Ninh Bình",
+    "bến thuyền Tràng An",
+    "thành phố Ninh Bình",
+    "đường 27/7 Nam Bình",
+    "phố cổ Hoa Lư",
+    "Cố đô Hoa Lư",
+    "Hang Múa",
+    "Tam Cốc – Bích Động",
+    "Hà Nội"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe tay ga",
+    "xe máy điện",
+    "thuyền đò"
+  ],
+  "brand_entities": [
+    "Motogo",
+    "Vexere",
+    "The Sinh Tour",
+    "Hương Dương",
+    "Cố Đô Xanh",
+    "Honda",
+    "Yamaha",
+    "VinFast"
+  ],
+  "model_entities": [
+    "Honda Wave RSX",
+    "Honda Wave Alpha",
+    "VinFast Evo Lite",
+    "Yamaha Nouvo"
+  ],
+  "questions_found": [
+    "Thuê xe máy Ninh Bình đi Tràng An giá bao nhiêu?",
+    "Vé đi thuyền Tràng An bao nhiêu và bao gồm những gì?",
+    "Từ ga Ninh Bình đến Tràng An bao xa?",
+    "Đi thuyền Tràng An mất bao lâu?"
+  ],
+  "related_queries": [
+    "giá vé thuyền Tràng An",
+    "Tràng An cách Hà Nội bao xa",
+    "thuê xe máy Ninh Bình",
+    "di chuyển ga Ninh Bình đến Tràng An"
+  ],
+  "serp_patterns": "SERP 'thuê xe máy Tràng An' bị chiếm bởi bài thuê xe Ninh Bình (Motogo/Vexere) và cẩm nang vé/thuyền Tràng An — không có bài riêng theo intent POI; repo có thue-xe-may-ninh-binh (A00018, intent tỉnh) — bài này chiếm intent POI bằng bảng vé thuyền kèm điều khoản, quãng ga Ninh Bình → Tràng An và lịch trình thuyền + xe máy.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "The Sinh Tour — Vé đi thuyền Tràng An bao nhiêu (bảng giá, điều khoản bao gồm/không bao gồm)",
+      "url": "https://thesinhtour.com/ve-di-thuyen-trang-an-bao-nhieu/"
+    },
+    {
+      "name": "The Sinh Tour — Hướng dẫn du lịch Tràng An Ninh Bình (95 km, tàu hỏa, ga Ninh Bình → Tràng An, thời lượng thuyền)",
+      "url": "https://thesinhtour.com/huong-dan-du-lich-trang-an-ninh-binh/"
+    },
+    {
+      "name": "Motogo — Thuê xe máy Ninh Bình (bảng cửa hàng, giá xe số/xe ga)",
+      "url": "https://motogo.vn/thue-xe-may-ninh-binh/"
+    },
+    {
+      "name": "Vexere — Thuê xe máy tại Ninh Bình (niêm yết Hương Dương, Cố Đô Xanh)",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-ninh-binh.vi"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ninh-binh/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ga-ha-noi/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ba-vi/"
+  ],
+  "potential_cannibalization": "Khác biệt với thue-xe-may-ninh-binh (A00018, intent tỉnh-wide): bài này nhắm intent POI Tràng An với bảng vé thuyền, quãng ga Ninh Bình → bến và lịch trình thuyền; link một chiều từ bài POI sang trang tỉnh.",
+  "unique_angle": "Ghép bảng vé thuyền (250.000đ/120.000đ kèm điều khoản bao gồm/không bao gồm) + quãng đường 95 km/2–2,5 giờ từ Hà Nội + 6–8 km từ ga Ninh Bình + thời lượng thuyền 2 – 3 tiếng + niêm yết giá Motogo/Vexere — góc nhìn 'thuyền ở giữa, xe máy hai đầu chuyến'.",
+  "notes": "Hàng informational_only (POI Ninh Bình): không dùng 'chúng tôi', không claim dịch vụ; disclosure P2 chuẩn bản Hà Nội. requires_official_sources=0. Mọi claim định lượng có claim_evidence từ nguồn đã mở 2026-10-01.",
+  "claim_evidence": [
+    {
+      "claim": "Vé thuyền Tràng An: người lớn 250.000đ (tính từ chiều cao trên 1m3), trẻ em từ 1m – 1m3 là 120.000đ, trẻ em dưới 1m miễn phí; giá vé đã bao gồm phí vào khu du lịch + vé thuyền + bảo hiểm du lịch, không bao gồm hướng dẫn viên, ăn uống, xe điện (nếu sử dụng).",
+      "source_url": "https://thesinhtour.com/ve-di-thuyen-trang-an-bao-nhieu/",
+      "source_domain": "thesinhtour.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Người lớn | 250.000đ | Tính từ chiều cao trên 1m3\"; \"Trẻ em từ 1m – 1m3 | 120.000đ | Cần đo chiều cao tại cổng\"; \"Trẻ em dưới 1m | Miễn phí | Không cần mua vé\"; \"Giá vé đã bao gồm: phí vào khu du lịch + vé thuyền + bảo hiểm du lịch.\"; \"Không bao gồm: hướng dẫn viên, ăn uống, xe điện (nếu sử dụng)\""
+    },
+    {
+      "claim": "Tràng An thuộc huyện Hoa Lư, tỉnh Ninh Bình, cách trung tâm Hà Nội khoảng 95 km, đi đường bộ khoảng 2–2,5 giờ; hành trình ngồi thuyền kéo dài khoảng 2 – 3 tiếng; tàu SE, NA, TH từ ga Hà Nội đi ga Ninh Bình khoảng 2,5 – 3 tiếng, vé 90.000 – 200.000 VNĐ/lượt tùy loại ghế; từ ga Ninh Bình đến Tràng An khoảng 6–8 km.",
+      "source_url": "https://thesinhtour.com/huong-dan-du-lich-trang-an-ninh-binh/",
+      "source_domain": "thesinhtour.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Tràng An thuộc huyện Hoa Lư, tỉnh Ninh Bình – cách trung tâm Hà Nội khoảng 95 km\"; \"bạn có thể dễ dàng đến Tràng An chỉ sau 2–2,5 giờ di chuyển\"; \"Hành trình ngồi thuyền ở Tràng An kéo dài khoảng 2 – 3 tiếng\"; \"Tàu SE, NA, TH từ ga Hà Nội đi ga Ninh Bình. – Thời gian đi: Khoảng 2,5 – 3 tiếng. – Giá vé: 90.000 – 200.000 VNĐ/lượt tùy loại ghế. Từ ga Ninh Bình, bạn tiếp tục bắt taxi hoặc thuê xe đến Tràng An (~6–8km)\""
+    },
+    {
+      "claim": "Motogo (42 đường 27/7 Nam Bình, thành phố Ninh Bình): xe số 70.000đ – 120.000đ/ngày, xe ga 120.000đ – 200.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-ninh-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"MOTOGO Điện thoại: 0338 02 3344 Địa chỉ: 42 đường 27/7 Nam Bình, T.P Ninh Bình Giá thuê xe số: 70.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -200.000đ/ngày\""
+    },
+    {
+      "claim": "Trên Vexere khu vực Ninh Bình: xe số Hương Dương (Honda Wave RSX/Wave Alpha) từ 100.000đ kèm mũ bảo hiểm và 1 lít xăng, không cần cọc trước; xe máy điện VinFast Evo Lite của Cố Đô Xanh từ 150.000đ không cần bằng lái, không cần cọc; khu vực giao xe gồm phố cổ Hoa Lư và Cố đô Hoa Lư; mỗi ngày thuê tính bằng 24 giờ kể từ thời điểm nhận xe.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ninh-binh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Honda Wave RSX hoặc dòng xe tương tự Honda Wave RSX, Honda Wave Alpha (giao ngẫu nhiên tùy tình trạng xe thực tế)\"; \"Mũ bảo hiểm, Xăng (1 lít) Giao xe tận nơi Không cần cọc trước từ 100.000đ\"; \"Xe máy điện Cố Đô Xanh Vinfast Evo Lite Đời xe: từ 2026 Mũ bảo hiểm, Áo mưa, Giá đỡ điện thoại Giao xe tận nơi Không cần bằng lái Không cần cọc trước từ 150.000đ\"; \"Khu vực giao xe Phố cổ Hoa Lư, Phường Hoa Lư Cố đô Hoa Lư, Phường Tây Hoa Lư\"; \"Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe\""
+    }
+  ]
+}

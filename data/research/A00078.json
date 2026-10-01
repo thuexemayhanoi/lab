@@ -1,0 +1,131 @@
+{
+  "article_id": "A00078",
+  "primary_keyword": "thuê xe máy Cố đô Hoa Lư",
+  "secondary_keywords": [
+    "thuê xe máy tại Hoa Lư",
+    "giá thuê xe máy Ninh Bình",
+    "thuê xe máy gần Cố đô Hoa Lư",
+    "thuê xe máy Trường Yên",
+    "thuê xe máy đi Hang Múa Tràng An"
+  ],
+  "search_intent": "informational-research — du khách đi Cố đô Hoa Lư cần mặt bằng giá thuê xe quanh khu di tích, vé tham quan, cách đi từ ga Ninh Bình bằng tàu hỏa và checklist nhận xe chạy đường quê Ninh Bình",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Cố đô Hoa Lư",
+    "Trường Yên",
+    "huyện Hoa Lư",
+    "Ninh Bình",
+    "sông Hoàng Long",
+    "Tràng An",
+    "Hang Múa",
+    "Tam Cốc – Bích Động",
+    "động Am Tiên",
+    "ga Ninh Bình",
+    "đường 27/7 Nam Bình",
+    "phố cổ Hoa Lư",
+    "phường Tây Hoa Lư",
+    "quốc lộ 1A",
+    "Hà Nam"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe tay ga",
+    "xe máy điện",
+    "xe máy tự lái"
+  ],
+  "brand_entities": [
+    "Motogo",
+    "Vexere",
+    "The Sinh Tour",
+    "Hương Dương",
+    "Cố Đô Xanh",
+    "Hannah Bike Rental",
+    "Honda",
+    "Yamaha",
+    "VinFast"
+  ],
+  "model_entities": [
+    "Honda Wave RSX",
+    "Honda Wave Alpha",
+    "Yamaha Nouvo",
+    "VinFast Evo Lite"
+  ],
+  "questions_found": [
+    "Thuê xe máy khu vực Hoa Lư giá bao nhiêu một ngày?",
+    "Vé vào Cố đô Hoa Lư bao nhiêu tiền?",
+    "Đi từ Hà Nội đến Hoa Lư bằng tàu mất bao lâu?",
+    "Nên thuê xe số hay xe ga đi các điểm quanh Hoa Lư?"
+  ],
+  "related_queries": [
+    "giá vé Cố đô Hoa Lư",
+    "thuê xe máy Ninh Bình giá rẻ",
+    "Cố đô Hoa Lư cách Hà Nội bao xa",
+    "thuê xe máy gần ga Ninh Bình"
+  ],
+  "serp_patterns": "SERP 'thuê xe máy Cố đô Hoa Lư' bị chiếm bởi bài tổng hợp thuê xe Ninh Bình của Motogo/Vexere và cẩm nang vé di tích của The Sinh Tour — không có bài riêng theo intent POI Hoa Lư; repo có thue-xe-may-ninh-binh (A00018, intent tỉnh) — bài này chiếm intent POI bằng bảng vé di tích, niêm yết giá hai nguồn và chuỗi quãng đường ngắn nối Tràng An/Hang Múa/Tam Cốc.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "The Sinh Tour — Giá vé tham quan Cố đô Hoa Lư (bảng giá vé + hướng dẫn viên)",
+      "url": "https://thesinhtour.com/gia-ve-tham-quan-co-do-hoa-lu/"
+    },
+    {
+      "name": "Motogo — Thuê xe máy Ninh Bình (bảng cửa hàng, giá xe số/xe ga)",
+      "url": "https://motogo.vn/thue-xe-may-ninh-binh/"
+    },
+    {
+      "name": "Vexere — Thuê xe máy tại Ninh Bình (niêm yết Hương Dương, Cố Đô Xanh, Hannah Bike)",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-ninh-binh.vi"
+    },
+    {
+      "name": "The Sinh Tour — Hướng dẫn du lịch Tràng An Ninh Bình (tàu ga Ninh Bình, quãng đường các điểm)",
+      "url": "https://thesinhtour.com/huong-dan-du-lich-trang-an-ninh-binh/"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ninh-binh/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ga-ha-noi/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/"
+  ],
+  "potential_cannibalization": "Khác biệt với thue-xe-may-ninh-binh (A00018, intent tỉnh-wide): bài này nhắm intent POI Cố đô Hoa Lư với bảng vé di tích, vị trí nhận xe phố cổ Hoa Lư và quãng đường ngắn tới Tràng An/Hang Múa/Tam Cốc; link một chiều từ bài POI sang trang tỉnh.",
+  "unique_angle": "Ghép bảng vé di tích (20.000 VNĐ) + niêm yết giá hai nguồn (Motogo đường 27/7 Nam Bình; Vexere phố cổ Hoa Lư có cả xe điện VinFast không cần bằng lái/cọc) + chuỗi quãng đường ngắn quanh cố đô (Tràng An ~3 km, Hang Múa ~5 km, Tam Cốc ~7 km) — góc nhìn 'kinh đô nhỏ, điểm dày đặc' cho lịch trình một ngày bằng xe máy.",
+  "notes": "Hàng informational_only (POI Ninh Bình): không dùng 'chúng tôi', không claim dịch vụ; disclosure P2 chuẩn bản Hà Nội. requires_official_sources=0. Mọi claim định lượng có claim_evidence từ nguồn đã mở 2026-10-01.",
+  "claim_evidence": [
+    {
+      "claim": "Vé vào cửa Cố đô Hoa Lư 20.000 VNĐ/người lớn, trẻ em dưới 1,2m miễn phí; thuê hướng dẫn viên tại điểm 300.000 VNĐ/đoàn (≤ 20 khách). Cố đô Hoa Lư thuộc xã Trường Yên, huyện Hoa Lư, tỉnh Ninh Bình.",
+      "source_url": "https://thesinhtour.com/gia-ve-tham-quan-co-do-hoa-lu/",
+      "source_domain": "thesinhtour.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Vé vào cửa Cố đô Hoa Lư | 20.000 VNĐ | Trẻ em dưới 1,2m miễn phí\"; \"Thuê hướng dẫn viên tại điểm | 300.000 VNĐ/đoàn (≤ 20 khách)\"; \"Cố đô Hoa Lư, thuộc xã Trường Yên, huyện Hoa Lư, tỉnh Ninh Bình, là kinh đô đầu tiên của nhà nước phong kiến tập quyền Việt Nam dưới thời Đinh – Tiền Lê\""
+    },
+    {
+      "claim": "Motogo (42 đường 27/7 Nam Bình, thành phố Ninh Bình): xe số 70.000đ – 120.000đ/ngày, xe ga 120.000đ – 200.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-ninh-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"MOTOGO Điện thoại: 0338 02 3344 Địa chỉ: 42 đường 27/7 Nam Bình, T.P Ninh Bình Giá thuê xe số: 70.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -200.000đ/ngày\""
+    },
+    {
+      "claim": "Trên Vexere khu vực Ninh Bình: xe số Hương Dương (Honda Wave RSX/Wave Alpha) từ 100.000đ kèm mũ bảo hiểm và 1 lít xăng, không cần cọc trước; xe máy điện VinFast Evo Lite của Cố Đô Xanh từ 150.000đ không cần bằng lái, không cần cọc; Hannah Bike Rental cho Yamaha Nouvo từ 100.000đ; khu vực giao xe gồm phố cổ Hoa Lư và Cố đô Hoa Lư; mỗi ngày thuê tính bằng 24 giờ kể từ thời điểm nhận xe.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ninh-binh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Honda Wave RSX hoặc dòng xe tương tự Honda Wave RSX, Honda Wave Alpha (giao ngẫu nhiên tùy tình trạng xe thực tế)\"; \"Mũ bảo hiểm, Xăng (1 lít) Giao xe tận nơi Không cần cọc trước từ 100.000đ\"; \"Xe máy điện Cố Đô Xanh Vinfast Evo Lite Đời xe: từ 2026 Mũ bảo hiểm, Áo mưa, Giá đỡ điện thoại Giao xe tận nơi Không cần bằng lái Không cần cọc trước từ 150.000đ\"; \"Xe tay ga phổ thông Hannah Bike Rental Yamaha Nouvo Đời xe: 2009-2010 Mũ bảo hiểm, Xăng (1 lít) Không cần cọc trước từ 100.000đ\"; \"Khu vực giao xe Phố cổ Hoa Lư, Phường Hoa Lư Cố đô Hoa Lư, Phường Tây Hoa Lư\"; \"Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe\""
+    },
+    {
+      "claim": "Tàu SE, NA, TH từ ga Hà Nội đi ga Ninh Bình mất khoảng 2,5 – 3 tiếng, vé 90.000 – 200.000 VNĐ/lượt tùy loại ghế.",
+      "source_url": "https://thesinhtour.com/huong-dan-du-lich-trang-an-ninh-binh/",
+      "source_domain": "thesinhtour.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Tàu SE, NA, TH từ ga Hà Nội đi ga Ninh Bình. – Thời gian đi: Khoảng 2,5 – 3 tiếng. – Giá vé: 90.000 – 200.000 VNĐ/lượt tùy loại ghế. Từ ga Ninh Bình, bạn tiếp tục bắt taxi hoặc thuê xe đến Tràng An (~6–8km)\""
+    },
+    {
+      "claim": "Các điểm lân cận: Tràng An cách Hoa Lư khoảng 3 km, Hang Múa cách khoảng 5 km, Tam Cốc – Bích Động cách khoảng 7 km.",
+      "source_url": "https://thesinhtour.com/gia-ve-tham-quan-co-do-hoa-lu/",
+      "source_domain": "thesinhtour.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Tràng An – Quần thể du lịch sinh thái nổi tiếng thế giới (cách Hoa Lư ~3km)\"; \"Hang Múa – Nơi check-in nổi tiếng với toàn cảnh tuyệt đẹp nhìn từ đỉnh núi (cách Hoa Lư ~5km)\"; \"Tam Cốc – Bích Động – Vịnh Hạ Long trên cạn (cách Hoa Lư ~7km)\""
+    }
+  ]
+}
