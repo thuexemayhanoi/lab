@@ -69,6 +69,11 @@ const ID_RE = /^A\d{5}$/;
 const COUNT_MIN = 1, COUNT_MAX = 10;
 const factory = require(path.join(__dirname, 'factory.js'));
 
+// TURBO write-ahead queue: explicit --ids lists may carry up to QUEUE_MAX
+// (default 20) ids — one writer push, one deterministic claim. The legacy
+// --count path keeps the small CHUNK cap (COUNT_MAX).
+const IDS_MAX = Math.max(COUNT_MAX, Number(factory.cfg && factory.cfg.QUEUE_MAX) || 20);
+
 function fail(msg){ console.error('OPERATOR REFUSED: ' + msg); process.exit(1); }
 function resolveScope(cmd){ return cmd.scope || (PRODUCTION_OPS.includes(cmd.op) ? 'fast' : (cmd.op==='verify'?'full':'')); }
 
@@ -81,7 +86,7 @@ function parseIds(v){
   list=list.map(s=>s.trim()).filter(Boolean);
   if (list.some(id=>!ID_RE.test(id))) fail('malformed article id in ids (expected A#####): '+JSON.stringify(v));
   if (list.some((id,i)=>list.indexOf(id)!==i)) fail('duplicate id in ids: '+list.join(','));
-  if (list.length>COUNT_MAX) fail('too many ids ('+list.length+' > '+COUNT_MAX+')');
+  if (list.length>IDS_MAX) fail('too many ids ('+list.length+' > IDS_MAX='+IDS_MAX+' — write-ahead queue limit)');
   return list;
 }
 

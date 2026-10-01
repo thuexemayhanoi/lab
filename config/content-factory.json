@@ -1,6 +1,7 @@
 {
   "BATCH": 50,
   "CHUNK": 10,
+  "QUEUE_MAX": 20,
   "total_target_articles": 10000,
   "max_publication_in_bootstrap": 10,
   "status_lifecycle": [

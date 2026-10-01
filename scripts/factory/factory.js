@@ -256,17 +256,21 @@ function status(){
 }
 function prepareNext(args){
   const CHUNK = cfg.CHUNK||10;
-  // push-driven production: --ids claims EXACT the pushed draft ids (derived by
-  // push-selection.js) — never random PLANNED rows. The legacy count path
-  // (writer CLI) is unchanged and still honored below.
+  // TURBO write-ahead queue: --ids claims EXACT the pushed draft ids (derived
+  // by push-selection.js) — never random PLANNED rows. A queue push carries
+  // 2..QUEUE_MAX (default 20) consecutive PLANNED ids and is claimed as ONE
+  // logical batch; the workflow then consumes it as sequential PAIRS (the
+  // classic prepare-next/qa/publish cadence is unchanged per pair). The
+  // legacy count path (writer CLI) is unchanged and still honored below.
+  const QUEUE_MAX=Math.max(CHUNK,Number(cfg.QUEUE_MAX)||20);
   let exactIds=null;
   let n=CHUNK;
   if(args&&args[0]==='--ids'){
     if(args.length<2||!String(args[1]).trim()){ console.error('prepare-next --ids requires a comma-separated article id list'); process.exit(1); }
     exactIds=String(args[1]).split(',').map(s=>s.trim()).filter(Boolean);
+    if(exactIds.length>QUEUE_MAX){ console.error('REFUSED: prepare-next --ids received '+exactIds.length+' ids > QUEUE_MAX='+QUEUE_MAX+' (at most '+QUEUE_MAX+' articles per write-ahead queue claim).'); process.exit(1); }
     if(exactIds.some(id=>!/^A\d{5}$/.test(id))){ console.error('REFUSED: prepare-next --ids: malformed article id (expected A#####): '+JSON.stringify(exactIds)); process.exit(1); }
     if(exactIds.some((id,i)=>exactIds.indexOf(id)!==i)){ console.error('REFUSED: prepare-next --ids: duplicate article id in '+exactIds.join(',')); process.exit(1); }
-    if(exactIds.length>CHUNK){ console.error('REFUSED: prepare-next --ids received '+exactIds.length+' ids > CHUNK='+CHUNK+' (at most '+CHUNK+' articles per claim).'); process.exit(1); }
   } else {
     const nArg = args&&args.length?parseInt(args[0],10):NaN;
     n = isNaN(nArg) ? CHUNK : nArg;
