@@ -1,0 +1,134 @@
+{
+  "article_id": "A00061",
+  "primary_keyword": "thuê xe máy gần Ga Huế",
+  "secondary_keywords": [
+    "thuê xe máy ga Huế",
+    "cho thuê xe máy gần ga Huế",
+    "thuê xe máy Huế giao tận ga",
+    "thuê xe máy Huế trả xe Đà Nẵng",
+    "giá thuê xe máy Huế"
+  ],
+  "search_intent": "local",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Ga Huế",
+    "Phường Thuận Hoá",
+    "Phố Tây Huế",
+    "Phường Phú Xuân",
+    "35 Kiệt 42 Nguyễn Công Trứ",
+    "131 Bà Triệu",
+    "132 Trường Chinh",
+    "Đại Nội",
+    "Cung An Định",
+    "sân bay Phú Bài",
+    "Huế"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe máy điện",
+    "xe côn tay"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "VinFast"
+  ],
+  "model_entities": [
+    "Wave Alpha",
+    "Sirius",
+    "Vision",
+    "Janus",
+    "Air Blade",
+    "Lead",
+    "Exciter",
+    "Cuxi",
+    "Evo 200 Lite"
+  ],
+  "questions_found": [
+    "thuê xe máy gần Ga Huế giá bao nhiêu một ngày?",
+    "gần ga Huế có nơi nào giao xe tận nơi không?",
+    "thuê xe máy Huế có trả xe ở Đà Nẵng hoặc Hội An được không?",
+    "thuê xe máy Huế cần giấy tờ gì và cọc bao nhiêu?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Huế",
+    "thuê xe máy tại ga tàu Huế",
+    "Kenvin Motorbike Huế",
+    "thuê xe máy Huế giao tận nơi",
+    "thuê xe máy Huế đi Đà Nẵng"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy gần Ga Huế\" gồm: hiddenlandtravel.com trang riêng \"thuê xe máy tại ga tàu Huế\" (nhận/trả xe tại văn phòng, giao nhận 6:30-21:00, cọc chụp ảnh bằng lái + CCCD, kèm 1 lít xăng, hỗ trợ 24/7, có thể trả xe ở Đà Nẵng/Hội An); vexere.com/vn/thue-xe/xe-may-tai-hue.vi (khu vực giao xe gồm Ga Huế Phường Thuận Hoá, Bến xe phía Nam, Phố Tây Huế; nhà xe An Nam, Camay Motorbike, Esix, Hà Thịnh Lộc, Nguyễn Thành Nhân, Trần Hoàng, Vivu 75, Đồng Xanh; Kenvin 35 Kiệt 42 Nguyễn Công Trứ giao miễn phí 3km quanh Phố Tây gồm Ga Huế; Thành Nhân 131 Bà Triệu Evo 200 Lite 2024 hoạt động 24/24); các bài tổng hợp (daivietourist, banhlochuebavan, aeonmall-vietnam: giá từ 100.000đ-150.000đ/ngày, giao tận ga/tòa nhà có phụ thu 100.000-150.000đ nếu xa như Phú Bài). Intent local: hành khách xuống tàu tại ga muốn nhận xe nhanh quanh Phố Tây hoặc giao tận ga; bài định vị info so sánh phương án, giá tham khảo, chính sách một chiều Huế - Đà Nẵng/Hội An.",
+  "official_sources": [
+    {
+      "name": "Ga Huế (tham khảo địa lý — data/geography/transport-hubs.json HB-010, province Huế, CURRENT)",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "note": "Địa lý theo nguồn tổng hợp: Ga Huế thuộc Phường Thuận Hoá; các con số khác chỉ dùng khi nằm trong claim_evidence."
+    }
+  ],
+  "supporting_sources": [
+    {
+      "name": "Hidden Land Travel — Thuê xe máy tại ga tàu Huế",
+      "url": "https://hiddenlandtravel.com/vi/rental/thue-xe-may-tai-ga-tau-hue/"
+    },
+    {
+      "name": "Vexere — Thuê xe máy ở Huế (bảng giá + nhà xe)",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-hue/",
+    "/lab/thue-xe-may/thue-xe-may-da-nang/",
+    "/lab/thue-xe-may/thue-xe-may-quang-binh/",
+    "/lab/thue-xe-may/thue-xe-may-gan-ga-ha-noi/",
+    "/lab/kinh-nghiem/"
+  ],
+  "potential_cannibalization": "CG-rental-poi-ga-hue: 1 row cho Ga Huế; khác row thue-xe-may-hue (toàn thành phố, đã publish) — bài này tập trung POI quanh cửa ga Phường Thuận Hoá, Phố Tây và phương án nhận xe sau giờ tàu, thêm góc trả xe một chiều Đà Nẵng/Hội An; không tranh chấp từ khóa chính.",
+  "unique_angle": "Ga Huế nằm sát Phố Tây và Đại Nội: khách tàu thường nhận xe quanh ga hoặc để nhà xe giao tận nơi trong bán kính 3km. Điểm khác biệt của Huế là mô hình thuê một chiều: có nhà xe cho nhận tại ga tàu Huế và trả ở Đà Nẵng hoặc Hội An — thuận tiện cho lịch trình Bắc vào. Bài đi theo luồng xuống tàu - chọn kiểu xe cho providing Huế (ga, lăng tẩm, đèo) - chính sách 24 tiếng, cọc giấy tờ và tùy chọn trả xe liên tỉnh.",
+  "notes": "Bài informational_only: KHÔNG chào dịch vụ, KHÔNG dùng \"chúng tôi\", KHÔNG LocalBusiness schema; disclosure đầu bài ghi rõ trang là lab info, dịch vụ owner chỉ ở Hà Nội Long Biên - phố cổ, không có điểm nhận tại Huế. Mọi con số (VND, giờ) lấy đúng claim_evidence; không bịa địa chỉ ngoài các địa chỉ trong quote (35 Kiệt 42 Nguyễn Công Trứ, 131 Bà Triệu, 132 Trường Chinh); không dùng khoảng cách km không có trong nguồn.",
+  "claim_evidence": [
+    {
+      "claim": "Trang tổng hợp Vexere thuê xe máy Huế ghi khu vực giao xe gồm Ga Huế (Phường Thuận Hoá), Bến xe phía Nam Huế (Phường An Cựu), Phố Tây Huế (Thuận Hoá); các cửa hàng gồm An Nam, Camay Motorbike, Esix, Hà Thịnh Lộc, Nguyễn Thành Nhân, Trần Hoàng, Vivu 75, Đồng Xanh.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Khu vực giao xe ... Bến xe phía Nam Huế, Phường An Cựu Ga Huế, Phường Thuận Hoá Phố Tây Huế, Thuận Hoá Cửa hàng An Nam Camay Motorbike Esix Hà Thịnh Lộc Nguyễn Thành Nhân Trần Hoàng Vivu 75 Đồng Xanh"
+    },
+    {
+      "claim": "Dịch vụ cho thuê xe Kenvin tại 35 Kiệt 42 Nguyễn Công Trứ, Phường Phú Xuân hoạt động linh hoạt đến 22h30, hỗ trợ giao xe tận nơi miễn phí trong phạm vi 3km từ Phố Tây Huế, bao gồm Ga Huế, Cung An Định và khu vực Đại Nội.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Dịch vụ cho thuê xe Kenvin Địa chỉ: 35 Kiệt 42 Nguyễn Công Trứ, Phường Phú Xuân, Thành phố Huế. Kenvin gây ấn tượng với thời gian hoạt động linh hoạt đến 22h30 ... giao xe tận nơi miễn phí trong phạm vi 3km từ Phố Tây Huế, bao gồm Ga Huế, Cung An Định và khu vực Đại Nội."
+    },
+    {
+      "claim": "Một nhà xe trên Vexere hỗ trợ giao xe trong khung giờ 8h - 18h tại khu vực bán kính 3km quanh Ga Huế, Cung An Định và trường Quốc Học, kèm 2 mũ bảo hiểm chất lượng và 1 lít xăng miễn phí khi nhận; bảng giá tham khảo ghi xe số Sirius khoảng 100.000đ/ngày, xe tay ga Vision, Janus, AB là 130.000đ/ngày, xe côn tay Exciter 150cc có giá 200.000đ/ngày, thời gian thuê tính theo cơ chế 24 giờ linh hoạt.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá tham khảo: xe số Sirius khoảng 100.000đ/ngày; xe tay ga (Vision, Janus, AB) là 130.000đ/ngày và xe côn tay Exciter 150cc có giá 200.000đ/ngày. Thời gian thuê được tính theo cơ chế 24 giờ linh hoạt. Đơn vị hỗ trợ giao xe trong khung giờ 8h – 18h tại khu vực bán kính 3km quanh Ga Huế, Cung An Định và trường Quốc Học ... 2 mũ bảo hiểm chất lượng và 1 lít xăng miễn phí khi nhận."
+    },
+    {
+      "claim": "Theo Vexere, giá thuê xe máy Huế với dòng xe phổ thông như xe số và xe tay ga khoảng 100.000 - 140.000 đồng mỗi ngày; xe số dao động 100.000 - 120.000 đồng/ngày; xe tay ga đời mới khoảng 130.000 - 160.000đ/ngày, dòng cũ rẻ hơn 20.000 - 30.000đ mỗi ngày; xe máy điện khoảng 180.000 - 200.000đ; thời gian thuê một ngày tính theo chu kỳ 24 tiếng, giữ xe thêm dưới 6 tiếng chỉ phải tính nửa ngày.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy ở Huế đối với các dòng xe phổ thông như xe số và xe tay ga chỉ khoảng 100.000 đến 140.000 đồng mỗi ngày. Giá thuê xe máy điện thì có cao hơn một chút, khoảng từ 180.000 đến 200.000 mỗi xe. Thời gian thuê một ngày xe máy ở Huế thường tính theo chu kỳ 24 tiếng. Khách hàng giữ xe thêm dưới 6 tiếng chỉ phải tính ... Giá thuê xe số tại Huế thường dao động từ 100.000 đến 120.000 đồng mỗi ngày ... Giá thuê xe tay ga tại Huế cho những dòng xe mới vào khoảng 130.000 đến 160.000, trong khi các dòng xe cũ thì có thể rẻ hơn từ 20.000 đến 30.000 mỗi ngày."
+    },
+    {
+      "claim": "Cửa hàng thuê xe Thành Nhân tại 131 Bà Triệu là đơn vị tiên phong cho thuê xe máy điện Vinfast Evo 200 Lite đời mới 2024, hoạt động 24/24; Color Go tại 132 Trường Chinh cho thuê dòng xe tay ga Yamaha Cuxi nhỏ gọn phù hợp nữ giới.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cửa hàng thuê xe Thành Nhân Địa chỉ: 131 Bà Triệu, Thành phố Huế. Thành Nhân là đơn vị tiên phong cho thuê xe máy điện Vinfast Evo 200 Lite đời mới 2024, hoạt động 24/24 ... Cơ sở thuê xe Color Go Địa chỉ: 132 Trường Chinh, Thành phố Huế. Color Go mang đến một làn gió mới với dòng xe tay ga Yamaha Cuxi nhỏ gọn, cá tính, rất thích hợp cho các bạn nữ"
+    },
+    {
+      "claim": "Dịch vụ thuê xe máy tại ga tàu Huế của Hidden Land Travel gồm: nhận và trả xe tại văn phòng, thời gian giao nhận xe 6:30 - 21:00, hợp đồng rõ ràng, kèm sẵn 1 lít xăng, có thể giữ xe qua đêm, hỗ trợ sự cố 24/7, mũ bảo hiểm chất lượng, hỗ trợ chỉ đường; cọc bằng chụp ảnh bằng lái + căn cước công dân; có thể trả xe ở Đà Nẵng hoặc Hội An.",
+      "source_url": "https://hiddenlandtravel.com/vi/rental/thue-xe-may-tai-ga-tau-hue/",
+      "source_domain": "hiddenlandtravel.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá thuê xe máy tại ga tàu Huế. Có thể trả xe ở Đà Nẵng / Hội An ... Dịch vụ thuê xe máy tại ga tàu Huế bao gồm: Xe máy bảo dưỡng tốt; Mũ bảo hiểm chất lượng; Hỗ trợ sự cố 24/7; Nhận và trả xe tại văn phòng; Thời gian giao nhận xe 6:30 – 21:00; Hợp đồng rõ ràng; Kèm sẵn 1 lít xăng; Bạn có thể giữ xe qua đêm; Hỗ trợ chỉ đường tư vấn tham quan ăn uống ... Cọc một trong các giấy tờ sau: Chụp ảnh bằng lái + Căn cước công dân"
+    }
+  ]
+}

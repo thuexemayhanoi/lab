@@ -1,0 +1,133 @@
+{
+  "article_id": "A00060",
+  "primary_keyword": "thuê xe máy gần Ga Đà Nẵng",
+  "secondary_keywords": [
+    "thuê xe máy ga Đà Nẵng",
+    "cho thuê xe máy gần ga Đà Nẵng",
+    "thuê xe máy Đà Nẵng giao tận nơi",
+    "thuê xe máy gần bến xe Trung tâm Đà Nẵng",
+    "giá thuê xe máy Đà Nẵng"
+  ],
+  "search_intent": "local",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Ga Đà Nẵng",
+    "Phường Thanh Khê",
+    "Bến xe Trung tâm Đà Nẵng",
+    "Phường An Khê",
+    "136 Lê Thạch",
+    "36 Tạ Mỹ Duật",
+    "Cầu Rồng",
+    "bãi biển Mỹ Khê",
+    "Chợ Cồn",
+    "sân bay Đà Nẵng",
+    "Đà Nẵng"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe máy điện",
+    "xe côn tay"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "VinFast"
+  ],
+  "model_entities": [
+    "Wave Alpha",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Lead",
+    "Exciter",
+    "Evo 200",
+    "Evo 200 Lite"
+  ],
+  "questions_found": [
+    "thuê xe máy gần Ga Đà Nẵng giá bao nhiêu một ngày?",
+    "có nhà xe nào giao xe tận Ga Đà Nẵng không?",
+    "thuê xe máy ở Đà Nẵng cần giấy tờ gì, có phải đặt cọc không?",
+    "một ngày thuê xe được tính thế nào, trả trễ có bị tính thêm không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Đà Nẵng",
+    "thuê xe máy Đà Nẵng giao tận nơi",
+    "thuê xe máy gần bến xe Đà Nẵng",
+    "Bá Đức thuê xe máy Đà Nẵng",
+    "Bình Minh cho thuê xe máy Đà Nẵng"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy gần Ga Đà Nẵng\" gồm: vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi (bảng giá + danh sách nhà xe Bá Đức, Bảo Tín, DT43, HT Moto, Xanh 43, Đăng Khoa, khu vực giao xe ghi rõ Ga Đà Nẵng Phường Thanh Khê, Sân bay Đà Nẵng, Bến xe Trung tâm, Cầu Rồng, Chợ Cồn, Mỹ Khê); motogo.vn/thue-xe-may-da-nang/ (10 địa chỉ, ghi rõ nhận xe tại địa điểm gần ga Đà Nẵng trong 15-20 phút, Bình Minh 36 Tạ Mỹ Duật 80k-130k); các trang dịch vụ địa phương (dichvuthuexedanang.com, thuexemaydanang.vn, go-viet.vn) chào giá 50k-120k. Intent local: hành khách vừa xuống tàu muốn nhận xe nhanh quanh ga hoặc giao tận khách sạn; bài định vị info hướng dẫn so sánh phương án nhận xe, giá tham khảo và chính sách theo nguồn công khai.",
+  "official_sources": [
+    {
+      "name": "Ga Đà Nẵng (tham khảo địa lý — data/geography/transport-hubs.json HB-009, province Đà Nẵng, CURRENT)",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "note": "Địa lý theo nguồn tổng hợp: Ga Đà Nẵng thuộc Phường Thanh Khê; các con số khác chỉ dùng khi nằm trong claim_evidence."
+    }
+  ],
+  "supporting_sources": [
+    {
+      "name": "Vexere — Thuê xe máy ở Đà Nẵng (bảng giá + nhà xe)",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi"
+    },
+    {
+      "name": "MOTOGO — Thuê xe máy Đà Nẵng: 10 địa chỉ",
+      "url": "https://motogo.vn/thue-xe-may-da-nang/"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-da-nang/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-da-nang/",
+    "/lab/thue-xe-may/thue-xe-may-hue/",
+    "/lab/thue-xe-may/thue-xe-may-gan-ga-ha-noi/",
+    "/lab/kinh-nghiem/"
+  ],
+  "potential_cannibalization": "CG-rental-poi-ga-da-nang: 1 row cho Ga Đà Nẵng; khác row thue-xe-may-da-nang (toàn thành phố, đã publish) — bài này tập trung POI quanh cửa ga Phường Thanh Khê và phương án nhận xe sau giờ tàu; khác row sân bay Đà Nẵng (POI khác); link chéo hợp lệ, không tranh chấp từ khóa chính.",
+  "unique_angle": "Ga Đà Nẵng nằm trong nội đô (Phường Thanh Khê), khác với sân bay (cách xa trung tâm): khách đường sắt gần như luôn chọn nhận xe quanh ga hoặc giao tận nơi thay vì di chuyển ra ngoại ô. Bài đi theo luồng xuống tàu — so sánh 3 phương án nhận xe (giao tận ga, về cửa hàng gần bến xe Trung tâm, giao khách sạn), bảng giá theo niêm yết công khai của Vexere/Motogo, quy tắc 24 tiếng và lưu ý cọc 500k-1 triệu.",
+  "notes": "Bài informational_only: KHÔNG chào dịch vụ, KHÔNG dùng \"chúng tôi\", KHÔNG LocalBusiness schema; disclosure đầu bài ghi rõ trang là lab info, dịch vụ owner chỉ ở Hà Nội Long Biên - phố cổ, không có điểm nhận tại Đà Nẵng. Mọi con số (VND, giờ, phút) lấy đúng claim_evidence; không dùng khoảng cách km không có trong nguồn; không bịa địa chỉ ngoài các địa chỉ có trong quote (136 Lê Thạch, 36 Tạ Mỹ Duật).",
+  "claim_evidence": [
+    {
+      "claim": "Trang tổng hợp Vexere cho thuê xe máy Đà Nẵng ghi khu vực giao xe gồm Ga Đà Nẵng (Phường Thanh Khê), Sân bay Đà Nẵng (Phường Hoà Cường), Bến xe Trung tâm Đà Nẵng (Phường An Khê), Cầu Rồng (An Hải), Chợ Cồn (Hải Châu), bãi biển Mỹ Khê, Chợ Bắc Mỹ An; các cửa hàng gồm Bá Đức, Bảo Tín, DT43, HT Moto, Xanh 43, Đăng Khoa.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Khu vực giao xe Công viên Biển Đông, An Hải Ga Đà Nẵng, Phường Thanh Khê Sân bay Đà Nẵng, Phường Hoà Cường Chợ Cồn, Phường Hải Châu Bãi biển Mỹ Khê, An Hải Chợ Bắc Mỹ An, Ngũ Hành Sơn Cầu Rồng, Phường An Hải Bến xe Trung tâm Đà Nẵng, Phường An Khê ... Cửa hàng Bá Đức Bảo Tín DT43 HT Moto Xanh 43 Đăng Khoa"
+    },
+    {
+      "claim": "Dịch vụ cho thuê xe Bá Đức tại 136 Lê Thạch, Phường An Khê nằm gần Bến xe trung tâm, mở cửa từ 5h sáng đến 21h tối, dàn xe đời 2022-2024; bảng giá khu vực ghi xe số khoảng 100.000đ/ngày, xe tay ga phổ thông 120.000đ – 140.000đ/ngày, các dòng cao cấp hơn như Exciter hay Vinfast Evo 200 có giá 150.000đ/ngày, thời gian thuê 1 ngày tính là 24 giờ; hỗ trợ giao xe tận nơi từ 7h đến 21h30 tại các điểm như biển Mỹ Khê, Sân bay và Ga Đà Nẵng.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Dịch vụ cho thuê xe Bá Đức Địa chỉ: 136 Lê Thạch, Phường An Khê, Thành phố Đà Nẵng. Nằm gần Bến xe trung tâm... mở cửa từ 5h sáng đến 21h tối. Điểm mạnh tại đây là dàn xe rất mới (đời 2022-2024)... Bảng giá thuê xe khá đa dạng: xe số khoảng 100.000đ/ngày; xe tay ga phổ thông từ 120.000đ – 140.000đ/ngày và các dòng cao cấp hơn như Exciter hay Vinfast Evo 200 có giá 150.000đ/ngày. Thời gian thuê 1 ngày được tính là 24 giờ. Đơn vị hỗ trợ giao xe tận nơi từ 7h đến 21h30 tại các điểm du lịch chính như biển Mỹ Khê, ... Sân bay và Ga Đà Nẵng."
+    },
+    {
+      "claim": "Theo Vexere, giá thuê xe số ở Đà Nẵng dao động 90.000 – 110.000 VNĐ/ngày, xe tay ga phổ thông 110.000 – 140.000 VNĐ/ngày; bảng giá giao tận nơi ghi xe số (Wave Alpha, Sirius) 100.000 – 120.000đ/ngày.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe số ở Đà Nẵng dao động từ 90.000 – 110.000 VNĐ/ngày, tùy thuộc vào đời xe và thời điểm thuê... Giá thuê xe tay ga ở Đà Nẵng thường dao động từ 110.000 – 140.000 VNĐ/ngày, tùy loại xe và thời điểm ... (Honda Wave Alpha, Yamaha Sirius) | 100.000 – 120.000 | Bảng giá thuê xe máy giao xe tận nơi tại Đà Nẵng"
+    },
+    {
+      "claim": "Cửa hàng An Nga có dàn xe số và tay ga đời mới 2018-2023 cùng xe 50cc, thủ tục nhanh gọn không yêu cầu đặt cọc tiền; giá xe số phổ thông Wave Alpha, Sirius 100.000đ/ngày, xe tay ga Vision, AirBlade, Lead 120.000đ – 150.000đ/ngày tùy đời xe, 1 ngày tính trọn vẹn 24 tiếng; giao xe tận nơi từ 7h đến 20h trong bán kính 5km quanh bãi biển Mỹ Khê, Vincom Plaza, Cầu Rồng và Chợ Cồn.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cửa hàng nổi bật với dàn xe đa dạng từ xe số đến các dòng tay ga đời mới (2018-2023) và cả xe 50cc, thủ tục thuê xe nhanh gọn, không yêu cầu đặt cọc tiền. Mức giá thuê tại An Nga rất hợp lý: xe số phổ thông (Wave Alpha, Sirius) là 100.000đ/ngày; các dòng xe tay ga như Vision, AirBlade, Lead có giá dao động từ 120.000đ – 150.000đ/ngày tùy đời xe. Thời gian thuê 1 ngày được tính trọn vẹn 24 tiếng sử dụng. Cửa hàng hỗ trợ giao xe tận nơi từ 7h đến 20h trong bán kính 5km quanh bãi biển Mỹ Khê, Vincom Plaza, Cầu Rồng và Chợ Cồn."
+    },
+    {
+      "claim": "Chính sách thuê trên nền tảng Vexere tại Đà Nẵng: nhận và trả xe mỗi ngày trong khung 07:00-23:00 tùy cửa hàng, mỗi ngày thuê tính bằng 24 giờ kể từ lúc nhận xe, thuê tối thiểu 1-2 ngày, trả xe quá mỗi 24 giờ tính thêm 1 ngày, trả chưa quá 6 giờ chỉ tính thêm 1/2 ngày; giấy tờ cần CCCD/Passport & GPLX bản gốc, nhà xe giữ lại CCCD/Passport hoặc cọc 500k/xe, làm hợp đồng thuê xe.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thời gian nhận xe và trả xe hằng ngày từ 07:00 đến 23:00. Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe. Thuê tối thiểu từ 2 ngày. Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 6 giờ → chỉ tính thêm 1/2 ngày. 2. Thủ tục khi nhận xe – Giấy tờ cần chuẩn bị: CCCD/Passport & GPLX (bản gốc) – Nhà xe giữ lại CCCD hoặc Passport. Cọc 500k/xe – Làm hợp đồng thuê xe"
+    },
+    {
+      "claim": "Theo Motogo, tại Đà Nẵng bạn có thể được giao, nhận xe tại các địa điểm cho thuê xe máy gần ga Đà Nẵng hoặc gần bến xe, nơi lưu trú trong khoảng 15-20 phút; Bình Minh (36 Tạ Mỹ Duật) niêm yết xe số Wave, Sirius 110cc và xe ga AirBlade, Vision trong dải 80.000đ – 130.000đ, chỉ từ 80k/xe số và 120k/xe ga; thủ tục chỉ chụp lại CCCD và GPLX kèm cọc 500-800k hoàn lại khi trả xe; thông thường khách thanh toán tiền thuê trước cộng cọc 500k đến 1 triệu đồng; thời gian thuê 24 giờ thành 1 ngày, trả quá 6 tiếng tính thành 1 ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-da-nang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bạn sẽ được giao, nhận xe tại các địa điểm cho thuê xe máy gần ga Đà Nẵng hay các địa điểm gần bến xe, nơi lưu trú, khách sạn bạn đang ở… Dịch vụ này rất nhanh chóng trong khoảng thời gian từ 15-20 phút ... Bình Minh | Xe số: Wave, Sirius 110cc Xe ga: AirBlade, Vision | 80.000đ – 130.000đ ... Chỉ từ 80k/xe số và 120k/xe ga ... Địa chỉ: 36 Tạ Mỹ Duật ... Cửa hàng chỉ yêu cầu chụp lại CCCD và Giấy Phép Lái Xe. Ngoài ra, bạn cần để lại một khoản cọc nho nhỏ từ 500-800k. Phí cọc này sẽ được hoàn lại khi bạn trả xe về cho cửa hàng ... thường bạn phải thanh toán trước tiền thuê xe + tiền cọc 500k -> 1 triệu đồng ... Thời gian thuê xe được tính là 24 giờ thành 1 ngày ... Nếu bạn trả xe quá 6 tiếng sẽ được tính thành 1 ngày"
+    }
+  ]
+}
