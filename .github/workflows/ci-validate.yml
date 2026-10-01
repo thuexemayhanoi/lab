@@ -57,12 +57,22 @@ jobs:
             exit 1
           fi
           echo "OK: deterministic build — không drift."
-      - name: Drafts không bao giờ công khai (không _drafts / .body.html trong public tree)
+      - name: Draft boundary — Jekyll exclusion (không .nojekyll; _drafts chỉ A#####; không draft trong public outputs)
         run: |
           set -eu
-          test ! -d _drafts || { echo "FAIL: _drafts tồn tại trong cây public"; exit 1; }
-          if find . -name "*.body.html" -not -path "./.git/*" | grep -q .; then
-            echo "FAIL: draft body (.body.html) nằm trong cây public"
+          # Pages chạy Jekyll (KHÔNG .nojekyll) nên thư mục gạch dưới `_drafts/`
+          # không bao giờ được phục vụ công khai — draft được commit cho push-driven loop.
+          test ! -f .nojekyll || { echo "FAIL: .nojekyll tồn tại ở root — Pages sẽ phục vụ _drafts/ công khai (Jekyll exclusion bị tắt)"; exit 1; }
+          if [ -d _drafts ]; then
+            bad=$(find _drafts -maxdepth 1 -type f | grep -Ev '^_drafts/A[0-9]{5}(\.body)?\.html$' | head -5 || true)
+            [ -z "$bad" ] || { echo "FAIL: file lạ trong _drafts (chỉ cho phép A#####.html / A#####.body.html): $bad"; exit 1; }
+          fi
+          if find . -name "*.body.html" -not -path "./.git/*" -not -path "./_drafts/*" | grep -q .; then
+            echo "FAIL: draft body (.body.html) nằm ngoài _drafts — nằm trong cây public"
             exit 1
           fi
-          echo "OK: không có draft leak trong cây public."
+          if jq -e '.files | any(contains("_drafts"))' data/state/build-manifest.json >/dev/null 2>&1; then
+            echo "FAIL: build-manifest chứa đường dẫn _drafts"
+            exit 1
+          fi
+          echo "OK: Jekyll exclusion active — draft được commit nhưng không bao giờ public."

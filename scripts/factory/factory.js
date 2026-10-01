@@ -690,11 +690,13 @@ function consistency(args){
     }
   }
   const draftLeak=[];
-  // _drafts/ at the repo root is the canonical WRITER-side draft home: gitignored,
-  // never committed, never promoted. A REAL leak is drafts inside the promotable
-  // staging tree (site/) or a .gitignore that no longer keeps _drafts/ out.
+  // _drafts/ at the repo root is the canonical WRITER-side draft home: committed
+  // for the push-driven loop, never promoted. Pages runs Jekyll — with NO
+  // .nojekyll, Jekyll never publishes underscore-prefixed directories, so drafts
+  // can never go public. A REAL leak is drafts inside the promotable staging
+  // tree (site/) or a re-appearing .nojekyll (which would disable the exclusion).
   if(fs.existsSync(path.join(ROOT,'site','_drafts')))draftLeak.push('drafts inside site/ staging tree — would be promoted to the public root!');
-  if(!/(^|\n)_drafts\//.test(fs.readFileSync(path.join(ROOT,'.gitignore'),'utf8')))draftLeak.push('.gitignore no longer excludes _drafts/ — drafts would become public!');
+  if(fs.existsSync(path.join(ROOT,'.nojekyll')))draftLeak.push('.nojekyll exists at the repo root — Pages would serve _drafts/ publicly (Jekyll underscore exclusion disabled)!');
   if(errors.length){
     console.error((staged?'CONSISTENCY FAIL (staged verify)\n':scopedList?'CONSISTENCY FAIL (scoped: '+scopedList.join(',')+')\n':'CONSISTENCY FAIL\n')+errors.join('\n'));
     process.exitCode=1;

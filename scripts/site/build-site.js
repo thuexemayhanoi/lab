@@ -26,8 +26,10 @@ function parseLine(line){const out=[];let cur='',q=false;for(let i=0;i<line.leng
  else{if(c==='"')q=true;else if(c===','){out.push(cur);cur='';}else cur+=c;}} 
  out.push(cur);return out;}
 const parts=fs.readdirSync(path.join(ROOT,'data')).filter(f=>/^content-matrix\.csv\.part/.test(f)).sort();
-let csvText=fs.readFileSync(path.join(ROOT,'data','content-matrix.csv'),'utf8');
-if(parts.length)csvText=parts.map(p=>fs.readFileSync(path.join(ROOT,'data',p),'utf8')).join('');
+// shards-first: on a clean Actions checkout the assembled data/content-matrix.csv
+// is gitignored and absent — the .part shards are the canonical committed form.
+let csvText=parts.length?parts.map(p=>fs.readFileSync(path.join(ROOT,'data',p),'utf8')).join(''):'';
+if(!csvText)csvText=fs.readFileSync(path.join(ROOT,'data','content-matrix.csv'),'utf8');
 const rows=parseCSV(csvText);
 const published=rows.filter(r=>r.status==='PUBLISHED')
  .sort((a,b)=>(b.published_date||'').localeCompare(a.published_date||'')||b.article_id.localeCompare(a.article_id)); // newest first
@@ -442,8 +444,10 @@ if(fs.existsSync(path.join(ROOT,'reports','experiments','baseline.md')))
 // Only explicit public outputs are promoted; source directories (scripts/, config/,
 // data/, tests/, docs/, .github/, reports/) are never written. Deterministic: every
 // build regenerates the same deployable root tree.
-fs.writeFileSync(path.join(SITE,'.nojekyll'),'');
-const PUB_FILES=['index.html','404.html','robots.txt','.nojekyll','sitemap-index.xml',...shardFiles];
+// Jekyll exclusion contract (push-driven production): NO .nojekyll is written —
+// Pages runs Jekyll, so the underscore-prefixed `_drafts/` can never be published.
+// The absence of .nojekyll is enforced by ci-validate + tests + capacity-check.
+const PUB_FILES=['index.html','404.html','robots.txt','sitemap-index.xml',...shardFiles];
 const PUB_DIRS=['assets','thue-xe-may','kinh-nghiem','cuu-ho-xe-may','sua-xe-may','bang-lai-xe-may',
  'dang-ky-xe-may','xe-may-dien','phu-tung','ve-chung-toi','lien-he','chinh-sach-bao-mat',
  'dieu-khoan-su-dung','dia-phuong'];

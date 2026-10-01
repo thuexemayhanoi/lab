@@ -1,7 +1,6 @@
 {
  "version": 1,
  "files": [
-  ".nojekyll",
   "404.html",
   "assets/chatbot-worker.js",
   "assets/chatbot.js",

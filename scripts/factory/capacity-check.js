@@ -128,12 +128,21 @@ const pubCanon=new Set(published.map(r=>r.canonical));
 const nonPub=rows.filter(r=>r.status!=='PUBLISHED'&&locCount[r.canonical]);
 ok('sitemap contains no non-published matrix URL', nonPub.length===0, nonPub.slice(0,3).map(r=>r.article_id).join(','));
 
-// 8) no draft leak (_drafts/ at the repo root is the gitignored writer-side
-//    draft home — the leak invariant is: nothing promotable, and the gitignore
-//    guard intact so drafts can never reach the public root tree)
+// 8) no draft leak (_drafts/ at the repo root is the committed writer-side
+//    draft home for the push-driven loop — Pages runs Jekyll, so underscore
+//    dirs are never published; the leak invariant is: nothing promotable,
+//    no re-appearing .nojekyll, strict draft filenames, no drafts in the manifest)
 ok('no drafts inside the promotable staging tree', !fs.existsSync(path.join(ROOT,'site','_drafts')));
+ok('Pages Jekyll exclusion active (.nojekyll ABSENT — underscore _drafts/ is never published)',
+   !fs.existsSync(path.join(ROOT,'.nojekyll')));
 const gi=fs.readFileSync(path.join(ROOT,'.gitignore'),'utf8');
-ok('.gitignore keeps _drafts/ out of the public tree', /(^|\n)_drafts\//.test(gi));
+ok('.gitignore does NOT ignore _drafts/ (committed for the push-driven factory loop)',
+   !/(^|\n)_drafts\//.test(gi));
+const draftsDir=path.join(ROOT,'_drafts');
+ok('_drafts/ holds only wrapped drafts and bodies (A#####.html / A#####.body.html)',
+   !fs.existsSync(draftsDir)||fs.readdirSync(draftsDir).every(f=>/^A\d{5}(\.body)?\.html$/.test(f)));
+ok('build manifest contains no draft paths',
+   !JSON.parse(fs.readFileSync(path.join(ROOT,'data','state','build-manifest.json'),'utf8')).files.some(p=>String(p).includes('_drafts')));
 
 // ---- report ----
 checks.forEach(c=>console.log((c.endsWith('FAIL')||c.includes(': FAIL')?'✗ ':'✓ ')+c));

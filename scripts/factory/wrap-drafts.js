@@ -7,8 +7,10 @@ const fs = require('fs'), path = require('path');
 const ROOT = path.join(__dirname, '..', '..');
 const DATA = path.join(ROOT, 'data');
 const partFiles = fs.readdirSync(DATA).filter(f => /^content-matrix\.csv\.part/.test(f)).sort();
-let csvText = fs.readFileSync(path.join(DATA, 'content-matrix.csv'), 'utf8');
-if (partFiles.length) csvText = partFiles.map(p => fs.readFileSync(path.join(DATA, p), 'utf8')).join('');
+// shards-first: the assembled data/content-matrix.csv is gitignored and may be
+// absent on a clean checkout — the .part shards are the canonical form.
+let csvText = partFiles.length ? partFiles.map(p => fs.readFileSync(path.join(DATA, p), 'utf8')).join('') : '';
+if (!csvText) csvText = fs.readFileSync(path.join(DATA, 'content-matrix.csv'), 'utf8');
 const header = csvText.split('\n')[0].split(',');
 const rows = {};
 csvText.split('\n').slice(1).filter(l => l.trim()).forEach(l => {

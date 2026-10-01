@@ -1,5 +1,8 @@
-# Drafts are never public
-_drafts/
+# Drafts are committed for the push-driven factory loop, but GitHub Pages
+# runs Jekyll (no .nojekyll) and never publishes underscore-prefixed
+# directories — `_drafts/` can never be served publicly (same mechanism as
+# thuexemayhanoi/blog). The Jekyll exclusion contract is enforced by
+# ci-validate.yml + tests/test-suite.js + capacity-check.js.
 
 # Assembled matrix (canonical form = 4 shards data/content-matrix.csv.part00..03)
 data/content-matrix.csv
