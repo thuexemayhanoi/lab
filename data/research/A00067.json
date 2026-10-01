@@ -62,7 +62,7 @@
     "giao xe tận nơi quận 12",
     "bến xe An Sương tuyến xe đi Tây Ninh"
   ],
-  "serp_patterns": "SERP cho \"thuê xe máy gần Bến xe An Sương\" chủ yếu là bài về chính bến (motortrip.vn/dich-vu/ben-xe-an-suong: khu phố 2, phường Trung Mỹ Tây, quận 12; hoạt động 24/7, cao điểm đêm và sáng sớm; tuyến đi Tây Ninh, Châu Đốc, miền Tây, miền Trung, Tây Nguyên) và các trang tổng hợp thuê xe TP.HCM (thuexemaythanhphat.com ghi nhận giao xe khu vực bến xe An Sương trong 15-20 phút; vexere.com có bảng giá Sài Gòn). Intent local: khách xuống bến lúc đêm/sớm cần giao xe theo giờ hẹn; dân quận 12 - Hóc Môn thuê ngắn ngày. Không trang nào riêng cho mảnh POI này.",
+  "serp_patterns": "SERP cho \"thuê xe máy gần Bến xe An Sương\" chủ yếu là bài về chính bến (motortrip.vn/dich-vu/ben-xe-an-suong: khu phố 2, phường Trung Mỹ Tây, quận 12; hoạt động 24/7, cao điểm đêm và sáng sớm; tuyến đi Tây Ninh, Châu Đốc, miền Tây, miền Trung, Tây Nguyên) và các trang tổng hợp thuê xe TP.HCM (thuexemaythanhphat.com ghi nhận giao xe khu vực bến xe An Sương trong 15-20 phút; vexere.com có bảng giá Sài Gòn). Intent local: khách xuống bến lúc đêm/sớm cần giao xe theo giờ hẹn; dân quận 12 - Hóc Môn thuê ngắn ngày. Không trang nào ri\nêng cho mảnh POI này.",
   "official_sources": [],
   "supporting_sources": [
     {
@@ -91,18 +91,18 @@
   "notes": "Bài informational_only: KHÔNG \"chúng tôi\", KHÔNG chào dịch vụ, KHÔNG LocalBusiness schema; disclosure đầu bài. Mọi con số (giá, cọc, 24/7, 24 giờ/6 giờ/5 giờ, 15-20 phút, 90k-150k, 200k) đều có claim_evidence từ nguồn đã mở hôm nay. Tên địa danh theo nguồn (quận 12, phường Trung Mỹ Tây - dạng quen thuộc trước sắp xếp 2025).",
   "claim_evidence": [
     {
-      "claim": "Bến xe An Sương nằm trên mặt đường chính tại quận 12, phía Tây Bắc Thành phố Hồ Chí Minh, theo khu phố 2, phường Trung Mỹ Tây; bến hoạt động 24/7, giờ cao điểm của các nhà xe thường tập trung vào ban đêm và sáng sớm; bến nối Sài Gòn với các tuyến đi Tây Ninh, Châu Đốc và các tỉnh miền Tây, miền Trung, Tây Nguyên.",
+      "claim": "Bến xe An Sương nằm trên mặt đường chính tại quận 12, phía Tây Bắc Thành phố Hồ Chí Minh, theo khu phố 2, \nphường Trung Mỹ Tây; bến hoạt động 24/7, giờ cao điểm của các nhà xe thường tập trung vào ban đêm và sáng sớm; bến nối Sài Gòn với các tuyến đi Tây Ninh, Châu Đốc và các tỉnh miền Tây, miền Trung, Tây Nguyên.",
       "source_url": "https://motortrip.vn/dich-vu/ben-xe-an-suong",
       "source_domain": "motortrip.vn",
       "date_accessed": "2026-10-01",
       "claim_supported": "Bến xe An Sương là một trong những bến xe quan trọng nhất của Thành phố Hồ Chí Minh… Nằm ở phía Tây Bắc của thành phố Hồ Chí Minh. Đây là một vị trí đắc địa, nằm trên mặt đường chính tại quận 12 … Vị trí: Bến xe An Sương nằm ở Khu phố 2, phường Trung Mỹ Tây, quận 12, Thành phố Hồ Chí Minh. Giờ hoạt động: Bến xe hoạt động 24/7, tuy nhiên giờ cao điểm của các nhà xe thường tập trung vào ban đêm và sáng sớm. … nhà xe Đức Thành … Thành phố Hồ Chí Minh – Châu Đốc … Nhà xe Thống Nhất … Thành phố Hồ Chí Minh – Tây Ninh … Tuyến xe đi các tỉnh miền Tây"
     },
     {
-      "claim": "Theo trang Thạnh Phát, nhà xe nhận giao xe tại các khu vực quen thuộc (Tân Sơn Nhất, bến xe Miền Đông, Cầu Sài Gòn, bến xe An Sương, chợ Bến Thành) với thời gian lấy xe trong khoảng 15 - 20 phút; khu vực phục vụ trải từ các quận trung tâm đến Hóc Môn, Bình Chánh, Nhà Bè; chi phí thuê dao động từ 60.000đ - 250.000VNĐ/xe/ngày với xe số, xe tay ga hoặc côn tay; dòng ga Airblade, Nouvo LX, Lead, Vision, Liberty dao động 90k - 150k/xe; dòng cao cấp SH, PS, Vespa, Exciter khoảng 200k/xe.",
+      "claim": "Theo trang Thạnh Phát, nhà xe nhận giao xe tại các khu vực quen thuộc (Tân Sơn Nhất, bến xe Miền Đông, Cầu Sài Gòn, bến xe An Sương, chợ Bến Thành) với thời gian lấy xe trong khoảng 15 - 20 phút; khu vực phục vụ trải từ các quận trung tâm đến Hóc Môn, Bình Chánh, Nhà Bè; chi phí thuê dao động từ 60.000đ - 250.000VNĐ/xe/ngày với xe số, xe tay ga hoặc côn tay; dòng ga Airblade, Nouvo LX, Lead, Vision, Liberty dao động 90.000đ - 150.000đ/xe (90k - 150k); dòng cao cấp SH, PS, Vespa, Exciter khoảng 200k/xe.",
       "source_url": "https://thuexemaythanhphat.com/cho-thue-xe-may-tphcm-gia-re/",
       "source_domain": "thuexemaythanhphat.com",
       "date_accessed": "2026-10-01",
-      "claim_supported": "Cho thuê xe máy tại Tân Sơn Nhất và các khu vực ngã tư hàng xanh, bến xe miền đông, Cầu Sài Gòn, bến xe An Sương, Chợ Bến Thành, rất thuận tiện và dễ dàng cho khách hàng cho thể liên hệ để lấy xe ngay trong khoảng thời gian từ 15 – 20 phút. … GIÁ RẺ, THỦ TỤC ĐƠN GIẢN, GIAO XE NHANH tại các khu vực: Quận 1… quận 12, quận bình thạnh, quận gò vấp, quận thủ đức, quận phú nhuận, quận tân bình, huyện hóc môn, huyện bình chánh, nhà bè … chi phí thuê xe máy dao động từ 60.000đ – 250.000VNĐ/xe/ngày đối với xe số, xe tay ga hoặc côn tay … Airblade, Nouvo LX, Lead, Vision, Liberty… dao động từ 90k – 150k/xe … SH, PS, Vespa, tay côn exciter…thì mức giá cho thuê cao nhất, khoảng 200k/xe."
+      "claim_supported": "Cho thuê xe máy tại Tân Sơn Nhất và các khu vực ngã tư hàng xanh, bến xe miền đông, Cầu Sài Gòn, bến xe An Sương, Chợ Bến Thành, rất thuận tiện và dễ dàng cho khách hàng cho thể liên hệ để lấy xe ngay trong khoảng thời gian từ 15 – 20 phút. … GIÁ RẺ, THỦ TỤC ĐƠN GIẢN, GIAO XE NHANH tại các khu vực: Quận 1… quận 12, quận bình thạnh, quận gò vấp, quận th\nủ đức, quận phú nhuận, quận tân bình, huyện hóc môn, huyện bình chánh, nhà bè … chi phí thuê xe máy dao động từ 60.000đ – 250.000VNĐ/xe/ngày đối với xe số, xe tay ga hoặc côn tay … Airblade, Nouvo LX, Lead, Vision, Liberty… dao động từ 90k – 150k/xe … SH, PS, Vespa, tay côn exciter…thì mức giá cho thuê cao nhất, khoảng 200k/xe."
     },
     {
       "claim": "Trên Vexere, giá thuê xe số phổ thông ở Sài Gòn trung bình từ 80.000 đồng/ngày với xe đời cũ và khoảng 100.000 đồng/ngày với xe đời mới; xe tay ga phổ thông 100.000đ - 150.000đ/ngày; phí giao nhận tận nơi thường 20.000đ - 50.000đ/lượt nếu giao ở xa trung tâm.",
@@ -116,7 +116,7 @@
       "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi",
       "source_domain": "vexere.com",
       "date_accessed": "2026-10-01",
-      "claim_supported": "Cọc 1.000.000đ/xe và Giữ CCCD/GPLX. Hoặc cọc 4.000.000đ/xe. … Giữ CCCD và Cọc: 1.000.000đ/xe … Cọc 1.000.000đ/xe và Giữ CCCD. Hoặc Cọc 3.000.000đ/xe … Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 6 giờ → chỉ tính thêm 1/2 ngày. … Trả xe nếu chưa quá 5 giờ → chỉ tính thêm 1/2 ngày. … Vui lòng chỉ sử dụng xe trong phạm vi Thành phố Hồ Chí Minh (cũ)."
+      "claim_supported": "Cọc 1.000.000đ/xe và Giữ CCCD/GPLX. Hoặc cọc 4.000.000đ/xe. … Giữ CCCD và Cọc: 1.000.000đ/xe … Cọc 1.000.000đ/xe và Giữ CCCD. Hoặc Cọc 3.000.000đ/xe … Trả xe quá mỗi 24 giờ → tính thêm 1 ngày\n. Trả xe nếu chưa quá 6 giờ → chỉ tính thêm 1/2 ngày. … Trả xe nếu chưa quá 5 giờ → chỉ tính thêm 1/2 ngày. … Vui lòng chỉ sử dụng xe trong phạm vi Thành phố Hồ Chí Minh (cũ)."
     }
   ]
 }

@@ -69,7 +69,7 @@
     "giao xe tận nơi bến xe Miền Tây",
     "thuê xe số Sài Gòn"
   ],
-  "serp_patterns": "SERP cho \"thuê xe máy gần Bến xe Miền Tây\" chủ yếu là trang tổng hợp thuê xe TP.HCM (vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi có mục riêng cho Bến xe Miền Tây: khu vực quận Bình Tân giáp Tân Phú - Quận 6, nhiều cửa hàng giá mềm, giao xe tận bến/khách sạn lân cận), danh sách địa chỉ thuê xe của phuot3mien.com, và các bài về chính bến (blog.vexere.com/ben-xe-mien-tay: địa chỉ 395 Kinh Dương Vương, Phường An Lạc, Quận Bình Tân, sát vòng xoay An Lạc và QL1A). Intent local: khách tỉnh ĐBSCL lên thành phố cần nhận xe nhanh tại bến hoặc giao tận nơi, đi lại trong thành phố vài ngày; ít trang chuyên về mảnh POI này nên góc riêng cho Miền Tây là hợp lệ.",
+  "serp_patterns": "SERP cho \"thuê xe máy gần Bến xe Miền Tây\" chủ yếu là trang tổng hợp thuê xe TP.HCM (vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi có mục riêng cho Bến xe Miền Tây: khu vực quận Bình Tân giáp Tân Phú - Quận 6, nhiều cửa hàng giá mềm, giao xe tận bến/khách sạn lân cận), danh sách địa chỉ thuê xe của phuot3mien.com, và các bài về chính bến (blog.vexere.com/ben-xe-mien-tay: địa chỉ 395 Kinh Dương Vương, Phường An Lạc\n, Quận Bình Tân, sát vòng xoay An Lạc và QL1A). Intent local: khách tỉnh ĐBSCL lên thành phố cần nhận xe nhanh tại bến hoặc giao tận nơi, đi lại trong thành phố vài ngày; ít trang chuyên về mảnh POI này nên góc riêng cho Miền Tây là hợp lệ.",
   "official_sources": [],
   "supporting_sources": [
     {
@@ -96,7 +96,7 @@
   ],
   "potential_cannibalization": "CG-rental-poi-ben-xe-mien-tay: 1 row cho Bến xe Miền Tây; khác row thue-xe-may-tp-hcm (toàn thành phố) và các row bến khác (Miền Đông cũ, An Sương, Nước Ngầm, Giáp Bát, Mỹ Đình). Bài tập trung đúng POI Miền Tây trên trục Kinh Dương Vương - vòng xoay An Lạc (cửa ngõ ĐBSCL) nên không tranh chấp từ khóa chính; link chéo sang bài An Sương hợp lệ vì cùng push pair.",
   "unique_angle": "Miền Tây là cửa ngõ ĐBSCL của Sài Gòn: bài tách ba nhu cầu thường bị trộn lẫn — nhận xe ngay tại bến (cho khách tỉnh lên), giao tận nơi theo giờ hẹn (khách xuống bến lúc khuya/sớm), và lưu ý đặc thù \"nhiều nhà xe giới hạn phạm vi trong TP.HCM (cũ)\" khiến câu hỏi \"chạy xe về quê được không\" thành điểm quyết định ở đúng bến này.",
-  "notes": "Bài informational_only: KHÔNG \"chúng tôi\", KHÔNG chào dịch vụ, KHÔNG LocalBusiness schema; disclosure đầu bài. Mọi con số (giá, cọc, 24h/6h/5h, 1 lít, 395 Kinh Dương Vương) đều có claim_evidence từ nguồn đã mở hôm nay. Tên địa danh dùng dạng quen thuộc trước sắp xếp 2025 (Bình Tân, Tân Phú, Quận 6) theo đúng văn phong nguồn. Link sang A00067 (An Sương) dùng vì cùng pair push.",
+  "notes": "Bài informational_only: KHÔNG \"chúng tôi\", KHÔNG chào dịch vụ, KHÔNG LocalBusiness schema; disclosure đầu bài. Mọi con số \n(giá, cọc, 24h/6h/5h, 1 lít, 395 Kinh Dương Vương) đều có claim_evidence từ nguồn đã mở hôm nay. Tên địa danh dùng dạng quen thuộc trước sắp xếp 2025 (Bình Tân, Tân Phú, Quận 6) theo đúng văn phong nguồn. Link sang A00067 (An Sương) dùng vì cùng pair push.",
   "claim_evidence": [
     {
       "claim": "Bến xe Miền Tây tọa lạc tại số 395 Kinh Dương Vương, khu vực Phường An Lạc (Bình Tân, quận cũ của Thành phố Hồ Chí Minh), nằm sát vòng xoay An Lạc và trục đường lớn Quốc lộ 1A.",
@@ -113,7 +113,7 @@
       "claim_supported": "Bến xe Miền Tây là đầu mối giao thông lớn ở phía Tây Sài Gòn, chuyên phục vụ các tuyến xe khách đi các tỉnh Đồng bằng sông Cửu Long như Tiền Giang, Bến Tre, Cần Thơ, Vĩnh Long… Khu vực quanh bến xe thuộc địa phận quận Bình Tân, tiếp giáp Tân Phú và Quận 6. Tại đây có khá nhiều cửa hàng cho thuê xe máy với giá mềm… Một số cửa hàng có dịch vụ giao xe tận nơi ngay tại bến xe hoặc các khách sạn, nhà trọ lân cận."
     },
     {
-      "claim": "Trên Vexere, giá thuê xe số phổ thông ở Sài Gòn trung bình từ 80.000 đồng/ngày với xe đời cũ và khoảng 100.000 đồng/ngày với xe đời mới; xe tay ga phổ thông dao động 100.000đ - 150.000đ/ngày (chưa gồm phí giao nhận tận nơi, thường 20.000đ - 50.000đ/lượt nếu giao ở xa trung tâm); xe điện dao động khoảng 120.000đ - 180.000đ/ngày với VinFast Evo200 Lite khoảng 140.000đ/ngày.",
+      "claim": "Trên Vexere, giá thuê xe số phổ thông ở Sài Gòn trung bình từ 80.000\n đồng/ngày với xe đời cũ và khoảng 100.000 đồng/ngày với xe đời mới; xe tay ga phổ thông dao động 100.000đ - 150.000đ/ngày (chưa gồm phí giao nhận tận nơi, thường 20.000đ - 50.000đ/lượt nếu giao ở xa trung tâm); xe điện dao động khoảng 120.000đ - 180.000đ/ngày với VinFast Evo200 Lite khoảng 140.000đ/ngày.",
       "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi",
       "source_domain": "vexere.com",
       "date_accessed": "2026-10-01",
@@ -124,7 +124,7 @@
       "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi",
       "source_domain": "vexere.com",
       "date_accessed": "2026-10-01",
-      "claim_supported": "Thủ tục khi nhận xe – Giấy tờ cần chuẩn bị: CCCD/Passport & GPLX (bản gốc). – Cọc 1.000.000đ/xe và Giữ CCCD/GPLX. Hoặc cọc 4.000.000đ/xe. (Thành Đạt) … – Giữ CCCD và Cọc: 1.000.000đ/xe (My My) … – Cọc 1.000.000đ/xe và Giữ CCCD. Hoặc Cọc 3.000.000đ/xe (Bike Saigon) … Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 6 giờ → chỉ tính thêm 1/2 ngày. … Trả xe nếu chưa quá 5 giờ → chỉ tính thêm 1/2 ngày. … Vui lòng chỉ sử dụng xe trong phạm vi Thành phố Hồ Chí Minh (cũ). Nhà xe có quyền từ chối giao xe nếu…"
+      "claim_supported": "Thủ tục khi nhận xe – Giấy tờ cần chuẩn bị: CCCD/Passport & GPLX (bản gốc). – Cọc 1.000.000đ/xe và Giữ CCCD/GPLX. Hoặc cọc 4.000.000đ/xe. (Thành Đạt) … – Giữ CCCD và Cọc: 1.000.000đ/xe (My My) … – Cọc 1.000.000đ/xe và G\niữ CCCD. Hoặc Cọc 3.000.000đ/xe (Bike Saigon) … Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 6 giờ → chỉ tính thêm 1/2 ngày. … Trả xe nếu chưa quá 5 giờ → chỉ tính thêm 1/2 ngày. … Vui lòng chỉ sử dụng xe trong phạm vi Thành phố Hồ Chí Minh (cũ). Nhà xe có quyền từ chối giao xe nếu…"
     },
     {
       "claim": "Trên trang Thạnh Phát, chi phí thuê xe máy tại TP.HCM dao động từ 60.000đ - 250.000VNĐ/xe/ngày đối với xe số, xe tay ga hoặc côn tay; dòng xe ga như Airblade, Nouvo LX, Lead, Vision, Liberty dao động từ 90k - 150k/xe; dòng cao cấp như SH, PS, Vespa, tay côn Exciter có mức giá cho thuê cao nhất khoảng 200k/xe.",
