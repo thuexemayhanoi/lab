@@ -1,0 +1,251 @@
+{
+  "article_id": "A00050",
+  "primary_keyword": "thuê xe máy Thanh Oai",
+  "secondary_keywords": [
+    "cho thuê xe máy Thanh Oai",
+    "thuê xe máy huyện Thanh Oai",
+    "thuê xe máy Bình Đà",
+    "thuê xe máy gần sông Nhuệ",
+    "cho thuê xe máy giá rẻ Thanh Oai"
+  ],
+  "search_intent": "local/commercial",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Thanh Oai",
+    "sông Nhuệ",
+    "Bình Đà",
+    "làng cổ Bình Đà",
+    "Hà Đông",
+    "Chương Mỹ",
+    "Ứng Hòa",
+    "Phú Xuyên",
+    "Quốc Oai",
+    "trục đường liên huyện",
+    "nội thành Hà Nội",
+    "bến xe Nước Ngầm"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe ga",
+    "xe côn tay",
+    "xe phân khối lớn",
+    "xe SH",
+    "xe Vespa"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki",
+    "Piaggio"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Lead",
+    "Nouvo LX",
+    "Liberty",
+    "Vespa LX",
+    "Exciter",
+    "Winner"
+  ],
+  "questions_found": [
+    "thuê xe máy Thanh Oai giá bao nhiêu một ngày?",
+    "thuê xe máy ở Thanh Oai có giao tận nơi không?",
+    "người ở Thanh Oai đi làm vào nội thành nên thuê xe máy theo tháng ở đâu?",
+    "thuê xe máy Thanh Oai có cần đặt cọc không?",
+    "đi lễ hội làng Bình Đà nên thuê xe máy ở đâu?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Thanh Oai",
+    "cho thuê xe máy huyện Thanh Oai",
+    "thuê xe máy giao tận nơi Thanh Oai",
+    "thuê xe máy theo tháng Thanh Oai",
+    "thuê xe máy đi làng Bình Đà"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy Thanh Oai\" không trả về cửa hàng đặt trụ sở tại huyện với bảng giá riêng; kết quả là nhà xe nội thành Hà Nội giao tận nơi: motogo.vn (Sirius 130.000đ/ngày ngày 1-5, ngày 6-10 còn 120.000vnđ; Air Blade 125cc 200.000vnđ; Vision 180.000vnđ; phụ thu đi tỉnh 50.000đ/ngày; hồ sơ cần sổ hộ khẩu gốc hoặc đặt cọc 3 triệu thay thế), hanoibiker.com (xe số 1-4 ngày 120k/ngày, 5-7 ngày 100k/ngày; ga 1-3 ngày 180k, 4-7 ngày 160k; ship 20k-50k; theo tháng giá chỉ 50k/ngày; Nouvo 1.800.000đ/tháng; Exciter/Winner 190k/ngày, 3.000.000đ/tháng; Vespa LX-Liberty 2.800.000đ-3.500.000đ/tháng), hanoimotorbike.vn (xe số 40k-120k/ngày, ga 60k-150k/ngày, côn & SH 200k-250k/ngày, cọc từ 500.000VND, thuê tháng giảm đến 60%), vexere.com (cọc 1tr-2tr/xe, giảm còn 500k-1tr nếu có thẻ sinh viên/vé máy bay) và Công Tân — Thanh Oai nằm trong danh sách huyện được phục vụ, giá Hà Nội từ 100.000 đồng/ngày, Suzuki từ 200.000 đồng/ngày. Intent local/commercial nhấn mạnh người đi làm từ huyện vào nội thành qua các trục liên huyện và vành đai phía tây nam.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe máy Hà Nội giá bao nhiêu? Tại MOTOGO chính sách giá thuê đang áp dụng cho xe số Sirius là 130.000đ/ngày cho khách thuê từ ngày 1 – ngày thứ 5, từ ngày 6 – ngày 10 giá là 120.000vnd/ngày. Xe tay ga Air Blade 125cc giá thuê xe 200.000vnd/ngày/xe cho khach thuê xe từ ngày 1- ngày 5. Honda Vision của MOTOGO có mức giá rẻ nhất thị trường. Chỉ 180.000 VND/ngày. Sổ hộ khẩu gốc. Trường hợp không có sổ hộ khẩu gốc thì đặt cọc 3 triệu thay thế cho Sổ hộ khẩu. Thông tin vé máy bay hoặc vé tàu chiều đến và rời Hà Nội."
+    },
+    {
+      "source_url": "https://hanoibiker.com/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Hanoibiker chuyên cho thuê các loại xe: Honda wave, Yamaha Sirius, Jupiter xe đời mới... Giá thuê từ : 1-4 ngày 120k/ngày; thuê từ 5 -7 ngày: 100k/ngày... Với khách có vé máy bay khứ hồi bạn chỉ cần cọc CCCD hoặc 500k... chi phí ship xe từ 20k- 50k tùy thuộc khoảng cách... cho thuê xe ga của Honda: Vision, Lead, Airblade, giá thuê từ 1-3 ngày: 180k/ngày; thuê từ 4-7 ngày giá 160k/ngày."
+    },
+    {
+      "source_url": "https://hanoibiker.com/thue-xe-may-theo-thang-dai-han/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe máy theo tháng Hà Nội giá chỉ 50k/ngày. Xe nouvo dòng xe ga thể thao... Giá Thuê Dài hạn theo tháng: 1.800.000đ/tháng. Dịch vụ cho thuê xe exciter winner... 190k/ngày, Giá Thuê Dài hạn theo tháng: 3.000.0000đ/tháng. Chúng tôi chuyên cho thuê xe Vespa Lx, Liberty dòng xe cao cấp của Piaggio... Giá Thuê Dài hạn theo tháng: 2.800.000đ – 3.500.0000đ/tháng. Dịch vụ cho thuê xe máy Hà Nội, nhận giao xe trong nội thành Hà Nội, giao nhanh tận nơi trong khu vực phố cổ, bến xe nước ngầm, bến xe Mỹ Đình, Bến xe Gia Lâm, Bến Xe Giáp Bát."
+    },
+    {
+      "source_url": "https://hanoimotorbike.vn/",
+      "source_domain": "hanoimotorbike.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiền đặt cọc chỉ từ 500.000VND · Bảng giá tham khảo: - Xe số: 40K – 120K/ngày - Xe tay ga: 60K – 150K/ngày (thuê tháng từ 60K/ngày – giảm đến 60%) - Xe côn tay & SH: từ 200K-250K/ngày"
+    },
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ha-noi.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tại cửa hàng (8h-21h) – 30 Ngõ 66, Nguyễn Hoàng, Phường Cầu Giấy, Thành phố Hà Nội – 2 Hàng Bút, Phường Hoàn Kiếm... Giao xe, lấy xe tận nơi (8h-17h) – Bến xe Mỹ Đình... Cọc 1tr/xe đến 2tr/xe – Cọc 500k/xe đến 1tr/xe (nếu có thẻ sinh viên/vé máy bay) – Chụp ảnh CCCD/Passport"
+    },
+    {
+      "source_url": "https://sites.google.com/view/ceothuexemaycongtan/trang-chu",
+      "source_domain": "sites.google.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Các huyện bao gồm: Thanh Oai, Gia Lâm, Chương Mỹ, Quốc Oai, Đan Phượng, Thanh Trì, Mỹ Đức, Ba Vì, Đông Anh, Thạch Thất, Phú Xuyên, Phúc Thọ, Ứng Hòa, Sóc Sơn và Mê Linh. Giá thuê xe máy theo ngày tại Hà Nội thường bắt đầu từ 100.000 đồng/ngày (YAMAHA). Giá thuê thông thường bắt đầu từ 200.000 đồng/ngày (SUZUKI)."
+    },
+    {
+      "source_url": "https://baodanang.vn/hanoibiker-dia-chi-cho-thue-xe-may-di-phuot-don-gian-nhanh-chong-3294094.html",
+      "source_domain": "baodanang.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Mức giá cho thuê xe máy tại Hà Nội thường dao động từ 100.000 đồng đến 200.000 đồng mỗi ngày. Hanoibiker chuyên cho thuê xe máy đa chủng loại với hơn 100 các loại xe từ tay côn, xe số, xe ga cao cấp đời mới như: Airblade, Vision, Lead, Wave, Exciter, Vespa, Liberty…"
+    },
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 150.000đ/ngày. Giá tuần 700.000đ; giá tháng 900.000-1.200.000đ. Honda Click / Yamaha Mio - xe ga giá rẻ: 150.000đ/ngày; 700.000đ/tuần; 900.000-1.200.000đ/tháng. Honda Vision: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000-2.000.000đ/tháng. Honda Air Blade: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng. Tiền đặt cọc tham khảo: Honda Wave 2-3 triệu; Honda Vision 4-5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu. Giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành. 09:00 - 21:00 - Không giao xe máy ngoài khung giờ."
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-ha-dong/",
+    "/lab/thue-xe-may/thue-xe-may-thuong-tin/",
+    "/lab/lien-he/",
+    "/lab/kinh-nghiem/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-thanh-oai: chỉ 1 row cho Thanh Oai; cần phân biệt với bài Hà Đông, Thường Tín (khu vực lân cận) bằng trọng tâm sông Nhuệ - làng cổ Bình Đà và dòng khách đi làm qua các trục liên huyện vào nội thành.",
+  "unique_angle": "Thanh Oai nằm giữa các trục liên huyện phía tây nam: (1) nhấn mô hình giao tận nơi từ nội thành vì huyện hiếm trụ sở nhà xe; (2) gói tháng cho người đi làm; (3) hồ sơ thuê xe MOTOGO (sổ hộ khẩu hoặc cọc 3 triệu thay thế) và dòng khách lễ hội làng cổ Bình Đà đầu xuân.",
+  "notes": "Thanh Oai giữ tên gọi huyện trong sắp xếp đơn vị hành chính Hà Nội 2025, tổ chức lại các đơn vị cấp xã; bài KHÔNG liệt kê tên xã mới để tránh sai. Thanh Oai nằm trong danh sách huyện Công Tân phục vụ. Mọi con số đều có claim_evidence.",
+  "claim_evidence": [
+    {
+      "claim": "MOTOGO ghi giá thuê xe số Sirius 110cc 130.000đ/ngày cho khách thuê từ ngày 1 đến ngày 5, từ ngày 6 đến ngày 10 còn 120.000vnđ/ngày; xe tay ga Air Blade 125cc 200.000vnđ/ngày; Honda Vision 180.000vnđ/ngày và giảm giá khi thuê dài hạn; giá 1 ngày tính đúng theo 24 tiếng.",
+      "source_url": "https://motogo.vn/ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "chính sách giá thuê đang áp dụng cho xe số Sirius là 130.000đ/ngày cho khách thuê từ ngày 1 – ngày thứ 5, từ ngày 6 – ngày 10 giá là 120.000vnd/ngày. Giá sẽ tiếp tục giảm khi khách thuê lâu hơn. Xe tay ga Air Blade 125cc giá thuê xe 200.000vnd/ngày/xe cho khach thuê xe từ ngày 1- ngày 5. Honda Vision của MOTOGO có mức giá rẻ nhất thị trường. Chỉ 180.000 VND/ngày và cũng áp dụng chính sách giảm giá khi thuê dài hạn."
+    },
+    {
+      "claim": "MOTOGO ghi hồ sơ thuê xe gồm thông tin vé máy bay hoặc vé tàu chiều đến và rời Hà Nội; khách có sổ hộ khẩu gốc được dùng làm giấy tờ, nếu không có sổ hộ khẩu gốc thì đặt cọc 3 triệu thay thế cho sổ hộ khẩu.",
+      "source_url": "https://motogo.vn/ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thông tin vé máy bay hoặc vé tàu chiều đến và rời Hà Nội. Thông tin vé có thể là cuống vé hoặc vé điện tử. Sổ hộ khẩu gốc. Trường hợp không có sổ hộ khẩu gốc thì đặt cọc 3 triệu thay thế cho Sổ hộ khẩu. Với khách thuê xe không thuộc 2 nhóm trên, xin vui lòng gọi điện cho tổng đài hỗ trợ."
+    },
+    {
+      "claim": "MOTOGO ghi xe Yamaha Sirius đi tỉnh (ra khỏi Hà Nội), đi phượt vùng đồi núi như Ba Vì, Tam Đảo sẽ phụ thu thêm 50.000đ/ngày.",
+      "source_url": "https://motogo.vn/bang-gia-thue-xe-may/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Xe Yamaha Sirius đi tỉnh (ra khỏi Hà Nội), đi phượt vùng đồi núi Đông - Tây Bắc, Ba Vì, Tam Đảo,... sẽ phụ thu thêm 50.000đ/ngày."
+    },
+    {
+      "claim": "MOTOGO tổng hợp giá thuê xe máy Hà Nội: xe số là loại xe phổ biến nhất với giá 130.000 VNĐ/ngày; xe tay côn phân khối lớn có giá cao nhất từ 300.000 VNĐ/ngày trở lên.",
+      "source_url": "https://motogo.vn/gia-thue-xe-may-ha-noi-cap-nhat-moi-nhat/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Xe số: Đây là loại xe phổ biến nhất được cho thuê tại Hà Nội với giá rẻ nhất, giá 130.000 VNĐ/ngày. Xe tay côn: Loại xe này dành cho những du khách đam mê tốc độ... Giá thuê xe tay côn phân khối lớn cao nhất, từ 300.000 VNĐ/ngày trở lên."
+    },
+    {
+      "claim": "Hanoibiker cho thuê xe số Honda Wave, Yamaha Sirius, Jupiter với giá 1-4 ngày 120k/ngày, thuê 5-7 ngày 100k/ngày; thủ tục chỉ cần CMT và tiền từ 1 triệu; khách có vé máy bay khứ hồi chỉ cần cọc CCCD hoặc 500k; chi phí ship xe 20k - 50k tùy khoảng cách.",
+      "source_url": "https://hanoibiker.com/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê từ : 1-4 ngày 120k/ngày; thuê từ 5 -7 ngày: 100k/ngày, thuê dài ngày xin liên hệ hotline để được báo giá tốt nhất. Với khách có vé máy bay khứ hồi bạn chỉ cần cọc CCCD hoặc 500k. Thủ tục thuê xe máy Hà Nội rất đơn giản, bạn chỉ cần chuẩn bị CMT + tiền từ 1 triệu. (chi phí ship xe từ 20k- 50k) tùy thuộc khoảng cách từ cửa hàng của chúng tôi đến chỗ của bạn ở."
+    },
+    {
+      "claim": "Hanoibiker cho thuê xe tay ga Honda Vision, Lead, Airblade giá 1-3 ngày 180k/ngày, thuê từ 4-7 ngày 160k/ngày; xe ga Nouvo LX 1-2 ngày 150k/ngày, 3-6 ngày 120k/ngày; Piaggio Vespa LX, Liberty, Zip 1-3 ngày 190k/ngày, 4-7 ngày 160k/ngày.",
+      "source_url": "https://hanoibiker.com/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chuyên cho thuê xe máy Hà Nội các dòng xe tay ga của Honda: Vision, Lead, Airblade, giá thuê từ 1-3 ngày: 180k/ngày; thuê từ 4-7 ngày giá 160k/ngày. Dòng xe thể thao nổi tiếng khỏe của Yamaha Nouvo lx... Giá thuê từ 1-2 Ngày: 150k/ngày, thuê từ 3-6 ngày giá 120k/ngày. Cho thuê các dòng xe tay ga cao cấp của Piaggio: Vespa Lx, Liberty, Zip giá thuê từ 1-3 ngày 190k/ngày; thuê từ 4-7 ngày giá 160k/ngày."
+    },
+    {
+      "claim": "Hanoibiker ghi thuê dài hạn theo tháng Hà Nội giá chỉ 50k/ngày: xe ga Nouvo 1.800.000đ/tháng; dòng Exciter/Winner 190k/ngày và giá dài hạn theo tháng 3.000.000đ/tháng; Vespa LX, Liberty dài hạn 2.800.000đ - 3.500.000đ/tháng; nhận giao xe trong nội thành, phố cổ và các bến xe nước ngầm, Mỹ Đình, Gia Lâm, Giáp Bát.",
+      "source_url": "https://hanoibiker.com/thue-xe-may-theo-thang-dai-han/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe máy theo tháng Hà Nội giá chỉ 50k/ngày. Xe nouvo dòng xe ga thể thao, trẻ trung hiện đại thích hợp đi nội thành Giá Thuê Dài hạn theo tháng: 1.800.000đ/tháng. Dịch vụ cho thuê xe exciter winner, xe đời mới, thích hợp đi phượt, đi đường trường: 190k/ngày, Giá Thuê Dài hạn theo tháng: 3.000.0000đ/tháng. Chúng tôi chuyên cho thuê xe Vespa Lx, Liberty dòng xe cao cấp của Piaggio... Giá Thuê Dài hạn theo tháng: 2.800.000đ – 3.500.0000đ/tháng. Dịch vụ cho thuê xe máy Hà Nội, nhận giao xe trong nội thành Hà Nội, giao nhanh tận nơi trong khu vực phố cổ, bến xe nước ngầm, bến xe Mỹ Đình, Bến xe Gia Lâm, Bến Xe Giáp Bát."
+    },
+    {
+      "claim": "Hanoi Motorbike ghi bảng giá tham khảo: xe số 40k - 120k/ngày, thuê tháng từ 40k/ngày; xe tay ga 60k - 150k/ngày, thuê tháng từ 60k/ngày giảm đến 60%; xe côn tay và SH từ 200k - 250k/ngày; tiền đặt cọc chỉ từ 500.000vnđ.",
+      "source_url": "https://hanoimotorbike.vn/",
+      "source_domain": "hanoimotorbike.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thủ tục đơn giản, bảo mật Thông Tin Tiền đặt cọc chỉ từ 500.000VND · Bảng giá tham khảo: - Xe số: 40K – 120K/ngày (thuê tháng từ 40K/ngày – giảm đến 60%) - Xe tay ga: 60K – 150K/ngày (thuê tháng từ 60K/ngày – giảm đến 60%) - Xe côn tay & SH: từ 200K-250K/ngày - Thuê càng lâu – giá càng rẻ!"
+    },
+    {
+      "claim": "Trên vexere.com, nhà xe Hà Nội ghi điều kiện tiền cọc 1tr/xe đến 2tr/xe, giảm còn cọc 500k/xe đến 1tr/xe nếu có thẻ sinh viên hoặc vé máy bay; thủ tục chụp ảnh CCCD/Passport; nhận xe tại cửa hàng trên địa bàn Cầu Giấy, Hoàn Kiếm trong giờ 8h-21h hoặc giao xe tận nơi (8h-17h) như tại Bến xe Mỹ Đình.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ha-noi.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tại cửa hàng (8h-21h) – 30 Ngõ 66, Nguyễn Hoàng, Phường Cầu Giấy, Thành phố Hà Nội – 2 Hàng Bút, Phường Hoàn Kiếm, Thành phố Hà Nội. Giao xe, lấy xe tận nơi (8h-17h) – Bến xe Mỹ Đình. Cọc 1tr/xe đến 2tr/xe – Cọc 500k/xe đến 1tr/xe (nếu có thẻ sinh viên/vé máy bay) – Chụp ảnh CCCD/Passport"
+    },
+    {
+      "claim": "Báo Điện tử Đà Nẵng ghi nhận mức giá cho thuê xe máy tại Hà Nội thường dao động từ 100.000đ đến 200.000đ mỗi ngày tùy loại xe; Hanoibiker cho thuê đa chủng loại hơn 100 loại xe từ tay côn, xe số, xe ga cao cấp đời mới như Airblade, Vision, Lead, Wave, Exciter, Vespa, Liberty.",
+      "source_url": "https://baodanang.vn/hanoibiker-dia-chi-cho-thue-xe-may-di-phuot-don-gian-nhanh-chong-3294094.html",
+      "source_domain": "baodanang.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tùy vào các loại xe khác nhau mà mức giá cho thuê cũng khác nhau. Mức giá cho thuê xe máy tại Hà Nội thường dao động từ 100.000 đồng đến 200.000 đồng mỗi ngày. Hanoibiker chuyên cho thuê xe máy đa chủng loại với hơn 100 các loại xe từ tay côn, xe số, xe ga cao cấp đời mới như: Airblade, Vision, Lead, Wave, Exciter, Vespa, Liberty…"
+    },
+    {
+      "claim": "Công Tân ghi giá thuê xe máy theo ngày tại Hà Nội thường bắt đầu từ 100.000 đồng/ngày; dòng Suzuki từ 200.000 đồng/ngày; Thanh Oai nằm trong danh sách các huyện được Công Tân phục vụ (cùng Thanh Trì, Gia Lâm, Chương Mỹ, Quốc Oai, Đan Phượng, Mỹ Đức, Ba Vì, Đông Anh, Thạch Thất, Phú Xuyên, Phúc Thọ, Ứng Hòa, Sóc Sơn, Mê Linh).",
+      "source_url": "https://sites.google.com/view/ceothuexemaycongtan/trang-chu",
+      "source_domain": "sites.google.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Các huyện bao gồm: Thanh Oai, Gia Lâm, Chương Mỹ, Quốc Oai, Đan Phượng, Thanh Trì, Mỹ Đức, Ba Vì, Đông Anh, Thạch Thất, Phú Xuyên, Phúc Thọ, Ứng Hòa, Sóc Sơn và Mê Linh. Giá thuê xe máy theo ngày tại Hà Nội thường bắt đầu từ 100.000 đồng/ngày (YAMAHA). Giá thuê thông thường bắt đầu từ 200.000 đồng/ngày, tùy thuộc vào loại xe mà bạn chọn (SUZUKI)."
+    },
+    {
+      "claim": "Dịch vụ của chủ trang web công bố giá thuê Honda Wave và Yamaha Sirius (xe số): 150.000đ/ngày; giá tuần 700.000đ; giá tháng 900.000-1.200.000đ. ",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 150.000đ/ngày. Giá tuần 700.000đ; giá tháng 900.000-1.200.000đ."
+    },
+    {
+      "claim": "Honda Click / Yamaha Mio (xe ga giá rẻ): 150.000đ/ngày; 700.000đ/tuần; 900.000-1.200.000đ/tháng. ",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Click / Yamaha Mio - xe ga giá rẻ: 150.000đ/ngày; 700.000đ/tuần; 900.000-1.200.000đ/tháng."
+    },
+    {
+      "claim": "Honda Vision: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000-2.000.000đ/tháng. ",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Vision - xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000-2.000.000đ/tháng."
+    },
+    {
+      "claim": "Honda Air Blade: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng. ",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Air Blade - xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Tiền đặt cọc tham khảo của dịch vụ chủ trang web: Honda Wave 2-3 triệu; Honda Vision 4-5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu. ",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiền đặt cọc tham khảo: Honda Wave 2-3 triệu; Honda Vision 4-5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu."
+    },
+    {
+      "claim": "Dịch vụ của chủ trang web giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành; giờ làm việc 09:00 - 21:00 và không giao xe ngoài khung giờ này. ",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chúng tôi giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành. Điện thoại: 0942 467 674 - 09:00 - 21:00 - Không giao xe máy ngoài khung giờ."
+    }
+  ]
+}
