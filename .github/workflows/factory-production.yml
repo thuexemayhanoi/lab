@@ -84,7 +84,7 @@ jobs:
           if (sel.mode === 'paused') console.log('production-control: enabled=false — DỪNG SẠCH trước khi claim.');
           EOF
 
-      - name: Bảo trì (dispatch: status | recover | diagnostics)
+      - name: 'Bảo trì (dispatch: status | recover | diagnostics)'
         if: github.event_name == 'workflow_dispatch'
         run: |
           set -eu
