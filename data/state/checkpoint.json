@@ -1,22 +1,14 @@
 {
-  "last_run": "2026-09-29T06:58:20.205Z",
+  "last_run": "2026-10-01T04:43:40.846Z",
   "phase": "PRODUCTION",
   "matrix_rows": 10000,
-  "published_count": 23,
+  "published_count": 25,
   "last_batch": [
-    "A00005",
-    "A00006",
-    "A00007",
-    "A00008",
-    "A00009",
-    "A00010",
-    "A00011",
-    "A00012",
-    "A00013",
-    "A00014"
+    "A00015",
+    "A00016"
   ],
-  "last_completed_id": "A00014",
-  "next_claimable_id": "A00015",
+  "last_completed_id": "A00016",
+  "next_claimable_id": "A00017",
   "active_chunk": [],
-  "notes": "Published 10 articles."
+  "notes": "Staged publish of 2 articles (commit only after build+verify PASS; rollback on failure)."
 }
