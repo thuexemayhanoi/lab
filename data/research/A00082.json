@@ -1,0 +1,127 @@
+{
+  "article_id": "A00082",
+  "primary_keyword": "thuê xe máy Yên Tử",
+  "secondary_keywords": [
+    "thuê xe máy tại Yên Tử",
+    "vé cáp treo Yên Tử 2026",
+    "thuê xe máy Uông Bí",
+    "giá thuê xe máy Bãi Cháy",
+    "đường đi Yên Tử từ Hà Nội"
+  ],
+  "search_intent": "informational-research — du khách đi Yên Tử cần bảng vé cáp treo mới nhất, khoảng cách/lộ trình từ Hà Nội, mặt bằng giá thuê xe khu Uông Bí – Bãi Cháy và cách ghép Yên Tử với chùa Ba Vàng, hồ Yên Trung trong ngày bằng xe máy",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Yên Tử",
+    "xã Thượng Yên Công",
+    "thị xã Uông Bí",
+    "tỉnh Quảng Ninh",
+    "đền Trình (chùa Bí Thượng)",
+    "chùa Đồng",
+    "chùa Giải Oan",
+    "Huệ Quang Kim Tháp",
+    "chùa Hoa Yên",
+    "chùa Một Mái",
+    "An Kỳ Sinh",
+    "Bảo Tượng Phật Hoàng",
+    "chùa Ba Vàng",
+    "hồ Yên Trung",
+    "Bãi Cháy",
+    "quốc lộ 18",
+    "quốc lộ 10",
+    "quốc lộ 5",
+    "Hà Nội",
+    "Quán Toan (Hải Phòng)",
+    "Bắc Ninh",
+    "Cầu Kiền"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe tay ga",
+    "xe điện trung chuyển",
+    "cáp treo",
+    "thuyền hồ"
+  ],
+  "brand_entities": [
+    "Ban Quản lý Cáp treo Yên Tử",
+    "Kim's Motorbike",
+    "Cho thuê xe máy Bãi Cháy",
+    "Leadtour",
+    "Kumo Việt Thanh",
+    "Đức Phúc",
+    "Ka Long",
+    "Văn Minh"
+  ],
+  "model_entities": [
+    "Honda Wave Alpha",
+    "Honda Airblade",
+    "Honda Vision",
+    "Yamaha Nouvo",
+    "Yamaha Sirius",
+    "Honda Winner",
+    "Honda Vario",
+    "Yamaha PG-1",
+    "Yamaha Exciter",
+    "Honda Blade"
+  ],
+  "questions_found": [
+    "Vé cáp treo Yên Tử 2026 giá bao nhiêu?",
+    "Từ Hà Nội đi Yên Tử bao xa, đi đường nào?",
+    "Thuê xe máy gần Yên Tử giá bao nhiêu một ngày?",
+    "Nên leo bộ hay đi cáp treo lên chùa Đồng?",
+    "Xung quanh Yên Tử còn ghép được điểm nào trong ngày?"
+  ],
+  "related_queries": [
+    "bảng giá vé cáp treo Yên Tử",
+    "đường đi Yên Tử từ Hà Nội xe máy",
+    "thuê xe máy Uông Bí Bãi Cháy",
+    "chùa Ba Vàng hồ Yên Trung gần Yên Tử"
+  ],
+  "serp_patterns": "SERP 'thuê xe máy Yên Tử' hiện là bài thuê xe Quảng Ninh/Hạ Long (Motogo/Vexere/dichvuthuexehalong) và cẩm nang vé cáp treo Yên Tử (thông báo chính thức Ban Quản lý) — chưa có bài ghép intent POI 'xe máy + vé cáp treo Yên Tử'. Repo đã có thue-xe-may-quang-ninh (tỉnh) và thue-xe-may-vinh-ha-long (POI lân cận) — bài này chiếm intent POI Yên Tử bằng bảng vé cáp treo 15/08/2026 – 31/12/2026, lộ trình QL5/QL18 và bảng giá thuê xe Uông Bí – Bãi Cháy.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "Ban Quản lý Cáp treo Yên Tử (yentutunglam.com.vn) — Thông báo bảng giá vé cáp treo Yên Tử áp dụng 15/08/2026 – 31/12/2026",
+      "url": "https://yentutunglam.com.vn/thong-bao-bang-gia-ve-cap-treo-yen-tu/"
+    },
+    {
+      "name": "Leadtour — Đường đi Yên Tử từ Hà Nội dành cho ô tô và xe máy (130 km, QL5/QL18, chùa Giải Oan – chùa Đồng hơn 6 km)",
+      "url": "https://leadtour.vn/duong-di-yen-tu/"
+    },
+    {
+      "name": "Dịch vụ thuê xe Hạ Long — Thuê xe máy Uông Bí (chùa Ba Vàng, hồ Yên Trung, giá thuê xe 70k/100k/130k, Kim's Motorbike)",
+      "url": "https://dichvuthuexehalong.com/thue-xe-may/thue-xe-may-uong-bi/"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-quang-ninh/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-vinh-ha-long/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ha-noi/"
+  ],
+  "potential_cannibalization": "Khác thue-xe-may-quang-ninh (intent tỉnh) và thue-xe-may-vinh-ha-long (POI Hạ Long): bài này nhắm intent POI Yên Tử với bảng vé cáp treo, lộ trình Hà Nội – Yên Tử và giá thuê xe Uông Bí – Bãi Cháy; link chéo đến POI lân cận, mỗi bài giữ vé và bảng giá riêng.",
+  "unique_angle": "Ghép bảng vé cáp treo 2 tuyến 390.000 VNĐ / tuyến 1 320.000 VNĐ / combo 520.000 VNĐ + ưu đãi trẻ em từ 81cm-1m19 & người cao tuổi từ 70 tuổi giảm 50% + quãng đường Hà Nội – Yên Tử khoảng 130 km theo 2 hướng QL5 và Bắc Ninh + chùa Giải Oan đến chùa Đồng hơn 6 km, cáp chặng 1 Hoàng Long dài 1,2 km + giá thuê xe khu Bãi Cháy khoảng 70.000đ/6 tiếng, 100.000đ/12 tiếng, 130.000đ/ngày — góc 'cáp treo lo chặng núi, xe máy lo chặng quốc lộ 18'.",
+  "notes": "Hàng informational_only (POI Quảng Ninh): không dùng \"chúng tôi\", không claim dịch vụ; disclosure P2 chuẩn. requires_official_sources=0 (bảng vé lấy từ thông báo Ban Quản lý Cáp treo Yên Tử nhưng không bắt buộc official_sources). Mọi claim định lượng có claim_evidence quote nguyên văn từ nguồn đã mở 2026-10-01; k-notation và dấu gạch mirror đúng theo quote (81cm-1m19, hơn 6 km, 1,2 km).",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá vé cáp treo Yên Tử áp dụng từ ngày 15/08/2026 – 31/12/2026: vé cáp treo khứ hồi 2 tuyến 390.000 VNĐ (bao gồm Huệ Quang Kim Tháp, Chùa Hoa Yên, Chùa Một Mái, An Kỳ Sinh, Bảo Tượng Phật Hoàng, Chùa Đồng + vé xe điện); vé cáp treo khứ hồi Tuyến 1 là 320.000 VNĐ (gồm Huệ Quang Kim Tháp, Chùa Hoa Yên, Chùa Một Mái + vé xe điện); combo cáp treo & set menu 520.000 VNĐ áp dụng từ 01/01/2026 – 31/12/2026 (ngoại trừ giai đoạn 17/02/2026 – 31/03/2026); trẻ em dưới 80cm miễn phí (lấy vé ở điểm bán vé); trẻ em từ 81cm-1m19 giảm 50%; người cao tuổi từ 70 tuổi trở lên (quốc tịch Việt Nam) giảm 50%; thương binh có giấy tờ chứng minh giảm 50% (riêng ngày 27/7 miễn phí); Xá lợi Phật hoàng hiện vẫn được thờ tại Huệ Quang Kim Tháp.",
+      "source_url": "https://yentutunglam.com.vn/thong-bao-bang-gia-ve-cap-treo-yen-tu/",
+      "source_domain": "yentutunglam.com.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Ban Quản lý Cáp treo Yên Tử trân trọng thông báo bảng giá vé áp dụng từ ngày 15/08/2026 – 31/12/2026 như sau:\"; \"Vé cáp treo khứ hồi 2 tuyến: 390.000 VNĐ\"; \"(Bao gồm: Huệ Quang Kim Tháp, Chùa Hoa Yên, Chùa Một Mái, An Kỳ Sinh, Bảo Tượng Phật Hoàng, Chùa Đồng + vé xe điện)\"; \"Vé cáp treo khứ hồi Tuyến 1: 320.000 VNĐ\"; \"(Bao gồm: Huệ Quang Kim Tháp, Chùa Hoa Yên, Chùa Một Mái + vé xe điện)\"; \"Đối với trẻ em (dưới 80cm): Miễn phí (lấy vé ở điểm bán vé)\"; \"Đối với thương binh (có giấy tờ chứng minh): Giảm 50% (riêng ngày 27/7, miễn phí)\"; \"Đối với trẻ em (từ 81cm-1m19): Giảm 50%\"; \"Đối với người cao tuổi (từ 70 tuổi trở lên, quốc tịch Việt Nam): Giảm 50%\"; \"Giá combo cáp treo & set menu: 520.000 VNĐ (áp dụng từ 01/01/2026 – 31/12/2026, ngoại trừ giai đoạn 17/02/2026 – 31/03/2026)\"; \"Xá lợi Phật hoàng hiện vẫn được thờ tại Huệ Quang Kim Tháp\""
+    },
+    {
+      "claim": "Chùa Yên Tử là tên gọi chung của hệ thống chùa trên dãy Yên Tử thuộc xã Thượng Yên Công, thị xã Uông Bí, tỉnh Quảng Ninh, gắn liền với quá trình tu hành của Phật Hoàng Trần Nhân Tông và sự ra đời, phát triển của thiền phái Trúc Lâm Việt Nam; khoảng cách từ Hà Nội đến Yên Tử vào khoảng 130 km; hướng quốc lộ 5: Quán Toan (Hải Phòng) – Cầu Kiền – quốc lộ 10 – quốc lộ 18 đến Uông Bí; hướng Bắc Ninh: cầu Chương Dương – đường Nguyễn Văn Cừ – thành phố Bắc Ninh – quốc lộ 18 đến đền Trình (chùa Bí Thượng) — cửa ngõ vào Yên Tử; hệ thống trải dài từ quốc lộ 18 – đền Trình đến ngôi chùa cao nhất trên dãy Yên Tử là chùa Đồng; khoảng cách từ chùa Giải Oan đến chùa Đồng Yên Tử là hơn 6 km; cáp treo chặng 1 Hoàng Long dài 1,2 km từ chùa Giải Oan đến gần tháp tổ Huệ Quang; xe khách tuyến Hà Nội – Quảng Ninh (Kumo Việt Thanh, Đức Phúc, Ka Long, Văn Minh) dặn tài xế xuống ở đền Trình, thành phố Uông Bí.",
+      "source_url": "https://leadtour.vn/duong-di-yen-tu/",
+      "source_domain": "leadtour.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Chùa Yên Tử là tên gọi chung của hệ thống chùa trên dãy Yên Tử thuộc xã Thượng Yên Công, thị xã Uông Bí, tỉnh Quảng Ninh.\"; \"gắn liền với quá trình tu hành của Phật Hoàng Trần Nhân Tông và sự ra đời, phát triển của thiền phái Trúc Lâm Việt Nam\"; \"Khoảng cách từ Hà Nội đến Yên Tử vào khoảng 130 km.\"; \"Đi theo đường quốc lộ 5: Từ Hà Nội, bạn di chuyển theo đường quốc lộ 5 về Quán Toan (Hải Phòng), sau đó tiếp tục di chuyển đến Cầu Kiền – quốc lộ 10 – quốc lộ 18 đến thành phố Uông Bí là sẽ thấy bảng chỉ dẫn vào Yên Tử.\"; \"Đường đi Bắc Ninh: Từ Hà Nội, bạn di chuyển ra cầu Chương Dương – đường Nguyễn Văn Cừ – đi tiếp thành phố Bắc Ninh. Đến đoạn giao với quốc lộ 18 thì rẽ vào đi theo quốc lộ 18 là đến đền Trình (chùa Bí Thượng) – nơi “cửa ngõ” vào đất thiêng Yên Tử.\"; \"trải dài từ quốc lộ 18 – đền Trình (chùa Bí Thượng) cho đến ngôi chùa cao nhất trên dãy Yên Tử là chùa Đồng\"; \"Khoảng cách từ chùa Giải Oan đến chùa Đồng Yên Tử là hơn 6 km\"; \"Chặng 1 Hoàng Long (dài 1,2 km): từ chùa Giải Oan đến gần tháp tổ Huệ Quang.\"; \"một số nhà xe chuyên chạy Hà Nội – Quảng Ninh như Kumo Việt Thanh, Đức Phúc, Ka Long, Văn Minh… Sau khi lên xe cần dặn tài xế cho xuống ở đền Trình, thành phố Uông Bí.\""
+    },
+    {
+      "claim": "Chùa Ba Vàng nổi bật với khuôn viên rộng, nằm ở độ cao khoảng 1000m, sở hữu tượng A Di Đà lớn nhất miền Bắc; hồ Yên Trung được ví như \"Đà Lạt thu nhỏ\" của Quảng Ninh, hai bên hồ hàng thông xanh thẳng tắp, thuê thuyền dạo mặt hồ giá chỉ từ 30.000đ/giờ; khu Yên Tử tháng Giêng có không khí lễ hội linh thiêng; Cho thuê xe máy Bãi Cháy (25 Bãi Cháy, Hạ Long) niêm yết khoảng 70.000đ/6 tiếng, 100.000đ/12 tiếng hoặc 130.000đ/ngày; Kim's Motorbike (293 Bãi Cháy, Hạ Long) giao xe tận nơi, tiền đặt cọc linh hoạt tùy thuộc vào giá trị xe và hợp đồng thuê, xe được bảo dưỡng định kỳ.",
+      "source_url": "https://dichvuthuexehalong.com/thue-xe-may/thue-xe-may-uong-bi/",
+      "source_domain": "dichvuthuexehalong.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Chùa Ba Vàng nổi bật với khuôn viên rộng, nằm ở độ cao khoảng 1000m.\"; \"nơi đây sở hữu tượng A Di Đà lớn nhất miền Bắc.\"; \"Hồ Yên Trung – nơi được ví như “Đà Lạt thu nhỏ” của Quảng Ninh. Hai bên hồ là hàng thông xanh thẳng tắp\"; \"Bạn cũng có thể thuê thuyền dạo chơi trên mặt hồ với giá chỉ từ 30.000đ/giờ.\"; \"Nếu ghé thăm vào tháng Giêng, bạn sẽ cảm nhận không khí lễ hội linh thiêng.\"; \"Địa chỉ: 25 Bãi Cháy, Hạ Long, Quảng Ninh\"; \"Điểm cộng lớn chính là giá thuê xe Uông Bí rất phải chăng: khoảng 70.000đ/6 tiếng, 100.000đ/12 tiếng, hoặc 130.000đ/ngày.\"; \"Địa chỉ: 293 Bãi Cháy, Bãi Cháy, Hạ Long\"; \"dịch vụ giao xe tận nơi. Chỉ cần cung cấp địa chỉ, nhân viên sẽ đưa xe đến và hỗ trợ làm thủ tục nhanh chóng.\"; \"Tiền đặt cọc: Khách hàng cần đặt cọc một khoản phí, mức tiền sẽ linh hoạt tùy thuộc vào giá trị xe và hợp đồng thuê.\"; \"Xe được bảo dưỡng định kỳ, loại bỏ các dòng đã cũ\""
+    }
+  ]
+}
