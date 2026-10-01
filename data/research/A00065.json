@@ -1,0 +1,134 @@
+{
+  "article_id": "A00065",
+  "primary_keyword": "thuê xe máy gần Bến xe Miền Đông (cũ)",
+  "secondary_keywords": [
+    "thuê xe máy Bình Thạnh",
+    "cho thuê xe máy gần bến xe Miền Đông cũ",
+    "thuê xe máy Đinh Bộ Lĩnh",
+    "thuê xe máy Sài Gòn",
+    "thuê xe máy quanh bến xe Miền Đông"
+  ],
+  "search_intent": "local",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Bến xe Miền Đông (cũ)",
+    "292 Đinh Bộ Lĩnh",
+    "Bình Thạnh",
+    "Nguyễn Xí",
+    "Quốc lộ 13",
+    "Trần Bình Trọng",
+    "Nguyễn Hữu Cảnh",
+    "Tân Cảng",
+    "Lê Hồng Phong",
+    "Quận 10",
+    "Thủ Đức",
+    "Long Bình",
+    "Suối Tiên",
+    "Sài Gòn"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe côn tay"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki",
+    "SYM",
+    "Vespa"
+  ],
+  "model_entities": [
+    "Vision",
+    "Air Blade",
+    "Wave Alpha",
+    "Blade",
+    "Sirius",
+    "Lead",
+    "Nouvo",
+    "Hayate",
+    "Elizabeth",
+    "SH",
+    "Exciter"
+  ],
+  "questions_found": [
+    "bến xe Miền Đông cũ còn hoạt động không?",
+    "gần bến xe Miền Đông cũ có chỗ cho thuê xe máy không?",
+    "thuê xe máy ở Sài Gòn cần giấy tờ gì và cọc bao nhiêu?",
+    "giá thuê xe máy khu Bình Thạnh bao nhiêu một ngày?",
+    "phân biệt bến xe Miền Đông cũ và bến mới thế nào?"
+  ],
+  "related_queries": [
+    "bến xe Miền Đông cũ địa chỉ",
+    "thuê xe máy Sài Gòn giao tận nơi",
+    "Bike Saigon Bình Thạnh",
+    "Kiều Trang thuê xe máy Sài Gòn",
+    "bến xe Miền Đông mới Long Bình Thủ Đức"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy gần Bến xe Miền Đông (cũ)\" gồm: (1) trang bối cảnh bến — mia.vn (22.09.2026): địa chỉ 292 Đinh Bộ Lĩnh, diện tích hơn 67.000m2 giữa ba trục Đinh Bộ Lĩnh - Nguyễn Xí - QL13, từ 2020 di dời dần sang bến mới Suối Tiên 16ha vốn 4.000 tỷ, vẫn còn tuyến liên tỉnh đi Bình Dương/Bình Phước/Đắk Nông/Đắk Lắk/Gia Lai/Kon Tum, hướng dẫn từ vòng xoay cầu Bình Lợi qua cầu Bình Triệu thêm 200m; soctrangtourism.vn (05/2026): bến cũ đã ngừng khai thác vận tải hành khách theo kế hoạch di dời, bến mới đặt tại Long Bình, Thủ Đức. (2) trang cho thuê khu Bình Thạnh — motogo.vn/thue-xe-may-sai-gon-binh-thanh: Bike Saigon (cơ sở 59 Trần Bình Trọng; 79/15B Đinh Bộ Lĩnh P26; 14 Phạm Cự Lượng; 413 Lê Văn Sỹ) xe số 120.000đ/ngày, xe ga 200.000đ/ngày, 2 mũ + áo mưa, giao miễn phí 10km; Kiều Trang (59 Trần Bình Trọng, 7 cơ sở) 80.000đ-130.000đ/ngày kèm 2 mũ + 1 lít xăng, nhận xe tại sân bay/bến xe khách/khách sạn 15-30 phút; Vinasat (208 Nguyễn Hữu Cảnh, Tân Cảng) 100.000đ/150.000đ; Thành Đạt (Phú Nhuận) giao xe trong 5 phút. (3) vexere.com xe-may-tai-sai-gon: xe số từ 100.000đ (My My Wave Alpha từ 2015, Thành Đạt 2012-2014), Vision/Air Blade từ 200.000đ (Gia Bảo, giao tận nơi, không cọc trước, 07:30-21:00), ngày 24h, trả trễ ≤5-6h tính nửa ngày, giữ CCCD + cọc 1.000.000đ hoặc cọc 3-4 triệu, phạm vi TP.HCM (cũ). Intent informational + local: khách tìm địa chỉ bến cũ quen thuộc cần làm rõ bến cũ/mới rồi thuê xe quanh khu Bình Thạnh.",
+  "official_sources": [
+    {
+      "name": "Bến xe Miền Đông (cũ) — tham khảo địa lý và hiện trạng",
+      "url": "https://mia.vn/cam-nang-du-lich/thong-tin-ben-xe-mien-dong-cu-17723",
+      "note": "Địa lý theo nguồn cẩm nang: 292 Đinh Bộ Lĩnh, Bình Thạnh, giữa ba trục Đinh Bộ Lĩnh - Nguyễn Xí - QL13; hiện trạng bến cũ được ghi khác nhau giữa các nguồn (mia.vn 9/2026 ghi vẫn còn tuyến liên tỉnh; soctrangtourism 5/2026 ghi đã ngừng khai thác) — bài trình bày cả hai góc nhìn và khuyên kiểm tra vé; các con số khác chỉ dùng khi nằm trong claim_evidence."
+    }
+  ],
+  "supporting_sources": [
+    {
+      "name": "MIA — Bến xe Miền Đông cũ",
+      "url": "https://mia.vn/cam-nang-du-lich/thong-tin-ben-xe-mien-dong-cu-17723"
+    },
+    {
+      "name": "Du lịch Sóc Trăng — Bến xe Miền Đông Bình Thạnh",
+      "url": "https://soctrangtourism.vn/ben-xe-mien-dong-binh-thanh/"
+    },
+    {
+      "name": "MOTOGO — Thuê xe máy Bình Thạnh Sài Gòn",
+      "url": "https://motogo.vn/thue-xe-may-sai-gon-binh-thanh/"
+    },
+    {
+      "name": "Vexere — Thuê xe máy Sài Gòn",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-gan-ga-sai-gon/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-tan-son-nhat/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-poi-ben-xe-mien-dong-cu: 1 row cho Bến xe Miền Đông (cũ); các row Sài Gòn khác là Ga Sài Gòn, Tân Sơn Nhất (đã publish, POI khác) và các bến Miền Tây/An Sương (PLANNED sau này) — bài tập trung POI quanh 292 Đinh Bộ Lĩnh - Bình Thạnh, không tranh chấp từ khóa chính; link chéo hợp lệ.",
+  "unique_angle": "Từ khóa 'bến Miền Đông cũ' mang tính lịch sử: nút thắt của bài là phân định bến cũ (292 Đinh Bộ Lĩnh, Bình Thạnh) với bến mới (Long Bình, Thủ Đức) trước khi dẫn tới các điểm cho thuê quanh khu bến cũ; điểm nhấn: Bike Saigon có cơ sở ghi tại 79/15B Đinh Bộ Lĩnh ngay khu bến, Kiều Trang nhận xe tại bến xe khách trong 15-30 phút kèm 1 lít xăng, chính sách Sài Gòn đặc thù (giữ CCCD + cọc 1 triệu hoặc cọc 3-4 triệu, ngày 24h, trả trễ ≤5-6h tính nửa ngày, phạm vi TP.HCM cũ), và hai nguồn ghi khác nhau về hiện trạng bến cũ được trình bày trung tính.",
+  "notes": "Bài informational_only: KHÔNG 'chúng tôi', KHÔNG chào dịch vụ, KHÔNG LocalBusiness schema; disclosure đầu bài (owner không có điểm nhận xe tại Sài Gòn). Hai nguồn ghi nhận khác nhau về hiện trạng bến cũ (mia.vn 22.09.2026: vẫn còn tuyến liên tỉnh; soctrangtourism 05/2026: đã ngừng khai thác vận tải hành khách) — bài trình bày cả hai và khuyên kiểm tra vé, KHÔNG khẳng định một chiều. req_official=0 nên official_sources dùng entry tham khảo địa lý. Mọi con số lấy đúng claim_evidence; giữ tên địa danh quen thuộc (Bình Thạnh, Quận 1, Quận 3, Thủ Đức) theo quy ước bài trước về sắp xếp hành chính 2025.",
+  "claim_evidence": [
+    {
+      "claim": "Theo trang cẩm nang MIA (22.09.2026): Bến xe Miền Đông cũ địa chỉ 292 Đinh Bộ Lĩnh, Bình Thạnh, TP.HCM; có diện tích hơn 67.000m2, tọa lạc trên ba tuyến đường lớn Đinh Bộ Lĩnh, Nguyễn Xí và Quốc lộ 13; là cửa ngõ giao thông từ Bình Dương, Bình Phước, Thủ Đức đến trung tâm TP.HCM; hiện vẫn cung cấp các tuyến liên tỉnh cố định đi và đến các tỉnh Bình Dương, Bình Phước, Đắk Nông, Đắk Lắk, Gia Lai, Kon Tum; từ năm 2020 bến bắt đầu di dời đến Bến xe Miền Đông mới ở khu vực Suối Tiên với diện tích trên 16ha và tổng vốn đầu tư 4.000 tỷ đồng; cách tìm bến: từ vòng xoay cầu Bình Lợi, đi thẳng qua cầu Bình Triệu, chạy thêm 200m, bến xe nằm bên tay trái; trước năm 1975 bến tọa lạc tại 286 Lê Hồng Phong, Quận 10.",
+      "source_url": "https://mia.vn/cam-nang-du-lich/thong-tin-ben-xe-mien-dong-cu-17723",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Địa chỉ: 292 Đinh Bộ Lĩnh, Bình Thạnh, TP.HCM ... Bến xe Miền Đông cũ có diện tích hơn 67.000m², tọa lạc trên ba tuyến đường lớn gồm Đinh Bộ Lĩnh, Nguyễn Xí và Quốc lộ 13. Đây là cửa ngõ giao thông từ Bình Dương, Bình Phước, TP. Thủ Đức đến trung tâm TP.HCM. ... Bến xe hiện vẫn cung cấp các tuyến liên tỉnh cố định đi và đến các tỉnh Bình Dương, Bình Phước, Đắk Nông, Đắk Lắk, Gia Lai, Kon Tum. ... Trước năm 1975: Bến xe tọa lạc tại 286 Lê Hồng Phong, Quận 10 với tên gọi Xa cảng Miền Đông. ... Năm 1981-1985: Bến xe chuyển đến vị trí Phường 26, Quận Bình Thạnh như ngày nay ... Từ năm 2020: Bến xe Miền Đông cũ bắt đầu di dời đến Bến xe Miền Đông mới ở khu vực Suối Tiên với diện tích trên 16ha và tổng vốn đầu tư 4.000 tỷ đồng ... Từ vòng xoay cầu Bình Lợi, đi thẳng qua cầu Bình Triệu, chạy thêm 200m, bến xe nằm bên tay trái."
+    },
+    {
+      "claim": "Theo trang Du lịch Sóc Trăng (cập nhật tháng 5/2026): Bến xe Miền Đông cũ tại 292 Đinh Bộ Lĩnh, Phường 26, Quận Bình Thạnh đã ngừng hoạt động khai thác vận tải hành khách theo kế hoạch di dời và quy hoạch chung của thành phố; Bến xe Miền Đông mới (bến xe khách trung tâm) được đặt tại Phường Long Bình, TP. Thủ Đức, TP. Hồ Chí Minh; việc di dời hoặc giảm tải dần của bến cũ là một phần quá trình tái cấu trúc hệ thống giao thông vận tải.",
+      "source_url": "https://soctrangtourism.vn/ben-xe-mien-dong-binh-thanh/",
+      "source_domain": "soctrangtourism.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Hiện tại, Bến xe Miền Đông cũ tại địa chỉ 292 Đinh Bộ Lĩnh, Phường 26, Quận Bình Thạnh đã ngừng hoạt động khai thác vận tải hành khách theo kế hoạch di dời và quy hoạch chung của thành phố. Việc ngừng hoạt động hoặc giảm tải dần của bến xe cũ là một phần trong quá trình tái cấu trúc hệ thống giao thông vận tải ... thực tế Bến xe Miền Đông mới (bến xe khách trung tâm) được đặt tại Phường Long Bình, TP. Thủ Đức, TP. Hồ Chí Minh. Bến xe này được xây dựng với quy mô lớn và hiện đại hơn nhằm thay thế chức năng của bến xe cũ."
+    },
+    {
+      "claim": "Trang Motogo về thuê xe máy Bình Thạnh ghi: Bike Saigon (điện thoại 0974 424 163) có cơ sở tại 14 Phạm Cự Lượng, Tân Bình (gần sân bay), 413 Lê Văn Sỹ (Quận 3) và 59 Trần Bình Trọng (Bình Thạnh), giá xe số 120.000đ/ngày, xe ga 200.000đ/ngày, mỗi xe kèm 2 mũ bảo hiểm đạt chuẩn và áo mưa, dịch vụ giao xe miễn phí trong phạm vi 10km; trang này cũng ghi một cơ sở Bike Saigon tại 79/15B Đinh Bộ Lĩnh, Phường 26, Bình Thạnh. Kiều Trang (điện thoại 0914 922 836) có cơ sở tại 59 Trần Bình Trọng (Bình Thạnh) cùng nhiều cơ sở khác, mức giá 80.000đ - 130.000đ/ngày đã gồm 2 mũ bảo hiểm và 1 lít xăng, nhận xe tại sân bay, bến xe khách hoặc khách sạn theo yêu cầu trong vòng 15 đến 30 phút. Vinasat tại 208 Nguyễn Hữu Cảnh, Vinhomes Tân Cảng, Bình Thạnh ghi xe số 100.000đ/ngày, xe ga 150.000đ/ngày. Thành Đạt (21 Hẻm 115 Lê Văn Sỹ, Phú Nhuận) được đánh giá giao xe nhanh: chỉ cần nhấc máy gọi, trong vòng 5 phút đã có thể nhận được xe.",
+      "source_url": "https://motogo.vn/thue-xe-may-sai-gon-binh-thanh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bike Saigon Điện thoại: 0974 424 163 Cơ sở 1: 14 Phạm Cự Lượng, Tân Sơn Hòa, Tân Bình (gần sân bay) Cơ sở 2: 413 Lê Văn Sỹ, Nhiêu Lộc, Quận 3 Cơ sở 3: 59 Trần Bình Trọng, Bình Thạnh Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 200.000đ/ngày ... Mỗi chiếc xe sẽ đi kèm với 2 mũ bảo hiểm đạt chuẩn và bảo hiểm. Ngoài ra nhà xe còn tâm lý chuẩn bị áo mưa ... Bên cạnh đó dịch vụ giao xe miễn phí trong phạm vi 10km cũng thu hút rất nhiều khách hàng. Bất kể bạn đang ở quận Bình Thạnh hay địa chỉ lân cận đều được hưởng dịch vụ này. ... Địa chỉ: 79/15B Đinh Bộ Lĩnh, Phường 26, Bình Thạnh, Thành phố Hồ Chí Minh ... Kiều Trang ... Mức giá thuê xe máy tại Kiều Trang từ 80.000đ – 130.000đ/ngày. Giá thuê xe đã có đi kèm 2 mũ bảo hiểm, 1 lít xăng cho du khách. ... Bạn có thể nhận xe tại sân bay, bến xe khách hoặc khách sạn theo yêu cầu chỉ trong vòng 15 đến 30 phút. ... Cơ sở 6: 59 Trần Bình Trọng, Bình Thạnh ... Vinasat Điện thoại: 0913.122.111 Địa chỉ: 208 Nguyễn Hữu Cảnh, Vinhomes Tân Cảng, Bình Thạnh, Thành phố Hồ Chí Minh Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày ... Thành Đạt ... Chỉ cần nhấc máy gọi, trong vòng 5 phút bạn đã có thể nhận được xe."
+    },
+    {
+      "claim": "Trên nền tảng Vexere tại Sài Gòn: nhà xe Gia Bảo cho thuê Honda Vision/Air Blade đời từ 2015 từ 200.000đ, giao xe tận nơi, không cần cọc trước, kèm mũ bảo hiểm và 1 lít xăng, nhận/trả xe hằng ngày từ 07:30 đến 21:00, mỗi ngày thuê tính bằng 24 giờ, trả trễ chưa quá 6 giờ chỉ tính thêm nửa ngày, thủ tục giữ CCCD và cọc 1.000.000đ/xe, chỉ sử dụng xe trong phạm vi Thành phố Hồ Chí Minh (cũ); nhà xe My My cho thuê Wave Alpha đời từ 2015 từ 100.000đ, nhận/trả 08:00-22:00, giữ CCCD và cọc 1.000.000đ/xe, trả trễ chưa quá 5 giờ tính thêm nửa ngày; nhà xe Thành Đạt cho thuê xe số đời 2012-2014 từ 100.000đ, cọc 1.000.000đ/xe và giữ CCCD/GPLX hoặc cọc 4.000.000đ/xe; nhà xe Bike Saigon cho thuê Honda Blade/Yamaha Sirius từ 150.000đ, cọc 1.000.000đ/xe và giữ CCCD hoặc cọc 3.000.000đ/xe; các nhà xe đều ghi thanh toán tổng giá trị thuê khi nhận xe và không tính phí hủy.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Gia Bảo 4.9 Honda Vision hoặc dòng xe tương tự Honda Vision, Honda Airblade (giao ngẫu nhiên tùy tình trạng xe thực tế) Đời xe: từ 2015 Mũ bảo hiểm, Xăng (1 lít) Giao xe tận nơi Không cần cọc trước từ 200.000đ ... Thời gian nhận xe và trả xe hằng ngày từ 07:30 đến 21:00. Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe. ... Trả xe nếu chưa quá 6 giờ → chỉ tính thêm 1/2 ngày. ... Giữ CCCD & cọc 1.000.000đ/xe (CCCD đã tích hợp VNeID) ... Vui lòng chỉ sử dụng xe trong phạm vi Thành phố Hồ Chí Minh (cũ). ... My My 4.7 Honda Wave Alpha Đời xe: từ 2015 Mũ bảo hiểm, Áo mưa Không cần cọc trước từ 100.000đ ... từ 08:00 đến 22:00 ... Trả xe nếu chưa quá 5 giờ → chỉ tính thêm 1/2 ngày. ... Giữ CCCD và Cọc: 1.000.000đ/xe ... Thành Đạt 4.6 Đời xe: 2012-2014 Mũ bảo hiểm Không cần cọc trước từ 100.000đ ... Cọc 1.000.000đ/xe và Giữ CCCD/GPLX. Hoặc cọc 4.000.000đ/xe. ... Bike Saigon 4.7 Honda Blade hoặc dòng xe tương tự Honda Blade, Yamaha Sirius (giao ngẫu nhiên tùy tình trạng xe thực tế) Đời xe: 2012-2014 Mũ bảo hiểm Không cần cọc trước từ 150.000đ ... Cọc 1.000.000đ/xe và Giữ CCCD. Hoặc Cọc 3.000.000đ/xe. ... Thanh toán Tổng giá trị thuê xe cho nhà xe khi làm thủ tục nhận xe. Nhà xe không tính phí hủy."
+    }
+  ]
+}

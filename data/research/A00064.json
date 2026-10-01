@@ -1,0 +1,133 @@
+{
+  "article_id": "A00064",
+  "primary_keyword": "thuê xe máy gần Bến xe Nước Ngầm",
+  "secondary_keywords": [
+    "thuê xe máy Nước Ngầm",
+    "cho thuê xe máy gần bến xe Nước Ngầm",
+    "thuê xe máy Hoàng Mai",
+    "thuê xe máy giá rẻ Nước Ngầm",
+    "thuê xe máy gần Ngọc Hồi"
+  ],
+  "search_intent": "local",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Bến xe Nước Ngầm",
+    "Ngọc Hồi",
+    "Hoàng Mai",
+    "Pháp Vân",
+    "Giải Phóng",
+    "Giáp Bát",
+    "Mỹ Đình",
+    "Ga Hà Nội",
+    "Phố cổ",
+    "Trần Bình",
+    "Nghĩa Đô",
+    "Thợ Nhuộm",
+    "Đường Láng",
+    "Hà Nội"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe côn tay",
+    "xe máy điện"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki",
+    "VinFast"
+  ],
+  "model_entities": [
+    "Wave RSX",
+    "Wave Alpha",
+    "Sirius",
+    "Jupiter",
+    "Future",
+    "Air Blade",
+    "Lead",
+    "Vision",
+    "Nouvo",
+    "Winner 150",
+    "Exciter 150",
+    "Evo200 Lite"
+  ],
+  "questions_found": [
+    "thuê xe máy gần bến xe Nước Ngầm giá bao nhiêu một ngày?",
+    "có nhận xe ngay tại bến xe Nước Ngầm không?",
+    "gửi xe máy ở bến xe Nước Ngầm giá bao nhiêu, có nhận qua đêm không?",
+    "thuê xe máy ở Nước Ngầm cần giấy tờ gì và cọc bao nhiêu?",
+    "có nhà xe nào giao xe tận khu vực bến xe Nước Ngầm không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Nước Ngầm",
+    "gửi xe máy bến xe Nước Ngầm",
+    "Mototrip bến xe Nước Ngầm",
+    "thuê xe máy theo tháng Hà Nội giá rẻ",
+    "bến xe Nước Ngầm gửi xe qua đêm"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy gần Bến xe Nước Ngầm\" chủ yếu là các trang về gửi xe máy tại bến: vantaitrungtin.com (cập nhật 6/2026) ghi bãi chính thức thu 5.000đ/lượt trong ngày, 12.000đ/lượt qua đêm chỉ cho hành khách có vé xe theo Quyết định 44/2017/QĐ-UBND TP Hà Nội, bãi tư nhân 30.000-50.000đ/đêm, cổng chính đường Ngọc Hồi, cửa số 10 đường Pháp Vân; kieugiaexpress.com ghi 5.000-10.000đ/lượt trong ngày và 20.000-30.000đ qua đêm nhưng trộn địa danh Phạm Hùng - Dương Đình Nghệ (thuộc khu Mỹ Đình) nên chỉ dùng làm tham khảo phụ. Các trang cho thuê: hanoibiker.com/thue-xe-may-theo-thang-dai-han ghi giao tận nơi phố cổ + 4 bến xe (Nước Ngầm, Mỹ Đình, Gia Lâm, Giáp Bát) phí 30-40k, cọc 1-2 triệu hoặc miễn cọc cho khách tỉnh có vé máy bay khứ hồi, giá tháng xe số 1.500.000đ, xe ga 2.500.000-3.000.000đ, Exciter/Winner 190k/ngày; vexere.com trang Mototrip (66 Trần Bình, 08:00-21:00) nhận/trả xe tại bến xe Nước Ngầm khung 8h-17h phí nhỏ, bảng giá 130k/160-190k/260k/200k, cọc 1tr-2tr giảm 50% cho sinh viên/vé máy bay khứ hồi. Intent local: khách tỉnh về qua cửa ngõ phía nam cần nhận xe nhanh hoặc thuê theo tháng; dân nội thành cần gửi xe đi xe khách.",
+  "official_sources": [
+    {
+      "name": "Bến xe Nước Ngầm (tham khảo địa lý)",
+      "url": "https://vantaitrungtin.com/gui-xe-may-o-ben-xe-nuoc-ngam/",
+      "note": "Địa lý theo nguồn vận tải: bến ở khu Hoàng Mai, cổng chính đường Ngọc Hồi; các con số gửi xe trong bài được trình bày là 'theo trang vận tải dẫn Quyết định 44/2017/QĐ-UBND' vì chưa mở được văn bản gốc; các con số khác chỉ dùng khi nằm trong claim_evidence."
+    }
+  ],
+  "supporting_sources": [
+    {
+      "name": "Vexere — Thuê xe máy Mototrip",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-mototrip.vi"
+    },
+    {
+      "name": "Thuê xe nhanh 247 — Thuê xe máy theo tháng Hà Nội",
+      "url": "https://hanoibiker.com/thue-xe-may-theo-thang-dai-han/"
+    },
+    {
+      "name": "Vận tải Trung Tín — Gửi xe máy ở bến xe Nước Ngầm",
+      "url": "https://vantaitrungtin.com/gui-xe-may-o-ben-xe-nuoc-ngam/"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-thanh-tri/",
+    "/lab/thue-xe-may/thue-xe-may-thuong-tin/",
+    "/lab/thue-xe-may/thue-xe-may-gan-ga-ha-noi/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-poi-ben-xe-nuoc-ngam: 1 row cho Bến xe Nước Ngầm; khác row thue-xe-may-ha-noi (toàn thành phố) và CG-rental-poi-ben-xe-giap-bat (bến khác cùng trục phía nam) — bài tập trung POI quanh bến trên trục Ngọc Hồi - Hoàng Mai, không tranh chấp từ khóa chính; link chéo hợp lệ (link sang bài Giáp Bát chỉ dùng khi bài đó đã PUBLISHED).",
+  "unique_angle": "Nước Ngầm là cửa ngõ phía nam trên trục Ngọc Hồi: bài tách ba nhu cầu thường bị trộn lẫn — thuê ngắn ngày (Mototrip nhận/trả xe tại bến khung 8h-17h), thuê theo tháng cho dân công tác (xe số 1,5 triệu/tháng, trung bình khoảng 50k/ngày), và gửi xe tại bến khi đi xe khách (5.000đ/lượt trong ngày, 12.000đ/đêm với vé xe theo trang vận tải dẫn Quyết định 44/2017/QĐ-UBND); cộng khung giao tận nơi 4 bến với phí 30-40k và chính sách miễn cọc cho khách tỉnh có vé máy bay khứ hồi.",
+  "notes": "Bài informational_only: KHÔNG 'chúng tôi', KHÔNG chào dịch vụ, KHÔNG LocalBusiness schema; disclosure đầu bài. Nguồn kieugiaexpress chỉ dùng tham khảo phụ vì trộn địa danh (Phạm Hùng/Dương Đình Nghệ thuộc khu Mỹ Đình, không thuộc Nước Ngầm) — mọi con số gửi xe trong bài lấy từ vantaitrungtin và trình bày dạng 'theo trang vận tải dẫn quy định' vì chưa mở được văn bản gốc Quyết định 44/2017/QĐ-UBND. Mọi con số lấy đúng claim_evidence. Sau sắp xếp hành chính 2025 giữ tên địa danh quen thuộc (Hoàng Mai, Hoàn Kiếm). Link tới bài Giáp Bát (A00063) chỉ chèn khi A00063 đã PUBLISHED, nếu không thay bằng link thue-xe-may-thuong-tin.",
+  "claim_evidence": [
+    {
+      "claim": "Trên nền tảng Vexere, nhà xe Mototrip (66 Trần Bình, phường Nghĩa Đô, mở cửa 08:00-21:00, 3 cơ sở tại Hà Nội) hỗ trợ khách nhận xe và trả xe với số tiền nhỏ phí giao nhận xe tại bến xe Nước Ngầm (cùng bến xe Giáp Bát, bến xe Mỹ Đình, Ga Hà Nội, Phố cổ) trong thời gian từ 8h sáng đến 17h; bảng giá: xe số 110cc (Wave RSX, Wave Alpha, Sirius, 2012-2022) 130.000đ/ngày; xe ga 125cc (Air Blade, Lead, Vision, Nouvo, 2010-2018) 160.000đ/ngày; xe ga 125cc (Air Blade, Vision, 2019-2023) 190.000đ/ngày; xe côn tay 150cc (Winner 150, Exciter 150) 260.000đ/ngày; xe điện VinFast Evo200 Lite 2024 200.000đ/ngày.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-mototrip.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Địa chỉ: 66 Trần Bình, Phường Nghĩa Đô, Thành phố Hà Nội / Giờ mở cửa: 08:00-21:00 ... Mototrip là một địa chỉ cho thuê xe máy uy tín, sở hữu 3 cơ sở tại Hà Nội. ... Nhà xe hỗ trợ khách hàng nhận xe và trả xe với số tiền nhỏ phí giao nhận xe tại các địa điểm phổ biến tại thành phố Hà Nội như bến xe Giáp Bát, bến xe nước ngầm, bến xe Mỹ Đình, Ga Hà Nội, Phố cổ, … trong thời gian từ 8h sáng đến 17h. ... Xe số 110cc Honda Wave RSX, Honda Wave Alpha, Yamaha Sirius 2012-2022 130.000 / Xe tay ga 125cc Honda Airblade, Honda Lead, Honda Vision, Yamaha Nouvo 2010-2018 160.000 / Xe tay ga 125cc Honda Airblade, Honda Vision 2019-2023 190.000 / Xe côn tay 150cc Honda Winner 150, Yamaha Exciter 150 2012-2022 260.000 / Xe máy điện Vinfast Evo200 Lite 2024 200.000"
+    },
+    {
+      "claim": "Thủ tục thuê xe Mototrip trên Vexere: giấy tờ là CCCD hoặc hộ chiếu còn hiệu lực và GPLX hạng A1 hoặc cao hơn; không yêu cầu đặt cọc giữ xe khi đăng ký thuê xe qua nền tảng; khi nhận xe cọc trước 1.000.000đ với xe số và 2.000.000đ với xe ga, nếu không có giấy tờ tùy thân thì số tiền cọc cần gấp 3 lần; nhà xe giảm 50% tiền cọc cho khách có thẻ sinh viên hoặc vé máy bay khứ hồi; tại điểm nhận xe đã hẹn trước xuất trình mẫu xác nhận thuê xe của Vexere cùng giấy tờ tùy thân để làm hợp đồng và nhận xe.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-mototrip.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Căn cước công dân (CCCD) hoặc Hộ chiếu còn hiệu lực / Giấy phép lái xe (bằng lái xe) hạng A1 hoặc cao hơn ... Tại đây không yêu cầu đặt cọc giữ xe khi đăng ký thuê xe. ... Số tiền cọc 1.000.000 vnd đối với xe số và 2.000.000 vnd đối với xe ga nếu không có giấy tờ tùy thân cần gấp 3 lần số tiền cọc. Nhà xe linh hoạt giảm 50% tiền cọc đối với khách hàng có thẻ sinh viên hoặc vé máy bay khứ hồi. ... Tại điểm nhận xe đã hẹn trước, bạn cần xuất trình mẫu xác nhận thuê xe của Vexere cùng các giấy tờ tùy thân để làm hợp đồng thuê xe và nhận xe."
+    },
+    {
+      "claim": "Nhà xe giao tận nơi (hanoibiker/thuê xe nhanh 247, cơ sở 47 Thợ Nhuộm, Hoàn Kiếm và 35 Đường Láng, Ngã Tư Sở, hotline 0943990886) ghi: dịch vụ nhận giao xe trong nội thành Hà Nội, giao nhanh tận nơi trong khu vực phố cổ, bến xe Nước Ngầm, bến xe Mỹ Đình, Bến xe Gia Lâm, Bến xe Giáp Bát với phí giao xe 30.000đ - 40.000đ; thủ tục cọc từ 1-2 triệu, miễn cọc cho du khách tỉnh khác đã đặt vé máy bay khứ hồi, khách nước ngoài đặt cọc passport được miễn cọc; kèm miễn phí 2 mũ bảo hiểm, áo mưa, bộ đồ sửa xe, bơm xe, dây buộc; giá thuê dài hạn theo tháng: xe số Honda/Yamaha (Wave, Jupiter, Sirius, Future) 1.500.000đ/tháng; xe ga Lead, Air Blade, Vision 2.500.000đ - 3.000.000đ/tháng; xe côn Exciter, Winner 190.000đ/ngày hoặc 3.000.000đ/tháng.",
+      "source_url": "https://hanoibiker.com/thue-xe-may-theo-thang-dai-han/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thủ tục thuê xe máy đơn giản, bạn chỉ cần chuẩn bị từ 1-2 triệu hoặc nếu bạn muốn thuê xe máy không cần đặt cọc thì bạn phải là du khách ở tỉnh khác và đã đặt vé máy bay khứ hồi. Khách nước ngoài đặt lại passport cũng được miễn cọc ... Dịch vụ cho thuê xe máy Hà Nội, nhận giao xe trong nội thành Hà Nội, giao nhanh tận nơi trong khu vực phố cổ, bến xe nước ngầm, bến xe Mỹ Đình, Bến xe Gia Lâm, Bến Xe Giáp Bát. Phí Giao Xe từ 30k -40k ... Miễn phí 2 mũ đẹp chất lượng , áo mưa , bộ đồ sửa xe , bơm xe , dây buộc… ... Cho thuê xe số các loại: xe Wave, Jupiter, Sirius, future…Toàn bộ xe chính hãng 100% của Honda, Yamaha. ... Giá Thuê Dài hạn theo tháng: 1.500.000đ/tháng ... Lead, Ab, Vision ... Giá Thuê Dài hạn theo tháng: 2.500.000đ – 3.000.0000đ/tháng ... Dịch vụ cho thuê xe exciter winner ... 190k/ngày, Giá Thuê Dài hạn theo tháng: 3.000.0000đ/tháng ... Cơ sở 1: 47 Thợ nhuộm Hoàn Kiếm, Hà Nội Cơ sở 2: 35 đường Láng, Ngã tư Sở"
+    },
+    {
+      "claim": "Theo trang vận tải Trung Tín cập nhật 6/2026, bãi gửi xe máy chính thức tại bến xe Nước Ngầm thu giá theo Quyết định 44/2017/QĐ-UBND của TP Hà Nội: trong ngày 5.000đ/lượt, qua đêm 12.000đ/lượt và bắt buộc xuất trình vé xe khách tuyến cố định khi gửi qua đêm; gửi qua đêm trong khuôn viên bến chỉ dành cho hành khách có vé xe khách liên tỉnh; bãi chính thức nằm bên phải cổng chính đường Ngọc Hồi (đi thẳng khoảng 30m gần nhà chờ xe khách liên tỉnh); các bãi giữ xe tư nhân ngoài bến thu 30.000đ - 50.000đ/đêm theo giá thị trường; cửa số 10 trên đường Pháp Vân dành cho khách liên hệ công tác; cổng phụ phía sau bến trên đường Giải Phóng có các bãi tư nhân.",
+      "source_url": "https://vantaitrungtin.com/gui-xe-may-o-ben-xe-nuoc-ngam/",
+      "source_domain": "vantaitrungtin.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá gửi xe bao nhiêu? Trong ngày: 5.000đ/lượt. Qua đêm (có vé xe): 12.000đ/lượt theo đúng quy định. ... Đây là bãi thuộc sự quản lý của Ban điều hành bến. Theo Quyết định 44/2017/QĐ-UBND của TP Hà Nội, mức giá được quy định nghiêm ngặt: Trong ngày (ban ngày): 5.000đ/lượt. Qua đêm: 12.000đ/lượt (Bắt buộc phải xuất trình vé xe khách tuyến cố định khi gửi). ... Có nhận gửi qua đêm không? Có, nhưng chỉ dành cho hành khách có vé xe khách liên tỉnh. Người ngoài không được gửi qua đêm trong khuôn viên bến. ... Khách gửi thông thường (Cổng chính Ngọc Hồi): Đi vào cổng chính bến xe Nước Ngầm (mặt đường Ngọc Hồi, Hoàng Mai), đi thẳng khoảng 30m, nhìn sang bên tay phải gần nhà chờ xe khách liên tỉnh là bãi gửi chính thức. ... Khách liên hệ công tác (Cửa số 10): ... cửa số 10 nằm trên đường Pháp Vân. ... Bãi tư nhân (Cổng phụ Giải Phóng): Đi dọc theo hướng cổng phụ phía sau bến xe (đường Giải Phóng) ... Các bãi giữ xe tư nhân ngoài bến (Không cần vé xe) ... Mức giá thị trường tự do hiện tại dao động từ 30.000đ – 50.000đ/đêm."
+    }
+  ]
+}
