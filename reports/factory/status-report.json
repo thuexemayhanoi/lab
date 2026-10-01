@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T06:44:01.113Z",
+  "generated_at": "2026-10-01T07:14:37.218Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 43,
-    "PLANNED": 9957
+    "PUBLISHED": 45,
+    "PLANNED": 9955
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 37,
-      "PLANNED": 4963
+      "PUBLISHED": 39,
+      "PLANNED": 4961
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00034",
-  "next_claimable_id": "A00035",
+  "last_completed_id": "A00036",
+  "next_claimable_id": "A00037",
   "blocked": [],
   "published": [
     {
@@ -244,6 +244,18 @@
       "pk": "thuê xe máy Cà Mau",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ca-mau/"
+    },
+    {
+      "id": "A00035",
+      "pk": "thuê xe máy Long Biên",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-long-bien/"
+    },
+    {
+      "id": "A00036",
+      "pk": "thuê xe máy Hoàn Kiếm",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-hoan-kiem/"
     },
     {
       "id": "A00052",
