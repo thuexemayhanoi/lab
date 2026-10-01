@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T23:56:13.235Z",
+  "generated_at": "2026-10-01T23:58:43.206Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 95,
-    "PLANNED": 9905
+    "PUBLISHED": 97,
+    "PLANNED": 9903
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 89,
-      "PLANNED": 4911
+      "PUBLISHED": 91,
+      "PLANNED": 4909
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00087",
-  "next_claimable_id": "A00088",
+  "last_completed_id": "A00089",
+  "next_claimable_id": "A00090",
   "blocked": [],
   "published": [
     {
@@ -562,6 +562,18 @@
       "pk": "thuê xe máy Biển Nha Trang",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-bien-nha-trang/"
+    },
+    {
+      "id": "A00088",
+      "pk": "thuê xe máy Đà Lạt",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-da-lat/"
+    },
+    {
+      "id": "A00089",
+      "pk": "thuê xe máy Thác Datanla",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-thac-datanla/"
     },
     {
       "id": "A00097",
