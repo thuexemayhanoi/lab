@@ -22,6 +22,12 @@ PUBLISH (atomic, FAST) → LIGHT VERIFY → COMMIT/PUSH → CI/PAGES → NEXT 2
 
 - Standard pair = 2 articles (`factory.js prepare-next --count 2`); CHUNK=10
   stays the engine hard cap.
+- GitHub-only writers submit the pair through the ephemeral writer-branch
+  inbox (`docs/WRITER-SUBMIT.md`): push 2 bodies + `submission.json` + 2
+  research packets to `writer/<pair>`; `factory-writer-submit.yml` IS the
+  writer execution environment (claims, QA/publishes, commits ONE clean
+  production commit to main — the writer branch is never merged). Local
+  git + Node 22 is an optional expert/recovery path, not a requirement.
 - FAST checks only what the current pair touches: transaction/lock sanity,
   selected IDs, research/QA contracts, grounding where required, staged
   consistency, checkpoint↔matrix coherence for the pair. FAST NEVER runs the
@@ -117,6 +123,12 @@ factory.js reports            # regenerate reports/factory/*.json
   whitelist including qa/publish). Recover-first, resume-before-claim,
   QA scopes fast/deep/full (thresholds never change), final-tree verify +
   safe push, single coordinator `lab-factory-production`.
+- Writer submission channel (`docs/WRITER-SUBMIT.md`): the GitHub-only
+  writer path reuses the SAME canonical engine and gates — claim truth assert
+  (`CLAIM_MISMATCH` restores truth byte-exact), `WRITER_QA_NOT_PASS`,
+  `STALE_WRITER_BASE`/`MAIN_MOVED_DURING_PUBLISH` race refusals,
+  `PRODUCTION_TREE_LEAK` guard (`writer-inbox/**` can never reach main),
+  never merges the writer branch, never force pushes.
 - Build manifest: `data/state/build-manifest.json` records EXACTLY the
   generated public outputs promoted to the repo root; every build prunes
   previous-build entries that are no longer generated (de-published pages

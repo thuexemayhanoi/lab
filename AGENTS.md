@@ -17,7 +17,38 @@ ecosystem, published as a static GitHub Pages site:
 ## NORMAL WRITER FLOW (Simple Production Mode — the ONLY loop a writer needs)
 
 Standard working pair = **2 articles per turn** (`--count 2`). Every writer
-run follows this loop and does NOT stop after one pair:
+run follows this loop and does NOT stop after one pair.
+
+### GitHub-only writer (CANONICAL — no local git/Node required)
+
+A writer with ONLY the GitHub connector submits through the ephemeral
+writer-branch inbox (full contract: `docs/WRITER-SUBMIT.md`):
+
+```
+FETCH FRESH MAIN
+→ CHOOSE NEXT 2 (next claimable contiguous pair)
+→ RESEARCH 2  (packets data/research/<ID>.json)
+→ WRITE 2 BODIES (writer-inbox/<ID>.body.html — one <h1>, semantic fragment)
+→ CREATE BRANCH writer/<pair> FROM MAIN (record base_main_sha = main HEAD)
+→ PUSH 5 FILES (2 bodies + writer-inbox/submission.json + 2 research packets)
+→ factory-writer-submit.yml = the writer execution environment:
+   VALIDATE → CLAIM EXACTLY THE PAIR → MATERIALIZE _drafts/ (runner only)
+   → WRAP → RESEARCH/QA/PUBLISH FAST (canonical operator, writer direct CLI
+     on the runner) → ASSERT PASS → ASSERT PUBLISHED → ONE CLEAN PRODUCTION
+   COMMIT on main (writer branch NEVER merged; fast-forward only)
+→ VERIFY (workflow green; main has the clean commit; branch self-deletes)
+→ FETCH FRESH MAIN → NEXT 2 → REPEAT
+```
+
+GitHub Actions supplies the Node runtime and the gitignored `_drafts/`
+boundary; the writer never needs local git, Node 22 or a local `_drafts/`.
+Refusals are deterministic: `STALE_WRITER_BASE`, `CLAIM_MISMATCH`,
+`WRITER_QA_NOT_PASS`, `PRODUCTION_TREE_LEAK`, `MAIN_MOVED_DURING_PUBLISH` —
+a failed submission never touches main and the branch stays for repair.
+
+### Local writer CLI (optional expert/recovery path)
+
+With local git + Node 22 the same loop runs directly:
 
 ```
 FETCH FRESH MAIN
@@ -35,13 +66,21 @@ FETCH FRESH MAIN
 → FETCH FRESH MAIN → NEXT 2 → REPEAT
 ```
 
+Both paths drive the SAME canonical engine (one QA/publish implementation);
+thresholds, gates, atomic publish, rollback, lock/transaction and the
+no-force-push discipline are identical.
+
 FAST = the production default scope. It verifies ONLY the current scope:
 transaction/lock sanity, selected ids, research/QA contracts, QA score +
 hash-bound evidence, grounding of the published ids, staged consistency,
 checkpoint/matrix coherence of the current chunk. It NEVER runs the full
 test-suite, capacity-check, editorial audit or soak — those are DEEP/FULL/
 Tier-4 gates (see "Validation model" below). Writer boundary: `qa`/`publish`
-run via the writer direct CLI (drafts are gitignored, never committed).
+run via the writer direct CLI (drafts are gitignored, never committed) — on
+the GitHub-only channel this CLI runs INSIDE the
+`factory-writer-submit.yml` runner, which materializes the inbox into a
+gitignored `_drafts/` and is therefore the writer environment (never the
+Actions command-file channel; see `docs/WRITER-SUBMIT.md`).
 
 A writer does NOT need to read the whole reliability system before every
 2-article pair. Deep hardening details live in `docs/CONTENT-FACTORY.md`,
@@ -72,8 +111,9 @@ XE MÁY ĐIỆN (electric) · PHỤ TÙNG (parts).
 5. `docs/SEO-OWNERSHIP.md` — who may claim what service where
 6. `docs/GEO-LOCAL-SEO.md` — geography & local-intent model
 7. `docs/PROC-RESEARCH.md`, `docs/PROC-QA.md`, `docs/PROC-PUBLISH.md`, `docs/PROC-RECOVERY.md`
-8. `docs/EXPERIMENT-METRICS.md` — measurement plan
-9. `docs/EDITORIAL-SYSTEM.md` — shared editorial design system (writers write
+8. `docs/WRITER-SUBMIT.md` — GitHub-only writer submission channel (ephemeral writer-branch inbox)
+9. `docs/EXPERIMENT-METRICS.md` — measurement plan
+10. `docs/EDITORIAL-SYSTEM.md` — shared editorial design system (writers write
    semantic markup only; presentation lives in `scripts/site/style.css`,
    `scripts/site/menu.js`, `scripts/site/shell.js`)
 
@@ -260,6 +300,11 @@ marker; see `docs/PROC-RECOVERY.md`).
 
 ## Roles
 
-- **External AI writer** (you, typically): research → write draft body → wrap → QA → publish.
+- **External AI writer** (you, typically): GitHub-only submission
+  (`docs/WRITER-SUBMIT.md`: research → push 2 bodies + packets to
+  `writer/<pair>`; Actions runs claim → QA → atomic publish) or the local
+  loop (research → write draft body → wrap → QA → publish).
 - **GitHub Actions**: tests, validation, deterministic generation, publish
-  promotion, site build, deployment. Never writes articles.
+  promotion (including the writer-submit runner as the writer's execution
+  environment — it runs the engine, never writes prose), site build,
+  deployment. Never writes articles.

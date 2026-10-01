@@ -31,10 +31,12 @@ on:
       - '.github/workflows/factory-soak.yml'
       - '.github/workflows/factory-liveness-watchdog.yml'
       - '.github/workflows/ci-validate.yml'
+      - '.github/workflows/factory-writer-submit.yml'
       - 'AGENTS.md'
       - 'docs/PROC-PUBLISH.md'
       - 'docs/CONTENT-FACTORY.md'
       - 'docs/PROC-RECOVERY.md'
+      - 'docs/WRITER-SUBMIT.md'
   pull_request:
     paths:
       - 'scripts/factory/**'
@@ -53,10 +55,12 @@ on:
       - '.github/workflows/factory-soak.yml'
       - '.github/workflows/factory-liveness-watchdog.yml'
       - '.github/workflows/ci-validate.yml'
+      - '.github/workflows/factory-writer-submit.yml'
       - 'AGENTS.md'
       - 'docs/PROC-PUBLISH.md'
       - 'docs/CONTENT-FACTORY.md'
       - 'docs/PROC-RECOVERY.md'
+      - 'docs/WRITER-SUBMIT.md'
   workflow_dispatch:
 
 permissions:
@@ -97,7 +101,7 @@ jobs:
         run: node scripts/factory/factory.js grounding
 
       - name: "Workflow YAML safety contract (operator: single coordinator, no force push, rebase re-verify)"
-        run: node --test tests/test-suite.js
+        run: node --test tests/test-suite.js tests/writer-submit-tests.js
 
       - name: Validation phải thuần READ-ONLY (working tree + truth không đổi)
         run: |

@@ -154,6 +154,26 @@ access. TWO DIFFERENT channels (NOT interchangeable):
   `cancel-in-progress: false`; an unconsumed command file is never overwritten
   by a newer one.
 
+## Writer submission channel (GitHub-only writer — canonical, no local git/Node)
+
+`docs/WRITER-SUBMIT.md` is the full contract. Summary: a writer with only
+the GitHub connector pushes exactly 5 files (`writer-inbox/<ID>.body.html` ×2,
+`writer-inbox/submission.json`, `data/research/<ID>.json` ×2) to an ephemeral
+branch `writer/<pair>` created from fresh main; `.github/workflows/
+factory-writer-submit.yml` then performs the canonical pipeline INSIDE the
+runner: validate → claim EXACTLY the pair (canonical `prepare-next` + truth
+assert, byte-exact restore on `CLAIM_MISMATCH`) → materialize the inbox into
+a gitignored `_drafts/` (runner only — the runner IS the writer environment)
+→ wrap → `operator.js research/qa/publish --scope fast` via the writer
+direct CLI → `assert-pass` (both rows PASS ≥ 75, else `WRITER_QA_NOT_PASS`,
+nothing pushed) → `assert-published` → ONE clean production commit
+(`git commit-tree -p <base>`; the writer branch is NEVER merged;
+`writer-inbox/**`/`_drafts/**` can never reach main) → plain fast-forward
+push (`MAIN_MOVED_DURING_PUBLISH` refuses races; never force push) → branch
+delete. This channel never scores, never redefines thresholds and never
+weakens any gate above — it reuses the same atomic publish/rollback/lock/
+transaction discipline as the local writer CLI.
+
 ## Validation model (4 tiers — MANDATORY)
 
 "CI green" is only valid when every tier that applies to the scope of the

@@ -42,7 +42,9 @@ jobs:
             | sed -n 's#^data/published/\(A[0-9]\{5\}\)\.html$#\1#p' | sort -u | paste -sd, - )
           if [ -n "$CHANGED_IDS" ]; then
             echo "grounding scope (changed articles): $CHANGED_IDS"
-            node scripts/factory/factory.js grounding $CHANGED_IDS
+            # pass the ids as SEPARATE argv entries (comma-joined would never
+            # match a matrix row and would falsely fail the gate)
+            node scripts/factory/factory.js grounding $(printf '%s' "$CHANGED_IDS" | tr ',' ' ')
           else
             echo "no changed article archives in this push — grounding scope empty (light content path)"
           fi
@@ -66,3 +68,12 @@ jobs:
             exit 1
           fi
           echo "OK: không có draft leak trong cây public."
+      - name: Writer-inbox không bao giờ nằm trên main (submission artifacts chỉ sống trên writer branches)
+        run: |
+          set -eu
+          test ! -e writer-inbox || { echo "FAIL: writer-inbox tồn tại trên main"; exit 1; }
+          if grep -rl "writer-inbox" index.html 404.html sitemap-*.xml assets/*.json 2>/dev/null; then
+            echo "FAIL: writer-inbox leak vào public indexes"
+            exit 1
+          fi
+          echo "OK: không có writer-inbox trên main."
