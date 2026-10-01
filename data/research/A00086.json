@@ -1,0 +1,211 @@
+{
+  "article_id": "A00086",
+  "primary_keyword": "thuê xe máy Cù Lao Chàm",
+  "secondary_keywords": [],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Cù Lao Chàm",
+    "Hội An",
+    "cảng Cửa Đại",
+    "xã Tân Hiệp",
+    "Đà Nẵng",
+    "Hòn Lao",
+    "bãi Xếp",
+    "bãi Hương",
+    "hải đăng Cù Lao Chàm",
+    "Eo Gió",
+    "hồ nước ngọt bãi Bìm",
+    "phố cổ Hội An"
+  ],
+  "vehicle_entities": [
+    "xe máy",
+    "xe số",
+    "xe tay ga",
+    "cano cao tốc",
+    "tàu gỗ"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Honda Vision",
+    "Honda AirBlade",
+    "Honda Lead",
+    "Honda Wave",
+    "Yamaha Sirius",
+    "Yamaha Jupiter",
+    "Yamaha Janus",
+    "Yamaha Nouvo LX"
+  ],
+  "questions_found": [
+    "Có chạy được xe máy từ Hội An ra Cù Lao Chàm không?",
+    "Giá thuê xe máy trên đảo Cù Lao Chàm là bao nhiêu?",
+    "Phí tham quan Cù Lao Chàm bao nhiêu và ai được miễn?",
+    "Nên đi cano hay tàu gỗ ra đảo?",
+    "Vé cano Cù Lao Chàm giá bao nhiêu?",
+    "Trẻ em đi Cù Lao Chàm có cần mua vé không?"
+  ],
+  "related_queries": [
+    "vé cano Cù Lao Chàm",
+    "tàu gỗ Cù Lao Chàm",
+    "phí tham quan Cù Lao Chàm",
+    "thuê xe máy Hội An",
+    "du lịch Cù Lao Chàm tự túc",
+    "cảng Cửa Đại"
+  ],
+  "serp_patterns": "SERP cho từ khóa là tổng hợp của các tour và cẩm nang (culaochamtour, danangopentour), tin tức phí tham quan (tuoitre, thanhnien) và danh sách thuê xe Hội An (tripbike, motogo). Trang informational chỉ giành vị trí tốt nếu trả lời trực tiếp: không thể chạy xe ra đảo, chi phí hai chặng (đất liền + đảo), bảng giá vé và thuê xe có nguồn.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "Tuổi Trẻ — Phí tham quan Cù Lao Chàm giữ nguyên 70.000 đồng/người",
+      "url": "https://tuoitre.vn/phi-tham-quan-cu-lao-cham-giu-nguyen-70-000-dong-nguoi-20260610154322323.htm"
+    },
+    {
+      "name": "Thanh Niên — Ai được miễn phí tham quan Cù Lao Chàm tại Đà Nẵng",
+      "url": "https://thanhnien.vn/ai-duoc-mien-phi-tham-quan-cu-lao-cham-tai-da-nang-185260610095308753.htm"
+    },
+    {
+      "name": "Cù Lao Chàm Tour — Bảng giá cano cao tốc Cù Lao Chàm 2026",
+      "url": "https://culaochamtour.com/tin-tuc-du-lich-cu-lao-cham/gia-ve-gio-khoi-hanh-ca-no-cao-toc-di-cu-lao-cham.html"
+    },
+    {
+      "name": "Cù Lao Chàm Tour — Cho thuê xe máy tại Cù Lao Chàm",
+      "url": "https://culaochamtour.com/cam-nang-du-lich-cu-lao-cham/cho-thue-xe-may-tai-cu-lao-cham.html"
+    },
+    {
+      "name": "Đà Nẵng Open Tour — Giá vé tham quan Cù Lao Chàm",
+      "url": "https://danangopentour.vn/gia-ve-cu-lao-cham.html"
+    },
+    {
+      "name": "TripBike — Thuê xe máy Hội An",
+      "url": "https://tripbike.net/thue-xe-may-hoi-an/"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/",
+    "https://thuexemayhanoi.github.io/lab/kinh-nghiem/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-da-nang/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-co-do-hue/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ba-na-hills/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-vinh-ha-long/"
+  ],
+  "potential_cannibalization": "Không có trang nào trong repo hiện có trùng cụm \"Cù Lao Chàm\". Bài mới khác rõ các trang địa phương hiện có (Hội An chưa có; Đà Nẵng là bài tỉnh).",
+  "unique_angle": "Chỉ bài này trả lời trực diện việc KHÔNG thể chạy xe từ đất liền ra đảo, tách chuyến đi thành hai chặng với bảng chi phí hai chặng (vé tàu + gửi xe + thuê xe hai đầu), thay vì chỉ liệt kê cửa hàng như các trang tour.",
+  "notes": "Cù Lao Chàm thuộc xã Tân Hiệp, TP Đà Nẵng (sáp nhập địa giới 2025) nhưng điểm xuất phát chính vẫn là cảng Cửa Đại, Hội An — nêu rõ cả hai để khớp intent tìm kiếm. Mọi mốc giá lấy theo nguồn đã mở; không bịa địa chỉ, số điện thoại cửa hàng.",
+  "claim_evidence": [
+    {
+      "claim": "Phí tham quan Khu bảo tồn thiên nhiên Cù Lao Chàm là 70.000đ/người/lượt theo nghị quyết của HĐND thành phố Đà Nẵng, hiệu lực từ 10-6-2026",
+      "source_url": "https://tuoitre.vn/phi-tham-quan-cu-lao-cham-giu-nguyen-70-000-dong-nguoi-20260610154322323.htm",
+      "source_domain": "tuoitre.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Theo nghị quyết của Hội đồng nhân dân TP Đà Nẵng, từ 10-6-2026 phí tham quan Khu bảo tồn thiên nhiên Cù Lao Chàm được áp dụng mức 70.000 đồng/người/lượt."
+    },
+    {
+      "claim": "Trẻ em dưới 16 tuổi, học sinh và công dân Việt Nam từ đủ 60 tuổi trở lên thuộc nhóm được miễn phí tham quan Cù Lao Chàm",
+      "source_url": "https://thanhnien.vn/ai-duoc-mien-phi-tham-quan-cu-lao-cham-tai-da-nang-185260610095308753.htm",
+      "source_domain": "thanhnien.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bên cạnh đó, trẻ em dưới 16 tuổi, học sinh, công dân Việt Nam từ đủ 60 tuổi trở lên theo quy định của luật Người cao tuổi; người thuộc hộ nghèo, hộ cận nghèo."
+    },
+    {
+      "claim": "Cù Lao Chàm là quần đảo gồm 8 hòn đảo, cách đất liền khoảng 15 km, thuộc xã Tân Hiệp, thành phố Đà Nẵng; năm 2009 UNESCO công nhận là Khu dự trữ sinh quyển thế giới",
+      "source_url": "https://thanhnien.vn/ai-duoc-mien-phi-tham-quan-cu-lao-cham-tai-da-nang-185260610095308753.htm",
+      "source_domain": "thanhnien.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cù Lao Chàm là quần đảo gồm 8 hòn đảo, nằm cách đất liền khoảng 15 km, thuộc xã Tân Hiệp, thành phố Đà Nẵng. Năm 2009, UNESCO đã công nhận Cù Lao Chàm là Khu dự trữ sinh quyển thế giới."
+    },
+    {
+      "claim": "Trên đảo có khoảng 2.500 người sống chủ yếu bằng dịch vụ du lịch và đi biển",
+      "source_url": "https://tuoitre.vn/phi-tham-quan-cu-lao-cham-giu-nguyen-70-000-dong-nguoi-20260610154322323.htm",
+      "source_domain": "tuoitre.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tổng dân số trên đảo hiện khoảng 2.500 người, sống chủ yếu bằng dịch vụ du lịch và đi biển."
+    },
+    {
+      "claim": "Vé cano cao tốc Cửa Đại – Cù Lao Chàm cho người lớn từ 200.000đ/chiều",
+      "source_url": "https://culaochamtour.com/tin-tuc-du-lich-cu-lao-cham/gia-ve-gio-khoi-hanh-ca-no-cao-toc-di-cu-lao-cham.html",
+      "source_domain": "culaochamtour.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chỉ từ 200.000 VNĐ/chiều, bạn đã có thể sở hữu tấm vé ca nô cao tốc đưa bạn đến với Cù Lao Chàm; bảng giá: từ 05 tuổi trở lên 200,000 vnđ/1 chiều."
+    },
+    {
+      "claim": "Cano cao tốc từ cảng Cửa Đại ra đảo mất khoảng 20 phút",
+      "source_url": "https://culaochamtour.com/cam-nang-du-lich-cu-lao-cham/cho-thue-xe-may-tai-cu-lao-cham.html",
+      "source_domain": "culaochamtour.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bạn sẽ xuất phát từ cảng Cửa Đại bằng ca nô cao tốc Cù Lao Chàm. Chỉ mất khoảng 20 phút lướt trên những con sóng bạc đầu, không gian bao la của đảo Hòn Lao sẽ hiện ra trước mắt."
+    },
+    {
+      "claim": "Cù Lao Chàm cách đất liền Hội An khoảng 30 phút đi ca nô",
+      "source_url": "https://tuoitre.vn/phi-tham-quan-cu-lao-cham-giu-nguyen-70-000-dong-nguoi-20260610154322323.htm",
+      "source_domain": "tuoitre.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cù Lao Chàm là một cụm đảo cách đất liền Hội An khoảng 30 phút đi ca nô."
+    },
+    {
+      "claim": "Tàu gỗ từ Cửa Đại ra Cù Lao Chàm mất khoảng 2 tiếng",
+      "source_url": "https://danangopentour.vn/gia-ve-cu-lao-cham.html",
+      "source_domain": "danangopentour.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tàu gỗ chỉ dùng để chở hàng, Và phải mất 2h đồng hồ mới ra tới Đảo Cù Lao Chàm. Nếu bạn sử dụng ca nô Cao tốc chỉ mất 20 phút để du lịch Đảo Cù Lao Chàm. (2h đồng hồ = khoảng 2 tiếng)"
+    },
+    {
+      "claim": "Tàu gỗ Cửa Đại – Bãi Làng giá người lớn 150.000đ/khách, trẻ em 100.000đ/bé một chiều",
+      "source_url": "https://culaochamtour.com/tin-tuc-du-lich-cu-lao-cham/gia-ve-gio-khoi-hanh-ca-no-cao-toc-di-cu-lao-cham.html",
+      "source_domain": "culaochamtour.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Trẻ em | Cảng Cửa Đại – Bãi Làng (1 chiều) | 100,000 vnd / bé. Người lớn | 150,000 vnđ/1 khách."
+    },
+    {
+      "claim": "Phí gửi xe máy theo tàu gỗ ra Cù Lao Chàm là 100.000đ/xe",
+      "source_url": "https://culaochamtour.com/tin-tuc-du-lich-cu-lao-cham/gia-ve-gio-khoi-hanh-ca-no-cao-toc-di-cu-lao-cham.html",
+      "source_domain": "culaochamtour.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá vé gửi xe máy: 100.000 VNĐ/xe"
+    },
+    {
+      "claim": "Tàu gỗ khởi hành từ cảng Cửa Đại lúc 8h00 và từ Cù Lao Chàm lúc 12h00 hàng ngày",
+      "source_url": "https://culaochamtour.com/tin-tuc-du-lich-cu-lao-cham/gia-ve-gio-khoi-hanh-ca-no-cao-toc-di-cu-lao-cham.html",
+      "source_domain": "culaochamtour.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Khởi hành từ Cảng Cửa Đại: 08h00 hàng ngày. Khởi hành từ Cù Lao Chàm: 12h00 hàng ngày."
+    },
+    {
+      "claim": "Thuê xe máy tự lái trên đảo Cù Lao Chàm niêm yết 250.000đ/ngày (chưa gồm xăng); thuê xe có tài xế 100.000đ/người",
+      "source_url": "https://culaochamtour.com/cam-nang-du-lich-cu-lao-cham/cho-thue-xe-may-tai-cu-lao-cham.html",
+      "source_domain": "culaochamtour.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe tự lái | 250.000 VNĐ / ngày | Tự do di chuyển, chưa bao gồm xăng. Thuê xe có tài xế | 100.000 VNĐ / người | An toàn, có hướng dẫn viên địa phương đi kèm."
+    },
+    {
+      "claim": "Ở Hội An, cửa hàng Anh Dương cho thuê Nouvo LX 80.000đ/ngày và Airblade, Vision, Janus 100.000đ/ngày, giao tận nơi miễn phí trong phố",
+      "source_url": "https://tripbike.net/thue-xe-may-hoi-an/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cửa hàng này cho thuê xe rất rẻ, Nouvo lx 80k/ngày Airblade , vision, janus 100k / ngày. Được giao xe tận nơi miễn phí trong phố."
+    },
+    {
+      "claim": "Hidibike Hội An niêm yết xe số từ 100.000đ/ngày, xe ga 150.000đ/ngày; thuê dài ngày giảm còn 90.000đ (xe số) và 140.000đ (xe ga)",
+      "source_url": "https://tripbike.net/thue-xe-may-hoi-an/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá cho thuê xe tại Hidibike từ 100k cho những dòng tay số, đi nhiều ngày giá được giảm còn 90k. Dòng xe tay ga 150k khi thuê dài ngày giá còn 140k."
+    },
+    {
+      "claim": "Bảng giá tham khảo tại Hội An: xe số Sirius, Wave 80.000 – 120.000đ/ngày; xe ga Lead, Vision, Airblade 100.000 – 130.000đ/ngày",
+      "source_url": "https://tripbike.net/thue-xe-may-hoi-an/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Sirius | 80.000 – 120.000 | Wave Rs | 80.000 – 120.000 | Lead 110 | 100.000 – 130.000 | Vision 110 | 100.000 – 130.000 | Airblade 110 | 100.000 – 130.000"
+    },
+    {
+      "claim": "Cano cao tốc thường khởi hành trong khung 8h30–9h00 từ cảng Cửa Đại; mùa hè có thêm chuyến 14h00",
+      "source_url": "https://culaochamtour.com/tin-tuc-du-lich-cu-lao-cham/gia-ve-gio-khoi-hanh-ca-no-cao-toc-di-cu-lao-cham.html",
+      "source_domain": "culaochamtour.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thông thường ca nô khởi hành từ 08h45 – 9h00 hàng ngày. Trường hợp đông khách: Có thể chậm hơn 30 phút. Mùa cao điểm (Hè): Thêm chuyến 14h00."
+    }
+  ]
+}

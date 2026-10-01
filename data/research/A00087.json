@@ -1,0 +1,160 @@
+{
+  "article_id": "A00087",
+  "primary_keyword": "thuê xe máy Biển Nha Trang",
+  "secondary_keywords": [],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Nha Trang",
+    "Khánh Hòa",
+    "bờ biển Nha Trang",
+    "tháp Trầm Hương",
+    "đường Trần Phú",
+    "Ga Nha Trang",
+    "Cam Ranh"
+  ],
+  "vehicle_entities": [
+    "xe máy",
+    "xe số",
+    "xe tay ga",
+    "xe 50cc"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Honda Vision",
+    "Honda AirBlade",
+    "Honda Lead",
+    "Honda Wave RSX",
+    "Honda SH Mode",
+    "Yamaha Sirius",
+    "Yamaha Janus",
+    "Yamaha NVX"
+  ],
+  "questions_found": [
+    "Thuê xe máy Nha Trang giá bao nhiêu?",
+    "Có cần đặt cọc khi thuê xe máy ở Nha Trang không?",
+    "Một ngày thuê xe tính thế nào?",
+    "Đi xe thuê được ra ngoài tỉnh không?",
+    "Mùa cao điểm giá có tăng không?",
+    "Nhận xe máy ở đâu ở Nha Trang?"
+  ],
+  "related_queries": [
+    "giá thuê xe máy Nha Trang",
+    "thuê xe máy Nha Trang giao tận khách sạn",
+    "cho thuê xe máy Nha Trang",
+    "thuê xe ga Nha Trang",
+    "xe máy Nha Trang không cần cọc"
+  ],
+  "serp_patterns": "SERP bị chiếm bởi danh sách cửa hàng (motogo, vexere) và bài giá tổng hợp. Bài informational cần bảng giá có nguồn, quy định cọc/phạm vi cụ thể và POI địa phương (tháp Trầm Hương, Trần Phú, Ga Nha Trang) để khác biệt so với danh sách sao chép.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "Vexere — Thuê xe máy ở Nha Trang (bảng giá tháng)",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi"
+    },
+    {
+      "name": "MOTOGO — Thuê xe máy Nha Trang: các cơ sở giao xe tận khách sạn",
+      "url": "https://motogo.vn/thue-xe-may-nha-trang/"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/",
+    "https://thuexemayhanoi.github.io/lab/kinh-nghiem/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-khanh-hoa/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-cam-ranh/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-vinh-ha-long/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-honda-vision-ha-noi/"
+  ],
+  "potential_cannibalization": "Đã có bài \"thuê xe máy Khánh Hòa\" (toàn tỉnh). Bài Biển Nha Trang viết về trọng tâm bờ biển trung tâm + quy định giao xe; dẫn liên kết sang bài tỉnh thay vì lặp bảng giá toàn tỉnh.",
+  "unique_angle": "Góc bài: hàng rào quy định thực tế (24 tiếng, phạm vi tỉnh, phụ thu vượt 50km, cọc khách nước ngoài) và vị trí nhận xe quanh tháp Trầm Hương — thông tin các danh sách cửa hàng hay bỏ qua.",
+  "notes": "Không dùng \"chúng tôi\", không chào dịch vụ. Địa chỉ cửa hàng chỉ nêu nơi nguồn công khai ghi rõ (Tùng 96B Trần Phú, San Hô Việt 152 Hùng Vương); không bịa thêm địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Giá thuê xe máy ở Nha Trang dao động từ 100.000 đến 200.000đ/ngày tùy thời điểm và loại xe",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy ở Nha Trang không có nhiều khác biệt so với một số khu vực du lịch ven biển khác, với mức từ 100.000 đến 200.000 đồng/ngày tùy thuộc vào thời điểm và loại xe."
+    },
+    {
+      "claim": "Xe số phổ thông ở Nha Trang thường dao động từ 100.000 đến 120.000đ/ngày; bảng giá xe số phổ thông 100.000 – 130.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe số ở Nha Trang thường dao động từ 100.000 đến 120.000 đồng mỗi ngày. Xe số phổ thông (Honda Wave RSX, Yamaha Sirius) | 100.000 – 130.000."
+    },
+    {
+      "claim": "Xe ga phổ thông trung bình khoảng 150.000đ/ngày; bảng giá xe tay ga phổ thông 120.000 – 200.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe ga tại Nha Trang thường sẽ cao hơn xe số, trung bình khoảng 150.000 đ/ngày. Xe tay ga phổ thông (Honda Airblade, Honda Vision, Yamaha Janus) | 120.000 – 200.000."
+    },
+    {
+      "claim": "MOTOTA (Anh Trưởng) cho thuê xe số Sirius, Wave, Blade từ 80.000đ/ngày và xe ga Vision, Air Blade, Lead từ 100.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "chỉ từ 80.000đ/ngày cho xe số Sirius, Wave, Blade và từ 100.000đ/ngày cho các dòng xe ga Vision, Air Blade, Lead."
+    },
+    {
+      "claim": "Cửa hàng Tùng (96B Trần Phú) cho thuê xe số 100.000đ/ngày, xe ga phổ thông 130.000đ – 150.000đ/ngày, SH Mode 200.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bạn có thể thuê xe số với giá 100.000đ/ngày, xe tay ga phổ thông từ 130.000đ – 150.000đ/ngày hoặc dòng cao cấp như SH Mode với giá 200.000đ/ngày."
+    },
+    {
+      "claim": "Cửa hàng Trầm Hương cho thuê xe ga 125cc và 150cc đồng giá khoảng 130.000đ/ngày, xe 50cc khoảng 100.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe tay ga 125cc và 150cc đồng giá khoảng 130.000đ/ngày, dòng xe 50cc có giá 100.000đ/ngày."
+    },
+    {
+      "claim": "San Hô Việt (152 Hùng Vương) niêm yết xe ga phổ thông 150.000đ/ngày, xe đời cũ khoảng 130.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe tay ga phổ thông tại đây là 150.000đ/ngày, xe đời cũ hơn (khoảng 2017) có giá 130.000đ/ngày."
+    },
+    {
+      "claim": "Một ngày thuê xe ở Nha Trang thường tính trọn 24 tiếng; từ ngày thứ hai, thuê thêm không quá 4 tiếng thường tính thêm nửa ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "một ngày thuê xe ở Nha Trang thường tính theo 24 tiếng. Từ ngày thứ 2, nếu bạn chỉ thuê thêm không quá 4 tiếng thì sẽ chỉ phải tính thêm nửa ngày thuê xe."
+    },
+    {
+      "claim": "Nhiều nhà xe giới hạn phạm vi trong tỉnh Khánh Hoà; vượt quá bán kính 50km phụ thu 100.000đ, đi ra tỉnh khác phụ thu 300.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Vui lòng chỉ sử dụng xe trong phạm vi Tỉnh Khánh Hoà (cũ), nếu đi quá bán kính 50km phụ thu 100.000đ, nếu đi qua tỉnh Khánh Hoà 1 ngày phụ thu 300.000đ."
+    },
+    {
+      "claim": "Khách nước ngoài thường phải chụp hộ chiếu và đặt cọc 2.000.000đ/xe khi thuê xe máy ở Nha Trang",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Đối với khách nước ngoài chụp Passport và cọc 2.000.000đ. Hoặc chụp hình CCCD/Passport và cọc 2.000.000đ/xe."
+    },
+    {
+      "claim": "Mùa cao điểm (Lễ 30/4, Quốc khánh 2/9, Tết) giá thuê xe máy ở Nha Trang thường chỉ tăng khoảng 20%",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Vào các dịp cao điểm như Lễ 30/4, Quốc khánh 2/9, Tết Dương Lịch, Tết Âm Lịch,… giá thuê xe máy ở Nha Trang thường tăng không đáng kể chỉ khoảng 20%."
+    },
+    {
+      "claim": "Nhiều nhà xe hỗ trợ giao, lấy xe tận nơi quanh tháp Trầm Hương, đường Trần Phú và Ga Nha Trang",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nhà xe hỗ trợ giao và lấy xe tận nơi từ 6h đến 21h trong bán kính 3km quanh tháp Trầm Hương, bao gồm các khu vực đường Trần Phú, Nguyễn Thị Minh Khai và Ga Nha Trang."
+    }
+  ]
+}
