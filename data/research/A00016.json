@@ -1,0 +1,95 @@
+{
+  "article_id": "A00016",
+  "primary_keyword": "thuê xe máy Bắc Ninh",
+  "secondary_keywords": [
+    "cho thuê xe máy Bắc Ninh",
+    "thuê xe máy thành phố Bắc Ninh",
+    "thuê xe máy Từ Sơn",
+    "thuê xe máy đi làm tại Bắc Ninh"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Bắc Ninh",
+    "thành phố Bắc Ninh",
+    "Từ Sơn",
+    "ga Bắc Ninh",
+    "Khu công nghiệp VSIP Bắc Ninh",
+    "đền Đô",
+    "Hội Lim",
+    "quan họ Bắc Ninh"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe điện"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki",
+    "VinFast"
+  ],
+  "model_entities": [
+    "Wave",
+    "Vision",
+    "Air Blade",
+    "Sirius"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Bắc Ninh giá bao nhiêu một ngày?",
+    "Bắc Ninh (tỉnh mới sau sáp nhập) cho thuê xe máy ở đâu?",
+    "thuê xe máy theo tuần, theo tháng ở Bắc Ninh có rẻ hơn không?",
+    "đi công tác tại các khu công nghiệp Bắc Ninh nên thuê xe gì?",
+    "thuê xe máy từ Bắc Ninh về Hà Nội tiện cỡ nào?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Bắc Ninh",
+    "cho thuê xe máy tự lái Bắc Ninh",
+    "thuê xe máy dài hạn cho kỹ sư Bắc Ninh",
+    "thuê xe máy đi Hội Lim, đền Đô"
+  ],
+  "serp_patterns": "SERP gồm cẩm nang danh sách cửa hàng (tripbike, giahuy, motogo) và trang giá của chính các đơn vị cho thuê tại Bắc Ninh; hai nhóm nhu cầu rõ rệt: công nhân/kỹ sư khu công nghiệp thuê dài hạn và khách cuối tuần đi lễ hội, quê quan họ. Các listing ghi giá khoảng 100.000–200.000đ/ngày tùy loại xe.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-tai-bac-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "tham khảo chung về các cơ sở cho thuê xe máy tại Bắc Ninh và đặc thù nhu cầu đi lại ở khu công nghiệp"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/kinh-nghiem/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-noi-bai/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-bac-ninh: nhóm gốc cấp tỉnh. Row 'Bắc Ninh (thành phố) có không' (A00523) và các row model/giá riêng là intent hẹp hơn — bài này giữ tổng quan thị trường hai nhóm khách (công nghiệp + du lịch), không lấn intent thành phố riêng hay giá từng model.",
+  "unique_angle": "Bài tỉnh gốc sau sáp nhập 2025 (Bắc Ninh mới gồm Bắc Giang cũ): góc viết là thị trường hai nhu cầu — thuê dài hạn cho người làm ở khu công nghiệp (VSIP và cụm KCN) và thuê ngắn ngày cho khách lễ hội, đền Đô, Hội Lim, quan họ — kèm mặt bằng giá niêm yết công khai và so sánh thuê ở thành phố Bắc Ninh vs khu Từ Sơn.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng, chỉ nêu địa điểm được nguồn tổng hợp công khai ghi. Ga Bắc Ninh thuộc tuyến đường sắt Hà Nội – Đồng Đăng; Khu công nghiệp VSIP là POI đã verify trong data/geography (important-poi IP-019). Sáp nhập hành chính 2025: Bắc Giang + Bắc Ninh = tỉnh Bắc Ninh.",
+  "claim_evidence": [
+    {
+      "claim": "Ở Bắc Ninh có thể thuê xe với mức khoảng 100.000đ đến 150.000đ/ngày",
+      "source_url": "https://giahuy.org/thue-xe-may-bac-ninh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Bạn có thể thuê một chiếc xe tốt với mức giá chỉ khoảng 100.000đ – 150.000đ/ngày, giá tương đương như thuê xe máy Hải Phòng hay Thuê xe máy phố cổ Hà Nội»."
+    },
+    {
+      "claim": "Cẩm nang TripBike ghi mức thuê phổ biến ở Bắc Ninh từ 100.000đ đến 150.000đ",
+      "source_url": "https://tripbike.net/thue-xe-may-bac-ninh/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá cho thuê cũng rẻ chỉ từ 100-150k là bạn chọn được mẫu xe mình thích và vi vu Bắc Ninh» — tức 100.000đ đến 150.000đ; cùng trang ghi «Hoa Sen mức giá thuê 100- 150k cho các loại xe tay số và tay ga. Với giá hợp lý, cũng là giá theo mặt bằng chung ở Bắc Ninh»."
+    },
+    {
+      "claim": "Một địa chỉ khác tại Bắc Ninh được TripBike tổng hợp ghi giá thuê 100.000đ đến 200.000đ",
+      "source_url": "https://tripbike.net/thue-xe-may-bac-ninh/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê xe 100k-200k, Địa chỉ: Nguyễn Văn Cừ» — tức khoảng 100.000đ đến 200.000đ/ngày."
+    }
+  ]
+}

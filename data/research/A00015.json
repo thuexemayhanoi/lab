@@ -1,0 +1,103 @@
+{
+  "article_id": "A00015",
+  "primary_keyword": "thuê xe máy Phú Thọ",
+  "secondary_keywords": [
+    "cho thuê xe máy Phú Thọ",
+    "thuê xe máy Việt Trì",
+    "thuê xe máy giá rẻ Việt Trì",
+    "thuê xe máy đi đền Hùng"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Phú Thọ",
+    "Việt Trì",
+    "đền Hùng",
+    "Tam Đảo",
+    "Chùa Tây Thiên",
+    "Vườn quốc gia Xuân Sơn",
+    "Thanh Miếu",
+    "Vân Phú",
+    "Liên Phương"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe côn tay",
+    "xe địa hình"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki"
+  ],
+  "model_entities": [
+    "Wave",
+    "Vision",
+    "Air Blade",
+    "Sirius"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Việt Trì giá bao nhiêu một ngày?",
+    "Phú Thọ (tỉnh mới sau sáp nhập) cho thuê xe máy ở đâu?",
+    "thuê xe máy từ Việt Trì đi đền Hùng có tiện không?",
+    "đi Tam Đảo thuê xe gì cho phù hợp?",
+    "thuê xe máy ở Việt Trì cần giấy tờ và tiền cọc bao nhiêu?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Việt Trì",
+    "cho thuê xe máy tự lái Phú Thọ",
+    "thuê xe máy đi Tam Đảo",
+    "thuê xe máy dài hạn Việt Trì"
+  ],
+  "serp_patterns": "SERP gần như toàn bộ là cẩm nang danh sách cửa hàng tại TP Việt Trì (tripbike, motogo, giahuy, taidanang, thuexequynhon) — intent informational/directory; cửa hàng tập trung quanh trung tâm Việt Trì (Thanh Miếu, Nông Trang, Vân Phú, khu Liên Phương); khách chính là du lịch đền Hùng, Tây Thiên, Tam Đảo và sinh viên/dân địa phương đi lại cuối tuần.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-viet-tri-phu-tho/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "tham khảo chung về các cơ sở cho thuê xe máy tại Việt Trì – Phú Thọ"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/kinh-nghiem/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-thai-nguyen/",
+    "/lab/cuu-ho-xe-may/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-phu-tho: nhóm gốc cấp tỉnh. Các row POI riêng (Tam Đảo A00075, Chùa Tây Thiên A00095, Đền Hùng A00096) và row 'Việt Trì có không' (A00522) là intent hẹp hơn — bài này giữ ở mức tổng quan thị trường, chỉ chạm POI ở mức định hướng, không lấn sâu intent POI.",
+  "unique_angle": "Bài tỉnh gốc sau sáp nhập 2025 (Phú Thọ nay bao gồm Vĩnh Phúc cũ): thị trường tập trung ở TP Việt Trì; góc viết là 'cặp hành lang' — trục Việt Trì – đền Hùng cho khách lễ hội Giỗ Tổ và trục Việt Trì – Tam Đảo cho khách nghỉ mát, kèm mặt bằng giá niêm yết công khai và thủ tục/cọc.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng, chỉ nêu cửa hàng được nguồn tổng hợp công khai ghi. Tam Đảo/Chùa Tây Thiên/Đền Hùng là POI đã verify trong data/geography (tỉnh Phú Thọ sau sáp nhập). Sáp nhập hành chính 2025: Vĩnh Phúc + Phú Thọ; Hòa Bình tách giữa Hà Nội và Phú Thọ.",
+  "claim_evidence": [
+    {
+      "claim": "Mặt bằng giá thuê xe máy ở Việt Trì – Phú Thọ dao động khoảng 80.000đ đến 250.000đ/ngày",
+      "source_url": "https://www.taidanang.com/thue-xe-may-phu-tho/",
+      "source_domain": "www.taidanang.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Trang tổng hợp ghi: «Giá thuê xe máy Phú Thọ chỉ dao động từ 80 nghìn đến 250 nghìn là sự tiết kiệm chi phí tốt nhất cho bạn khi dừng chân ở đây» — ghi số đầy đủ: khoảng 80.000đ đến 250.000đ/ngày."
+    },
+    {
+      "claim": "Cửa hàng Thủy Hùng (Việt Trì) được ghi công khai mức thuê từ 100.000đ đến 150.000đ/ngày",
+      "source_url": "https://giahuy.org/thue-xe-may-phu-tho/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Với mức giá Thủy Hùng cho thuê từ 100k đến 150k được trang bị nón bảo hiểm, 1 lít xăng, 2 áo mưa tiện lợi và bản đồ du lịch» — tức 100.000đ đến 150.000đ/ngày."
+    },
+    {
+      "claim": "Tiền cọc khi thuê xe tại cơ sở này khoảng 500.000đ đến 1.000.000đ",
+      "source_url": "https://giahuy.org/thue-xe-may-phu-tho/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«thủ tục phải có chứng minh thư, căn cước… kèm theo tiền cọc 500k-1 triệu» — tức khoảng 500.000đ đến 1.000.000đ."
+    },
+    {
+      "claim": "Cửa hàng Trường Thảo (Việt Trì) công khai mức giá cho thuê từ 100.000 đồng",
+      "source_url": "https://chothuexemayotaituyhoaphuyen.com/Tin-tuc/top-5-dia-diem-cho-thue-xe-may-viet-tri-phu-tho-chat-luong-nhat-199.html",
+      "source_domain": "chothuexemayotaituyhoaphuyen.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Với mức giá cho thuê từ 100.000 đồng, Trường Thảo là một địa chỉ thuê xe máy Phú Thọ đáng tin cậy»."
+    }
+  ]
+}
