@@ -1,0 +1,191 @@
+{
+  "article_id": "A00036",
+  "primary_keyword": "thuê xe máy Hoàn Kiếm",
+  "secondary_keywords": [
+    "thuê xe máy phố cổ Hà Nội",
+    "cho thuê xe máy Hoàn Kiếm",
+    "thuê xe máy quanh hồ Gươm",
+    "thuê xe máy giá rẻ Hoàn Kiếm"
+  ],
+  "search_intent": "local/commercial",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Hoàn Kiếm",
+    "hồ Gươm",
+    "phố cổ Hà Nội",
+    "36 phố phường",
+    "Hàng Buồm",
+    "Hàng Trống",
+    "Hàng Đậu",
+    "Lương Ngọc Quyến",
+    "Vọng Đức",
+    "ga Hà Nội",
+    "chợ Đồng Xuân",
+    "Tây Hồ"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe ga phổ thông",
+    "xe tay côn",
+    "xe máy điện"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Vespa"
+  ],
+  "model_entities": [
+    "Wave",
+    "Vision",
+    "Air Blade",
+    "Lead",
+    "Sirius",
+    "Jupiter",
+    "Liberty"
+  ],
+  "questions_found": [
+    "thuê xe máy Hoàn Kiếm giá bao nhiêu?",
+    "thuê xe phố cổ có đắt hơn các quận khác không?",
+    "thuê xe máy Hoàn Kiếm cần đặt cọc bao nhiêu?",
+    "ở phố cổ có dịch vụ giao xe tận nơi tới khách sạn không?",
+    "khách nước ngoài thuê xe máy ở Hoàn Kiếm cần giấy tờ gì?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy phố cổ Hà Nội",
+    "cho thuê xe máy quanh hồ Gươm",
+    "thuê xe máy tự lái Hoàn Kiếm",
+    "thuê xe máy cho khách nước ngoài Hà Nội",
+    "gửi xe qua đêm phố cổ Hà Nội"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy Hoàn Kiếm / phố cổ\" thiên về thư mục tổng hợp kèm bảng giá từng nhà xe: motogo có 2 bài (Hoàn Kiếm top 7 và Phố cổ) với bảng giá từng cơ sở (MOTOGO 80.000đ–130.000đ xe số / 120.000đ–200.000đ xe ga; 13535 tại 12 Lương Ngọc Quyến 130.000đ/220.000đ; Gia Hưng tại 41 Ngõ Huyện, Hàng Trống 150.000đ/250.000đ); vexere có trang thuê xe máy Phố cổ – Hoàn Kiếm của nhà xe Phát Đạt (55 Hàng Đâu) với giá từ 130.000đ không cần cọc trước; hanoibiker (5 Vọng Đức) công bố giá kèm chính sách cọc 500k với vé máy bay khứ hồi; các blog du lịch (mia.vn) và trang báo quảng cáo bổ trợ. Intent local/commercial du lịch: khách nước ngoài chiếm tỷ trọng lớn, quan tâm cọc, hộ chiếu, GPLX và giao xe tận nơi.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-hoan-kiem/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng giá các cơ sở cho thuê quanh Hoàn Kiếm: MOTOGO xe số 80.000đ – 130.000đ/ngày, xe ga 120.000đ – 200.000đ/ngày, xe côn 180.000đ – 300.000đ/ngày; Gia Hưng xe số 150.000đ/ngày, xe ga 250.000đ/ngày"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-pho-co-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "13535 (12 Lương Ngọc Quyến, Hàng Buồm, Hoàn Kiếm) xe số 130.000đ/ngày, xe ga 220.000đ/ngày, hơn 200 đầu xe sẵn có; Gia Hưng (41 Ng. Huyện, Hàng Trống, Hoàn Kiếm) xe số 150.000đ/ngày, xe ga 250.000đ/ngày; quy mô lớn, xe máy cào cào"
+    },
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hoan-kiem.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "nhà xe Phát Đạt (55 Hàng Đâu, Phường Hoàn Kiếm, Thành phố Hà Nội) ngay cửa ngõ Phố cổ; Honda Wave Alpha không cần cọc trước từ 130.000đ kèm mũ bảo hiểm, áo mưa, 1 lít xăng; xe số phổ thông khoảng 100.000đ – 130.000đ/ngày; giao nhận miễn phí 7h-19h khi thuê từ 2 ngày; nhận/trả xe 07:00–22:00, mỗi ngày tính bằng 24 giờ"
+    },
+    {
+      "source_url": "https://hanoibiker.com/thue-xe-may-pho-co-hoan-kiem-ha-noi/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "cơ sở 5 Vọng Đức – Hoàn Kiếm – Hà Nội; cọc 500k với vé máy bay khứ hồi hoặc CCCD, không có vé thì 1-2 triệu tùy xe; phí giao 20k-30k; nhận giao tại ga Hà Nội, bến xe Long Biên, Bến xe Mỹ Đình, bến xe Giáp Bát; xe số 120k/100k, xe ga 180k/150k; miễn phí 2 mũ, áo mưa, bộ đồ sửa xe, bơm xe, dây buộc"
+    },
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "trang chính thức của nhà xe Nguyễn Tú: giao tận nơi tại Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành; bảng giá công khai theo ngày/tuần/tháng; cọc tham khảo; giờ 09:00–21:00 không giao xe ngoài giờ"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-long-bien/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-hoan-kiem riêng biệt: A00001 (thuê xe máy Hà Nội) là bài thành phố; A00035 (Long Biên) gắn khu đông; bài này gắn phố cổ – du khách – khách nước ngoài, các nhà xe quanh Hàng Buồm/Hàng Trống/Hàng Đậu và thực trạng giá trung tâm. Khác biệt intent, geo và đối tượng — không trùng.",
+  "unique_angle": "Bài phố cổ duy nhất kết hợp (1) bảng giá công khai của 4-5 nhà xe thực tế quanh Hoàn Kiếm trích theo từng nguồn, (2) chính sách cọc/giao xe đặc thù cho khách nước ngoài (cọc 500k với vé máy bay khứ hồi), (3) cảnh báo phạm vi di chuyển và giờ nhận trả của nhà xe, và (4) dịch vụ thật của chủ web (giao tận nơi phố cổ, giá công khai) — không phải landing page dịch vụ thuần túu mà là cẩm nang thị trường trung tâm.",
+  "notes": "actual_service_area=hanoi_owner_verified: được phép dùng NAP đã xác minh (config/business-facts.json) và bảng giá công khai trên trang nhà xe; KHÔNG bịa giá ngoài bảng, không thêm chi nhánh ngoài thực tế. \"Quận Hoàn Kiếm\" là tên cũ (LEGACY_SEARCH theo data/geography/localities.json — LC-002); sau sắp xếp 2025 vẫn dùng tên địa danh quen thuộc. Địa chỉ 55 Hàng Đâu giữ nguyên chính tả của nguồn (vexere); bài không tự hiệu chỉnh địa chỉ nhà xe ngoài. Nguồn ngoài dùng k-notation (500k, 120k/ngày, 180k, 20k -30k) — claim_supported giữ nguyên để grounding khớp. Phố đi bộ cuối tuần quanh hồ Gươm nêu định tính, không kèm giờ cụ thể (tránh claim pháp lý/trật tự chưa kiểm chứng).",
+  "claim_evidence": [
+    {
+      "claim": "MOTOGO công bố giá thuê xe số 80.000đ – 130.000đ/ngày, xe ga 120.000đ – 200.000đ/ngày, xe côn 180.000đ – 300.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-hoan-kiem/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe số: 80.000đ – 130.000đ/ngày. Giá thuê xe ga: 120.000đ – 200.000đ/ngày. Giá thuê xe côn: 180.000đ – 300.000đ/ngày."
+    },
+    {
+      "claim": "Gia Hưng (41 Ngõ Huyện, Hàng Trống, Hoàn Kiếm, Hà Nội) công bố giá xe số 150.000đ/ngày, xe ga 250.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-pho-co-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Gia Hưng — Địa chỉ: 41 Ng. Huyện, Hàng Trống, Hoàn Kiếm, Hà Nội. Giá thuê xe số: 150.000đ/ngày. Giá thuê xe ga: 250.000đ/ngày."
+    },
+    {
+      "claim": "Cơ sở 13535 (12 Lương Ngọc Quyến, Hàng Buồm, Hoàn Kiếm, Hà Nội) công bố giá xe số 130.000đ/ngày, xe ga 220.000đ/ngày; hơn 200 đầu xe sẵn có.",
+      "source_url": "https://motogo.vn/thue-xe-may-pho-co-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "13535 — Địa chỉ: 12 Lương Ngọc Quyến, Hàng Buồm, Hoàn Kiếm, Hà Nội. Giá thuê xe số: 130.000đ/ngày. Giá thuê xe ga: 220.000đ/ngày. — Với hơn 200 đầu xe sẵn có, bạn có thể đến thuê xe theo đoàn tại đây rất dễ dàng."
+    },
+    {
+      "claim": "Nhà xe Phát Đạt (55 Hàng Đâu, Phường Hoàn Kiếm, Thành phố Hà Nội) nằm ngay cửa ngõ Phố cổ; Honda Wave Alpha không cần cọc trước, từ 130.000đ, kèm mũ bảo hiểm, áo mưa, 1 lít xăng; xe số phổ thông khoảng 100.000đ – 130.000đ/ngày; xe ga phổ thông không cần cọc trước từ 150.000đ.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hoan-kiem.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cho thuê xe máy Phát Đạt — Địa chỉ: 55 Hàng Đâu, Phường Hoàn Kiếm, Thành phố Hà Nội. Nằm ngay tại cửa ngõ Phố cổ. — Honda Wave Alpha, Đời xe: từ 2015, Mũ bảo hiểm, Áo mưa, Xăng (1 lít), Giao xe tận nơi, Không cần cọc trước từ 130.000đ. — Mức giá thuê dòng xe này thường rẻ nhất, chỉ khoảng 100.000đ – 130.000đ/ngày. — Đời xe: từ 2015, Mũ bảo hiểm, Áo mưa, Xăng (1 lít), Giao xe tận nơi, Không cần cọc trước từ 150.000đ."
+    },
+    {
+      "claim": "Phát Đạt hỗ trợ giao nhận xe tận nơi miễn phí (trong khung giờ 7h-19h) khi khách thuê từ 2 ngày trở lên; thời gian nhận xe và trả xe hằng ngày từ 07:00 đến 22:00; mỗi ngày thuê được tính bằng 24 giờ; nhà xe có quyền từ chối giao xe nếu khách hàng di chuyển ngoài phạm vi cho phép.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hoan-kiem.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nhà xe Phát Đạt có hỗ trợ giao nhận xe tận nơi miễn phí (trong khung giờ 7h-19h) khi khách hàng thuê từ 2 ngày trở lên. — Thời gian nhận xe và trả xe hằng ngày từ 07:00 đến 22:00. Mỗi ngày thuê được tính bằng 24 giờ. — Nhà xe có quyền từ chối giao xe nếu khách hàng di chuyển ngoài phạm vi trên."
+    },
+    {
+      "claim": "Hanoibiker (cơ sở 5 Vọng Đức – Hoàn Kiếm – Hà Nội) công bố giá xe số 1-3 ngày 120k/ngày, 4-7 ngày 100k/ngày; xe ga 1-3 ngày 180k/ngày, 4-7 ngày 150k/ngày.",
+      "source_url": "https://hanoibiker.com/thue-xe-may-pho-co-hoan-kiem-ha-noi/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cơ sở: 5 Vọng Đức – Hoàn Kiếm – Hà Nội. — Giá thuê 1-3 ngày: 120k/ngày, 4-7 ngày giá thuê 100k/ngày (xe số). — giá thuê: 1-3 ngày: 180k/ngày, 4-7 giá 150k/ngày (xe tay ga)."
+    },
+    {
+      "claim": "Hanoibiker: khách có vé máy bay khứ hồi chỉ cần cọc 500k hoặc CCCD; nếu không có vé máy bay thì cọc từ 1-2 triệu tùy loại xe; phí giao xe từ 20k -30k tùy vị trí; miễn phí 2 mũ bảo hiểm, áo mưa, bộ đồ sửa xe, bơm xe, dây buộc.",
+      "source_url": "https://hanoibiker.com/thue-xe-may-pho-co-hoan-kiem-ha-noi/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nếu bạn có vé máy bay khứ hồi bạn chỉ cần cọc 500k hoặc CCCD. Nếu không có vé máy bay thì bạn cọc từ 1-2 triệu tùy loại xe. — Phí Giao Xe từ 20k -30k, tùy vào vị trí của quý khách so với cơ sở của chúng tôi. — Miễn phí 2 mũ đẹp chất lượng, áo mưa, bộ đồ sửa xe, bơm xe, dây buộc."
+    },
+    {
+      "claim": "Hanoibiker nhận giao xe tận nơi tại ga Hà Nội, bến xe Long Biên, Bến xe Mỹ Đình, bến xe Giáp Bát.",
+      "source_url": "https://hanoibiker.com/thue-xe-may-pho-co-hoan-kiem-ha-noi/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Ngoài khu vực quận Hoàn Kiếm, chúng tôi nhận giao xe tận nơi tại ga Hà Nội, bến xe Long Biên, Bến xe Mỹ Đình, bến xe Giáp Bát."
+    },
+    {
+      "claim": "Dịch vụ của chủ trang web giao xe tận nơi tại Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chúng tôi giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành, giúp bạn khám phá Hà Nội an toàn và tiết kiệm."
+    },
+    {
+      "claim": "Bảng giá của dịch vụ chủ trang web: Honda Wave (xe số) 150.000đ/ngày, tuần 700.000đ, tháng 900.000–1.200.000đ; Honda Click/Yamaha Mio 150.000đ/ngày, 700.000đ/tuần, 900.000–1.200.000đ/tháng; Honda Vision 200.000đ/ngày, 1.000.000đ/tuần, 1.800.000–2.000.000đ/tháng; Honda Air Blade 200.000đ/ngày, 1.000.000đ/tuần, 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 150.000đ/ngày. Giá tuần 700.000đ; giá tháng 900.000–1.200.000đ. — Honda Click / Yamaha Mio – xe ga giá rẻ: 150.000đ/ngày; 700.000đ/tuần; 900.000–1.200.000đ/tháng. — Honda Vision – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000–2.000.000đ/tháng. — Honda Air Blade – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Tiền đặt cọc tham khảo của dịch vụ chủ trang web: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiền đặt cọc tham khảo: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu."
+    },
+    {
+      "claim": "Giờ làm việc của dịch vụ chủ trang web là 09:00 – 21:00 và không giao xe ngoài khung giờ này.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điện thoại: 0942 467 674 · 09:00 – 21:00 · Không giao xe máy ngoài giờ."
+    }
+  ]
+}

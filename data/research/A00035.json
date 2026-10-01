@@ -1,0 +1,218 @@
+{
+  "article_id": "A00035",
+  "primary_keyword": "thuê xe máy Long Biên",
+  "secondary_keywords": [
+    "cho thuê xe máy Long Biên",
+    "thuê xe máy Long Biên giá rẻ",
+    "thuê xe máy tại Bồ Đề",
+    "thuê xe máy Long Biên giao tận nơi"
+  ],
+  "search_intent": "local/commercial",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Long Biên",
+    "Bồ Đề",
+    "Ngọc Lâm",
+    "Ngọc Thụy",
+    "Đức Giang",
+    "cầu Long Biên",
+    "cầu Chương Dương",
+    "bến xe Gia Lâm",
+    "sông Hồng",
+    "phố cổ Hà Nội",
+    "Nguyễn Văn Cừ",
+    "đường 5"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe ga phổ thông",
+    "xe máy điện"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Click",
+    "Mio"
+  ],
+  "questions_found": [
+    "thuê xe máy Long Biên giá bao nhiêu một ngày?",
+    "thuê xe máy Long Biên có cần đặt cọc không, cọc bao nhiêu?",
+    "ở Long Biên có dịch vụ giao xe tận nơi không?",
+    "thuê xe máy theo tháng ở Long Biên có rẻ hơn không?",
+    "khách nước ngoài thuê xe ở Long Biên cần giấy tờ gì?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Long Biên",
+    "cho thuê xe máy Long Biên theo tháng",
+    "thuê xe máy Long Biên giao tận nơi",
+    "thuê xe máy Bồ Đề",
+    "cho thuê xe máy Ngọc Thụy"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy Long Biên\" là hỗn hợp thư mục tổng hợp và trang nhà xe nhỏ: timthosuaxe có bài top 10 cửa hàng quận Long Biên kèm địa chỉ từng cơ sở (Mạnh Hà, Minh Vũ 3 P. Lâm Hạ Bồ Đề, Văn Cương Ngọc Thụy, Tuấn Tú Ngọc Thụy, Duy Anh Đức Giang, Minh Quân); hanoireview tổng hợp 4 địa chỉ (MOTOGO CN Long Biên dẫn đầu); giahuy.org ghi 2 địa chỉ Bon Bon Motor (Ngô Gia Khảm, Ngọc Lâm — cho thuê theo tháng) và Nguyễn Tú; các trang GitHub Pages/blog của nhà xe nhỏ và fanpage Facebook xuất hiện dày; intent local/commercial nhấn mạnh giao tận nơi, thuê theo tháng. Trang của chủ web (thuexemaynguyentu.com) cũng hiện hữu với bảng giá công khai.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://timthosuaxe.com/thue-xe-may-quan-long-bien/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "danh sách các cửa hàng cho thuê xe máy tại Long Biên kèm địa chỉ công khai (Minh Vũ 3 P. Lâm Hạ, Bồ Đề; Văn Cương Ngọc Thụy; Duy Anh Ng. 3 P. Vũ Đức Thận, Đức Giang)"
+    },
+    {
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-thue-xe-may-tai-q-long-bien",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "tổng hợp 4 địa chỉ cho thuê xe máy tại Q. Long Biên, dẫn đầu MOTOGO CN Long Biên"
+    },
+    {
+      "source_url": "https://giahuy.org/thue-xe-may-long-bien-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bon Bon Motor (Ngô Gia Khảm, Ngọc Lâm, Long Biên) cho thuê theo tháng; mô tả Nguyễn Tú là địa chỉ thuê xe máy được nhiều người đánh giá cao ở khu vực, xe bảo trì định kỳ, giữ gìn sạch sẽ"
+    },
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "trang chính thức của nhà xe Nguyễn Tú: bảng giá công khai theo ngày/tuần/tháng, tiền cọc tham khảo, giao tận nơi Long Biên/Hoàn Kiếm/Phố Cổ/Ba Đình, giờ 09:00–21:00 không giao xe ngoài giờ, địa điểm chính tại Long Biên"
+    },
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hoan-kiem.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "nhà xe Phát Đạt: xe số phổ thông khoảng 100.000đ – 130.000đ/ngày; Honda Wave Alpha không cần cọc trước từ 130.000đ; giao nhận tận nơi miễn phí 7h-19h khi thuê từ 2 ngày; nhận/trả xe 07:00–22:00, mỗi ngày tính bằng 24 giờ"
+    },
+    {
+      "source_url": "https://hanoibiker.com/thue-xe-may-pho-co-hoan-kiem-ha-noi/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Hanoibiker: giá xe số 1-3 ngày 120k/ngày, 4-7 ngày 100k/ngày; xe ga 180k/150k; cọc 500k với vé máy bay khứ hồi hoặc CCCD, không có vé thì 1-2 triệu; phí giao xe 20k-30k; miễn phí mũ, áo mưa, đồ sửa xe"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-hoan-kiem/",
+    "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-noi-bai/",
+    "/lab/thue-xe-may/thue-xe-may-bac-ninh/",
+    "/lab/cuu-ho-xe-may/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-long-bien riêng biệt: A00001 (thuê xe máy Hà Nội) giữ vai trò bài thành phố tổng quát; A00036 (thuê xe máy Hoàn Kiếm) gắn khu phố cổ du lịch. Bài này gắn khu đông: cầu Long Biên/Chương Dương, bến xe Gia Lâm, thuê tháng cho cư dân, trụ sở chính của dịch vụ chủ web. Khác biệt intent và geo — không trùng.",
+  "unique_angle": "Bài khu đông duy nhất được phép mang thông tin dịch vụ thật của chủ web tại chính quận nhà (Bồ Đề — Nguyễn Văn Cừ): bảng giá công khai đầy đủ ngày/tuần/tháng + cọc tham khảo + giờ giao xe, kết hợp định vị giao thông (hai cây cầu sang phố cổ, bến xe Gia Lâm, hướng QL5) và nhu cầu thuê tháng đặc trưng cư dân khu đông — khác hẳn bài Hà Nội tổng quát và bài phố cổ.",
+  "notes": "actual_service_area=hanoi_owner_verified: được phép dùng NAP đã xác minh từ config/business-facts.json và bảng giá công khai trên trang nhà xe; KHÔNG bịa giá ngoài bảng. \"Quận Long Biên\" là tên cũ (LEGACY_SEARCH theo data/geography/localities.json — LC-001, Sắp xếp đơn vị hành chính 2025) — bài dùng tên địa danh quen thuộc và nêu rõ bối cảnh. Nguồn ngoài dùng k-notation (500k, 120k/ngày, 180k, 20k -30k) — claim_supported giữ nguyên k-notation để grounding khớp khi bài trích y. Giá của từng nhà xe ngoài luôn dẫn theo công bố công khai của chính nhà xe đó, không tổng quát hóa thành mặt bằng thị trường.",
+  "claim_evidence": [
+    {
+      "claim": "Dịch vụ của chủ trang web công bố giá thuê Honda Wave và Yamaha Sirius (xe số): 150.000đ/ngày; giá tuần 700.000đ; giá tháng 900.000–1.200.000đ.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 150.000đ/ngày. Giá tuần 700.000đ; giá tháng 900.000–1.200.000đ."
+    },
+    {
+      "claim": "Honda Click / Yamaha Mio (xe ga giá rẻ): 150.000đ/ngày; 700.000đ/tuần; 900.000–1.200.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Click / Yamaha Mio – xe ga giá rẻ: 150.000đ/ngày; 700.000đ/tuần; 900.000–1.200.000đ/tháng."
+    },
+    {
+      "claim": "Honda Vision: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000–2.000.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Vision – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000–2.000.000đ/tháng."
+    },
+    {
+      "claim": "Honda Air Blade: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Air Blade – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Xe máy điện: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy điện tại Nguyễn Tú: 200.000đ/ngày. — Giá thuê xe máy điện tại Nguyễn Tú: 1.000.000đ/tuần. — Giá thuê xe máy điện tại Nguyễn Tú: 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Tiền đặt cọc tham khảo: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiền đặt cọc tham khảo: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu."
+    },
+    {
+      "claim": "Dịch vụ giao xe tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chúng tôi giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành, giúp bạn khám phá Hà Nội an toàn và tiết kiệm."
+    },
+    {
+      "claim": "Địa điểm chính tại Long Biên; giá, tiền cọc và tình trạng xe được xác nhận trước khi chốt.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điểm khác biệt của Nguyễn Tú: địa điểm chính tại Long Biên, hỗ trợ giao xe theo khu vực và tư vấn loại xe theo thời gian thuê. Giá, tiền cọc và tình trạng xe được xác nhận trước khi chốt."
+    },
+    {
+      "claim": "Giờ làm việc 09:00 – 21:00 và không giao xe ngoài khung giờ này.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điện thoại: 0942 467 674 · 09:00 – 21:00 · Không giao xe máy ngoài giờ. (Địa điểm chính: Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội.)"
+    },
+    {
+      "claim": "Nhà xe Phát Đạt công bố: xe số phổ thông chỉ khoảng 100.000đ – 130.000đ/ngày; Honda Wave Alpha không cần cọc trước, từ 130.000đ; giao nhận xe tận nơi miễn phí trong khung giờ 7h-19h khi khách thuê từ 2 ngày trở lên.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hoan-kiem.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Mức giá thuê dòng xe này thường rẻ nhất, chỉ khoảng 100.000đ – 130.000đ/ngày. — Honda Wave Alpha Đời xe: từ 2015, Mũ bảo hiểm, Áo mưa, Xăng (1 lít), Giao xe tận nơi, Không cần cọc trước từ 130.000đ. — nhà xe Phát Đạt có hỗ trợ giao nhận xe tận nơi miễn phí (trong khung giờ 7h-19h) khi khách hàng thuê từ 2 ngày trở lên."
+    },
+    {
+      "claim": "Hanoibiker công bố giá xe số 1-3 ngày 120k/ngày, 4-7 ngày 100k/ngày; xe ga 1-3 ngày 180k/ngày, 4-7 ngày 150k/ngày.",
+      "source_url": "https://hanoibiker.com/thue-xe-may-pho-co-hoan-kiem-ha-noi/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê 1-3 ngày: 120k/ngày, 4-7 ngày giá thuê 100k/ngày (xe số). — giá thuê: 1-3 ngày: 180k/ngày, 4-7 giá 150k/ngày (xe tay ga)."
+    },
+    {
+      "claim": "Hanoibiker: khách có vé máy bay khứ hồi chỉ cần cọc 500k hoặc CCCD; nếu không có vé máy bay thì cọc từ 1-2 triệu tùy loại xe; phí giao xe từ 20k -30k tùy vị trí.",
+      "source_url": "https://hanoibiker.com/thue-xe-may-pho-co-hoan-kiem-ha-noi/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nếu bạn có vé máy bay khứ hồi bạn chỉ cần cọc 500k hoặc CCCD. Nếu không có vé máy bay thì bạn cọc từ 1-2 triệu tùy loại xe. — Phí Giao Xe từ 20k -30k, tùy vào vị trí của quý khách so với cơ sở của chúng tôi."
+    },
+    {
+      "claim": "Bon Bon Motor có địa chỉ tại Ngô Gia Khảm, Ngọc Lâm, Long Biên, Hà Nội, cung cấp dịch vụ cho thuê xe máy theo tháng.",
+      "source_url": "https://giahuy.org/thue-xe-may-long-bien-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Với địa chỉ tại Ngô Gia Khảm, Ngọc Lâm, Long Biên, Hà Nội, Bon Bon Motor cung cấp dịch vụ cho Thuê xe máy theo tháng với nhiều loại xe đa dạng và chất lượng."
+    },
+    {
+      "claim": "Các cơ sở cho thuê tại Long Biên được ghi nhận công khai: Minh Vũ (3 P. Lâm Hạ, Bồ Đề, Long Biên, Hà Nội), Văn Cương (Ngọc Thụy, Long Biên), Duy Anh (Ng. 3 P. Vũ Đức Thận, Đức Giang, Long Biên, Hà Nội).",
+      "source_url": "https://timthosuaxe.com/thue-xe-may-quan-long-bien/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Địa chỉ: 3 P. Lâm Hạ, Bồ Đề, Long Biên, Hà Nội, Việt Nam (Minh Vũ). — Địa chỉ: Ngọc Thụy, Long Biên, Hà Nội, Việt Nam (Văn Cương). — Địa chỉ: Ng. 3 P. Vũ Đức Thận, Đức Giang, Long Biên, Hà Nội, Việt Nam (Duy Anh)."
+    },
+    {
+      "claim": "Bài tổng hợp bên ngoài nhận xét địa chỉ thuê xe của Nguyễn Tú ở Long Biên được nhiều người đánh giá cao, xe được bảo trì định kỳ và giữ gìn sạch sẽ.",
+      "source_url": "https://giahuy.org/thue-xe-may-long-bien-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Đây là một trong những địa chỉ thuê xe máy được khá nhiều người đánh giá cao ở khu vực này. Điểm nổi bật của dịch vụ này là xe được bảo trì định kỳ và được giữ gìn sạch sẽ, đảm bảo chất lượng và an toàn trong suốt chuyến đi."
+    }
+  ]
+}
