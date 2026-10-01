@@ -1,0 +1,183 @@
+{
+  "article_id": "A00027",
+  "primary_keyword": "thuê xe máy Khánh Hòa",
+  "secondary_keywords": [
+    "cho thuê xe máy Khánh Hòa giao tận nơi",
+    "thuê xe máy Nha Trang giá rẻ",
+    "bảng giá thuê xe máy Nha Trang",
+    "thuê xe máy Phan Rang sau sáp nhập"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Khánh Hòa",
+    "Nha Trang",
+    "Phan Rang",
+    "Ninh Hòa",
+    "Cam Ranh",
+    "vịnh Nha Trang",
+    "quốc lộ 1A"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe tay côn",
+    "xe đồ cổ Honda Cub"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki",
+    "SYM",
+    "Piaggio"
+  ],
+  "model_entities": [
+    "Wave",
+    "Vision",
+    "Air Blade",
+    "PCX",
+    "Sirius",
+    "Nouvo",
+    "Attila Elizabeth",
+    "Hayate"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Khánh Hòa – Nha Trang giá bao nhiêu một ngày?",
+    "thuê xe máy Nha Trang có cần đặt cọc không?",
+    "thuê xe máy Nha Trang có giao xe tận khách sạn không?",
+    "một ngày thuê xe được tính thế nào, quá giờ tính ra sao?",
+    "sau sáp nhập 2025, Phan Rang – Ninh Thuận cũ có phải là Khánh Hòa không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Nha Trang 2026",
+    "cho thuê xe máy tự lái Nha Trang giao tận nơi",
+    "thuê xe máy Phan Rang Vĩnh Hy",
+    "kinh nghiệm du lịch Nha Trang đi Phan Rang"
+  ],
+  "serp_patterns": "SERP rất dày cho cụm Nha Trang: danh sách tổng hợp 12–20+ cơ sở của motogo với giá theo từng cửa hàng, website riêng của các đơn vị lâu năm tại Nha Trang (Anh Cường Honda có bảng giá niêm yết theo dòng xe), nền tảng đặt xe vexere có trang riêng cho Nha Trang niêm yết giá và điều khoản cọc, các trang du lịch tổng hợp địa chỉ. Điểm nhấn thị trường: dịch vụ giao xe tận khách sạn/bến xe phổ biến, nhiều đơn vị không cần cọc trước, có cả cơ sở tại Cam Ranh và chính sách hỗ trợ đổi xe khi sự cố.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "danh sách 12 cơ sở cho thuê tại Nha Trang kèm mức giá từng nơi, chính sách giao xe tận khách sạn và giấy tờ cần để lại khi thuê"
+    },
+    {
+      "source_url": "https://anhcuonghonda.com/bang-gia-thue-xe",
+      "source_domain": "anhcuonghonda.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng giá niêm yết theo từng dòng xe của đơn vị cho thuê lâu năm tại Nha Trang"
+    },
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "mức giá các đơn vị trên nền tảng đặt xe tại Nha Trang, điều khoản không cần cọc trước và cách tính ngày thuê"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-gia-lai/",
+    "/lab/thue-xe-may/thue-xe-may-quang-ngai/",
+    "/lab/thue-xe-may/thue-xe-may-da-nang/",
+    "/lab/kinh-nghiem/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-khanh-hoa: nhóm gốc cấp tỉnh. Các intent hẹp hơn đã có row riêng trong matrix (A00087 biển Nha Trang, A00056 gần sân bay Cam Ranh, A00498/A00499 'Nha Trang/Phan Rang có không', A00123+ giá theo từng dòng xe tại Khánh Hòa, A04415/A04416 phượt/du lịch Khánh Hòa). Bài tỉnh gốc chỉ nêu giá và chi tiết Nha Trang/Cam Ranh/Phan Rang ở mức tham khảo tổng quan, không viết thành cẩm nang riêng cho từng địa điểm, không lạm bàn từng dòng xe — các row hẹp sẽ xử lý riêng.",
+  "unique_angle": "Bài tỉnh gốc cho thị trường lớn nhất duyên hải Nam Trung Bộ: Nha Trang là nơi mật độ cửa hàng dày nhất trong khu vực với dịch vụ giao xe tận khách sạn gần như là mặc định, nhiều nơi không cần cọc trước. Điểm khác biệt đáng viết: bảng giá niêm yết công khai theo từng dòng xe của đơn vị lâu năm (Wave thấp ngang mực 70.000đ–90.000đ/ngày, PCX 160.000đ/ngày), quy tắc tính ngày rõ ràng (một ngày đủ 24 tiếng, quá 6 tiếng tính thêm nửa ngày), và sau sáp nhập 2025 Phan Rang – Ninh Thuận cũ đã thuộc Khánh Hòa, mở tuyến biển Vĩnh Hy – Bình Tiên về cùng một tỉnh với Nha Trang.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; mọi mức giá dẫn theo nguồn công khai. Khánh Hòa VN-027 CURRENT; sau sắp xếp hành chính 2025, Ninh Thuận (LG-042) MERGED_INTO Khánh Hòa nên Phan Rang thành LEGACY_SEARCH thuộc Khánh Hòa, Ninh Hòa là thành phố cũ (LEGACY_SEARCH) cùng tỉnh. Cam Ranh là điểm có cơ sở cho thuê trong danh sách motogo (Nam Việt Cam Ranh) — chỉ nêu định tính. Giờ tính ngày: vexere ghi nhận xe hằng ngày và mỗi ngày thuê tính bằng 24 giờ kể từ thời điểm nhận xe; Anh Cường ghi phát sinh 6 tiếng tính thêm nửa ngày.",
+  "claim_evidence": [
+    {
+      "claim": "Mức giá thuê xe máy trung bình tại Nha Trang dao động 80.000đ–130.000đ/ngày, đã bao gồm các chi phí, dịch vụ đi kèm",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Trung bình mức giá thuê xe máy từ 80.000đ – 130.000đ/ngày bao gồm các chi phí, dịch vụ đi kèm khác.»"
+    },
+    {
+      "claim": "Danh sách ghi nhận 12 cơ sở cho thuê tại Nha Trang phục vụ giao xe tận khách sạn, giá chỉ từ 80.000đ",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiêu đề: «Thuê xe máy Nha Trang: 12 cơ sở giao xe tận khách sạn, giá chỉ từ 80k» — tức giá khởi điểm từ 80.000đ."
+    },
+    {
+      "claim": "Một cơ sở trong danh sách (MOTOTA) cho thuê xe số Sirius, Wave, Blade chỉ từ 80.000đ/ngày và xe ga Vision, Air Blade, Lead từ 100.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê rất hợp lý: chỉ từ 80.000đ/ngày cho xe số Sirius, Wave, Blade và từ 100.000đ/ngày cho các dòng xe ga Vision, Air Blade, Lead.»"
+    },
+    {
+      "claim": "Cơ sở Hải Anh tại Nha Trang giá dao động 110.000đ–180.000đ, giá đã gồm hai mũ bảo hiểm nửa đầu và hai áo mưa mỏng",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Mức giá thuê xe máy tại Hải Anh dao động trong mức 110.000đ – 180.000đ. Giá thuê xe có bao gồm với 2 mũ bảo hiểm 1/2 miễn phí, 2 áo mưa mỏng.»"
+    },
+    {
+      "claim": "Cơ sở Tuấn Cường niêm yết xe số từ 100.000đ/ngày và xe ga 150.000đ/ngày, giữ giá ổn định ngày lễ",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Điểm mạnh hàng đầu tại đây là giá thuê xe máy ổn định, không tăng giá cao cao trong các ngày nghỉ lễ. Với mức giá niêm yết từ 100.000đ/ngày với xe số và 150.000đ/ngày với xe ga.»"
+    },
+    {
+      "claim": "Cơ sở Lệ Oanh cho xe số khoảng 80.000đ–90.000đ/ngày và xe ga 110.000đ–140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Đối với các loại xe số, giá thuê xe máy Nha Trang theo ngày nằm trong khoảng 80.000đ – 90.000đ/ngày. Ngoài ra còn có xe ga với chi phí giá rẻ từ 110.000đ – 140.000đ/ngày.»"
+    },
+    {
+      "claim": "Đơn vị lâu năm tại Nha Trang niêm yết thuê Honda Air Blade hoặc Vision theo mốc 5 ngày giá 100.000đ, Honda Vision theo ngày 120.000đ, Air Blade 140.000đ, PCX 160.000đ",
+      "source_url": "https://anhcuonghonda.com/bang-gia-thue-xe",
+      "source_domain": "anhcuonghonda.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá: «Thuê xe Honda AB hoặc Vision 5 ngày — 100,000đ»; «Thuê xe máy tay Ga Honda Vision — 120,000đ»; «Thuê xe tay ga Honda Airblade — 140,000đ»; «Thuê xe máy tay Ga Honda PCX — 160,000đ» — tức 100.000đ, 120.000đ, 140.000đ, 160.000đ."
+    },
+    {
+      "claim": "Cùng bảng giá ghi xe số Honda Wave 70.000đ–90.000đ/ngày, Yamaha Nouvo 2 chỉ 70.000đ, Suzuki Hayate 90.000đ, Attila Elizabeth 100.000đ",
+      "source_url": "https://anhcuonghonda.com/bang-gia-thue-xe",
+      "source_domain": "anhcuonghonda.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá: «Thuê xe máy số Honda Wave — 70,000đ - 90.000đ»; «Thuê xe Yamaha Nouvo 2 — 70,000đ»; «Thuê xe máy tay Ga Suzuki HAYATE — 90,000đ»; «Thuê xe ga Attila Elizabeth — 100,000đ» — tức 70.000đ–90.000đ, 70.000đ, 90.000đ, 100.000đ."
+    },
+    {
+      "claim": "Đơn vị này quy định một ngày thuê tính đủ 24 tiếng, trả xe phát sinh quá 6 tiếng thì tính thêm nửa ngày",
+      "source_url": "https://anhcuonghonda.com/",
+      "source_domain": "anhcuonghonda.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Thời gian thuê xe máy: 1 ngày= 24h, nếu phát sinh 6h = 1/2 ngày» — tức một ngày tính đủ 24 tiếng và quá 6 tiếng tính thêm nửa ngày."
+    },
+    {
+      "claim": "Trên nền tảng đặt xe, các đơn vị tại Nha Trang niêm yết từ 120.000đ đến 150.000đ kèm giao xe tận nơi và không cần cọc trước",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Các đơn vị ghi «từ 120.000 đ», «từ 150.000 đ» kèm nhãn «Giao xe tận nơi — Không cần cọc trước» — tức 120.000đ–150.000đ/ngày."
+    },
+    {
+      "claim": "Nền tảng này ghi mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe, nhận và trả xe hằng ngày từ 06:00 đến 22:00",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Thời gian nhận xe và trả xe hằng ngày từ 06:00 đến 22:00. Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe. Thuê tối thiểu từ 1 ngày.»"
+    },
+    {
+      "claim": "Theo nền tảng đặt xe, giá xe số ở Nha Trang thường dao động 100.000đ–120.000đ mỗi ngày, xe ga trung bình khoảng 150.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê xe số ở Nha Trang thường dao động từ 100.000 đến 120.000 đồng mỗi ngày, phụ thuộc vào dòng xe, năm sản xuất và cả thời gian giữ xe.»; «Giá thuê xe ga tại Nha Trang thường sẽ cao hơn xe số, trung bình khoảng 150.000 đ/ngày.»"
+    },
+    {
+      "claim": "Trong danh sách có cả cơ sở cho thuê tại Cam Ranh và chính sách hỗ trợ đổi xe tận nơi trong thành phố Nha Trang khi xe gặp sự cố",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Thuê xe máy Nam Việt Cam Ranh» trong danh sách cơ sở; «cam kết hỗ trợ đổi trả xe máy tận nơi trong thành phố Nha Trang nếu bạn gặp bất kỳ sự cố.»"
+    }
+  ]
+}

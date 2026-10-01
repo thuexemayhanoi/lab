@@ -1,0 +1,200 @@
+{
+  "article_id": "A00028",
+  "primary_keyword": "thuê xe máy Lâm Đồng",
+  "secondary_keywords": [
+    "cho thuê xe máy Đà Lạt giao tận nơi",
+    "thuê xe máy Đà Lạt giá rẻ",
+    "bảng giá thuê xe máy Đà Lạt",
+    "thuê xe máy Đà Lạt không cần cọc"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Lâm Đồng",
+    "Đà Lạt",
+    "Phan Rang",
+    "bến xe liên tỉnh Đà Lạt",
+    "đèo Prenn",
+    "quốc lộ 20"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe tay côn",
+    "xe Honda Cub đồ cổ"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Piaggio",
+    "VinFast"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Lead",
+    "Exciter",
+    "Winner",
+    "Cub 50"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Đà Lạt – Lâm Đồng giá bao nhiêu một ngày?",
+    "đi đèo, dốc Đà Lạt nên thuê xe số, xe ga hay xe tay côn?",
+    "thuê xe máy Đà Lạt có cần đặt cọc không?",
+    "thuê xe máy Đà Lạt có giao tận khách sạn, bến xe không?",
+    "sau sáp nhập 2025, Bình Thuận và Đắk Nông có thuộc Lâm Đồng không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Đà Lạt 2026",
+    "cho thuê xe máy tự lái Đà Lạt giao tận nơi",
+    "thuê xe cub Đà Lạt",
+    "kinh nghiệm phượt Đà Lạt cung đèo"
+  ],
+  "serp_patterns": "SERP dày đặc cho cụm Đà Lạt: các đơn vị có website riêng công khai bảng giá theo nhóm xe số/xe ga/xe tay côn (AGO Tourist), danh sách 15+ cơ sở của motogo với giá từng nơi và quy tắc tính giờ nhận xe, nền tảng vexere có trang riêng cho Đà Lạt niêm yết từ 100.000 đ kèm không cần cọc trước, các cẩm nang tổng hợp (mia.vn, lamdongtours, tourdalattravel) xếp hạng cửa hàng kèm giá tham khảo. Điểm nhấn thị trường: giao xe tận nơi miễn phí gần như là mặc định, nhiều nơi không cần cọc, có dịch vụ xe Honda Cub đồ cổ và xe tay côn phục vụ cung đèo.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://agotourist.com/thue-xe-may/",
+      "source_domain": "agotourist.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng giá 2026 theo nhóm xe số, xe ga, xe tay côn của một đơn vị tại Đà Lạt kèm chính sách giao tận nơi, không cần cọc"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-tai-da-lat/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "danh sách 15+ cơ sở cho thuê tại Đà Lạt kèm mức giá từng nơi, điểm nhận xe tại bến xe liên tỉnh và quy tắc tính giờ"
+    },
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-lat.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "mức giá các đơn vị trên nền tảng đặt xe tại Đà Lạt và điều khoản không cần cọc trước"
+    },
+    {
+      "source_url": "https://mia.vn/cam-nang-du-lich/top-dia-diem-thue-xe-may-da-lat-19448",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng giá tham khảo các cửa hàng tại Đà Lạt kèm địa chỉ, chính sách giao xe, cọc và phụ kiện đi kèm"
+    },
+    {
+      "source_url": "https://chothuexemaydalatgiare.com/",
+      "source_domain": "chothuexemaydalatgiare.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "giá khởi điểm và chính sách giao xe tận nơi miễn phí, không cần đặt cọc của một đơn vị tại Đà Lạt"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-gia-lai/",
+    "/lab/thue-xe-may/thue-xe-may-quang-ngai/",
+    "/lab/thue-xe-may/thue-xe-may-da-nang/",
+    "/lab/kinh-nghiem/",
+    "/lab/cuu-ho-xe-may/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-lam-dong: nhóm gốc cấp tỉnh. Matrix đã có row riêng cho intent hẹp: A00088 thuê xe máy Đà Lạt, A00091 Mũi Né, A00500 'thuê xe máy Đà Lạt có không', các row giá theo dòng xe tại Lâm Đồng sau này. Bài tỉnh gốc chỉ nêu giá và chi tiết Đà Lạt ở mức tham khảo tổng quan theo nhóm xe, không viết thành cẩm nang riêng cho từng POI hay từng dòng xe — các row hẹp sẽ xử lý riêng.",
+  "unique_angle": "Bài tỉnh gốc cho thủ phủ du lịch cao nguyên: Đà Lạt là thị trường có bảng giá phân tầng rõ nhất theo nhóm xe — xe số rẻ nhất cho phố dốc, xe ga tiện cho trung tâm, xe tay côn đắt nhất dành cho cung đèo. Điểm thú vị riêng của thị trường: dịch vụ xe Honda Cub đồ cổ (120.000đ–130.000đ/ngày) đúng chất 'sống ảo' Đà Lạt, giao xe tận nơi miễn phí trong nội thành là mặc định, nhiều nơi không cần cọc, và có cả xe điện tự lái VF3 600.000đ/ngày. Sau sáp nhập 2025, Bình Thuận (Mũi Né) và Đắk Nông cùng về Lâm Đồng, mở tuyến du lịch liên vùng trong nội tỉnh.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; mọi mức giá dẫn theo nguồn công khai. Lâm Đồng VN-028 CURRENT; sau sắp xếp hành chính 2025, Đắk Nông (LG-040) và Bình Thuận (LG-044) MERGED_INTO Lâm Đồng; Đà Lạt là thành phố trung tâm (LC-043 CURRENT). Mùa cao điểm cuối tuần, lễ 2/9 và Tết giá có thể nhích lên; sương lạnh và mưa buổi chiều là đặc thù địa hình cần nói rõ khi chọn xe. VF3 là xe điện tự lái (không phải xe máy) — chỉ nêu như ghi nhận thú vị từ nguồn motogo.",
+  "claim_evidence": [
+    {
+      "claim": "Giá thuê xe máy ở Đà Lạt năm 2026 dao động 100.000đ–180.000đ/ngày tùy loại xe số, xe ga hoặc xe tay côn, có thể thay đổi cuối tuần, lễ Tết",
+      "source_url": "https://agotourist.com/thue-xe-may/",
+      "source_domain": "agotourist.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê xe máy ở Đà Lạt năm 2026 dao động từ 100.000 – 180.000 đ/ngày, tùy vào loại xe số, xe ga hoặc xe tay côn. Mức giá có thể thay đổi vào cuối tuần, lễ Tết hoặc mùa cao điểm du lịch.»"
+    },
+    {
+      "claim": "Cùng đơn vị niêm yết: xe số Wave, Sirius, Jupiter 100.000đ–120.000đ/ngày; xe ga Air Blade, Vision, Lead 120.000đ–140.000đ/ngày; xe tay côn Exciter, Winner 150.000đ–180.000đ/ngày",
+      "source_url": "https://agotourist.com/thue-xe-may/",
+      "source_domain": "agotourist.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Xe số (Wave, Sirius, Jupiter…) — 100.000 – 120.000 đ/ngày; Xe tay ga (Air Blade, Vision, Lead…) — 120.000 – 140.000 đ/ngày; Xe tay côn (Exciter, Winner…) — 150.000 – 180.000 đ/ngày.»"
+    },
+    {
+      "claim": "Đơn vị này nhận thuê nhanh, giao tận nơi, không cần cọc, giá chỉ từ 100.000đ/ngày và hỗ trợ 24/7",
+      "source_url": "https://agotourist.com/thue-xe-may/",
+      "source_domain": "agotourist.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Tại AGO Tourist, bạn có thể thuê xe máy nhanh chóng – giao tận nơi – không cần cọc, với mức giá chỉ từ 100.000 đ/ngày và hỗ trợ 24/7 trong suốt hành trình.»"
+    },
+    {
+      "claim": "Cơ sở Lavender (gần bến xe) tại Đà Lạt ghi xe số 100.000đ/ngày, xe ga 120.000đ/ngày, Air Blade 2026 giá 140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-da-lat/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Thuê xe máy Lavender — Địa chỉ CS2: 01 Tô Hiến Thành. Phường 3, tp Đà Lạt (sau lưng bến xe Phương Trang) — Giá thuê xe số: 100.000đ/ngày; Giá thuê xe ga: 120.000đ/ngày; Giá thuê xe AB 2026: 140.000đ/ngày»."
+    },
+    {
+      "claim": "Cơ sở này nhận xe tại bến xe liên tỉnh, thời gian thuê tính từ 12 giờ trưa đến 12 giờ trưa hôm sau",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-da-lat/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Lavender còn có điểm nhận xe ngay tại bến xe liên tuyến… Tại đây, thời gian thuê được tính rõ ràng từ 12h trưa đến 12h trưa hôm sau, minh bạch và dễ hiểu.»"
+    },
+    {
+      "claim": "Nơi này còn cho thuê cả xe điện tự lái VF3 giá 600.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-da-lat/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê xe VF3 tự lái: 600.000đ/ngày» — xe điện tự lái phục vụ khách muốn trải nghiệm."
+    },
+    {
+      "claim": "Một đơn vị tại Đà Lạt cung cấp Vision, Air Blade, Vario đời mới chỉ từ 100.000đ/ngày, dải giá tổng 100.000đ–180.000đ/ngày",
+      "source_url": "https://chothuexemaydalatgiare.com/",
+      "source_domain": "chothuexemaydalatgiare.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Chúng tôi cung cấp nhiều dòng xe đời mới như Vision, Air Blade, Vario với giá chỉ từ 100.000đ/ngày»; priceRange ghi «100.000đ - 180.000đ / ngày»."
+    },
+    {
+      "claim": "Đơn vị này hỗ trợ giao xe tận nơi tại khách sạn, bến xe, trung tâm Đà Lạt hoàn toàn miễn phí và không cần đặt cọc",
+      "source_url": "https://chothuexemaydalatgiare.com/",
+      "source_domain": "chothuexemaydalatgiare.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Hỗ trợ giao xe tận nơi tại khách sạn, bến xe, trung tâm Đà Lạt hoàn toàn miễn phí, thủ tục nhanh gọn và không cần đặt cọc.»"
+    },
+    {
+      "claim": "Trên nền tảng đặt xe, các đơn vị tại Đà Lạt niêm yết từ 100.000đ đến 110.000đ kèm giao xe tận nơi, không cần cọc trước",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-lat.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Các đơn vị ghi «từ 100.000 đ», «từ 110.000 đ» kèm nhãn «Giao xe tận nơi — Không cần cọc trước» — tức 100.000đ–110.000đ/ngày."
+    },
+    {
+      "claim": "Theo cẩm nang, cửa hàng Go HAPPY (40 Phan Bội Châu, P.2, TP Đà Lạt) giá tham khảo 90.000đ–130.000đ/ngày, giao xe tận nơi miễn phí kèm mũ bảo hiểm, áo mưa và bộ sửa xe mini",
+      "source_url": "https://mia.vn/cam-nang-du-lich/top-dia-diem-thue-xe-may-da-lat-19448",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Go HAPPY — Địa chỉ: 40 Phan Bội Châu, P.2, TP. Đà Lạt — Giá thuê tham khảo: 90.000 – 130.000 VND/ngày… giao xe tận nơi miễn phí… nhiều tiện ích đi kèm như mũ bảo hiểm, áo mưa và bộ sửa xe mini.»"
+    },
+    {
+      "claim": "Cửa hàng Mr Din (78 Lý Tự Trọng, P.2, TP Đà Lạt) giá tham khảo 80.000đ–180.000đ/ngày, không cần cọc với khách du lịch, giao xe tận nơi miễn phí chỉ trong 15 phút",
+      "source_url": "https://mia.vn/cam-nang-du-lich/top-dia-diem-thue-xe-may-da-lat-19448",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Mr Din Đà Lạt — Địa chỉ: 78 Lý Tự Trọng, P.2, TP. Đà Lạt — Giá thuê tham khảo: 80.000 – 180.000 VND/ngày… Thủ tục thuê xe nhanh gọn, không cần cọc đối với khách du lịch… Mr Din còn giao xe tận nơi miễn phí chỉ trong 15 phút.»"
+    },
+    {
+      "claim": "Cửa hàng Cub50 Đà Lạt cho thuê xe Honda Cub đồ cổ giá tham khảo 120.000đ–130.000đ/ngày",
+      "source_url": "https://mia.vn/cam-nang-du-lich/top-dia-diem-thue-xe-may-da-lat-19448",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Thuê Xe Máy Cub50 Đà Lạt… Giá thuê tham khảo: 120.000 – 130.000 VND/ngày» — xe Honda Cub đồ cổ."
+    },
+    {
+      "claim": "Cửa hàng Hải Đà Lạt có xe số 100.000đ và xe ga 120.000đ–150.000đ, giao xe tận nơi miễn phí trong nội thành, phục vụ 24/24",
+      "source_url": "https://mia.vn/cam-nang-du-lich/top-dia-diem-thue-xe-may-da-lat-19448",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá: «Hải Đà Lạt — Hẻm 05 Ma Trang Sơn, P.5 — Xe số: 100.000 – Xe ga: 120.000–150.000»; «dịch vụ giao xe tận nơi miễn phí trong nội thành và phục vụ 24/24. Cửa hàng có hơn 80 xe đời mới»."
+    },
+    {
+      "claim": "Trong cùng bảng, MOTOGO tại TP Đà Lạt ghi giá từ 80.000đ",
+      "source_url": "https://mia.vn/cam-nang-du-lich/top-dia-diem-thue-xe-may-da-lat-19448",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá ghi «MOTOGO — TP. Đà Lạt, Lâm Đồng — Từ 80.000» — tức từ 80.000đ/ngày."
+    }
+  ]
+}
