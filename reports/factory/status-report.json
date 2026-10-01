@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T23:51:12.806Z",
+  "generated_at": "2026-10-01T23:56:13.235Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 93,
-    "PLANNED": 9907
+    "PUBLISHED": 95,
+    "PLANNED": 9905
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 87,
-      "PLANNED": 4913
+      "PUBLISHED": 89,
+      "PLANNED": 4911
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00085",
-  "next_claimable_id": "A00086",
+  "last_completed_id": "A00087",
+  "next_claimable_id": "A00088",
   "blocked": [],
   "published": [
     {
@@ -550,6 +550,18 @@
       "pk": "thuê xe máy Bà Nà Hills",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ba-na-hills/"
+    },
+    {
+      "id": "A00086",
+      "pk": "thuê xe máy Cù Lao Chàm",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-cu-lao-cham/"
+    },
+    {
+      "id": "A00087",
+      "pk": "thuê xe máy Biển Nha Trang",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-bien-nha-trang/"
     },
     {
       "id": "A00097",
