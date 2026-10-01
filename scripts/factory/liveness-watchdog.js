@@ -3,7 +3,7 @@
  * FACTORY LIVENESS WATCHDOG — hardening F3 (Tier 4 liveness).
  *
  * Mục tiêu: phát hiện trạng thái "workflow xanh nhưng factory KHÔNG tiến"
- * (unfinished work đứng lâu, command treo, transaction/lock bất thường,
+ * (unfinished work đứng lâu, stale-draft lint, transaction/lock bất thường,
  * checkpoint + ledger ngừng tiến) — những trạng thái mà CI/invariant xanh
  * vì chúng chỉ kiểm cây snapshot, không kiểm dòng thời gian.
  *
@@ -12,7 +12,7 @@
  *     force-clear lock/transaction, không claim/publish, không sửa state.
  *   - Không coi người dùng CHỦ ĐỘNG NGHỈ là lỗi (idle sạch = PASS).
  *   - Chỉ đọc repository truth: checkpoint + matrix + transaction +
- *     writer-lock + throughput-ledger + operator-command file.
+ *     writer-lock + throughput-ledger + committed _drafts/ files.
  *
  * CANONICAL MATRIX TRUTH (hardening session 5 — Finding 1):
  *   - data/content-matrix.csv là assembled form (GITIGNORED); canonical
@@ -31,15 +31,17 @@
  *     throughput-ledger.json: missing => STATE_MISSING; JSON hỏng hoặc sai
  *     schema tối thiểu => STATE_INVALID. KHÔNG fallback {active:false} hay
  *     trạng thái lành giả. Mọi fatal => FAIL exit 1.
- *   - operator-command.json vẫn OPTIONAL: KHÔNG có command = bình thường;
- *     nếu TỒN TẠI nhưng hỏng => STATE_INVALID (FAIL CLOSED).
+ *   - _drafts/ là thư mục OPTIONAL (push-driven: draft được COMMIT nhưng
+ *     Jekyll không serve thư mục underscore): draft của row PUBLISHED/BLOCKED
+ *     hoặc id không có trong matrix là lint => STALE_DRAFTS (WARN — watchdog
+ *     READ-ONLY, không bao giờ tự xóa; dọn qua push hợp lệ).
  *
  * Trạng thái:
- *   HEALTHY IDLE  : active_chunk rỗng, không command pending, tx inactive,
+ *   HEALTHY IDLE  : active_chunk rỗng, không stale draft, tx inactive,
  *                   không lock sống → PASS.
  *   HEALTHY ACTIVE: có work-in-progress nhưng có progress event mới trong
  *                   ngưỡng → PASS.
- *   PENDING COMMAND STALE: operator-command.json tồn tại quá lâu chưa consume → FAIL.
+ *   STALE_DRAFTS  : draft committed trỏ row PUBLISHED/BLOCKED hoặc id lạ → WARN.
  *   STALLED       : active_chunk có unfinished work nhưng ledger/checkpoint
  *                   không có event mới quá ngưỡng → FAIL.
  *   STALE/EXPIRED LOCK + unfinished work → FAIL; lock hết hạn nhưng idle sạch → WARN.
@@ -49,8 +51,7 @@
  *
  * Usage:
  *   node scripts/factory/liveness-watchdog.js [root]
- *     [--now ISO] [--command-stale-minutes N] [--stalled-minutes N]
- *     [--tx-max-minutes N] [--json]
+ *     [--now ISO] [--stalled-minutes N] [--tx-max-minutes N] [--json]
  *   API: const {evaluate, collectSnapshot, DEFAULT_THRESHOLDS, UNFINISHED}
  *        = require('./scripts/factory/liveness-watchdog.js')
  */
@@ -65,14 +66,12 @@ const CHECKPOINT = path.join(STATE_DIR, 'checkpoint.json');
 const TRANSACTION = path.join(STATE_DIR, 'transaction.json');
 const WRITER_LOCK = path.join(STATE_DIR, 'writer-lock.json');
 const LEDGER = path.join(STATE_DIR, 'throughput-ledger.json');
-const COMMAND_FILE = path.join(STATE_DIR, 'operator-command.json');
 const MATRIX = path.join('data', 'content-matrix.csv');
 
 // Non-terminal chunk states (phải khớp factory.js UNFINISHED — single truth).
 const UNFINISHED = ['RESEARCH', 'WRITING', 'QA', 'REVIEW', 'REPAIR', 'PASS'];
 
 const DEFAULT_THRESHOLDS = {
-  commandStaleMinutes: 120, // command file chưa consume quá 2h = treo
   stalledMinutes: 720, // active chunk không tiến quá 12h = đứng
   txMaxMinutes: 120, // active tx quá 2h = bất thường (publish tx là giây/phút)
 };
@@ -238,29 +237,6 @@ function collectSnapshot(root, nowIso) {
     else ledger = v;
   }
 
-  // Pending command + tuổi của FILE (thời điểm coordinator commit nó).
-  // OPTIONAL: không có command = bình thường; command TỒN TẠI nhưng hỏng
-  // => STATE_INVALID (FAIL CLOSED) — không bỏ lọt command treo.
-  let command = null;
-  let commandFileMinutes = null;
-  let st = null;
-  try { st = fs.statSync(abs(COMMAND_FILE)); }
-  catch (e) {
-    if (e.code !== 'ENOENT') fatals.push({ code: 'STATE_INVALID', file: COMMAND_FILE,
-      message: 'operator-command.json stat lỗi: ' + e.message });
-  }
-  if (st !== null) {
-    commandFileMinutes = (now - st.mtimeMs) / 60000;
-    try {
-      command = readJson(abs(COMMAND_FILE));
-    } catch (e) {
-      fatals.push({ code: 'STATE_INVALID', file: COMMAND_FILE,
-        message: 'operator-command.json tồn tại nhưng không đọc/parse được — FAIL CLOSED (không có command là bình thường; command hỏng thì không).' });
-      command = null;
-      commandFileMinutes = null;
-    }
-  }
-
   // Matrix truth qua canonical loader. Giá trị neutral bên dưới (Map rỗng /
   // {active:false}) CHỈ để in báo cáo khi đã có fatal — fatals khác rỗng thì
   // evaluate() luôn FAIL; không bao giờ được dùng để "giả lành".
@@ -277,6 +253,25 @@ function collectSnapshot(root, nowIso) {
       message: 'matrix rows đọc được (' + matrix.statuses.size +
         ') != checkpoint.matrix_rows (' + checkpoint.matrix_rows +
         ') — canonical matrix truth không đồng bộ với checkpoint (thiếu/thừa shard hoặc matrix drift) — FAIL CLOSED.' });
+  }
+
+  // Stale committed drafts (push-driven hygiene — READ-ONLY): _drafts/ là
+  // thư mục được COMMIT (vòng push-driven cần nó trên Actions); draft của row
+  // PUBLISHED/BLOCKED hoặc id không có trong matrix là lint. WARN — watchdog
+  // KHÔNG bao giờ tự xóa; dọn qua push hợp lệ (publishCommit đã xóa draft).
+  const staleDrafts = [];
+  let draftNames = null;
+  try { draftNames = fs.readdirSync(path.join(root, '_drafts')); }
+  catch (e) {
+    if (e.code !== 'ENOENT') throw e; // _drafts/ vắng mặt = bình thường
+  }
+  if (draftNames !== null) {
+    for (const f of draftNames) {
+      const m = /^(A\d{5})(?:\.body)?\.html$/.exec(f);
+      if (!m) continue;
+      const stt = statuses.get(m[1]);
+      if (stt === undefined || stt === 'PUBLISHED' || stt === 'BLOCKED') staleDrafts.push(f);
+    }
   }
 
   // Progress event mới nhất trong ledger (mọi op đều là dấu hiệu tiến).
@@ -308,8 +303,7 @@ function collectSnapshot(root, nowIso) {
     ledgerEvents: events.length,
     lastProgressMinutes,
     lastProgressAt,
-    command,
-    commandFileMinutes,
+    staleDrafts,
   };
 }
 
@@ -320,7 +314,7 @@ function lockIsExpired(lock, nowIso) {
 }
 
 function unfinishedWorkPresent(snap) {
-  return snap.activeChunk.length > 0 || snap.transaction.active || snap.command !== null;
+  return snap.activeChunk.length > 0 || snap.transaction.active;
 }
 
 /**
@@ -347,17 +341,14 @@ function evaluate(snap, thresholdsIn) {
   const tx = snap.transaction || {};
   const lock = snap.lock || {};
 
-  // 1) PENDING COMMAND STALE — command file treo chưa được consume.
-  if (snap.command !== null) {
-    const age = snap.commandFileMinutes;
-    if (age !== null && age > th.commandStaleMinutes) {
-      add('PENDING_COMMAND_STALE', EXIT_FAIL,
-        'operator-command.json đã ' + Math.round(age) + ' phút chưa được consume (> ' +
-        th.commandStaleMinutes + ' phút) — lệnh đang treo, không op nào tiêu thụ nó.');
-    } else {
-      findings.push({ status: 'PENDING_COMMAND_FRESH', code: EXIT_PASS,
-        message: 'command pending (tuổi ' + Math.round(age || 0) + ' phút) — trong ngưỡng bình thường.' });
-    }
+  // 1) STALE DRAFTS — committed draft trỏ row PUBLISHED/BLOCKED hoặc id
+  //    không có trong matrix (push-driven hygiene). WARN: lint — KHÔNG FAIL
+  //    production; watchdog READ-ONLY, không bao giờ tự xóa.
+  const staleDrafts = snap.staleDrafts || [];
+  if (staleDrafts.length) {
+    add('STALE_DRAFTS', EXIT_WARN,
+      staleDrafts.length + ' draft file trong _drafts/ trỏ row PUBLISHED/BLOCKED hoặc id không có trong matrix (' +
+      staleDrafts.join(', ') + ') — lint của vòng push-driven; publishCommit đã phải xóa draft của row PUBLISHED.');
   }
 
   // 2) ACTIVE TRANSACTION quá tuổi an toàn.
@@ -418,7 +409,7 @@ function evaluate(snap, thresholdsIn) {
 
 function usage() {
   console.error('Usage: node scripts/factory/liveness-watchdog.js [root] [--now ISO]');
-  console.error('  [--command-stale-minutes N] [--stalled-minutes N] [--tx-max-minutes N] [--json]');
+  console.error('  [--stalled-minutes N] [--tx-max-minutes N] [--json]');
   console.error('Exit codes: 0 = PASS, 2 = WARN, 1 = FAIL. READ-ONLY: never mutates state.');
   process.exit(1);
 }
@@ -426,7 +417,7 @@ function usage() {
 function main(argv) {
   let root = process.cwd();
   const flags = {};
-  const valueFlags = ['--now', '--command-stale-minutes', '--stalled-minutes', '--tx-max-minutes'];
+  const valueFlags = ['--now', '--stalled-minutes', '--tx-max-minutes'];
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--json') flags.json = true;
@@ -440,7 +431,6 @@ function main(argv) {
   }
 
   const thresholds = {
-    commandStaleMinutes: parseMinutes(flags['command-stale-minutes'], DEFAULT_THRESHOLDS.commandStaleMinutes),
     stalledMinutes: parseMinutes(flags['stalled-minutes'], DEFAULT_THRESHOLDS.stalledMinutes),
     txMaxMinutes: parseMinutes(flags['tx-max-minutes'], DEFAULT_THRESHOLDS.txMaxMinutes),
   };
@@ -459,7 +449,7 @@ function main(argv) {
     }
     console.log('  active_chunk: ' + snap.activeChunk.length + ' row(s) | unfinished: ' + snap.activeChunkUnfinished +
       ' | tx active: ' + Boolean(snap.transaction.active) + ' | lock held: ' + Boolean(snap.lock.locked) +
-      ' | pending command: ' + (snap.command !== null));
+      ' | stale drafts: ' + ((snap.staleDrafts || []).length));
     for (const f of result.findings) {
       console.log('  [' + f.status + '] ' + f.message);
     }

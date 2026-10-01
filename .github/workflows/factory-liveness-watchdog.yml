@@ -2,8 +2,8 @@ name: Factory Liveness Watchdog
 
 # FACTORY LIVENESS WATCHDOG — hardening F3 (Tier 4 liveness).
 #
-# Phát hiện trạng thái "workflow xanh nhưng factory KHÔNG tiến": command
-# treo (operator-command.json quá tuổi chưa consume), active chunk đứng,
+# Phát hiện trạng thái "workflow xanh nhưng factory KHÔNG tiến": stale
+# draft lint (draft committed của row PUBLISHED/BLOCKED hoặc id lạ), active chunk đứng,
 # active transaction quá tuổi, lock hết hạn + unfinished work, ledger
 # ngừng tiến. CI/invariant xanh không chứng minh factory còn tiến —
 # watchdog này là lớp kiểm đó.
@@ -12,7 +12,7 @@ name: Factory Liveness Watchdog
 #   - permissions: contents: read — KHÔNG commit, KHÔNG push, KHÔNG mutate
 #     production truth, KHÔNG force-clear lock/transaction, KHÔNG claim/publish.
 #   - Watchdog chỉ ĐỌC repository truth (checkpoint + matrix + transaction +
-#     writer-lock + throughput-ledger + command file) và báo cáo.
+#     writer-lock + throughput-ledger + committed _drafts/ files) và báo cáo.
 #   - Người dùng chủ động nghỉ KHÔNG phải lỗi (HEALTHY IDLE = PASS).
 #   - Watchdog SELF-CONTAINED trên canonical truth: assemble matrix
 #     READ-ONLY IN-MEMORY từ shards data/content-matrix.csv.part* khi

@@ -21,7 +21,7 @@ name: Factory Soak (Long-run / Failure recovery)
 # article changes KHÔNG trigger (chỉ những gì ảnh hưởng reliability).
 # Path contract (giống nhau cho PR và push main) — SIMPLE PRODUCTION MODE:
 #   - engine + site builder + soak suite + static regression suite;
-#   - toàn bộ workflows liên quan reliability (operator/validate/capacity/
+#   - toàn bộ workflows liên quan reliability (production/validate/capacity/
 #     soak/watchdog/ci-validate);
 #   - static engine-contract configs (rubric, source policy, business facts,
 #     editorial, seo-experiment, site) — KHÔNG gồm config/content-factory.json
@@ -43,7 +43,7 @@ on:
       - 'scripts/site/**'
       - 'tests/soak/**'
       - 'tests/test-suite.js'
-      - '.github/workflows/factory-operator.yml'
+      - '.github/workflows/factory-production.yml'
       - '.github/workflows/factory-validate.yml'
       - '.github/workflows/factory-capacity-validate.yml'
       - '.github/workflows/factory-soak.yml'
@@ -67,7 +67,7 @@ on:
       - 'scripts/site/**'
       - 'tests/soak/**'
       - 'tests/test-suite.js'
-      - '.github/workflows/factory-operator.yml'
+      - '.github/workflows/factory-production.yml'
       - '.github/workflows/factory-validate.yml'
       - '.github/workflows/factory-capacity-validate.yml'
       - '.github/workflows/factory-soak.yml'

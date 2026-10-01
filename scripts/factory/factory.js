@@ -434,7 +434,10 @@ function publishCommit(staged){
   }
   const ids=tx.journal.ids;
   const started=Number(tx.started_ms)||staged.started||Date.now();
-  for(const id of ids){ const draft=path.join(ROOT,'_drafts',id+'.html'); if(fs.existsSync(draft)) fs.rmSync(draft); }
+  // push-driven hygiene: xóa TOÀN BỘ artifact draft của id đã publish
+  // (trang wrapped + body) để _drafts/ commit không tích lint; commit publish
+  // là diff D-only nên push-selection trả mode=skip (không vòng lặp).
+  for(const id of ids){ for(const f of [id+'.html', id+'.body.html']){ const p=path.join(ROOT,'_drafts',f); if(fs.existsSync(p)) fs.rmSync(p); } }
   if(ids.length) appendLedger({op:'publish',started_at:new Date(started).toISOString(),
     finished_at:new Date().toISOString(),elapsed_ms:Date.now()-started,
     ids,published:ids.length,phase:phase()});

@@ -25,7 +25,7 @@ on:
       - 'config/seo-experiment.json'
       - 'config/site.json'
       - 'config/source-policy.json'
-      - '.github/workflows/factory-operator.yml'
+      - '.github/workflows/factory-production.yml'
       - '.github/workflows/factory-validate.yml'
       - '.github/workflows/factory-capacity-validate.yml'
       - '.github/workflows/factory-soak.yml'
@@ -47,7 +47,7 @@ on:
       - 'config/seo-experiment.json'
       - 'config/site.json'
       - 'config/source-policy.json'
-      - '.github/workflows/factory-operator.yml'
+      - '.github/workflows/factory-production.yml'
       - '.github/workflows/factory-validate.yml'
       - '.github/workflows/factory-capacity-validate.yml'
       - '.github/workflows/factory-soak.yml'
@@ -66,7 +66,7 @@ permissions:
 # KHÔNG thể cancel production-invariant run của main và main KHÔNG cancel
 # validation của PR. Trong CÙNG một ref thì cancel-in-progress: true vẫn
 # hợp lệ (chỉ tự hủy các run cũ của chính ref đó, ví dụ push liên tiếp).
-# LƯU Ý: factory-operator.yml GIỮ NGUYÊN concurrency group toàn cục
+# LƯU Ý: factory-production.yml GIỮ NGUYÊN concurrency group toàn cục
 # lab-factory-production + cancel-in-progress: false (serialize mọi
 # production mutation) — KHÔNG được tách theo ref.
 concurrency:

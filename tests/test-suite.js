@@ -788,10 +788,10 @@ test('audit: stored editorial entries match a fresh re-audit of the same article
 
 // =====================================================================
 // FACTORY OPERATOR — golden orchestration port (/blog pattern -> Node /lab)
-// Command contract (data/state/operator-command.json), single coordinator,
-// recover-first, resume-before-claim, publish gate, safe-push invariants.
-// Mutating tests run inside a throwaway sandbox (os.tmpdir), never on the
-// production tree.
+// Push-driven production loop (factory-production.yml + push-selection.js):
+// single coordinator, recover-first, resume-before-claim, publish gate,
+// safe-push invariants. Mutating tests run inside a throwaway sandbox
+// (os.tmpdir), never on the production tree.
 // =====================================================================
 const { execFileSync, spawnSync } = require('child_process');
 const os = require('os');
@@ -830,47 +830,43 @@ function sbStatus(id, status) {
   fs.writeFileSync(p, out.join('\n'));
 }
 function sbWrite(rel, obj) { fs.writeFileSync(path.join(SB, rel), JSON.stringify(obj, null, 2)); }
-function sbCmdFile(obj) { const p = path.join(SB, 'data', 'state', 'operator-command.json'); fs.writeFileSync(p, JSON.stringify(obj)); return 'data/state/operator-command.json'; }
 
 test('operator: whitelist — invalid op rejected (no arbitrary shell)', () => {
-  const r = OP(['validate', sbCmdFile({ op: 'rm -rf /' })], SB);
+  const r = OP(['rm -rf /'], SB);
   assert.notStrictEqual(r.status, 0, 'invalid op must be refused');
   assert.match(r.stderr, /unsupported op/);
-  const r2 = OP(['validate', sbCmdFile({ op: 'status', evil: 'injection' })], SB);
-  assert.notStrictEqual(r2.status, 0, 'unknown field must be refused');
+  const r2 = OP(['status', '--evil', 'x'], SB);
+  assert.notStrictEqual(r2.status, 0, 'unknown flag must be refused (usage)');
 });
 test('operator: count must be 1..10', () => {
-  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'prepare-next', count: 11 })], SB).status, 0, 'count 11 refused');
-  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'prepare-next', count: 0 })], SB).status, 0, 'count 0 refused');
-  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'prepare-next', count: '3; rm -rf /' })], SB).status, 0, 'non-integer refused');
-  assert.strictEqual(OP(['validate', sbCmdFile({ op: 'prepare-next', count: 10 })], SB).status, 0, 'count 10 allowed');
+  assert.notStrictEqual(OP(['prepare-next', '--count', '11'], SB).status, 0, 'count 11 refused');
+  assert.notStrictEqual(OP(['prepare-next', '--count', '0'], SB).status, 0, 'count 0 refused');
+  assert.notStrictEqual(OP(['prepare-next', '--count', '3; rm -rf /'], SB).status, 0, 'non-integer refused (strict CLI flag parse)');
+  const opMod = require(path.join(SB, 'scripts', 'factory', 'operator.js'));
+  assert.strictEqual(opMod.validateCommand({ op: 'prepare-next', count: 10 }).count, 10, 'count 10 allowed');
 });
 test('operator: malformed article IDs rejected', () => {
-  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'publish', ids: 'A00001;rm -rf /' })], SB).status, 0, 'shell-ish ids refused');
-  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'publish', ids: ['../etc/passwd'] })], SB).status, 0, 'path id refused');
-  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'publish', ids: ['A1'] })], SB).status, 0, 'short id refused');
+  assert.notStrictEqual(OP(['publish', '--ids', 'A00001;rm -rf /'], SB).status, 0, 'shell-ish ids refused');
+  assert.notStrictEqual(OP(['publish', '--ids', '../etc/passwd'], SB).status, 0, 'path id refused');
+  assert.notStrictEqual(OP(['publish', '--ids', 'A1'], SB).status, 0, 'short id refused');
 });
 test('operator: invalid scope rejected; fast is the production default', () => {
-  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'qa', scope: 'yolo' })], SB).status, 0, 'bad scope refused');
-  const r = OP(['validate', sbCmdFile({ op: 'publish', ids: 'A00002,A00003', command_id: 'cmd-1', coordinator: 'external-writer' })], SB);
-  assert.strictEqual(r.status, 0);
-  assert.match(r.stdout, /"scope":"fast"/, 'production ops default to fast scope');
-  const r2 = OP(['validate', sbCmdFile({ op: 'verify', scope: 'deep' })], SB);
-  assert.strictEqual(r2.status, 0);
+  assert.notStrictEqual(OP(['qa', '--scope', 'yolo'], SB).status, 0, 'bad scope refused');
+  const opMod = require(path.join(SB, 'scripts', 'factory', 'operator.js'));
+  const r = opMod.validateCommand({ op: 'publish', ids: 'A00002,A00003', command_id: 'cmd-1', coordinator: 'external-writer' });
+  assert.strictEqual(r.scope, 'fast', 'production ops default to fast scope');
+  const r2 = opMod.validateCommand({ op: 'verify', scope: 'deep' });
+  assert.strictEqual(r2.scope, 'deep');
 });
-test('operator: empty scope resolves to op-appropriate default (workflow $SCOPE unset)', () => {
-  // The workflow exports SCOPE from the command file; commands without an
-  // explicit scope export the empty string. Empty must resolve like missing:
-  // verify -> full (safest), production ops -> fast — never REFUSED.
+test('operator: empty scope resolves to op-appropriate default', () => {
+  // Empty must resolve like missing: verify -> full (safest), production ops
+  // -> fast — never REFUSED.
   const opMod = require(path.join(SB, 'scripts', 'factory', 'operator.js'));
   assert.strictEqual(opMod.validateCommand({ op: 'qa', ids: 'A00002', scope: '' }).scope, 'fast', 'empty scope on production op resolves to fast');
   assert.strictEqual(opMod.validateCommand({ op: 'verify', scope: '' }).scope, 'full', 'empty scope on standalone verify resolves to full');
-  const r = OP(['validate', sbCmdFile({ op: 'verify', scope: '' })], SB);
-  assert.strictEqual(r.status, 0, 'command-file verify with empty scope must not be refused');
-  assert.match(r.stdout, /"scope":"full"/, 'resolved scope is exported to the workflow env');
 });
 test('operator: publish requires ids (gate is explicit)', () => {
-  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'publish' })], SB).status, 0, 'publish without ids refused');
+  assert.notStrictEqual(OP(['publish'], SB).status, 0, 'publish without ids refused');
 });
 test('factory: prepare-next refuses while unfinished chunk exists (resume first)', () => {
   sbStatus('A00002', 'WRITING');
@@ -893,9 +889,10 @@ test('regression: REVIEW rows are unfinished — prepare-next refuses (repair fi
 });
 test('regression: operator publish ids capped at CHUNK (max 10)', () => {
   const eleven = Array.from({ length: 11 }, (_, i) => 'A' + String(i + 5).padStart(5, '0')).join(',');
-  assert.notStrictEqual(OP(['validate', sbCmdFile({ op: 'publish', ids: eleven })], SB).status, 0, '11 ids must be refused');
+  assert.notStrictEqual(OP(['publish', '--ids', eleven], SB).status, 0, '11 ids must be refused');
   const ten = eleven.split(',').slice(0, 10).join(',');
-  assert.strictEqual(OP(['validate', sbCmdFile({ op: 'publish', ids: ten })], SB).status, 0, '10 ids allowed');
+  const opMod = require(path.join(SB, 'scripts', 'factory', 'operator.js'));
+  assert.strictEqual(opMod.validateCommand({ op: 'publish', ids: ten }).ids.length, 10, '10 ids allowed');
 });
 test('factory: prepare-next honors count 1..10', () => {
   assert.notStrictEqual(FACT(['prepare-next', '11'], SB).status, 0, 'count>CHUNK refused');
@@ -1021,26 +1018,26 @@ test('factory: resolvable transaction recovers deterministically; clean state re
   assert.strictEqual(ckBefore, fs.readFileSync(path.join(SB, 'data', 'state', 'checkpoint.json'), 'utf8'), 'recover must be deterministic');
 });
 test('operator: single coordinator — concurrency group serializes, never cancels', () => {
-  const y = wfText('factory-operator.yml');
+  const y = wfText('factory-production.yml');
   assert.match(y, /group:\s*lab-factory-production/, 'must pin one production coordinator group');
   assert.match(y, /cancel-in-progress:\s*false/, 'must never cancel an in-flight production run');
-  assert.match(y, /paths:\s*\['data\/state\/operator-command\.json'\]/, 'trigger must be the command file only');
+  assert.match(y, /paths:\s*\['_drafts\/\*\*'\]/, 'trigger must be draft pushes only');
 });
 test('operator: verified-tree invariant — commit must equal the verified tree', () => {
-  const y = wfText('factory-operator.yml');
+  const y = wfText('factory-production.yml');
   assert.match(y, /OPERATOR_VERIFIED_TREE/, 'must capture the verified tree');
   assert.match(y, /git write-tree/, 'must hash the staged tree');
   assert.match(y, /cây commit khác cây đã verified/, 'must refuse commit on tree drift');
 });
 test('operator: no force push anywhere; rebase loop always re-verifies', () => {
-  for (const f of ['factory-operator.yml', 'factory-validate.yml', 'factory-capacity-validate.yml', 'ci-validate.yml']) {
+  for (const f of ['factory-production.yml', 'factory-validate.yml', 'factory-capacity-validate.yml', 'ci-validate.yml']) {
     const y = wfText(f);
     assert.ok(!/--force|-f\s+git\s+push|push\s+-f/u.test(y), 'force push found in ' + f);
   }
-  const y = wfText('factory-operator.yml');
+  const y = wfText('factory-production.yml');
   assert.match(y, /git rebase origin\/main/, 'must fetch+rebase on push race');
   assert.match(y, /OPERATOR_LOCAL_VERIFY_HEAD_POST_REBASE/, 'rebase must be followed by re-verify');
-  assert.match(y, /operator\.js verify --scope "\$SCOPE"\s*\n\s*if ! git diff --quiet/, 're-verify + clean-tree check after rebase');
+  assert.match(y, /operator\.js verify --scope fast\s*\n\s*if ! git diff --quiet/, 're-verify + clean-tree check after rebase');
 });
 test('factory: read-only validation preserves state and truth', () => {
   // pristine copy: the shared SB matrix has drifted (scenario mutations above),
@@ -1094,8 +1091,9 @@ test('draft safety: _drafts is committed (not gitignored) and Pages never publis
   const gi = fs.readFileSync(path.join(ROOT, '.gitignore'), 'utf8');
   assert.ok(!/(^|\n)_drafts\//.test(gi), '_drafts/ must NOT be gitignored — the push-driven factory loop commits drafts');
   assert.ok(!fs.existsSync(path.join(ROOT, '.nojekyll')), '.nojekyll must be ABSENT so Jekyll never publishes _drafts/');
-  const y = wfText('factory-operator.yml');
-  assert.match(y, /KHÔNG BAO GIỜ commit/, 'workflow must document the draft boundary');
+  const y = wfText('factory-production.yml');
+  assert.match(y, /paths:\s*\['_drafts\/\*\*'\]/, 'the production loop is driven by committed draft pushes');
+  assert.match(y, /push-selection\.js/, 'draft ids are derived deterministically from the push');
 });
 // =====================================================================
 // PUSH-DRIVEN PRODUCTION — push-selection.js (EXACT ids derived from the
@@ -1319,8 +1317,7 @@ test('prepare-next --ids: non-PLANNED / unknown / malformed / duplicate / >CHUNK
   assert.match(rChunk.stderr, /CHUNK/);
 });
 test('operator: prepare-next --ids passthrough (validate + execute path)', () => {
-  const sbp2CmdFile = (obj) => { const p = path.join(SBP2, 'data', 'state', 'operator-command.json'); fs.writeFileSync(p, JSON.stringify(obj)); return 'data/state/operator-command.json'; };
-  assert.notStrictEqual(OP(['validate', sbp2CmdFile({ op: 'prepare-next', ids: 'A00015,A00016', count: 2 })], SBP2).status, 0, 'ids+count must be refused (mutually exclusive)');
+  assert.notStrictEqual(OP(['prepare-next', '--ids', 'A00015,A00016', '--count', '2'], SBP2).status, 0, 'ids+count must be refused (mutually exclusive)');
   // full operator path: preflight -> EXACT claim -> reports -> scoped fast verify
   const r = OP(['prepare-next', '--ids', 'A00015,A00016', '--scope', 'fast'], SBP2);
   assert.strictEqual(r.status, 0, r.stdout + r.stderr);
@@ -1776,68 +1773,32 @@ test('cleanup: remove hardening sandbox', () => { fs.rmSync(SB4, { recursive: tr
 test('cleanup: remove operator sandbox', () => { fs.rmSync(SB, { recursive: true, force: true }); });
 
 // =====================================================================
-// HARDENING SESSION 4 — 4-tier validation model (channel contract F1,
-// per-ref concurrency F2, liveness watchdog F3, soak F4, docs contract F5).
+// HARDENING SESSION 4 — 4-tier validation model (push-driven production
+// loop contract F1, per-ref concurrency F2, liveness watchdog F3, soak F4, docs contract F5).
 // =====================================================================
-const SBH = path.join(os.tmpdir(), 'lab-hardening-sandbox-' + process.pid);
-fs.rmSync(SBH, { recursive: true, force: true });
-fs.cpSync(ROOT, SBH, { recursive: true, filter: (s) => {
-  const rel = path.relative(ROOT, s);
-  return rel !== '_drafts' && !rel.startsWith('_drafts' + path.sep)
-    && rel !== 'site' && !rel.startsWith('site' + path.sep)
-    && !path.basename(s).startsWith('content-matrix.csv.part');
-} });
-const sbhCmdFile = (obj) => { const p = path.join(SBH, 'data', 'state', 'operator-command.json'); fs.writeFileSync(p, JSON.stringify(obj)); return 'data/state/operator-command.json'; };
 const wd = require(path.join(ROOT, 'scripts', 'factory', 'liveness-watchdog.js'));
 
-test('F1 channel contract: Actions channel refuses qa/publish EARLY (exit 3, nothing executed)', () => {
-  for (const op of ['qa', 'publish']) {
-    const cmd = op === 'publish' ? { op, ids: 'A00001' } : { op };
-    const f = sbhCmdFile(cmd);
-    const v = OP(['validate', f, '--channel', 'actions'], SBH);
-    assert.strictEqual(v.status, 3, op + ' on actions channel must exit exactly 3 (channel refused), got ' + v.status);
-    assert.match(v.stderr, /OPERATOR CHANNEL REFUSED/, 'must name the refusal contract');
-    assert.match(v.stderr, /_drafts/, 'must explain the draft boundary');
-    assert.doesNotMatch(v.stdout, /COMMAND OK/, 'refused command must not be accepted');
-    // command path: refused too, and it must NOT execute anything
-    const before = fs.readFileSync(path.join(SBH, 'data', 'content-matrix.csv'), 'utf8');
-    const c = OP(['command', f, '--channel', 'actions'], SBH);
-    assert.strictEqual(c.status, 3, 'command path must also refuse early with exit 3');
-    assert.strictEqual(before, fs.readFileSync(path.join(SBH, 'data', 'content-matrix.csv'), 'utf8'), 'refusal must not mutate the matrix');
-  }
-  // the command file is still on disk (consume is the WORKFLOW's job) — the
-  // contract is: refuse EARLY + workflow consumes; never die NO_DRAFT mid-run
-  assert.ok(fs.existsSync(path.join(SBH, 'data', 'state', 'operator-command.json')), 'refusal leaves consuming to the workflow (documented contract)');
-  fs.rmSync(path.join(SBH, 'data', 'state', 'operator-command.json'), { force: true });
+test('F1 push-driven workflow contract: factory-production.yml is the single production loop', () => {
+  const y = wfText('factory-production.yml');
+  assert.match(y, /paths:\s*\['_drafts\/\*\*'\]/, 'push loop phải trigger đúng trên draft pushes');
+  assert.match(y, /group:\s*lab-factory-production/, 'phải giữ group serialization GLOBAL');
+  assert.match(y, /cancel-in-progress:\s*false/, 'không bao giờ cancel production run đang chạy');
+  assert.match(y, /push-selection\.js/, 'phải chọn EXACT IDs qua push-selection.js');
+  assert.match(y, /operator\.js recover/, 'phải recover trước khi claim');
+  assert.match(y, /prepare-next --ids/, 'phải claim EXACT IDs vừa push');
+  assert.match(y, /operator\.js qa --ids/, 'phải QA đúng IDs đã push');
+  assert.match(y, /operator\.js publish --ids/, 'phải publish CHỈ hàng PASS');
+  assert.match(y, /status \| recover \| diagnostics/, 'dispatch chỉ còn ops bảo trì');
+  assert.doesNotMatch(y, /operator-command\.json/, 'kênh command-file đã retire');
+  assert.doesNotMatch(y, /factory-operator\.yml/, 'workflow cũ không được reference');
+  assert.ok(!fs.existsSync(path.join(ROOT, '.github', 'workflows', 'factory-operator.yml')),
+    'factory-operator.yml phải bị XÓA khỏi repo');
 });
-test('F1 channel contract: Actions channel accepts clean-checkout ops only', () => {
-  const allowed = ['status', 'prepare-next', 'recover', 'consistency', 'reports', 'verify'];
-  for (const op of allowed) {
-    const v = OP(['validate', sbhCmdFile({ op }), '--channel', 'actions'], SBH);
-    assert.strictEqual(v.status, 0, op + ' must be accepted on the actions channel');
-    assert.match(v.stdout, /COMMAND OK/, op + ' must print COMMAND OK');
-    assert.match(v.stdout, /"channel":"actions"/, 'resolution must record the channel');
-  }
-  fs.rmSync(path.join(SBH, 'data', 'state', 'operator-command.json'), { force: true });
-});
-test('F1 channel contract: writer direct CLI (default channel) keeps full access', () => {
-  const qa = OP(['validate', sbhCmdFile({ op: 'qa' })], SBH);
-  assert.strictEqual(qa.status, 0, 'qa must validate on the default (writer) channel');
-  const pub = OP(['validate', sbhCmdFile({ op: 'publish', ids: 'A00001' })], SBH);
-  assert.strictEqual(pub.status, 0, 'publish must validate on the default (writer) channel');
-  assert.match(pub.stdout, /"channel":"cli"/, 'default channel must be cli');
-  const bad = OP(['validate', sbhCmdFile({ op: 'status' }), '--channel', 'smoke'], SBH);
-  assert.notStrictEqual(bad.status, 0, 'unknown channel must be refused');
-  fs.rmSync(path.join(SBH, 'data', 'state', 'operator-command.json'), { force: true });
-});
-test('F1 workflow contract: factory-operator.yml runs --channel actions and consumes refused commands', () => {
-  const y = wfText('factory-operator.yml');
-  assert.match(y, /validate data\/state\/operator-command\.json --channel actions/, 'validate step must pin the actions channel');
-  assert.match(y, /command data\/state\/operator-command\.json --channel actions/, 'execute step must pin the actions channel');
-  assert.match(y, /CHANNEL_REFUSED=1/, 'must capture the refusal flag');
-  assert.match(y, /Tiêu thụ lệnh bị từ chối sớm/, 'must have a consume step so the command file never hangs');
-  assert.match(y, /if: failure\(\) && env\.CHANNEL_REFUSED == '1'/, 'consume step must run exactly on early refusal');
-  assert.match(y, /qa\/publish are writer-env direct-CLI only/, 'consume commit message must document the channel contract');
+test('F1 channel retirement: operator.js is CLI-only', () => {
+  const src = fs.readFileSync(path.join(ROOT, 'scripts', 'factory', 'operator.js'), 'utf8');
+  assert.doesNotMatch(src, /operator-command\.json/, 'không còn command-file channel');
+  assert.doesNotMatch(src, /--channel/, 'không còn channel flag');
+  assert.match(src, /push-selection\.js/, 'header phải document hợp đồng push-selection');
 });
 test('F2 concurrency contract: validation workflows are per-ref; production stays globally serialized', () => {
   for (const f of ['factory-validate.yml', 'factory-capacity-validate.yml']) {
@@ -1846,9 +1807,9 @@ test('F2 concurrency contract: validation workflows are per-ref; production stay
       f + ' must key its concurrency group per ref/branch');
     assert.match(y, /cancel-in-progress:\s*true/, f + ' may still cancel within the same ref');
   }
-  const op = wfText('factory-operator.yml');
-  assert.match(op, /group:\s*lab-factory-production/, 'production operator must keep the GLOBAL serialization group');
-  assert.match(op, /cancel-in-progress:\s*false/, 'production operator must never cancel in-flight runs');
+  const op = wfText('factory-production.yml');
+  assert.match(op, /group:\s*lab-factory-production/, 'production loop must keep the GLOBAL serialization group');
+  assert.match(op, /cancel-in-progress:\s*false/, 'production loop must never cancel in-flight runs');
   assert.ok(!/lab-factory-production-\$\{\{/.test(op), 'production group must NOT be per-ref');
 });
 test('F3 watchdog unit: HEALTHY IDLE -> PASS (user resting is never a failure)', () => {
@@ -1865,12 +1826,14 @@ test('F3 watchdog unit: HEALTHY ACTIVE (unfinished work + fresh progress) -> PAS
   assert.strictEqual(r.status, 'HEALTHY ACTIVE');
   assert.strictEqual(r.exitCode, wd.EXIT_PASS);
 });
-test('F3 watchdog unit: stale pending command -> FAIL', () => {
-  const r = wd.evaluate({ nowIso: '2026-09-30T00:00:00Z', activeChunk: [], activeChunkUnfinished: 0,
-    transaction: { active: false }, lock: { locked: false }, command: { op: 'status' }, commandFileMinutes: 200,
-    lastProgressMinutes: 1 }, {});
-  assert.strictEqual(r.exitCode, wd.EXIT_FAIL);
-  assert.ok(r.findings.some(f => f.status === 'PENDING_COMMAND_STALE'), 'must flag PENDING_COMMAND_STALE');
+test('F3 watchdog unit: stale drafts -> WARN (exit 2), clean _drafts -> PASS', () => {
+  const base = { nowIso: '2026-09-30T00:00:00Z', activeChunk: [], activeChunkUnfinished: 0,
+    transaction: { active: false }, lock: { locked: false }, lastProgressMinutes: 1 };
+  const stale = wd.evaluate({ ...base, staleDrafts: ['A00005.html', 'A99999.body.html'] }, {});
+  assert.strictEqual(stale.exitCode, wd.EXIT_WARN, 'stale drafts là lint WARN, không FAIL production');
+  assert.ok(stale.findings.some(f => f.status === 'STALE_DRAFTS'), 'must flag STALE_DRAFTS');
+  const clean = wd.evaluate({ ...base, staleDrafts: [] }, {});
+  assert.strictEqual(clean.exitCode, wd.EXIT_PASS, '_drafts sạch => PASS');
 });
 test('F3 watchdog unit: stalled active chunk (no fresh progress) -> FAIL', () => {
   const r = wd.evaluate({ nowIso: '2026-09-30T00:00:00Z', activeChunk: ['A00015'], activeChunkUnfinished: 1,
@@ -1932,12 +1895,12 @@ test('F5 docs contract: 4-tier validation model documented in canonical docs', (
     assert.match(t, /node --test tests\/test-suite\.js/, name + ' must pin the Tier 1 command');
     assert.match(t, /soak/i, name + ' must require the soak suite');
   }
-  assert.match(agents, /--channel actions/i, 'AGENTS.md must document the actions channel contract');
-  assert.match(agents, /writer direct CLI/i, 'AGENTS.md must document the writer direct CLI');
-  assert.match(proc, /Actions command-file channel/i, 'PROC-PUBLISH must distinguish the two command channels');
+  assert.match(agents, /push-driven/i, 'AGENTS.md must document the push-driven production loop');
+  assert.match(agents, /push-selection\.js/, 'AGENTS.md must document the push-selection contract');
+  assert.match(proc, /push-driven/i, 'PROC-PUBLISH must document the push-driven loop');
+  assert.match(proc, /factory-production\.yml/, 'PROC-PUBLISH must pin the production workflow');
 });
 
-test('cleanup: remove hardening session 4 sandbox', () => { fs.rmSync(SBH, { recursive: true, force: true }); });
 
 // ---------- HARDENING SESSION 5: canonical matrix truth + fail-closed watchdog + Tier 4 main enforcement ----------
 const WS5 = path.join(os.tmpdir(), 'lab-hardening5-' + process.pid);
@@ -2068,12 +2031,26 @@ test('S5 H2: throughput-ledger.json hỏng -> FAIL CLOSED STATE_INVALID', () => 
   assert.match(r.stdout, /STATE_INVALID/);
 });
 
-test('S5 K: operator-command.json optional — thiếu = bình thường; tồn tại nhưng hỏng = STATE_INVALID', () => {
+test('S5 K: stale committed drafts -> STALE_DRAFTS WARN (exit 2); draft row hợp lệ -> PASS', () => {
   const ok = wdRun([wdFixture()]);
-  assert.strictEqual(ok.status, 0, 'không có command là bình thường:\n' + ok.stdout);
-  const bad = wdRun([wdFixture((sb) => fs.writeFileSync(path.join(sb, 'data', 'state', 'operator-command.json'), '{ nope'))]);
-  assert.strictEqual(bad.status, 1, 'command file hỏng => FAIL CLOSED:\n' + bad.stdout);
-  assert.match(bad.stdout, /STATE_INVALID/);
+  assert.strictEqual(ok.status, 0, 'không có _drafts là bình thường:\n' + ok.stdout);
+  const pub = wdRun([wdFixture((sb) => {
+    fs.mkdirSync(path.join(sb, '_drafts'), { recursive: true });
+    fs.writeFileSync(path.join(sb, '_drafts', 'A00005.html'), '<h1>stale published</h1>');
+  })]);
+  assert.strictEqual(pub.status, 2, 'draft trỏ row PUBLISHED phải WARN (không FAIL):\n' + pub.stdout);
+  assert.match(pub.stdout, /STALE_DRAFTS/);
+  const weird = wdRun([wdFixture((sb) => {
+    fs.mkdirSync(path.join(sb, '_drafts'), { recursive: true });
+    fs.writeFileSync(path.join(sb, '_drafts', 'A99999.body.html'), '<h1>weird id</h1>');
+  })]);
+  assert.strictEqual(weird.status, 2, 'draft id lạ phải WARN:\n' + weird.stdout);
+  assert.match(weird.stdout, /STALE_DRAFTS/);
+  const fresh = wdRun([wdFixture((sb) => {
+    fs.mkdirSync(path.join(sb, '_drafts'), { recursive: true });
+    fs.writeFileSync(path.join(sb, '_drafts', 'A00002.html'), '<h1>fresh research row</h1>');
+  })]);
+  assert.strictEqual(fresh.status, 0, 'draft id RESEARCH hợp lệ => PASS:\n' + fresh.stdout);
 });
 
 test('S5 J: watchdog KHÔNG đổi byte nào trong cây nó đọc (read-only tuyệt đối)', () => {
@@ -2121,7 +2098,7 @@ test('S5 static: soak workflow BẮT BUỘC Tier 4 trên push main + path contra
   assert.match(y, /push:/, 'soak phải trigger cả trên push');
   assert.match(y, /branches:\s*\[main\]/, 'push phải filter branch main');
   const requiredPaths = ['scripts/factory/**', 'scripts/site/**', 'tests/soak/**', 'tests/test-suite.js',
-    '.github/workflows/factory-operator.yml', '.github/workflows/factory-validate.yml',
+    '.github/workflows/factory-production.yml', '.github/workflows/factory-validate.yml',
     '.github/workflows/factory-capacity-validate.yml', '.github/workflows/factory-soak.yml',
     '.github/workflows/factory-liveness-watchdog.yml', '.github/workflows/ci-validate.yml',
     'config/article-rubric.json', 'config/business-facts.json', 'config/source-policy.json',
@@ -2147,8 +2124,8 @@ test('S5 static: soak workflow BẮT BUỘC Tier 4 trên push main + path contra
   assert.ok(!/&tier4_paths|\*tier4_paths/.test(y), 'GitHub Actions không hỗ trợ YAML anchors — nhân đôi paths');
 });
 
-test('S5 static: factory-operator vẫn giữ global serialization lab-factory-production, cancel=false, không force push', () => {
-  const y = wfText('factory-operator.yml');
+test('S5 static: factory-production giữ global serialization lab-factory-production, cancel=false, không force push', () => {
+  const y = wfText('factory-production.yml');
   assert.match(y, /group:\s*lab-factory-production/);
   assert.match(y, /cancel-in-progress:\s*false/);
   assert.ok(!/lab-factory-production-\$\{\{/.test(y), 'operator group phải là global, không per-ref');
@@ -2303,6 +2280,7 @@ test('simple-prod: FAST publish stays ATOMIC and is NOT blocked by editorial-aud
   for (const id of pair) {
     const h = html(id);
     fs.writeFileSync(path.join(SB7, '_drafts', id + '.html'), h);
+    fs.writeFileSync(path.join(SB7, '_drafts', id + '.body.html'), '<h1>B ' + id + '</h1>');
     fs.writeFileSync(path.join(SB7, 'data', 'qa', id + '.json'),
       JSON.stringify({ article_id: id, score: 100, words: 30, result: 'PASS', fails: [], draft_sha256: shaOf(h), matrix_status_after: 'PASS' }));
   }
@@ -2324,6 +2302,7 @@ test('simple-prod: FAST publish stays ATOMIC and is NOT blocked by editorial-aud
   assert.deepStrictEqual(states, { A00015: 'PUBLISHED', A00016: 'PUBLISHED' });
   for (const id of pair) {
     assert.ok(!fs.existsSync(path.join(SB7, '_drafts', id + '.html')), 'draft removed at commit');
+    assert.ok(!fs.existsSync(path.join(SB7, '_drafts', id + '.body.html')), 'body draft removed at commit');
     assert.ok(fs.existsSync(path.join(SB7, 'data', 'published', id + '.html')), 'durable archive written');
   }
   const ledger = JSON.parse(fs.readFileSync(path.join(SB7, 'data', 'state', 'throughput-ledger.json'), 'utf8'));

@@ -3,35 +3,30 @@
  * operator.js — whitelist command-contract operator for the /lab content factory.
  * Golden port of /blog's factory-operator pattern onto the canonical Node engine.
  *
- * CHANNEL: data/state/operator-command.json — a coordinator (external AI writer or
- * human, GitHub read/write only) pushes a whitelist command; the workflow
- * .github/workflows/factory-operator.yml executes it here. The same CLI runs
- * identically in the writer's local canonical environment.
- *
- * CHANNEL CONTRACT (draft boundary): the Actions command-file channel is NOT
- * the writer direct CLI. It runs `--channel actions` and only accepts ops that
- * can run in a CLEAN CHECKOUT (no _drafts/): status, prepare-next, research,
- * recover, consistency, reports, verify. Draft-bound ops (qa, publish) are
- * REFUSED EARLY at validation (exit code 3, nothing executed, nothing
- * mutated) — the workflow then consumes the refused command so it never hangs.
- * On the writer direct CLI (default channel 'cli') every whitelisted op,
- * including qa/publish, stays available.
+ * PUSH-DRIVEN PRODUCTION (docs/PROC-PUBLISH.md — the /vanchinh + /blog model):
+ * the writer commits the pair into `_drafts/` (wrapped `A#####.html` +
+ * `A#####.body.html` + `data/research/<ID>.json`) and pushes;
+ * .github/workflows/factory-production.yml derives the EXACT article ids from
+ * the pushed diff (scripts/factory/push-selection.js) and drives this CLI:
+ * recover → prepare-next --ids → research → qa → publish. The same CLI stays
+ * available to the writer locally (identical tooling, identical gates) —
+ * there is NO other command channel.
  *
  * HARD BOUNDARIES (same as the engine, docs/PROC-PUBLISH.md):
  * - NO AI calls, NO API keys, NO prose writing. Deterministic tooling only.
  * - NO arbitrary shell: op/ids/count/scope are validated against strict
  *   whitelists; user input is never interpolated into a shell string.
- * - DRAFT BOUNDARY (/lab adaptation): Pages serves the repository ROOT
- *   (.nojekyll), so committed drafts would be PUBLIC. `_drafts/` stays
- *   gitignored and NEVER committed. Ops that need draft prose (qa, publish)
- *   therefore run in the writer's environment via this same CLI; in a bare
- *   Actions checkout they stop safely with NO_DRAFT (nothing is mutated).
+ * - DRAFT BOUNDARY (push-driven): `_drafts/` IS committed (the loop needs it
+ *   on Actions) but GitHub Pages runs Jekyll and Jekyll NEVER publishes
+ *   underscore directories — drafts are never served publicly. The engine
+ *   enforces the contract: `.nojekyll` must be ABSENT and `_drafts/` must NOT
+ *   be gitignored (factory.js consistency + capacity-check.js).
  * - RECOVER FIRST: mutating ops refuse while a transaction is active or a live
  *   writer lock is held (run the recover op first). Unclear lock ownership => STOP.
  * - SINGLE COORDINATOR: the workflow serializes runs via concurrency group
- *   `lab-factory-production`; the command file is consumed exactly once
- *   (deleted in the operator commit) and a new command never overwrites an
- *   unconsumed one (rebase keeps origin's new command).
+ *   `lab-factory-production` (never cancel-in-progress). The publish commit
+ *   deletes the drafts (a D-only diff), so push-selection returns mode=skip
+ *   and the loop never re-triggers itself.
  *
  * QA SCOPES (docs/PROC-PUBLISH.md "QA modes" — thresholds NEVER change):
  * - fast  (production default for prepare-next/qa/publish — the NORMAL
@@ -65,20 +60,9 @@
 const fs = require('fs'), path = require('path');
 const { spawnSync } = require('child_process');
 const ROOT = path.join(__dirname, '..', '..');
-const CMD_FILE = path.join(ROOT, 'data', 'state', 'operator-command.json');
 
 const OPS = ['status','prepare-next','research','qa','publish','recover','consistency','reports','verify'];
 const SCOPES = ['fast','deep','full'];
-// DRAFT BOUNDARY (channel contract): ops that read `_drafts/<ID>.html`.
-// `_drafts/` is gitignored and NEVER committed, so a GitHub Actions clean
-// checkout can never run them. On the ACTIONS channel they are REFUSED EARLY
-// (exit code 3) at validate time — never accepted only to die NO_DRAFT mid-run
-// and leave operator-command.json hanging. The writer direct CLI (default
-// channel) keeps full access: drafts exist there.
-const DRAFT_OPS = ['qa','publish'];
-const CHANNELS = ['actions','cli'];
-const EXIT_CHANNEL_REFUSED = 3;
-const ACTIONS_OPS = () => OPS.filter(o => !DRAFT_OPS.includes(o));
 const PRODUCTION_OPS = ['prepare-next','qa','publish']; // default scope fast
 const MUTATING = new Set(['prepare-next','research','qa','publish']);
 const ID_RE = /^A\d{5}$/;
@@ -86,7 +70,6 @@ const COUNT_MIN = 1, COUNT_MAX = 10;
 const factory = require(path.join(__dirname, 'factory.js'));
 
 function fail(msg){ console.error('OPERATOR REFUSED: ' + msg); process.exit(1); }
-function failChannel(msg){ console.error('OPERATOR CHANNEL REFUSED: ' + msg); process.exit(EXIT_CHANNEL_REFUSED); }
 function resolveScope(cmd){ return cmd.scope || (PRODUCTION_OPS.includes(cmd.op) ? 'fast' : (cmd.op==='verify'?'full':'')); }
 
 function parseIds(v){
@@ -102,17 +85,9 @@ function parseIds(v){
   return list;
 }
 
-function validateCommand(cmd, channel){
-  const ch = channel || 'cli'; // default: writer direct CLI (drafts exist there)
-  if (!CHANNELS.includes(ch)) fail('unknown channel '+JSON.stringify(ch)+' (expected: '+CHANNELS.join('|')+')');
+function validateCommand(cmd){
   if (!cmd || typeof cmd!=='object' || Array.isArray(cmd)) fail('command must be a JSON object');
   if (!OPS.includes(cmd.op)) fail('unsupported op: '+JSON.stringify(cmd.op)+' (whitelist: '+OPS.join(', ')+')');
-  if (ch==='actions' && DRAFT_OPS.includes(cmd.op)) {
-    // REFUSE EARLY, nothing executed, nothing mutated: a clean checkout has no
-    // _drafts/ — accepting this command would only die NO_DRAFT mid-run and
-    // leave the command file hanging. qa/publish run via the writer direct CLI.
-    failChannel('op "'+cmd.op+'" requires _drafts/ (gitignored, never committed) — it cannot run in an Actions clean checkout. The Actions command-file channel only accepts: '+ACTIONS_OPS().join(', ')+'. Run "'+cmd.op+'" via the writer direct CLI (node scripts/factory/operator.js '+cmd.op+' ...).');
-  }
   if (cmd.ids!==undefined) cmd.ids=parseIds(cmd.ids);
   if (cmd.count!==undefined){
     if(!Number.isInteger(cmd.count)) fail('count must be an integer');
@@ -129,14 +104,6 @@ function validateCommand(cmd, channel){
   if (cmd.op==='qa' && cmd.ids===undefined) cmd.ids=null; // null => all actionable rows
   for (const k of Object.keys(cmd)) if (!['op','ids','count','scope','command_id','coordinator'].includes(k)) fail('unknown command field: '+k);
   return Object.assign({}, cmd, {scope:resolveScope(cmd)});
-}
-
-function loadCommandFile(p, channel){
-  let raw;
-  try { raw=fs.readFileSync(p,'utf8'); } catch(e){ fail('cannot read command file '+p+': '+e.message); }
-  let cmd;
-  try { cmd=JSON.parse(raw); } catch(e){ fail('command file is not valid JSON: '+e.message); }
-  return validateCommand(cmd, channel);
 }
 
 // ---- engine state preflight: repository truth first, recover BEFORE mutate ----
@@ -278,7 +245,7 @@ function opQa(cmd){
     const r=byId[id];
     if (!r) problems.push(id+' not in matrix');
     else if (factory.TERMINAL.has(r.status)) problems.push(id+' status '+r.status+' is protected');
-    else if (!fs.existsSync(path.join(ROOT,'_drafts',id+'.html'))) problems.push(id+' NO_DRAFT (drafts live in the writer environment, gitignored — never committed)');
+    else if (!fs.existsSync(path.join(ROOT,'_drafts',id+'.html'))) problems.push(id+' NO_DRAFT (wrapped draft missing from _drafts/ — run wrap-drafts.js, commit and push)');
   }
   if (problems.length) fail('qa pre-check: '+problems.join('; '));
   const started=Date.now();
@@ -303,7 +270,7 @@ function opPublish(cmd){
     const r=byId[id];
     if (!r) problems.push(id+' not in matrix');
     else if (r.status!=='PASS') problems.push(id+' status '+r.status+' — publish gate only accepts PASS (never lower the threshold)');
-    else if (!fs.existsSync(path.join(ROOT,'_drafts',id+'.html'))) problems.push(id+' NO_DRAFT (drafts live in the writer environment, gitignored — never committed)');
+    else if (!fs.existsSync(path.join(ROOT,'_drafts',id+'.html'))) problems.push(id+' NO_DRAFT (wrapped draft missing from _drafts/ — run wrap-drafts.js, commit and push)');
   }
   if (problems.length) fail('publish pre-check: '+problems.join('; '));
   // ATOMIC PUBLISH (Simple Production Mode): stage all mutations
@@ -358,46 +325,25 @@ function execute(cmd){
 
 function usage(){
   console.error('Usage:');
-  console.error('  operator.js validate <command.json> [--channel actions|cli]  # whitelist validation, prints resolution (exports GITHUB_ENV when present)');
-  console.error('  operator.js command <command.json> [--channel actions|cli]   # validate + execute one command file');
   console.error('  operator.js <op> [--ids A00001,A00002] [--count N] [--scope fast|deep|full] [--command-id ID] [--coordinator NAME]');
   console.error('    prepare-next --ids A00015,A00016 — push-driven EXACT claim (ids from push-selection.js); --ids and --count are mutually exclusive');
-  console.error('Channels: actions = GitHub Actions command-file channel (clean checkout, no _drafts/ — draft ops qa/publish are REFUSED early, exit 3).');
-  console.error('          cli     = writer direct CLI (default; drafts exist, all ops available).');
+  console.error('  Ops whitelist: status, prepare-next, research, qa, publish, recover, consistency, reports, verify');
+  console.error('  Production loop: .github/workflows/factory-production.yml on _drafts/ pushes (push-selection.js derives the EXACT ids).');
   process.exit(1);
 }
 
-function exportEnv(cmd){
-  if (!process.env.GITHUB_ENV) return;
-  const env={OP:cmd.op, IDS:(cmd.ids||[]).join(','), COUNT:cmd.count!==undefined?String(cmd.count):'',
-    SCOPE:cmd.scope||'', COMMAND_ID:cmd.command_id||'', COORDINATOR:cmd.coordinator||''};
-  fs.appendFileSync(process.env.GITHUB_ENV, Object.entries(env).map(([k,v])=>k+'='+v).join('\n')+'\n');
-}
-
 function main(argv){
-  const [a,b,...rest]=argv;
-  if (a==='validate'||a==='command'){
-    if (!b||b.startsWith('--')) usage();
-    // channel flag: the Actions command-file workflow passes --channel actions
-    // so draft-bound ops (qa/publish) are refused EARLY (exit 3) instead of
-    // being accepted and dying NO_DRAFT mid-run with a hanging command file.
-    let channel='cli';
-    for (let i=0;i<rest.length;i++){
-      if (rest[i]==='--channel'){ channel=rest[++i]; if(!CHANNELS.includes(channel)) fail('unknown channel '+JSON.stringify(channel)+' (expected: '+CHANNELS.join('|')+')'); }
-      else fail('unknown flag for '+a+': '+rest[i]);
-    }
-    const cmd=loadCommandFile(path.isAbsolute(b)?b:path.join(process.cwd(),b), channel);
-    if (a==='validate'){ exportEnv(cmd); console.log('COMMAND OK '+JSON.stringify({op:cmd.op,ids:cmd.ids,count:cmd.count,scope:cmd.scope,command_id:cmd.command_id,coordinator:cmd.coordinator,channel})); return; }
-    execute(cmd);
-    return;
-  }
-  // direct CLI op: op name is argv[0]; flags start at argv[1] (writer channel — drafts exist)
-  if (!OPS.includes(a)) usage();
+  // CLI-only op surface (the push-driven production loop
+  // .github/workflows/factory-production.yml calls this same CLI):
+  // op name is argv[0]; flags start at argv[1]. Everything is validated
+  // against the strict whitelist BEFORE anything executes.
+  const [a]=argv;
+  if (!OPS.includes(a)) fail('unsupported op: '+JSON.stringify(a)+' (whitelist: '+OPS.join(', ')+')');
   const cmd={op:a};
   const flags=argv.slice(1);
   for (let i=0;i<flags.length;i++){
     if (flags[i]==='--ids') cmd.ids=flags[++i];
-    else if (flags[i]==='--count') cmd.count=parseInt(flags[++i],10);
+    else if (flags[i]==='--count'){ const v=flags[++i]; if (v===undefined||!/^\d+$/.test(v)) usage(); cmd.count=parseInt(v,10); }
     else if (flags[i]==='--scope') cmd.scope=flags[++i];
     else if (flags[i]==='--command-id') cmd.command_id=flags[++i];
     else if (flags[i]==='--coordinator') cmd.coordinator=flags[++i];
@@ -408,4 +354,4 @@ function main(argv){
 }
 
 if (require.main===module) main(process.argv.slice(2));
-module.exports={validateCommand,loadCommandFile,parseIds,OPS,DRAFT_OPS,CHANNELS,EXIT_CHANNEL_REFUSED,ACTIONS_OPS,SCOPES,verifySteps,verifyStepsStaged,preflight,CMD_FILE};
+module.exports={validateCommand,parseIds,OPS,SCOPES,verifySteps,verifyStepsStaged,preflight};

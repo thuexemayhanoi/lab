@@ -98,7 +98,8 @@ factory.js reports            # regenerate reports/factory/*.json
 ## Roles
 
 - **Writer (external AI)**: research packet → draft body `_drafts/<ID>.body.html`
-  → `wrap-drafts.js` → `qa` → `publish`. Never an API key in Actions.
+  → `wrap-drafts.js` → commit + PUSH (`factory-production.yml` runs qa/publish).
+  Never an API key in Actions.
 - **Actions**: tests, validation, deterministic generation, publish promotion,
   reports, deploy. Never writes article prose.
 
@@ -107,16 +108,16 @@ factory.js reports            # regenerate reports/factory/*.json
 - Only one writer mutates production (writer lock + transaction marker).
 - Bootstrap publication cap: 10 pilot articles (`config/content-factory.json`).
 - Never rewrite PUBLISHED rows silently.
-- Operator orchestration (see `docs/PROC-PUBLISH.md` "Operator channel"):
-  whitelist command contract via `scripts/factory/operator.js` with TWO
-  NON-INTERCHANGEABLE channels — the Actions command-file channel
-  (`--channel actions`: clean checkout, no `_drafts/`, accepts only
-  status/prepare-next/research/recover/consistency/reports/verify; draft-bound
-  qa/publish are REFUSED EARLY with exit 3 and the refused command is consumed
-  by the workflow) and the writer direct CLI (`--channel cli`, default: full
-  whitelist including qa/publish). Recover-first, resume-before-claim,
-  QA scopes fast/deep/full (thresholds never change), final-tree verify +
-  safe push, single coordinator `lab-factory-production`.
+- Push-driven production (see `docs/PROC-PUBLISH.md` "Push-driven
+  production"): the writer commits `_drafts/` drafts + research packets and
+  pushes; `factory-production.yml` derives the EXACT ids via
+  `scripts/factory/push-selection.js` (refuses unknown/PUBLISHED/BLOCKED/mixed/
+  >chunk_size ids) and drives the whitelist CLI `scripts/factory/operator.js`
+  — recover-first, `prepare-next --ids` (resume-before-claim, EXACT rows),
+  QA scopes fast/deep/full (thresholds never change), atomic publish,
+  final-tree verify + safe push, single coordinator
+  `lab-factory-production`. `_drafts/` is committed but Jekyll never serves
+  underscore directories — drafts are never public.
 - Build manifest: `data/state/build-manifest.json` records EXACTLY the
   generated public outputs promoted to the repo root; every build prunes
   previous-build entries that are no longer generated (de-published pages

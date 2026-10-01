@@ -50,12 +50,13 @@ do not create one; the current architecture is the working truth.
 outputs (hubs, articles, sitemaps, search/chatbot indexes) to the repository
 root; a normal commit + push to `main` is the deployment.
 
-The workflows in `.github/workflows/` are validation-only (read-only checks,
-never commit): `ci-validate.yml` and `factory-validate.yml` run
-status/consistency/tests/deterministic-build on every push to `main`;
+The workflows in `.github/workflows/`: `ci-validate.yml` and
+`factory-validate.yml` run status/consistency/tests/deterministic-build on
+every push to `main` (validation-only, never commit);
 `factory-capacity-validate.yml` audits the 10K capacity model + state
-invariants; `factory-operator.yml` executes whitelisted operator commands
-(`data/state/operator-command.json`) with final-tree verify + safe push.
+invariants; `factory-production.yml` is the push-driven production loop
+(writer pushes `_drafts/` pairs → EXACT-id claim/QA/publish) with final-tree
+verify + safe push.
 
 ## Experiment rules (short version)
 

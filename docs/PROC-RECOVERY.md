@@ -96,11 +96,13 @@ factory is NOT moving" and is the liveness half of Tier 4. Contract:
   `checkpoint.json`, `transaction.json`, `writer-lock.json`,
   `throughput-ledger.json`. It NEVER falls back to `matrixRows=0`,
   `{active:false}` or any fake healthy state: a fatal means FAIL (exit 1),
-  even if everything else looks fine. `operator-command.json` is OPTIONAL
-  (no command pending is normal), but a command file that exists and cannot
-  be parsed is `STATE_INVALID` (FAIL) — a hung command must not be missed.
+  even if everything else looks fine. `_drafts/` is OPTIONAL (no drafts is
+  normal), but a committed draft whose row is PUBLISHED/BLOCKED or whose id
+  is not in the matrix is lint → STALE_DRAFTS (WARN — the watchdog never
+  deletes; the publish path must have removed published drafts).
 - Detections: HEALTHY IDLE (exit 0 — user resting is never a failure),
-  HEALTHY ACTIVE (exit 0), PENDING_COMMAND_STALE (exit 1), STALLED active
+  HEALTHY ACTIVE (exit 0), STALE_DRAFTS (exit 2 — committed-draft lint),
+  STALLED active
   chunk incl. RESEARCH/WRITING/QA/REVIEW/REPAIR/PASS rows (exit 1),
   EXPIRED_LOCK_UNFINISHED_WORK (exit 1; expired lock while idle is WARN —
   hygiene via recover, never force-cleared by the watchdog),

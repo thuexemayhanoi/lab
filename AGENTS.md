@@ -14,25 +14,29 @@ ecosystem, published as a static GitHub Pages site:
   local + long-tail queries can rank WITHOUT active backlink building.
 - Zero-active-backlink baseline: **YES** (see `config/seo-experiment.json`).
 
-## NORMAL WRITER FLOW (Simple Production Mode — the ONLY loop a writer needs)
+## NORMAL WRITER FLOW (push-driven — the ONLY loop a writer needs)
 
-Standard working pair = **2 articles per turn** (`--count 2`). Every writer
-run follows this loop and does NOT stop after one pair:
+Standard working pair = **2 articles per push** (`chunk_size` in
+`data/state/production-control.json`). Every writer run pushes pairs and
+does NOT stop after one:
 
 ```
-FETCH FRESH MAIN
-→ RECOVER (if txn/lock pending)
-→ RESUME (finish REPAIR/QA/PASS pending of the current chunk first)
-→ NEXT 2        operator.js prepare-next --count 2
-→ RESEARCH      operator.js research --ids <pair>   (light packet for evergreen
+FETCH FRESH MAIN → RECOVER (if txn/lock pending) → RESUME (finish the open
+chunk first — repair pushes BEFORE pushing new pairs)
+→ PICK PAIR      the next claimable pair (next_claimable_id, PLANNED rows)
+→ RESEARCH       write data/research/<ID>.json (light packet for evergreen
                  rows; OFFICIAL sources mandatory when requires_official_sources=1)
-→ WRITE 2       drafts in _drafts/<ID>.body.html
-→ WRAP          node scripts/factory/wrap-drafts.js
-→ QA FAST       operator.js qa --ids <pair>         (PASS ≥ 75 / REVIEW 70–74 / repair)
-→ REPAIR        (only if needed — max 3 attempts, then BLOCKED)
-→ PUBLISH       operator.js publish --ids <pair>   (atomic, FAST scope)
-→ PUSH + CI/PAGES  (commit public outputs; ONE lightweight content validation runs)
-→ FETCH FRESH MAIN → NEXT 2 → REPEAT
+→ WRITE 2        drafts in _drafts/<ID>.body.html
+→ WRAP           node scripts/factory/wrap-drafts.js
+→ COMMIT + PUSH  _drafts/<ID>.html + <ID>.body.html + research packets
+→ FACTORY RUNS ITSELF (factory-production.yml): push-selection.js derives the
+  EXACT ids → recover → prepare-next --ids → research → qa fast
+  (PASS ≥ 75 / REVIEW 70–74 → repair) → publish PASS only (atomic) →
+  light smoke → commit + push
+→ REPAIR         (only if QA < 75 — fix _drafts/<ID>.body.html, wrap, PUSH
+  again; max 3 attempts, then BLOCKED)
+→ CI/PAGES       (ONE lightweight content validation runs per push)
+→ FETCH FRESH MAIN → NEXT PAIR → REPEAT
 ```
 
 FAST = the production default scope. It verifies ONLY the current scope:
@@ -40,8 +44,9 @@ transaction/lock sanity, selected ids, research/QA contracts, QA score +
 hash-bound evidence, grounding of the published ids, staged consistency,
 checkpoint/matrix coherence of the current chunk. It NEVER runs the full
 test-suite, capacity-check, editorial audit or soak — those are DEEP/FULL/
-Tier-4 gates (see "Validation model" below). Writer boundary: `qa`/`publish`
-run via the writer direct CLI (drafts are gitignored, never committed).
+Tier-4 gates (see "Validation model" below). Draft boundary: `_drafts/` IS
+committed (the loop is push-driven) but Jekyll never serves underscore
+directories — Pages never publishes a draft.
 
 A writer does NOT need to read the whole reliability system before every
 2-article pair. Deep hardening details live in `docs/CONTENT-FACTORY.md`,
@@ -142,29 +147,27 @@ node scripts/site/build-site.js           # rebuild site/ from published pages
 node scripts/factory/capacity-check.js     # READ-ONLY capacity + state invariants
 ```
 
-## Factory operator (golden orchestration port)
+## Factory operator (push-driven production — golden orchestration port)
 
 `scripts/factory/operator.js` is the whitelist command-contract operator
-(patterned on the /blog golden factory). Two DIFFERENT channels — they are
-NOT interchangeable:
+(patterned on the /blog golden factory). There is ONE production loop and
+ONE CLI — the old command-file channel is retired:
 
-- **Actions command-file channel** (`--channel actions`, used by
-  `.github/workflows/factory-operator.yml`): a coordinator pushes
-  `data/state/operator-command.json` (`{op, ids, count, scope, command_id,
-  coordinator}`); the workflow validates it with `--channel actions`, runs
-  recover-first, executes, then commits under a final-tree-verify + safe-push
-  (fetch/rebase, never force) discipline. A clean checkout has NO `_drafts/`,
-  so this channel only accepts ops that run without drafts:
-  `status, prepare-next, research, recover, consistency, reports, verify`.
-  A draft-bound op (`qa`, `publish`) is REFUSED EARLY at validation with
-  exit code 3 — nothing executed, nothing mutated — and the workflow then
-  CONSUMES the refused command (commit removing the file) so
-  `operator-command.json` can never hang.
-- **Writer direct CLI** (`--channel cli`, the default when invoked directly):
+- **Push-driven production** (`.github/workflows/factory-production.yml`,
+  triggered by `_drafts/**` pushes): the writer commits the pair
+  (`_drafts/<ID>.html` + `<ID>.body.html` + `data/research/<ID>.json`) and
+  pushes. `scripts/factory/push-selection.js` derives the EXACT ids from the
+  push (REFUSES unknown/PUBLISHED/BLOCKED ids, mixed new+repair, more than
+  `chunk_size` ids, body-only, missing research packets — exit 3, nothing
+  executed, nothing mutated). The workflow then runs recover-first, claims the
+  exact ids (`prepare-next --ids`), researches RESEARCH rows, QAs, publishes
+  PASS rows only, and commits under a final-tree-verify + safe-push
+  (fetch/rebase, never force) discipline.
+- **Writer direct CLI** (same tooling, for local/maintenance runs):
   `node scripts/factory/operator.js <op> [--ids A00001,A00002] [--count N] [--scope fast|deep|full]`
-  The writer environment HAS `_drafts/`, so the full whitelist
-  `status, prepare-next, research, qa, publish, recover, consistency, reports,
-  verify` is available here. `qa`/`publish` are writer direct-CLI ONLY.
+  The full whitelist `status, prepare-next, research, qa, publish, recover,
+  consistency, reports, verify` is available; the production loop calls this
+  same CLI, so behavior can never diverge between environments.
 
 Whitelist ops: `status, prepare-next, research, qa, publish, recover,
 consistency, reports, verify`. No arbitrary shell; ids must match `A#####`;
@@ -183,14 +186,14 @@ joins only at deep/full — it NEVER blocks a normal FAST publish.
 Thresholds NEVER change with scope. Mutating ops refuse while a transaction
 is active or a live writer lock is held (run `recover` first). Single
 coordinator: workflow concurrency group `lab-factory-production`, never
-cancel-in-progress; an unconsumed command is never overwritten.
+cancel-in-progress; the publish commit deletes the drafts (a D-only diff), so
+the loop never re-triggers itself.
 
-DRAFT BOUNDARY (/lab adaptation): Pages serves the repository ROOT, so
-committed drafts would be PUBLIC. `_drafts/` stays gitignored FOREVER and is
-NEVER committed. Ops that need draft prose (`qa`, `publish`) therefore run in
-the writer's environment via the writer direct CLI. On the Actions
-command-file channel they are refused EARLY (exit 3, never a mid-run NO_DRAFT
-with a hanging command file); the workflow then consumes the refused command.
+DRAFT BOUNDARY (push-driven): `_drafts/` IS committed — the push-driven loop
+needs drafts on Actions — but GitHub Pages runs Jekyll, and Jekyll NEVER
+publishes underscore directories, so drafts are never served publicly. The
+engine enforces the contract (`.nojekyll` must be ABSENT and `_drafts/` must
+NOT be gitignored — factory.js consistency + capacity-check.js).
 
 
 ## Validation model (4 tiers — MANDATORY)
@@ -200,7 +203,7 @@ change is PASS. Never claim production-safe from unit tests alone.
 
 - **Tier 1 — Unit**: `node --test tests/test-suite.js`
   deterministic unit/regression contracts (gates, whitelists, rollback,
-  channel contract, concurrency contract, watchdog states).
+  push-selection contract, concurrency contract, watchdog states).
 - **Tier 2 — Integration**: operator sandbox E2E + deterministic build
   (sandbox copies prove the real pipeline runs end to end without drift).
 - **Tier 3 — Production invariant**: consistency + grounding +
@@ -218,7 +221,7 @@ Rules:
   land without Tier 4. CI green is NOT liveness green if Tier 4 has not run
   for the change.
 - Tier 4 exists because CI/invariants can be green while the factory is
-  stalled (unfinished work standing, command hanging, expired lock,
+  stalled (unfinished work standing, stale committed-draft lint, expired lock,
   over-age transaction). The watchdog closes that blind spot; it is
   READ-ONLY (never force-clears, claims or publishes; user resting is
   never a failure: HEALTHY IDLE = PASS) and FAILS CLOSED on missing/corrupt
@@ -260,6 +263,7 @@ marker; see `docs/PROC-RECOVERY.md`).
 
 ## Roles
 
-- **External AI writer** (you, typically): research → write draft body → wrap → QA → publish.
+- **External AI writer** (you, typically): research → write draft body →
+  wrap → commit + PUSH (the factory runs QA/publish itself).
 - **GitHub Actions**: tests, validation, deterministic generation, publish
   promotion, site build, deployment. Never writes articles.

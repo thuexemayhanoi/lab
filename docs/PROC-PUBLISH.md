@@ -100,24 +100,27 @@ At most 10 pilot articles may be published during bootstrap
 (`config/content-factory.json: max_publication_in_bootstrap`). The publish
 command refuses to exceed it. Mass publishing waits for pilot learnings.
 
-## Operator channel (golden orchestration)
+## Push-driven production (golden orchestration — factory-production.yml)
 
 `scripts/factory/operator.js` wraps every canonical publish-flow step behind a
-whitelist command contract, so a coordinator drives the factory without shell
-access. TWO DIFFERENT channels (NOT interchangeable):
+whitelist command contract. The production loop is PUSH-DRIVEN (the
+/vanchinh + /blog model): the writer commits the pair into `_drafts/`
+(`A#####.html` wrapped + `A#####.body.html` + `data/research/<ID>.json`) and
+pushes; `.github/workflows/factory-production.yml` does the rest — the old
+command-file channel is retired.
 
-- **Actions command-file channel** (`--channel actions`):
-  `data/state/operator-command.json`
-  (`{op, ids, count, scope, command_id, coordinator}`), consumed by
-  `.github/workflows/factory-operator.yml`. A clean checkout has no `_drafts/`,
-  so it only accepts `status, prepare-next, research, recover, consistency,
-  reports, verify`; draft-bound ops (`qa`, `publish`) are REFUSED EARLY
-  (exit 3, nothing executed/mutated) and the workflow then CONSUMES the
-  refused command so the command file can never hang.
-- **Writer direct CLI** (`--channel cli`, default):
-  `operator.js publish --ids A00002,A00003 --scope deep` in the writer
-  environment, where `_drafts/` exists — the FULL whitelist including
-  `qa`/`publish` is available (and `qa`/`publish` are writer direct-CLI only).
+- **Push contract**: `scripts/factory/push-selection.js` derives the EXACT
+  article ids from the `_drafts/` diff of the push. PLANNED rows → new claims;
+  RESEARCH/WRITING/QA/REVIEW/REPAIR/PASS rows → repair (QA only, no new
+  claims). REFUSED (exit 3, nothing executed, nothing mutated): unknown id,
+  PUBLISHED/BLOCKED row, mixed new+repair, more than `chunk_size` ids
+  (`data/state/production-control.json`), body-only push, missing research
+  packet. No drafts in the push → skip (the publish commit deletes drafts — a
+  D-only diff — so the loop never re-triggers itself).
+  production-control `enabled=false` → clean stop BEFORE claiming (paused).
+- **Writer direct CLI** (same tooling, local/maintenance):
+  `operator.js publish --ids A00002,A00003 --scope deep` — the FULL whitelist
+  including `qa`/`publish`; the workflow calls the same CLI.
 
 - Ops: `status, prepare-next, research, qa, publish, recover, consistency,
   reports, verify`. Validation: op whitelist, `ids` match `A#####`, `count`
@@ -139,20 +142,19 @@ access. TWO DIFFERENT channels (NOT interchangeable):
   capacity-check + editorial-audit. `full` = deep + full-site grounding +
   deterministic rebuild (build-site). The scope abstraction lives in
   canonical tooling (`operator.js verify --scope`), never in YAML.
-- DRAFT BOUNDARY (/lab): Pages serves the repo ROOT, so `_drafts/` is
-  gitignored FOREVER and never committed; `qa`/`publish` run in the writer
-  environment via the writer direct CLI. The Actions command-file channel
-  refuses them EARLY at validation (exit 3) and consumes the refused command —
-  a draft-bound op is never accepted and then left to die NO_DRAFT mid-run
-  with `operator-command.json` hanging.
+- DRAFT BOUNDARY (push-driven): `_drafts/` IS committed (the push-driven loop
+  needs drafts on Actions) but GitHub Pages runs Jekyll, and Jekyll NEVER
+  publishes underscore directories — drafts are never served publicly. The
+  engine enforces the contract: `.nojekyll` must be ABSENT and `_drafts/` must
+  NOT be gitignored (factory.js consistency + capacity-check.js).
 - FINAL-TREE VERIFY + SAFE PUSH (workflow): stage canonical outputs →
   `git write-tree` (verified tree hash) → run canonical verify on exactly the
   tree to be committed → commit only if the tree is unchanged; push is
   fast-forward only, with fetch→rebase on race (conflict ⇒ STOP; a successful
   rebase REQUIRES re-verify). Never force push.
 - Single coordinator: concurrency group `lab-factory-production`,
-  `cancel-in-progress: false`; an unconsumed command file is never overwritten
-  by a newer one.
+  `cancel-in-progress: false`; the publish commit deletes the drafts (a
+  D-only diff), so the loop never re-triggers itself.
 
 ## Validation model (4 tiers — MANDATORY)
 
@@ -161,7 +163,7 @@ change is PASS. Never claim production-safe from unit tests alone.
 
 - **Tier 1 — Unit**: `node --test tests/test-suite.js`
   (deterministic unit/regression contracts: gates, whitelists, rollback,
-  channel contract, concurrency contract, watchdog states).
+  push-selection contract, concurrency contract, watchdog states).
 - **Tier 2 — Integration**: operator sandbox E2E + deterministic build.
 - **Tier 3 — Production invariant**: consistency + grounding + capacity-check
   + state preservation + no-drift.
