@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T04:49:39.544Z",
+  "generated_at": "2026-10-01T04:57:56.441Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 27,
-    "PLANNED": 9973
+    "PUBLISHED": 29,
+    "PLANNED": 9971
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 21,
-      "PLANNED": 4979
+      "PUBLISHED": 23,
+      "PLANNED": 4977
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00018",
-  "next_claimable_id": "A00019",
+  "last_completed_id": "A00020",
+  "next_claimable_id": "A00021",
   "blocked": [],
   "published": [
     {
@@ -148,6 +148,18 @@
       "pk": "thuê xe máy Ninh Bình",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ninh-binh/"
+    },
+    {
+      "id": "A00019",
+      "pk": "thuê xe máy Quảng Ninh",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-quang-ninh/"
+    },
+    {
+      "id": "A00020",
+      "pk": "thuê xe máy Thanh Hóa",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-thanh-hoa/"
     },
     {
       "id": "A00052",
