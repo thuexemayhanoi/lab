@@ -1,0 +1,173 @@
+{
+  "article_id": "A00030",
+  "primary_keyword": "thuê xe máy Tây Ninh",
+  "secondary_keywords": [
+    "cho thuê xe máy Tây Ninh giao tận nơi",
+    "thuê xe máy Tây Ninh giá rẻ",
+    "bảng giá thuê xe máy Tây Ninh",
+    "thuê xe máy đi núi Bà Đen"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Tây Ninh",
+    "thành phố Tây Ninh",
+    "núi Bà Đen",
+    "hồ Dầu Tiếng",
+    "Tòa Thánh Tây Ninh",
+    "Châu Thành",
+    "Gò Dầu"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe tay côn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki",
+    "SYM"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Lead",
+    "Nouvo",
+    "Jupiter",
+    "Attila"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Tây Ninh giá bao nhiêu một ngày?",
+    "thuê xe máy Tây Ninh có cần đặt cọc không, cọc bao nhiêu?",
+    "đi núi Bà Đen, hồ Dầu Tiếng có nên thuê xe máy không?",
+    "thuê xe máy Tây Ninh có giao tận nơi, nhận ở bến xe không?",
+    "Tây Ninh có thay đổi gì sau sắp xếp hành chính 2025 không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Tây Ninh 2026",
+    "cho thuê xe máy tự lái Tây Ninh gần bến xe",
+    "thuê xe máy đi núi Bà Đen từ bến xe",
+    "du lịch Tây Ninh mùa khô"
+  ],
+  "serp_patterns": "SERP cho Tây Ninh có bài riêng của motogo (5 địa chỉ kèm bảng giá chi tiết theo từng đời xe tới từng năm sản xuất của Air Blade), bài cẩm nang mia.vn liệt kê 5 cửa hàng kèm địa chỉ, giá tham khảo và chính sách cọc/giao xe, nền tảng vexere có trang riêng cho Tây Ninh niêm yết từ 120.000 đ kèm không cần cọc trước, website đơn vị Nguyên Phong ghi giá xe số/xe ga và dịch vụ giao trả xe tại bến xe. Điểm nhấn thị trường: giá phân theo đời xe rất chi tiết, nhiều cửa hàng nhận/giao xe tại bến xe, và thị trường phục vụ lượng lớn khách đi lễ chùa Bà Đen, cáp treo núi Bà Đen cuối tuần từ TP.HCM sang.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "5 địa chỉ cho thuê tại Tây Ninh kèm bảng giá 1 ngày chi tiết theo từng dòng và đời xe; giá khởi điểm 80.000đ/ngày cho xe số"
+    },
+    {
+      "source_url": "https://mia.vn/cam-nang-du-lich/nhung-dia-chi-thue-xe-may-o-tay-ninh-uy-tin-chat-luong-9559",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "5 cửa hàng cho thuê xe máy tại Tây Ninh kèm địa chỉ, giá tham khảo theo cửa hàng, chính sách cọc và giao xe tận nơi"
+    },
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-tay-ninh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "mức giá các đơn vị trên nền tảng đặt xe tại Tây Ninh và điều khoản giao xe tận nơi, không cần cọc trước, cách tính ngày thuê"
+    },
+    {
+      "source_url": "https://thuexemaytayninh.com/",
+      "source_domain": "thuexemaytayninh.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "giá thuê xe số và xe ga cùng dịch vụ giao và trả xe tại bến xe Tây Ninh của đơn vị Nguyên Phong"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-tp-hcm/",
+    "/lab/thue-xe-may/thue-xe-may-dong-nai/",
+    "/lab/kinh-nghiem/",
+    "/lab/cuu-ho-xe-may/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-tay-ninh: nhóm gốc cấp tỉnh. Matrix đã có row giá theo từng dòng xe tại Tây Ninh (A00126 Vision, A00160 Air Blade, A00194 Wave, A00228 Winner, A00262 Sirius, A00296 Exciter…). Bài tỉnh gốc chỉ nêu giá theo đời xe ở mức tham khảo trong bảng tổng hợp, không lạm bàn riêng từng mẫu — các row hẹp sẽ xử lý riêng. Intent 'thuê xe máy đi núi Bà Đen' hiện chưa có row riêng nên chỉ đề cập định tính trong bài.",
+  "unique_angle": "Bài tỉnh gốc cho thị trường 'biên giới phía Tây Sài Gòn': Tây Ninh là tỉnh hiếm hoi giữ nguyên ranh giới sau sắp xếp 2025, thị trường thuê xe xoay quanh dòng khách cuối tuần từ TP.HCM đi lễ núi Bà Đen, cáp treo, Tòa Thánh và hồ Dầu Tiếng. Điểm đáng viết: bảng giá niêm yết chi tiết đến từng đời xe (Air Blade 2012 khác giá Air Blade 2016-2018), nhiều cửa hàng nằm cạnh bến xe và nhận/giao xe tại bến cho khách đi xe khách từ TP.HCM, một nơi chỉ cần giấy tờ không cần cọc, mùa khô tháng 12 đến tháng 4 là cao điểm thuê xe.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; mọi mức giá dẫn theo nguồn công khai. Tây Ninh VN-030 CURRENT, LG-050 UNCHANGED (không sáp nhập trong đợt 2025); không có locality riêng trong data geography — dùng 'thành phố Tây Ninh' và các huyện (Châu Thành, Gò Dầu) theo nguồn mia.vn. Cửa khẩu Mộc Bài, rừng Chàng Riệc chỉ nêu định tính. Mùa khô tháng 12 đến tháng 4 năm sau là thời điểm lý tưởng; mùa mưa tháng 5 đến tháng 11 (nguồn mia.vn). Nguyên Phong: «Xe số 120k xe ga 150k» và giao trả xe tại bến xe.",
+  "claim_evidence": [
+    {
+      "claim": "Chỉ cần từ 80.000đ/ngày đã thuê được xe số; xe ga cao hơn, khoảng 120.000đ–180.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Chỉ cần bỏ ra từ 80.000đ/ngày bạn đã thuê được ngay một chiếc xe số siêu khỏe rồi. Với xe ga thì giá cao hơn chút, khoảng 120.000 – 180.000đ/ngày.»"
+    },
+    {
+      "claim": "Bảng giá 1 ngày chi tiết theo đời xe: Air Blade 2012 giá 120.000đ, Air Blade 2013-2015 giá 140.000đ, Air Blade 2016-2018 giá 160.000đ",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá 1 ngày: «Xe tay ga Honda Airblade 2012 — 120.000 vnd; Xe tay ga Honda Airblade 2013-2015 — 140.000 vnd; Xe tay ga Honda Airblade 2016-2017-2018 — 160.000 vnd»."
+    },
+    {
+      "claim": "Cùng bảng ghi Wave S và Wave RS 80.000đ/ngày, Wave RSX-fi và Sirius FI 90.000đ/ngày, Jupiter 80.000đ/ngày, Vision và Lead 120.000đ/ngày, Nouvo LX 100.000đ, Nouvo SX fi 120.000đ, Attila 100.000đ",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá 1 ngày: «Xe số Wave S — 80.000 vnd; Xe số Wave RS — 80.000 vnd; Xe số Wave RSX – fi — 90.000 vnd; Xe số Yamaha Sirius 2015 – 2018 FI — 90.000 vnd; Xe số Yamaha Jupiter gravita — 80.000 vnd; Xe tay ga Honda Lead — 120.000 vnd; Xe tay ga Honda Vision — 120.000 vnd; Xe tay ga Yamaha Nouvo LX — 100.000 vnd; Xe tay ga Yamaha Nouvo SX fi — 120.000 vnd; Xe tay ga attila Victoria, Elizabeth — 100.000 vnd»."
+    },
+    {
+      "claim": "Cửa hàng Hùng Vương (thành phố Tây Ninh) ghi xe số 100.000đ–120.000 VND/ngày, xe tay ga 150.000đ–200.000 VND/ngày, hỗ trợ giao xe tận nơi 24/7 miễn phí khu trung tâm",
+      "source_url": "https://mia.vn/cam-nang-du-lich/nhung-dia-chi-thue-xe-may-o-tay-ninh-uy-tin-chat-luong-9559",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê xe số từ 100.000 đến 120.000 VND/ngày, còn xe tay ga thì cao hơn, khoảng từ 150.000 đến 200.000 VND/ngày… Cửa hàng có hỗ trợ giao xe tận nơi 24/7, miễn phí với những địa chỉ quanh khu vực trung tâm thành phố.»"
+    },
+    {
+      "claim": "Cửa hàng Tân Quốc Việt (Gò Dầu) cho thuê Wave, Sirius, Vision, Air Blade giá 100.000đ–200.000 VND/ngày, tiền cọc trên dưới 2.000.000 VND tùy dòng xe",
+      "source_url": "https://mia.vn/cam-nang-du-lich/nhung-dia-chi-thue-xe-may-o-tay-ninh-uy-tin-chat-luong-9559",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Các dòng xe chiếm số lượng lớn nhất tại Tân Quốc Việt là Wave, Sirius, Vision, AB… có giá thuê dao động từ 100.000 đến 200.000 VND/ngày… Số tiền cọc dao động trên dưới 2.000.000 VND tùy thuộc dòng xe.»"
+    },
+    {
+      "claim": "Cửa hàng chị Phượng (thành phố Tây Ninh) giá tương đối rẻ, chỉ từ 80.000đ đến 150.000 VND/ngày",
+      "source_url": "https://mia.vn/cam-nang-du-lich/nhung-dia-chi-thue-xe-may-o-tay-ninh-uy-tin-chat-luong-9559",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«So với mặt bằng chung giá thuê xe máy thì cửa hàng chị Phượng tương đối rẻ, chỉ từ 80.000 đến 150.000 VND/ngày.»"
+    },
+    {
+      "claim": "Cửa hàng Hoàng Gia (Châu Thành, cạnh bến xe Châu Thành) giá 120.000đ–180.000 VND/ngày, không cần đặt cọc, mở cửa 24/7",
+      "source_url": "https://mia.vn/cam-nang-du-lich/nhung-dia-chi-thue-xe-may-o-tay-ninh-uy-tin-chat-luong-9559",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Khoảng giá thuê xe tại đây dao động trong khoảng từ 120.000 đến 180.000 VND/ngày… Cửa hàng mở cửa 24/7… Thủ tục thuê xe ở Hoàng Gia cũng khá đơn giản, bạn chỉ cần cung cấp giấy tờ cá nhân chứ không cần đặt cọc.»"
+    },
+    {
+      "claim": "Mùa khô từ tháng 12 đến tháng 4 năm sau là thời điểm lý tưởng tham quan núi Bà Đen, hồ Dầu Tiếng, Tòa Thánh Tây Ninh; mùa mưa kéo dài từ tháng 5 đến tháng 11",
+      "source_url": "https://mia.vn/cam-nang-du-lich/nhung-dia-chi-thue-xe-may-o-tay-ninh-uy-tin-chat-luong-9559",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Mùa khô từ tháng 12 đến tháng 4 năm sau là thời điểm thích hợp nhất để bạn tham quan nơi đây, vi vu đến những địa điểm tham quan nổi tiếng như núi Bà Đen, hồ Dầu Tiếng, Tòa Thánh Tây Ninh… Còn mùa mưa ở Tây Ninh thì kéo dài từ tháng 5 đến tháng 11.»"
+    },
+    {
+      "claim": "Đơn vị Nguyên Phong tại Tây Ninh ghi xe số 120.000đ, xe ga 150.000đ và có dịch vụ giao, trả xe ngay tại bến xe",
+      "source_url": "https://thuexemaytayninh.com/",
+      "source_domain": "thuexemaytayninh.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Đánh giá khách: «Xuống bến xe Tây Ninh đang hoang mang ko biết thuê xe ở đâu thì search GG ra chỗ này, giao và trả xe ở bến xe luôn nên mình không phải đi đâu hết tiện ghê. Xe số 120k xe ga 150k» — tức xe số 120.000đ, xe ga 150.000đ/ngày; priceRange ghi «120.000-150.000»."
+    },
+    {
+      "claim": "Trên nền tảng đặt xe, các đơn vị tại Tây Ninh niêm yết từ 120.000đ đến 160.000đ kèm giao xe tận nơi và không cần cọc trước",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-tay-ninh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Các đơn vị ghi «từ 120.000 đ», «từ 140.000 đ», «từ 150.000 đ», «từ 160.000 đ» kèm nhãn «Giao xe tận nơi — Không cần cọc trước»."
+    },
+    {
+      "claim": "Nền tảng này ghi mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe, nhận và trả xe hằng ngày có nơi từ 08:00 đến 22:00",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-tay-ninh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Thời gian nhận xe và trả xe hằng ngày từ 08:00 đến 22:00. Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe.»"
+    }
+  ]
+}

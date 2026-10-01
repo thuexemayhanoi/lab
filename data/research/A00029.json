@@ -1,0 +1,166 @@
+{
+  "article_id": "A00029",
+  "primary_keyword": "thuê xe máy Đồng Nai",
+  "secondary_keywords": [
+    "cho thuê xe máy Biên Hòa giao tận nơi",
+    "thuê xe máy Biên Hòa giá rẻ",
+    "bảng giá thuê xe máy Đồng Nai",
+    "thuê xe máy Đồng Nai không cần cọc"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Đồng Nai",
+    "Biên Hòa",
+    "Bình Phước",
+    "thác Giang Điền",
+    "khu du lịch Bửu Long",
+    "Vườn quốc gia Nam Cát Tiên",
+    "quốc lộ 1A"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe tay côn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki"
+  ],
+  "model_entities": [
+    "Wave",
+    "Vision",
+    "Air Blade",
+    "Sirius",
+    "Future",
+    "Nouvo",
+    "Exciter",
+    "Winner"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Biên Hòa – Đồng Nai giá bao nhiêu một ngày?",
+    "thuê xe máy Biên Hòa có cần đặt cọc không?",
+    "thuê xe máy Biên Hòa có giao xe tận nơi miễn phí không?",
+    "thuê xe máy theo tuần, theo tháng ở Đồng Nai giá thế nào?",
+    "sau sáp nhập 2025, Bình Phước có thuộc Đồng Nai không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Biên Hòa 2026",
+    "cho thuê xe máy tự lái Biên Hòa giao tận nơi",
+    "thuê xe máy thác Giang Điền Bửu Long",
+    "thuê xe máy dài hạn Đồng Nai"
+  ],
+  "serp_patterns": "SERP cho Đồng Nai tập trung vào cụm Biên Hòa: hai trang riêng của motogo (bài 7 địa chỉ uy tín và bài 6 cửa hàng giá chỉ từ 80k) kèm bảng giá theo thời gian và theo dòng xe, nền tảng vexere có trang riêng cho Biên Hòa niêm yết từ 130.000 đ kèm điều khoản giao tận nơi không cần cọc, các website đơn vị tại Biên Hòa (xemaybienhoa.com) và danh sách tổng hợp của motortrip. Điểm nhấn thị trường: nhiều cơ sở giao xe tận nơi miễn phí trong TP Biên Hòa, có nơi không cần cọc, có bảng giá riêng cho thuê tuần và thuê tháng phục vụ khách làm việc dài hạn.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-bien-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "danh sách 7 địa điểm cho thuê tại Biên Hòa kèm bảng giá theo thời gian (ngày/tuần/tháng) và theo dòng xe"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "danh sách 6 cửa hàng tại Biên Hòa Đồng Nai giá tốt chỉ từ 80k, mức giá từng cơ sở theo xe số và xe ga"
+    },
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-bien-hoa.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "mức giá các đơn vị trên nền tảng đặt xe tại Biên Hòa và điều khoản giao xe tận nơi, không cần cọc trước, cách tính ngày thuê"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-tp-hcm/",
+    "/lab/thue-xe-may/thue-xe-may-lam-dong/",
+    "/lab/kinh-nghiem/",
+    "/lab/cuu-ho-xe-may/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-dong-nai: nhóm gốc cấp tỉnh. Matrix đã có row giá theo từng dòng xe tại Đồng Nai (A00125 Vision, A00159 Air Blade, A00193 Wave, A00227 Winner, A00261 Sirius, A00295 Exciter…). Bài tỉnh gốc chỉ nêu giá theo dòng xe ở mức tham khảo trong bảng tổng hợp, không lạm bàn riêng từng mẫu — các row hẹp sẽ xử lý riêng. Cụm 'thuê xe máy Biên Hòa' hiện chưa có row riêng trong matrix nên bài này giữ vai trò bao phủ thị trường Biên Hòa ở cấp tỉnh.",
+  "unique_angle": "Bài tỉnh gốc cho thị trường vệ tinh của TP.HCM: Biên Hòa là nơi khách thường ghé khi đi Tây Nguyên qua ngã Cát Tiên, Giang Điền, Bửu Long hoặc công tác tại cụm công nghiệp — nên thị trường có 'hai lớp khách' rõ rệt: khách du lịch thuê ngắn ngày và chuyên gia/công nhân thuê dài hạn. Điểm đáng viết: bảng giá có phân mốc riêng cho tuần và tháng (500k–800k/tuần, 1.100k–1.400k/tháng theo danh sách công khai), nhiều cơ sở giao xe tận nơi miễn phí trong thành phố, có nơi không cần cọc, và sau sáp nhập 2025 Bình Phước hợp nhất vào Đồng Nai mở rộng vùng rừng cao su phía bắc cho khách thích cung đường trường.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; mọi mức giá dẫn theo nguồn công khai. Đồng Nai VN-029 CURRENT; sau sắp xếp hành chính 2025, Bình Phước (LG-048) MERGED_INTO Đồng Nai; Biên Hòa là thành phố cũ (LC-050 LEGACY_SEARCH — tên cũ vẫn được tìm kiếm phổ biến). POI du lịch: thác Giang Điền, Bửu Long, Nam Cát Tiên, Bò Cạp Vàng (chỉ nêu định tính). Vexere ghi nhận và trả xe hằng ngày, mỗi ngày thuê tính bằng 24 giờ kể từ thời điểm nhận xe. Bảng giá motogo dùng ký hiệu k (100k = 100.000đ) — ghi chú quy đổi trong claim_supported.",
+  "claim_evidence": [
+    {
+      "claim": "Danh sách ghi nhận 6 cửa hàng cho thuê xe máy tại Biên Hòa Đồng Nai với giá tốt chỉ từ 80.000đ",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiêu đề: «Thuê xe máy Biên Hòa Đồng Nai: 6 cửa hàng giá tốt chỉ từ 80k» — tức giá khởi điểm từ 80.000đ."
+    },
+    {
+      "claim": "Các cơ sở trong danh sách ghi xe số 80.000đ–100.000đ/ngày và xe ga 130.000đ–140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nhiều cơ sở trong danh sách ghi «Giá thuê xe số: 80.000đ – 100.000đ/ngày; Giá thuê xe ga: 130.000đ – 140.000đ/ngày»."
+    },
+    {
+      "claim": "Một cơ sở ghi xe số 80.000đ–120.000đ/ngày và xe ga 120.000đ–160.000đ/ngày; cơ sở khác ghi xe số 90.000đ–120.000đ/ngày và xe ga 140.000đ–150.000đ/ngày; nơi khác nữa ghi xe số 100.000đ/ngày, xe ga 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Danh sách ghi «Giá thuê xe số: 80.000đ – 120.000đ/ngày; Giá thuê xe ga: 120.000đ -160.000đ/ngày»; «Giá thuê xe số: 90.000đ – 120.000đ/ngày; Giá thuê xe ga: 140.000đ – 150.000đ/ngày»; «Giá thuê xe số: 100.000đ/ngày; Giá thuê xe ga: 150.000đ/ngày»."
+    },
+    {
+      "claim": "Bảng giá theo thời gian tại Biên Hòa: dưới 1 ngày 100.000đ–150.000đ; 1 tuần 500.000đ–800.000đ; 1 tháng 1.100.000đ–1.400.000đ",
+      "source_url": "https://motogo.vn/thue-xe-may-bien-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá theo thời gian: «Ít hơn 1 ngày — 100k – 150k; 1 tuần — 500k – 800k; 1 tháng — 1.100k – 1.400k» — tức 100.000đ–150.000đ/ngày, 500.000đ–800.000đ/tuần, 1.100.000đ–1.400.000đ/tháng."
+    },
+    {
+      "claim": "Bảng giá theo dòng xe tại Biên Hòa: Wave 100.000đ/ngày, Suzuki Viva Fi và Future, Sirius Fi, Nouvo 120.000đ/ngày, Vision 130.000đ/ngày, Air Blade 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-bien-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá theo dòng xe: «Wave — 100k; Suzuki Smart — 100k; Suzuki Viva Fi — 120k; Future — 120k; Sirius Fi — 120k; Nouvo — 120k; Vision — 130k; Aiblade — 150k» — tức 100.000đ, 120.000đ, 130.000đ, 150.000đ/ngày."
+    },
+    {
+      "claim": "Cùng bảng ghi xe thể thao Exciter và Winner 300.000đ/ngày, Exciter tự động 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-bien-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá: «Exciter tự động — 150k; Exciter — 300k; Winner — 300k» — tức 150.000đ và 300.000đ/ngày."
+    },
+    {
+      "claim": "Có cơ sở cho thuê không cần cọc tại Biên Hòa (Thắng Lê)",
+      "source_url": "https://motogo.vn/thue-xe-may-bien-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Mục trong bài: «Thắng Lê – Thuê xe máy Biên Hòa Đồng Nai không cần cọc»; «Nếu bạn đang tìm kiếm một địa chỉ cho thuê xe máy không cần cọc thì hãy đến đây.»"
+    },
+    {
+      "claim": "Có cơ sở giao xe tận nơi miễn phí trong thành phố Biên Hòa (Nghĩa Motor)",
+      "source_url": "https://motogo.vn/thue-xe-may-bien-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Nghĩa Motor có giao nhận xe miễn phí tại thành phố Biên Hòa»; «anh Nghĩa còn giao xe tận nơi miễn phí trong thành phố Biên Hòa»."
+    },
+    {
+      "claim": "Trên nền tảng đặt xe, các đơn vị tại Biên Hòa niêm yết từ 130.000đ đến 240.000đ kèm giao xe tận nơi và không cần cọc trước",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-bien-hoa.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Các đơn vị ghi «từ 130.000 đ», «từ 140.000 đ», «từ 150.000 đ», «từ 180.000 đ», «từ 200.000 đ», «từ 240.000 đ» kèm nhãn «Giao xe tận nơi — Không cần cọc trước»."
+    },
+    {
+      "claim": "Nền tảng này ghi nhận và trả xe hằng ngày từ 00:00 đến 23:59, mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-bien-hoa.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Thời gian nhận xe và trả xe hằng ngày từ 00:00 đến 23:59. Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe.»"
+    },
+    {
+      "claim": "Biên Hòa là trung tâm của tỉnh với các điểm đến như thác Giang Điền, khu du lịch Bửu Long, The Amazing Bay và vườn xoài",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-bien-hoa.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Thành phố Biên Hòa, thuộc tỉnh Đồng Nai, không chỉ là trung tâm công nghiệp sầm uất mà còn là điểm đến với nhiều khu du lịch hấp dẫn như Thác Giang Điền, Khu du lịch Bửu Long, The Amazing Bay và Vườn Xoài.»"
+    }
+  ]
+}
