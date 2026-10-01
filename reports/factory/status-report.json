@@ -1,15 +1,13 @@
 {
-  "generated_at": "2026-10-01T23:05:56.196Z",
+  "generated_at": "2026-10-01T23:08:54.293Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 87,
-    "PASS": 2,
+    "PUBLISHED": 89,
     "PLANNED": 9911
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 81,
-      "PASS": 2,
+      "PUBLISHED": 83,
       "PLANNED": 4917
     },
     "RESCUE": {
@@ -38,11 +36,8 @@
     }
   },
   "phase": "PRODUCTION",
-  "active_chunk": [
-    "A00080",
-    "A00081"
-  ],
-  "last_completed_id": "A00079",
+  "active_chunk": [],
+  "last_completed_id": "A00081",
   "next_claimable_id": "A00082",
   "blocked": [],
   "published": [
@@ -519,6 +514,18 @@
       "pk": "thuê xe máy Tràng An",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-trang-an/"
+    },
+    {
+      "id": "A00080",
+      "pk": "thuê xe máy Tam Cốc – Bích Động",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-tam-coc-bich-dong/"
+    },
+    {
+      "id": "A00081",
+      "pk": "thuê xe máy Vịnh Hạ Long",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-vinh-ha-long/"
     },
     {
       "id": "A00097",
