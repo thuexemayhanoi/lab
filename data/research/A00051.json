@@ -1,0 +1,277 @@
+{
+  "article_id": "A00051",
+  "primary_keyword": "thuê xe máy Sơn Tây",
+  "secondary_keywords": [
+    "cho thuê xe máy Sơn Tây",
+    "thuê xe máy thị xã Sơn Tây",
+    "thuê xe máy Đường Lâm",
+    "thuê xe máy đi Ba Vì",
+    "cho thuê xe máy giá rẻ Sơn Tây"
+  ],
+  "search_intent": "local/commercial",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Sơn Tây",
+    "thị xã Sơn Tây",
+    "Làng Cổ Đường Lâm",
+    "thành Sơn Tây",
+    "đại lộ Thăng Long",
+    "quốc lộ 32",
+    "Ba Vì",
+    "Tam Đảo",
+    "hồ Suối Hai",
+    "Hà Nội",
+    "Thạch Thất",
+    "Phúc Thọ"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe ga",
+    "xe côn tay",
+    "xe điện",
+    "xe phân khối lớn",
+    "xe SH"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki",
+    "Piaggio"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Lead",
+    "Nouvo",
+    "Vespa LX",
+    "Liberty",
+    "Exciter",
+    "Winner"
+  ],
+  "questions_found": [
+    "thuê xe máy Sơn Tây giá bao nhiêu một ngày?",
+    "ở Sơn Tây có cửa hàng cho thuê xe máy không?",
+    "thuê xe máy từ Sơn Tây đi Ba Vì có bị phụ thu không?",
+    "thuê xe máy Sơn Tây cần giấy tờ và tiền cọc gì?",
+    "cuối tuần về Đường Lâm - Sơn Tây thuê xe ở đâu?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Sơn Tây",
+    "cho thuê xe máy thị xã Sơn Tây",
+    "thuê xe máy Sơn Tây giao tận nơi",
+    "thuê xe máy đi Ba Vì phụ thu",
+    "thuê xe máy cuối tuần Sơn Tây"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy Sơn Tây\" ít trả về cửa hàng đặt trụ sở tại Sơn Tây với bảng giá riêng; có chuyên mục rao vặt riêng cho thuê xe máy Thị Xã Sơn Tây trên muaban.net (giao xe tận nơi giá rẻ) và bài tổng quan của moto-open.gitbook.io về thuê xe máy Ba Vì và Thị Xã Sơn Tây (giá dao động từ 80.000 đến 200.000 VND/ngày; xe số, xe ga, xe điện; thủ tục CMND hoặc hộ chiếu kèm đặt cọc). Phần còn lại của SERP là nhà xe nội thành Hà Nội giao tận nơi: motogo.vn (Sirius 130.000đ/ngày ngày 1-5, ngày 6-10 còn 120.000vnđ; Air Blade 200.000vnđ; Vision 180.000vnđ; phụ thu đi tỉnh Ba Vì, Tam Đảo 50.000đ/ngày; sổ hộ khẩu gốc hoặc cọc 3 triệu thay thế), hanoibiker.com (xe số 1-4 ngày 120k/ngày, 5-7 ngày 100k/ngày; ship 20k-50k; theo tháng giá chỉ 50k/ngày), hanoimotorbike.vn (xe số 40k-120k/ngày, ga 60k-150k/ngày, côn và SH 200k-250k/ngày, cọc từ 500.000VND, tháng giảm đến 60%), vexere.com (cọc 1tr-2tr/xe, giảm còn 500k-1tr nếu có thẻ sinh viên hoặc vé máy bay) và Công Tân (giá Hà Nội từ 100.000 đồng/ngày, Suzuki từ 200.000 đồng/ngày; danh sách huyện phục vụ không nêu tên Sơn Tây). Intent local/commercial nhấn du khách cuối tuần đi Đường Lâm, Ba Vì và người đi làm trên trục đại lộ Thăng Long - quốc lộ 32.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://moto-open.gitbook.io/openmoto/cho-thue-xe-may-ha-noi/thue-xe-may/thue-xe-may-ba-vi-va-thi-xa-son-tay-tinh-nang-nao-noi-bat",
+      "source_domain": "moto-open.gitbook.io",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy thường dao động từ 80.000 đến 200.000 VND/ngày, phù hợp với túi tiền của nhiều du khách. Các địa chỉ cho thuê xe máy tại Ba Vì và Thị Xã Sơn Tây thường có nhiều mẫu xe khác nhau, từ xe số đến xe ga, xe điện... Thủ tục thuê xe máy tại Sơn Tây và Ba Vì thường rất đơn giản. Du khách chỉ cần mang theo chứng minh nhân dân hoặc hộ chiếu, giấy phép lái xe (nếu có) và đặt cọc (tiền mặt hoặc giấy tờ tùy thích) để hoàn tất thủ tục... Làng Cổ Đường Lâm: Làng cổ nằm tại Thị Xã Sơn Tây... Nên lưu ý rằng giá thuê xe có thể cao hơn vào dịp lễ, tết hoặc cuối tuần."
+    },
+    {
+      "source_url": "https://muaban.net/xe-may/cho-thue-xe-may-thi-xa-son-tay-ha-noi",
+      "source_domain": "muaban.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Dịch vụ cho thuê xe máy Thị Xã Sơn Tây, Hà Nội an toàn, uy tín, thủ tục đơn giản, giao xe tận nơi giá rẻ. Cập nhật bảng giá và các địa điểm thuê xe máy Thị Xã Sơn Tây, Hà Nội mới nhất."
+    },
+    {
+      "source_url": "https://sites.google.com/view/ceothuexemaycongtan/trang-chu",
+      "source_domain": "sites.google.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy theo ngày tại Hà Nội thường bắt đầu từ 100.000 đồng/ngày và có thể tăng lên tùy thuộc vào loại xe. Giá thuê xe máy Suzuki tại Hà Nội... bắt đầu từ 200.000 đồng/ngày. Các huyện bao gồm: Thanh Oai, Gia Lâm, Chương Mỹ, Quốc Oai, Đan Phượng, Thanh Trì, Mỹ Đức, Ba Vì, Đông Anh, Thạch Thất, Phú Xuyên, Phúc Thọ, Ứng Hòa, Sóc Sơn và Mê Linh... Địa chỉ: 110 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội."
+    },
+    {
+      "source_url": "https://motogo.vn/ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "chính sách giá thuê đang áp dụng cho xe số Sirius là 130.000đ/ngày cho khách thuê từ ngày 1 – ngày thứ 5, từ ngày 6 – ngày 10 giá là 120.000vnd/ngày. Xe tay ga Air Blade 125cc giá thuê xe 200.000vnd/ngày/xe... Honda Vision... 180.000vnd/ngày... 1 ngày tính đúng theo 24 tiếng... Sổ hộ khẩu gốc hoặc đặt cọc 3 triệu thay thế cho sổ hộ khẩu. Thông tin vé máy bay hoặc vé tàu chiều đến và rời Hà Nội."
+    },
+    {
+      "source_url": "https://motogo.vn/bang-gia-thue-xe-may/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Xe Yamaha Sirius đi tỉnh (ra khỏi Hà Nội), đi phượt vùng đồi núi Đông - Tây Bắc, Ba Vì, Tam Đảo,... sẽ phụ thu thêm 50.000đ/ngày."
+    },
+    {
+      "source_url": "https://hanoibiker.com/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê từ: 1-4 ngày 120k/ngày; thuê từ 5-7 ngày: 100k/ngày... Xe ga Vision, Lead, Airblade giá thuê từ 1-3 ngày: 180k/ngày; thuê từ 4-7 ngày: 160k/ngày... Chi phí ship xe từ 20k - 50k tùy khoảng cách... thủ tục CMT và tiền cọc từ 1 triệu. Có vé máy bay khứ hồi chỉ cần đặt cọc lại CCCD hoặc 500k."
+    },
+    {
+      "source_url": "https://hanoimotorbike.vn/",
+      "source_domain": "hanoimotorbike.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá tham khảo: Xe số: 40K – 120K/ngày (thuê tháng từ 40K/ngày, giảm đến 60%)... Xe ga: 60K – 150K/ngày... Xe côn tay và SH: 200K – 250K/ngày... Tiền đặt cọc chỉ từ 500.000VND."
+    },
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ha-noi.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điều kiện: Tiền cọc 1tr/xe đến 2tr/xe. Giảm 500k/xe đến 1tr/xe nếu có thẻ sinh viên/vé máy bay khứ hồi... chụp ảnh 2 mặt CCCD/Passport... Tại cửa hàng (8h-21h)... Giao tận nơi (8h-17h) như Bến xe Mỹ Đình."
+    },
+    {
+      "source_url": "https://baodanang.vn/hanoibiker-dia-chi-cho-thue-xe-may-di-phuot-don-gian-nhanh-chong-3294094.html",
+      "source_domain": "baodanang.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tùy vào các loại xe khác nhau mà mức giá cho thuê cũng khác nhau. Mức giá cho thuê xe máy tại Hà Nội thường dao động từ 100.000đ đến 200.000đ mỗi ngày... hơn 100 loại xe."
+    },
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 150.000đ/ngày. Giá tuần 700.000đ; giá tháng 900.000-1.200.000đ... Honda Click / Yamaha Mio - xe ga giá rẻ: 150.000đ/ngày; 700.000đ/tuần; 900.000-1.200.000đ/tháng... Honda Vision - xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000-2.000.000đ/tháng... Honda Air Blade - xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng... Tiền đặt cọc tham khảo: Honda Wave 2-3 triệu; Honda Vision 4-5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu... Chúng tôi giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành... 09:00 - 21:00."
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-ha-dong/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-noi-bai/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-son-tay: chỉ 1 row cho Sơn Tây; phân biệt với bài Hà Nội và Hà Đông bằng trọng tâm thị xã phía tây, Đường Lâm - Ba Vì cuối tuần, trục đại lộ Thăng Long - quốc lộ 32.",
+  "unique_angle": "Sơn Tây là đầu trục phía tây: (1) nhu cầu du lịch cuối tuần Đường Lâm - Ba Vì khiến giá cuối tuần lễ tết cao hơn (moto-open); (2) cửa hàng tại chỗ ít nhưng có chuyên mục rao vặt riêng (muaban.net) và nhà xe nội thành giao tận nơi; (3) đi tiếp Ba Vì, Tam Đảo có phụ thu đi tỉnh 50.000đ/ngày (motogo) — điểm riêng không phải huyện nào cũng nhấn được.",
+  "notes": "Sau sắp xếp đơn vị hành chính của Hà Nội năm 2025, địa bàn thị xã Sơn Tây trước đây được tổ chức lại các đơn vị cấp xã; bài KHÔNG liệt kê tên xã/phường mới để tránh sai. Công Tân KHÔNG nêu Sơn Tây trong danh sách huyện phục vụ — không viết claim phục vụ. Điểm địa danh có evidence: Làng Cổ Đường Lâm tại Thị Xã Sơn Tây (moto-open).",
+  "claim_evidence": [
+    {
+      "claim": "Các cửa hàng cho thuê xe máy tại Ba Vì và Thị Xã Sơn Tây thường có giá dao động từ 80.000đ đến 200.000đ/ngày tùy loại xe, phù hợp túi tiền của nhiều du khách.",
+      "source_url": "https://moto-open.gitbook.io/openmoto/cho-thue-xe-may-ha-noi/thue-xe-may/thue-xe-may-ba-vi-va-thi-xa-son-tay-tinh-nang-nao-noi-bat",
+      "source_domain": "moto-open.gitbook.io",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy thường dao động từ 80.000 đến 200.000 VND/ngày, phù hợp với túi tiền của nhiều du khách."
+    },
+    {
+      "claim": "Các địa chỉ cho thuê xe máy tại Ba Vì và Thị Xã Sơn Tây thường có nhiều mẫu xe khác nhau, từ xe số đến xe ga, xe điện, giúp du khách lựa chọn theo nhu cầu và kỹ năng lái.",
+      "source_url": "https://moto-open.gitbook.io/openmoto/cho-thue-xe-may-ha-noi/thue-xe-may/thue-xe-may-ba-vi-va-thi-xa-son-tay-tinh-nang-nao-noi-bat",
+      "source_domain": "moto-open.gitbook.io",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Các địa chỉ cho thuê xe máy tại Ba Vì và Thị Xã Sơn Tây thường có nhiều mẫu xe khác nhau, từ xe số đến xe ga, xe điện, giúp du khách dễ dàng lựa chọn mẫu xe phù hợp với nhu cầu và kỹ năng lái xe của mình."
+    },
+    {
+      "claim": "Thủ tục thuê xe máy tại Sơn Tây và Ba Vì thường rất đơn giản: du khách chỉ cần mang theo chứng minh nhân dân hoặc hộ chiếu, giấy phép lái xe nếu có và đặt cọc bằng tiền mặt hoặc giấy tờ để hoàn tất thủ tục.",
+      "source_url": "https://moto-open.gitbook.io/openmoto/cho-thue-xe-may-ha-noi/thue-xe-may/thue-xe-may-ba-vi-va-thi-xa-son-tay-tinh-nang-nao-noi-bat",
+      "source_domain": "moto-open.gitbook.io",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thủ tục thuê xe máy tại Sơn Tây và Ba Vì thường rất đơn giản và nhanh chóng. Du khách chỉ cần mang theo chứng minh nhân dân hoặc hộ chiếu, giấy phép lái xe (nếu có) và đặt cọc (tiền mặt hoặc giấy tờ tùy thích) để hoàn tất thủ tục."
+    },
+    {
+      "claim": "Làng Cổ Đường Lâm nằm tại Thị Xã Sơn Tây, là nơi lưu giữ nhà cổ, đường làng quanh co và cây đa cổ thụ.",
+      "source_url": "https://moto-open.gitbook.io/openmoto/cho-thue-xe-may-ha-noi/thue-xe-may/thue-xe-may-ba-vi-va-thi-xa-son-tay-tinh-nang-nao-noi-bat",
+      "source_domain": "moto-open.gitbook.io",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Làng Cổ Đường Lâm: Làng cổ nằm tại Thị Xã Sơn Tây, là nơi lưu giữ nét văn hóa truyền thống của người Việt, với những ngôi nhà cổ kính, đường làng quanh co và những cây đa cổ thụ."
+    },
+    {
+      "claim": "Giá thuê xe máy ở khu vực Ba Vì, Sơn Tây có thể cao hơn vào dịp lễ, tết hoặc cuối tuần.",
+      "source_url": "https://moto-open.gitbook.io/openmoto/cho-thue-xe-may-ha-noi/thue-xe-may/thue-xe-may-ba-vi-va-thi-xa-son-tay-tinh-nang-nao-noi-bat",
+      "source_domain": "moto-open.gitbook.io",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nên lưu ý rằng giá thuê xe có thể cao hơn vào dịp lễ, tết hoặc cuối tuần."
+    },
+    {
+      "claim": "muaban.net có chuyên mục riêng cho thuê xe máy Thị Xã Sơn Tây, Hà Nội, giới thiệu dịch vụ an toàn, uy tín, thủ tục đơn giản, giao xe tận nơi giá rẻ.",
+      "source_url": "https://muaban.net/xe-may/cho-thue-xe-may-thi-xa-son-tay-ha-noi",
+      "source_domain": "muaban.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Dịch vụ cho thuê xe máy Thị Xã Sơn Tây, Hà Nội an toàn, uy tín, thủ tục đơn giản, giao xe tận nơi giá rẻ. Cập nhật bảng giá và các địa điểm thuê xe máy Thị Xã Sơn Tây, Hà Nội mới nhất, đáng tin cậy T10/2026"
+    },
+    {
+      "claim": "MOTOGO ghi giá thuê xe số Sirius 110cc 130.000đ/ngày cho khách thuê từ ngày 1 đến ngày 5, từ ngày 6 đến ngày 10 còn 120.000vnđ/ngày; xe tay ga Air Blade 125cc 200.000vnđ/ngày; Honda Vision 180.000vnđ/ngày; giá 1 ngày tính đúng theo 24 tiếng.",
+      "source_url": "https://motogo.vn/ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "chính sách giá thuê đang áp dụng cho xe số Sirius là 130.000đ/ngày cho khách thuê từ ngày 1 – ngày thứ 5, từ ngày 6 – ngày 10 giá là 120.000vnd/ngày. Xe tay ga Air Blade 125cc giá thuê xe 200.000vnd/ngày/xe... Honda Vision 180.000vnd/ngày... 1 ngày tính đúng theo 24 tiếng"
+    },
+    {
+      "claim": "MOTOGO ghi xe Yamaha Sirius đi tỉnh ra khỏi Hà Nội, đi phượt vùng đồi núi như Ba Vì, Tam Đảo sẽ phụ thu thêm 50.000đ/ngày.",
+      "source_url": "https://motogo.vn/bang-gia-thue-xe-may/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Xe Yamaha Sirius đi tỉnh (ra khỏi Hà Nội), đi phượt vùng đồi núi Đông - Tây Bắc, Ba Vì, Tam Đảo,... sẽ phụ thu thêm 50.000đ/ngày."
+    },
+    {
+      "claim": "MOTOGO ghi hồ sơ thuê xe gồm thông tin vé máy bay hoặc vé tàu chiều đến và rời Hà Nội; khách có sổ hộ khẩu gốc được dùng làm giấy tờ, nếu không có sổ hộ khẩu gốc thì đặt cọc 3 triệu thay thế cho sổ hộ khẩu.",
+      "source_url": "https://motogo.vn/ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thông tin vé máy bay hoặc vé tàu chiều đến và rời Hà Nội. Thông tin vé có thể là cuống vé hoặc vé điện tử. Sổ hộ khẩu gốc hoặc đặt cọc 3 triệu thay thế cho sổ hộ khẩu."
+    },
+    {
+      "claim": "Hanoibiker cho thuê xe số Honda Wave, Yamaha Sirius, Jupiter giá 1-4 ngày 120k/ngày, thuê 5-7 ngày 100k/ngày; thủ tục chỉ cần CMT và tiền từ 1 triệu; khách có vé máy bay khứ hồi chỉ cần cọc lại CCCD hoặc 500k; chi phí ship xe 20k - 50k tùy khoảng cách.",
+      "source_url": "https://hanoibiker.com/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê từ: 1-4 ngày 120k/ngày; thuê từ 5 -7 ngày: 100k/ngày... Chi phí ship xe từ 20k - 50k tùy khoảng cách... thủ tục CMT và tiền cọc từ 1 triệu. Có vé máy bay khứ hồi chỉ cần đặt cọc lại CCCD hoặc 500k"
+    },
+    {
+      "claim": "Hanoibiker cho thuê xe tay ga Honda Vision, Lead, Airblade giá 1-3 ngày 180k/ngày, thuê từ 4-7 ngày 160k/ngày; thuê dài hạn theo tháng Hà Nội giá chỉ 50k/ngày, xe ga Nouvo 1.800.000đ/tháng; dòng Exciter/Winner 190k/ngày và dài hạn 3.000.000đ/tháng; Vespa LX, Liberty dài hạn 2.800.000đ - 3.500.000đ/tháng.",
+      "source_url": "https://hanoibiker.com/",
+      "source_domain": "hanoibiker.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chuyên cho thuê xe máy Hà Nội các dòng xe tay ga của Honda: Vision, Lead, Airblade, giá thuê từ 1-3 ngày: 180k/ngày; thuê từ 4-7 ngày: 160k/ngày... Thuê xe máy theo tháng Hà Nội giá chỉ 50k/ngày. Xe nouvo... 1.800.000đ/tháng... Exciter/Winner 190k/ngày... 3.000.000đ/tháng... Vespa LX, Liberty dài hạn 2.800.000đ - 3.500.000đ/tháng"
+    },
+    {
+      "claim": "Hanoi Motorbike ghi bảng giá tham khảo: xe số 40k - 120k/ngày, thuê tháng từ 40k/ngày giảm đến 60%; xe tay ga 60k - 150k/ngày, thuê tháng từ 60k/ngày; xe côn tay và SH 200k - 250k/ngày; tiền đặt cọc chỉ từ 500.000vnđ.",
+      "source_url": "https://hanoimotorbike.vn/",
+      "source_domain": "hanoimotorbike.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá tham khảo: Xe số: 40K – 120K/ngày (thuê tháng từ 40K/ngày, giảm đến 60%)... Xe ga: 60K – 150K/ngày (thuê tháng từ 60K/ngày)... Xe côn tay và SH: 200K – 250K/ngày... Tiền đặt cọc chỉ từ 500.000VND"
+    },
+    {
+      "claim": "Trên vexere.com, nhà xe Hà Nội ghi điều kiện tiền cọc 1tr/xe đến 2tr/xe, giảm còn cọc 500k/xe đến 1tr/xe nếu có thẻ sinh viên hoặc vé máy bay; thủ tục chụp ảnh CCCD/Passport; nhận xe tại cửa hàng trong giờ 8h-21h hoặc giao xe tận nơi (8h-17h) như tại Bến xe Mỹ Đình.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ha-noi.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điều kiện: Tiền cọc 1tr/xe đến 2tr/xe. Giảm 500k/xe đến 1tr/xe nếu có thẻ sinh viên/vé máy bay khứ hồi... chụp ảnh 2 mặt CCCD/Passport... Tại cửa hàng (8h-21h)... Giao tận nơi (8h-17h) như Bến xe Mỹ Đình"
+    },
+    {
+      "claim": "Báo Điện tử Đà Nẵng ghi nhận mức giá cho thuê xe máy tại Hà Nội thường dao động từ 100.000đ đến 200.000đ mỗi ngày tùy loại xe; Hanoibiker cho thuê đa chủng loại hơn 100 loại xe.",
+      "source_url": "https://baodanang.vn/hanoibiker-dia-chi-cho-thue-xe-may-di-phuot-don-gian-nhanh-chong-3294094.html",
+      "source_domain": "baodanang.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tùy vào các loại xe khác nhau mà mức giá cho thuê cũng khác nhau. Mức giá cho thuê xe máy tại Hà Nội thường dao động từ 100.000đ đến 200.000đ mỗi ngày... hơn 100 loại xe"
+    },
+    {
+      "claim": "Công Tân ghi giá thuê xe máy theo ngày tại Hà Nội thường bắt đầu từ 100.000 đồng/ngày; dòng Suzuki từ 200.000 đồng/ngày; danh sách các huyện Công Tân phục vụ không nêu tên Sơn Tây.",
+      "source_url": "https://sites.google.com/view/ceothuexemaycongtan/trang-chu",
+      "source_domain": "sites.google.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy theo ngày tại Hà Nội thường bắt đầu từ 100.000 đồng/ngày... Giá thuê xe máy Suzuki tại Hà Nội... bắt đầu từ 200.000 đồng/ngày... Các huyện bao gồm: Thanh Oai, Gia Lâm, Chương Mỹ, Quốc Oai, Đan Phượng, Thanh Trì, Mỹ Đức, Ba Vì, Đông Anh, Thạch Thất, Phú Xuyên, Phúc Thọ, Ứng Hòa, Sóc Sơn và Mê Linh"
+    },
+    {
+      "claim": "Dịch vụ của chủ trang web công bố giá thuê Honda Wave và Yamaha Sirius (xe số): 150.000đ/ngày; giá tuần 700.000đ; giá tháng 900.000-1.200.000đ; Honda Click/Yamaha Mio (xe ga giá rẻ): 150.000đ/ngày; 700.000đ/tuần; 900.000-1.200.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 150.000đ/ngày. Giá tuần 700.000đ; giá tháng 900.000-1.200.000đ... Honda Click / Yamaha Mio - xe ga giá rẻ: 150.000đ/ngày; 700.000đ/tuần; 900.000-1.200.000đ/tháng"
+    },
+    {
+      "claim": "Honda Vision của dịch vụ chủ trang web: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000-2.000.000đ/tháng; Honda Air Blade: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Vision - xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000-2.000.000đ/tháng... Honda Air Blade - xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng"
+    },
+    {
+      "claim": "Tiền đặt cọc tham khảo của dịch vụ chủ trang web: Honda Wave 2-3 triệu; Honda Vision 4-5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiền đặt cọc tham khảo: Honda Wave 2-3 triệu; Honda Vision 4-5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu"
+    },
+    {
+      "claim": "Dịch vụ của chủ trang web giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành; giờ làm việc 09:00 - 21:00 và không giao xe ngoài khung giờ này.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chúng tôi giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành... 09:00 - 21:00"
+    }
+  ]
+}
