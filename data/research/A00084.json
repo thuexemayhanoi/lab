@@ -1,0 +1,140 @@
+{
+  "article_id": "A00084",
+  "primary_keyword": "thuê xe máy Cố đô Huế",
+  "secondary_keywords": [
+    "thuê xe máy Huế",
+    "giá thuê xe máy Huế",
+    "vé Đại Nội Huế 2026",
+    "thuê xe máy Huế giao xe tận nơi",
+    "lăng tẩm Huế đi bằng xe máy"
+  ],
+  "search_intent": "informational-research — du khách khám phá Cố đô Huế cần bảng vé Đại Nội – lăng tẩm 2026 (kể cả combo), mặt bằng giá thuê xe máy tại thành phố Huế theo dòng xe và theo cửa hàng, quy định tính giờ 24 giờ, phạm vi Thành phố Huế và cách xếp lịch hai ngày tham quan bằng xe máy",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Cố đô Huế",
+    "Kinh thành Huế",
+    "Đại Nội Huế",
+    "Bảo tàng Cung Đình Huế",
+    "Bảo tàng Cổ vật Cung đình Huế",
+    "Điện Kiến Trung",
+    "lăng Minh Mạng",
+    "lăng Tự Đức",
+    "lăng Khải Định",
+    "lăng Dục Đức",
+    "sông Hương",
+    "cầu Trường Tiền",
+    "chùa Thiên Mụ",
+    "đường Kim Long",
+    "phố Tây Huế (Phạm Ngũ Lão – Chu Văn An – Lê Lợi)",
+    "ga Huế",
+    "Bến xe phía Nam",
+    "sân bay Phú Bài",
+    "Cung An Định",
+    "Vincom Plaza Huế",
+    "thành phố Huế",
+    "tỉnh Thừa Thiên Huế"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe tay ga",
+    "xe máy điện",
+    "xe côn tay"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "VinFast",
+    "Camay Motorbike",
+    "Kevin Motorbike (Kenvin)",
+    "Đồng Xanh",
+    "Nam Thanh",
+    "Chị Chi",
+    "Hidibike",
+    "Hạnh Thảo",
+    "Cường Huế",
+    "Hue Motorbike Rental"
+  ],
+  "model_entities": [
+    "Honda Wave Alpha",
+    "Yamaha Sirius",
+    "Honda Vision",
+    "Honda Lead",
+    "Honda Airblade",
+    "Honda Vario",
+    "VinFast Evo Grand",
+    "VinFast Evo200 Lite"
+  ],
+  "questions_found": [
+    "Vé Đại Nội Huế 2026 bao nhiêu tiền?",
+    "Thuê xe máy ở Huế giá bao nhiêu một ngày?",
+    "Combo vé Đại Nội + lăng có rẻ hơn mua lẻ không?",
+    "Thuê xe ở Huế có chạy ra Đà Nẵng, Hội An được không?",
+    "Trả xe trễ có bị tính thêm ngày không?"
+  ],
+  "related_queries": [
+    "bảng giá vé tham quan Huế 2026",
+    "giá thuê xe máy Huế giao xe tận nơi",
+    "combo vé Đại Nội lăng Minh Mạng Tự Đức Khải Định",
+    "thuê xe máy Huế trả xe Đà Nẵng Hội An"
+  ],
+  "serp_patterns": "SERP 'thuê xe máy Cố đô Huế' hiện là các bài thuê xe máy Huế tổng hợp (Vexere, Motogo, blog dịch vụ địa phương) và bảng giá vé tham quan Huế 2026 — chưa có bài ghép intent POI 'xe máy + vé Đại Nội – lăng tẩm + lịch trình'. Repo đã có thue-xe-may-hue (geo hub tổng quan) — bài này chiếm intent POI Cố đô Huế bằng bảng vé 2026 theo combo, bảng giá thuê xe theo từng cửa hàng và lịch trình hai ngày bằng xe máy.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "datvecahue.com — Bảng giá vé tham quan Huế 2026 (Đại Nội, lăng Minh Mạng, Khải Định, Tự Đức, Dục Đức)",
+      "url": "https://datvecahue.com/bang-gia-ve-tham-quan-hue.html"
+    },
+    {
+      "name": "sovaba.travel — Giá vé Đại Nội Huế mới nhất (combo 3 điểm, combo 4 điểm, giờ mở cửa)",
+      "url": "https://sovaba.travel/blog/bai-viet-gia-ve-dai-noi-hue-moi-nhat"
+    },
+    {
+      "name": "vexere.com — Thuê xe máy tại Huế (bảng giá theo dòng xe, quy định 24 giờ, phạm vi Thành phố Huế, Camay Motorbike)",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi"
+    },
+    {
+      "name": "motogo.vn — Đơn vị cho thuê xe máy tại Huế (Đồng Xanh, Kevin, Nam Thanh, Chị Chi, Hidibike, Hạnh Thảo, Cường Huế, Hue Motorbike Rental)",
+      "url": "https://motogo.vn/thue-xe-may-tai-hue/"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-hue/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-da-nang/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "https://thuexemayhanoi.github.io/lab/kinh-nghiem/"
+  ],
+  "potential_cannibalization": "Khác thue-xe-may-hue (geo hub tổng quan giá/giấy tờ toàn thành phố): bài này nhắm intent POI Cố đô Huế với bảng vé Đại Nội – lăng tẩm 2026 chi tiết theo combo, bảng giá thuê xe theo từng cửa hàng và lịch trình xe máy hai ngày; link chéo về geo hub, mỗi bài giữ bảng giá và góc riêng.",
+  "unique_angle": "Ghép bảng vé 2026 (Đại Nội 200.000đ, lăng 150.000đ, combo 4 điểm 530.000 VNĐ so với mua lẻ 650.000 VNĐ, tiết kiệm 120.000 VNĐ/người) + mặt bằng giá thuê xe theo cửa hàng (xe số 80.000đ – 120.000đ/ngày, xe ga tới 200.000đ – 500.000đ/ngày) + quy định tính 24 giờ, giao xe 3km quanh ga Huế, trả xe liên tỉnh Đà Nẵng – Hội An — góc 'mua vé theo combo, thuê xe theo chặng lăng tắm'.",
+  "notes": "Hàng informational_only (POI Huế): không dùng \"chúng tôi\", không claim dịch vụ; disclosure P2 chuẩn. requires_official_sources=0 (hueworldheritage.org.vn unreachable thời điểm nghiên cứu — bảng vé lấy từ datvecahue + sovaba, hai nguồn độc lập đều khớp mức vé Đại Nội 200.000đ). Mọi claim định lượng có claim_evidence quote nguyên văn từ nguồn đã mở 2026-10-01; khoảng cách, giờ mở cửa, k-notation và dấu gạch mirror đúng theo quote (6:30–18:00, 22h30, 80k/ngày, 120-150k/ngày).",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá vé tham quan Huế 2026 áp dụng từ ngày 01/01/2026 đến 31/12/2026; vé tham quan Đại Nội Huế (Kinh thành Huế) đã bao gồm cả Bảo tàng Cung Đình Huế; khách Việt Nam và khách quốc tế cùng niêm yết vé người lớn 200.000đ/khách, vé trẻ em 40.000đ/khách, trẻ em dưới 6 tuổi miễn phí; vé lăng Minh Mạng, lăng Khải Định, lăng Tự Đức người lớn 150.000đ/khách, trẻ em 30.000đ/khách, trẻ em dưới 6 tuổi miễn phí; lăng Dục Đức 50.000 đồng/lượt, miễn phí cho trẻ em dưới 12 tuổi.",
+      "source_url": "https://datvecahue.com/bang-gia-ve-tham-quan-hue.html",
+      "source_domain": "datvecahue.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Vé tham quan Huế 2026 được áp dụng từ ngày 01/01/2026 đến 31/12/2026\"; \"Vé tham quan Đại Nội Huế (Kinh thành Huế) đã bao gồm cả Bảo tàng Cung Đình Huế\"; \"Đối với khách Việt Nam: Vé người lớn: 200.000đ/khách. Vé trẻ em: 40.000đ/khách\"; \"Đối với khách Quốc tế: Vé người lớn: 200.000đ/khách. Vé trẻ em: 40.000đ/khách\"; \"Trẻ em dưới 6 tuổi: Miễn phí\"; \"Giá vé Lăng Vua Minh Mạng: Đối với khách Việt Nam: Vé người lớn: 150.000đ/khách. Vé trẻ em: 30.000đ/khách; Trẻ em dưới 6 tuổi: miễn phí\"; \"Giá vé Lăng Vua Khải Định: Đối với khách Việt Nam: Vé người lớn: 150.000đ/khách. Vé trẻ em: 30.000đ/khách; Trẻ em dưới 6 tuổi: miễn phí\"; \"Giá vé Lăng Vua Tự Đức: Đối với khách Việt Nam: Vé người lớn: 150.000đ/khách. Vé trẻ em: 30.000đ/khách\"; \"lăng vua Dục Đức với giá 50.000 đồng/lượt (miễn phí cho trẻ em dưới 12 tuổi)\""
+    },
+    {
+      "claim": "Combo vé Đại Nội Huế + lăng: vé lẻ Đại Nội + 3 lăng Minh Mạng, Tự Đức và Khải Định có tổng giá 650.000 VNĐ/người, combo 4 điểm chỉ 530.000 VNĐ, tiết kiệm 120.000 VNĐ/người; combo 3 điểm (Đại Nội + Lăng Minh Mạng + Lăng Khải Định) người lớn 420.000 VNĐ/vé, trẻ em (7-12 tuổi) 80.000 VNĐ/vé, trẻ em dưới 7 tuổi miễn phí; combo 4 điểm (Đại Nội + Lăng Minh Mạng + Lăng Tự Đức + Lăng Khải Định) người lớn 530.000 VNĐ/vé, trẻ em (7-12 tuổi) 100.000 VNĐ/vé; giá vé đã bao gồm quyền tham quan Bảo tàng Cổ vật Cung đình Huế và Điện Kiến Trung; người lớn và trẻ em từ 12 tuổi trở lên 200.000 VNĐ/vé, trẻ em từ 7 đến 12 tuổi 40.000 VNĐ/vé; thời gian mở cửa khoảng 6:30–18:00 mùa hè và 7:00–17:30 mùa đông.",
+      "source_url": "https://sovaba.travel/blog/bai-viet-gia-ve-dai-noi-hue-moi-nhat",
+      "source_domain": "sovaba.travel",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Người lớn và trẻ em từ 12 tuổi trở lên: 200.000 VNĐ/vé\"; \"Trẻ em từ 7 đến 12 tuổi: 40.000 VNĐ/vé\"; \"Trẻ em dưới 7 tuổi: Miễn phí vé với điều kiện có người lớn đi kèm để đảm bảo an toàn trong suốt quá trình tham quan.\"; \"Giá vé đã bao gồm quyền tham quan Bảo tàng Cổ vật Cung đình Huế và Điện Kiến Trung, vì vậy du khách không cần mua vé riêng cho các điểm này.\"; \"Thời gian mở cửa thường vào khoảng 6:30–18:00 mùa hè và 7:00–17:30 mùa đông.\"; \"vé lẻ Đại Nội + 3 lăng Minh Mạng, Tự Đức và Khải Định có tổng giá 650.000 VNĐ/người, trong khi combo 4 điểm chỉ 530.000 VNĐ, tiết kiệm 120.000 VNĐ/người.\"; \"Combo 3 điểm: Đại Nội + Lăng Minh Mạng + Lăng Khải Định — Người lớn: 420.000 VNĐ/vé; Trẻ em (7-12 tuổi): 80.000 VNĐ/vé; Trẻ em dưới 7 tuổi: Miễn phí\"; \"Combo 4 điểm: Đại Nội + Lăng Minh Mạng + Lăng Tự Đức + Lăng Khải Định — Người lớn: 530.000 VNĐ/vé; Trẻ em (7-12 tuổi): 100.000 VNĐ/vé\""
+    },
+    {
+      "claim": "Giá thuê xe máy tại Huế: Honda Wave Alpha từ 90.000đ; Honda Wave Alpha, Yamaha Sirius từ 100.000đ; Honda Airblade, Honda Lead, Honda Vision, Honda Vario từ 120.000đ; xe máy điện Vinfast Evo Grand, Vinfast Evo200 Lite từ 130.000đ; đời xe từ 2020, kèm mũ bảo hiểm, xăng (1 lít), giao xe tận nơi không cần cọc trước; mỗi ngày thuê tính bằng 24 giờ kể từ thời điểm nhận xe; trả xe quá mỗi 24 giờ → tính thêm 1 ngày, chưa quá 7 giờ → chỉ tính thêm 1/2 ngày (biến thể 5 giờ / 6 giờ tùy nhà xe); chỉ sử dụng xe trong phạm vi Thành phố Huế, nhà xe có quyền từ chối giao xe nếu khách ra ngoài phạm vi; Camay Motorbike hoạt động từ 6h đến 19h hàng ngày, xe số (Sirius, Wave Alpha) khoảng 100.000đ/xe/ngày, xe tay ga (Vision, Lead, AirBlade) 130.000đ/xe/ngày; giao xe tận nơi bán kính 3km từ Vincom Plaza Huế (Bến xe phía Nam, Ga Huế, Cầu Trường Tiền), giao tại sân bay Phú Bài có phụ thu; có nhà xe hoạt động linh hoạt đến 22h30 đêm, hỗ trợ trả xe liên tỉnh (Hội An, Đà Nẵng); khu Phố Tây có nhà xe giao nhận tận nơi miễn phí trong phạm vi 3km (Ga Huế, Cung An Định, khu vực Đại Nội).",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Xe số phổ thông | Hà Thịnh4.9 | Honda Wave Alpha | Đời xe: từ 2020 | Mũ bảo hiểm, Xăng (1 lít) | Giao xe tận nơi Không cần cọc trước | từ 90.000đ\"; \"Honda Wave Alpha, Yamaha Sirius (giao ngẫu nhiên tùy tình trạng xe thực tế) | Đời xe: từ 2020 | Mũ bảo hiểm, Xăng (1 lít) | Giao xe tận nơi Không cần cọc trước | từ 100.000đ\"; \"Honda Airblade, Honda Lead, Honda Vision, Honda Vario (giao ngẫu nhiên tùy tình trạng xe thực tế) | Đời xe: từ 2020 | Mũ bảo hiểm, Xăng (1 lít) | Giao xe tận nơi Không cần cọc trước | từ 120.000đ\"; \"Xe máy điện | Lộc Nguyễn4.9 | Vinfast Evo Grand | Đời xe: từ 2026 | Mũ bảo hiểm, Áo mưa | Giao xe tận nơi Không cần cọc trước | từ 130.000đ\"; \"Xe máy điện | Thành Nhân 4.8 | Vinfast Evo200 Lite | Đời xe: từ 2024 | Mũ bảo hiểm, Áo mưa | Giao xe tận nơi Không cần cọc trước | từ 130.000đ\"; \"Vui lòng chỉ sử dụng xe trong phạm vi Thành phố Huế. Nhà xe có quyền từ chối giao xe nếu khách hàng di chuyển ngoài phạm vi trên.\"; \"Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe.\"; \"Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 7 giờ → chỉ tính thêm 1/2 ngày. (các biến thể 5 giờ / 6 giờ tùy nhà xe)\"; \"Camay Motorbike ... hoạt động từ 6h đến 19h hàng ngày ... xe số phổ thông (Sirius, Wave Alpha) có giá thuê khoảng 100.000đ/xe/ngày; các dòng xe tay ga như Vision, Lead, AirBlade có giá 130.000đ/xe/ngày.\"; \"Cửa hàng hỗ trợ giao xe tận nơi trong bán kính 3km từ Vincom Plaza Huế, bao gồm các điểm như Bến xe phía Nam, Ga Huế, Cầu Trường Tiền và có hỗ trợ giao tại sân bay Phú Bài (có phụ thu).\"; \"Kenvin gây ấn tượng với thời gian hoạt động linh hoạt đến 22h30 đêm và khả năng hỗ trợ trả xe liên tỉnh (Hội An, Đà Nẵng).\"; \"Nhà xe giao nhận tận nơi miễn phí trong phạm vi 3km từ Phố Tây Huế, bao gồm Ga Huế, Cung An Định và khu vực Đại Nội.\""
+    },
+    {
+      "claim": "Các cửa hàng cho thuê xe máy tại Huế và giá niêm yết: Kevin Motorbike (38 Kiệt 42 Nguyễn Công Trứ, Phú Hội) xe số 80.000đ/ngày, xe ga 130.000đ – 250.000đ/ngày; Đồng Xanh (201 Trần Phú, Phước Vĩnh) xe số 120.000đ/ngày, xe ga 150.000đ/ngày, kèm nón bảo hiểm, áo mưa và 1 lít xăng, thủ tục 10-15 phút, giao nhận xe 1 chiều (nhận ở sân bay, ga tàu, trả ở Đà Nẵng); Nam Thanh (48 Lê Lợi) giá thuê xe từ 120.000đ/ngày, có mức 80k/ngày; Chị Chi (16 Hùng Vương) giá thuê xe từ 120.000đ/ngày, xe số chỉ từ 80k/ngày, xe ga giá từ 120-150k/ngày, xe côn tay dao động từ 250-300k; Hidibike (11 Đường Lý Thường Kiệt, Phú Nhuận) xe số 120.000đ/ngày, xe ga 120.000đ/ngày; Hạnh Thảo (29C kiệt 103 Nhật Lệ, Thuận Thành) xe số 120.000đ/ngày, xe ga 150.000đ/ngày; Cường Huế (6/3 kiệt 128 Nguyễn Chí Thanh, Phú Hiệp) xe số 120.000đ/ngày, xe ga 200.000đ – 500.000đ/ngày; Hue Motorbike Rental (29C Chu Văn An, Phú Hội) từ 120.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-hue/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Đồng Xanh Motorbike Retal — Địa chỉ: 201 Trần Phú, Phước Vĩnh, Thành phố Huế, Thừa Thiên Huế — Giá thuê xe số: 120.000đ/ngày — Giá thuê xe ga: 150.000đ/ngày\"; \"Kevin Motorbike — Địa chỉ: 38 Kiệt 42 Nguyễn Công Trứ, Phú Hội, Thành phố Huế — Giá thuê xe số: 80.000đ/ngày — Giá thuê xe ga: 130.000đ – 250.000đ/ngày\"; \"Nam Thanh — Địa chỉ: 48 Lê Lợi, thành phố Huế, Thừa Thiên Huế — Giá thuê xe: từ 120.000đ/ngày\"; \"Chị Chi — Địa chỉ: 16 Hùng Vương, thành phố Huế — Giá thuê xe: từ 120.000đ/ngày; (chi tiết: xe số chỉ từ 80k/ngày, xe ga giá từ 120-150k/ngày. Xe côn tay có mức giá nhỉnh hơn chút, dao động từ 250-300k)\"; \"Hidibike — Địa chỉ: 11 Đường Lý Thường Kiệt, Phú Nhuận — Giá thuê xe số: 120.000đ/ngày — Giá thuê xe ga: 120.000đ/ngày\"; \"Hạnh Thảo — 29C kiệt, 103 Nhật Lệ, Thuận Thành — xe số 120.000đ/ngày, xe ga 150.000đ/ngày\"; \"Cường Huế — 6/3 kiet 128 Nguyễn Chí Thanh, Phú Hiệp — xe số 120.000đ/ngày, xe ga 200.000đ – 500.000đ/ngày\"; \"Hue Motorbike Rental — 29C Chu Văn An, Phú Hội — từ 120.000đ/ngày\"; \"Đồng Xanh: nón bảo hiểm, áo mưa, và 1 lít xăng; thủ tục 10-15 phút; giao nhận xe 1 chiều (nhận ở sân bay, ga tàu... trả ở Đà Nẵng)\"; \"Nam Thanh: chỉ cần 80k/ngày\""
+    }
+  ]
+}
