@@ -1000,6 +1000,29 @@
         "A00067"
       ],
       "count": 2
+    },
+    {
+      "op": "qa",
+      "started_at": "2026-10-01T21:16:09.596Z",
+      "finished_at": "2026-10-01T21:16:10.164Z",
+      "elapsed_ms": 568,
+      "ids": [
+        "A00066",
+        "A00067"
+      ],
+      "count": 2
+    },
+    {
+      "op": "publish",
+      "started_at": "2026-10-01T21:16:11.231Z",
+      "finished_at": "2026-10-01T21:16:13.146Z",
+      "elapsed_ms": 1915,
+      "ids": [
+        "A00066",
+        "A00067"
+      ],
+      "published": 2,
+      "phase": "PRODUCTION"
     }
   ]
 }
