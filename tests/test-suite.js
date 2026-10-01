@@ -887,12 +887,18 @@ test('regression: REVIEW rows are unfinished — prepare-next refuses (repair fi
   sbStatus('A00005', 'PLANNED');
   sbStatus('A00002', 'WRITING');
 });
-test('regression: operator publish ids capped at CHUNK (max 10)', () => {
-  const eleven = Array.from({ length: 11 }, (_, i) => 'A' + String(i + 5).padStart(5, '0')).join(',');
-  assert.notStrictEqual(OP(['publish', '--ids', eleven], SB).status, 0, '11 ids must be refused');
-  const ten = eleven.split(',').slice(0, 10).join(',');
+test('regression: operator ids capped at QUEUE_MAX/IDS_MAX (write-ahead queue ≤20; --count stays 1..10)', () => {
+  // 21 ids refused — spawned child (a validateCommand refusal exits the child; never call it in-process with invalid input)
+  const twentyone = Array.from({ length: 21 }, (_, i) => 'A' + String(i + 60).padStart(5, '0')).join(',');
+  const r21 = OP(['publish', '--ids', twentyone], SB);
+  assert.notStrictEqual(r21.status, 0, '21 ids must be refused');
+  assert.match(r21.stderr, /IDS_MAX|write-ahead queue/);
+  // 20 ids — exactly the TURBO write-ahead queue size — validate OK
+  const twenty = twentyone.split(',').slice(0, 20).join(',');
   const opMod = require(path.join(SB, 'scripts', 'factory', 'operator.js'));
-  assert.strictEqual(opMod.validateCommand({ op: 'publish', ids: ten }).ids.length, 10, '10 ids allowed');
+  assert.strictEqual(opMod.validateCommand({ op: 'publish', ids: twenty }).ids.length, 20, '20 ids allowed (QUEUE_MAX=20)');
+  // legacy --count path keeps the small CHUNK cap
+  assert.notStrictEqual(OP(['prepare-next', '--count', '11'], SB).status, 0, 'count 11 still refused (legacy path)');
 });
 test('factory: prepare-next honors count 1..10', () => {
   assert.notStrictEqual(FACT(['prepare-next', '11'], SB).status, 0, 'count>CHUNK refused');
@@ -960,6 +966,9 @@ test('regression: publish enforces CHUNK=10 (REFUSE >10 ids; no ids => at most t
     const draftSha3 = require('crypto').createHash('sha256').update('<h1>x</h1>').digest('hex');
     fs.mkdirSync(path.join(SB3, 'data', 'qa'), { recursive: true });
     ids.forEach(id => { csvSetScore(id, 'PASS', 100); fs.writeFileSync(path.join(SB3, '_drafts', id + '.html'), '<h1>x</h1>');
+      // rows A00015.. are PUBLISHED in the real repo — drop the copied real
+      // archive so the AMBIGUOUS publish gate never fires on the sandbox
+      fs.rmSync(path.join(SB3, 'data', 'published', id + '.html'), { force: true });
       fs.writeFileSync(path.join(SB3, 'data', 'qa', id + '.json'), JSON.stringify({ article_id: id, score: 100, words: 1, result: 'PASS', fails: [], draft_sha256: draftSha3, matrix_status_after: 'PASS' })); });
     // 1) more than CHUNK explicit ids => REFUSE (never silently publish a prefix)
     const before = fs.readFileSync(csvPath, 'utf8');
@@ -973,16 +982,17 @@ test('regression: publish enforces CHUNK=10 (REFUSE >10 ids; no ids => at most t
     const lock = JSON.parse(fs.readFileSync(path.join(SB3, 'data', 'state', 'writer-lock.json'), 'utf8'));
     assert.strictEqual(lock.locked, false, 'refusal must release the writer lock');
     // 2) no ids => publishes at most the current chunk (10), never the whole backlog
+    const countStatuses3 = () => { const s = {};
+      for (const l of fs.readFileSync(csvPath, 'utf8').split('\n').slice(1).filter(x => x.trim())) {
+        const st = parseLine(l)[24]; s[st] = (s[st] || 0) + 1; }
+      return s; };
+    const before2 = countStatuses3();
     const r2 = spawnSync(process.execPath, [path.join(SB3, 'scripts', 'factory', 'factory.js'), 'publish'], { cwd: SB3, encoding: 'utf8' });
     assert.strictEqual(r2.status, 0, r2.stderr);
     assert.match(r2.stdout, /PUBLISHED 10/, 'exactly one chunk (10) may publish per operation');
-    const statuses = {};
-    for (const l of fs.readFileSync(csvPath, 'utf8').split('\n').slice(1).filter(x => x.trim())) {
-      const s = parseLine(l)[24];
-      statuses[s] = (statuses[s] || 0) + 1;
-    }
-    assert.strictEqual(statuses.PUBLISHED, 23 + 10, 'published set grows by exactly CHUNK');
-    assert.strictEqual(statuses.PASS, 1, 'leftover PASS row stays for the NEXT chunk — never swept');
+    const after2 = countStatuses3();
+    assert.strictEqual(after2.PUBLISHED, (before2.PUBLISHED || 0) + 10, 'published set grows by exactly CHUNK');
+    assert.strictEqual(after2.PASS, (before2.PASS || 0) - 10, 'leftover PASS row stays for the NEXT chunk — never swept');
   } finally { fs.rmSync(SB3, { recursive: true, force: true }); }
 });
 test('operator: active writer lock is respected (STOP, no force-unlock)', () => {
@@ -1030,7 +1040,7 @@ test('operator: verified-tree invariant — commit must equal the verified tree'
   assert.match(y, /cây commit khác cây đã verified/, 'must refuse commit on tree drift');
 });
 test('operator: no force push anywhere; rebase loop always re-verifies', () => {
-  for (const f of ['factory-production.yml', 'factory-validate.yml', 'factory-capacity-validate.yml', 'ci-validate.yml']) {
+  for (const f of fs.readdirSync(path.join(ROOT, '.github', 'workflows'))) {
     const y = wfText(f);
     assert.ok(!/--force|-f\s+git\s+push|push\s+-f/u.test(y), 'force push found in ' + f);
   }
@@ -1148,7 +1158,7 @@ function sbpSel(added, modified) {
 const selJson = r => JSON.parse(r.stdout.split('\n')[0]);
 
 test('push-selection: skip — no _drafts file in the push (tooling commit)', () => {
-  sbpControl({ enabled: true, chunk_size: 2 });
+  sbpControl({ enabled: true, chunk_size: 2, queue_min: 2, queue_max: 20 });
   const r = sbpSel(['scripts/factory/push-selection.js'], ['README.md']);
   assert.strictEqual(r.status, 0, r.stderr);
   const sel = selJson(r);
@@ -1156,17 +1166,80 @@ test('push-selection: skip — no _drafts file in the push (tooling commit)', ()
   assert.strictEqual(sel.mode, 'skip');
   assert.strictEqual(sel.refuse, null);
 });
-test('push-selection: new — EXACT pushed PLANNED ids are selected (added + modified)', () => {
-  sbpControl({ enabled: true, chunk_size: 2 });
-  sbpDraft('A00015'); sbpDraft('A00016');
-  sbpPacket('A00015'); sbpPacket('A00016');
-  const r = sbpSel(['_drafts/A00015.html', '_drafts/A00015.body.html'], ['_drafts/A00016.html']);
+// TURBO write-ahead queue world: production truth moves forward over time
+// (A00015.. are PUBLISHED in the real matrix), so the queue tests pin their
+// own fixture zone — rows A00015..A00040 forced PUBLISHED, then the given
+// ids PLANNED. Every test rebuilds its world (no cross-test assumptions).
+function sbpWorld(planned) {
+  for (let i = 15; i <= 40; i++) sbpStatus('A' + String(i).padStart(5, '0'), 'PUBLISHED');
+  (planned || []).forEach(id => sbpStatus(id, 'PLANNED'));
+  sbpControl({ enabled: true, chunk_size: 2, queue_min: 2, queue_max: 20 });
+}
+function sbpQueue(ids) { // drafts + packets for every id; returns the added-path list
+  ids.forEach(id => { sbpDraft(id); sbpPacket(id); });
+  const paths = [];
+  ids.forEach(id => { paths.push('_drafts/' + id + '.html', '_drafts/' + id + '.body.html'); });
+  return paths;
+}
+test('push-selection: TURBO queue — pushed ids are sorted by matrix order and split into pairs', () => {
+  sbpWorld(['A00015', 'A00016', 'A00017', 'A00018']);
+  const paths = sbpQueue(['A00018', 'A00017', 'A00016', 'A00015']); // deliberately out of push order
+  const r = sbpSel(paths, []);
   assert.strictEqual(r.status, 0, r.stderr);
   const sel = selJson(r);
   assert.strictEqual(sel.mode, 'new');
   assert.strictEqual(sel.proceed, true);
-  assert.deepStrictEqual(sel.claim_ids, ['A00015', 'A00016']);
-  assert.deepStrictEqual(sel.qa_ids, ['A00015', 'A00016']);
+  assert.deepStrictEqual(sel.claim_ids, ['A00015', 'A00016', 'A00017', 'A00018'],
+    'claim order = repository/matrix order, never the push order');
+  assert.deepStrictEqual(sel.qa_ids, ['A00015', 'A00016', 'A00017', 'A00018']);
+  assert.deepStrictEqual(sel.pairs, [['A00015', 'A00016'], ['A00017', 'A00018']],
+    'the write-ahead queue is consumed as deterministic sequential pairs of 2');
+});
+test('push-selection: TURBO queue — 20 ids (queue_max) in ONE writer push => 10 pairs', () => {
+  const ids = Array.from({ length: 20 }, (_, i) => 'A' + String(i + 15).padStart(5, '0'));
+  sbpWorld(ids);
+  const r = sbpSel(sbpQueue(ids), []);
+  assert.strictEqual(r.status, 0, r.stderr);
+  const sel = selJson(r);
+  assert.strictEqual(sel.claim_ids.length, 20);
+  assert.strictEqual(sel.pairs.length, 10, 'one queue push => 10 sequential pairs inside ONE production run');
+  assert.deepStrictEqual(sel.pairs[9], ['A00033', 'A00034']);
+});
+test('push-selection: refuse — 21 ids > queue_max 20 (split the push)', () => {
+  const ids = Array.from({ length: 21 }, (_, i) => 'A' + String(i + 15).padStart(5, '0'));
+  sbpWorld(ids);
+  const r = sbpSel(sbpQueue(ids), []);
+  assert.strictEqual(r.status, 3, 'refuse must exit 3');
+  assert.match(selJson(r).refuse, /queue_max 20/);
+});
+test('push-selection: refuse — 1 id < queue_min 2 (a queue push carries 2..20 consecutive PLANNED ids)', () => {
+  sbpWorld(['A00015', 'A00016']);
+  sbpQueue(['A00015']);
+  const r = sbpSel(['_drafts/A00015.html', '_drafts/A00015.body.html'], []);
+  assert.strictEqual(r.status, 3);
+  assert.match(selJson(r).refuse, /queue_min 2/);
+});
+test('push-selection: refuse — queue must start at the FIRST PLANNED row (skip against matrix order)', () => {
+  sbpWorld(['A00015', 'A00016', 'A00017']);
+  sbpQueue(['A00016', 'A00017']);
+  const r = sbpSel(['_drafts/A00016.html', '_drafts/A00017.html'], []);
+  assert.strictEqual(r.status, 3);
+  assert.match(selJson(r).refuse, /first PLANNED row A00015/);
+});
+test('push-selection: refuse — hole inside the queue span (unclaimed PLANNED row)', () => {
+  sbpWorld(['A00015', 'A00016', 'A00017', 'A00018']);
+  sbpQueue(['A00015', 'A00017', 'A00018']);
+  const r = sbpSel(['_drafts/A00015.html', '_drafts/A00017.html', '_drafts/A00018.html'], []);
+  assert.strictEqual(r.status, 3);
+  assert.match(selJson(r).refuse, /skips PLANNED row A00016/);
+});
+test('push-selection: queue after a PUBLISHED prefix is legal (finished rows skip over)', () => {
+  sbpWorld(['A00017', 'A00018']); // A00015/A00016 stay PUBLISHED inside the span
+  const r = sbpSel(sbpQueue(['A00017', 'A00018']), []);
+  assert.strictEqual(r.status, 0, r.stderr);
+  const sel = selJson(r);
+  assert.strictEqual(sel.mode, 'new');
+  assert.deepStrictEqual(sel.claim_ids, ['A00017', 'A00018']);
 });
 test('push-selection: refuse — unknown id never claimed (fail-closed, exit 3)', () => {
   sbpDraft('A99999');
@@ -1176,36 +1249,40 @@ test('push-selection: refuse — unknown id never claimed (fail-closed, exit 3)'
   assert.match(r.stderr, /REFUSED/);
 });
 test('push-selection: refuse — PUBLISHED rows are never re-published via push', () => {
-  sbpDraft('A00001'); // A00001 is PUBLISHED in the matrix
-  const r = sbpSel(['_drafts/A00001.html'], []);
+  sbpWorld([]); // A00015 is PUBLISHED in this world
+  sbpDraft('A00015');
+  const r = sbpSel(['_drafts/A00015.html'], []);
   assert.strictEqual(r.status, 3);
   assert.match(selJson(r).refuse, /PUBLISHED/);
 });
 test('push-selection: refuse — BLOCKED rows are protected', () => {
-  sbpStatus('A00017', 'BLOCKED'); sbpDraft('A00017');
-  const r = sbpSel(['_drafts/A00017.html'], []);
+  sbpWorld(['A00015', 'A00016']);
+  sbpStatus('A00016', 'BLOCKED');
+  sbpQueue(['A00015', 'A00016']);
+  const r = sbpSel(['_drafts/A00015.html', '_drafts/A00016.html'], []);
   assert.strictEqual(r.status, 3);
   assert.match(selJson(r).refuse, /BLOCKED/);
-  sbpStatus('A00017', 'PLANNED'); // restore
 });
 test('push-selection: refuse — mixed new + repair push (finish the open chunk first)', () => {
-  sbpStatus('A00017', 'REPAIR'); sbpDraft('A00015'); sbpDraft('A00017');
+  sbpWorld(['A00015', 'A00016', 'A00017']);
+  sbpStatus('A00017', 'REPAIR');
+  sbpQueue(['A00015', 'A00017']);
   const r = sbpSel(['_drafts/A00015.html'], ['_drafts/A00017.html']);
   assert.strictEqual(r.status, 3);
   assert.match(selJson(r).refuse, /new .* and repair/);
-  sbpStatus('A00017', 'PLANNED'); // restore
-});
-test('push-selection: refuse — more ids than chunk_size (the push is deterministic)', () => {
-  sbpControl({ enabled: true, chunk_size: 2 });
-  sbpDraft('A00018'); sbpDraft('A00019'); sbpDraft('A00020');
-  const r = sbpSel(['_drafts/A00018.html', '_drafts/A00019.html', '_drafts/A00020.html'], []);
-  assert.strictEqual(r.status, 3);
-  assert.match(selJson(r).refuse, /chunk_size 2/);
 });
 test('push-selection: refuse — body-only push needs the wrapped draft', () => {
+  sbpWorld(['A00021', 'A00022']);
+  // earlier tests may have left drafts/packets behind — this test must control
+  // exactly which artifacts exist for its ids
+  ['A00021', 'A00022'].forEach(id => {
+    fs.rmSync(path.join(SBP, '_drafts', id + '.html'), { force: true });
+    fs.rmSync(path.join(SBP, 'data', 'research', id + '.json'), { force: true });
+  });
   fs.mkdirSync(path.join(SBP, '_drafts'), { recursive: true });
   fs.writeFileSync(path.join(SBP, '_drafts', 'A00021.body.html'), '<h2>body</h2>');
-  const r = sbpSel(['_drafts/A00021.body.html'], []);
+  fs.writeFileSync(path.join(SBP, '_drafts', 'A00022.body.html'), '<h2>body</h2>');
+  const r = sbpSel(['_drafts/A00021.body.html', '_drafts/A00022.body.html'], []);
   assert.strictEqual(r.status, 3);
   assert.match(selJson(r).refuse, /wrapped draft/);
 });
@@ -1218,9 +1295,9 @@ test('push-selection: refuse — stray _drafts filename (only A#####.html|.body.
   fs.rmSync(path.join(SBP, '_drafts', 'notes.txt'), { force: true });
 });
 test('push-selection: paused — production-control disabled stops NEW pushes cleanly (exit 0)', () => {
-  sbpControl({ enabled: false, chunk_size: 2 });
-  sbpDraft('A00018'); sbpPacket('A00018');
-  const r = sbpSel(['_drafts/A00018.html'], []);
+  sbpWorld(['A00018', 'A00019']);
+  sbpControl({ enabled: false, chunk_size: 2, queue_min: 2, queue_max: 20 });
+  const r = sbpSel(sbpQueue(['A00018', 'A00019']), []);
   assert.strictEqual(r.status, 0, r.stderr);
   const sel = selJson(r);
   assert.strictEqual(sel.mode, 'paused');
@@ -1229,8 +1306,9 @@ test('push-selection: paused — production-control disabled stops NEW pushes cl
   assert.strictEqual(sel.control_enabled, false);
 });
 test('push-selection: repair — push of a WRITING draft targets qa only (no new claims)', () => {
-  sbpControl({ enabled: true, chunk_size: 2 });
-  sbpStatus('A00019', 'WRITING'); sbpDraft('A00019');
+  sbpWorld([]);
+  sbpStatus('A00019', 'WRITING');
+  sbpDraft('A00019');
   const r = sbpSel([], ['_drafts/A00019.html']);
   assert.strictEqual(r.status, 0, r.stderr);
   const sel = selJson(r);
@@ -1238,21 +1316,23 @@ test('push-selection: repair — push of a WRITING draft targets qa only (no new
   assert.strictEqual(sel.proceed, true);
   assert.deepStrictEqual(sel.claim_ids, []);
   assert.deepStrictEqual(sel.qa_ids, ['A00019']);
-  sbpStatus('A00019', 'PLANNED'); // restore
 });
 test('push-selection: repair proceeds even when production-control is disabled', () => {
-  sbpControl({ enabled: false, chunk_size: 2 });
-  sbpStatus('A00019', 'REPAIR'); sbpDraft('A00019');
+  sbpWorld([]);
+  sbpControl({ enabled: false, chunk_size: 2, queue_min: 2, queue_max: 20 });
+  sbpStatus('A00019', 'REPAIR');
+  sbpDraft('A00019');
   const r = sbpSel([], ['_drafts/A00019.html']);
   assert.strictEqual(r.status, 0, r.stderr);
   const sel = selJson(r);
   assert.strictEqual(sel.mode, 'repair');
   assert.strictEqual(sel.proceed, true, 'repair of open work stays allowed while paused');
-  sbpStatus('A00019', 'PLANNED'); // restore
 });
 test('push-selection: repair of a RESEARCH row needs a parseable research packet', () => {
-  sbpControl({ enabled: true, chunk_size: 2 });
-  sbpStatus('A00019', 'RESEARCH'); sbpDraft('A00019');
+  sbpWorld([]);
+  sbpStatus('A00019', 'RESEARCH');
+  sbpDraft('A00019');
+  fs.rmSync(path.join(SBP, 'data', 'research', 'A00019.json'), { force: true }); // earlier tests may have left a packet
   const rMissing = sbpSel([], ['_drafts/A00019.html']);
   assert.strictEqual(rMissing.status, 3);
   assert.match(selJson(rMissing).refuse, /research packet/);
@@ -1260,12 +1340,22 @@ test('push-selection: repair of a RESEARCH row needs a parseable research packet
   const rOk = sbpSel([], ['_drafts/A00019.html']);
   assert.strictEqual(rOk.status, 0, rOk.stderr);
   assert.strictEqual(selJson(rOk).mode, 'repair');
-  sbpStatus('A00019', 'PLANNED'); // restore
+});
+test('push-selection: refuse — repair push > chunk_size 2 ids (repair stays pair-sized)', () => {
+  sbpWorld([]);
+  sbpStatus('A00019', 'REVIEW'); sbpStatus('A00020', 'REVIEW'); sbpStatus('A00021', 'REVIEW');
+  sbpDraft('A00019'); sbpDraft('A00020'); sbpDraft('A00021');
+  const r = sbpSel(['_drafts/A00019.html', '_drafts/A00020.html', '_drafts/A00021.html'], []);
+  assert.strictEqual(r.status, 3);
+  assert.match(selJson(r).refuse, /chunk_size 2/);
 });
 test('push-selection: new push without a research packet is refused (research BEFORE write)', () => {
-  sbpControl({ enabled: true, chunk_size: 2 });
-  sbpDraft('A00020');
-  const r = sbpSel(['_drafts/A00020.html'], []);
+  sbpWorld(['A00020', 'A00021']);
+  sbpDraft('A00020'); sbpDraft('A00021');
+  // earlier tests may have left packets behind — the queue ids must have NONE
+  fs.rmSync(path.join(SBP, 'data', 'research', 'A00020.json'), { force: true });
+  fs.rmSync(path.join(SBP, 'data', 'research', 'A00021.json'), { force: true });
+  const r = sbpSel(['_drafts/A00020.html', '_drafts/A00021.html'], []);
   assert.strictEqual(r.status, 3);
   assert.match(selJson(r).refuse, /research packet/);
 });
@@ -1274,23 +1364,28 @@ test('push-selection: contract — shards-first matrix read; refuse exits 3', ()
   assert.ok(src.includes('content-matrix\\.csv\\.part'), 'must read the canonical shards (a clean checkout has no assembled CSV)');
   assert.match(src, /process\.exit\(3\)/, 'refuse must exit 3 (fail-closed)');
 });
-test('push-driven: production-control contract (enabled, chunk_size 1..10)', () => {
+test('push-driven: production-control contract (enabled; chunk 1..10; queue 2..20)', () => {
   const c = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'state', 'production-control.json'), 'utf8'));
   assert.strictEqual(c.enabled, true, 'production must be enabled');
   assert.ok(Number.isInteger(c.chunk_size) && c.chunk_size >= 1 && c.chunk_size <= 10, 'chunk_size must be an integer 1..10');
+  assert.ok(Number.isInteger(c.queue_min) && c.queue_min >= 2, 'queue_min must be an integer >= 2 (pair minimum)');
+  assert.ok(Number.isInteger(c.queue_max) && c.queue_max <= 20, 'queue_max must be an integer <= 20 (write-ahead buffer cap)');
+  assert.ok(c.queue_min <= c.queue_max, 'queue_min must not exceed queue_max');
 });
-test('prepare-next --ids: EXACT claims of PLANNED rows (push-driven)', () => {
-  const r = FACT(['prepare-next', '--ids', 'A00015,A00016'], SBP);
+test('prepare-next --ids: ONE write-ahead queue claim of consecutive PLANNED rows (push-driven)', () => {
+  sbpWorld(['A00015', 'A00016', 'A00017']);
+  const r = FACT(['prepare-next', '--ids', 'A00015,A00016,A00017'], SBP);
   assert.strictEqual(r.status, 0, r.stderr);
-  assert.match(r.stdout, /PREPARED 2/);
+  assert.match(r.stdout, /PREPARED 3/);
   const preparedLine = r.stdout.split('\n').find(l => l.startsWith('PREPARED'));
   assert.ok(preparedLine, 'PREPARED line must exist');
   assert.match(preparedLine, /A00015/);
   assert.match(preparedLine, /A00016/);
-  assert.strictEqual(preparedLine.includes('A00017'), false, 'must not claim anything beyond the exact ids');
+  assert.match(preparedLine, /A00017/);
+  assert.strictEqual(preparedLine.includes('A00018'), false, 'must not claim anything beyond the exact queue ids');
 });
-test('prepare-next --ids: refuses while an unfinished chunk exists (resume first)', () => {
-  const r = FACT(['prepare-next', '--ids', 'A00017'], SBP); // A00015/A00016 are now RESEARCH
+test('prepare-next --ids: refuses while an unfinished queue exists (resume first)', () => {
+  const r = FACT(['prepare-next', '--ids', 'A00018'], SBP); // A00015..A00017 are now RESEARCH (claimed, unfinished)
   assert.notStrictEqual(r.status, 0, 'must refuse to claim new work');
   assert.match(r.stderr, /unfinished chunk present/);
 });
@@ -1302,7 +1397,17 @@ fs.cpSync(ROOT, SBP2, { recursive: true, filter: (s) => {
   return rel !== '_drafts' && !rel.startsWith('_drafts' + path.sep)
     && !path.basename(s).startsWith('content-matrix.csv.part');
 } });
-test('prepare-next --ids: non-PLANNED / unknown / malformed / duplicate / >CHUNK refused', () => {
+function csvSetStatus(csvPath, id, status) {
+  const lines = fs.readFileSync(csvPath, 'utf8').split('\n');
+  const out = [lines[0]];
+  for (const l of lines.slice(1).filter(x => x.trim())) {
+    const c = parseLine4(l);
+    if (c[0] === id) c[24] = status;
+    out.push(c.map(v => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v).join(','));
+  }
+  fs.writeFileSync(csvPath, out.join('\n'));
+}
+test('prepare-next --ids: non-PLANNED / unknown / malformed / duplicate / >QUEUE_MAX refused', () => {
   const rPub = FACT(['prepare-next', '--ids', 'A00001'], SBP2); // A00001 is PUBLISHED
   assert.notStrictEqual(rPub.status, 0, 'PUBLISHED row must be refused');
   assert.match(rPub.stderr, /PUBLISHED/);
@@ -1311,18 +1416,33 @@ test('prepare-next --ids: non-PLANNED / unknown / malformed / duplicate / >CHUNK
   assert.match(rUnknown.stderr, /unknown id/);
   assert.notStrictEqual(FACT(['prepare-next', '--ids', 'a1'], SBP2).status, 0, 'malformed id must be refused');
   assert.notStrictEqual(FACT(['prepare-next', '--ids', 'A00015,A00015'], SBP2).status, 0, 'duplicate id must be refused');
-  const eleven = Array.from({ length: 11 }, (_, i) => 'A' + String(i + 20).padStart(5, '0')).join(',');
-  const rChunk = FACT(['prepare-next', '--ids', eleven], SBP2);
-  assert.notStrictEqual(rChunk.status, 0, '>CHUNK ids must be refused');
-  assert.match(rChunk.stderr, /CHUNK/);
+  // > QUEUE_MAX (20) ids refused up front — the write-ahead queue cap
+  const twentyOne = Array.from({ length: 21 }, (_, i) => 'A' + String(i + 1).padStart(5, '0')).join(',');
+  const rQ = FACT(['prepare-next', '--ids', twentyOne], SBP2);
+  assert.notStrictEqual(rQ.status, 0, '>QUEUE_MAX ids must be refused');
+  assert.match(rQ.stderr, /QUEUE_MAX/);
 });
 test('operator: prepare-next --ids passthrough (validate + execute path)', () => {
   assert.notStrictEqual(OP(['prepare-next', '--ids', 'A00015,A00016', '--count', '2'], SBP2).status, 0, 'ids+count must be refused (mutually exclusive)');
-  // full operator path: preflight -> EXACT claim -> reports -> scoped fast verify
+  // full operator path: preflight -> ONE queue claim -> reports -> scoped fast verify
+  csvSetStatus(path.join(SBP2, 'data', 'content-matrix.csv'), 'A00015', 'PLANNED');
+  csvSetStatus(path.join(SBP2, 'data', 'content-matrix.csv'), 'A00016', 'PLANNED');
   const r = OP(['prepare-next', '--ids', 'A00015,A00016', '--scope', 'fast'], SBP2);
   assert.strictEqual(r.status, 0, r.stdout + r.stderr);
   assert.match(r.stdout, /PREPARED 2/);
   assert.match(r.stdout, /VERIFY PASS \(scope=fast\)/);
+});
+test('prepare-next --ids: a full 20-id write-ahead queue claim (QUEUE_MAX)', () => {
+  // clear the rows claimed by the passthrough test (finished again), then
+  // claim a full 20-id queue in ONE deterministic call
+  const csv2 = path.join(SBP2, 'data', 'content-matrix.csv');
+  csvSetStatus(csv2, 'A00015', 'PUBLISHED');
+  csvSetStatus(csv2, 'A00016', 'PUBLISHED');
+  const ids = Array.from({ length: 20 }, (_, i) => 'A' + String(i + 41).padStart(5, '0')); // A00041..A00060
+  ids.forEach(id => csvSetStatus(csv2, id, 'PLANNED'));
+  const r = FACT(['prepare-next', '--ids', ids.join(',')], SBP2);
+  assert.strictEqual(r.status, 0, r.stderr);
+  assert.match(r.stdout, /PREPARED 20/);
 });
 
 // =====================================================================
@@ -1359,6 +1479,9 @@ const sha4 = s => require('crypto').createHash('sha256').update(s).digest('hex')
 const draft4 = (id, html) => { fs.mkdirSync(path.join(SB4, '_drafts'), { recursive: true }); fs.writeFileSync(path.join(SB4, '_drafts', id + '.html'), html); };
 const evidence4 = (id, ev) => { fs.mkdirSync(path.join(SB4, 'data', 'qa'), { recursive: true }); fs.writeFileSync(path.join(SB4, 'data', 'qa', id + '.json'), JSON.stringify(ev)); };
 const ready4 = (id, html) => { setRow4(id, { status: 'PASS', qa_score: 100 }); draft4(id, html);
+  // the sandbox copies the real repo (id may already be PUBLISHED there) —
+  // drop the stale real archive so the AMBIGUOUS publish gate never fires
+  fs.rmSync(path.join(SB4, 'data', 'published', id + '.html'), { force: true });
   evidence4(id, { article_id: id, score: 100, words: 1, result: 'PASS', fails: [], draft_sha256: sha4(html), matrix_status_after: 'PASS' }); };
 const tx4 = () => JSON.parse(fs.readFileSync(path.join(SB4, 'data', 'state', 'transaction.json'), 'utf8'));
 const lock4 = () => JSON.parse(fs.readFileSync(path.join(SB4, 'data', 'state', 'writer-lock.json'), 'utf8'));
@@ -1426,21 +1549,23 @@ test('hardening: matrix qa_score below rubric => publish REFUSE (evidence alone 
   clean4('matrix-qa-score');
 });
 test('hardening: grounding gate — ungrounded VND claim => publish REFUSE', () => {
-  ready4('A00021', '<header class="site-head"><nav class="menu"><a href="/lab/">Trang chủ</a></nav></header>\n<main><h1>ok</h1><p>Giá xe số khoảng 100.000đ/ngày tại đây.</p></main>\n<footer class="site-foot"><p>Chân trang.</p></footer>');
-  const r = FACT(['publish', 'A00021'], SB4);
+  // A00075 is far past the published prefix and has NO research packet in the
+  // repo — the grounding refusal can only be attributed to the draft claims
+  ready4('A00075', '<header class="site-head"><nav class="menu"><a href="/lab/">Trang chủ</a></nav></header>\n<main><h1>ok</h1><p>Giá xe số khoảng 100.000đ/ngày tại đây.</p></main>\n<footer class="site-foot"><p>Chân trang.</p></footer>');
+  const r = FACT(['publish', 'A00075'], SB4);
   assert.notStrictEqual(r.status, 0, 'ungrounded quantitative claim must REFUSE');
   assert.match(r.stderr, /GROUNDING_FAIL/);
-  assert.strictEqual(status4('A00021').status, 'PASS', 'matrix untouched by grounding refusal');
-  assert.ok(fs.existsSync(path.join(SB4, '_drafts', 'A00021.html')), 'draft intact after grounding refusal');
+  assert.strictEqual(status4('A00075').status, 'PASS', 'matrix untouched by grounding refusal');
+  assert.ok(fs.existsSync(path.join(SB4, '_drafts', 'A00075.html')), 'draft intact after grounding refusal');
   clean4('grounding-refuse');
 });
 test('hardening: grounding gate — real claim_evidence => the same publish passes', () => {
   // backfill genuine claim_evidence (verified source quote) for the draft above
   fs.mkdirSync(path.join(SB4, 'data', 'research'), { recursive: true });
-  fs.writeFileSync(path.join(SB4, 'data', 'research', 'A00021.json'), JSON.stringify({ article_id: 'A00021', sources: [], claim_evidence: [{ claim: 'Giá xe số khoảng 100.000đ/ngày', source_url: 'https://example.com/bang-gia', source_domain: 'example.com', date_accessed: '2026-09-29', claim_supported: 'Bảng giá công khai: xe số 100.000đ/ngày' }] }));
-  const r = FACT(['publish', 'A00021'], SB4);
+  fs.writeFileSync(path.join(SB4, 'data', 'research', 'A00075.json'), JSON.stringify({ article_id: 'A00075', sources: [], claim_evidence: [{ claim: 'Giá xe số khoảng 100.000đ/ngày', source_url: 'https://example.com/bang-gia', source_domain: 'example.com', date_accessed: '2026-09-29', claim_supported: 'Bảng giá công khai: xe số 100.000đ/ngày' }] }));
+  const r = FACT(['publish', 'A00075'], SB4);
   assert.strictEqual(r.status, 0, r.stderr);
-  assert.strictEqual(status4('A00021').status, 'PUBLISHED');
+  assert.strictEqual(status4('A00075').status, 'PUBLISHED');
   clean4('grounding-pass');
 });
 test('hardening: malformed claim_evidence (domain mismatch) => grounding REFUSE', () => {
@@ -1464,10 +1589,17 @@ test('hardening: last_completed_id = contiguous completed prefix (pristine truth
   try {
     const f5 = require(path.join(SB5, 'scripts', 'factory', 'factory.js'));
     const prog = f5.progressOf(f5.loadMatrix());
-    // A00001..A00014 contiguous PUBLISHED + 9 pilot PUBLISHED far away (A09401...)
-    assert.strictEqual(prog.published_count, 23);
-    assert.strictEqual(prog.last_completed_id, 'A00014', 'prefix ends at A00014 — never the lexicographic max (A09401)');
-    assert.strictEqual(prog.next_claimable_id, 'A00015');
+    // production truth moves forward over time — derive the expected pristine
+    // prefix from the sandbox matrix itself, then pin the pointer semantics
+    const rows5 = f5.loadMatrix();
+    let last = null, i = 0;
+    while (i < rows5.length && rows5[i].status === 'PUBLISHED') { last = rows5[i].article_id; i++; }
+    const total5 = rows5.filter(r => r.status === 'PUBLISHED').length;
+    const firstPlanned5 = rows5.filter(r => r.status === 'PLANNED').map(r => r.article_id).sort()[0] || null;
+    assert.strictEqual(prog.published_count, total5, 'published_count = exact PUBLISHED set');
+    assert.strictEqual(prog.last_completed_id, last, 'prefix ends at the contiguous PUBLISHED prefix — never the lexicographic max (pilot rows far away)');
+    assert.ok(/A\d{5}/.test(prog.last_completed_id), 'prefix must be non-empty on healthy production truth');
+    assert.strictEqual(prog.next_claimable_id, firstPlanned5, 'next_claimable = first PLANNED row');
   } finally { fs.rmSync(SB5, { recursive: true, force: true }); }
 });
 test('hardening: a hole in the prefix shortens last_completed_id; pilots never extend it', () => {
@@ -1480,6 +1612,12 @@ test('hardening: a hole in the prefix shortens last_completed_id; pilots never e
   } });
   try {
     const csv5 = path.join(SB5, 'data', 'content-matrix.csv');
+    const f5p = path.join(SB5, 'scripts', 'factory', 'factory.js');
+    delete require.cache[require.resolve(f5p)];
+    let f5 = require(f5p);
+    const before = f5.progressOf(f5.loadMatrix());
+    assert.strictEqual(f5.loadMatrix().find(r => r.article_id === 'A00010').status, 'PUBLISHED',
+      'A00010 must sit inside the contiguous published prefix for this regression');
     const lines = fs.readFileSync(csv5, 'utf8').split('\n');
     const out = [lines[0]];
     for (const l of lines.slice(1).filter(x => x.trim())) {
@@ -1488,13 +1626,12 @@ test('hardening: a hole in the prefix shortens last_completed_id; pilots never e
       out.push(c.map(v => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v).join(','));
     }
     fs.writeFileSync(csv5, out.join('\n'));
-    const f5p = path.join(SB5, 'scripts', 'factory', 'factory.js');
     delete require.cache[require.resolve(f5p)];
-    const f5 = require(f5p);
+    f5 = require(f5p);
     const prog = f5.progressOf(f5.loadMatrix());
     assert.strictEqual(prog.last_completed_id, 'A00009', 'prefix stops before the hole at A00010');
     assert.strictEqual(prog.next_claimable_id, 'A00010');
-    assert.strictEqual(prog.published_count, 22);
+    assert.strictEqual(prog.published_count, before.published_count - 1, 'the de-published hole row leaves the published set');
   } finally { fs.rmSync(SB5, { recursive: true, force: true }); }
 });
 test('hardening: fault injection — crash after stage => deterministic rollback via recover', () => {
@@ -1547,6 +1684,11 @@ test('hardening: atomic operator publish — build failure rolls back (never hal
   ready4('A00026', '<h1>ok</h1>');
   const bs = path.join(SB4, 'scripts', 'site', 'build-site.js');
   const orig = fs.readFileSync(bs, 'utf8');
+  // the copied REAL ledger already records the historical publish of A00026 —
+  // a rollback must add NO NEW event (relative count, not absolute absence)
+  const evCount4 = (id) => JSON.parse(fs.readFileSync(path.join(SB4, 'data', 'state', 'throughput-ledger.json'), 'utf8'))
+    .events.filter(e => e.op === 'publish' && (e.ids || []).includes(id)).length;
+  const evBefore = evCount4('A00026');
   try {
     fs.writeFileSync(bs, 'process.exit(1);\n' + orig);
     const r = OP(['publish', '--ids', 'A00026', '--scope', 'fast'], SB4);
@@ -1555,8 +1697,7 @@ test('hardening: atomic operator publish — build failure rolls back (never hal
     assert.strictEqual(status4('A00026').status, 'PASS', 'row restored to pre-publish truth');
     assert.ok(fs.existsSync(path.join(SB4, '_drafts', 'A00026.html')), 'draft intact after rollback');
     assert.ok(!fs.existsSync(path.join(SB4, 'data', 'published', 'A00026.html')), 'staged archive removed by rollback');
-    const ledger = JSON.parse(fs.readFileSync(path.join(SB4, 'data', 'state', 'throughput-ledger.json'), 'utf8'));
-    assert.ok(!ledger.events.some(e => e.op === 'publish' && (e.ids || []).includes('A00026')), 'no ledger event for a rolled-back publish');
+    assert.strictEqual(evCount4('A00026'), evBefore, 'no NEW ledger event for a rolled-back publish');
     clean4('operator-build-fail');
   } finally { fs.writeFileSync(bs, orig); }
 });
@@ -1603,10 +1744,17 @@ test('hardening: qa-repair re-scores a PUBLISHED archive and binds its exact has
     assert.strictEqual(row[24], 'PUBLISHED');
   } finally { fs.rmSync(SB6, { recursive: true, force: true }); }
 });
-test('hardening: workflows wire the grounding gate into CI', () => {
-  for (const f of ['ci-validate.yml', 'factory-validate.yml', 'factory-capacity-validate.yml']) {
-    assert.match(wfText(f), /factory\.js grounding/, f + ' must run the grounding gate');
-  }
+test('hardening: the grounding gate stays wired into the publish path (operator staged verify)', () => {
+  // single-workflow architecture: factory-production.yml runs operator
+  // publish (FAST = staged consistency + SELECTED-ID grounding), and the
+  // staged verify steps always contain the grounding gate.
+  const opSrc = fs.readFileSync(path.join(ROOT, 'scripts', 'factory', 'operator.js'), 'utf8');
+  assert.match(opSrc, /grounding/, 'operator verify must stage the grounding gate');
+  const staged = require(path.join(ROOT, 'scripts', 'factory', 'operator.js'))
+    .verifyStepsStaged('fast', 'TX-1', ['A00015']).map(s => s.join(' ')).join(' | ');
+  assert.match(staged, /grounding/, 'FAST publish verify keeps selected-ID grounding');
+  const y = wfText('factory-production.yml');
+  assert.match(y, /operator\.js publish --ids/, 'production loop must publish through the operator (grounding-gated)');
 });
 // =====================================================================
 // HARDENING SESSION 3 — staged-aware verify (success-path publish must
@@ -1800,13 +1948,12 @@ test('F1 channel retirement: operator.js is CLI-only', () => {
   assert.doesNotMatch(src, /--channel/, 'không còn channel flag');
   assert.match(src, /push-selection\.js/, 'header phải document hợp đồng push-selection');
 });
-test('F2 concurrency contract: validation workflows are per-ref; production stays globally serialized', () => {
-  for (const f of ['factory-validate.yml', 'factory-capacity-validate.yml']) {
-    const y = wfText(f);
-    assert.match(y, new RegExp('group:\\s*' + f.replace('.yml', '') + '-\\$\\{\\{ github\\.ref \\}\\}'),
-      f + ' must key its concurrency group per ref/branch');
-    assert.match(y, /cancel-in-progress:\s*true/, f + ' may still cancel within the same ref');
-  }
+test('F2 concurrency contract: production stays globally serialized (single-workflow architecture)', () => {
+  // the retired per-ref validation workflows are gone — the ONLY workflow is
+  // factory-production.yml and its mutation group must stay GLOBAL.
+  const wfDir = path.join(ROOT, '.github', 'workflows');
+  const files = fs.readdirSync(wfDir).filter(f => f.endsWith('.yml') || f.endsWith('.yaml'));
+  assert.deepStrictEqual(files, ['factory-production.yml'], 'exactly ONE workflow may exist (single production loop)');
   const op = wfText('factory-production.yml');
   assert.match(op, /group:\s*lab-factory-production/, 'production loop must keep the GLOBAL serialization group');
   assert.match(op, /cancel-in-progress:\s*false/, 'production loop must never cancel in-flight runs');
@@ -1869,21 +2016,22 @@ test('F3 watchdog CLI: read-only on the real repo, PASS on healthy idle, state b
   assert.match(r.stdout, /HEALTHY IDLE/, 'production is idle: user resting is not a failure');
   assert.strictEqual(before, snap(), 'watchdog must never mutate repository truth');
 });
-test('F3 watchdog workflow contract: read-only, scheduled, contents: read, never commits/pushes', () => {
-  const y = wfText('factory-liveness-watchdog.yml');
-  assert.match(y, /contents:\s*read/, 'watchdog workflow must be read-only (contents: read)');
-  assert.match(y, /workflow_dispatch:/, 'must be manually dispatchable');
-  assert.match(y, /cron:\s*'0 \*\/6 \* \* \*'/, 'must run on a periodic schedule');
-  assert.ok(!/git push|git commit/.test(y), 'watchdog must never commit or push');
-  assert.match(y, /git status --porcelain/, 'must self-verify the read-only contract');
+test('F3 watchdog contract: wired into the production smoke; read-only source, never commits', () => {
+  // the standalone watchdog workflow was retired with the other CI tiers —
+  // the watchdog now runs INSIDE the factory-production.yml smoke step.
+  const y = wfText('factory-production.yml');
+  assert.match(y, /liveness-watchdog\.js/, 'the production smoke must run the liveness watchdog');
+  const wd = fs.readFileSync(path.join(ROOT, 'scripts', 'factory', 'liveness-watchdog.js'), 'utf8');
+  assert.ok(!/git push|git commit/.test(wd), 'watchdog script must never commit or push');
+  assert.ok(!/child_process|spawnSync|execSync/.test(wd), 'watchdog must be pure evaluation, no shell');
 });
-test('F4 soak workflow contract: dedicated long-run suite, read-only, dispatch + scheduled', () => {
-  const y = wfText('factory-soak.yml');
-  assert.match(y, /node --test tests\/soak\/factory-soak\.js/, 'must run the soak suite');
-  assert.match(y, /contents:\s*read/, 'soak runs in its own sandbox: contents read only');
-  assert.match(y, /workflow_dispatch:/, 'must be manually dispatchable');
-  assert.match(y, /schedule:/, 'must run on a schedule');
+test('F4 soak contract: the long-run suite exists but is NEVER in the production hot loop', () => {
+  // the dedicated soak workflow was retired — the soak suite stays available
+  // as a local/CI-optional long-run battery and must not run in the hot loop.
   assert.ok(fs.existsSync(path.join(ROOT, 'tests', 'soak', 'factory-soak.js')), 'soak suite must exist');
+  const y = wfText('factory-production.yml');
+  assert.doesNotMatch(y, /factory-soak/, 'the production hot loop must never run the soak suite');
+  assert.doesNotMatch(y, /node --test/, 'the production hot loop must never run the full test-suite');
 });
 test('F5 docs contract: 4-tier validation model documented in canonical docs', () => {
   const agents = fs.readFileSync(path.join(ROOT, 'AGENTS.md'), 'utf8');
@@ -2080,48 +2228,30 @@ test('S5 static: watchdog source có canonical-shard loader, fail-closed, và KH
   assert.ok(!/git\s+push/.test(src), 'watchdog không được push');
 });
 
-test('S5 static: watchdog workflow chứng minh read-only (clean tree TRƯỚC+SAU, sha256 truth trước/sau)', () => {
-  const y = wfText('factory-liveness-watchdog.yml');
-  const cleanChecks = (y.match(/git status --porcelain/g) || []).length;
-  assert.ok(cleanChecks >= 2, 'phải có clean-tree check TRƯỚC và SAU watchdog (có ' + cleanChecks + ')');
-  assert.match(y, /watchdog-truth-before/, 'phải fingerprint truth TRƯỚC');
-  assert.match(y, /watchdog-truth-after/, 'phải fingerprint truth SAU');
-  assert.match(y, /diff \/tmp\/watchdog-truth-before\.txt \/tmp\/watchdog-truth-after\.txt/,
-    'phải assert truth byte-identical');
-  assert.match(y, /contents:\s*read/);
-  assert.ok(!/git push|git commit/.test(y), 'watchdog workflow không được commit/push');
+test('S5 static: watchdog chạy trong production smoke — KHÔNG ghi/mutate, KHÔNG workflow riêng', () => {
+  // workflow watchdog riêng đã retire (cùng các tier CI) — watchdog giờ chạy
+  // bên trong factory-production.yml smoke; tính read-only của nó nằm ở source
+  // (assertions ở test "S5 static: watchdog source..." phía trên) và ở việc
+  // smoke KHÔNG commit gì trước khi watchdog chạy.
+  const y = wfText('factory-production.yml');
+  assert.match(y, /liveness-watchdog\.js/, 'smoke phải chạy watchdog');
+  assert.ok(!/git push|git commit/.test(y.split('Light smoke')[1].split('Commit + push')[0]),
+    'đoạn smoke (chứa watchdog) không được commit/push');
   assert.ok(!/push --force|push -f/.test(y), 'không force push');
 });
 
-test('S5 static: soak workflow BẮT BUỘC Tier 4 trên push main + path contract đầy đủ (không trigger trên content runtime)', () => {
-  const y = wfText('factory-soak.yml');
-  assert.match(y, /push:/, 'soak phải trigger cả trên push');
-  assert.match(y, /branches:\s*\[main\]/, 'push phải filter branch main');
-  const requiredPaths = ['scripts/factory/**', 'scripts/site/**', 'tests/soak/**', 'tests/test-suite.js',
-    '.github/workflows/factory-production.yml', '.github/workflows/factory-validate.yml',
-    '.github/workflows/factory-capacity-validate.yml', '.github/workflows/factory-soak.yml',
-    '.github/workflows/factory-liveness-watchdog.yml', '.github/workflows/ci-validate.yml',
-    'config/article-rubric.json', 'config/business-facts.json', 'config/source-policy.json',
-    'AGENTS.md', 'docs/PROC-PUBLISH.md', 'docs/CONTENT-FACTORY.md', 'docs/PROC-RECOVERY.md'];
-  for (const p of requiredPaths) {
-    const esc = p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const count = (y.match(new RegExp("- '" + esc + "'", 'g')) || []).length;
-    assert.strictEqual(count, 2, "path '" + p + "' phải có trong CẢ pull_request lẫn push (thấy " + count + ')');
-  }
-  // SIMPLE PRODUCTION MODE: normal content runtime updates (matrix shards,
-  // checkpoint/transaction/lock/ledger, published archives, qa evidence,
-  // config/content-factory.json runtime grounding ids) KHÔNG trigger Tier 4.
-  assert.ok(!/- 'data\/state\/\*\*'/.test(y), 'data/state/** phải RA KHỎI path contract (thay sau mỗi publish)');
-  assert.ok(!/- 'config\/\*\*'/.test(y), 'config/** phải RA KHỎI path contract (content-factory.json thay sau mỗi publish)');
-  assert.ok(!/- 'config\/content-factory\.json'/.test(y), 'config/content-factory.json là runtime state, không phải tín hiệu thay engine');
-  assert.match(y, /group:\s*factory-soak-\$\{\{ github\.ref \}\}/, 'soak concurrency phải per-ref');
-  assert.match(y, /cancel-in-progress:\s*true/);
-  // Chỉ khóa concurrency GROUP, không cấm nhắc tên trong comment giải thích.
-  const groupLines = y.split('\n').filter(l => /^\s*group:/.test(l));
-  assert.ok(groupLines.length > 0, 'soak phải có concurrency group');
-  assert.ok(groupLines.every(l => !/lab-factory-production/.test(l)),
-    'soak KHÔNG được đụng global production mutation group: ' + JSON.stringify(groupLines));
-  assert.ok(!/&tier4_paths|\*tier4_paths/.test(y), 'GitHub Actions không hỗ trợ YAML anchors — nhân đôi paths');
+test('S5 static: hot loop NHẸ — không soak, không test-suite, không capacity-check, không editorial-audit', () => {
+  // workflow soak riêng đã retire (cùng các tier CI). Suite soak vẫn tồn tại
+  // như battery dài hạn CHẠY TRỰC TIẾP (local/CI-optional), nhưng KHÔNG BAO
+  // GIỜ chạy trong factory-production.yml hot loop; engine changes không
+  // trigger gì thêm vì chỉ còn đúng một workflow duy nhất.
+  assert.ok(fs.existsSync(path.join(ROOT, 'tests', 'soak', 'factory-soak.js')),
+    'suite soak phải tồn tại (battery dài hạn, chạy trực tiếp)');
+  const y = wfText('factory-production.yml');
+  assert.doesNotMatch(y, /factory-soak/, 'hot loop không chạy soak');
+  assert.doesNotMatch(y, /node --test/, 'hot loop không chạy test-suite');
+  assert.doesNotMatch(y, /capacity-check/, 'hot loop không chạy capacity-check');
+  assert.doesNotMatch(y, /editorial-audit/, 'hot loop không chạy editorial-audit');
 });
 
 test('S5 static: factory-production giữ global serialization lab-factory-production, cancel=false, không force push', () => {
@@ -2226,13 +2356,16 @@ test('simple-prod: FAST prepare-next / research / qa succeed even while test-sui
     const p = path.join(SB7, rel);
     fs.writeFileSync(p, 'process.exit(1);\n' + fs.readFileSync(p, 'utf8'));
   }
-  // NEXT 2 — the standard production pair
+  // NEXT 2 — the standard production pair (the FIRST two PLANNED rows)
+  const plannedOf7 = () => csv7().split('\n').slice(1).filter(x => x.trim())
+    .map(l => parseLine4(l)).filter(c => c[24] === 'PLANNED').map(c => c[0]);
+  const expectedPair = plannedOf7().slice(0, 2);
   let r = OP(['prepare-next', '--count', '2'], SB7);
   assert.strictEqual(r.status, 0, 'FAST prepare-next must never run the sabotaged suite:\nSTDOUT ' + r.stdout + '\nSTDERR ' + r.stderr);
   assert.match(r.stdout, /VERIFY PASS \(scope=fast\)/);
   const pair = ck7().active_chunk;
   assert.strictEqual(pair.length, 2, 'the standard chunk is a 2-article pair');
-  assert.deepStrictEqual(pair, ['A00015', 'A00016']);
+  assert.deepStrictEqual(pair, expectedPair, 'claims exactly the first two PLANNED rows in repository order');
   // RESEARCH — light packet per the row contract (requires_official_sources=0)
   for (const id of pair) {
     fs.writeFileSync(path.join(SB7, 'data', 'research', id + '.json'), JSON.stringify({
@@ -2266,7 +2399,9 @@ test('simple-prod: FAST publish stays ATOMIC and is NOT blocked by editorial-aud
   // a PASS pair with hash-bound evidence (the wrap+qa outcome of the loop)
   const shaOf = s => require('crypto').createHash('sha256').update(s).digest('hex');
   const html = id => '<header class="site-head"><nav class="menu"><a href="/lab/">Trang chủ</a></nav></header>\n<main><h1>Bài ' + id + '</h1><p>Nội dung kiểm thử deterministic cho quy trình atomic publish của bài ' + id + ' theo đường sản xuất đơn giản hai bài mỗi lượt.</p></main>\n<footer class="site-foot"><p>Chân trang kiểm thử.</p></footer>';
-  const pair = ['A00015', 'A00016'];
+  // the first two PLANNED rows (production truth moves forward over time)
+  const pair = csv7().split('\n').slice(1).filter(x => x.trim())
+    .map(l => parseLine4(l)).filter(c => c[24] === 'PLANNED').map(c => c[0]).slice(0, 2);
   const lines = csv7().split('\n');
   const out = [lines[0]];
   for (const l of lines.slice(1).filter(x => x.trim())) {
@@ -2292,14 +2427,14 @@ test('simple-prod: FAST publish stays ATOMIC and is NOT blocked by editorial-aud
   const auditBefore = fs.readFileSync(path.join(SB7, 'reports', 'editorial', 'audit-after.json'), 'utf8');
   const r = OP(['publish', '--ids', pair.join(','), '--scope', 'fast'], SB7);
   assert.strictEqual(r.status, 0, 'editorial-audit must NOT block a normal FAST publish:\nSTDOUT ' + r.stdout + '\nSTDERR ' + r.stderr);
-  assert.match(r.stdout, /PUBLISHED \(atomic, build\+verify PASS\) 2: A00015, A00016/);
+  assert.match(r.stdout, new RegExp('PUBLISHED \\(atomic, build\\+verify PASS\\) 2: ' + pair.join(', ')));
   // atomic truth: rows PUBLISHED, drafts removed, exactly one ledger event, tx/lock clean
   const states = {};
   for (const l of csv7().split('\n').slice(1).filter(x => x.trim())) {
     const c = parseLine4(l);
     if (pair.includes(c[0])) states[c[0]] = c[24];
   }
-  assert.deepStrictEqual(states, { A00015: 'PUBLISHED', A00016: 'PUBLISHED' });
+  assert.deepStrictEqual(states, Object.fromEntries(pair.map(id => [id, 'PUBLISHED'])));
   for (const id of pair) {
     assert.ok(!fs.existsSync(path.join(SB7, '_drafts', id + '.html')), 'draft removed at commit');
     assert.ok(!fs.existsSync(path.join(SB7, '_drafts', id + '.body.html')), 'body draft removed at commit');
@@ -2321,8 +2456,9 @@ test('simple-prod: FAST publish stays ATOMIC and is NOT blocked by editorial-aud
   assert.strictEqual(auditBefore, fs.readFileSync(path.join(SB7, 'reports', 'editorial', 'audit-after.json'), 'utf8'),
     'FAST publish must not run the editorial audit');
   // DEEP still gates: with editorial-audit sabotaged, a deep publish rolls back.
-  // (A00017 becomes the probe; restore capacity sabotage only for the probe row.)
-  const probe = 'A00017';
+  // (The next PLANNED row becomes the probe; restore capacity sabotage only for the probe row.)
+  const probe = csv7().split('\n').slice(1).filter(x => x.trim())
+    .map(l => parseLine4(l)).find(c => c[24] === 'PLANNED')[0];
   const h17 = html(probe);
   const lines2 = csv7().split('\n');
   const out2 = [lines2[0]];
@@ -2344,28 +2480,22 @@ test('simple-prod: FAST publish stays ATOMIC and is NOT blocked by editorial-aud
   assert.ok(fs.existsSync(path.join(SB7, '_drafts', probe + '.html')), 'draft intact after rollback');
   assert.ok(!fs.existsSync(path.join(SB7, 'data', 'published', probe + '.html')), 'staged archive removed by rollback');
 });
-test('simple-prod: ONE lightweight content validation path — ci-validate is light; deep batteries are path-filtered', () => {
-  // Assert on EXECUTED steps only: strip YAML comment lines first (the header
-  // comment documents what the light path does NOT run — those literal names
-  // must not be mistaken for executed commands).
-  const ci = wfText('ci-validate.yml').replace(/^\s*#.*$/gm, '');
-  assert.ok(!/node --test/.test(ci), 'ci-validate must not run the full test-suite');
-  assert.ok(!/capacity-check/.test(ci), 'ci-validate must not run capacity-check');
-  assert.ok(!/editorial-audit/.test(ci), 'ci-validate must not run editorial-audit');
-  assert.ok(!/factory-soak/.test(ci), 'ci-validate must not run soak');
-  assert.match(ci, /factory\.js consistency/, 'light path keeps consistency');
-  assert.match(ci, /factory\.js grounding/, 'light path keeps (scoped) grounding');
-  assert.match(ci, /build-site\.js/, 'light path keeps the deterministic build');
-  assert.match(ci, /data\/published\//, 'grounding scope is derived from the push diff (changed ids only)');
-  // the deep batteries only run when engine/reliability files change
-  for (const f of ['factory-validate.yml', 'factory-capacity-validate.yml']) {
-    const y = wfText(f);
-    assert.match(y, /paths:/, f + ' must be path-filtered (content pushes must not run the full battery)');
-    assert.ok(!/- 'data\/published\/\*\*'/.test(y), f + ' must not trigger on published archives');
-    assert.ok(!/- 'data\/state\/\*\*'/.test(y), f + ' must not trigger on runtime state');
-    assert.ok(!/- 'config\/\*\*'/.test(y), f + ' must not trigger on runtime config');
-    assert.ok(!/- 'config\/content-factory\.json'/.test(y), f + ' must not trigger on runtime grounding ids');
-  }
+test('simple-prod: ONE lightweight production path — factory-production.yml is the only workflow and its hot loop stays light', () => {
+  // single-workflow architecture: ci-validate/factory-validate/capacity-
+  // validate were retired — the ONLY workflow left is factory-production.yml,
+  // and its hot loop must stay light (the publish op itself runs the staged
+  // consistency + selected-ID grounding internally).
+  assert.ok(!fs.existsSync(path.join(ROOT, '.github', 'workflows', 'ci-validate.yml')), 'ci-validate.yml must stay retired');
+  assert.ok(!fs.existsSync(path.join(ROOT, '.github', 'workflows', 'factory-validate.yml')), 'factory-validate.yml must stay retired');
+  assert.ok(!fs.existsSync(path.join(ROOT, '.github', 'workflows', 'factory-capacity-validate.yml')), 'factory-capacity-validate.yml must stay retired');
+  const y = wfText('factory-production.yml').replace(/^\s*#.*$/gm, ''); // strip comments: assert on EXECUTED steps only
+  assert.ok(!/node --test/.test(y), 'the hot loop must not run the full test-suite');
+  assert.ok(!/capacity-check/.test(y), 'the hot loop must not run capacity-check');
+  assert.ok(!/editorial-audit/.test(y), 'the hot loop must not run editorial-audit');
+  assert.ok(!/factory-soak/.test(y), 'the hot loop must not run soak');
+  assert.match(y, /factory\.js consistency/, 'the smoke keeps scoped consistency');
+  assert.match(y, /liveness-watchdog\.js/, 'the smoke keeps liveness');
+  assert.match(y, /operator\.js publish --ids/, 'publish goes through the operator (staged consistency + grounding inside)');
 });
 test('simple-prod: rubric stays owner-approved (PASS >= 75, REVIEW 70–74) — never 90, never lowered', () => {
   const rub = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'article-rubric.json'), 'utf8'));
