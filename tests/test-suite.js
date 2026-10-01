@@ -2151,3 +2151,171 @@ test('simple-prod: rubric stays owner-approved (PASS >= 75, REVIEW 70–74) — 
   assert.strictEqual(rub.max_repair_attempts, 3);
 });
 test('cleanup: remove simple-prod sandbox', () => { fs.rmSync(SB7, { recursive: true, force: true }); });
+
+// =====================================================================
+// WRITER REQUEST CONTRACT — API-only 2-article writer workflow
+// (scripts/factory/writer-request.js; see .github/workflows/
+//  writer-pair-publish.yml). vanchinh-style continuous loop, /lab safety
+// preserved: exactly 2 ids, exactly the NEXT two claimable rows, scope
+// fast only, safe request_id, base_main_sha stale guard, writer/** branch
+// contract, unknown field => REFUSE.
+// =====================================================================
+const WR = require(path.join(ROOT, 'scripts', 'factory', 'writer-request.js'));
+const wrRows = (mutate) => {
+  const rows = [
+    { article_id: 'A00015', status: 'PLANNED' }, { article_id: 'A00016', status: 'PLANNED' },
+    { article_id: 'A00017', status: 'PLANNED' }, { article_id: 'A00018', status: 'PLANNED' },
+    { article_id: 'A00001', status: 'PUBLISHED' }, { article_id: 'A00009', status: 'BLOCKED' }
+  ];
+  (mutate || []).forEach(([id, status]) => { const r = rows.find(x => x.article_id === id); if (r) r.status = status; });
+  return rows;
+};
+const wrReq = (over) => Object.assign({
+  request_id: 'A00015-A00016-001', base_main_sha: '0123456789abcdef0123456789abcdef01234567',
+  ids: ['A00015', 'A00016'], scope: 'fast', coordinator: 'external-writer'
+}, over || {});
+const SBW = path.join(os.tmpdir(), 'lab-writer-req-' + process.pid);
+fs.rmSync(SBW, { recursive: true, force: true });
+fs.mkdirSync(path.join(SBW, 'writer-input'), { recursive: true });
+fs.mkdirSync(path.join(SBW, 'data', 'research'), { recursive: true });
+for (const id of ['A00015', 'A00016', 'A00017', 'A00018']) {
+  fs.writeFileSync(path.join(SBW, 'writer-input', id + '.body.html'), '<h1>t</h1><p>body</p>');
+  fs.writeFileSync(path.join(SBW, 'data', 'research', id + '.json'), JSON.stringify({ article_id: id }));
+}
+const wrCtx = (over) => Object.assign({ branch: 'writer/A00015-A00016-001',
+  originMainSha: '0123456789abcdef0123456789abcdef01234567', rows: wrRows(),
+  markerPath: '.factory/requests/A00015-A00016-001.json', root: SBW }, over || {});
+
+test('writer-request: valid request accepted (exactly 2 next ids, scope fast, marker/branch/base coherent)', () => {
+  const v = WR.validateAll(wrReq(), wrCtx());
+  assert.strictEqual(v.ok, true, JSON.stringify(v));
+  assert.deepStrictEqual(v.resolved.ids, ['A00015', 'A00016']);
+  assert.strictEqual(v.resolved.scope, 'fast');
+  assert.strictEqual(v.resolved.mode, 'fresh');
+  assert.strictEqual(v.branch, 'writer/A00015-A00016-001');
+});
+test('writer-request: 1 id refuses (NOT_TWO_IDS)', () => {
+  const v = WR.validateAll(wrReq({ ids: ['A00015'] }), wrCtx());
+  assert.strictEqual(v.ok, false); assert.strictEqual(v.code, 'NOT_TWO_IDS');
+});
+test('writer-request: 3 ids refuse (NOT_TWO_IDS)', () => {
+  const v = WR.validateAll(wrReq({ ids: ['A00015', 'A00016', 'A00017'] }), wrCtx());
+  assert.strictEqual(v.ok, false); assert.strictEqual(v.code, 'NOT_TWO_IDS');
+});
+test('writer-request: duplicate ids refuse (DUPLICATE_ID)', () => {
+  const v = WR.validateAll(wrReq({ ids: ['A00015', 'A00015'] }), wrCtx());
+  assert.strictEqual(v.ok, false); assert.strictEqual(v.code, 'DUPLICATE_ID');
+});
+test('writer-request: bad id format refuses (BAD_ID_FORMAT)', () => {
+  for (const bad of ['A0015', 'X00015', 'A00015x', 'a00015', 'A0001'])
+    assert.strictEqual(WR.validateAll(wrReq({ ids: ['A00015', bad] }), wrCtx()).code, 'BAD_ID_FORMAT', bad);
+});
+test('writer-request: unknown field refuses (UNKNOWN_FIELD)', () => {
+  const v = WR.validateAll(wrReq({ force: true }), wrCtx());
+  assert.strictEqual(v.ok, false); assert.strictEqual(v.code, 'UNKNOWN_FIELD');
+});
+test('writer-request: non-fast scope refuses (BAD_SCOPE)', () => {
+  for (const scope of ['deep', 'full', 'FAST', ''])
+    assert.strictEqual(WR.validateAll(wrReq({ scope }), wrCtx()).code, 'BAD_SCOPE', 'scope=' + scope);
+});
+test('writer-request: missing/short base_main_sha refuses (BAD_BASE_SHA)', () => {
+  const noBase = wrReq(); delete noBase.base_main_sha;
+  assert.strictEqual(WR.validateAll(noBase, wrCtx()).code, 'MISSING_FIELD');
+  assert.strictEqual(WR.validateAll(wrReq({ base_main_sha: '0cb7e93' }), wrCtx()).code, 'BAD_BASE_SHA');
+  assert.strictEqual(WR.validateAll(wrReq({ base_main_sha: 42 }), wrCtx()).code, 'BAD_BASE_SHA');
+});
+test('writer-request: bad request_id refuses (BAD_REQUEST_ID)', () => {
+  for (const bad of ['', 'has space', 'a/b', '../evil', 'x'.repeat(65)])
+    assert.strictEqual(WR.validateAll(wrReq({ request_id: bad }), wrCtx({ markerPath: '.factory/requests/x.json' })).code, 'BAD_REQUEST_ID', JSON.stringify(bad));
+});
+test('writer-request: bad coordinator refuses (BAD_COORDINATOR)', () => {
+  assert.strictEqual(WR.validateAll(wrReq({ coordinator: 'a\nb' }), wrCtx()).code, 'BAD_COORDINATOR');
+});
+test('writer-request: non-writer branch refuses (BAD_BRANCH)', () => {
+  for (const bad of ['main', 'feature/x', 'publish/A00015-A00016-001', 'writer/', 'writer/../evil'])
+    assert.strictEqual(WR.validateAll(wrReq(), wrCtx({ branch: bad })).code, 'BAD_BRANCH', bad);
+});
+test('writer-request: stale base refuses (STALE_BASE) — never auto-rebase production state', () => {
+  const v = WR.validateAll(wrReq(), wrCtx({ originMainSha: 'ffffffffffffffffffffffffffffffffffffffff' }));
+  assert.strictEqual(v.ok, false); assert.strictEqual(v.code, 'STALE_BASE');
+  assert.match(v.message, /never auto-rebase/);
+});
+test('writer-request: marker filename must equal request_id (MARKER_MISMATCH)', () => {
+  const v = WR.validateAll(wrReq(), wrCtx({ markerPath: '.factory/requests/other-request.json' }));
+  assert.strictEqual(v.ok, false); assert.strictEqual(v.code, 'MARKER_MISMATCH');
+});
+test('writer-request: marker must live in .factory/requests/ (BAD_MARKER_PATH)', () => {
+  for (const bad of ['.factory/requests/A00015-A00016-001.json.bak', 'writer-input/req.json', '.factory/req.json', 'data/state/operator-command.json'])
+    assert.strictEqual(WR.validateAll(wrReq(), wrCtx({ markerPath: bad })).code, 'BAD_MARKER_PATH', bad);
+});
+test('writer-request: exactly the NEXT two claimable — no skipping (NOT_NEXT_TWO)', () => {
+  assert.strictEqual(WR.validateAll(wrReq({ ids: ['A00015', 'A00017'] }), wrCtx()).code, 'NOT_NEXT_TWO', 'gap pair refused');
+  assert.strictEqual(WR.validateAll(wrReq({ ids: ['A00016', 'A00017'] }), wrCtx()).code, 'NOT_NEXT_TWO', 'must start at the first claimable row');
+  assert.strictEqual(WR.validateAll(wrReq({ ids: ['A00017', 'A00018'] }), wrCtx()).code, 'NOT_NEXT_TWO', 'must not skip ahead');
+  // order in the request does not matter — the pair is a set (resolved sorted)
+  const v = WR.validateAll(wrReq({ ids: ['A00016', 'A00015'] }), wrCtx());
+  assert.strictEqual(v.ok, true);
+  assert.deepStrictEqual(v.resolved.ids, ['A00015', 'A00016']);
+});
+test('writer-request: already-PUBLISHED / BLOCKED ids never accepted (PUBLISHED_ID)', () => {
+  assert.strictEqual(WR.validateAll(wrReq({ ids: ['A00001', 'A00015'] }), wrCtx()).code, 'PUBLISHED_ID');
+  assert.strictEqual(WR.validateAll(wrReq({ ids: ['A00009', 'A00015'] }), wrCtx()).code, 'PUBLISHED_ID');
+});
+test('writer-request: unknown id refuses (NOT_IN_MATRIX)', () => {
+  assert.strictEqual(WR.validateAll(wrReq({ ids: ['A00015', 'A99999'] }), wrCtx()).code, 'NOT_IN_MATRIX');
+});
+test('writer-request: resume contract — a stranded pair MUST be the request; other shapes refuse', () => {
+  // exactly the stranded pair: accepted (resume semantics)
+  const stranded = [['A00017', 'RESEARCH'], ['A00018', 'WRITING']];
+  const v = WR.validateAll(wrReq({ ids: ['A00017', 'A00018'], request_id: 'A00017-A00018-001' }),
+    wrCtx({ rows: wrRows(stranded), markerPath: '.factory/requests/A00017-A00018-001.json' }));
+  assert.strictEqual(v.ok, true, JSON.stringify(v));
+  assert.strictEqual(v.resolved.mode, 'resume');
+  // claiming fresh rows while a stranded pair exists: refused
+  assert.strictEqual(WR.validateAll(wrReq(), wrCtx({ rows: wrRows(stranded) })).code, 'CHUNK_NOT_A_PAIR');
+  // 3 stranded rows cannot be handled by the pair contract: refused
+  const three = [['A00015', 'QA'], ['A00016', 'REVIEW'], ['A00017', 'REPAIR']];
+  assert.strictEqual(WR.validateAll(wrReq({ ids: ['A00015', 'A00016'] }), wrCtx({ rows: wrRows(three) })).code, 'CHUNK_NOT_A_PAIR');
+  // 1 stranded row: refused (the pair contract never works around it)
+  const one = [['A00015', 'PASS']];
+  assert.strictEqual(WR.validateAll(wrReq({ ids: ['A00015', 'A00016'] }), wrCtx({ rows: wrRows(one) })).code, 'CHUNK_NOT_A_PAIR');
+});
+test('writer-request: missing body input refuses (MISSING_BODY)', () => {
+  const v = WR.validateAll(wrReq(), wrCtx({ root: path.join(SBW, 'writer-input-missing-here') }));
+  assert.strictEqual(v.ok, false); assert.strictEqual(v.code, 'MISSING_BODY');
+});
+test('writer-request: missing / invalid research packet refuses (MISSING_RESEARCH / BAD_RESEARCH)', () => {
+  fs.rmSync(path.join(SBW, 'data', 'research', 'A00015.json'), { force: true });
+  assert.strictEqual(WR.validateAll(wrReq(), wrCtx()).code, 'MISSING_RESEARCH');
+  fs.writeFileSync(path.join(SBW, 'data', 'research', 'A00015.json'), '{ not json');
+  assert.strictEqual(WR.validateAll(wrReq(), wrCtx()).code, 'BAD_RESEARCH');
+  fs.writeFileSync(path.join(SBW, 'data', 'research', 'A00015.json'), JSON.stringify({ article_id: 'A00015' }));
+  assert.strictEqual(WR.validateAll(wrReq(), wrCtx()).ok, true);
+});
+test('writer-request: CLI refuses with exit 3 and WRITER_REQUEST_REFUSED, accepts with WRITER_REQUEST_OK', () => {
+  const SBW2 = path.join(os.tmpdir(), 'lab-writer-cli-' + process.pid);
+  fs.rmSync(SBW2, { recursive: true, force: true });
+  fs.cpSync(ROOT, SBW2, { recursive: true, filter: (s) => {
+    const rel = path.relative(ROOT, s);
+    return rel !== '_drafts' && !rel.startsWith('_drafts' + path.sep) && !path.basename(s).startsWith('content-matrix.csv.part');
+  } });
+  const mk = p => path.join(SBW2, p);
+  fs.mkdirSync(mk('.factory/requests'), { recursive: true });
+  fs.mkdirSync(mk('writer-input'), { recursive: true });
+  const marker = '.factory/requests/A00015-A00016-001.json';
+  fs.writeFileSync(mk(marker), JSON.stringify(wrReq({ base_main_sha: '9'.repeat(40) })));
+  for (const id of ['A00015', 'A00016']) {
+    fs.writeFileSync(mk('writer-input/' + id + '.body.html'), '<h1>t</h1><p>body</p>');
+    fs.writeFileSync(mk('data/research/' + id + '.json'), JSON.stringify({ article_id: id }));
+  }
+  const CLI = (args) => spawnSync(process.execPath, [path.join(SBW2, 'scripts', 'factory', 'writer-request.js'), ...args], { cwd: SBW2, encoding: 'utf8' });
+  const bad = CLI(['validate', marker, '--branch', 'main', '--origin-main-sha', '9'.repeat(40)]);
+  assert.strictEqual(bad.status, 3); assert.match(bad.stderr, /WRITER_REQUEST_REFUSED BAD_BRANCH/);
+  const stale = CLI(['validate', marker, '--branch', 'writer/A00015-A00016-001', '--origin-main-sha', 'a'.repeat(40)]);
+  assert.strictEqual(stale.status, 3); assert.match(stale.stderr, /WRITER_REQUEST_REFUSED STALE_BASE/);
+  const okRun = CLI(['validate', marker, '--branch', 'writer/A00015-A00016-001', '--origin-main-sha', '9'.repeat(40)]);
+  assert.strictEqual(okRun.status, 0, okRun.stderr);
+  assert.match(okRun.stdout, /WRITER_REQUEST_OK/);
+  fs.rmSync(SBW2, { recursive: true, force: true });
+});
+test('cleanup: remove writer-request fixture sandbox', () => { fs.rmSync(SBW, { recursive: true, force: true }); });
