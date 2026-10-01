@@ -1,0 +1,135 @@
+{
+  "article_id": "A00062",
+  "primary_keyword": "thuê xe máy gần Bến xe Mỹ Đình",
+  "secondary_keywords": [
+    "thuê xe máy Mỹ Đình",
+    "cho thuê xe máy gần bến xe Mỹ Đình",
+    "thuê xe máy Nam Từ Liêm",
+    "thuê xe máy giá rẻ Mỹ Đình",
+    "thuê xe máy gần Phạm Hùng"
+  ],
+  "search_intent": "local",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Bến xe Mỹ Đình",
+    "Phạm Hùng",
+    "Mỹ Đình",
+    "Nam Từ Liêm",
+    "Cầu Giấy",
+    "Mai Dịch",
+    "Nguyễn Khả Trác",
+    "Nguyễn Hoàng",
+    "Keangnam",
+    "Mễ Trì",
+    "Đường Láng",
+    "Ngã Tư Sở",
+    "Đống Đa",
+    "Hà Nội"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe máy điện",
+    "xe côn tay"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki",
+    "Sym"
+  ],
+  "model_entities": [
+    "Wave Alpha",
+    "Wave S",
+    "Wave RS",
+    "Wave RSX",
+    "Sirius",
+    "Nouvo LX",
+    "Jupiter",
+    "Attila",
+    "Vision",
+    "Lead",
+    "Air Blade"
+  ],
+  "questions_found": [
+    "thuê xe máy gần bến xe Mỹ Đình giá bao nhiêu một ngày?",
+    "quanh bến xe Mỹ Đình có shop cho thuê xe máy nhận xe ngay không?",
+    "thuê xe máy ở Mỹ Đình cần giấy tờ gì và cọc bao nhiêu?",
+    "có nhà xe nào giao xe tận khu vực bến xe Mỹ Đình miễn phí không?",
+    "thuê xe máy tại Mỹ Đình tính ngày thế nào, một ngày là bao nhiêu tiếng?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Mỹ Đình",
+    "cho thuê xe máy gần bến xe Mỹ Đình",
+    "thuê xe máy Nam Từ Liêm giá rẻ",
+    "13535 bến xe Mỹ Đình",
+    "thuê xe máy Cầu Giấy"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy gần Bến xe Mỹ Đình\" dẫn đầu là trang tổng hợp của motogo.vn/thue-xe-may-my-dinh/: MOTOGO (81 Nguyễn Khả Trác, Mai Dịch, Cầu Giấy; 7 ngõ 267 Hoàng Hoa Thám; sân bay Nội Bài) xe số 80.000đ - 130.000đ/ngày, xe ga 120.000đ - 200.000đ/ngày, giao nhận miễn phí tại quận Hoàn Kiếm, sân bay Nội Bài, khu vực bến xe Mỹ Đình và bán kính 3km văn phòng; shop 368 Mỹ Đình (xe số 100.000đ, xe ga 150.000đ, không giao xe); điểm 35 Đường Láng (xe số 80.000đ - 100.000đ, xe ga 130.000đ - 140.000đ, CMND + 2 triệu cọc); Bon Bon 1 Nguyễn Hoàng từ 50.000đ/ngày mở cửa cả ngày; 13535 tại cổng phụ bến xe Mỹ Đình (chi nhánh Keangnam ghi xe số 130.000đ, xe ga 220.000đ); kèm bảng giá tham khảo Vision/Lead 120.000đ, Wave S/RS 80.000đ, RSX fi/Sirius 90.000đ, Air Blade 120.000đ - 160.000đ theo đời; khuyến nghị chọn nhà xe tính 24h/ngày và chuẩn bị cọc khoảng 3 triệu. Bên cạnh là vexere.com trang nhà xe Mototrip (66 Trần Bình) hỗ trợ nhận/trả xe tại bến xe Mỹ Đình trong khung 8h-17h với phí giao nhận nhỏ. Intent local: khách xe khách vừa xuống bến muốn nhận xe ngay quanh cổng bến Phạm Hùng - Nam Từ Liêm hoặc đặt giao tận nơi.",
+  "official_sources": [
+    {
+      "name": "Bến xe Mỹ Đình (tham khảo địa lý)",
+      "url": "https://motogo.vn/thue-xe-may-my-dinh/",
+      "note": "Địa lý theo nguồn tổng hợp: bến xe nằm trên trục Phạm Hùng, khu vực Nam Từ Liêm; các con số khác chỉ dùng khi nằm trong claim_evidence."
+    }
+  ],
+  "supporting_sources": [
+    {
+      "name": "MOTOGO — Thuê xe máy Mỹ Đình",
+      "url": "https://motogo.vn/thue-xe-may-my-dinh/"
+    },
+    {
+      "name": "Vexere — Thuê xe máy Mototrip",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-mototrip.vi"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-cau-giay/",
+    "/lab/thue-xe-may/thue-xe-may-gan-ga-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-noi-bai/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-poi-ben-xe-my-dinh: 1 row cho Bến xe Mỹ Đình; khác row thue-xe-may-ha-noi (địa bàn toàn thành phố, đã publish) và row thue-xe-may-cau-giay (quận lân cận, đã publish) — bài bến xe tập trung POI quanh bến trên trục Phạm Hùng - Nam Từ Liêm, không tranh chấp từ khóa chính; link chéo hợp lệ.",
+  "unique_angle": "Mỹ Đình là bến xe khách đường dài phía tây bắc: khách xuống xe cần xe ngay quanh cổng bến (13535 ở cổng phụ, Bon Bon mở cả ngày, shop 368 Mỹ Đình không giao xe) hoặc đặt giao tận nơi; điểm nhấn: chính sách giao nhận miễn phí khu vực bến xe Mỹ Đình + bán kính 3km văn phòng của MOTOGO, bảng giá tham khảo theo đời xe (Air Blade 120k-160k, Wave 80k, Vision/Lead 120k), cọc 2-3 triệu với khách nước ngoài cọc hộ chiếu, quy tắc 24h/ngày, và trục liên kết Phạm Hùng - Keangnam - Cầu Giấy - Đường Láng.",
+  "notes": "Bài informational_only: KHÔNG dùng cụm 'chúng tôi', KHÔNG chào dịch vụ, KHÔNG LocalBusiness schema; disclosure đầu bài theo kiểu A00058 (trang thông tin lab, dịch vụ owner chỉ ở Hà Nội Long Biên - phố cổ). Mọi con số lấy đúng claim_evidence; không bịa địa chỉ/cửa hàng; các cửa hàng nêu tên đều nằm trong claim_evidence của nguồn đã mở. Sau sắp xếp đơn vị hành chính 2025 không liệt kê tên phường mới, giữ tên địa danh quen thuộc (Nam Từ Liêm, Cầu Giấy, Đống Đa). Không dùng số km ngoài quote.",
+  "claim_evidence": [
+    {
+      "claim": "Trang tổng hợp của Motogo tại Mỹ Đình giới thiệu MOTOGO với 3 địa chỉ (81 Nguyễn Khả Trác, Mai Dịch, Cầu Giấy; 7 ngõ 267 Hoàng Hoa Thám, Ngọc Hà; Sân bay Nội Bài, Số 7 Đường Trục Chính Phía Tây, Điền Xá, Sóc Sơn), giá thuê xe số 80.000đ - 130.000đ/ngày, xe ga 120.000đ - 200.000đ/ngày; MOTOGO áp dụng chính sách giao nhận xe miễn phí tại quận Hoàn Kiếm, sân bay Nội Bài, khu vực bến xe Mỹ Đình và một số khu vực trong bán kính 3km tại các địa chỉ văn phòng; cửa hàng tính 1 ngày = 24h, thuê theo tháng trung bình 80.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-my-dinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "MOTOGO Điện thoại: 0338 02 3344 Địa chỉ 1: 81 Nguyễn Khả Trác, Mai Dịch, Cầu Giấy, Hà Nội Địa chỉ 2: 7 ngõ 267 Hoàng Hoa Thám, Ngọc Hà, Hà Nội Địa chỉ 3: Sân bay Nội Bài, Số 7 Đường Trục Chính Phía Tây, Thôn Điền Xá, Sóc Sơn, Hà Nội Giá thuê xe số: 80.000đ – 130.000đ/ngày Giá thuê xe ga: 120.000đ – 200.000đ/ngày ... Cửa hàng tính 1 ngày = 24h nên chi phí cho thời gian sử dụng xe thực tế tại đây rẻ hơn các địa chỉ khác nhiều. Thậm chí khi thuê theo tháng thì tính trung bình bạn chỉ cần chi 80.000đ/ngày mà thôi. ... Đặc biệt MOTOGO còn có áp dụng chính sách giao nhận xe miễn phí tại quận Hoàn Kiếm, sân bay Nội Bài, khu vực bến xe Mỹ Đình và một số khu vực trong bán kính 3km tại các địa chỉ văn phòng."
+    },
+    {
+      "claim": "Danh sách cửa hàng của trang Motogo tại Mỹ Đình gồm: 'Thuê xe máy ở Mỹ Đình Hà Nội' tại 368 Mỹ Đình, Q. Nam Từ Liêm, điện thoại 0921 744 886, giá xe số 100.000đ/ngày, xe ga 150.000đ/ngày, cấp mũ bảo hiểm, không giao xe; 'Thuê xe máy Hà Nội giá rẻ' tại 35 Đường Láng, Ngã Tư Sở, Đống Đa, giá xe số 80.000đ - 100.000đ/ngày, xe ga 130.000đ - 140.000đ/ngày, thủ tục chứng minh thư và 2 triệu tiền cọc, khách nước ngoài đặt cọc hộ chiếu; Bon Bon tại 1 Nguyễn Hoàng, Mỹ Đình, Từ Liêm, giá từ 50.000đ/ngày, mở cửa cả ngày; 13535 tại cổng phụ bến xe Mỹ Đình (điện thoại 097 712 87 42), chi nhánh ghi tại Keangnam Tower, Phạm Hùng, Mễ Trì với giá xe số 130.000đ/ngày, xe ga 220.000đ/ngày, khuyến nghị gọi đặt trước vì xe phân bố nhiều chi nhánh.",
+      "source_url": "https://motogo.vn/thue-xe-may-my-dinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe máy ở Mỹ Đình Hà Nội Điện thoại: 0921 744 886 Địa chỉ: 368 Mỹ Đình, Q. Nam Từ Liêm, TP. Hà Nội. Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày ... Thông thường mức giá thuê xe tại đây khoảng 100.000đ/ngày. ... Mũ bảo hiểm sẽ được cấp cho bạn trong hành trình thuê xe. ... Chỉ cần lưu ý là nơi này không giao xe nên hơi bất tiện với các bạn ở xa. ... Thuê xe máy Hà Nội giá rẻ Điện thoại: 094 399 08 86 Địa chỉ: 35 Đường Láng, Ngã Tư Sở, quận Đống Đa, Hà Nội. Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày ... Bạn chỉ cần chuẩn bị chứng minh thư và 2 triệu tiền cọc là xong. Riêng với các du khách nước ngoài có thể chọn đặt cọc hộ chiếu. ... Bon Bon Điện thoại: 0855 222 555 Địa chỉ: 1 Nguyễn Hoàng, Mỹ Đình, Từ Liêm, Hà Nội Giá thuê xe: từ 50.000đ/ngày ... Cơ sở này mở cửa cả ngày nên bạn có thể đến thuê xe bất cứ lúc nào. ... 13535 Điện thoại: 097 712 87 42 Địa chỉ: Keangnam Tower, Phạm Hùng, Mễ Trì, Nam Từ Liêm, Hà Nội Giá thuê xe số: 130.000đ/ngày Giá thuê xe ga: 220.000đ/ngày ... Địa chỉ: Cổng phụ bến xe Mỹ Đình, quận Nam Từ Liêm, Hà Nội ... Vì thế bạn nên gọi điện thoại đặt trước để đảm bảo xe được điều động kịp thời nhé."
+    },
+    {
+      "claim": "Bảng giá tham khảo thuê xe máy tại Mỹ Đình của trang Motogo: Honda Air Blade 2012 là 120.000đ/ngày, Air Blade 2013-2015 là 140.000đ/ngày, Air Blade 2016-2018 là 160.000đ/ngày, Honda Lead 120.000đ, Honda Vision 120.000đ, Honda Wave S 80.000đ, Honda Wave RS 80.000đ, Honda Wave RSX fi 90.000đ, Yamaha Sirius 2015-2018 FI 90.000đ, Yamaha Nouvo LX 100.000đ, Yamaha Nouvo SX fi 120.000đ, Attila Victoria/Elizabeth 100.000đ.",
+      "source_url": "https://motogo.vn/thue-xe-may-my-dinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Airblade 2012 120.000 vnd / Honda Airblade 2013-2015 140.000 vnd / Honda Airblade 2016- 2017 – 2018 160.000 vnd / Honda Lead 120.000 vnd / Honda Vision 120.000 vnd / Honda Wave S 80.000 vnd / Honda Wave RS 80.000 vnd / Honda Wave RSX – fi 90.000 vnd / Yamaha Sirius 2015 – 2018 FI 90.000 vnd / Yamaha Nouvo LX 100.000 vnd / Yamaha Nouvo SX fi 120.000 vnd / Attila Victoria , Elizabeth 100.000 vnd — Bảng giá cho thuê xe máy Mỹ Đình Hà Nội (tham khảo)"
+    },
+    {
+      "claim": "Thủ tục thuê xe máy tại Mỹ Đình theo trang Motogo: giấy tờ là chứng minh thư, căn cước hoặc hộ chiếu; tiền cọc mỗi nơi một mức, nên chuẩn bị khoảng 3 triệu là yên tâm; nên yêu cầu làm hợp đồng thuê xe hai bên cùng ký; nên chọn nhà xe quy định 24h = 1 ngày thay vì kiểu tính từ sáng tới chiều.",
+      "source_url": "https://motogo.vn/thue-xe-may-my-dinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Hầu hết các cửa hàng tại đây đều có yêu cầu khá đơn giản về các loại giấy tờ. Bạn có thể dùng chứng minh thư, căn cước hay hộ chiêu đến làm thủ tục. Còn về tiền đặt cọc mỗi địa chỉ sẽ có yêu cầu khác nhau. Bạn có thể chuẩn bị khoảng 3 triệu là yên tâm thuê xe. ... Vì vậy để đảm bảo quyền lợi cho bản thân. Bạn nên yêu cầu làm hợp đồng thuê xe 2 bên cùng ký. ... Bạn nên chọn đơn vị cho thuê xe 24h = 1 ngày. Tuy giá có thể cao hơn chút nhưng cực kỳ có lợi về thời gian cho bạn."
+    },
+    {
+      "claim": "Trên nền tảng Vexere, nhà xe Mototrip (66 Trần Bình, phường Nghĩa Đô, Hà Nội, mở cửa 08:00-21:00, 3 cơ sở tại Hà Nội) hỗ trợ khách nhận xe và trả xe với số tiền nhỏ phí giao nhận xe tại các địa điểm phổ biến tại Hà Nội như bến xe Giáp Bát, bến xe Nước Ngầm, bến xe Mỹ Đình, Ga Hà Nội, Phố cổ, trong thời gian từ 8h sáng đến 17h.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-mototrip.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Địa chỉ: 66 Trần Bình, Phường Nghĩa Đô, Thành phố Hà Nội / Giờ mở cửa: 08:00-21:00 ... Mototrip là một địa chỉ cho thuê xe máy uy tín, sở hữu 3 cơ sở tại Hà Nội. ... Nhà xe hỗ trợ khách hàng nhận xe và trả xe với số tiền nhỏ phí giao nhận xe tại các địa điểm phổ biến tại thành phố Hà Nội như bến xe Giáp Bát, bến xe nước ngầm, bến xe Mỹ Đình, Ga Hà Nội, Phố cổ, … trong thời gian từ 8h sáng đến 17h."
+    }
+  ]
+}

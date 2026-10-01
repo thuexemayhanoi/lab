@@ -1,0 +1,153 @@
+{
+  "article_id": "A00063",
+  "primary_keyword": "thuê xe máy gần Bến xe Giáp Bát",
+  "secondary_keywords": [
+    "thuê xe máy Giáp Bát",
+    "cho thuê xe máy gần bến xe Giáp Bát",
+    "thuê xe máy Giải Phóng",
+    "thuê xe máy Hoàng Mai",
+    "thuê xe máy giá rẻ Giáp Bát"
+  ],
+  "search_intent": "local",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Bến xe Giáp Bát",
+    "Giải Phóng",
+    "Kim Đồng",
+    "Hoàng Mai",
+    "Trần Bình",
+    "Nghĩa Đô",
+    "Nguyễn Văn Cừ",
+    "Bồ Đề",
+    "Long Biên",
+    "Phố Vọng",
+    "Hai Bà Trưng",
+    "Tạ Hiền",
+    "Hoàn Kiếm",
+    "Hà Nội"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe côn tay",
+    "xe máy điện"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki",
+    "VinFast"
+  ],
+  "model_entities": [
+    "Wave RSX",
+    "Wave Alpha",
+    "Sirius",
+    "Air Blade",
+    "Lead",
+    "Vision",
+    "Nouvo",
+    "Winner 150",
+    "Exciter 150",
+    "Evo200 Lite",
+    "Wave",
+    "PCX",
+    "SH",
+    "Future",
+    "Viva Fi"
+  ],
+  "questions_found": [
+    "thuê xe máy gần bến xe Giáp Bát giá bao nhiêu một ngày?",
+    "có nhận xe ngay tại bến xe Giáp Bát được không?",
+    "xe khách về bến Giáp Bát ban đêm thì thuê xe máy thế nào?",
+    "thuê xe máy ở Giáp Bát cần giấy tờ gì và cọc bao nhiêu?",
+    "gần bến xe Giáp Bát có chỗ nghỉ qua đêm không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Giáp Bát",
+    "Mototrip bến xe Giáp Bát",
+    "cho thuê xe máy Giải Phóng",
+    "nhà nghỉ gần bến xe Giáp Bát",
+    "thuê xe máy Hà Nội giao tận nơi"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy gần Bến xe Giáp Bát\" chủ yếu là trang kinh nghiệm của Motogo (bản gốc gitbook motogovn.gitbook.io trả lỗi Cloudflare khi tra cứu, nội dung trùng khớp tại mirror motogo.mystrikingly.com): giá tham khảo Honda Wave 100.000đ/ngày, Vision 130.000đ, Air Blade 110cc fi 150.000đ, Lead 125 mới 200.000đ, PCX 250.000đ, SH 350.000đ, Winner/Exciter 300.000đ; thuê tuần 500.000đ - 800.000đ, thuê tháng 1.100.000đ - 1.400.000đ; cọc 1-4 triệu; hợp đồng khoảng 5 phút với CMND/Passport + GPLX A1; kèm danh sách cửa hàng gợi ý cho khách từ Giáp Bát (Văn Chính 24D Tạ Hiền; Nguyễn Tú 112 Nguyễn Văn Cừ; Công Tân gần bến xe Gia Lâm khoảng 700m) và chỗ nghỉ quanh bến (nhà nghỉ Thanh Hà 1A ngõ 19 Kim Đồng; khách sạn Vọng Xưa 193 Phố Vọng). Bên cạnh là vexere.com trang nhà xe Mototrip (66 Trần Bình, 08:00-21:00): xe số 110cc 130.000đ, xe ga 125cc 160.000đ - 190.000đ, côn tay 150cc 260.000đ, xe điện VinFast Evo200 Lite 200.000đ; nhận/trả xe tại bến xe Giáp Bát (cùng Nước Ngầm, Mỹ Đình, Ga Hà Nội, Phố cổ) khung 8h-17h với phí giao nhận nhỏ; cọc 1.000.000đ xe số / 2.000.000đ xe ga, không giấy tờ thì gấp 3 lần, giảm 50% cho thẻ sinh viên/vé máy bay khứ hồi. Intent local: khách xe khách về bến cần nhận xe nhanh trong ngày hoặc nghỉ qua đêm quanh bến.",
+  "official_sources": [
+    {
+      "name": "Bến xe Giáp Bát (tham khảo địa lý)",
+      "url": "https://motogo.mystrikingly.com/blog/kinh-nghi-m-thue-xe-may-b-n-xe-giap-bat",
+      "note": "Địa lý theo nguồn tổng hợp: bến nằm trên trục Giải Phóng phía nam Hà Nội; các con số khác chỉ dùng khi nằm trong claim_evidence."
+    }
+  ],
+  "supporting_sources": [
+    {
+      "name": "Vexere — Thuê xe máy Mototrip",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-mototrip.vi"
+    },
+    {
+      "name": "MOTOGO — Kinh nghiệm thuê xe máy ở bến xe Giáp Bát (mirror Strikingly)",
+      "url": "https://motogo.mystrikingly.com/blog/kinh-nghi-m-thue-xe-may-b-n-xe-giap-bat"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-long-bien/",
+    "/lab/thue-xe-may/thue-xe-may-hai-ba-trung/",
+    "/lab/thue-xe-may/thue-xe-may-gan-ga-ha-noi/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-poi-ben-xe-giap-bat: 1 row cho Bến xe Giáp Bát; khác row thue-xe-may-ha-noi (địa bàn toàn thành phố), thue-xe-may-long-bien và thue-xe-may-hai-ba-trung (đã publish, POI khác) — bài bến tập trung POI trục Giải Phóng - Kim Đồng - Phố Vọng quanh bến, không tranh chấp từ khóa chính; link chéo hợp lệ.",
+  "unique_angle": "Giáp Bát là bến về của các tuyến khách phía nam với nhiều chuyến đêm: góc nhìn khác biệt so với các bài bến khác là kịch bản khách về khuya — nhận xe tại bến chỉ trong khung 8h-17h (Mototrip), nên luồng nghỉ qua đêm quanh bến (nhà nghỉ Thanh Hà ngõ 19 Kim Đồng, khách sạn Vọng Xưa Phố Vọng) rồi nhận xe sáng là kịch bản thực tế; điểm nhấn: cọc 1tr/2tr giảm 50% cho sinh viên/vé máy bay khứ hồi, xe điện VinFast Evo200 Lite đời 2024 trong đội xe, hợp đồng 5 phút, và cầu nối sang phía Long Biên - bến xe Gia Lâm.",
+  "notes": "Bài informational_only: KHÔNG dùng cụm 'chúng tôi', KHÔNG chào dịch vụ, KHÔNG LocalBusiness schema; disclosure đầu bài theo kiểu A00058. Địa chỉ Nguyễn Tú 112 Nguyễn Văn Cừ trùng đơn vị của owner trong config/business-facts.json — chỉ nêu như fact độc lập từ nguồn, KHÔNG claim 'us'. KHÔNG dùng địa chỉ 'Km6 Giải Phóng' (nguồn sites.google, không phải business verified). Nguồn gitbook gốc motogovn.gitbook.io trả lỗi Cloudflare (Error 1101) khi tra cứu ngày 2026-10-01 nên cite mirror motogo.mystrikingly.com có nội dung trùng theo kết quả tìm kiếm. Mọi con số lấy đúng claim_evidence. Sau sắp xếp hành chính 2025 không liệt kê tên phường mới, giữ tên địa danh quen thuộc (Hoàng Mai, Hai Bà Trưng, Long Biên).",
+  "claim_evidence": [
+    {
+      "claim": "Trên nền tảng Vexere, nhà xe Mototrip có địa chỉ 66 Trần Bình, phường Nghĩa Đô, thành phố Hà Nội, mở cửa 08:00-21:00, sở hữu 3 cơ sở tại Hà Nội; bảng giá niêm yết: xe số 110cc (Wave RSX, Wave Alpha, Sirius, 2012-2022) 130.000đ/ngày; xe ga 125cc (Air Blade, Lead, Vision, Nouvo, 2010-2018) 160.000đ/ngày; xe ga 125cc (Air Blade, Vision, 2019-2023) 190.000đ/ngày; xe côn tay 150cc (Winner 150, Exciter 150, 2012-2022) 260.000đ/ngày; xe máy điện VinFast Evo200 Lite đời 2024 200.000đ/ngày; bảng giá có thể điều chỉnh theo thời điểm, chưa bao gồm khuyến mãi và phụ phí.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-mototrip.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Địa chỉ: 66 Trần Bình, Phường Nghĩa Đô, Thành phố Hà Nội / Giờ mở cửa: 08:00-21:00 ... Mototrip là một địa chỉ cho thuê xe máy uy tín, sở hữu 3 cơ sở tại Hà Nội. ... Xe số 110cc Honda Wave RSX, Honda Wave Alpha, Yamaha Sirius 2012-2022 130.000 / Xe tay ga 125cc Honda Airblade, Honda Lead, Honda Vision, Yamaha Nouvo 2010-2018 160.000 / Xe tay ga 125cc Honda Airblade, Honda Vision 2019-2023 190.000 / Xe côn tay 150cc Honda Winner 150, Yamaha Exciter 150 2012-2022 260.000 / Xe máy điện Vinfast Evo200 Lite 2024 200.000 ... Lưu ý: Bảng giá có thể điều chỉnh theo thời điểm. Chưa bao gồm khuyến mãi và các phụ phí phát sinh."
+    },
+    {
+      "claim": "Mototrip hỗ trợ khách nhận xe và trả xe với số tiền nhỏ phí giao nhận xe tại các địa điểm phổ biến tại Hà Nội như bến xe Giáp Bát, bến xe Nước Ngầm, bến xe Mỹ Đình, Ga Hà Nội, Phố cổ, trong thời gian từ 8h sáng đến 17h; nếu đăng ký qua Vexere, tại điểm nhận xe đã hẹn trước bạn xuất trình mẫu xác nhận thuê xe của Vexere cùng giấy tờ tùy thân để làm hợp đồng thuê xe và nhận xe.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-mototrip.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nhà xe hỗ trợ khách hàng nhận xe và trả xe với số tiền nhỏ phí giao nhận xe tại các địa điểm phổ biến tại thành phố Hà Nội như bến xe Giáp Bát, bến xe nước ngầm, bến xe Mỹ Đình, Ga Hà Nội, Phố cổ, … trong thời gian từ 8h sáng đến 17h. ... Tại điểm nhận xe đã hẹn trước, bạn cần xuất trình mẫu xác nhận thuê xe của Vexere cùng các giấy tờ tùy thân để làm hợp đồng thuê xe và nhận xe."
+    },
+    {
+      "claim": "Thủ tục thuê xe Mototrip trên Vexere: giấy tờ cần chuẩn bị là căn cước công dân hoặc hộ chiếu còn hiệu lực và giấy phép lái xe hạng A1 hoặc cao hơn còn hiệu lực; không yêu cầu đặt cọc giữ xe khi đăng ký thuê xe qua nền tảng, chỉ cần cung cấp số điện thoại; khi nhận xe cọc trước 1.000.000đ với xe số và 2.000.000đ với xe ga, nếu không có giấy tờ tùy thân thì số tiền cọc cần gấp 3 lần; nhà xe linh hoạt giảm 50% tiền cọc cho khách có thẻ sinh viên hoặc vé máy bay khứ hồi.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-mototrip.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Căn cước công dân (CCCD) hoặc Hộ chiếu còn hiệu lực / Giấy phép lái xe (bằng lái xe) hạng A1 hoặc cao hơn, còn hiệu lực và không trong thời gian bị tước quyền sử dụng. ... Tại đây không yêu cầu đặt cọc giữ xe khi đăng ký thuê xe. Bạn cần cung cấp số điện thoại, đảm bảo cung cấp được giấy tờ khi nhà xe yêu cầu là có thể hoàn tất đăng ký thuê xe qua cửa hàng. ... Số tiền cọc 1.000.000 vnd đối với xe số và 2.000.000 vnd đối với xe ga nếu không có giấy tờ tùy thân cần gấp 3 lần số tiền cọc. Nhà xe linh hoạt giảm 50% tiền cọc đối với khách hàng có thẻ sinh viên hoặc vé máy bay khứ hồi."
+    },
+    {
+      "claim": "Trang kinh nghiệm của Motogo về bến xe Giáp Bát ghi bảng giá tham khảo khu vực: Honda Wave 100.000đ/ngày, Wave RSX fi 125.000đ/ngày, Vision 130.000đ/ngày, Air Blade 110cc fi 150.000đ/ngày, Lead 125 mới 200.000đ/ngày, PCX 250.000đ/ngày, SH 350.000đ/ngày, xe côn tay Honda Winner 300.000đ/ngày, Yamaha Exciter 300.000đ/ngày; thuê theo tuần khoảng 500.000đ - 800.000đ/tuần, giá thuê tháng từ 1.100.000đ đến 1.400.000đ tùy loại xe ga; chi phí thuê xe máy Giáp Bát khá rẻ, chỉ từ 150k/ngày.",
+      "source_url": "https://motogo.mystrikingly.com/blog/kinh-nghi-m-thue-xe-may-b-n-xe-giap-bat",
+      "source_domain": "motogo.mystrikingly.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Wave : 100.000đồng/ ngày ... Honda Wave RSX Fi: 125.000 đồng/ngày ... Honda Vision: 130.000 đồng/ngày ... Honda Aiblade 110cc Fi: 150.000đồng/ ngày ... Honda Lead 125 mới: 200.000đồng/ ngày. Honda Pcx: 250.000đồng/ ngày. Honda SH: 350.000đồng/ ngày. Xe côn tay Honda Winner: 300.000/ngày. Yamaha exciter : 300.000/ngày. ... Thời gian thuê xe gắn máy theo tuần khoảng 500.000 đồng đến 800.000/ Tuần. Giá thuê tháng từ 1.100.000 đồng đến 1.400.000 đồng ( tùy từng loại xe ga khác nhau ). ... Chi phí thuê xe máy giáp bát khá rẻ, chỉ từ 150k/ ngày bạn đã có thể có được một phương tiện để di chuyển suốt cả ngày."
+    },
+    {
+      "claim": "Thủ tục thuê xe máy tại khu vực bến xe Giáp Bát theo trang Motogo: giấy tờ cần là CMND hoặc Passport cùng bằng lái xe máy, tiền cọc từ 1000k đến 4000k; chỉ với 5 phút làm hợp đồng và có CMND, GPLX A1 và tiền cọc là có thể thuê được xe.",
+      "source_url": "https://motogo.mystrikingly.com/blog/kinh-nghi-m-thue-xe-may-b-n-xe-giap-bat",
+      "source_domain": "motogo.mystrikingly.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giấy tờ cần thiết mà bạn phải có mới thuê xe đó là CMND hoăc Passport + Bằng lái xe máy + tiền cọc ( tiền cọc từ 1000k đến 4000k). ... Chỉ với 5 phút làm hợp đồng và chỉ cần có CMND, GPLX A1 và tiền cọc là bạn hoàn toàn có thể thuê được 1 chiếc xe máy tốt vi vu Hà Nội."
+    },
+    {
+      "claim": "Danh sách địa chỉ cho thuê xe máy ở Hà Nội thường gợi ý cho khách ở bến xe Giáp Bát (trang Motogo): Văn Chính tại 24D Tạ Hiền, Hàng Buồm, Hoàn Kiếm (ĐT 0989595533); Nguyễn Tú tại 112 Nguyễn Văn Cừ, Bồ Đề, Long Biên (ĐT 0942467674); Công Tân tại khu Phố Bồ Đề cách bến xe Gia Lâm khoảng 700 mét (ĐT 0857255868); Lộc Motorbike tại 1096 Đường Láng, Đống Đa.",
+      "source_url": "https://motogo.mystrikingly.com/blog/kinh-nghi-m-thue-xe-may-b-n-xe-giap-bat",
+      "source_domain": "motogo.mystrikingly.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "1. Khu vực phố cổ : Cho Thuê Xe Máy Văn Chính ==> Địa chỉ: 24D Tạ Hiền, Hàng Buồm, Hoàn Kiếm, Hà Nội. ĐT: 0989595533 2. Quận Long Biên : Cho Thuê Xe Máy Nguyễn Tú ==> Địa chỉ: 112 Nguyễn Văn Cừ, Bồ Đề, Long Biên,Hà Nội ĐT: 0942467674 3. Bến xe Gia Lâm : Công Tân ==> Địa chỉ: Gần Phố Bồ Đề cách bến xe Gia lâm khoảng 700 mét. ĐT: 0857255868 ... 6. Quận Đống Đa: Lộc Motorbike ==> Địa chỉ: 1096 Đường Láng, Đống Đa, Hà Nội"
+    },
+    {
+      "claim": "Chỗ nghỉ gần bến xe Giáp Bát theo trang Motogo: nhà nghỉ Thanh Hà (Số 1A ngõ 19 Kim Đồng, Giáp Bát, Hoàng Mai, Hà Nội) cao 6 tầng có 9 phòng nghỉ tiện nghi, gần bến xe Giáp Bát, có bãi đỗ xe ô tô gần bến; khách sạn Vọng Xưa (193 Phố Vọng, Quận Hai Bà Trưng, gần bến xe Giáp Bát) giới thiệu vị trí trung tâm, chỉ mất khoảng 10 phút đến Phố Cổ và Hồ Hoàn Kiếm, khoảng 30 phút đến sân bay Nội Bài bằng xe bus hoặc taxi.",
+      "source_url": "https://motogo.mystrikingly.com/blog/kinh-nghi-m-thue-xe-may-b-n-xe-giap-bat",
+      "source_domain": "motogo.mystrikingly.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nhà nghỉ Thanh Hà cao 6 tầng có 9 phòng nghỉ tiện nghi đầy đủ, sạch sẽ, Nhà nghỉ có vị trí gần bên xe Giáp Bát rất thuận lợi ... Nhà nghỉ có bãi đỗ xe ô tô gần bến xe Giáp Bát. Đc: Số 1A ngõ 19 Kim Đồng, Giáp Bát, Hoàng Mai, Hà Nội ... Với sự yên tĩnh, dịch vụ tốt và vị trí thuận tiện ngay trung tâm thành phố Hà Nội, chỉ mất 30 phút để đến cảng hàng không Quôc tế nội bài bằng xe bus hoặc taxi, chỉ mất khoảng 10 phút đến Phố Cổ và Hồ Hoàn Kiếm. ... Đc: 193 Phố Vọng, Quận Hai Bà Trưng, Hà Nội ( gần bến xe giáp bát)"
+    }
+  ]
+}
