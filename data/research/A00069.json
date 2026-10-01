@@ -1,0 +1,131 @@
+{
+  "article_id": "A00069",
+  "primary_keyword": "thuê xe máy gần Bến xe nước Rồng",
+  "secondary_keywords": [
+    "thuê xe máy Bến xe nước Rồng",
+    "cho thuê xe máy gần bến xe nước Rồng",
+    "thuê xe máy An Giang",
+    "thuê xe máy Châu Đốc",
+    "thuê xe máy Núi Sam"
+  ],
+  "search_intent": "local",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Bến xe nước Rồng",
+    "An Giang",
+    "Châu Đốc",
+    "Bến xe Châu Đốc",
+    "Quốc lộ 91",
+    "cầu Châu Đốc",
+    "Núi Sam",
+    "chùa Bà Chúa Xứ",
+    "Thủ Khoa Huân",
+    "Bạch Đằng",
+    "Nguyễn Tri Phương",
+    "Châu Thị Tế",
+    "Châu Phú B",
+    "Long Xuyên",
+    "rừng tràm Trà Sư"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Sirius",
+    "Sirius Fi",
+    "Jupiter",
+    "Wave",
+    "Vision",
+    "Air Blade",
+    "Lead"
+  ],
+  "questions_found": [
+    "Bến xe nước Rồng nằm ở đâu?",
+    "ngay tại bến có thuê được xe máy không?",
+    "giá thuê xe máy ở An Giang bao nhiêu một ngày?",
+    "thuê xe máy ở An Giang cần giấy tờ gì, cọc bao nhiêu?"
+  ],
+  "related_queries": [
+    "bến xe nước rồng an giang",
+    "bến xe châu đốc địa chỉ",
+    "thuê xe máy châu đốc giá rẻ",
+    "thuê xe máy núi sam",
+    "giao xe tận nơi châu đốc"
+  ],
+  "serp_patterns": "SERP không có trang nào chuyên về \"Bến xe nước Rồng\" — thông tin công khai về bến gần như không tồn tại (chỉ ghi nhận trong dữ liệu giao thông tổng hợp là bến xe nhỏ thuộc An Giang). SERP liên quan tập trung vào: bài về Bến xe Châu Đốc (motortrip.vn: tuyến tránh QL91, chân cầu Châu Đốc, một trong những bến lớn nhất ĐBSCL), các trang tổng hợp cho thuê xe máy Châu Đốc (motogo.vn, bazantravel.com: giá từ 80.000 VNĐ/ngày, tripbike.net: 150k đồng giá). Intent local: khách cần xác minh bến nhỏ + phương án thuê xe lân cận.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "Dữ liệu giao thông công khai (transport-hubs) — Bến xe nước Rồng, An Giang",
+      "url": "https://raw.githubusercontent.com/thuexemayhanoi/lab/main/data/geography/transport-hubs.json"
+    },
+    {
+      "name": "MotorTrip — Bến xe Châu Đốc",
+      "url": "https://motortrip.vn/dich-vu/ben-xe-chau-doc"
+    },
+    {
+      "name": "Motogo — Thuê xe máy Châu Đốc",
+      "url": "https://motogo.vn/thue-xe-may-chau-doc/"
+    },
+    {
+      "name": "Bazan Travel — Thuê xe máy Châu Đốc",
+      "url": "https://bazantravel.com/thue-xe-may-chau-doc/"
+    },
+    {
+      "name": "Tripbike — Thuê xe máy An Giang",
+      "url": "https://tripbike.net/thue-xe-may-an-giang/"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-an-giang/",
+    "/lab/thue-xe-may/thue-xe-may-gan-ben-xe-mien-tay/",
+    "/lab/thue-xe-may/thue-xe-may-gan-ben-xe-an-suong/",
+    "/lab/kinh-nghiem/"
+  ],
+  "potential_cannibalization": "CG-rental-poi-ben-xe-nuoc-rong: 1 row cho POI Bến xe nước Rồng; khác row thue-xe-may-an-giang (toàn tỉnh, A00033, đã publish) và row bến Miền Tây (A00066). Bến nước Rồng là POI riêng, không trùng địa điểm nào đã viết; bài nhấn mạnh bến nhỏ, thông tin công khai hạn chế để không giành từ khóa của bến lớn và tỉnh.",
+  "unique_angle": "POI hiếm: bến xe nhỏ gần như không có dấu vết công khai — bài xử lý trung thực bằng cách nói rõ độ khan hiếm thông tin, định vị bến theo dữ liệu giao thông tổng hợp (An Giang), rồi dẫn khách tới các đầu mối đã xác minh (Bến xe Châu Đốc) và bảng giá thuê xe công khai quanh Châu Đốc - Núi Sam. Đây là cách chống doorway tự nhiên: không bịa địa chỉ/giờ/tuyến cho bến.",
+  "notes": "Bài informational_only: KHÔNG \"chúng tôi\", KHÔNG chào dịch vụ, disclosure đầu bài. KHÔNG bịa địa chỉ/giờ hoạt động/tuyến xe của bến nước Rồng — nói rõ thông tin công khai không có, định vị theo transport-hubs (An Giang). Mọi con số (giá 80.000đ – 100.000đ/ngày, 130.000đ – 140.000đ/ngày, 90.000đ – 120.000đ/ngày, 140.000đ – 150.000đ/ngày, 100.000đ/ngày, 120.000đ/ngày, 150.000đ/ngày, 200.000đ/ngày, 80.000 – 120.000 VNĐ/ngày, 80.000 VNĐ/ngày, 150.000 VNĐ/ngày, 150k, cọc 1 -2 triệu, 3km) đều có claim_evidence từ nguồn đã mở 2026-10-01.",
+  "claim_evidence": [
+    {
+      "claim": "Bến xe nước Rồng được ghi nhận là một bến xe (bus) thuộc tỉnh An Giang trong dữ liệu giao thông công khai.",
+      "source_url": "https://raw.githubusercontent.com/thuexemayhanoi/lab/main/data/geography/transport-hubs.json",
+      "source_domain": "raw.githubusercontent.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"geo_id\": \"HB-018\", \"name\": \"Bến xe nước Rồng\", \"normalized_name\": \"bến-xe-nước-rồng\", \"type\": \"bus\", \"current_status\": \"CURRENT\", \"province\": \"An Giang\", \"verified_source\": \"Thông tin giao thông công khai — tọa độ tham khảo\", \"last_verified\": \"2026-09-28\""
+    },
+    {
+      "claim": "Bến xe Châu Đốc nằm trên tuyến tránh Quốc lộ 91, ngay dưới chân cầu Châu Đốc (khóm Hòa Bình, phường Vĩnh Mỹ, TP Châu Đốc), được thành lập từ những năm 1975 với diện tích khoảng 27.774,5m2, là một trong những bến xe lớn nhất đồng bằng sông Cửu Long.",
+      "source_url": "https://motortrip.vn/dich-vu/ben-xe-chau-doc",
+      "source_domain": "motortrip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bến xe Châu Đốc được thành lập vào những năm 1975, với diện tích lên tới 27.774,5m2… một trong những bến xe lớn nhất đồng bằng sông Cửu Long. Địa chỉ: Tuyến tránh Quốc lộ 91, Khóm Hòa Bình, phường Vĩnh Mỹ, Thành Phố Châu Đốc (ngay dưới chân cầu Châu Đốc)"
+    },
+    {
+      "claim": "Tại Châu Đốc, các cơ sở cho thuê niêm yết: xe số 80.000đ – 100.000đ/ngày và xe ga 130.000đ – 140.000đ/ngày tại các cơ sở ở 86 Bạch Đằng, 227 Nguyễn Tri Phương (Châu Phú B) và 132 Châu Thị Tế (Thanh Hoàng, Núi Sam); cơ sở thuê xe phượt ở 33 Thủ Khoa Huân ghi xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 150.000đ/ngày; điểm gần chùa Bà (521 Thủ Khoa Huân) ghi xe số 100.000đ/ngày, xe ga 150.000đ/ngày; cửa hàng ở 83 Châu Thị Tế (Núi Sam) ghi xe số 120.000đ/ngày, xe ga 200.000đ/ngày; một số cơ sở ghi giao xe tận nơi miễn phí trong 3km với giá 150.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-chau-doc/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "… Địa chỉ: Số 521 Thủ Khoa Huân, Châu Đốc Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày … Thuê xe gắn máy phượt Châu Đốc … Số 33 Thủ Khoa Huân, Châu Đốc Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày … Thuê xe máy ở Châu Đốc … Số 86 Bạch Đằng, Châu Đốc Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày … thuê xe máy tại Tp. Châu Đốc … Số 227 Nguyễn Tri Phương, Châu Phú B, Châu Đốc Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày … Thanh Hoàng … Số 132 Châu Thị Tế, Vĩnh Tây 3, Núi Sam, Châu Đốc Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày … 83 Châu Thị Tế, Núi Sam, Châu Đốc Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 200.000đ/ngày … Với mức giá 150.000đ/ngày bạn sẽ được sử dụng những chiếc xe chính hãng êm ái … mức giá này còn bao gồm cả dịch vụ giao xe tận nơi miễn phí trong 3km"
+    },
+    {
+      "claim": "Theo Bazan Travel, cơ sở Thanh Hoàng (Núi Sam) cho thuê xe máy giá chỉ từ 80.000 VNĐ/ngày trở lên; khu vực chùa Bà có đơn vị cho thuê giá tầm khoảng 150.000 VNĐ/ngày; có đơn vị cho thuê đồng giá 150.000 VNĐ/ngày/chiếc và khi thuê chỉ cần mang theo CCCD.",
+      "source_url": "https://bazantravel.com/thue-xe-may-chau-doc/",
+      "source_domain": "bazantravel.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cơ sở cho thuê xe máy Thanh Hoàng Giá thuê xe máy ở đây lại cực kì rẻ, chỉ từ 80.000 VNĐ/ngày trở lên … Thuê xe máy tại chùa Bà… giá tầm khoảng 150.000 VNĐ/ngày … thuê xe đồng giá, chỉ 150.000 VNĐ/ngày/chiếc… Khi thuê chỉ cần mang theo CCCD … 132 Châu Thị Tế, Vĩnh Tây 3, Núi Sam, Châu Đốc"
+    },
+    {
+      "claim": "Theo Tripbike, đơn vị cho thuê ở khu Núi Sam ghi giá các loại xe tay số và xe tay chỉ từ 150k, khi thuê đặt cọc 1 -2 triệu kèm giấy tờ tùy thân; đơn vị ở 227 Nguyễn Tri Phương cho thuê đồng giá 150k các loại xe, thủ tục đơn giản chỉ cần căn cước là có thể thuê; bảng giá tham khảo Yamaha Sirius tại An Giang khoảng 80.000 – 120.000 VNĐ/ngày.",
+      "source_url": "https://tripbike.net/thue-xe-may-an-giang/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá cho thuê các loại xe tay số và xe tay chỉ từ 150k. Khi thuê đặt cọc 1 -2 triệu, kèm theo giấy tờ tùy thân … Giá cũng 150k đồng giá các loại xe, thủ tục đơn giản chỉ cần căn cước là có thể thuê > Địa Chỉ : Số 227 Nguyễn Tri Phương, Châu Phú B, Châu Đốc, An Giang … | Sirius | 80.000 – 120.000 |"
+    }
+  ]
+}

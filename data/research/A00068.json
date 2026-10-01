@@ -1,0 +1,129 @@
+{
+  "article_id": "A00068",
+  "primary_keyword": "thuê xe máy gần Bến xe Trung tâm Đà Nẵng",
+  "secondary_keywords": [
+    "thuê xe máy Bến xe Trung tâm Đà Nẵng",
+    "cho thuê xe máy gần bến xe Đà Nẵng",
+    "thuê xe máy quận Liên Chiểu",
+    "thuê xe máy gần bến xe 185 Tôn Đức Thắng",
+    "giao xe tận nơi bến xe Đà Nẵng"
+  ],
+  "search_intent": "local",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Bến xe Trung tâm Đà Nẵng",
+    "185 Tôn Đức Thắng",
+    "phường Hòa Minh",
+    "quận Liên Chiểu",
+    "Quốc lộ 1A",
+    "ngã ba Huế",
+    "Thọ Quang",
+    "Sơn Trà",
+    "Non Nước",
+    "Ngũ Hành Sơn",
+    "sân bay quốc tế Đà Nẵng",
+    "cầu Rồng",
+    "Hội An",
+    "Quảng Nam",
+    "Quy Nhơn",
+    "Đà Nẵng"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga phổ thông",
+    "xe máy điện",
+    "xe côn tay",
+    "xe giường nằm",
+    "limousine"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "VinFast"
+  ],
+  "model_entities": [
+    "Wave Alpha",
+    "Sirius",
+    "Wave RSX",
+    "Air Blade",
+    "Lead",
+    "Vision",
+    "Janus",
+    "Exciter",
+    "VinFast Evo",
+    "VinFast Evo 200"
+  ],
+  "questions_found": [
+    "thuê xe máy gần Bến xe Trung tâm Đà Nẵng giá bao nhiêu một ngày?",
+    "bến xe Trung tâm Đà Nẵng có xe đi thẳng Hội An không?",
+    "bến xe cách sân bay Đà Nẵng bao xa?",
+    "nhận xe sớm hoặc tối có được không, tính ngày thế nào?"
+  ],
+  "related_queries": [
+    "bến xe trung tâm Đà Nẵng ở đâu",
+    "bến xe trung tâm Đà Nẵng các tuyến buýt",
+    "thuê xe máy Đà Nẵng giao tận nơi",
+    "bến xe Đà Nẵng đi Hội An",
+    "thuê xe máy gần bến xe giá rẻ"
+  ],
+  "serp_patterns": "SERP cho từ khóa là bài về chính bến (blog.vexere.com: địa chỉ 185 Tôn Đức Thắng, phường Hòa Minh, quận Liên Chiểu, trên trục QL1A, sát ngã ba Huế; buýt R15/R16/R6A; sân bay cách khoảng 6km; không có tuyến xe khách lớn chuyên tuyến thẳng vào Hội An) và các trang bảng giá thuê xe Đà Nẵng (vexere.com: 90.000 – 140.000 VNĐ/ngày; HT Moto xe số khoảng 100.000đ/ngày; Bá Đức 136 Lê Thạch gần bến xe trung tâm). Intent local: khách xuống xe khách đường dài cần nhận xe nhanh, đi vào nội đô hoặc tự lái xuống Hội An.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "Vexere Blog — Bến xe Trung tâm Đà Nẵng: địa chỉ, buýt, tuyến xe",
+      "url": "https://blog.vexere.com/ben-xe-trung-tam-da-nang/"
+    },
+    {
+      "name": "Vexere — Thuê xe máy ở Đà Nẵng (bảng giá, cửa hàng)",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-da-nang/",
+    "/lab/thue-xe-may/thue-xe-may-gan-ga-da-nang/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-da-nang/",
+    "/lab/thue-xe-may/thue-xe-may-hue/",
+    "/lab/kinh-nghiem/"
+  ],
+  "potential_cannibalization": "CG-rental-poi-ben-xe-trung-tam-da-nang: 1 row cho POI Bến xe Trung tâm Đà Nẵng; khác row thue-xe-may-da-nang (toàn thành phố, A00004), row ga (A00060) và sân bay (A00054). Bài tập trung đúng POI bến (Liên Chiểu, QL1A, ngã ba Huế, buýt R15/R16/R6A) nên không tranh chấp từ khóa chính; link chéo sang A00004/A00060/A00054 hợp lệ.",
+  "unique_angle": "Bến nằm ở Liên Chiểu trên QL1A sát ngã ba Huế — xa các bãi biển trung tâm, khác với bài thuê xe máy Đà Nẵng tổng quan. Điểm nhấn: (1) bến không có tuyến xe khách lớn chuyên tuyến thẳng vào Hội An nên khách tự túc hay thuê xe chạy xuống; (2) Bá Đức là cửa hàng hiếm hoi tự giới thiệu nằm gần bến xe trung tâm, giao xe bán kính 5km, mở cửa 5h-21h; (3) chính sách phạm vi Trung tâm Đà Nẵng của một số nhà xe va chạm kế hoạch chạy Huế/Hội An.",
+  "notes": "Bài informational_only: KHÔNG \"chúng tôi\", KHÔNG chào dịch vụ, disclosure đầu bài (dịch vụ thật chỉ ở Hà Nội). Mọi con số (giá 90.000 – 140.000 VNĐ, 100.000đ, 110.000đ, 120.000đ, 140.000đ, 150.000đ, 90.000đ, 200.000đ – 270.000đ, 10–20%, 24 giờ, 6 giờ, 6 tiếng, 15 phút, 5km, 6km) đều có claim_evidence từ nguồn đã mở 2026-10-01. Tên đơn vị hành chính theo nguồn (quận Liên Chiểu, phường Hòa Minh, phường An Khê).",
+  "claim_evidence": [
+    {
+      "claim": "Bến xe Trung tâm Đà Nẵng có địa chỉ 185 Tôn Đức Thắng, phường Hòa Minh, quận Liên Chiểu, nằm ngay trên mặt tiền trục đường huyết mạch kết nối trực tiếp với tuyến Quốc lộ 1A, khu vực xung quanh là nút giao thông sầm uất nằm sát ngay cạnh ngã ba Huế; tuyến buýt R15 kết nối bến với Thọ Quang, hoạt động từ 5h30 đến 19h00 hàng ngày; tuyến R16 chạy Kim Liên - bến xe trung tâm - Cao đẳng Công nghệ thông tin; tuyến R6A nối bến với khu du lịch Non Nước; sân bay quốc tế Đà Nẵng cách bến khoảng 6km, di chuyển bằng ô tô qua trục Nguyễn Tri Phương chỉ mất khoảng 15 phút.",
+      "source_url": "https://blog.vexere.com/ben-xe-trung-tam-da-nang/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Địa chỉ chính xác của Bến xe trung tâm Đà Nẵng là số 185 Tôn Đức Thắng, Phường Hòa Minh, Quận Liên Chiểu. Bến nằm ngay trên mặt tiền trục đường huyết mạch kết nối trực tiếp với tuyến Quốc lộ 1A. Khu vực xung quanh bến xe là nút giao thông sầm uất, nằm sát ngay cạnh ngã ba Huế. … Tuyến R15: Kết nối khu vực Bến xe Trung tâm Đà Nẵng với Thọ Quang. Xe hoạt động đều đặn từ 5h30 đến 19h00 hàng ngày … Tuyến R16: Kim Liên ↔ Bến xe trung tâm ↔ Cao đẳng Công nghệ thông tin … Tuyến R6A: Bến xe trung tâm ↔ Khu du lịch Non Nước … Khoảng cách từ sân bay quốc tế Đà Nẵng đến bến xe rơi vào khoảng 6km. … Thời gian di chuyển bằng ô tô qua trục đường Nguyễn Tri Phương chỉ mất khoảng 15 phút."
+    },
+    {
+      "claim": "Bến xe không có các tuyến xe khách lớn chạy chuyên tuyến thẳng vào Hội An; hành khách có thể bắt các chuyến xe buýt liền kề đi Quảng Nam hoặc dùng dịch vụ limousine đón trả tận nơi giữa Đà Nẵng và Hội An; tuyến xe đi Quy Nhơn có nhà xe Sơn Tùng, Hoàng Long chạy liên tục các khung giờ trong ngày bằng xe giường nằm/limousine, giá vé 200.000đ – 270.000đ.",
+      "source_url": "https://blog.vexere.com/ben-xe-trung-tam-da-nang/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Hiện tại, bến xe không có các tuyến xe khách lớn chạy chuyên tuyến thẳng vào Hội An. Tuy nhiên, hành khách có thể dễ dàng bắt các chuyến xe buýt liền kề đi Quảng Nam. Ngoài ra, dịch vụ xe limousine đón trả khách tận nơi giữa Đà Nẵng và Hội An rất phổ biến. … Quy Nhơn (Bình Định) | Nhà xe Sơn Tùng, Hoàng Long | Chạy liên tục các khung giờ trong ngày | Giường nằm / Limousine | 200.000 – 270.000"
+    },
+    {
+      "claim": "Theo Vexere, giá thuê xe máy tại Đà Nẵng thường dao động từ 90.000 – 140.000 VNĐ/ngày tùy loại xe và thời điểm; vào mùa cao điểm giá có thể tăng nhẹ khoảng 10–20%; bảng giá ghi xe tay ga (Honda Airblade, Honda Lead, Honda Vision) 120.000 – 150.000 VNĐ/ngày, xe số (Honda Wave Alpha, Yamaha Sirius) 100.000 – 120.000 VNĐ/ngày; theo HT Moto, xe số khoảng 100.000đ/ngày, xe tay ga phổ thông từ 120.000đ – 140.000đ/ngày, dòng cao cấp như Exciter hay Vinfast Evo 200 có giá 150.000đ/ngày, thời gian thuê 1 ngày được tính là 24 giờ, giao xe tận nơi từ 7h đến 21h30 tại các điểm như biển Mỹ Khê, Cầu Rồng, Sân bay và Ga Đà Nẵng; HT Moto hoạt động từ 7h đến 23h và không nhận khách nước ngoài; một số nhà xe có gói thuê 6 tiếng, nửa ngày hoặc cả ngày vào mùa thấp điểm.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy tại Đà Nẵng thường dao động từ 90.000 – 140.000 VNĐ/ngày, tùy thuộc vào loại xe và thời điểm thuê. Vào mùa du lịch cao điểm như lễ, Tết hoặc mùa hè, giá có thể tăng nhẹ khoảng 10–20% … | Xe tay ga (Honda Airblade, Honda Lead, Honda Vision) | 120.000 – 150.000 | | Xe số (Honda Wave Alpha, Yamaha Sirius) | 100.000 – 120.000 | … HT Moto là đơn vị cho thuê xe quy mô lớn, hoạt động từ 7h đến 23h … du khách cần lưu ý cửa hàng không nhận khách nước ngoài. Bảng giá thuê xe khá đa dạng: xe số khoảng 100.000đ/ngày; xe tay ga phổ thông từ 120.000đ – 140.000đ/ngày và các dòng cao cấp hơn như Exciter hay Vinfast Evo 200 có giá 150.000đ/ngày. Thời gian thuê 1 ngày được tính là 24 giờ. Đơn vị hỗ trợ giao xe tận nơi từ 7h đến 21h30 tại các điểm du lịch chính như biển Mỹ Khê, Cầu Rồng, Sân bay và Ga Đà Nẵng. … Một số nhà xe áp dụng vào mùa thấp điểm, bao gồm các gói thuê xe 6 tiếng, nửa ngày hoặc cả ngày"
+    },
+    {
+      "claim": "Cửa hàng Bá Đức có địa chỉ 136 Lê Thạch, phường An Khê, tự giới thiệu nằm gần bến xe trung tâm, mở cửa từ 5h sáng đến 21h tối, có dàn xe đời 2022-2024 luôn kèm áo mưa và 1 lít xăng khi nhận; giá xe số (Sirius, Wave Alpha) khoảng 110.000đ/ngày, các dòng xe ga đời mới như Vision, Lead, Janus có giá 120.000đ/ngày, AirBlade 2024 là 140.000đ/ngày; quy định tính ngày là 24 giờ kể từ lúc nhận xe; nhà xe hỗ trợ giao và lấy xe tận nơi trong bán kính 5km từ Bến xe trung tâm Đà Nẵng; các cửa hàng trong danh sách Vexere Đà Nẵng gồm Bá Đức, Bảo Tín, DT43, HT Moto, Xanh 43, Đăng Khoa, có khu vực giao xe Bến xe Trung tâm Đà Nẵng.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "### Dịch vụ cho thuê xe Bá Đức Địa chỉ: 136 Lê Thạch, Phường An Khê, Thành phố Đà Nẵng. Nằm gần Bến xe trung tâm … mở cửa từ 5h sáng đến 21h tối. … dàn xe rất mới (đời 2022-2024) … luôn đi kèm áo mưa, 1 lít xăng khi nhận xe. Giá thuê xe số (Sirius, Wave Alpha) khoảng 110.000đ/ngày; các dòng xe ga đời mới như Vision, Lead, Janus có giá 120.000đ/ngày và AirBlade 2024 là 140.000đ/ngày. Quy định tính ngày là 24 giờ kể từ lúc nhận xe. Nhà xe hỗ trợ giao và lấy xe tận nơi trong bán kính 5km từ Bến xe trung tâm Đà Nẵng … Khu vực giao xe … Bến xe Trung tâm Đà Nẵng, Phường An Khê Cửa hàng Bá Đức Bảo Tín DT43 HT Moto Xanh 43 Đăng Khoa"
+    },
+    {
+      "claim": "Một nhà xe trên Vexere cho thuê Honda Wave RSX đời 2019-2021 kèm mũ bảo hiểm, áo mưa, 1 lít xăng, giao xe tận nơi không cần cọc trước từ 90.000đ; thời gian nhận - trả xe từ 07:00 đến 23:00, mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe, thuê tối thiểu từ 2 ngày, trả xe quá mỗi 24 giờ tính thêm 1 ngày, trả xe chưa quá 6 giờ chỉ tính thêm 1/2 ngày, nhà xe giữ lại CCCD hoặc Passport; một nhà xe khác cho thuê xe máy điện VinFast Evo giao xe tận nơi không cần cọc trước từ 140.000đ, nhận - trả xe từ 08:00 đến 22:00, thuê tối thiểu từ 1 ngày, giấy tờ cần chuẩn bị CCCD và GPLX bản gốc (hoặc VNeID), vui lòng chỉ sử dụng xe trong phạm vi Trung tâm Đà Nẵng, nhà xe có quyền từ chối giao xe nếu khách di chuyển ngoài phạm vi.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Wave RSX … Đời xe: 2019-2021 Mũ bảo hiểm, Áo mưa, Xăng (1 lít) Giao xe tận nơi Không cần cọc trước từ 90.000đ … Thời gian nhận xe và trả xe hằng ngày từ 07:00 đến 23:00. Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe. – Thuê tối thiểu từ 2 ngày. – Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 6 giờ → chỉ tính thêm 1/2 ngày. … Giấy tờ cần chuẩn bị: CCCD/Passport & GPLX (bản gốc) – Nhà xe giữ lại CCCD hoặc Passport … Vinfast Evo … Giao xe tận nơi Không cần cọc trước từ 140.000đ … từ 08:00 đến 22:00. – Thuê tối thiểu từ 1 ngày. … Giấy tờ cần chuẩn bị: CCCD và GPLX bản gốc (hoặc VNeID) … Vui lòng chỉ sử dụng xe trong phạm vi Trung tâm Đà Nẵng. Nhà xe có quyền từ chối giao xe nếu khách hàng di chuyển ngoài phạm vi trên."
+    }
+  ]
+}
