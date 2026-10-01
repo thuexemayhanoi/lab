@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T15:51:21.904Z",
+  "generated_at": "2026-10-01T16:15:10.417Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 59,
-    "PLANNED": 9941
+    "PUBLISHED": 61,
+    "PLANNED": 9939
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 53,
-      "PLANNED": 4947
+      "PUBLISHED": 55,
+      "PLANNED": 4945
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00050",
-  "next_claimable_id": "A00051",
+  "last_completed_id": "A00053",
+  "next_claimable_id": "A00054",
   "blocked": [],
   "published": [
     {
@@ -342,10 +342,22 @@
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-thanh-oai/"
     },
     {
+      "id": "A00051",
+      "pk": "thuê xe máy Sơn Tây",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-son-tay/"
+    },
+    {
       "id": "A00052",
       "pk": "thuê xe máy gần Sân bay quốc tế Nội Bài",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-noi-bai/"
+    },
+    {
+      "id": "A00053",
+      "pk": "thuê xe máy gần Sân bay quốc tế Tân Sơn Nhất",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-tan-son-nhat/"
     },
     {
       "id": "A00097",
