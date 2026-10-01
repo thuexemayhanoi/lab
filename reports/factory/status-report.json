@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T21:58:10.780Z",
+  "generated_at": "2026-10-01T21:58:56.602Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 79,
-    "PLANNED": 9921
+    "PUBLISHED": 81,
+    "PLANNED": 9919
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 73,
-      "PLANNED": 4927
+      "PUBLISHED": 75,
+      "PLANNED": 4925
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00071",
-  "next_claimable_id": "A00072",
+  "last_completed_id": "A00073",
+  "next_claimable_id": "A00074",
   "blocked": [],
   "published": [
     {
@@ -466,6 +466,18 @@
       "pk": "thuê xe máy gần Cảng Hòn Gai / Bến tàu Hạ Long",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-cang-hon-gai-ben-tau-ha-long/"
+    },
+    {
+      "id": "A00072",
+      "pk": "thuê xe máy Phố cổ Hà Nội",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-pho-co-ha-noi/"
+    },
+    {
+      "id": "A00073",
+      "pk": "thuê xe máy Hồ Hoàn Kiếm",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ho-hoan-kiem/"
     },
     {
       "id": "A00097",
