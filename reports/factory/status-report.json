@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T15:12:16.161Z",
+  "generated_at": "2026-10-01T15:37:19.954Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 55,
-    "PLANNED": 9945
+    "PUBLISHED": 57,
+    "PLANNED": 9943
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 49,
-      "PLANNED": 4951
+      "PUBLISHED": 51,
+      "PLANNED": 4949
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00046",
-  "next_claimable_id": "A00047",
+  "last_completed_id": "A00048",
+  "next_claimable_id": "A00049",
   "blocked": [],
   "published": [
     {
@@ -316,6 +316,18 @@
       "pk": "thuê xe máy Sóc Sơn",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-soc-son/"
+    },
+    {
+      "id": "A00047",
+      "pk": "thuê xe máy Mê Linh",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-me-linh/"
+    },
+    {
+      "id": "A00048",
+      "pk": "thuê xe máy Thường Tín",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-thuong-tin/"
     },
     {
       "id": "A00052",
