@@ -1,0 +1,128 @@
+{
+  "article_id": "A00057",
+  "primary_keyword": "thuê xe máy gần Sân bay quốc tế Phú Quốc",
+  "secondary_keywords": [
+    "thuê xe máy sân bay Phú Quốc",
+    "cho thuê xe máy gần sân bay Phú Quốc",
+    "thuê xe máy Phú Quốc giao tận nơi",
+    "thuê xe máy Dương Tơ",
+    "thuê xe máy giá rẻ Phú Quốc"
+  ],
+  "search_intent": "local",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Sân bay quốc tế Phú Quốc",
+    "Phú Quốc",
+    "Dương Tơ",
+    "Dương Đông",
+    "Trần Hưng Đạo",
+    "Bến tàu Phú Quốc",
+    "Kiên Giang"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe tay ga 125cc",
+    "xe phân khối lớn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Piaggio"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Jupiter",
+    "Blade",
+    "Wave RSX",
+    "Future",
+    "Lead",
+    "Vision",
+    "Air Blade",
+    "Nouvo",
+    "PCX",
+    "Elizabeth",
+    "Attila"
+  ],
+  "questions_found": [
+    "thuê xe máy gần sân bay Phú Quốc giá bao nhiêu một ngày?",
+    "ở sân bay Phú Quốc có shop giao xe tận nơi miễn phí không?",
+    "thuê xe máy Phú Quốc có cần đặt cọc không?",
+    "mùa cao điểm Phú Quốc có thiếu xe để thuê không?",
+    "thuê xe máy ở Phú Quốc đi đâu lấy xăng?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Phú Quốc",
+    "thuê xe máy sân bay Phú Quốc không cần đặt cọc",
+    "Anh Phú cho thuê xe máy Phú Quốc",
+    "thuê xe máy Dương Đông",
+    "thuê xe máy Phú Quốc dài hạn"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy gần sân bay Phú Quốc\" chủ yếu là danh sách tổng hợp các cửa hàng nằm ngay sát sân bay (khu vực Dương Tơ) và trục đường Trần Hưng Đạo: motogo.vn có 2 bài riêng cho sân bay Phú Quốc và thuê xe máy Phú Quốc nói chung, giới thiệu Anh Phú (giao xe miễn phí khu khách sạn, bến tàu; xe số 120.000đ/ngày, xe ga 150.000đ/ngày), Anh Tính (giao miễn phí resort/homestay; 120.000đ - 150.000đ/ngày), Tùng Ngân (100 Trần Hưng Đạo; xe số 90.000đ - 120.000đ/ngày, xe ga 140.000đ - 150.000đ/ngày), Dương Hùng (197 Trần Hưng Đạo; 120.000đ - 150.000đ), Cường Thịnh (Trần Hưng Đạo, Dương Tơ; 100.000đ - 150.000đ) và Đại Phát (103 Trần Hưng Đạo; 120.000đ - 150.000đ), kèm bảng giá theo dòng xe: Sirius 100.000đ - 120.000đ/ngày, Wave 100.000đ - 120.000đ/ngày, Blade/Wave RSX/Jupiter/Future/PCX 120.000đ - 150.000đ/ngày, Lead/Vision/Air Blade/Nouvo/Elizabeth/Attila 130.000đ - 150.000đ/ngày; rootytrip.com là bài tổng hợp dài có bảng giá hàng loạt cửa hàng (Anh Phú xe số 100.000 VNĐ/ngày, Thiên Phú 120.000 - 150.000 VNĐ/ngày giao miễn phí, Cường Thịnh 120.000 - 150.000 VNĐ/ngày giảm 10% khi thuê từ 3 ngày trở lên, thuê theo ngày/tuần/tháng, khoảng 10 phút có xe giao tận nhà, Anh Phát 92 Trần Hưng Đạo dòng cc lớn 150.000 - 220.000 VNĐ/ngày, Anh Vũ xe tay ga 125cc 120.000 VNĐ/ngày), kèm nhận xét giá trung tâm Dương Đông rẻ hơn khu vực sân bay, mùa cao điểm khan hiếm xe. Đa số cửa hàng miễn phí giao nhận tại sân bay, khách sạn, resort; tiền cọc dao động tùy nơi, một số nơi không yêu cầu.",
+  "official_sources": [
+    {
+      "name": "Cảng hàng không quốc tế Phú Quốc (tham khảo địa lý)",
+      "url": "https://thanhnien.vn/",
+      "note": "Bài informational chỉ dùng địa lý chung: sân bay nằm ở khu vực Dương Tơ, trung tâm đảo là Dương Đông — KHÔNG nêu con số nếu không có trong claim_evidence."
+    }
+  ],
+  "supporting_sources": [
+    {
+      "name": "MOTOGO — 6 địa điểm thuê xe máy sân bay Phú Quốc",
+      "url": "https://motogo.vn/thue-xe-may-san-bay-phu-quoc/"
+    },
+    {
+      "name": "MOTOGO — Thuê xe máy Phú Quốc (TOP 10)",
+      "url": "https://motogo.vn/thue-xe-may-phu-quoc/"
+    },
+    {
+      "name": "Rooty Trip — Cho thuê xe máy Phú Quốc",
+      "url": "https://rootytrip.com/thue-xe-may-phu-quoc/"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-noi-bai/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-tan-son-nhat/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-da-nang/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-cat-bi/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-cam-ranh/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-poi-san-bay-quoc-te-phu-quoc: 1 row cho sân bay Phú Quốc; các row sân bay khác (Nội Bài, Tân Sơn Nhất, Đà Nẵng, Cát Bi, Cam Ranh) là POI khác nhau, không tranh chấp; các bài sân bay đã publish có cấu trúc tương tự nhưng khác địa bàn, link chéo hợp lệ.",
+  "unique_angle": "Phú Quốc là đảo du lịch: sân bay quốc tế nằm ở Dương Tơ, trung tâm đảo là Dương Đông, trục Trần Hưng Đạo nối hai đầu; gần như mọi cửa hàng đều giao xe tận nơi miễn phí tại sân bay, bến tàu, khách sạn, resort nên bài đi theo luồng hạ cánh - nhận xe trong khoảng 10 phút - di chuyển ra Dương Đông; điểm nhấn giá: xe số từ 100.000đ - 120.000đ/ngày, xe ga phổ thông 130.000đ - 150.000đ/ngày, mùa cao điểm khan xe (Nouvo từng bị đẩy giá 300k/ngày); lưu ý ít cây xăng ngoài khu Dương Đông nên tranh thủ đổ xăng đầy trong thị trấn.",
+  "notes": "Bài informational_only (owner KHÔNG phục vụ Kiên Giang/Phú Quốc): sec dịch vụ chủ trang chỉ là disclosure ranh giới (dịch vụ chỉ tại Hà Nội Long Biên - phố cổ), KHÔNG chào dịch vụ, KHÔNG LocalBusiness schema, KHÔNG dùng cụm chúng tôi cứu hộ. Mọi con số lấy đúng claim_evidence. KHÔNG nêu khoảng cách sân bay - Dương Đông bằng số km (không có nguồn local trong packet); chỉ nói sân bay nằm ở khu vực Dương Tơ, trung tâm đảo là Dương Đông. Sau sắp xếp đơn vị hành chính 2025 chỉ viết câu chung chung, không liệt kê tên phường/xã mới. Trong bảng giá dùng đ-notation có khoảng trắng quanh dash; claim chứa đúng các số đó. Tránh số phút không có claim (chỉ dùng 10 phút giao xe Cường Thịnh).",
+  "claim_evidence": [
+    {
+      "claim": "MOTOGO giới thiệu 6 địa điểm cho thuê xe máy quanh sân bay Phú Quốc: Anh Phú (Sân Bay Cảng Hàng không Quốc Tế, Dương Tơ) giao xe miễn phí tại khu vực khách sạn, bến tàu, giá xe số 120.000đ/ngày, xe ga 150.000đ/ngày; Anh Tính giao xe miễn phí đến resort, homestay, nhà nghỉ, ưu đãi giảm giá khi thuê dài ngày; Tùng Ngân (Số 100 Đường Trần Hưng Đạo, Dương Tơ) giá xe số 90.000đ - 120.000đ/ngày, xe ga 140.000đ - 150.000đ/ngày; Dương Hùng (197 Trần Hưng Đạo) xe số 120.000đ/ngày, xe ga 150.000đ/ngày; Cường Thịnh (Trần Hưng Đạo, Dương Tơ) xe số 100.000đ/ngày, xe ga 150.000đ/ngày, không cần đặt cọc; Đại Phát (103 Trần Hưng Đạo) xe số 120.000đ/ngày, xe ga 150.000đ/ngày; thuê xe đi kèm 2 mũ bảo hiểm đạt chuẩn, bản đồ Phú Quốc bằng giấy và 1 lít xăng.",
+      "source_url": "https://motogo.vn/thue-xe-may-san-bay-phu-quoc/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe máy sân bay Phú Quốc – Anh Phú (xe mới chất lượng, giao xe miễn phí tại khu vực khách sạn, bến tàu) Địa chỉ: Sân Bay Cảng Hàng không Quốc Tế, Dương Tơ, Phú Quốc. Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 150.000đ/ngày... Thuê xe Anh Tính – Giao xe tận nơi tại Phú Quốc (giao xe miễn phí đến resort homestay nhà nghỉ, xe chất lượng) Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 150.000đ/ngày (Ưu đãi giảm giá khi thuê xe dài ngày)... Tùng Ngân Địa chỉ: Số 100 Đường Trần Hưng Đạo, Dương Tơ, Huyện Phú Quốc, tỉnh Kiên Giang Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày... Dương Hùng Địa chỉ: 197 Đường Trần Hưng Đạo, Dương Tơ, Phú Quốc Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 150.000đ/ngày... Cường Thịnh là địa chỉ thuê xe máy giá tốt không cần đặt cọc tại sân bay Phú Quốc Địa chỉ: Trần Hưng Đạo, Dương Tơ, Phú Quốc Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày... Đại Phát Địa chỉ: 103 Đường Trần Hưng Đạo, Phú Quốc Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 150.000đ/ngày. Những phụ kiện đi kèm trong dịch vụ thuê xe máy là 2 mũ bảo hiểm đạt chuẩn, bản đồ Phú Quốc bằng giấy và một lít xăng."
+    },
+    {
+      "claim": "MOTOGO tổng hợp bảng giá cho thuê xe máy Phú Quốc theo dòng xe: Yamaha Sirius 100.000đ - 120.000đ/ngày; Honda Wave 100.000đ - 120.000đ/ngày; Honda Blade, Honda Wave RSX, Yamaha Jupiter, Yamaha Future, Honda PCX 120.000đ - 150.000đ/ngày; Honda Lead, Honda Vision, Honda AirBlade, Yamaha Nouvo, Elizabeth, Attila 130.000đ - 150.000đ/ngày; các đơn vị như Anh Phú, Anh Kiệt 120.000đ - 150.000đ/ngày, Thiên Phú 120.000đ - 160.000đ/ngày, Anh Tính 120.000đ - 150.000đ/ngày, Cường Thịnh 120.000đ - 160.000đ/ngày, Đại Phát 120.000đ - 170.000đ/ngày, Mai Hương 120.000đ - 150.000đ/ngày; dịch vụ giao nhận xe tận nơi 24/24; mùa cao điểm khan hiếm xe, từng có chiếc Nouvo cho thuê với giá 300k/ngày mà còn không có cho thuê; thuê xe kèm 2 mũ bảo hiểm, 1 lít xăng, 2 áo mưa mỏng; tại Phú Quốc ngoài khu vực Dương Đông khá ít cây xăng nên tranh thủ đủ xăng trong thị trấn.",
+      "source_url": "https://motogo.vn/thue-xe-may-phu-quoc/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Đơn vị Loại xe máy Giá thuê: Anh Phú Xe số: Wave, Sirius 110cc, Jupiter; Xe ga: AirBlade, Vision, honda lead 120.000đ – 150.000đ/ngày... Anh Kiệt 120.000đ – 150.000đ/ngày... Thiên Phú 120.000đ – 160.000đ/ngày... Anh Tính 120.000đ – 150.000đ/ngày... Cường Thịnh 120.000đ – 160.000đ/ngày... Đại Phát 120.000đ – 170.000đ/ngày... Bến Tàu Phú Quốc 120.000đ – 150.000đ/ngày... Mai Hương 120.000đ – 150.000đ/ngày. Thuê xe máy có bao gồm với 2 mũ bảo hiểm, 1 lít xăng, 2 áo mưa mỏng cho du khách di chuyển. Dòng xe Giá thuê xe/ngày: Yamaha Sirius 100.000đ – 120.000đ/ngày; Honda Wave 100.000đ – 120.000đ/ngày; Honda Blade 120.000đ – 150.000đ/ngày; Honda Wave RSX 120.000đ – 150.000đ/ngày; Yamaha Jupiter 120.000đ – 150.000đ/ngày; Yamaha Future 120.000đ – 150.000đ/ngày; Honda Lead 130.000đ – 150.000đ/ngày; Honda Vision 130.000đ – 150.000đ/ngày; Honda AirBlade 130.000đ – 150.000đ/ngày; Yamaha Nouvo 130.000đ – 150.000đ/ngày; Honda PCX 120.000đ – 150.000đ/ngày; Elizabeth 130.000đ – 150.000đ/ngày; Attila 130.000đ – 150.000đ/ngày. Mình đã từng nghe một chiếc Nouvo cho thuê với giá 300k/ngày mà còn không có cho thuê. TOP 10... giao nhận xe tận nơi 24/24. Tại Phú Quốc ngoài khu vực Dương Đông khá ít cây xăng nên bạn hãy tranh thủ đủ xăng trong thị trấn nhé."
+    },
+    {
+      "claim": "Rooty Trip tổng hợp giá thuê xe máy Phú Quốc: Anh Phú nổi tiếng tại sân bay, xe số 100.000 VNĐ/ngày, xe ga 150.000 VNĐ/ngày, giao xe tận nơi miễn phí, kèm 2 mũ bảo hiểm đạt chuẩn, 1 lít xăng miễn phí và 2 áo mưa mỏng; Thiên Phú (79 Trần Hưng Đạo, Dương Đông) giao xe tận nơi miễn phí, giá 120.000 - 150.000 VNĐ/ngày; Tĩnh Nguyễn giảm giá cho khách hàng thuê xe trên 3 ngày, giá từ 120.000 - 150.000 VNĐ/ngày; Cường Thịnh (Tổ 2, Dương Tơ, ngã ba sân bay Phú Quốc) cho thuê theo ngày, tuần, tháng hoặc dài hạn, chỉ mất khoảng 10 phút là có xe giao đến tận nhà, giá 120.000 - 150.000 VNĐ, giảm 10% cho khách thuê từ 3 ngày trở lên, xe trang bị 2 mũ bảo hiểm, 2 áo mưa và 1 lít xăng; Anh Phát (92 Trần Hưng Đạo, Dương Đông) cho thuê xe tay ga và ô tô, dòng có cc lớn từ 150.000 - 220.000 VNĐ/ngày; Anh Vũ (91/2B Trần Hưng Đạo, Dương Đông) xe tay ga 125cc 120.000 VNĐ/ngày, các dòng xe lớn hơn 150.000 VNĐ/ngày, có giao tại sân bay miễn phí; Mai Hương giá 120.000 - 150.000 VNĐ/ngày.",
+      "source_url": "https://rootytrip.com/thue-xe-may-phu-quoc/",
+      "source_domain": "rootytrip.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Anh Phú Xe số: 100.000 VNĐ Xe ga: 150.000 VNĐ... Bên cạnh đó, Anh Phú còn cung cấp dịch vụ giao xe tận nơi miễn phí... Khi thuê xe máy Anh Phú, bạn sẽ nhận được 2 mũ bảo hiểm đạt chuẩn, 1 lít xăng miễn phí và 2 áo mưa mỏng... Thiên Phú 0949 486 979 Xe số: 120.000 VNĐ Xe ga: 150.000 VNĐ... Thiên Phú cung cấp dịch vụ giao xe tận nơi miễn phí... Giá thuê xe dao động từ 120.000 – 150.000 VNĐ. Hotline: 0949 486 979 Địa chỉ: 79 Trần Hưng Đạo, Dương Đông, Phú Quốc... Tĩnh Nguyễn còn giảm giá cho khách hàng thuê xe trên 3 ngày giúp bạn tiết kiệm được chi phí. Giá thuê xe cũng rất rẻ chỉ từ 120.000 – 150.000 VNĐ... Cường Thịnh 0981 214 344 Từ 120.000 – 150.000 VNĐ... Quy trình thuê xe tại Cường Thịnh rất đơn giản và nhanh chóng, bạn có thể thuê xe theo ngày, theo tuần, theo tháng hoặc dài hạn và chỉ mất khoảng 10 phút là có xe giao đến tận nhà... Đặc biệt, Cường Thịnh giảm giá 10% cho khách thuê từ 3 ngày trở lên. Xe còn được trang bị 2 mũ bảo hiểm, 2 áo mưa và 1 lít xăng. Địa chỉ: Tổ 2, Dương Tơ, Phú Quốc (ngã ba sân bay Phú Quốc)... Anh Phát – Cho thuê xe tay ga và ô tô 0985 465 555 Từ 150.000 – 220.000 VNĐ. Giá thuê xe tùy thuộc vào loại xe bạn thuê, dòng có cc lớn sẽ từ 150.000 – 220.000 VNĐ. Địa chỉ: 92 Trần Hưng Đạo, Dương Đông, Phú Quốc... Anh Vũ Phú Quốc Xe tay ga 125cc: 120.000 VNĐ Xe lớn hơn: 150.000 VNĐ. Địa chỉ: 91/2B Đường Trần Hưng Đạo, Dương Đông, Phú Quốc, Kiên Giang. Có giao tại sân bay miễn phí... Mai Hương 0939 371 122 Từ 120.000 – 150.000 VNĐ"
+    },
+    {
+      "claim": "Các cửa hàng quanh sân bay Phú Quốc nói chung miễn phí giao nhận tại sân bay, khách sạn, bến tàu, resort, homestay: Anh Phú giao xe tận nơi miễn phí tại sân bay, bến tàu, khách sạn; Anh Tính gần sân bay, xe mới, anh chủ hỗ trợ nhiệt tình, giao xe miễn phí đến resort, homestay, nhà nghỉ; Cường Thịnh giao xe miễn phí tận sân bay, bến tàu, khách sạn và resort trên đảo Phú Quốc, chỉ trong vòng 10 phút sau khi khách gọi là có thể nhận được xe; Thiên Phú hỗ trợ giao nhận xe miễn phí trong thành phố và sân bay Phú Quốc.",
+      "source_url": "https://motogo.vn/thue-xe-may-san-bay-phu-quoc/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Ngoài ra, đơn vị có dịch vụ giao xe tận nơi tại sân bay, bến tàu, khách sạn,…nhanh chóng, miễn phí và chuyên nghiệp... Anh Tính (giao xe miễn phí đến resort homestay nhà nghỉ, xe chất lượng)... Điểm nổi bật nhất: Gần sân bay, xe mới, anh chủ hỗ trợ nhiệt tình... Mặt khác nơi đây còn có dịch vụ giao xe miễn phí tận sân bay, bến tàu, khách sạn,…rất nhanh chóng. Chỉ trong vòng 10 phút sau khi bạn gọi là bạn đã có thể nhận được chiếc xe mình mong muốn rồi... ngoài đơn vị cho thuê xe Thiên Phú có hỗ trợ giao nhận xe miễn phí trong thành phố và sân bay Phú Quốc."
+    }
+  ]
+}
