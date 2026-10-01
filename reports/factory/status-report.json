@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T07:14:37.218Z",
+  "generated_at": "2026-10-01T11:36:36.575Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 45,
-    "PLANNED": 9955
+    "PUBLISHED": 47,
+    "PLANNED": 9953
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 39,
-      "PLANNED": 4961
+      "PUBLISHED": 41,
+      "PLANNED": 4959
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00036",
-  "next_claimable_id": "A00037",
+  "last_completed_id": "A00038",
+  "next_claimable_id": "A00039",
   "blocked": [],
   "published": [
     {
@@ -256,6 +256,18 @@
       "pk": "thuê xe máy Hoàn Kiếm",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-hoan-kiem/"
+    },
+    {
+      "id": "A00037",
+      "pk": "thuê xe máy Ba Đình",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ba-dinh/"
+    },
+    {
+      "id": "A00038",
+      "pk": "thuê xe máy Đống Đa",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-dong-da/"
     },
     {
       "id": "A00052",
