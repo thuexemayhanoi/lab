@@ -1,0 +1,77 @@
+{
+  "article_id": "A00045",
+  "primary_keyword": "thuê xe máy Gia Lâm",
+  "secondary_keywords": [
+    "cho thuê xe máy Gia Lâm",
+    "thuê xe máy huyện Gia Lâm",
+    "thuê xe máy Trâu Quỳ",
+    "thuê xe máy gần bến xe Gia Lâm",
+    "cho thuê xe máy giá rẻ Gia Lâm"
+  ],
+  "search_intent": "local/commercial",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Gia Lâm", "Trâu Quỳ", "Dương Xá", "Dường Hà", "bến xe Gia Lâm",
+    "đường 5", "cầu Chương Dương", "cầu Thanh Trì", "cầu Long Biên",
+    "Bát Tràng", "đền Gióng", "Phù Đổng", "Cổ Bi", "Vành Đai Trâu Quỳ",
+    "Đại học Nông Lâm", "Hưng Yên"
+  ],
+  "vehicle_entities": ["xe số phổ thông", "xe ga", "xe côn", "phân khối lớn", "xe SH"],
+  "brand_entities": ["Honda", "Yamaha"],
+  "model_entities": ["Wave", "Sirius", "Vision", "Air Blade", "Lead", "SH"],
+  "questions_found": [
+    "thuê xe máy Gia Lâm giá bao nhiêu một ngày?",
+    "thuê xe máy quanh Trâu Quỳ ở đâu gần trường Nông Lâm?",
+    "thuê xe máy ở Gia Lâm có cần đặt cọc không?",
+    "thuê xe máy theo tháng ở Gia Lâm giá thế nào?",
+    "thuê xe máy quanh Gia Lâm có giao tận nơi không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Gia Lâm",
+    "cho thuê xe máy gần bến xe Gia Lâm",
+    "thuê xe máy giao tận nơi Gia Lâm",
+    "thuê xe máy Trâu Quỳ sinh viên",
+    "cho thuê xe máy Dương Xá Dường Hà"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy Gia Lâm\" xoay quanh trục sinh viên Trâu Quỳ - bến xe Gia Lâm: motogo.vn ghi xe số 120k/ngày tính đúng 24 tiếng, Air Blade 125cc 200k, phí giao nhận 30k/lần giao xe; motorbike.vn tổng hợp 7 địa điểm (Gia Lâm 58 xe số 130.000đ/xe ga 250.000đ tại 58 Vành Đai Trâu Quỳ; 13535 xe số 130.000vnđ, xe ga 150.000-220.000vnđ, xe côn 250.000-300.000vnđ, SH 800.000vnđ; Công Tân 130.000vnđ/200.000vnđ giảm 30% tuần-tháng tại 110 Đ. Nguyễn Văn Cừ) và dải chung 50.000 - 500.000vnđ/xe/ngày; 2trip.vn ghi Hanoi Motorbike 150.000vnđ/ngày, tuần 500.000 - 800.000vnđ, tháng 1.100.000 - 1.700.000vnđ cùng gói dài ngày 2 ngày 120.000vnđ, 3-4 ngày 90.000vnđ, từ 5 ngày 80.000vnđ/ngày; thuexemayhanoigiare.com (Mr-Good Bikes) ghi xe số 70.000 - 100.000vnđ, xe ga 90.000 - 120.000vnđ, xe côn 150.000 - 250.000vnđ, phân khối lớn 250.000 - 500.000vnđ; hanoibiker.com ghi miễn cọc cho du khách từ tỉnh khác có vé máy bay khứ hồi. Intent local/commercial nhấn mạnh sinh viên Nông Lâm, người đi làm qua cầu Chương Dương - Thanh Trì và khách bến xe Gia Lâm.",
+  "official_sources": [],
+  "supporting_sources": [
+    {"source_url": "https://motogo.vn/thue-xe-may-gia-lam/", "source_domain": "motogo.vn", "date_accessed": "2026-10-01", "claim_supported": "MOTOGO có dịch vụ giao nhận xe cho các khách thuê xe tại địa bàn Gia Lâm với phí giao nhận xe 30k/lần giao xe; giá 1 ngày (24h) cho xe số là 120k/ngày, cho xe Air Blade 125cc là 200k, tính đúng theo 24 tiếng; bảng giá Honda Airblade 2012 120.000 vnd, Honda Lead 120.000 vnd, Honda Vision 120.000 vnd; điểm nhận xe tại 110 Đ. Nguyễn Văn Cừ, Bồ Đề, Long Biên."},
+    {"source_url": "https://motorbike.vn/thue-xe-may-gia-lam/", "source_domain": "motorbike.vn", "date_accessed": "2026-10-01", "claim_supported": "7 địa điểm cho thuê xe máy Gia Lâm: dải giá chung 50.000 - 500.000vnđ/xe/ngày; Gia Lâm 58 (58 Vành Đai, Trâu Quỳ) xe số từ 130.000đ/ngày, xe ga từ 250.000đ/ngày; 13535 xe số khoảng 130.000vnđ, xe ga 150.000 - 220.000vnđ/ngày, xe côn 250.000 - 300.000vnđ/ngày, SH đời mới 800.000vnđ/ngày; Công Tân (110 Đ. Nguyễn Văn Cừ, Bồ Đề, Long Biên) xe số từ 130.000vnđ/ngày, xe ga từ 200.000vnđ/ngày, thuê từ 1 tuần hoặc 1 tháng giảm tới 30%; Hanoi Motorbike giao xe phí chỉ từ 20.000vnđ, tiền cọc 2.000.000 - 5.000.000vnđ."},
+    {"source_url": "https://2trip.vn/toplist/thue-xe-may-o-gia-lam-ha-noi", "source_domain": "2trip.vn", "date_accessed": "2026-10-01", "claim_supported": "HaNoi Motorbike: thuê ít hơn 1 ngày 150.000vnđ/ngày; thuê 2 ngày 130.000vnđ/ngày; theo tuần khoảng 500.000 - 800.000vnđ/tuần; theo tháng từ 1.100.000 - 1.700.000vnđ/tháng. Xe số: thuê 2 ngày 120.000vnđ/ngày, 3 - 4 ngày 90.000vnđ, từ 5 ngày trở lên 80.000vnđ/ngày, theo tháng từ 1.000.000 - 1.400.000vnđ."},
+    {"source_url": "http://thuexemayhanoigiare.com/thue-xe-may-gia-lam/", "source_domain": "thuexemayhanoigiare.com", "date_accessed": "2026-10-01", "claim_supported": "Mr-Good Bikes cho thuê xe máy Gia Lâm giá rẻ: xe số 70.000 - 100.000vnđ/ngày; xe ga 90.000 - 120.000vnđ/ngày; xe côn 150.000 - 250.000vnđ/ngày; phân khối lớn 250.000 - 500.000vnđ/ngày."},
+    {"source_url": "https://hanoibiker.com/thue-xe-may-gia-lam/", "source_domain": "hanoibiker.com", "date_accessed": "2026-10-01", "claim_supported": "Hanoibiker dịch vụ thuê xe máy Gia Lâm: không cần đặt cọc nếu là du khách từ tỉnh khác và đã đặt vé máy bay khứ hồi; thủ tục đặt cọc thông thường từ 1-2 triệu."},
+    {"source_url": "https://thuexemaynguyentu.com/", "source_domain": "thuexemaynguyentu.com", "date_accessed": "2026-10-01", "claim_supported": "Trang chính thức của nhà xe Nguyễn Tú: bảng giá công khai theo ngày/tuần/tháng, tiền cọc tham khảo, giao tận nơi Long Biên/Hoàn Kiếm/Phố Cổ/Ba Đình và các quận nội thành, giờ 09:00 - 21:00."}
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-long-bien/",
+    "/lab/thue-xe-may/thue-xe-may-hung-yen/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-gia-lam riêng biệt: A00045 gắn intent huyện Gia Lâm (sinh viên Trâu Quỳ, khu trọ Dương Xá - Dường Hà, bến xe Gia Lâm); bài Long Biên (đã publish) gắn quận bên kia cầu Chương Dương; bài Hưng Yên gắn chặng đường 5 phía ngoài — khác intent, khác geo, không trùng primary intent.",
+  "unique_angle": "Bài Gia Lâm duy nhất định vị theo intent cửa ngõ phía đông: khách sinh viên Nông Lâm quanh Trâu Quỳ, người ở trọ Dương Xá - Dường Hà đi làm qua cầu Chương Dương - Thanh Trì và khách bộ hành bến xe Gia Lâm; nhấn mạnh phân tầng giá xe số 120k - 130.000vnđ, gói dài ngày giảm dần 120k - 90k - 80k và thuê tháng cho sinh viên học kỳ dài.",
+  "notes": "actual_service_area=hanoi_owner_verified: được phép dùng NAP đã xác minh từ config/business-facts.json và bảng giá công khai trên trang nhà xe; KHÔNG bịa giá ngoài bảng. Sau sắp xếp đơn vị hành chính của Hà Nội năm 2025, huyện Gia Lâm giữ tên gọi và tổ chức lại thành 4 xã (Gia Lâm, Bát Tràng, Thuận An, Phù Đổng) — bài dùng địa danh quen thuộc và nêu rõ bối cảnh. Giá của từng nhà xe ngoài luôn dẫn theo công bố công khai của chính nhà xe đó hoặc bài tổng hợp ghi nhận, không tổng quát hóa ngoài khoảng ghi nhận.",
+  "claim_evidence": [
+    {"claim": "MOTOGO có dịch vụ giao nhận xe cho các khách thuê xe tại địa bàn Gia Lâm với phí giao nhận xe 30k/lần giao xe.", "source_url": "https://motogo.vn/thue-xe-may-gia-lam/", "source_domain": "motogo.vn", "date_accessed": "2026-10-01", "claim_supported": "Chúng tôi có dịch vụ giao nhận xe cho các khách thuê xe tại địa bàn Gia Lâm với phí giao nhận xe 30k/lần giao xe."},
+    {"claim": "MOTOGO ghi giá thuê 1 ngày (24h) cho xe số là 120k/ngày, cho xe Air Blade 125cc là 200k; giá 1 ngày tính đúng theo 24 tiếng thay vì từ sáng đến tối.", "source_url": "https://motogo.vn/thue-xe-may-gia-lam/", "source_domain": "motogo.vn", "date_accessed": "2026-10-01", "claim_supported": "Giá thuê cực kỳ minh bạch, 1 ngày (24h) cho xe số là 120k/ngày, cho xe Air Blade 125cc là 200k. Rất nhiều cửa hàng tính giá thuê chỉ từ sáng đến tối, nhưng với MOTOGO, giá 1 ngày sẽ tính đúng theo 24 tiếng."},
+    {"claim": "MOTOGO có điểm nhận xe tại 110 Đ. Nguyễn Văn Cừ, Bồ Đề, Long Biên (ngay cầu Chương Dương), phục vụ khách thuê tại Gia Lâm.", "source_url": "https://motogo.vn/thue-xe-may-gia-lam/", "source_domain": "motogo.vn", "date_accessed": "2026-10-01", "claim_supported": "Địa chỉ 1: 110 Đ. Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội. MOTOGO giao nhận xe tại địa bàn Gia Lâm."},
+    {"claim": "Giá thuê xe máy tại Gia Lâm được ghi nhận dao động từ 50.000 - 500.000vnđ/xe/ngày tùy dòng xe.", "source_url": "https://motorbike.vn/thue-xe-may-gia-lam/", "source_domain": "motorbike.vn", "date_accessed": "2026-10-01", "claim_supported": "Theo tìm hiểu từ nhiều nguồn, giá thuê xe máy tại Gia Lâm hiện dao động từ 50.000 - 500.000vnđ/xe/ngày tùy dòng xe."},
+    {"claim": "Gia Lâm 58 (58 Vành Đai, Trâu Quỳ) cho thuê xe số từ 130.000đ/ngày và xe ga từ 250.000đ/ngày.", "source_url": "https://motorbike.vn/thue-xe-may-gia-lam/", "source_domain": "motorbike.vn", "date_accessed": "2026-10-01", "claim_supported": "Giá thuê xe máy ở Gia Lâm tại Gia Lâm 58: Giá thuê xe số giao động từ 130.000đ/ngày; Giá thuê xe ga từ 250.000đ/ngày. Địa chỉ: 58 Vành Đai, Trâu Quỳ, Gia Lâm, Hà Nội."},
+    {"claim": "13535 cho thuê xe số khoảng 130.000vnđ/ngày; xe ga 150.000 - 220.000vnđ/xe/ngày; xe côn 250.000 - 300.000vnđ/xe/ngày; dòng SH đời mới 800.000vnđ/xe/ngày.", "source_url": "https://motorbike.vn/thue-xe-may-gia-lam/", "source_domain": "motorbike.vn", "date_accessed": "2026-10-01", "claim_supported": "Giá thuê xe máy ở Gia Lâm tại 13535: Các dòng xe số sẽ được cửa hàng cho thuê với giá khoảng 130.000vnđ; Xe tay ga sẽ cao hơn và có mức giá thuê 1 ngày khoảng 150.000 đến 220.000vnđ/xe/ngày; Nếu thuê xe côn bạn cần trả từ 250.000 đến 300.000vnđ/xe/ngày; Dòng xe SH đời mới giá thuê là 800.000vnđ/xe/ngày."},
+    {"claim": "Công Tân (110 Đ. Nguyễn Văn Cừ, Bồ Đề, Long Biên) cho thuê xe số từ 130.000vnđ/xe/ngày, xe ga từ 200.000vnđ/xe/ngày; thuê từ 1 tuần hoặc 1 tháng giá thuê có thể được giảm tới 30%.", "source_url": "https://motorbike.vn/thue-xe-may-gia-lam/", "source_domain": "motorbike.vn", "date_accessed": "2026-10-01", "claim_supported": "Giá thuê xe máy ở Gia Lâm tại Công Tân: Với các dòng xe số Công Tân cho thuê từ 130.000vnđ/xe/ngày; Đối với xe ga giá thuê từ 200.000vnđ/xe/ngày; Ngoài ra, nếu bạn thuê từ 1 tuần, 1 tháng, giá thuê có thể được giảm tới 30%. Địa chỉ: 110 Đ. Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội."},
+    {"claim": "Mr-Good Bikes cho thuê xe máy Gia Lâm giá rẻ: xe số 70.000 - 100.000vnđ/ngày; xe ga 90.000 - 120.000vnđ/ngày; xe côn 150.000 - 250.000vnđ/ngày; phân khối lớn 250.000 - 500.000vnđ/ngày.", "source_url": "http://thuexemayhanoigiare.com/thue-xe-may-gia-lam/", "source_domain": "thuexemayhanoigiare.com", "date_accessed": "2026-10-01", "claim_supported": "Thuê xe máy Gia Lâm Hà Nội uy tín chất lượng, giá rẻ nhất tại Hà Nội (Mr-Good Bikes): xe số 70.000 - 100.000vnđ/ngày; xe ga 90.000 - 120.000vnđ/ngày; xe côn 150.000 - 250.000vnđ/ngày; xe phân khối lớn 250.000 - 500.000vnđ/ngày."},
+    {"claim": "Hanoi Motorbike ghi giá thuê ít hơn 1 ngày là 150.000vnđ/ngày; thuê theo tuần khoảng 500.000 - 800.000vnđ/tuần; theo tháng từ 1.100.000 - 1.700.000vnđ/tháng.", "source_url": "https://2trip.vn/toplist/thue-xe-may-o-gia-lam-ha-noi", "source_domain": "2trip.vn", "date_accessed": "2026-10-01", "claim_supported": "Cho thuê xe máy Gia Lâm Hà Nội – HaNoi Motorbike đưa ra mức giá như sau: Thuê xe ít hơn 1 ngày: 150.000vnđ/ngày; Thuê xe theo tuần: Khoảng 500.000 – 800.000vnđ/tuần; Giá thuê xe ga tại huyện Gia Lâm theo tháng: Từ 1.100.000 – 1.700.000vnđ/tháng."},
+    {"claim": "Thuê xe số dài ngày ở Gia Lâm: thuê 2 ngày 120.000vnđ/ngày, thuê 3 - 4 ngày 90.000vnđ, từ 5 ngày trở lên 80.000vnđ/ngày.", "source_url": "https://2trip.vn/toplist/thue-xe-may-o-gia-lam-ha-noi", "source_domain": "2trip.vn", "date_accessed": "2026-10-01", "claim_supported": "Xe số: Thuê theo ngày từ 100.000 – 150.000vnđ/ngày; Thuê từ 5 ngày trở lên: 80.000vnđ/ngày; Giá thuê xe máy ở Gia Lâm Hà Nội trong thời gian từ 3 – 4 ngày: 90.000vnđ; Nếu thuê xe trong thời gian 2 ngày: 120.000vnđ/ngày."},
+    {"claim": "Hanoi Motorbike giao xe tận nơi quanh Gia Lâm với mức phí chỉ từ 20.000vnđ; tiền đặt cọc 2.000.000 - 5.000.000vnđ.", "source_url": "https://motorbike.vn/thue-xe-may-gia-lam/", "source_domain": "motorbike.vn", "date_accessed": "2026-10-01", "claim_supported": "Hanoi Motorbike cung cấp dịch vụ cho thuê xe trên khắp Hà Nội. Đội ngũ giao xe cực nhiệt tình, đúng giờ với mức phí hạt rẻ chỉ từ 20.000vnđ. Tiền đặt cọc từ 2.000.000 - 5.000.000vnđ tùy dòng xe."},
+    {"claim": "Hanoibiker ghi nhận thủ tục thuê xe tại Gia Lâm cần đặt cọc từ 1-2 triệu; miễn cọc cho du khách từ tỉnh khác đã đặt vé máy bay khứ hồi — chỉ cần giấy tờ tùy thân.", "source_url": "https://hanoibiker.com/thue-xe-may-gia-lam/", "source_domain": "hanoibiker.com", "date_accessed": "2026-10-01", "claim_supported": "Dịch vụ thuê xe máy Gia Lâm: thủ tục đặt cọc thông thường từ 1-2 triệu đồng. Nếu bạn muốn thuê xe máy ở Hà Nội mà không cần phải đặt cọc, bạn cần là du khách từ tỉnh khác và đã đặt vé máy bay khứ hồi."},
+    {"claim": "Dịch vụ của chủ trang web công bố giá thuê Honda Wave và Yamaha Sirius (xe số): 150.000đ/ngày; giá tuần 700.000đ; giá tháng 900.000-1.200.000đ.", "source_url": "https://thuexemaynguyentu.com/", "source_domain": "thuexemaynguyentu.com", "date_accessed": "2026-10-01", "claim_supported": "Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 150.000đ/ngày. Giá tuần 700.000đ; giá tháng 900.000-1.200.000đ."},
+    {"claim": "Honda Click / Yamaha Mio (xe ga giá rẻ): 150.000đ/ngày; 700.000đ/tuần; 900.000-1.200.000đ/tháng.", "source_url": "https://thuexemaynguyentu.com/", "source_domain": "thuexemaynguyentu.com", "date_accessed": "2026-10-01", "claim_supported": "Honda Click / Yamaha Mio - xe ga giá rẻ: 150.000đ/ngày; 700.000đ/tuần; 900.000-1.200.000đ/tháng."},
+    {"claim": "Honda Vision: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000-2.000.000đ/tháng.", "source_url": "https://thuexemaynguyentu.com/", "source_domain": "thuexemaynguyentu.com", "date_accessed": "2026-10-01", "claim_supported": "Honda Vision - xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000-2.000.000đ/tháng."},
+    {"claim": "Honda Air Blade: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.", "source_url": "https://thuexemaynguyentu.com/", "source_domain": "thuexemaynguyentu.com", "date_accessed": "2026-10-01", "claim_supported": "Honda Air Blade - xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng."},
+    {"claim": "Tiền đặt cọc tham khảo của dịch vụ chủ trang web: Honda Wave 2-3 triệu; Honda Vision 4-5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu.", "source_url": "https://thuexemaynguyentu.com/", "source_domain": "thuexemaynguyentu.com", "date_accessed": "2026-10-01", "claim_supported": "Tiền đặt cọc tham khảo: Honda Wave 2-3 triệu; Honda Vision 4-5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu."},
+    {"claim": "Dịch vụ của chủ trang web giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành; giờ làm việc 09:00 - 21:00 và không giao xe ngoài khung giờ này.", "source_url": "https://thuexemaynguyentu.com/", "source_domain": "thuexemaynguyentu.com", "date_accessed": "2026-10-01", "claim_supported": "Chúng tôi giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành. Điện thoại: 0942 467 674 - 09:00 - 21:00 - Không giao xe máy ngoài khung giờ."}
+  ]
+}
