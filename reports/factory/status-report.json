@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T23:42:22.844Z",
+  "generated_at": "2026-10-01T23:51:12.806Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 91,
-    "PLANNED": 9909
+    "PUBLISHED": 93,
+    "PLANNED": 9907
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 85,
-      "PLANNED": 4915
+      "PUBLISHED": 87,
+      "PLANNED": 4913
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00083",
-  "next_claimable_id": "A00084",
+  "last_completed_id": "A00085",
+  "next_claimable_id": "A00086",
   "blocked": [],
   "published": [
     {
@@ -538,6 +538,18 @@
       "pk": "thuê xe máy Sa Pa",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-sa-pa/"
+    },
+    {
+      "id": "A00084",
+      "pk": "thuê xe máy Cố đô Huế",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-co-do-hue/"
+    },
+    {
+      "id": "A00085",
+      "pk": "thuê xe máy Bà Nà Hills",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ba-na-hills/"
     },
     {
       "id": "A00097",
