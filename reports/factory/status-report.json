@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T16:31:07.389Z",
+  "generated_at": "2026-10-01T16:51:47.273Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 63,
-    "PLANNED": 9937
+    "PUBLISHED": 65,
+    "PLANNED": 9935
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 57,
-      "PLANNED": 4943
+      "PUBLISHED": 59,
+      "PLANNED": 4941
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00055",
-  "next_claimable_id": "A00056",
+  "last_completed_id": "A00057",
+  "next_claimable_id": "A00058",
   "blocked": [],
   "published": [
     {
@@ -370,6 +370,18 @@
       "pk": "thuê xe máy gần Sân bay quốc tế Cát Bi",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-cat-bi/"
+    },
+    {
+      "id": "A00056",
+      "pk": "thuê xe máy gần Sân bay quốc tế Cam Ranh",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-cam-ranh/"
+    },
+    {
+      "id": "A00057",
+      "pk": "thuê xe máy gần Sân bay quốc tế Phú Quốc",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-phu-quoc/"
     },
     {
       "id": "A00097",
