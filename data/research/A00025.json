@@ -1,0 +1,156 @@
+{
+  "article_id": "A00025",
+  "primary_keyword": "thuê xe máy Quảng Ngãi",
+  "secondary_keywords": [
+    "cho thuê xe máy Quảng Ngãi",
+    "thuê xe máy Quảng Ngãi giá rẻ",
+    "thuê xe máy đảo Lý Sơn",
+    "thuê xe máy TP Quảng Ngãi giao tận nơi"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Quảng Ngãi",
+    "thành phố Quảng Ngãi",
+    "đảo Lý Sơn",
+    "xã An Vĩnh",
+    "Sa Huỳnh",
+    "Kon Tum",
+    "quốc lộ 1A"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe tay côn",
+    "xe máy điện"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Kymco",
+    "Dat Bike"
+  ],
+  "model_entities": [
+    "Wave Alpha",
+    "Vision",
+    "Air Blade",
+    "Dat Bike"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Quảng Ngãi giá bao nhiêu một ngày?",
+    "đi đảo Lý Sơn có thuê được xe máy không, giá thế nào?",
+    "thuê xe máy Quảng Ngãi cần đặt cọc không?",
+    "thuê nhiều ngày ở Quảng Ngãi có giảm giá không?",
+    "thuê xe máy điện ở Quảng Ngãi có không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Quảng Ngãi",
+    "cho thuê xe máy tự lái TP Quảng Ngãi",
+    "thuê xe máy đảo Lý Sơn giá",
+    "kinh nghiệm du lịch Quảng Ngãi Lý Sơn"
+  ],
+  "serp_patterns": "SERP gồm website riêng của các đơn vị cho thuê tại TP Quảng Ngãi (Xuân Hậu, Nở Motorbikes) với bảng giá công khai chi tiết theo dòng xe và độ dài thuê, danh sách cửa hàng của motogo (kể cả cơ sở tại đảo Lý Sơn), nền tảng đặt xe vexere có trang riêng cho Quảng Ngãi và cho Lý Sơn, cẩm nang du lịch bụi về phương tiện đi lại trên đảo; thị trường nhỏ nhưng khá công khai, nổi bật với dịch vụ giao xe tận nơi và chính sách giảm giá thuê nhiều ngày.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://chothuexemayquangngai.com/",
+      "source_domain": "chothuexemayquangngai.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng giá công khai theo dòng xe và độ dài thuê, giá xe máy điện của một đơn vị tại TP Quảng Ngãi"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-ngai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng giá xe số/xe ga các cơ sở tại TP Quảng Ngãi và cơ sở tại đảo Lý Sơn kèm địa chỉ"
+    },
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-quang-ngai.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "mức giá các đơn vị trên nền tảng đặt xe tại Quảng Ngãi và chính sách cọc"
+    },
+    {
+      "source_url": "https://dulichbui.org/quang-ngai/ly-son/phuong-tien-di-lai",
+      "source_domain": "dulichbui.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "mặt bằng giá thuê xe máy trên đảo Lý Sơn"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-quang-binh/",
+    "/lab/thue-xe-may/thue-xe-may-quang-tri/",
+    "/lab/thue-xe-may/thue-xe-may-da-nang/",
+    "/lab/kinh-nghiem/",
+    "/lab/cuu-ho-xe-may/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-quang-ngai: nhóm gốc cấp tỉnh. Đảo Lý Sơn là intent hẹp hơn (hiện chưa có row riêng) — bài này chỉ nêu giá thuê trên đảo ở mức tham khảo nhanh, không viết thành cẩm nang riêng cho Lý Sơn để tránh lấn intent tương lai. Các row giá theo dòng xe (Vision, Air Blade, Wave, Winner tại Quảng Ngãi) sẽ xử lý riêng theo matrix.",
+  "unique_angle": "Bài tỉnh gốc cho thị trường nhỏ mà công khai hóa tốt: đơn vị tại TP Quảng Ngãi niêm yết bảng giá chi tiết theo đời xe (Wave Alpha theo mốc 5 ngày/10 ngày giảm dần, Vision theo đời 2018-2019 và 2023-2024), có cả xe máy điện Dat Bike miễn phí quãng đường nội thành; đảo Lý Sơn là 'đặc sản' riêng của tỉnh — thuê xe ngay trên đảo, giá cao hơn đất liền một chút do phải vận chuyển xe bằng tàu; Kon Tum giờ thuộc cùng tỉnh sau sáp nhập 2025, mở rộng phạm vi du lịch liên vùng.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; mọi mức giá dẫn theo nguồn công khai. Quảng Ngãi giữ tên sau sắp xếp hành chính 2025 và hợp nhất với Kon Tum (legacy-names LG-034 Kon Tum MERGED_INTO Quảng Ngãi; LG-035 UNCHANGED; geo VN-025 CURRENT). Thành phố Quảng Ngãi là trung tâm tỉnh; đảo Lý Sơn, Sa Huỳnh là POI nổi tiếng (Sa Huỳnh chỉ nêu định tính). Giá trên đảo theo cẩm nang dulichbui và motogo (cơ sở tại thôn Tân An, xã An Vĩnh).",
+  "claim_evidence": [
+    {
+      "claim": "Một đơn vị cho thuê tại TP Quảng Ngãi quảng bá giá chỉ từ 120.000đ/ngày, phổ biến 130.000đ–150.000đ/ngày tùy loại xe và thời gian thuê",
+      "source_url": "https://chothuexemayquangngai.com/",
+      "source_domain": "chothuexemayquangngai.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá chỉ từ 120k/ngày» và «Mức giá cho thuê xe ở Quảng Ngãi hợp lý, 130k - 150k/ngày (tùy loại xe và thời gian thuê). Không phát sinh chi phí.» — tức 120.000đ, 130.000đ–150.000đ/ngày."
+    },
+    {
+      "claim": "Cùng đơn vị: Honda Wave Alpha 2022-2023 thuê từ 5 ngày giá 110.000đ/ngày, từ 10 ngày trở lên còn 100.000đ/ngày",
+      "source_url": "https://chothuexemayquangngai.com/",
+      "source_domain": "chothuexemayquangngai.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Honda Wave Alpha 2022 - 2023 | Thuê từ 5 ngày: 110.000 VNĐ/ngày / Thuê từ 10 ngày trở lên: 100.000 VNĐ/ngày»."
+    },
+    {
+      "claim": "Honda Vision và Air Blade đời mới tại đơn vị này giá 140.000đ–160.000đ/ngày; bảng chi tiết ghi Wave Alpha 100.000đ–125.000đ/ngày, Vision đời 2018-2019 120.000đ–150.000đ/ngày, Vision đời 2023-2024 130.000đ–160.000đ/ngày",
+      "source_url": "https://chothuexemayquangngai.com/",
+      "source_domain": "chothuexemayquangngai.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Honda Vision 2022 - 2024 & Honda Air Blade đời mới | Giá thuê: 140.000 - 160.000 VNĐ/ngày»; «Honda Wave Alpha 2022 - 2023 | Giá thuê: 100.000 - 125.000 VNĐ/ngày»; «Honda Vision 2018 - 2019 | Giá thuê: 120.000 - 150.000 VNĐ/ngày»; «Honda Vision 2023 - 2024 | Giá thuê: 130.000 - 160.000 VNĐ/ngày»."
+    },
+    {
+      "claim": "Xe tay ga Kymco 50cc và Air Blade 2021-2022 có mức 140.000đ–170.000đ/ngày",
+      "source_url": "https://chothuexemayquangngai.com/",
+      "source_domain": "chothuexemayquangngai.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Xe tay ga Kymco 50cc | Giá thuê: 140.000 - 170.000 VNĐ/ngày»; «Honda Air Blade 2021 - 2022 | Giá thuê: 140.000 - 170.000 VNĐ/ngày»."
+    },
+    {
+      "claim": "Đơn vị này cho thuê cả xe máy điện Dat Bike 2026 giá 180.000đ–200.000đ/ngày kèm quãng đường nội thành miễn phí",
+      "source_url": "https://chothuexemayquangngai.com/",
+      "source_domain": "chothuexemayquangngai.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Xe máy điện Dat Bike 2026 | Miễn phí 180km di chuyển nội thành | Giá thuê: 180.000 - 200.000 VNĐ/ngày»."
+    },
+    {
+      "claim": "Các cơ sở tại TP Quảng Ngãi niêm yết xe số 100.000đ–120.000đ/ngày, xe ga 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-quang-ngai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Danh sách: «Giá thuê xe số: 120.000đ/ngày; Giá thuê xe ga: 150.000đ/ngày» (118 Nguyễn Nghiêm, P. Nghĩa Chánh), «Giá thuê xe số: 100.000đ/ngày; Giá thuê xe ga: 150.000đ/ngày» (117 Trần Quang Diệu; 12 Hùng Vương; 497 Quang Trung, TP. Quảng Ngãi)."
+    },
+    {
+      "claim": "Trên đảo Lý Sơn có cơ sở cho thuê xe số 100.000đ/ngày tại thôn Tân An, xã An Vĩnh",
+      "source_url": "https://motogo.vn/thue-xe-may-quang-ngai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Địa chỉ: Thôn Tân An, xã An Vĩnh, Lý Sơn, Quảng Ngãi / Giá thuê xe số: 100.000đ/ngày»."
+    },
+    {
+      "claim": "Cẩm nang du lịch ghi giá thuê xe máy trên đảo Lý Sơn dao động 120.000đ–150.000đ mỗi xe mỗi ngày tùy thời gian và cự ly di chuyển",
+      "source_url": "https://dulichbui.org/quang-ngai/ly-son/phuong-tien-di-lai",
+      "source_domain": "dulichbui.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Thuê xe gắn máy tại Lý Sơn Giá thuê xe máy từ 120-150k/xe/ngày tùy thời gian và cự ly di chuyển.» — tức 120.000đ–150.000đ/xe/ngày."
+    },
+    {
+      "claim": "Trên nền tảng đặt xe, các đơn vị tại Quảng Ngãi niêm yết từ 150.000đ đến 160.000đ/ngày và nhiều nơi không cần cọc trước",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-quang-ngai.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Các đơn vị ghi «từ 150.000 đ», «từ 160.000 đ» kèm điều khoản «Giao xe tận nơi — Không cần cọc trước» — tức 150.000đ–160.000đ/ngày."
+    }
+  ]
+}

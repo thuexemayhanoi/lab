@@ -1,0 +1,164 @@
+{
+  "article_id": "A00026",
+  "primary_keyword": "thuê xe máy Gia Lai",
+  "secondary_keywords": [
+    "cho thuê xe máy Gia Lai",
+    "thuê xe máy Pleiku",
+    "thuê xe máy Pleiku giao tận nơi",
+    "giá thuê xe máy Gia Lai"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Gia Lai",
+    "Pleiku",
+    "Quy Nhơn",
+    "biển Hồ",
+    "đồi chè",
+    "sân bay Pleiku",
+    "quốc lộ 14"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe tay côn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki"
+  ],
+  "model_entities": [
+    "Vision",
+    "Air Blade",
+    "Lead",
+    "Wave",
+    "Exciter",
+    "Sirius"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Pleiku giá bao nhiêu một ngày?",
+    "thuê xe máy Gia Lai cần đặt cọc bao nhiêu?",
+    "thuê xe máy Pleiku có giao tận nơi không?",
+    "thuê nhiều ngày ở Gia Lai có giảm giá không?",
+    "đi biển Hồ, đồi chè Pleiku nên thuê xe gì?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Pleiku",
+    "cho thuê xe máy tự lái Gia Lai",
+    "thuê xe máy Pleiku đi Kon Tum",
+    "kinh nghiệm du lịch Gia Lai bằng xe máy"
+  ],
+  "serp_patterns": "SERP gồm website riêng của đơn vị cho thuê tại Pleiku (bảng giá theo nhóm xe, chính sách giảm giá trên ba ngày), danh sách cửa hàng của motogo với bảng giá theo địa chỉ, nền tảng đặt xe vexere có trang riêng cho Pleiku với giá theo mùa và điều khoản cọc rõ (giữ CCCD hoặc cọc hai triệu mỗi xe), cẩm nang du lịch cao nguyên; thị trường tập trung ở thành phố Pleiku, phục vụ cả du lịch cao nguyên lẫn công tác.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://chothuexepleikugialai.com/",
+      "source_domain": "chothuexepleikugialai.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng giá theo nhóm xe số/xe ga/xe côn và chính sách giảm giá thuê trên ba ngày của một đơn vị tại Pleiku"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-pleiku/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng giá các cơ sở cho thuê tại thành phố Pleiku kèm địa chỉ"
+    },
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-pleiku.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "mức giá các đơn vị trên nền tảng đặt xe tại Pleiku và điều khoản cọc/giữ giấy tờ"
+    },
+    {
+      "source_url": "https://hopnhattravel.com/thue-xe-tu-lai-tai-gia-lai/",
+      "source_domain": "hopnhattravel.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "điều khoản đặt cọc, phí giao nhận xe tận nơi và cách tính trả xe trễ tại Pleiku"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-quang-ngai/",
+    "/lab/thue-xe-may/thue-xe-may-da-nang/",
+    "/lab/thue-xe-may/thue-xe-may-hue/",
+    "/lab/kinh-nghiem/",
+    "/lab/cuu-ho-xe-may/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-gia-lai: nhóm gốc cấp tỉnh. Row A00504 'thuê xe máy Pleiku có không' là intent hẹp — bài này không trả lời kiểu 'có/không + danh sách' mà viết tổng quan thị trường tỉnh (giá, cọc, giao xe, mùa vụ). Các row giá theo dòng xe (Vision, Air Blade, Wave, Winner tại Gia Lai) xử lý riêng theo matrix. Quy Nhơn (cựu Bình Định) giờ thuộc Gia Lai nhưng chỉ nên nhắc định tính để tránh lấn intent tương lai.",
+  "unique_angle": "Bài tỉnh gốc cho thị trường cao nguyên: Pleiku là trung tâm với bảng giá phân tầng rõ (xe số rẻ, xe ga và xe côn cao dần), điều khoản cọc minh bạch dạng 'hoặc giữ CCCD, hoặc cọc tiền' — hiếm nơi nào ghi rõ ràng thế; sau sáp nhập 2025, Gia Lai trải từ biển (Quy Nhơn) lên cao nguyên (Pleiku, Kon Tum cũ) nên bài viết góc 'chọn xe theo địa hình': xe số cho phố núi Pleiku, xe ga cho tiện nghi, và lưu ý khí hậu hai mùa khô mưa ảnh hưởng lịch trình.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; mọi mức giá dẫn theo nguồn công khai. Gia Lai giữ tên sau sắp xếp hành chính 2025, hợp nhất với Bình Định (LG-036 Bình Định MERGED_INTO Gia Lai; LG-037 Gia Lai UNCHANGED; geo VN-026 CURRENT). Pleiku là locality đã verify (LC-047 CURRENT); Quy Nhơn ghi LC-048 LEGACY_SEARCH (thành phố cũ, nay thuộc Gia Lai) — chỉ nhắc định tính. Kon Tum nay thuộc Quảng Ngãi (không phải Gia Lai) — cẩn trọng khi viết du lịch liên vùng. Biển Hồ, đồi chè là POI nổi tiếng Pleiku, chỉ nêu định tính.",
+  "claim_evidence": [
+    {
+      "claim": "Một đơn vị tại Pleiku niêm yết xe số từ 100.000đ–140.000đ/ngày tùy xe",
+      "source_url": "https://chothuexepleikugialai.com/",
+      "source_domain": "chothuexepleikugialai.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Xe Số giá từ: 100-140k (tuỳ xe)» — tức 100.000đ–140.000đ/ngày."
+    },
+    {
+      "claim": "Cùng đơn vị: xe tay ga từ 140.000đ–180.000đ/ngày, xe tay côn từ 150.000đ–200.000đ/ngày",
+      "source_url": "https://chothuexepleikugialai.com/",
+      "source_domain": "chothuexepleikugialai.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Xe Tay Ga giá từ: 140-180k (tuỳ xe)» và «Xe Tay Côn giá từ: 150 - 200k (tuỳ xe)» — tức 140.000đ–180.000đ/ngày và 150.000đ–200.000đ/ngày."
+    },
+    {
+      "claim": "Thuê trên ba ngày được giảm giá 10–15% tại đơn vị này",
+      "source_url": "https://chothuexepleikugialai.com/",
+      "source_domain": "chothuexepleikugialai.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giảm giá cho khách thuê nhiều ngày. (trên 3 ngày được giảm từ 10% – 15%)» — tức giảm 10–15% khi thuê trên ba ngày."
+    },
+    {
+      "claim": "Các cơ sở tại Pleiku niêm yết phổ biến: có nơi từ 80.000đ/ngày; nơi khác xe số 100.000đ/ngày, xe ga 150.000đ/ngày; cao nhất 150.000đ–200.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-pleiku/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê xe: từ 80.000đ/ngày» (290 Nguyễn Tất Thành; 107 Lê Thánh Tôn), «Giá thuê xe số: 100.000đ/ngày; Giá thuê xe ga: 150.000đ/ngày» (35C Nguyễn Tất Thành), «Giá thuê xe số: 150.000đ/ngày» (420 Trường Chinh; 37 Nguyễn Tất Thành), «Giá thuê xe số: 150.000đ/ngày; Giá thuê xe ga: 200.000đ/ngày» (12 Lý Nam Đế)."
+    },
+    {
+      "claim": "Trên nền tảng đặt xe, các đơn vị tại Pleiku niêm yết từ 130.000đ đến 170.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-pleiku.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Các đơn vị ghi «từ 130.000 đ», «từ 140.000 đ», «từ 150.000 đ», «từ 170.000 đ» — tức 130.000đ, 140.000đ, 150.000đ, 170.000đ/ngày."
+    },
+    {
+      "claim": "Điều khoản cọc phổ biến tại Pleiku: giữ CCCD hoặc hộ chiếu, hoặc đặt cọc 2.000.000đ mỗi xe kèm chụp hình CCCD",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-pleiku.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điều khoản ghi «Giữ lại CCCD/Passport. Hoặc Cọc 2.000.000đ/xe và Chụp hình CCCD»."
+    },
+    {
+      "claim": "Một đơn vị cho thuê tại Pleiku quy định đặt cọc trước 500.000đ để giữ xe, khi nhận xe cọc thêm 4.500.000đ và hoàn khi trả xe",
+      "source_url": "https://hopnhattravel.com/thue-xe-tu-lai-tai-gia-lai/",
+      "source_domain": "hopnhattravel.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Đặt cọc trước 500.000 VNĐ giữ xe, khi nhận xe cọc thêm 4.500.000 VNĐ, hoàn cọc khi trả xe. Nếu có xe máy và cà vẹt xe có thể thay thế tiền cọc» — tức cọc trước 500.000đ, thêm 4.500.000đ khi nhận xe."
+    },
+    {
+      "claim": "Cùng đơn vị: cọc 5.000.000đ hoặc một xe máy giá trị tương đương 10.000.000đ kèm đăng ký bản gốc",
+      "source_url": "https://hopnhattravel.com/thue-xe-tu-lai-tai-gia-lai/",
+      "source_domain": "hopnhattravel.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Đặt cọc 5 triệu đồng hoặc 1 xe máy có giá trị tương đương 10 triệu VNĐ kèm theo giấy đăng ký xe bản gốc» — tức cọc 5.000.000đ hoặc xe máy trị giá 10.000.000đ."
+    },
+    {
+      "claim": "Phí giao nhận xe tận nơi tại sân bay hoặc khách sạn trung tâm Pleiku là 50.000đ mỗi lượt",
+      "source_url": "https://hopnhattravel.com/thue-xe-tu-lai-tai-gia-lai/",
+      "source_domain": "hopnhattravel.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Phí giao nhận xe tận nơi: 50.000 VNĐ/lượt tại sân bay hoặc khách sạn trung tâm TP. Pleiku.» — tức 50.000đ mỗi lượt."
+    },
+    {
+      "claim": "Trả xe trễ bị tính phụ thu: quá giờ trong ngày tính thêm 100.000đ, qua tới sáng hôm sau tính thêm 200.000đ",
+      "source_url": "https://hopnhattravel.com/thue-xe-tu-lai-tai-gia-lai/",
+      "source_domain": "hopnhattravel.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Nhận xe lúc 7h ngày 1, trả xe 21h ngày 2, vượt 1h tính thêm 100.000 VNĐ»; «Đến 7h sáng hôm sau tính thêm 200.000 VNĐ» — tức quá giờ tính thêm 100.000đ, đến sáng hôm sau tính thêm 200.000đ."
+    }
+  ]
+}
