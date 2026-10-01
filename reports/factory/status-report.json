@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T21:57:20.804Z",
+  "generated_at": "2026-10-01T21:58:10.780Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 77,
-    "PLANNED": 9923
+    "PUBLISHED": 79,
+    "PLANNED": 9921
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 71,
-      "PLANNED": 4929
+      "PUBLISHED": 73,
+      "PLANNED": 4927
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00069",
-  "next_claimable_id": "A00070",
+  "last_completed_id": "A00071",
+  "next_claimable_id": "A00072",
   "blocked": [],
   "published": [
     {
@@ -454,6 +454,18 @@
       "pk": "thuê xe máy gần Bến xe nước Rồng",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ben-xe-nuoc-rong/"
+    },
+    {
+      "id": "A00070",
+      "pk": "thuê xe máy gần Bến xe Cà Mau",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ben-xe-ca-mau/"
+    },
+    {
+      "id": "A00071",
+      "pk": "thuê xe máy gần Cảng Hòn Gai / Bến tàu Hạ Long",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-cang-hon-gai-ben-tau-ha-long/"
     },
     {
       "id": "A00097",
