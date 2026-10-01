@@ -1,0 +1,116 @@
+{
+  "article_id": "A00081",
+  "primary_keyword": "thuê xe máy Vịnh Hạ Long",
+  "secondary_keywords": [
+    "thuê xe máy Hạ Long",
+    "giá thuê xe máy Quảng Ninh",
+    "vé tham quan vịnh Hạ Long",
+    "thuê xe máy gần cảng tàu Hạ Long",
+    "thuê xe máy bến xe Bãi Cháy"
+  ],
+  "search_intent": "informational-research — du khách đi Vịnh Hạ Long cần vé tàu tham quan theo tuyến, mặt bằng giá thuê xe tại Hạ Long (gần cảng, Vincom, Sun World, bến xe Bãi Cháy) và cách xếp lịch tàu sáng + xe máy chiều",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Vịnh Hạ Long",
+    "thành phố Hạ Long",
+    "Quảng Ninh",
+    "Bãi Cháy",
+    "Hòn Gai",
+    "động Thiên Cung",
+    "hang Đầu Gỗ",
+    "đảo Ti Tốp",
+    "vịnh Lan Hạ",
+    "đồi Cái Dăm",
+    "Hà Nội"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe tay ga",
+    "xe tay ga 135cc",
+    "xe máy điện",
+    "tàu tham quan",
+    "du thuyền"
+  ],
+  "brand_entities": [
+    "Vexere",
+    "Kim's Motorbike",
+    "789",
+    "Mạnh Thành Phát 393",
+    "Sao Mai Cruises",
+    "KhaiNam Transport",
+    "Honda",
+    "Yamaha",
+    "VinFast"
+  ],
+  "model_entities": [
+    "Honda Wave Alpha",
+    "Honda Wave RSX",
+    "Honda Airblade",
+    "Honda Vision",
+    "Honda Lead",
+    "Yamaha Nouvo",
+    "Yamaha Nouvo LX",
+    "Yamaha Janus",
+    "VinFast Evo200 Lite"
+  ],
+  "questions_found": [
+    "Thuê xe máy ở Hạ Long giá bao nhiêu một ngày?",
+    "Vé tham quan vịnh Hạ Long theo tuyến bao nhiêu?",
+    "Từ Hà Nội đến Hạ Long bao xa?",
+    "Nhận xe máy ở đâu gần cảng tàu?",
+    "Đi Hạ Long mùa nào hợp cho tàu + xe máy?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Hạ Long 2026",
+    "vé tàu tham quan vịnh Hạ Long tuyến 1",
+    "Hà Nội Hạ Long bao nhiêu km cao tốc",
+    "thuê xe máy gần bến xe Bãi Cháy"
+  ],
+  "serp_patterns": "SERP 'thuê xe máy Vịnh Hạ Long' là trang dịch vụ địa phương (dichvuthuexehalong, chothuexemayhalong), bảng giá Vexere/Motogo Hạ Long và cẩm nang vé vịnh (Sao Mai, Wyndham) — chưa có bài ghép intent 'vé tàu theo tuyến + thuê xe bờ'. Repo có thue-xe-may-quang-ninh (tỉnh) và thue-xe-may-gan-cang-hon-gai-ben-tau-ha-long (gần cảng) — bài này chiếm intent POI Vịnh Hạ Long bằng bảng vé 8 tuyến + bảng giá 3 cửa hàng Hạ Long + lịch tàu sáng xe chiều.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "Sao Mai Cruises — Cập nhật vé tham quan Vịnh Hạ Long 2026 (bảng 8 tuyến, chính sách trẻ em/người cao tuổi)",
+      "url": "https://saomaicruises.com/ve-tham-quan-vinh-ha-long/"
+    },
+    {
+      "name": "Vexere — Thuê xe máy ở Hạ Long (bảng giá cửa hàng 789, Kim's Motorbike, Mạnh Thành Phát 393; khu vực giao xe; cẩm nang lưu ý)",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-ha-long.vi"
+    },
+    {
+      "name": "KhaiNam Transport — Từ Hà Nội đến Hạ Long bao nhiêu km (quãng đường, thời gian)",
+      "url": "https://khainamtransport.com/tu-ha-noi-den-ha-long-bao-nhieu-km-quang-duong-thoi-gian-va-cach-di/"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-quang-ninh/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-cang-hon-gai-ben-tau-ha-long/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ha-noi/"
+  ],
+  "potential_cannibalization": "Khác thue-xe-may-quang-ninh (intent tỉnh): bài này nhắm intent POI Vịnh Hạ Long với vé tàu theo tuyến và bảng giá Hạ Long chi tiết; link một chiều sang trang tỉnh và trang gần cảng Hòn Gai, không lặp bảng của hai trang đó.",
+  "unique_angle": "Ghép bảng vé 8 tuyến vịnh (330.000đ tuyến 1-2 tới 70.000đ tuyến 8 gần bờ, kèm chính sách trẻ em 1,2m/60+) + quãng Hà Nội – Hạ Long 156–170 km/2–2,5 giờ + bảng giá 3 cửa hàng (Wave Alpha 130.000đ tới Airblade 2018-2020 250.000đ, điện Evo200 Lite 250.000đ) + lịch 'tàu sáng tuyến 1, xe máy chiều Bãi Cháy – đồi Cái Dăm'.",
+  "notes": "Hàng informational_only (POI Quảng Ninh): không dùng \"chúng tôi\", không claim dịch vụ; disclosure P2 chuẩn. requires_official_sources=0. Mọi claim định lượng có claim_evidence từ nguồn đã mở 2026-10-01.",
+  "claim_evidence": [
+    {
+      "claim": "Vé tham quan Vịnh Hạ Long trong ngày 2026 (gồm vé qua cảng): tuyến 1 (3-4 tiếng) 330.000đ; tuyến 2 (5-6 tiếng) 330.000đ; tuyến 3 (6-8 tiếng) 280.000đ; tuyến 4 (6-8 tiếng) 280.000đ; tuyến 5 (4-5 tiếng) 290.000đ; tuyến 6 (6-8 tiếng) 230.000đ; tuyến 8 (3 tiếng) 70.000đ; trẻ dưới 1,2m miễn phí; trẻ 1,2m – dưới 16 tuổi có giấy khai sinh và thẻ học sinh giảm 20%; người từ 60 tuổi trở lên giảm 50% (mang CMND).",
+      "source_url": "https://saomaicruises.com/ve-tham-quan-vinh-ha-long/",
+      "source_domain": "saomaicruises.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Tuyến 1 | 3-4 tiếng | 330.000đ\"; \"Tuyến 2 | 5-6 tiếng | 330.000đ\"; \"Tuyến 3 | 6-8 tiếng | 280.000đ\"; \"Tuyến 4 | 6-8 tiếng | 280.000đ\"; \"Tuyến 5 | 4-5 tiếng | 290.000đ\"; \"Tuyến 6 | 6-8 tiếng | 230.000đ\"; \"Tuyến 8 | 3 tiếng | 70.000đ\"; \"Trẻ em dưới 1,2m: Miễn phí vé tham quan.\"; \"Trẻ em từ 1,2m – dưới 16 tuổi: Mang theo giấy khai sinh và thẻ học sinh được giảm 20% của giá vé tham quan và vé qua cảng.\"; \"Người cao tuổi từ 60 tuổi trở lên: Được giảm 50% của giá vé tham quan và vé qua cảng. (phải mang theo CMND)\""
+    },
+    {
+      "claim": "Trên Vexere Hạ Long: Kim's Motorbike Honda Wave Alpha (xe số) từ 130.000đ/ngày, nhận trả 06:00 – 22:00, giữ CCCD; 789 Honda Wave RSX từ 150.000đ/ngày, nhận trả 08:00 – 21:00, cọc 500k/xe; Mạnh Thành Phát 393 Honda Airblade/Vision/Lead/Nouvo từ 150.000đ/ngày, nhận trả 08:00 – 22:00; Kim's xe ga Airblade/Vision/Lead từ 180.000đ/ngày và Nouvo LX 135cc từ 180.000đ/ngày, nhận trả 06:00 – 22:00; Mạnh Thành Phát 393 Airblade đời 2018-2020 từ 250.000đ/ngày; 789 VinFast Evo200 Lite (đời từ 2024) từ 250.000đ/ngày, nhận trả 08:00 – 21:00; mỗi ngày thuê tính bằng 24 giờ, thuê tối thiểu 1 ngày; khu vực giao xe gồm FLC Ha Long Bay, Vincom Plaza Hạ Long, Sun World Hạ Long, bến xe khách Bãi Cháy; mùa hè khoảng tháng 6 – 9 nóng ẩm mưa nhiều; nên đặt thuê trước 2-3 ngày.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ha-long.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Kim's Motorbike4.8 Honda Wave Alpha hoặc dòng xe tương tự Honda Wave Alpha, Honda Airblade, Yamaha Sirius (giao ngẫu nhiên tùy tình trạng xe thực tế) Đời xe: 2012-2015 Mũ bảo hiểm, Xăng (1 lít) Giao xe tận nơi Không cần cọc trước từ 130.000đ\"; \"từ 06:00 đến 22:00\"; \"Nhà xe giữ lại CCCD hoặc Passport\"; \"7894.8 Honda Wave RSX hoặc dòng xe tương tự... từ 150.000đ\"; \"từ 08:00 đến 21:00\"; \"Cọc 500k/xe\"; \"Mạnh Thành Phát 3934.8 Honda Airblade hoặc dòng xe tương tự Honda Airblade, Honda Vision, Honda Lead, Yamaha Nouvo (giao ngẫu nhiên...)... từ 150.000đ\"; \"từ 08:00 đến 22:00\"; \"Kim's Motorbike4.8 Honda Airblade hoặc dòng xe tương tự Honda Airblade, Honda Vision, Honda Lead... từ 180.000đ\"; \"Yamaha Nouvo LX ... từ 180.000đ\"; \"Mạnh Thành Phát 3934.8 Honda Airblade hoặc dòng xe tương tự Honda Airblade, Honda Vision (giao ngẫu nhiên tùy tình trạng xe thực tế) Đời xe: 2018-2020 ... từ 250.000đ\"; \"7894.8 Vinfast Evo200 Lite Đời xe: từ 2024 Mũ bảo hiểm, Xăng (1 lít) Không cần cọc trước từ 250.000đ\"; \"Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe.\"; \"Thuê tối thiểu từ 1 ngày.\"; \"FLC Ha Long Bay, Phường Hạ Long Vincom Plaza Hạ Long, Phường Hồng Gai Công viên Sun World Hạ Long, Phường Bãi Cháy Bến xe khách Bãi Cháy, Phường Việt Hưng\"; \"vào mùa hè từ khoảng tháng 6 đến tháng 9, thời tiết Hạ Long thường trở nên nóng ẩm và mưa nhiều\"; \"bạn nên đặt thuê xe trước ít nhất 2-3 ngày\""
+    },
+    {
+      "claim": "Từ trung tâm Hà Nội đến Hạ Long khoảng 156 km (có cách tính tới khoảng 170 km); Bãi Cháy cách Hà Nội khoảng 149 km; ô tô hoặc xe khách mất hơn 2 giờ; cao tốc hiện nay khoảng 2 – 2,5 giờ.",
+      "source_url": "https://khainamtransport.com/tu-ha-noi-den-ha-long-bao-nhieu-km-quang-duong-thoi-gian-va-cach-di/",
+      "source_domain": "khainamtransport.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"quãng đường này thường dao động khoảng hơn 150 km, phổ biến nhất là trong khoảng 156 km đến 170 km nếu xuất phát từ trung tâm Hà Nội\"; \"quãng đường đến Hạ Long thường được nhắc tới ở mức khoảng 156 km\"; \"khu Bãi Cháy cách Hà Nội khoảng 149 km\"; \"hành trình từ Hà Nội đến Hạ Long thường mất hơn 2 giờ\"; \"Với cao tốc hiện nay, nhiều hành trình được rút xuống còn khoảng 2 đến 2,5 giờ\""
+    }
+  ]
+}

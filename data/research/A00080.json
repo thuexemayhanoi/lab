@@ -1,0 +1,137 @@
+{
+  "article_id": "A00080",
+  "primary_keyword": "thuê xe máy Tam Cốc – Bích Động",
+  "secondary_keywords": [
+    "thuê xe máy tại Tam Cốc",
+    "giá thuê xe máy Ninh Bình",
+    "vé Tam Cốc Bích Động",
+    "thuê xe máy gần bến thuyền Tam Cốc",
+    "cho thuê xe máy khu Cố đô Hoa Lư"
+  ],
+  "search_intent": "informational-research — du khách đi Tam Cốc – Bích Động cần bảng vé gộp (thắng cảnh + thuyền), khung giờ bến, mặt bằng giá thuê xe quanh khu Tam Cốc và cách ghép Bích Động – Hang Múa – Tràng An trong ngày bằng xe máy",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Tam Cốc – Bích Động",
+    "sông Ngô Đồng",
+    "Cố đô Hoa Lư",
+    "Ninh Bình",
+    "chùa Bích Động",
+    "đền Thái Vi",
+    "Hang Múa",
+    "Thung Nham",
+    "Tràng An",
+    "ga Ninh Bình",
+    "Hà Nội"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe tay ga",
+    "xe côn tay",
+    "xe máy điện",
+    "thuyền chèo tay",
+    "xe điện trung chuyển"
+  ],
+  "brand_entities": [
+    "Sovaba Travel",
+    "An Nam Discovery",
+    "Ninh Binh Local Tour",
+    "Vexere",
+    "Hương Dương",
+    "Best",
+    "Hannah Bike Rental",
+    "Ngọc Linh",
+    "Cố Đô Xanh",
+    "Honda",
+    "Yamaha",
+    "VinFast"
+  ],
+  "model_entities": [
+    "Honda Wave RSX",
+    "Honda Wave Alpha",
+    "Honda Airblade",
+    "Honda Lead",
+    "Yamaha Sirius",
+    "Yamaha Nouvo",
+    "VinFast Evo Lite",
+    "VinFast Feliz S"
+  ],
+  "questions_found": [
+    "Thuê xe máy ở Tam Cốc giá bao nhiêu một ngày?",
+    "Vé Tam Cốc – Bích Động bao nhiêu và bao gồm những gì?",
+    "Đi thuyền Tam Cốc mất bao lâu, giờ nào ngừng bán vé?",
+    "Từ Tràng An sang Tam Cốc bao xa?",
+    "Đi Tam Cốc mùa nào đẹp nhất?"
+  ],
+  "related_queries": [
+    "giá vé Tam Cốc Bích Động 2026",
+    "thuê xe máy Ninh Bình giao tận nơi",
+    "bến thuyền Tam Cốc giờ mở cửa",
+    "lịch trình Tam Cốc Hang Múa Tràng An một ngày"
+  ],
+  "serp_patterns": "SERP 'thuê xe máy Tam Cốc' là bài thuê xe Ninh Bình (Motogo/Vexere/Vissai) và cẩm nang vé Tam Cốc (Sovaba/An Nam) — chưa có bài ghép intent POI 'xe máy + vé thuyền Tam Cốc'. Repo đã có thue-xe-may-ninh-binh (tỉnh) và thue-xe-may-trang-an (POI lân cận) — bài này chiếm intent POI Tam Cốc bằng bảng vé gộp, khung giờ bến và bảng giá thuê xe khu Tam Cốc (Ninh Binh Local Tour giao tại Tam Cốc).",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "Sovaba Travel — Cập nhật giá vé tham quan Tam Cốc - Bích Động mới nhất 2026 (bảng vé tiêu chuẩn/trọn gói, giờ mở cửa, thuyền, di chuyển)",
+      "url": "https://sovaba.travel/blog/bai-viet-cap-nhat-gia-ve-tham-quan-tam-coc-bich-dong-moi-nhat"
+    },
+    {
+      "name": "An Nam Discovery — Giá vé Tam Cốc 2026: lịch thuyền & giờ mở cửa (thời gian thuyền, khung giờ bến)",
+      "url": "https://annamdiscovery.vn/gia-ve-tam-coc-2026-lich-thuyen-gio-mo-cua/"
+    },
+    {
+      "name": "Ninh Binh Local Tour — Thuê xe máy Tam Cốc: giá, giao xe, lịch trình (bảng giá nửa ngày/ngày theo loại xe)",
+      "url": "https://ninhbinhlocaltour.com/thue-xe-may-tam-coc/"
+    },
+    {
+      "name": "Vexere — Thuê xe máy ở Ninh Bình (bảng cửa hàng Hương Dương, Best, Hannah Bike Rental, Ngọc Linh, Cố Đô Xanh)",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-ninh-binh.vi"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ninh-binh/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-trang-an/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-co-do-hoa-lu/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ha-noi/"
+  ],
+  "potential_cannibalization": "Khác thue-xe-may-ninh-binh (A00018, intent tỉnh): bài này nhắm intent POI Tam Cốc với bảng vé gộp, giờ bến, bảng giá Ninh Binh Local Tour tại khu Tam Cốc và lịch ghép Hang Múa – Tràng An; khác thue-xe-may-trang-an (A00079, POI khác): link chéo giữa hai POI lân cận, mỗi bài giữ vé/giờ bến riêng.",
+  "unique_angle": "Ghép bảng vé gộp 2026 (tiêu chuẩn 250.000đ/120.000đ, trọn gói 350.000đ/190.000đ, ngừng vé đò riêng 150.000đ) + giờ bến 7:00–17:00/ngừng bán 16:30 + thuyền 1,5–2 giờ + bảng giá thuê xe khu Tam Cốc (70.000đ nửa ngày xe số) + lịch 'thuyền sáng, Bích Động trưa, Hang Múa chiều, Tràng An 7–8 km' — góc 'xe máy là chất kết nối các bến thuyền Ninh Bình'.",
+  "notes": "Hàng informational_only (POI Ninh Bình): không dùng \"chúng tôi\", không claim dịch vụ; disclosure P2 chuẩn. requires_official_sources=0. Mọi claim định lượng có claim_evidence từ nguồn đã mở 2026-10-01.",
+  "claim_evidence": [
+    {
+      "claim": "Vé Tam Cốc – Bích Động 2026: gói tiêu chuẩn người lớn (từ 1,3m) 250.000 VNĐ, trẻ em 1m–1,3m 120.000 VNĐ, trẻ dưới 1m miễn phí, người cao tuổi 120.000 VNĐ; gói trọn gói kèm xe điện trung chuyển 350.000 VNĐ/190.000 VNĐ; hình thức bán riêng vé đò 150.000 VNĐ đã ngừng áp dụng; vé gồm thuyền chèo tay (tối đa 4 khách Việt Nam hoặc 2 khách quốc tế/thuyền), ba hang động, chùa Bích Động, đền Thái Vi; không gồm ăn uống, hướng dẫn viên, phí gửi xe máy khoảng 10.000 VNĐ/xe.",
+      "source_url": "https://sovaba.travel/blog/bai-viet-cap-nhat-gia-ve-tham-quan-tam-coc-bich-dong-moi-nhat",
+      "source_domain": "sovaba.travel",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Vé tiêu chuẩn (không bao gồm xe điện trung chuyển) | 250.000 VNĐ | 120.000 VNĐ | Miễn phí | 120.000 VNĐ\"; \"Vé trọn gói (bao gồm xe điện trung chuyển giữa các điểm) | 350.000 VNĐ | 190.000 VNĐ | Miễn phí | 190.000 VNĐ\"; \"Hình thức bán riêng vé đò 150.000 VNĐ như trước đây đã được ngừng áp dụng.\"; \"Trải nghiệm thuyền chèo tay trên sông Ngô Đồng, mỗi thuyền phục vụ tối đa 4 khách Việt Nam hoặc 2 khách quốc tế.\"; \"Phí gửi xe máy khoảng 10.000 VNĐ/xe.\""
+    },
+    {
+      "claim": "Khu mở cửa 7:00 – 17:00; tuyến thuyền ngừng bán vé lúc 16:30; nên dành khoảng 2,5 – 3,5 giờ cho cả khu; limousine Hà Nội – Ninh Bình khoảng 2 giờ, 150.000 – 200.000 VNĐ/người; Tràng An cách Tam Cốc 7–8 km; cuối tuần chờ thuyền có thể kéo dài 30 – 60 phút; mùa lúa chín tháng 5 – 6, lúa xanh tháng 3 – 4; tip lái đò khoảng 20.000 – 50.000 VNĐ/thuyền.",
+      "source_url": "https://sovaba.travel/blog/bai-viet-cap-nhat-gia-ve-tham-quan-tam-coc-bich-dong-moi-nhat",
+      "source_domain": "sovaba.travel",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Khu du lịch mở cửa từ 7:00 – 17:00 mỗi ngày.\"; \"(Lưu ý: Tuyến thuyền ngừng bán vé lúc 16h30 để đảm bảo an toàn cho du khách).\"; \"nên dành khoảng 2,5 – 3,5 giờ cho hành trình\"; \"Xe limousine Hà Nội – Ninh Bình: Thời gian di chuyển khoảng 2 giờ, giá vé từ 150.000 – 200.000 VNĐ/người\"; \"Từ Tràng An đến Tam Cốc: Khoảng cách chỉ 7–8 km\"; \"thời gian chờ thuyền có thể kéo dài 30–60 phút\"; \"tháng 5 – 6 là mùa lúa chín\"; \"tháng 3 – 4 cũng là thời gian lý tưởng\"; \"gửi tiền tip khoảng 20.000 – 50.000 VNĐ/thuyền\""
+    },
+    {
+      "claim": "Thời gian đi thuyền Tam Cốc khoảng 1,5 – 2 giờ cho cả lượt đi và về; quầy mở bán vé khoảng 7:30 sáng; thuyền cuối quay về bến khoảng 18:30; khung giờ nên đi 7:30 – 9:00 hoặc 15:30 – 16:30, tránh 11:00 – 13:00; vé người lớn khoảng 250.000đ, trẻ em 1m–1,3m khoảng 120.000đ, dưới 1m miễn phí.",
+      "source_url": "https://annamdiscovery.vn/gia-ve-tam-coc-2026-lich-thuyen-gio-mo-cua/",
+      "source_domain": "annamdiscovery.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Thời gian đi thuyền Tam Cốc thường khoảng 1,5 đến 2 giờ.\"; \"Giờ mở bán vé: khoảng 7:30 sáng.\"; \"Thuyền quay về bến cuối: khoảng 18:30 tùy mùa và lượng khách.\"; \"Sáng sớm từ 7:30 đến 9:00\"; \"Cuối chiều từ 15:30 đến 16:30\"; \"Nên tránh khoảng 11:00 đến 13:00\"; \"Người lớn: 250.000đ/người\"; \"Trẻ em cao từ 1m đến 1,3m: 120.000đ/người\"; \"Trẻ em dưới 1m: miễn phí\""
+    },
+    {
+      "claim": "Ninh Binh Local Tour niêm yết thuê xe tại khu Tam Cốc: xe số từ 70.000đ/nửa ngày, từ 100.000đ/ngày; xe ga từ 90.000đ/nửa ngày, từ 120.000đ/ngày; xe ga cao cấp và xe côn tay từ 150.000đ/ngày; hỗ trợ giao xe tại khu Tam Cốc, Tràng An, Hang Múa, ga Ninh Bình hoặc bến xe Ninh Bình.",
+      "source_url": "https://ninhbinhlocaltour.com/thue-xe-may-tam-coc/",
+      "source_domain": "ninhbinhlocaltour.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"| Xe số | Từ 70.000đ | Từ 100.000đ/ngày | Có ưu đãi |\"; \"| Xe ga | Từ 90.000đ | Từ 120.000đ/ngày | Có ưu đãi |\"; \"| Xe ga cao cấp | Liên hệ | Từ 150.000đ/ngày | Báo giá riêng |\"; \"| Xe côn tay | Liên hệ | Từ 150.000đ/ngày | Báo giá riêng |\"; \"hỗ trợ tư vấn loại xe, thời gian nhận xe và điểm giao phù hợp tại khu Tam Cốc, Tràng An, Hang Múa, ga Ninh Bình hoặc bến xe Ninh Bình tùy lịch thực tế\""
+    },
+    {
+      "claim": "Trên Vexere khu vực Ninh Bình: Hương Dương Honda Wave RSX/Wave Alpha từ 100.000đ/ngày kèm mũ bảo hiểm, 1 lít xăng, nhận trả xe 05:00 – 23:00, giữ CCCD; Best Honda Wave Alpha/Yamaha Sirius từ 100.000đ/ngày, nhận trả 07:00 – 21:00; Hannah Bike Rental Yamaha Nouvo từ 100.000đ/ngày, nhận trả 07:00 – 21:00, không cần cọc trước; Ngọc Linh Honda Wave Alpha từ 100.000đ/ngày, nhận trả 07:00 – 22:00; Cố Đô Xanh VinFast Evo Lite/Feliz S từ 150.000đ/ngày kèm mũ bảo hiểm, áo mưa, giá đỡ điện thoại, niêm yết không cần bằng lái, không cần cọc; mỗi ngày thuê tính bằng 24 giờ kể từ thời điểm nhận xe; xe điện Cố Đô Xanh chỉ sử dụng trong phạm vi thành phố Ninh Bình (cũ).",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ninh-binh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Hương Dương4.8 Honda Wave RSX hoặc dòng xe tương tự Honda Wave RSX, Honda Wave Alpha... Mũ bảo hiểm, Xăng (1 lít) Giao xe tận nơi Không cần cọc trước từ 100.000đ\"; \"từ 05:00 đến 23:00\"; \"Nhà xe giữ lại CCCD hoặc Passport\"; \"Best4.9 Honda Wave Alpha hoặc dòng xe tương tự Honda Wave Alpha, Yamaha Sirius... từ 100.000đ\"; \"từ 07:00 đến 21:00\"; \"Hannah Bike Rental4.8 Yamaha Nouvo... Mũ bảo hiểm, Xăng (1 lít) Không cần cọc trước từ 100.000đ\"; \"Ngọc Linh4.8 Honda Wave Alpha... từ 100.000đ\"; \"từ 07:00 đến 22:00\"; \"Cố Đô Xanh5.0 Vinfast Evo Lite... Mũ bảo hiểm, Áo mưa, Giá đỡ điện thoại Giao xe tận nơi Không cần bằng lái Không cần cọc trước từ 150.000đ\"; \"Vinfast Evo, Vinfast Feliz S (giao ngẫu nhiên tùy tình trạng xe thực tế)\"; \"Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe\"; \"Vui lòng chỉ sử dụng xe trong phạm vi Thành phố Ninh Bình (cũ)\""
+    }
+  ]
+}
