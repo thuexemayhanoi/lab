@@ -910,6 +910,29 @@
         "A00063"
       ],
       "count": 2
+    },
+    {
+      "op": "qa",
+      "started_at": "2026-10-01T20:42:13.969Z",
+      "finished_at": "2026-10-01T20:42:14.439Z",
+      "elapsed_ms": 470,
+      "ids": [
+        "A00062",
+        "A00063"
+      ],
+      "count": 2
+    },
+    {
+      "op": "publish",
+      "started_at": "2026-10-01T20:42:15.233Z",
+      "finished_at": "2026-10-01T20:42:16.751Z",
+      "elapsed_ms": 1518,
+      "ids": [
+        "A00062",
+        "A00063"
+      ],
+      "published": 2,
+      "phase": "PRODUCTION"
     }
   ]
 }
