@@ -1,0 +1,280 @@
+{
+  "article_id": "A00041",
+  "primary_keyword": "thuê xe máy Hà Đông",
+  "secondary_keywords": [
+    "cho thuê xe máy Hà Đông",
+    "thuê xe máy Hà Đông giá rẻ",
+    "thuê xe máy Văn Quán",
+    "thuê xe máy Mộ Lao",
+    "cho thuê xe máy Yên Nghĩa"
+  ],
+  "search_intent": "local/commercial",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Hà Đông",
+    "Văn Quán",
+    "Mộ Lao",
+    "Yên Nghĩa",
+    "Dương Nội",
+    "Đồng Mai",
+    "Phú Lâm",
+    "Đường 19/5",
+    "Nguyễn Văn Lộc",
+    "Quyết Thắng",
+    "Hồ Đồng Đô",
+    "Nguyễn Trãi (Hà Đông)",
+    "ga Hà Đông",
+    "chợ Đồng Xuân Hà Đông"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe ga",
+    "xe phân khối lớn",
+    "xe tay côn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "SYM"
+  ],
+  "model_entities": [
+    "Wave",
+    "Wave RSX",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Lead",
+    "Jupiter",
+    "Nouvo",
+    "Attila"
+  ],
+  "questions_found": [
+    "thuê xe máy Hà Đông giá bao nhiêu một ngày?",
+    "thuê xe máy ở Hà Đông có cần đặt cọc không?",
+    "ở Văn Quán, Mộ Lao có nơi nào cho thuê xe máy không?",
+    "thuê xe máy theo tháng ở Hà Đông giá thế nào?",
+    "có dịch vụ giao xe tận nhà tại Hà Đông không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Hà Đông",
+    "cho thuê xe máy Văn Quán",
+    "thuê xe máy Mộ Lao",
+    "thuê xe máy theo tháng Hà Đông",
+    "cho thuê xe máy Hà Đông không cần cọc"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy Hà Đông\" gồm thư mục tổng hợp và trang nhà xe: motogo.vn có bài 5 cơ sở kèm giá công khai (MOTOGO, Anh Tân, Cảnh Trang, Cường Thủy, Mai Quân) và bảng giá tham khảo theo đời xe; thuexemayhaiphong.com tổng hợp 4 địa điểm (Út Ngà, Cảnh Báo/Cảnh Trang, Anh Tân, Himoto) với giá xe số/xe ga từng nơi; hanoireview.vn liệt kê Cảnh Trang, Út Ngà, HIMOTO, Anh Tân kèm ghi chú giao xe tận nơi trong 10-15 phút; timthosuaxe.com thêm các cơ sở Minh Anh, Hải Hà, Cường Thịnh, Duy Hùng, Như Ngọc quanh Đồng Mai, Dương Nội, Phú Lâm, Yên Nghĩa; muaban.net là rao vặt phân loại. Intent local/commercial nhấn mạnh khu trọ sinh viên, thuê theo tháng, giao tận nhà, giá rẻ.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/dia-chi-cho-thue-xe-may-o-ha-dong-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "5 cơ sở kèm giá: MOTOGO xe số 70.000đ–120.000đ/ngày, xe ga 120.000đ–200.000đ/ngày, tính giá theo 24h, không cọc nếu đủ giấy tờ; Anh Tân Văn Quán 120.000đ/200.000đ; Cảnh Trang 90.000đ–120.000đ/140.000đ–250.000đ; Cường Thủy 80.000đ–100.000đ/130.000đ–140.000đ; Mai Quân khoảng 120.000đ/xe; kèm bảng giá tham khảo theo đời xe từ 80.000 vnd tới 160.000 vnd"
+    },
+    {
+      "source_url": "https://thuexemayhaiphong.com/top-4-dia-diem-thue-xe-may-ha-dong/",
+      "source_domain": "thuexemayhaiphong.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Út Ngà 46BT7 Đường 19/5 xe số 120.000 đ/ngày xe ga 160.000 đ–200.000 đ/ngày; Cảnh Báo Lô 32A-BT7 xe số 120.000 đ/ngày xe ga 150.000 đ–200.000 đ/ngày; Anh Tân Mộ Lao xe số 120.000 đ/ngày xe ga 130.000 đ–200.000 đ/ngày, giá giờ 10.000 đ/giờ; Himoto Đại An xe số 100.000 đ/ngày xe ga 150.000 đ–200.000 đ/ngày, giao xe 15 phút"
+    },
+    {
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-thue-xe-may-tai-q-ha-dong",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cảnh Trang giao tận nhà trong vòng 10 phút; HIMOTO hơn 386 xe, giao xe 15 phút; Anh Tân hỗ trợ gói theo ngày/tuần/tháng; dải giá tham khảo 100.000–150.000 VNĐ/ngày xe số và 150.000–250.000 VNĐ/ngày xe ga"
+    },
+    {
+      "source_url": "https://timthosuaxe.com/thue-xe-may-quan-ha-dong/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Các cơ sở Hà Đông: Minh Anh (Đồng Mai), Hải Hà (Mương La Khê, Đồng Mai), Cường Thịnh (DN 5, Dương Nội), Duy Hùng (Phú Lâm, PKL, cọc kèm giấy tờ, 10 – 15 phút), Như Ngọc (48 Quyết Thắng, Yên Nghĩa, ngày/tuần/tháng)"
+    },
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "trang chính thức của nhà xe Nguyễn Tú: bảng giá công khai theo ngày/tuần/tháng, tiền cọc tham khảo, giao tận nơi Long Biên/Hoàn Kiếm/Phố Cổ/Ba Đình và các quận nội thành, giờ 09:00–21:00"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-thanh-xuan/",
+    "/lab/thue-xe-may/thue-xe-may-cau-giay/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "HD-rental-loc-ha-dong riêng biệt: A00001 (thuê xe máy Hà Nội) là bài thành phố tổng quát; A00040 (Thanh Xuân) gắn sinh viên cửa ngõ tây nam quanh Khuất Duy Tiến; A00041 này gắn khu Hà Đông với đặc thù khu trọ Văn Quán – Mộ Lao – Yên Nghĩa, giá sinh viên, thuê theo tháng và các cơ sở cứu hộ địa phương — khác intent, khác geo, không trùng primary intent.",
+  "unique_angle": "Bài Hà Đông duy nhất định vị theo nhóm khách trọ và đi làm ở khu đô thị phía tây: tổng hợp nhóm nhà xe quanh Đường 19/5 – Văn Quán (Út Ngà, Cảnh Trang, Cường Thủy, Anh Tân, Himoto), bảng giá tham khảo theo đời xe phổ thông từ 80.000 vnd, cách tính giá theo 24 giờ, các cơ sở cứu hộ địa phương quanh Phú Lâm – Yên Nghĩa — khác hẳn bài Hà Nội tổng quát và bài Thanh Xuân.",
+  "notes": "actual_service_area=hanoi_owner_verified: được phép dùng NAP đã xác minh từ config/business-facts.json và bảng giá công khai trên trang nhà xe; KHÔNG bịa giá ngoài bảng. \"Quận Hà Đông\" là tên cũ (LEGACY_SEARCH — Sắp xếp đơn vị hành chính 2025) — bài dùng tên địa danh quen thuộc và nêu rõ bối cảnh. Giá của từng nhà xe ngoài luôn dẫn theo công bố công khai của chính nhà xe đó hoặc bài tổng hợp ghi nhận, không tổng quát hóa ngoài khoảng ghi nhận.",
+  "claim_evidence": [
+    {
+      "claim": "MOTOGO ghi giá thuê xe số 70.000đ – 120.000đ/ngày và xe ga 120.000đ – 200.000đ/ngày; có chính sách tính giá thuê xe theo 24h.",
+      "source_url": "https://motogo.vn/dia-chi-cho-thue-xe-may-o-ha-dong-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "MOTOGO — Giá thuê xe số: 70.000đ – 120.000đ/ngày — Giá thuê xe ga: 120.000đ – 200.000đ/ngày — Ngoài ra, giá cả tại đây cũng rất tốt, chỉ từ 70.000đ/ngày để sở hữu một chiếc xe chất lượng bới đầy đủ dịch vụ hấp dẫn. Đặc biệt, MOTOGO còn có chính sách tính giá thuê xe theo 24h. Như vậy bạn có thể giữ xe qua đêm mà chỉ phải trả tiền thuê của 1 ngày."
+    },
+    {
+      "claim": "MOTOGO ghi nhận không cần đặt tiền cọc nếu đáp ứng đủ giấy tờ, và hỗ trợ giao xe tận nơi dù địa chỉ không nằm tại Hà Đông.",
+      "source_url": "https://motogo.vn/dia-chi-cho-thue-xe-may-o-ha-dong-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thậm chí bạn còn không cần đặt tiền cọc nếu đáp ứng đủ giấy tờ nữa. — Tuy không nằm ở Hà Đông nhưng MOTOGO luôn sẵn sàng phục vụ bạn nhờ dịch vụ giao xe tận nơi với chi phí hợp lý."
+    },
+    {
+      "claim": "Anh Tân (36BT7, Đường 19/5, P. Văn Quán, Hà Đông) ghi giá xe số 120.000đ/ngày, xe ga 200.000đ/ngày.",
+      "source_url": "https://motogo.vn/dia-chi-cho-thue-xe-may-o-ha-dong-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Anh Tân — Điện thoại: 097 567 52 96 — Địa chỉ: 36BT7, Đường 19/5, P. Văn Quán, Hà Đông, Hà Nội — Giá thuê xe số: 120.000đ/ngày — Giá thuê xe ga: 200.000đ/ngày"
+    },
+    {
+      "claim": "Bài tổng hợp khác ghi Anh Tân tại 21 P. Nguyễn Văn Lộc, P. Mộ Lao giá xe số 120.000 đ/ngày, xe ga 130.000 đ – 200.000 đ/ngày; có dịch vụ khoảng 10.000 đ/giờ cho dòng xe số và giao xe tận nơi chỉ trong 15 phút.",
+      "source_url": "https://thuexemayhaiphong.com/top-4-dia-diem-thue-xe-may-ha-dong/",
+      "source_domain": "thuexemayhaiphong.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe máy Hà Đông – Anh Tân — Giá thuê xe số: 120.000 đ/ngày — Giá thuê xe ga: 130.000 đ – 200.000 đ/ngày — Địa chỉ: 21 P. Nguyễn Văn Lộc, P. Mộ Lao, Hà Đông, Hà Nội — Cửa hàng hiện cung cấp dịch vụ cho thuê xe với mức giá khoảng 10.000 đ/giờ cho dòng xe số. — Cửa Hàng Cho Thuê Xe Máy Anh Tân hỗ trợ giao xe tận nơi chỉ trong 15 phút, bất kể bạn đang ở khách sạn, sân bay hay tại nhà riêng"
+    },
+    {
+      "claim": "Cảnh Trang (Đường 19/5, Khu đô thị Văn Quán, Hà Đông) ghi giá xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 250.000đ/ngày.",
+      "source_url": "https://motogo.vn/dia-chi-cho-thue-xe-may-o-ha-dong-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cảnh Trang — Địa chỉ: Đường 19/5, Khu đô thị Văn Quán, Hà Đông, Hà Nội — Giá thuê xe số: 90.000đ – 120.000đ/ngày — Giá thuê xe ga: 140.000đ – 250.000đ/ngày"
+    },
+    {
+      "claim": "Cảnh Trang hỗ trợ giao xe tận nhà hoặc tại địa điểm yêu cầu, chỉ cần giấy tờ tùy thân và ký cam kết là nhận xe ngay trong vòng 10 phút.",
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-thue-xe-may-tai-q-ha-dong",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điểm cộng lớn của Cảnh Trang chính là sự linh hoạt và thuận tiện trong dịch vụ thuê xe. Bạn không cần mất thời gian đến cửa hàng, xe sẽ được giao tận nhà hoặc tại địa điểm yêu cầu. Chỉ cần cung cấp giấy tờ tùy thân và ký cam kết, bạn có thể nhận xe ngay trong vòng 10 phút."
+    },
+    {
+      "claim": "Cường Thủy (lô 32, BT 7 Khu đô thị Văn Quán, Hà Đông) ghi giá xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày; có các dòng Wave, AB, Lead, Vision và nhân viên túc trực tất cả các ngày trong tuần.",
+      "source_url": "https://motogo.vn/dia-chi-cho-thue-xe-may-o-ha-dong-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cường Thủy — Địa chỉ: lô 32, BT 7 Khu đô thị Văn Quán, Hà Đông, Hà Nội — Giá thuê xe số: 80.000đ – 100.000đ/ngày — Giá thuê xe ga: 130.000đ – 140.000đ/ngày — Nhiều loại xe được khách hàng ưu ái có thể kể đến như Wave, AB, Lead, Vision. — Tại cửa hàng luôn có nhân viên túc trực tất cả các ngày trong tuần."
+    },
+    {
+      "claim": "Mai Quân (P. Văn Quán, Hà Đông) ghi giá thuê rơi vào khoảng 120.000đ/xe, chủ yếu hai dòng Wave và Vision.",
+      "source_url": "https://motogo.vn/dia-chi-cho-thue-xe-may-o-ha-dong-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tùy loại xe mà sẽ có mức giá khác nhau. Nhưng nhìn chung giá thuê sẽ rơi vào khoảng 120.000đ/xe. — Ta có thể thấy được nơi này sở hữu chủ yếu là hai loại xe: Wave và Vision."
+    },
+    {
+      "claim": "Út Ngà (46BT7, Đường 19/5, Khu đô thị Văn Quán, Hà Đông) ghi giá xe số 120.000 đ/ngày, xe ga 160.000 đ – 200.000 đ/ngày.",
+      "source_url": "https://thuexemayhaiphong.com/top-4-dia-diem-thue-xe-may-ha-dong/",
+      "source_domain": "thuexemayhaiphong.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe máy Hà Đông – Út Ngà — Giá thuê xe số: 120.000 đ/ngày — Giá thuê xe ga: 160.000 đ – 200.000 đ/ngày — Địa chỉ: 46BT7, Đường 19/5, Khu đô thị Văn Quán, Hà Đông, Hà Nội"
+    },
+    {
+      "claim": "Himoto (11 P. Đại An, P. Văn Quán, Hà Đông) ghi giá xe số 100.000 đ/ngày, xe ga 150.000 đ – 200.000 đ/ngày; hỗ trợ giao xe tận nơi chỉ trong 15 phút với đội xe hơn 386 chiếc đang vận hành.",
+      "source_url": "https://thuexemayhaiphong.com/top-4-dia-diem-thue-xe-may-ha-dong/",
+      "source_domain": "thuexemayhaiphong.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Himoto — Giá thuê xe số: 100.000 đ/ngày — Giá thuê xe ga: 150.000 đ – 200.000 đ/ngày — Địa chỉ: 11 P. Đại An, P. Văn Quán, Hà Đông, Hà Nội — HIMOTO hỗ trợ giao xe tận nơi chỉ trong 15 phút, bất kể bạn đang ở khách sạn, sân bay hay tại nhà riêng. — HIMOTO cung cấp hơn 386 chiếc xe đang vận hành, luôn được bảo trì định kỳ để đảm bảo vận hành an toàn và ổn định."
+    },
+    {
+      "claim": "Bảng giá tham khảo ghi nhận tại Hà Đông: Honda Airblade 2012 giá 120.000 vnd; Airblade 2013-2015 giá 140.000 vnd; Airblade 2016-2018 giá 160.000 vnd; Honda Lead và Honda Vision giá 120.000 vnd; Honda Wave S và Wave RS giá 80.000 vnd; Wave RSX-fi và Yamaha Sirius FI giá 90.000 vnd; Yamaha Jupiter gravita giá 80.000 vnd; Nouvo LX giá 100.000 vnd; Nouvo SX fi giá 120.000 vnd; Attila Victoria/Elizabeth giá 100.000 vnd.",
+      "source_url": "https://motogo.vn/dia-chi-cho-thue-xe-may-o-ha-dong-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá cho thuê xe máy ở Hà Đông Hà Nội (tham khảo): Honda Airblade 2012 — 120.000 vnd — Honda Airblade 2013-2015 — 140.000 vnd — Honda Airblade 2016-2017-2018 — 160.000 vnd — Honda Lead — 120.000 vnd — Honda Vision — 120.000 vnd — Honda Wave S — 80.000 vnd — Honda Wave RS — 80.000 vnd — Honda Wave RSX-fi — 90.000 vnd — Yamaha Sirius 2015-2018 FI — 90.000 vnd — Yamaha Jupiter gravita — 80.000 vnd — Yamaha Nouvo LX — 100.000 vnd — Yamaha Nouvo SX fi — 120.000 vnd — Attila Victoria, Elizabeth — 100.000 vnd"
+    },
+    {
+      "claim": "Cách tính giá phổ biến: tính theo 24 giờ — thuê xe từ 9h sáng hôm trước tới trước 9h sáng hôm sau được tính đủ 1 ngày, quá thì cộng thêm theo giờ.",
+      "source_url": "https://motogo.vn/dia-chi-cho-thue-xe-may-o-ha-dong-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tính giá theo thời gian thuê xe cho bạn trong vòng 24 giờ. Có nghĩa nếu bạn thuê xe từ 9h sáng hôm trước thì trước 9h sáng hôm sau. Bạn được tính là đã thuê xe đủ 1 ngày. Nếu quá 9h sáng, số tiền thuê xe sẽ được tính thêm theo giờ."
+    },
+    {
+      "claim": "Duy Hùng (Phú Lâm, Hà Đông) chuyên dòng xe phân khối lớn cho các chuyến xuyên Việt; thủ tục cần giấy tờ tùy thân, bằng lái xe và tiền đặt cọc, hoàn tất khoảng 10 – 15 phút.",
+      "source_url": "https://timthosuaxe.com/thue-xe-may-quan-ha-dong/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Duy Hùng chuyên cung cấp các dòng xe phân khối lớn để bạn có thể thực hiện những chuyến hành trình xuyên Việt. — Thủ tục thuê xe tương đối đơn giản khi chỉ yêu cầu tờ tùy thân, bằng lái xe và tiền đặt cọc với thời gian hoàn tất mọi giao dịch khoảng 10 – 15 phút. — Địa chỉ: Phú Lâm, Hà Đông, Hà Nội, Việt Nam"
+    },
+    {
+      "claim": "Như Ngọc (48 Đ. Quyết Thắng, Yên Nghĩa, Hà Đông) cho thuê theo ngày, tuần, tháng hoặc dài hạn; thủ tục chỉ cần tiền đặt cọc/thế chân và một số giấy tờ cơ bản.",
+      "source_url": "https://timthosuaxe.com/thue-xe-may-quan-ha-dong/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Như Ngọc cho thuê xe máy theo ngày, tuần, tháng hoặc dài hạn với mức giá vừa phải nên sẽ đáp ứng được mọi nhu cầu. Thủ tục thuê xe không phức tạp, thậm chí là đơn giản khi chỉ yêu cầu tiền đặt cọc/thế chân và một số loại giấy tờ cơ bản. — Địa chỉ: 48 Đ. Quyết Thắng, Yên Nghĩa, Hà Đông, Hà Nội, Việt Nam"
+    },
+    {
+      "claim": "Mức giá cạnh tranh tại Hà Đông thường dao động từ 100.000 – 150.000 VNĐ/ngày đối với xe số và từ 150.000 – 250.000 VNĐ/ngày đối với xe tay ga; thủ tục thường chỉ yêu cầu CMND/CCCD hoặc hộ chiếu kèm mức đặt cọc hợp lý.",
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-thue-xe-may-tai-q-ha-dong",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Hãy chọn những địa chỉ có mức giá cạnh tranh, thường dao động từ 100.000 – 150.000 VNĐ/ngày đối với xe số hoặc từ 150.000 – 250.000 VNĐ/ngày đối với xe tay ga. — Một địa chỉ chuyên nghiệp thường chỉ yêu cầu CMND/CCCD hoặc hộ chiếu kèm mức đặt cọc hợp lý."
+    },
+    {
+      "claim": "Dịch vụ của chủ trang web công bố giá thuê Honda Wave và Yamaha Sirius (xe số): 150.000đ/ngày; giá tuần 700.000đ; giá tháng 900.000–1.200.000đ.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 150.000đ/ngày. Giá tuần 700.000đ; giá tháng 900.000–1.200.000đ."
+    },
+    {
+      "claim": "Honda Click / Yamaha Mio (xe ga giá rẻ): 150.000đ/ngày; 700.000đ/tuần; 900.000–1.200.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Click / Yamaha Mio – xe ga giá rẻ: 150.000đ/ngày; 700.000đ/tuần; 900.000–1.200.000đ/tháng."
+    },
+    {
+      "claim": "Honda Vision: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000–2.000.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Vision – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000–2.000.000đ/tháng."
+    },
+    {
+      "claim": "Honda Air Blade: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Air Blade – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Xe máy điện: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy điện tại Nguyễn Tú: 200.000đ/ngày. — Giá thuê xe máy điện tại Nguyễn Tú: 1.000.000đ/tuần. — Giá thuê xe máy điện tại Nguyễn Tú: 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Tiền đặt cọc tham khảo: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiền đặt cọc tham khảo: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu."
+    },
+    {
+      "claim": "Dịch vụ giao xe tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chúng tôi giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành, giúp bạn khám phá Hà Nội an toàn và tiết kiệm."
+    },
+    {
+      "claim": "Địa điểm chính tại Long Biên; giá, tiền cọc và tình trạng xe được xác nhận trước khi chốt.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điểm khác biệt của Nguyễn Tú: địa điểm chính tại Long Biên, hỗ trợ giao xe theo khu vực và tư vấn loại xe theo thời gian thuê. Giá, tiền cọc và tình trạng xe được xác nhận trước khi chốt."
+    },
+    {
+      "claim": "Giờ làm việc 09:00 – 21:00 và không giao xe ngoài khung giờ này.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điện thoại: 0942 467 674 · 09:00 – 21:00 · Không giao xe máy ngoài giờ. (Địa điểm chính: Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội.)"
+    }
+  ]
+}

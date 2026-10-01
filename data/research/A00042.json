@@ -1,0 +1,285 @@
+{
+  "article_id": "A00042",
+  "primary_keyword": "thuê xe máy Tây Hồ",
+  "secondary_keywords": [
+    "cho thuê xe máy Tây Hồ",
+    "thuê xe máy Tây Hồ giá rẻ",
+    "thuê xe máy gần Hồ Tây",
+    "thuê xe máy Xuân Diệu",
+    "cho thuê xe máy Yên Phụ"
+  ],
+  "search_intent": "local/commercial",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Tây Hồ",
+    "Hồ Tây",
+    "Quảng An",
+    "Tứ Liên",
+    "Yên Phụ",
+    "Bưởi",
+    "Phú Thượng",
+    "Xuân Diệu",
+    "Đặng Thai Mai",
+    "Âu Cơ",
+    "Trích Sài",
+    "Nghi Tàm",
+    "Thụy Khuê",
+    "An Dương",
+    "Võng Thị",
+    "Từ Hoa",
+    "sân bay Nội Bài"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe ga",
+    "xe phân khối lớn",
+    "xe côn tay"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki",
+    "Kawasaki",
+    "Vespa",
+    "Piaggio",
+    "SYM"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Lead",
+    "Air Blade",
+    "Janus",
+    "Dream",
+    "Exciter",
+    "CB150R",
+    "GSX-R150",
+    "Z125 Pro",
+    "XR",
+    "Cub"
+  ],
+  "questions_found": [
+    "thuê xe máy Tây Hồ giá bao nhiêu một ngày?",
+    "thuê xe máy gần Hồ Tây ở đâu uy tín?",
+    "thuê xe máy ở Tây Hồ có cần đặt cọc không?",
+    "khách nước ngoài thuê xe máy ở Tây Hồ cần giấy tờ gì?",
+    "ở Tây Hồ có thuê xe phân khối lớn không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Tây Hồ",
+    "cho thuê xe máy Hồ Tây",
+    "thuê xe máy Quảng An",
+    "thuê xe máy Yên Phụ gần Hồ Tây",
+    "cho thuê xe máy Tây Hồ không cần cọc"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy Tây Hồ\" nghiêng về du khách ven Hồ Tây: motogo.vn tổng hợp 6 địa chỉ kèm giá (MOTOGO, RentABike – Hanoi, Vietnam dirt bike venture, Mr Goodbikes, 'Thuê xe máy Tây Hồ', Anh Hữu) quanh Đặng Thai Mai, Âu Cơ, Trích Sài, An Dương, Âu Cơ thôn Bắc; giahuy.org liệt kê Thuê Xe Máy Việt, Hoàng Hiệp Motorbike (Xuân Diệu), Mr-Good Bikes (Võng Thị), RentABike Tây Hồ, Anh Hữu; travelist.vn có bảng giá theo dòng xe (Xuân Diệu, Hoàng Hiệp, Hai Banh Garage, Motorbike Rental Thụy Khuê) và giá theo tháng; timthosuaxe.com thêm Trung Hiếu Motor cứu hộ ven hồ. Intent local/commercial nhấn mạnh khách nước ngoài lưu trú quanh Hồ Tây, không cần cọc, phân khối lớn, giao tận nơi.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ho-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "6 địa chỉ kèm giá: MOTOGO xe số 80.000đ–130.000đ/ngày xe ga 120.000đ–200.000đ/ngày không yêu cầu cọc, thủ tục 10-15 phút; RentABike Đặng Thai Mai 80.000đ–100.000đ/130.000đ–140.000đ; Vietnam dirt bike venture 200 Âu Cơ 120.000đ/200.000đ; Mr Goodbikes Trích Sài 100.000đ/120.000đ; Ngõ 72 An Dương 100.000đ/180.000đ không cọc; Anh Hữu 464 Âu Cơ 130.000đ/ngày"
+    },
+    {
+      "source_url": "https://giahuy.org/thue-xe-may-tay-ho-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê Xe Máy Việt ngõ 76/35 An Dương 100.000–250.000 đồng/ngày; Hoàng Hiệp Motorbike 57 Xuân Diệu có PKL Exciter/CB150R/GSX-R150/Z125 Pro, đổi xe miễn phí trong 24 giờ; Mr-Good Bikes 48 Võng Thị; RentABike Tây Hồ XR/Cub từ 10 đô la; Anh Hữu 464 Âu Cơ"
+    },
+    {
+      "source_url": "https://travelist.vn/thue-xe-may-o-tay-ho-ha-noi/",
+      "source_domain": "travelist.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Hai Banh Garage 118 Từ Hoa tháng từ 1.000.000 VNĐ, ngày xe ga từ 150.000 VNĐ, xe số từ 100.000 VNĐ; 26 Xuân Diệu Dream/Wave/Sirius 120.000 VNĐ, Vision/Lead/Air Blade/Janus 150.000 VNĐ; Hoàng Hiệp Nghi Tàm tháng chỉ từ 30.000 VNĐ/ngày; Motorbike Rental Thụy Khuê tính 24 tiếng, cọc 500.000 VNĐ + CCCD"
+    },
+    {
+      "source_url": "https://timthosuaxe.com/thue-xe-may-quan-tay-ho/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Trung Hiếu Motor Tây Hồ 100.000đ–200.000đ/ngày, cứu hộ có mặt sau 10-15 phút trên các tuyến đường ven hồ, hotline 0376.639.181"
+    },
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "trang chính thức của nhà xe Nguyễn Tú: bảng giá công khai theo ngày/tuần/tháng, tiền cọc tham khảo, giao tận nơi Long Biên/Hoàn Kiếm/Phố Cổ/Ba Đình và các quận nội thành, giờ 09:00–21:00"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-ba-dinh/",
+    "/lab/thue-xe-may/thue-xe-may-cau-giay/",
+    "/lab/thue-xe-may/thue-xe-may-hoan-kiem/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "TH-rental-loc-tay-ho riêng biệt: A00001 (thuê xe máy Hà Nội) là bài thành phố tổng quát; A00037 (Ba Đình) gắn trung tâm hành chính và ven Hồ Tây phía nam; A00042 này gắn bờ Hồ Tây phía tây và bắc (Quảng An, Tứ Liên, Yên Phụ, Phú Thượng) với đặc thù khách nước ngoài lưu trú, phân khối lớn, không cần cọc — khác intent, khác geo, không trùng primary intent.",
+  "unique_angle": "Bài Tây Hồ duy nhất định vị theo khách du lịch và người nước ngoài sống quanh Hồ Tây: tổng hợp nhóm nhà xe ven bờ hồ (Đặng Thai Mai, Xuân Diệu, Âu Cơ, Trích Sài, Nghi Tàm, Thụy Khuê) với chính sách không cần cọc hoặc cọc thấp, phân khối lớn cho khách tự lái XR/Cub, cách tính 24 tiếng — khác hẳn bài Ba Đình phía nam hồ và bài Hà Nội tổng quát.",
+  "notes": "actual_service_area=hanoi_owner_verified: được phép dùng NAP đã xác minh từ config/business-facts.json và bảng giá công khai trên trang nhà xe; KHÔNG bịa giá ngoài bảng. \"Quận Tây Hồ\" là tên cũ (LEGACY_SEARCH — Sắp xếp đơn vị hành chính 2025) — bài dùng tên địa danh quen thuộc và nêu rõ bối cảnh. Giá USD (10 đô la, 6 đô la) chỉ giữ trong packet làm bối cảnh, không đưa vào bài viết. Giá của từng nhà xe ngoài luôn dẫn theo công bố công khai của chính nhà xe đó hoặc bài tổng hợp ghi nhận.",
+  "claim_evidence": [
+    {
+      "claim": "MOTOGO ghi giá thuê xe số 80.000đ – 130.000đ/ngày và xe ga 120.000đ – 200.000đ/ngày, có các địa chỉ ghi nhận tại 81 Nguyễn Khả Trạc, 7 ngõ 267 Hoàng Hoa Thám và sân bay Nội Bài; thủ tục linh hoạt, không yêu cầu đặt cọc, chỉ cần khoảng 10-15 phút hoàn tất; hỗ trợ giao nhận xe trong khu vực nội thành Hà Nội.",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ho-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "MOTOGO — Địa chỉ 1: 81 Nguyễn Khả Trạc, Mai Dịch, Hà Nội — Địa chỉ 2: 7 ngõ 267 Hoàng Hoa Thám, Ngọc Hà, Hà Nội — Địa chỉ 3: Sân bay Nội Bài — Giá thuê xe số: 80.000đ – 130.000đ/ngày — Giá thuê xe ga: 120.000đ – 200.000đ/ngày — thủ tục thuê xe linh hoạt và đơn giản, không yêu cầu đặt cọc. Bạn chỉ cần dành khoảng 10-15 phút là đã hoàn tất quá trình thuê xe và nhận xe thuận tiện. — MOTOGO còn hỗ trợ giao nhận xe trong khu vực nội thành Hà Nội."
+    },
+    {
+      "claim": "RentABike – Hanoi (15a Ngõ 12 Đặng Thai Mai, Quảng An, Tây Hồ) ghi giá xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ho-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "RentABike – Hanoi — Địa chỉ: 15a Ngõ 12 – Đặng Thai Mai, Quảng An, Tây Hồ, Hà Nội — Giá thuê xe số: 80.000đ – 100.000đ/ngày — Giá thuê xe ga: 130.000đ – 140.000đ/ngày"
+    },
+    {
+      "claim": "Vietnam dirt bike venture (200 Âu Cơ, Tứ Liên, Tây Hồ) ghi giá xe số 120.000đ/ngày, xe ga 200.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ho-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Vietnam dirt bike venture — Địa chỉ: 200 Âu Cơ, Tứ Liên, Tây Hồ, Hà Nội — Giá thuê xe số: 120.000đ/ngày — Giá thuê xe ga: 200.000đ/ngày"
+    },
+    {
+      "claim": "Mr Goodbikes (Ngõ 149 Trích Sài, Bưởi, Tây Hồ) ghi giá xe số 100.000đ/ngày, xe ga 120.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ho-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Mr Goodbikes — Địa chỉ: Ngõ 149 P. Trích Sài, Bưởi, Tây Hồ, Hà Nội — Giá thuê xe số: 100.000đ/ngày — Giá thuê xe ga: 120.000đ/ngày"
+    },
+    {
+      "claim": "Cửa hàng 'Thuê xe máy Tây Hồ' (Ngõ 72 An Dương, Yên Phụ) ghi giá xe số 100.000đ/ngày, xe ga 180.000đ/ngày; thủ tục chỉ cần để lại giấy tờ cá nhân có ảnh, hoàn toàn không cần đặt cọc, trong khi một số nơi khác yêu cầu cọc khoảng 3 triệu/xe.",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ho-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe máy Tây Hồ — Địa chỉ: Ngõ 72 An Dương, Yên Phụ, Tây Hồ, Hà Nội — Giá thuê xe số: 100.000đ/ngày — Giá thuê xe ga: 180.000đ/ngày — thủ tục thuê xe tại đây rất đơn giản, nhanh gọn. Bạn chỉ cần để lại giấy tờ cá nhân có ảnh là được. Hoàn toàn không cần đặt cọc mà chỉ cần thanh toán tiền thuê thôi. Một số nơi khác khi thuê xe sẽ cần cọc khoảng 3 triệu/xe."
+    },
+    {
+      "claim": "Anh Hữu (464 Âu Cơ, thôn Bắc, Tây Hồ) ghi giá thuê xe 130.000đ/ngày; có hơn 10 năm kinh nghiệm; cho thuê kèm phụ kiện mũ bảo hiểm, găng tay, khăn trùm đầu, áo mưa.",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ho-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Anh Hữu — Địa chỉ: 464 Âu Cơ, thôn Bắc, Tây Hồ, Hà Nội — Giá thuê xe: 130.000đ/ngày — Với hơn 10 năm kinh nghiệm trong lĩnh vực cho thuê xe máy, Anh Hữu cam kết cung cấp các dòng xe mới, đời mới, chất lượng và được bảo dưỡng định kỳ. — cửa hàng cũng cho thuê các phụ kiện đi kèm như mũ bảo hiểm, găng tay, khăn trùm đầu, áo mưa."
+    },
+    {
+      "claim": "Thuê Xe Máy Việt (ngõ 76/35 Phố An Dương, Yên Phụ, Tây Hồ) ghi giá thuê dao động từ 100.000 đồng đến 250.000 đồng/ngày tùy loại xe và thời gian thuê.",
+      "source_url": "https://giahuy.org/thue-xe-may-tay-ho-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê Xe Máy Việt tại địa chỉ ngõ 76/35 Phố An Dương, Yên Phụ, Tây Hồ, Hà Nội. Với mức giá thuê dao động từ 100.000 đồng đến 250.000 đồng/ngày tùy thuộc vào loại xe và thời gian thuê, bạn sẽ có nhiều sự lựa chọn phù hợp với túi tiền và nhu cầu của mình."
+    },
+    {
+      "claim": "Hoàng Hiệp Motorbike (57 Đường Xuân Diệu, Quảng An, Tây Hồ) có các dòng phân khối lớn như Yamaha Exciter, Honda CB150R, Suzuki GSX-R150 và Kawasaki Z125 Pro; hỗ trợ giao xe tận nơi và đổi xe miễn phí trong vòng 24 giờ.",
+      "source_url": "https://giahuy.org/thue-xe-may-tay-ho-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Hoàng Hiệp Motorbike tọa lạc tại 57 Đường Xuân Diệu, Quảng An, Tây Hồ, Hà Nội. — khách hàng có thể dễ dàng lựa chọn các loại xe phù hợp với nhu cầu của mình, từ xe số tự động đến xe tay ga, các loại xe phân khối lớn như Yamaha Exciter, Honda CB150R, Suzuki GSX-R150 và Kawasaki Z125 Pro. — Điểm đặc biệt của Hoàng Hiệp Motorbike là dịch vụ giao xe tận nơi và đổi xe miễn phí trong vòng 24 giờ."
+    },
+    {
+      "claim": "Bài tổng hợp khác ghi Hoàng Hiệp Motorbike tại 37 Ngõ 310 Đường Nghi Tàm, Yên Phụ với giá thuê theo tháng chỉ từ 30.000 VNĐ/ngày; xe số Wave S, Wave RS, Wave RSX 110cc giá 100.000 – 150.000 VNĐ ngày và 900.000 – 1.500.000 VNĐ tháng; xe ga Yamaha Classic 110cc giá 90.000 VNĐ ngày và 1.000.000 VNĐ tháng.",
+      "source_url": "https://travelist.vn/thue-xe-may-o-tay-ho-ha-noi/",
+      "source_domain": "travelist.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Hoàng Hiệp Motorbike — Địa chỉ: 37 Ngõ 310 Đường Nghi Tàm, Yên Phụ, Q. Tây Hồ, Hà Nội — Hoàng Hiệp Motorbike cam kết sẽ hỗ trợ cho khách thuê theo tháng chỉ từ 30.000 VNĐ/ngày. — Giá thuê xe Hoàng Hiệp Motorbike: Xe số Wave S, Wave Rs, Wave Rsx 110cc — 100.000 – 150.000 VNĐ (ngày), 900.000 – 1.500.000 VNĐ (tháng) — Xe ga Yamaha Classic 110cc — 90.000 VNĐ (ngày), 1.000.000 VNĐ (tháng)"
+    },
+    {
+      "claim": "Hai Banh Garage (118 Từ Hoa, Quảng An, Tây Hồ) ghi giá thuê theo tháng các dòng xe từ 1.000.000 VNĐ; theo ngày xe ga từ 150.000 VNĐ và xe số từ 100.000 VNĐ.",
+      "source_url": "https://travelist.vn/thue-xe-may-o-tay-ho-ha-noi/",
+      "source_domain": "travelist.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Hai Banh Garage — Địa chỉ: 118 Từ Hoa, Quảng An, Q. Tây Hồ, Hà Nội — Giá thuê xe tham khảo tại Hai Banh Garage: Giá thuê xe theo tháng các dòng xe có giá từ 1.000.000 VNĐ. — Giá thuê xe theo ngày các dòng xe ga có giá từ 150.000 VNĐ. — Giá thuê xe theo ngày các dòng xe số có giá từ 100.000 VNĐ."
+    },
+    {
+      "claim": "Cửa hàng cho thuê trên đường Xuân Diệu (26 Xuân Diệu, Tứ Liên, Tây Hồ) ghi bảng giá: xe Dream, Wave, Sirius 120.000 VNĐ/ngày; xe Vision, Lead, Air Blade, Janus 150.000 VNĐ/ngày.",
+      "source_url": "https://travelist.vn/thue-xe-may-o-tay-ho-ha-noi/",
+      "source_domain": "travelist.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê Xe Máy Đường Xuân Diệu — Địa chỉ: 26 Xuân Diệu, Tứ Liên, Q. Tây Hồ, Hà Nội — Giá cho thuê/ngày: Xe Dream — 120.000 VNĐ — Xe Wave — 120.000 VNĐ — Xe Sirius — 120.000 VNĐ — Xe Vision — 150.000 VNĐ — Xe Lead — 150.000 VNĐ — Xe Air Blade — 150.000 VNĐ — Xe Janus — 150.000 VNĐ"
+    },
+    {
+      "claim": "Motorbike Rental Tây Hồ (54 Ngõ 444 Thụy Khuê, Bưởi, Tây Hồ) tính thời gian thuê là 24 tiếng từ thời điểm nhận xe tới cùng thời điểm của ngày hôm sau; thủ tục cần để lại CCCD và cọc 500.000 VNĐ là nhận xe có giấy tờ đầy đủ.",
+      "source_url": "https://travelist.vn/thue-xe-may-o-tay-ho-ha-noi/",
+      "source_domain": "travelist.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Motorbike Rental Tây Hồ — Địa chỉ: 54 Ngõ 444 Thụy Khuê, Bưởi, Q. Tây Hồ, Hà Nội — Tại Motorbike Rental Tây Hồ thời gian thuê là 24 tiếng từ thời điểm nhận xe tới cùng thời gian đó của ngày hôm sau. — Khi thuê xe bạn cần để lại CCCD và cọc 500.000 VNĐ là có thể nhận xe có giấy tờ đầy đủ."
+    },
+    {
+      "claim": "Trung Hiếu Motor tại Quận Tây Hồ ghi dải giá 100.000đ – 200.000đ/ngày; cam kết có mặt sau 10-15 phút để hỗ trợ sự cố trên mọi tuyến đường ven hồ qua hotline 0376.639.181.",
+      "source_url": "https://timthosuaxe.com/thue-xe-may-quan-tay-ho/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Dịch vụ thuê xe máy và cứu hộ lưu động Trung Hiếu Motor tại Quận Tây Hồ — với mức giá 100.000đ – 200.000đ/ngày. — hãy ưu tiên các cửa hàng có cam kết bảo dưỡng định kỳ, hợp đồng minh bạch và luôn lưu lại hotline cứu hộ 0376.639.181 của Trung Hiếu Motor. Với kinh nghiệm nhiều năm tác chiến tại địa bàn, chúng tôi cam kết có mặt sau 10-15 phút để hỗ trợ bạn trên mọi tuyến đường ven hồ."
+    },
+    {
+      "claim": "RentABike Tây Hồ có dàn xe phân khối lớn với các loại xe như XR hay Cub; giá thuê dao động từ 10 đô la trở lên; khách cần chuẩn bị trước tiền cọc tùy loại xe và thời gian thuê.",
+      "source_url": "https://giahuy.org/thue-xe-may-tay-ho-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điểm đặc biệt của RentABike Tây Hồ Hà Nội là dàn xe phân khối lớn với các loại xe như XR hay Cub, được nhiều khách hàng yêu thích. Giá thuê xe tại đây dao động từ 10 đô la trở lên. Tuy nhiên, để thuê xe nhanh chóng và thuận tiện, khách hàng cần chuẩn bị trước tiền cọc. Mức cọc sẽ tùy thuộc vào loại xe và thời gian thuê."
+    },
+    {
+      "claim": "Dịch vụ của chủ trang web công bố giá thuê Honda Wave và Yamaha Sirius (xe số): 150.000đ/ngày; giá tuần 700.000đ; giá tháng 900.000–1.200.000đ.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 150.000đ/ngày. Giá tuần 700.000đ; giá tháng 900.000–1.200.000đ."
+    },
+    {
+      "claim": "Honda Click / Yamaha Mio (xe ga giá rẻ): 150.000đ/ngày; 700.000đ/tuần; 900.000–1.200.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Click / Yamaha Mio – xe ga giá rẻ: 150.000đ/ngày; 700.000đ/tuần; 900.000–1.200.000đ/tháng."
+    },
+    {
+      "claim": "Honda Vision: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000–2.000.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Vision – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000–2.000.000đ/tháng."
+    },
+    {
+      "claim": "Honda Air Blade: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Air Blade – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Xe máy điện: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy điện tại Nguyễn Tú: 200.000đ/ngày. — Giá thuê xe máy điện tại Nguyễn Tú: 1.000.000đ/tuần. — Giá thuê xe máy điện tại Nguyễn Tú: 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Tiền đặt cọc tham khảo: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiền đặt cọc tham khảo: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu."
+    },
+    {
+      "claim": "Dịch vụ giao xe tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chúng tôi giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành, giúp bạn khám phá Hà Nội an toàn và tiết kiệm."
+    },
+    {
+      "claim": "Địa điểm chính tại Long Biên; giá, tiền cọc và tình trạng xe được xác nhận trước khi chốt.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điểm khác biệt của Nguyễn Tú: địa điểm chính tại Long Biên, hỗ trợ giao xe theo khu vực và tư vấn loại xe theo thời gian thuê. Giá, tiền cọc và tình trạng xe được xác nhận trước khi chốt."
+    },
+    {
+      "claim": "Giờ làm việc 09:00 – 21:00 và không giao xe ngoài khung giờ này.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điện thoại: 0942 467 674 · 09:00 – 21:00 · Không giao xe máy ngoài giờ. (Địa điểm chính: Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội.)"
+    }
+  ]
+}
