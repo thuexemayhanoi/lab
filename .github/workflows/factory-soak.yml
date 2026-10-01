@@ -43,12 +43,14 @@ on:
       - 'scripts/site/**'
       - 'tests/soak/**'
       - 'tests/test-suite.js'
+      - 'tests/writer-submit-tests.js'
       - '.github/workflows/factory-operator.yml'
       - '.github/workflows/factory-validate.yml'
       - '.github/workflows/factory-capacity-validate.yml'
       - '.github/workflows/factory-soak.yml'
       - '.github/workflows/factory-liveness-watchdog.yml'
       - '.github/workflows/ci-validate.yml'
+      - '.github/workflows/factory-writer-submit.yml'
       - 'config/article-rubric.json'
       - 'config/business-facts.json'
       - 'config/editorial.json'
@@ -60,6 +62,7 @@ on:
       - 'docs/PROC-PUBLISH.md'
       - 'docs/CONTENT-FACTORY.md'
       - 'docs/PROC-RECOVERY.md'
+      - 'docs/WRITER-SUBMIT.md'
   push:
     branches: [main]
     paths:
@@ -67,12 +70,14 @@ on:
       - 'scripts/site/**'
       - 'tests/soak/**'
       - 'tests/test-suite.js'
+      - 'tests/writer-submit-tests.js'
       - '.github/workflows/factory-operator.yml'
       - '.github/workflows/factory-validate.yml'
       - '.github/workflows/factory-capacity-validate.yml'
       - '.github/workflows/factory-soak.yml'
       - '.github/workflows/factory-liveness-watchdog.yml'
       - '.github/workflows/ci-validate.yml'
+      - '.github/workflows/factory-writer-submit.yml'
       - 'config/article-rubric.json'
       - 'config/business-facts.json'
       - 'config/editorial.json'
@@ -84,6 +89,7 @@ on:
       - 'docs/PROC-PUBLISH.md'
       - 'docs/CONTENT-FACTORY.md'
       - 'docs/PROC-RECOVERY.md'
+      - 'docs/WRITER-SUBMIT.md'
 
 concurrency:
   # PER-REF: PR không cancel soak run của main, main không cancel PR;
