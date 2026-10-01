@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-01T19:10:41.400Z",
+  "generated_at": "2026-10-01T19:55:04.537Z",
   "note": "Real measured events only (data/state/throughput-ledger.json). No backfill; historical publishes before the ledger are not counted.",
-  "events_total": 74,
-  "chunks_completed": 24,
-  "qa_checked": 59,
-  "published": 57,
+  "events_total": 76,
+  "chunks_completed": 25,
+  "qa_checked": 61,
+  "published": 59,
   "repair_count": 0,
-  "publish_operations": 24,
-  "publish_elapsed_ms_total": 39610,
+  "publish_operations": 25,
+  "publish_elapsed_ms_total": 41108,
   "effective_articles_per_hour": 0.9
 }

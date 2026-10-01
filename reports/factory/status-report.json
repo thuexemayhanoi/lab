@@ -1,15 +1,13 @@
 {
-  "generated_at": "2026-10-01T19:10:41.398Z",
+  "generated_at": "2026-10-01T19:55:04.536Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 67,
-    "PASS": 2,
+    "PUBLISHED": 69,
     "PLANNED": 9931
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 61,
-      "PASS": 2,
+      "PUBLISHED": 63,
       "PLANNED": 4937
     },
     "RESCUE": {
@@ -38,11 +36,8 @@
     }
   },
   "phase": "PRODUCTION",
-  "active_chunk": [
-    "A00060",
-    "A00061"
-  ],
-  "last_completed_id": "A00059",
+  "active_chunk": [],
+  "last_completed_id": "A00061",
   "next_claimable_id": "A00062",
   "blocked": [],
   "published": [
@@ -399,6 +394,18 @@
       "pk": "thuê xe máy gần Ga Sài Gòn",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ga-sai-gon/"
+    },
+    {
+      "id": "A00060",
+      "pk": "thuê xe máy gần Ga Đà Nẵng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ga-da-nang/"
+    },
+    {
+      "id": "A00061",
+      "pk": "thuê xe máy gần Ga Huế",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ga-hue/"
     },
     {
       "id": "A00097",
