@@ -1,0 +1,295 @@
+{
+  "article_id": "A00040",
+  "primary_keyword": "thuê xe máy Thanh Xuân",
+  "secondary_keywords": [
+    "cho thuê xe máy Thanh Xuân",
+    "thuê xe máy Thanh Xuân giá rẻ",
+    "thuê xe máy Khuất Duy Tiến",
+    "thuê xe máy Nguyễn Trãi",
+    "cho thuê xe máy theo tháng Thanh Xuân"
+  ],
+  "search_intent": "local/commercial",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Thanh Xuân",
+    "Thanh Xuân Trung",
+    "Nhân Chính",
+    "Ngụy Như Kon Tum",
+    "Khuất Duy Tiến",
+    "Nguyễn Trãi",
+    "Nguyễn Huy Tưởng",
+    "Vũ Trọng Phụng",
+    "Bùi Xương Trạch",
+    "Kim Giang",
+    "Hoàng Đạo Thành",
+    "Lê Văn Lương",
+    "bến xe Nước Ngầm",
+    "bến xe Mỹ Đình",
+    "sân bay Nội Bài",
+    "phố cổ Hà Nội"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe ga",
+    "xe tay côn",
+    "xe phân khối lớn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Lead",
+    "Future",
+    "Exciter",
+    "SH"
+  ],
+  "questions_found": [
+    "thuê xe máy Thanh Xuân giá bao nhiêu một ngày?",
+    "cho thuê xe máy theo tháng ở Thanh Xuân giá thế nào?",
+    "thuê xe ở Thanh Xuân có cần đặt cọc không?",
+    "ở Thanh Xuân có nơi nào giao xe tận nhà không?",
+    "sinh viên thuê xe ở Thanh Xuân có ưu đãi gì không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Thanh Xuân",
+    "cho thuê xe máy Khuất Duy Tiến",
+    "thuê xe máy theo tháng Thanh Xuân",
+    "thuê xe máy Nguyễn Trãi",
+    "cho thuê xe máy 181 Khuất Duy Tiến"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy Thanh Xuân\" là hỗn hợp thư mục và trang nhà xe: motogo.vn có bài top 5 (MOTOGO, cửa hàng 181 Khuất Duy Tiến, Bon Bon 1 Ngụy Như Kon Tum, Công Tân, 13535) kèm giá công khai; motortrip tổng hợp Công Tân (179 Khuất Duy Tiến) và Mr-Good Bikes với giá ngày/tuần/tháng chi tiết; thuexemayhanoigiare.com là trang riêng của Mr-Good Bikes tại Thanh Xuân (giá theo 24 tiếng, không cọc, giao miễn phí toàn thành phố); timthosuaxe có bài của Trung Hiếu Motor (thuê + cứu hộ 24/7) và các cơ sở Hải Anh, Công Thắng, Lưu Chiến; giahuy.org lặp lại Bon Bon và cửa hàng 181 Khuất Duy Tiến; muaban.net, brixtonvietnam là trang tổng hợp định hướng. Intent local/commercial nhấn mạnh giá sinh viên, thuê theo tháng cho người đi làm, giao tận nhà.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-tai-thanh-xuan-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "top 5 địa chỉ tại Thanh Xuân kèm giá: cửa hàng 181 Khuất Duy Tiến xe số 80.000đ–100.000đ/ngày; Bon Bon (1 Ngụy Như Kon Tum) từ 50.000đ/ngày; MOTOGO giá tháng khoảng 40.000đ/ngày không cần cọc nếu đủ giấy tờ, giao xe toàn thành phố"
+    },
+    {
+      "source_url": "https://motortrip.vn/dich-vu/thue-xe-may-thanh-xuan-ha-noi",
+      "source_domain": "motortrip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Công Tân (179 Khuất Duy Tiến) ngày 100.000–350.000 vnđ, tuần 500.000–700.000 vnđ, tháng 900.000–1.400.000 vnđ, cọc 1.000.000–4.000.000 vnđ, giao tới Nội Bài và các bến xe; Mr-Good Bikes Thanh Xuân uy tín"
+    },
+    {
+      "source_url": "https://thuexemayhanoigiare.com/thue-xe-may-thanh-xuan/",
+      "source_domain": "thuexemayhanoigiare.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "trang riêng Mr-Good Bikes Thanh Xuân: xe số 100.000–120.000 đồng/ngày (24 tiếng), từ 5 ngày 80.000vnđ/ngày; xe ga 100.000–150.000 đồng/ngày, từ 5 ngày 90.000 đồng; tuần 500.000–650.000 đồng; tháng 1.100.000–1.500.000 đồng; không đặt cọc; hợp đồng 15 phút; giao xe miễn phí toàn thành phố"
+    },
+    {
+      "source_url": "https://timthosuaxe.com/thue-xe-may-quan-thanh-xuan/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Trung Hiếu Motor cho thuê và cứu hộ 24/7 tại Thanh Xuân từ 80.000đ/ngày, giao tận nơi 10-15 phút; các cơ sở Hải Anh (23 Nguyễn Huy Tưởng) thuê tháng ưu đãi, Công Thắng (Kim Giang), Lưu Chiến (35-1 Vũ Trọng Phụng)"
+    },
+    {
+      "source_url": "https://giahuy.org/thue-xe-may-thanh-xuan-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bon Bon Motor (1 Ngụy Như Kon Tum, Nhân Chính) thuê theo giờ/ngày/tuần/tháng; cửa hàng 181 Khuất Duy Tiến giá hợp lý cho cư dân Thanh Xuân"
+    },
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "trang chính thức của nhà xe Nguyễn Tú: bảng giá công khai theo ngày/tuần/tháng, tiền cọc tham khảo, giao tận nơi Long Biên/Hoàn Kiếm/Phố Cổ/Ba Đình và các quận nội thành, giờ 09:00–21:00"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-dong-da/",
+    "/lab/thue-xe-may/thue-xe-may-hoan-kiem/",
+    "/lab/thue-xe-may/thue-xe-may-bac-ninh/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-thanh-xuan riêng biệt: A00001 (thuê xe máy Hà Nội) là bài thành phố tổng quát; A00038 (Đống Đa) gắn sinh viên Chợ Dừa – Tây Sơn – Láng; A00037 (Ba Đình) gắn trung tâm hành chính. Bài này gắn cửa ngõ tây nam (Khuất Duy Tiến – Nguyễn Trãi – Kim Giang) với trọng tâm thuê tháng cho người đi làm và sinh viên, kèm chính sách cọc/giao xe công khai — khác intent, khác geo, không trùng primary intent.",
+  "unique_angle": "Bài Thanh Xuân duy nhất định vị theo người đi làm và sinh viên ở cửa ngõ tây nam: tổng hợp gói tháng dày nhất trong các bài khu vực (Công Tân 900.000 – 1.400.000 vnđ/tháng, Mr-Good 1.100.000 – 1.500.000 đồng/tháng xe ga, MOTOGO chia ra khoảng 40.000đ/ngày, Hải Anh ưu đãi người đi làm), chính sách không cọc (Mr-Good, MOTOGO khi đủ giấy tờ) và cứu hộ giao xe tận nhà 10-15 phút (Trung Hiếu) trên các tuyến Khuất Duy Tiến – Nguyễn Trãi — khác hẳn bài Hà Nội tổng quát, bài sinh viên Đống Đa và bài du khách Ba Đình.",
+  "notes": "actual_service_area=hanoi_owner_verified: được phép dùng NAP đã xác minh từ config/business-facts.json và bảng giá công khai trên trang nhà xe; KHÔNG bịa giá ngoài bảng. \"Quận Thanh Xuân\" là tên cũ (LEGACY_SEARCH theo data/geography/localities.json — Sắp xếp đơn vị hành chính 2025) — bài dùng tên địa danh quen thuộc và nêu rõ bối cảnh. Giá của từng nhà xe ngoài luôn dẫn theo công bố công khai của chính nhà xe đó hoặc bài tổng hợp ghi nhận, không tổng quát hóa thành mặt bằng thị trường ngoài khoảng ghi nhận. Nguồn motogo.vn ghi Công Tân tại địa chỉ ngoài Thanh Xuân — chỉ dùng dẫn liệu Công Tân từ motortrip.vn (179 Khuất Duy Tiến).",
+  "claim_evidence": [
+    {
+      "claim": "Cửa hàng 'Thuê xe máy ở Thanh Xuân Hà Nội' tại 181 Khuất Duy Tiến ghi giá xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-thanh-xuan-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe máy ở Thanh Xuân Hà Nội — Địa chỉ: 181 Khuất Duy Tiến ,Q. Thanh Xuân, TP. Hà Nội. — Giá thuê xe số: 80.000đ – 100.000đ/ngày — Giá thuê xe ga: 130.000đ – 140.000đ/ngày"
+    },
+    {
+      "claim": "Bon Bon (1 Ngụy Như Kon Tum, Nhân Chính, Thanh Xuân) ghi giá thuê từ 50.000đ/ngày; hỗ trợ thuê theo giờ, theo ngày hoặc theo tháng.",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-thanh-xuan-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bon Bon — Địa chỉ: 1 Ngụy Như Kon Tum, Nhân Chính, Thanh Xuân, Hà Nội — Giá thuê xe: từ 50.000đ/ngày — Bạn có thể lựa chọn thuê xe theo giờ, theo ngày hoặc theo tháng tùy thuộc vào nhu cầu của bạn."
+    },
+    {
+      "claim": "MOTOGO có giá thuê xe máy theo tháng rất lợi, chia ra chỉ mất khoảng 40.000đ/ngày; nếu đáp ứng đủ giấy tờ thì không cần đặt lại tiền cọc xe.",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-thanh-xuan-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Không chỉ có giá thuê xe máy theo ngày rẻ mà giá thuê xe máy theo tháng cũng rất lợi. Chia ra bạn cũng chỉ mất khoảng 40.000đ/ngày mà thôi. Đặc biệt nếu đáp ứng đủ giấy tờ bạn còn không cần đặt lại tiền cọc xe nữa."
+    },
+    {
+      "claim": "MOTOGO có hệ thống giao xe rộng khắp toàn thành phố Hà Nội, có thể đặt thuê xe tại bất cứ nơi nào khách muốn.",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-thanh-xuan-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "cơ sở này còn có hệ thống giao xe rộng khắp toàn thành phố Hà Nội. Vì thế bạn có thể đặt thuê xe tại bất cứ nơi nào bạn muốn."
+    },
+    {
+      "claim": "Công Tân (179 đường Khuất Duy Tiến, Thanh Xuân) ghi giá theo ngày 100.000 vnđ đến 350.000 vnđ/xe; thuê dài hạn ưu đãi 500.000 vnđ – 700.000 vnđ/tuần và 900.000 vnđ – 1.400.000 vnđ/tháng.",
+      "source_url": "https://motortrip.vn/dich-vu/thue-xe-may-thanh-xuan-ha-noi",
+      "source_domain": "motortrip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy theo ngày tại Công Tân thường dao động từ 100.000 vnđ đến 350.000 vnđ/xe (tùy loại xe). Nếu thuê thời gian dài, mức giá sẽ có nhiều ưu đãi hơn với 500.000 vnđ – 700.000 vnđ/tuần và 900.000 vnđ – 1.400.000 vnđ/tháng. — bạn có thể nhận xe trực tiếp tại đại lý – số 179, đường Khuất Duy Tiến, quận Thanh Xuân, Hà Nội"
+    },
+    {
+      "claim": "Công Tân yêu cầu chuẩn bị hộ chiếu hoặc CCCD/CMND, tiền cọc/thế chấp 1.000.000 vnđ – 4.000.000 vnđ và bằng lái xe; hỗ trợ giao xe tới sân bay Nội Bài, bến xe Nước Ngầm, bến xe Gia Lâm, bến xe Mỹ Đình.",
+      "source_url": "https://motortrip.vn/dich-vu/thue-xe-may-thanh-xuan-ha-noi",
+      "source_domain": "motortrip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bạn sẽ cần chuẩn bị sẵn passport/hộ chiếu hoặc căn cước công dân/chứng minh nhân dân, tiền cọc/tiền thế chấp (1.000.000 vnđ – 4.000.000 vnđ) và bằng lái xe. — Hoặc có thể yêu cầu giao xe trực tiếp đến Sân bay Nội Bài, Bến xe Nước Ngầm, Bến xe Gia Lâm, Bến xe Mỹ Đình,… hay những quận huyện khác"
+    },
+    {
+      "claim": "Mr-Good Bikes cho thuê xe tại Thanh Xuân với giá phù hợp mọi tầng lớp kể cả sinh viên, chỉ từ 100.000VNĐ/ngày, thuê lâu dài rẻ hơn.",
+      "source_url": "https://thuexemayhanoigiare.com/thue-xe-may-thanh-xuan/",
+      "source_domain": "thuexemayhanoigiare.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá cho thuê xe phù hợp với mọi tầng lớp người lao động kể cả sinh viên chỉ từ 100.000VNĐ/ngày. Giá cho thuê xe sẽ còn rẻ hơn nếu như khách hàng có nhu cầu thuê lâu dài."
+    },
+    {
+      "claim": "Mr-Good Bikes ghi giá xe số từ 100.000 đồng đến 120.000 đồng/ngày (24 tiếng); khách thuê từ 5 ngày trở lên chỉ từ 80.000vnđ/ngày; giá theo tháng từ 1.000.000 đồng đến 1.200.000 đồng (dẫn theo công bố của nhà xe).",
+      "source_url": "https://thuexemayhanoigiare.com/thue-xe-may-thanh-xuan/",
+      "source_domain": "thuexemayhanoigiare.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Xe số: Giá thuê từ 100.000 đồng đến 120.000 đồng/ngày (24 tiếng). Giá thuê từ 80.000vnđ/ngày đối với khách thuê từ 5 ngày trở lên. Giá thuê theo tháng từ 1.000.000 đồng đến 1,200.000 đồng"
+    },
+    {
+      "claim": "Mr-Good Bikes ghi giá xe ga từ 100.000 – 150.000 đồng/ngày; thuê từ 5 ngày trở lên 90.000 đồng/ngày; theo tuần 500.000 – 650.000 đồng; xe tay ga theo tháng 1.100.000 đồng đến 1.500.000 đồng.",
+      "source_url": "https://thuexemayhanoigiare.com/thue-xe-may-thanh-xuan/",
+      "source_domain": "thuexemayhanoigiare.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Xe ga: Giá thuê từ 100.000 – 150.000 đồng ngày. Giá thuê từ 90.000 đồng / ngày khi thuê từ 5 ngày trở lên. Giá thuê từ 500.000 – 650.000 đồng / tuần. Giá thuê xe tay ga theo tháng từ 1.100.000 đồng đến 1.500.000 đồng"
+    },
+    {
+      "claim": "Mr-Good Bikes không thu khoản phí đặt cọc nào, chỉ cần giấy tờ cá nhân (CMND, hộ chiếu, thông tin vé máy bay); thủ tục làm hợp đồng và giao xe chỉ trong vòng 15 phút; giao xe miễn phí theo yêu cầu.",
+      "source_url": "https://thuexemayhanoigiare.com/thue-xe-may-thanh-xuan/",
+      "source_domain": "thuexemayhanoigiare.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "tại cửa hàng của Mr-Good Bikes sẽ không thu bất kỳ một khoản phí nào của khách hàng. Chỉ cần khách hàng cung cấp đầy đủ các giấy tờ thông tin cá nhân cần thiết theo yêu cầu của cửa hàng như chứng minh thư, hộ chiếu, thông tin vé máy bay. Thủ tục làm hợp đồng và giao xe cho khách hàng chỉ trong vòng 15 phút — Giao xe miễn phí trên toàn thành phố theo yêu cầu của khách hàng"
+    },
+    {
+      "claim": "Trung Hiếu Motor tại Quận Thanh Xuân cung cấp xe số, xe ga đời mới với giá thuê chỉ từ 80.000đ/ngày; hỗ trợ giao xe tận nơi và cứu hộ sự cố kỹ thuật 24/7 chỉ trong 10-15 phút.",
+      "source_url": "https://timthosuaxe.com/thue-xe-may-quan-thanh-xuan/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Dịch vụ thuê xe máy và cứu hộ lưu động Trung Hiếu Motor tại Quận Thanh Xuân chuyên cung cấp các dòng xe số, xe ga đời mới bảo dưỡng định kỳ với giá thuê chỉ từ 80.000đ/ngày. Hỗ trợ giao xe tận nơi và cứu hộ sự cố kỹ thuật 24/7 chỉ trong 10-15 phút gọi qua hotline 0376.639.181."
+    },
+    {
+      "claim": "Bảng giá Trung Hiếu Motor tại Quận Thanh Xuân: 80.000 – 100.000đ/ngày (giao tận nơi 10-15 phút); 120.000 – 180.000đ/ngày; 180.000 – 250.000đ/ngày (giao tận nơi 15 phút).",
+      "source_url": "https://timthosuaxe.com/thue-xe-may-quan-thanh-xuan/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng Giá Thuê Xe Máy & Dịch Vụ Hỗ Trợ Tại Quận Thanh Xuân: 80.000 – 100.000đ/ngày (Giao tận nơi 10-15 phút) — 120.000 – 180.000đ/ngày — 180.000 – 250.000đ/ngày (Giao tận nơi 15 phút)"
+    },
+    {
+      "claim": "Hải Anh (23 Nguyễn Huy Tưởng, Thanh Xuân Trung) tập trung vào khách thuê theo tháng với gói ưu đãi dài hạn; giao xe tận nơi quanh khu vực Thanh Xuân Trung, Nguyễn Huy Tưởng, Ngụy Như Kon Tum.",
+      "source_url": "https://timthosuaxe.com/thue-xe-may-quan-thanh-xuan/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cơ sở này cũng tập trung mạnh vào phân khúc khách hàng là người đi làm thuê theo tháng, cung cấp các gói ưu đãi dài hạn giúp tiết kiệm chi phí đáng kể cho người dùng. — Thủ tục cho thuê đơn giản, giao xe tận nơi quanh khu vực Thanh Xuân Trung, Nguyễn Huy Tưởng, Ngụy Như Kon Tum. — Địa chỉ: 23 Nguyễn Huy Tưởng, Thanh Xuân Trung, Thanh Xuân, Hà Nội"
+    },
+    {
+      "claim": "Các cơ sở ghi nhận khác tại Thanh Xuân: Công Thắng (12 Ng. 3 P. Hoàng Đạo Thành, Kim Giang, Thanh Xuân) chuyên xe Honda, Yamaha cho khách đi làm, đi học; Lưu Chiến (35-1 Đ. Vũ Trọng Phụng, Thanh Xuân Trung) có các dòng Wave, Air Blade, Lead, Vision.",
+      "source_url": "https://timthosuaxe.com/thue-xe-may-quan-thanh-xuan/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Công Thắng — Địa chỉ: 12 Ng. 3 P. Hoàng Đạo Thành, Kim Giang, Thanh Xuân, Hà Nội, Việt Nam — Lưu Chiến — Địa chỉ: 35-1 Đ. Vũ Trọng Phụng, Thanh Xuân Trung, Thanh Xuân, Hà Nội, Việt Nam — Khi thuê xe máy tại Lưu Chiến bạn sẽ thấy nơi đây sở hữu nhiều mẫu xe đa dạng. Nhiều loại xe được khách hàng ưu ái có thể kể đến như Wave, AB, Lead, Vision."
+    },
+    {
+      "claim": "Nút giao Khuất Duy Tiến – Nguyễn Trãi và tuyến Bùi Xương Trạch thường xuyên chịu áp lực giao thông lớn vào giờ cao điểm.",
+      "source_url": "https://timthosuaxe.com/thue-xe-may-quan-thanh-xuan/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nút giao Khuất Duy Tiến – Nguyễn Trãi và tuyến đường Bùi Xương Trạch thường xuyên chịu áp lực giao thông lớn vào giờ cao điểm"
+    },
+    {
+      "claim": "Cửa hàng cho thuê tại 181 Khuất Duy Tiến, Nhân Chính, Thanh Xuân hỗ trợ thuê theo giờ, ngày, tuần, tháng.",
+      "source_url": "https://giahuy.org/thue-xe-may-thanh-xuan-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Địa chỉ : 181 Khuất Duy Tiến, Nhân Chính, Thanh Xuân, Hà Nội — Một điểm nổi bật là giá thuê xe rất hợp lý, phù hợp với đa số người dân tại Thanh Xuân. Bạn có thể chọn thuê theo giờ, ngày hoặc thậm chí là tuần để tiết kiệm chi phí"
+    },
+    {
+      "claim": "Dịch vụ của chủ trang web công bố giá thuê Honda Wave và Yamaha Sirius (xe số): 150.000đ/ngày; giá tuần 700.000đ; giá tháng 900.000–1.200.000đ.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 150.000đ/ngày. Giá tuần 700.000đ; giá tháng 900.000–1.200.000đ."
+    },
+    {
+      "claim": "Honda Click / Yamaha Mio (xe ga giá rẻ): 150.000đ/ngày; 700.000đ/tuần; 900.000–1.200.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Click / Yamaha Mio – xe ga giá rẻ: 150.000đ/ngày; 700.000đ/tuần; 900.000–1.200.000đ/tháng."
+    },
+    {
+      "claim": "Honda Vision: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000–2.000.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Vision – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000–2.000.000đ/tháng."
+    },
+    {
+      "claim": "Honda Air Blade: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Air Blade – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Xe máy điện: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy điện tại Nguyễn Tú: 200.000đ/ngày. — Giá thuê xe máy điện tại Nguyễn Tú: 1.000.000đ/tuần. — Giá thuê xe máy điện tại Nguyễn Tú: 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Tiền đặt cọc tham khảo: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiền đặt cọc tham khảo: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu."
+    },
+    {
+      "claim": "Dịch vụ giao xe tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chúng tôi giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành, giúp bạn khám phá Hà Nội an toàn và tiết kiệm."
+    },
+    {
+      "claim": "Địa điểm chính tại Long Biên; giá, tiền cọc và tình trạng xe được xác nhận trước khi chốt.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điểm khác biệt của Nguyễn Tú: địa điểm chính tại Long Biên, hỗ trợ giao xe theo khu vực và tư vấn loại xe theo thời gian thuê. Giá, tiền cọc và tình trạng xe được xác nhận trước khi chốt."
+    },
+    {
+      "claim": "Giờ làm việc 09:00 – 21:00 và không giao xe ngoài khung giờ này.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điện thoại: 0942 467 674 · 09:00 – 21:00 · Không giao xe máy ngoài giờ. (Địa điểm chính: Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội.)"
+    }
+  ]
+}

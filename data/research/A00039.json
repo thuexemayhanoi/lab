@@ -1,0 +1,297 @@
+{
+  "article_id": "A00039",
+  "primary_keyword": "thuê xe máy Cầu Giấy",
+  "secondary_keywords": [
+    "cho thuê xe máy Cầu Giấy",
+    "thuê xe máy Cầu Giấy giá rẻ",
+    "thuê xe máy Mỹ Đình",
+    "thuê xe máy Dịch Vọng",
+    "thuê xe máy gần bến xe Mỹ Đình"
+  ],
+  "search_intent": "local/commercial",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Cầu Giấy",
+    "Mai Dịch",
+    "Dịch Vọng",
+    "Dịch Vọng Hậu",
+    "Trung Hòa",
+    "Yên Hòa",
+    "Nguyễn Khả Trạc",
+    "Trung Kính",
+    "Trần Quý Kiên",
+    "Mỹ Đình",
+    "bến xe Mỹ Đình",
+    "Keangnam",
+    "Phạm Hùng",
+    "Xuân Thủy",
+    "Cầu Giấy (phố)",
+    "sân bay Nội Bài",
+    "Đống Đa",
+    "Hồ Tây",
+    "phố cổ Hà Nội"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe ga",
+    "xe tay côn",
+    "xe phân khối lớn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki",
+    "Kawasaki"
+  ],
+  "model_entities": [
+    "Wave",
+    "Wave RSX",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Lead",
+    "Jupiter",
+    "Winner",
+    "Exciter",
+    "CB500X",
+    "Versys"
+  ],
+  "questions_found": [
+    "thuê xe máy Cầu Giấy giá bao nhiêu một ngày?",
+    "thuê xe máy ở Cầu Giấy có cần đặt cọc không?",
+    "gần bến xe Mỹ Đình có nơi nào cho thuê xe máy không?",
+    "ở Cầu Giấy có thuê xe phân khối lớn không, cần bằng gì?",
+    "có dịch vụ giao xe tận nơi tại Cầu Giấy không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Cầu Giấy",
+    "cho thuê xe máy Mỹ Đình",
+    "thuê xe máy Dịch Vọng",
+    "thuê xe máy gần bến xe Mỹ Đình",
+    "cho thuê xe máy Cầu Giấy không cần cọc"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy Cầu Giấy\" là hỗn hợp thư mục tổng hợp và trang nhà xe: motogo.vn có bài top 4 địa chỉ kèm giá công khai từng nơi (MOTOGO, 'Thuê xe máy Cầu Giấy Hà Nội', X Motor, Mr Goodbikes); 2trip tổng hợp 4 địa điểm (MOTOGO 81 Nguyễn Khả Trạc, X Motor 85 Trung Kính, cửa hàng giá sinh viên 11 Ngõ 11 Trần Quý Kiên, Hoàng Minh Motor 112 Trung Kính) kèm chính sách cọc/giao xe; hanoireview có bài 5 địa chỉ với bảng giá chi tiết Vivumotor (xe số, xe ga, tay côn, PKL cần bằng A2); giahuy.org lặp lại Vivumotor/MOTOGO/Trần Quý Kiên/Mr Goodbikes; buulong.com.vn, soctrangtourism.vn, thuexemayhaiphong.com là các trang tổng hợp trùng lặp nội dung. Intent local/commercial nhấn mạnh gần bến xe Mỹ Điền, khu văn phòng, sinh viên, không cần cọc, giao tận nơi.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-cau-giay-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "4 địa chỉ kèm giá công khai: MOTOGO (81 Nguyễn Khả Trạc, Mai Dịch) xe số 80.000đ–130.000đ/ngày, xe ga 120.000đ–200.000đ/ngày, không cần cọc cho khách du lịch; 'Thuê xe máy Cầu Giấy Hà Nội' xe số 100.000đ/ngày xe ga 150.000đ/ngày; X Motor xe số 120.000đ/ngày xe ga 200.000đ/ngày; Mr Goodbikes xe số 100.000đ/ngày xe ga 120.000đ/ngày"
+    },
+    {
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-tai-cau-giay-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "4 địa điểm: MOTOGO 100.000–150.000 đồng/ngày không cọc cho khách du lịch; X Motor 85 Trung Kính 100.000–150.000 đồng/ngày giao tại chỗ miễn phí kèm 2 mũ, 1 lít xăng, áo mưa; cửa hàng 11 Ngõ 11 Trần Quý Kiên 80.000–120.000 đồng/ngày giá sinh viên; Hoàng Minh Motor 112 Trung Kính 80.000–120.000 đồng/ngày giao tận khách sạn Mỹ Đình/Đống Đa/Cầu Giấy/Big C"
+    },
+    {
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-cho-thue-xe-may-tai-q-cau-giay",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Vivumotor (56 Ngõ 66/18 Dịch Vọng Hậu) cọc từ 500.000 VNĐ, bảng giá đầy đủ từ Wave RSX 130.000 VNĐ nội thành tới CB500X 1.500.000 VNĐ/ngày cần bằng A2, tính ngày 24h, nằm sát bến xe Mỹ Đình"
+    },
+    {
+      "source_url": "https://giahuy.org/thue-xe-may-cau-giay-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Vivumotor xe số 80.000–120.000 VNĐ/ngày xe ga 120.000–160.000 VNĐ/ngày; MOTOGO chi nhánh 20 Ngõ 28 Nguyễn Khả Trạc; cửa hàng Trần Quý Kiên xe số từ 80.000 VNĐ/ngày; Mr Goodbikes giao xe miễn phí khu vực Cầu Giấy"
+    },
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "trang chính thức của nhà xe Nguyễn Tú: bảng giá công khai theo ngày/tuần/tháng, tiền cọc tham khảo, giao tận nơi Long Biên/Hoàn Kiếm/Phố Cổ/Ba Đình và các quận nội thành, giờ 09:00–21:00"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-ba-dinh/",
+    "/lab/thue-xe-may/thue-xe-may-hoan-kiem/",
+    "/lab/thue-xe-may/thue-xe-may-long-bien/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-noi-bai/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-cau-giay riêng biệt: A00001 (thuê xe máy Hà Nội) là bài thành phố tổng quát; A00037 (Ba Đình) gắn trung tâm hành chính và du khách ven Hồ Tây; A00040 (Thanh Xuân) gắn véc sinh viên cửa ngõ tây nam. Bài này gắn khu trung tâm phía tây (Mai Dịch, Dịch Vọng, Trung Hòa, Yên Hòa) với đặc thù gần bến xe Mỹ Điny, khu văn phòng và không cần cọc — khác intent, khác geo, không trùng primary intent.",
+  "unique_angle": "Bài Cầu Giấy duy nhất định vị theo khách công tác và hành khách quanh bến xe Mỹ Đình – khu văn phòng Mai Dịch/Trung Hòa: tổng hợp nhóm nhà xe ghi nhận không cần đặt cọc cho khách du lịch (MOTOGO, cửa hàng Trần Quý Kiên), bảng giá phân tầng từ xe số 80.000đ tới phân khối lớn CB500X cần bằng A2 (Vivumotor), giao xe tận khách sạn quanh Mỹ Đình – Big C — khác hẳn bài Hà Nội tổng quát, bài Ba Đình du lịch và bài phố cổ.",
+  "notes": "actual_service_area=hanoi_owner_verified: được phép dùng NAP đã xác minh từ config/business-facts.json và bảng giá công khai trên trang nhà xe; KHÔNG bịa giá ngoài bảng. \"Quận Cầu Giấy\" là tên cũ (LEGACY_SEARCH theo data/geography/localities.json — LC-005, Sắp xếp đơn vị hành chính 2025) — bài dùng tên địa danh quen thuộc và nêu rõ bối cảnh. Giá của từng nhà xe ngoài luôn dẫn theo công bố công khai của chính nhà xe đó hoặc bài tổng hợp ghi nhận, không tổng quát hóa thành mặt bằng thị trường ngoài khoảng ghi nhận.",
+  "claim_evidence": [
+    {
+      "claim": "MOTOGO ghi giá thuê xe số 80.000đ – 130.000đ/ngày và xe ga 120.000đ – 200.000đ/ngày, với địa điểm ghi nhận tại 81 Nguyễn Khả Trạc, Mai Dịch, Hà Nội.",
+      "source_url": "https://motogo.vn/thue-xe-may-cau-giay-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "MOTOGO — Địa chỉ 1: 81 Nguyễn Khả Trạc, Mai Dịch, Hà Nội. Giá thuê xe số: 80.000đ – 130.000đ/ngày. Giá thuê xe ga: 120.000đ – 200.000đ/ngày"
+    },
+    {
+      "claim": "MOTOGO là địa điểm không cần đặt cọc nếu là khách du lịch, thủ tục hoàn thành trong khoảng 15 phút, có đội ngũ CSKH hỗ trợ 24h.",
+      "source_url": "https://motogo.vn/thue-xe-may-cau-giay-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "đây còn là địa điểm duy nhất thuê xe máy không cần đặt cọc nếu là khách du lịch. Bạn chỉ mất chừng 15 phút để hoàn thành thủ tục và nhận xe một cách đơn giản, dễ dàng. — MOTOGO cung cấp đội ngũ CSKH hỗ trợ 24h bất cứ khi nào bạn cần."
+    },
+    {
+      "claim": "MOTOGO cũng không mất khoản đặt cọc nào cho khách du lịch theo bài tổng hợp khác, giá dao động 100.000 – 150.000 đồng/chiếc/ngày tùy dòng xe.",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-tai-cau-giay-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "khi thuê xe tại đây, khách hàng hoàn toàn không mất một khoản đặt cọc nào nếu là khách du lịch. Đồng thời, bạn chỉ mất khoảng 15 phút để hoàn thành thủ tục và nhận xe — Địa chỉ: 81 Nguyễn Khả Trạc, Mai Dịch, quận Cầu Giấy, thành phố Hà Nội — Giá cho thuê: Dao động từ 100.000 – 150.000 đồng/ chiếc/ ngày tùy vào dòng xe"
+    },
+    {
+      "claim": "Cửa hàng 'Thuê xe máy Cầu Giấy Hà Nội' ghi giá xe số 100.000đ/ngày, xe ga 150.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-cau-giay-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thuê xe máy Cầu Giấy Hà Nội — Giá thuê xe số: 100.000đ/ngày. Giá thuê xe ga: 150.000đ/ngày"
+    },
+    {
+      "claim": "Cửa hàng tại 11 Ngõ 11 Trần Quý Kiên, Dịch Vọng ghi giá dao động 80.000 – 120.000 đồng/chiếc/ngày, hướng tới nhóm sinh viên, không mất đặt cọc nhưng phải trả xe đúng giờ.",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-tai-cau-giay-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Địa chỉ: Số 11 ngõ 11 Trần Quý Kiên, phường Dịch Vọng, quận Cầu Giấy, thành phố Hà Nội — Giá cho thuê: Dao động từ 80.000 – 120.000 đồng/ chiếc/ ngày — Theo đó, bạn hoàn toàn không mất một khoản đặt cọc nào nhưng phải đảm bảo thời gian trả xe đúng giờ để tránh mất phí phát sinh."
+    },
+    {
+      "claim": "X Motor ghi giá xe số 120.000đ/ngày, xe ga 200.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-cau-giay-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "X Motor — Giá thuê xe số: 120.000đ/ngày. Giá thuê xe ga: 200.000đ/ngày"
+    },
+    {
+      "claim": "X Motor (85 Trung Kính, Trung Hòa) ghi giá 100.000 – 150.000 đồng/chiếc/ngày, giao nhận xe tại chỗ không mất phí, mỗi xe kèm 2 mũ bảo hiểm, 1 lít xăng miễn phí và áo mưa.",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-tai-cau-giay-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Mỗi chiếc xe cho thuê sẽ được cung cấp 2 mũ bảo hiểm, 1 lít xăng miễn phí và áo mưa. — Một điểm cộng lớn của cửa hàng cho thuê xe máy X Motor là có dịch vụ giao nhận xe tại chỗ mà không mất một khoản phí nào. — Địa chỉ: Số 85 Trung Kinh, phường Trung Hòa, quận Cầu Giấy, thành phố Hà Nội — Giá cho thuê: Dao động từ 100.000 – 150.000 đồng/ chiếc/ ngày"
+    },
+    {
+      "claim": "Mr Goodbikes ghi giá xe số 100.000đ/ngày, xe ga 120.000đ/ngày; hỗ trợ giao xe miễn phí trong khu vực Cầu Giấy.",
+      "source_url": "https://motogo.vn/thue-xe-may-cau-giay-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Mr Goodbikes — Giá thuê xe số: 100.000đ/ngày. Giá thuê xe ga: 120.000đ/ngày — Mr Goodbikes còn hỗ trợ giao xe miễn phí trong khu vực Cầu Giấy, giúp khách tiết kiệm thời gian và công sức."
+    },
+    {
+      "claim": "Hoàng Minh Motor (112 Trung Kính, Yên Hòa) ghi giá dao động 80.000 – 120.000 đồng/chiếc/ngày, giao nhận xe tại khách sạn hoặc các khu vực lân cận như Mỹ Đình, Đống Đa, Cầu Giấy, Big C.",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-tai-cau-giay-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "khi thuê xe gắn máy tại cửa hàng cho thuê xe gắn máy Hoàng Minh Motor, bạn sẽ được giao nhận xe tại địa điểm khách sạn đang lưu trú hoặc các khu vực lân cận như: Mỹ Đình, Đống Đa, Cầu Giấy, Big C,… — Giá thuê xe máy tại cửa hàng Hoàng Minh Motor thường dao động từ 80.000 đến 120.000 đồng/ chiếc/ ngày. — Địa chỉ: Số 112 Trung Kính, phường Yên Hòa, quận Cầu Giấy, thành phố Hà Nội"
+    },
+    {
+      "claim": "Giá thuê xe gắn máy tại quận Cầu Giấy thường dao động 100.000 – 130.000 đồng/chiếc/ngày tùy loại xe.",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-tai-cau-giay-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thông thường giá thuê xe gắn máy tại quận Cầu Giấy Hà Nội tương đối rẻ. Dao động từ 100.000 – 130.000 đồng/ chiếc/ ngày tùy vào từng loại xe khác nhau."
+    },
+    {
+      "claim": "Vivumotor (56 Ngõ 66/18 Dịch Vọng Hậu) ghi giá xe số 80.000 – 120.000 VNĐ/ngày, xe ga 120.000 – 160.000 VNĐ/ngày.",
+      "source_url": "https://giahuy.org/thue-xe-may-cau-giay-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Vivumotor — Địa chỉ: 56 Ngõ 66/18 Dịch Vọng Hậu, Cầu Giấy, Hà Nội — Giá thuê tham khảo: Xe số: 80.000 – 120.000 VNĐ/ngày. Xe tay ga: 120.000 – 160.000 VNĐ/ngày"
+    },
+    {
+      "claim": "Vivumotor (Thuê Xe Máy Sao Hà Nội) có tiền đặt cọc chỉ từ 500.000 VNĐ, giảm xuống mức tối thiểu cho khách du lịch hoặc sinh viên; tính thời gian thuê tròn 1 ngày từ giờ nhận xe.",
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-cho-thue-xe-may-tai-q-cau-giay",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thủ tục thuê xe tại đây cũng khá đơn giản và nhanh chóng. Tiền đặt cọc thuê xe ở đây chỉ từ 500.000 VNĐ. Nếu người thuê là khách du lịch hoặc sinh viên thì sẽ được giảm xuống mức tổi thiểu. — Vivumotor luôn tính thời gian thuê xe là từ thời điểm khách nhận xe cho đến đúng giờ đó của ngày hôm sau là tròn 1 ngày"
+    },
+    {
+      "claim": "Bảng giá Vivumotor: Honda Wave RSX và Blade 110 giá 130.000 VNĐ/ngày nội thành – 160.000 VNĐ/ngày ngoại thành; Yamaha JupiterRC 160.000 VNĐ/ngày nội thành – 200.000 VNĐ/ngày ngoại thành; Honda Vision 200.000 VNĐ/ngày nội thành – 220.000 VNĐ/ngày ngoại thành; Honda Airblade 125 giá 220.000 VNĐ/ngày nội thành – 250.000 VNĐ/ngày ngoại thành; Honda Lead 220.000 VNĐ/ngày nội thành, đi ngoại tỉnh phụ thu 30.000 VNĐ/ngày.",
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-cho-thue-xe-may-tai-q-cau-giay",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Wave RSX — 130.000 VNĐ/ngày (nội thành) – 160.000 VNĐ/ngày (ngoại thành) — Honda Blade 110 — 130.000 VNĐ/ngày (nội thành) – 160.000 VNĐ/ngày (ngoại thành) — Yamaha JupiterRC Fi 2020 — 160.000 VNĐ/ngày (nội thành) – 200.000 VNĐ/ngày (ngoại thành) — Honda Vision — 200.000 VNĐ/ngày (nội thành) – 220.000 VNĐ/ngày (ngoại thành) — Honda Airblade 125 — 220.000 VNĐ/ngày (nội thành) – 250.000 VNĐ/ngày (ngoại thành) — Honda Lead — 220.000 VNĐ/ngày (nội thành). Đi ngoại tỉnh, phụ thu 30.000 VNĐ/ngày"
+    },
+    {
+      "claim": "Vivumotor có xe tay côn và phân khối lớn: Honda Winner 150/Winner X 250.000 – 300.000 VNĐ/ngày; Yamaha Exciter 250.000 VNĐ/ngày; Suzuki En150A 350.000 VNĐ/ngày; Honda CB500X 1.500.000 VNĐ/ngày (bắt buộc bằng A2); Kawasaki Versys 300 giá 1.200.000 VNĐ/ngày (bắt buộc bằng A2).",
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-cho-thue-xe-may-tai-q-cau-giay",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Winner 150 – Winner X — Dao động từ 250.000 – 300.000 VNĐ/ngày — Yamaha Exciter — 250.000 VNĐ/ngày — Suzuki En150A — 350.000 VNĐ/ngày — Honda CB500X — 1.500.000 VNĐ/ngày (yêu cầu bắt buộc: có bằng A2) — Kawasaki Versys 300 — 1.200.000 VNĐ/ngày (yêu cầu bắt buộc: có bằng A2)"
+    },
+    {
+      "claim": "Cửa hàng Vivumotor nằm ở trung tâm Cầu Giấy – Mỹ Đình, ngay sát bến xe Mỹ Đình và các trường đại học lớn, hỗ trợ giao xe tận nơi đến khách sạn, nhà riêng.",
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-cho-thue-xe-may-tai-q-cau-giay",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "cửa hàng nằm ở trung tâm Cầu Giấy – Mỹ Đình và ngay sát bến xe Mỹ Đình cũng như các trường đại học lớn nên rất tiện lợi cho việc giao nhận – trả xe giữa 2 bên. — Với dịch vụ giao xe tận nơi và đúng giờ, Vivumotor mang lại tiện lợi tối đa cho khách hàng. Bạn có thể yêu cầu giao xe đến khách sạn, nhà riêng hay bất cứ địa điểm nào. — Địa chỉ: 56 Ngõ 66/18, P. Dịch Vọng Hậu, Q. Cầu Giấy"
+    },
+    {
+      "claim": "MOTOGO có chi nhánh Cầu Giấy ghi nhận tại 20 Ngõ 28 Nguyễn Khả Trạc với giá xe số 80.000 – 130.000 VNĐ/ngày, xe ga 120.000 – 200.000 VNĐ/ngày.",
+      "source_url": "https://giahuy.org/thue-xe-may-cau-giay-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "MOTOGO — Địa chỉ: 20 Ngõ 28 Nguyễn Khả Trạc, Cầu Giấy, Hà Nội — Giá thuê tham khảo: Xe số: 80.000 – 130.000 VNĐ/ngày. Xe tay ga: 120.000 – 200.000 VNĐ/ngày"
+    },
+    {
+      "claim": "Dịch vụ của chủ trang web công bố giá thuê Honda Wave và Yamaha Sirius (xe số): 150.000đ/ngày; giá tuần 700.000đ; giá tháng 900.000–1.200.000đ.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 150.000đ/ngày. Giá tuần 700.000đ; giá tháng 900.000–1.200.000đ."
+    },
+    {
+      "claim": "Honda Click / Yamaha Mio (xe ga giá rẻ): 150.000đ/ngày; 700.000đ/tuần; 900.000–1.200.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Click / Yamaha Mio – xe ga giá rẻ: 150.000đ/ngày; 700.000đ/tuần; 900.000–1.200.000đ/tháng."
+    },
+    {
+      "claim": "Honda Vision: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000–2.000.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Vision – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000–2.000.000đ/tháng."
+    },
+    {
+      "claim": "Honda Air Blade: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Air Blade – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Xe máy điện: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy điện tại Nguyễn Tú: 200.000đ/ngày. — Giá thuê xe máy điện tại Nguyễn Tú: 1.000.000đ/tuần. — Giá thuê xe máy điện tại Nguyễn Tú: 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Tiền đặt cọc tham khảo: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiền đặt cọc tham khảo: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu."
+    },
+    {
+      "claim": "Dịch vụ giao xe tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chúng tôi giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành, giúp bạn khám phá Hà Nội an toàn và tiết kiệm."
+    },
+    {
+      "claim": "Địa điểm chính tại Long Biên; giá, tiền cọc và tình trạng xe được xác nhận trước khi chốt.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điểm khác biệt của Nguyễn Tú: địa điểm chính tại Long Biên, hỗ trợ giao xe theo khu vực và tư vấn loại xe theo thời gian thuê. Giá, tiền cọc và tình trạng xe được xác nhận trước khi chốt."
+    },
+    {
+      "claim": "Giờ làm việc 09:00 – 21:00 và không giao xe ngoài khung giờ này.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điện thoại: 0942 467 674 · 09:00 – 21:00 · Không giao xe máy ngoài giờ. (Địa điểm chính: Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội.)"
+    }
+  ]
+}
