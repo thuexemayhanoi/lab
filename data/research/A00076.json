@@ -1,0 +1,127 @@
+{
+  "article_id": "A00076",
+  "primary_keyword": "thuê xe máy Ba Vì",
+  "secondary_keywords": [
+    "thuê xe máy tại Ba Vì",
+    "giá thuê xe máy Ba Vì",
+    "cho thuê xe máy huyện Ba Vì",
+    "thuê xe máy đi vườn quốc gia Ba Vì",
+    "thuê xe máy Sơn Tây"
+  ],
+  "search_intent": "informational-research — du khách đi phượt/dã ngoại Ba Vì cần mặt bằng giá thuê tại huyện, hai cung đường từ Hà Nội, vé vào vườn quốc gia và checklist nhận xe chạy địa hình núi",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Ba Vì",
+    "vườn quốc gia Ba Vì",
+    "núi Tản Viên",
+    "Sơn Tây",
+    "Tiên Phong",
+    "Đá Chông",
+    "Vạn Thắng",
+    "Cẩm Lĩnh",
+    "Tản Lĩnh",
+    "Yên Bài",
+    "Quốc lộ 32",
+    "đại lộ Thăng Long",
+    "cầu vượt Hòa Lạc",
+    "Thạch Thất",
+    "Quốc Oai",
+    "Kỳ Sơn",
+    "Lương Sơn",
+    "Thiên Sơn Suối Ngà",
+    "Ao Vua",
+    "Đền Thượng",
+    "Đền Trung"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe tay ga",
+    "xe máy tự lái"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Bửu Long",
+    "MIA.vn",
+    "timthosuaxe"
+  ],
+  "model_entities": [
+    "Honda Wave",
+    "Honda Future",
+    "Yamaha Sirius",
+    "Honda Blade"
+  ],
+  "questions_found": [
+    "Thuê xe máy Ba Vì giá bao nhiêu một ngày?",
+    "Đi vườn quốc gia Ba Vì từ Hà Nội chạy đường nào?",
+    "Thuê xe ở Ba Vì cần giấy tờ gì, đặt cọc bao nhiêu?",
+    "Nên đi Ba Vì mùa nào và thuê xe số hay xe ga?"
+  ],
+  "related_queries": [
+    "giá thuê xe máy huyện Ba Vì",
+    "thuê xe máy đi VQG Ba Vì",
+    "cung đường lên Ba Vì bằng xe máy",
+    "vé vườn quốc gia Ba Vì 2026"
+  ],
+  "serp_patterns": "SERP 'thuê xe máy Ba Vì' bị chiếm bởi bài tổng hợp cửa hàng dạng blog (timthosuaxe, Bửu Long, ACC) — không có trang riêng theo intent POI; repo chưa có bài Ba Vì, có bài huyện-level thue-xe-may-son-tay và thue-xe-may-ha-noi — bài này chiếm intent POI bằng bảng vé VQG, hai cung đường QL32/đại lộ Thăng Long và các cơ sở cho thuê trong huyện.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "Khu du lịch Bửu Long — Top 3 cửa hàng thuê xe máy ở Ba Vì (mặt bằng giá)",
+      "url": "https://buulong.com.vn/thue-xe-may-o-ba-vi.html"
+    },
+    {
+      "name": "timthosuaxe — Top 10 cửa hàng cho thuê xe máy huyện Ba Vì (Lê Hiếu, Dũng Phạm, Minh Anh, Hoàng Oanh)",
+      "url": "https://timthosuaxe.com/thue-xe-may-huyen-ba-vi/"
+    },
+    {
+      "name": "MIA.vn — Vườn quốc gia Ba Vì: hướng dẫn di chuyển, giá vé, phí gửi xe",
+      "url": "https://mia.vn/cam-nang-du-lich/vuon-quoc-gia-ba-vi-dia-diem-ly-tuong-cho-nhung-chuyen-da-ngoai-2678"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-son-tay/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/"
+  ],
+  "potential_cannibalization": "Khác biệt với thue-xe-may-ha-noi (A00001, intent thành phố) và thue-xe-may-son-tay (huyện lân cận): bài này nhắm intent POI 'Ba Vì' với vé vườn quốc gia, hai cung đường QL32/đại lộ Thăng Long và các cơ sở cho thuê trong huyện; link một chiều từ bài POI sang trang thành phố.",
+  "unique_angle": "Ghép ba lớp dữ liệu tại chỗ: bảng vé + phí gửi xe VQG Ba Vì, hai cung đường từ nội đô (đại lộ Thăng Long ~30 km; QL32 37 km tới bến xe Sơn Tây) và các cơ sở cho thuê theo thôn (Đá Chông, Tiên Phong, Vạn Thắng) — góc nhìn cuối tuần phượt vùng núi tây bắc Hà Nội.",
+  "notes": "Hàng informational_only, geo Hà Nội: không dùng 'chúng tôi', không claim dịch vụ; disclosure P2 chuẩn bản Hà Nội. requires_official_sources=0. Mọi claim định lượng có claim_evidence từ nguồn đã mở 2026-10-01.",
+  "claim_evidence": [
+    {
+      "claim": "Giá thuê xe máy tại Ba Vì dao động từ 100.000 đến 200.000 VNĐ/ngày; một số nơi yêu cầu đặt cọc từ 500.000 đến 3.000.000 VNĐ.",
+      "source_url": "https://buulong.com.vn/thue-xe-may-o-ba-vi.html",
+      "source_domain": "buulong.com.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Giá thuê xe máy tại Ba Vì dao động từ 100.000 đến 200.000 VNĐ/ngày, rẻ hơn nhiều so với thuê xe ô tô hoặc đi tour trọn gói.\"; \"Một số nơi có thể yêu cầu đặt cọc từ 500.000 đến 3.000.000 VNĐ.\""
+    },
+    {
+      "claim": "Vé vào vườn quốc gia Ba Vì: người lớn 60.000 đồng, người cao tuổi/tàn tật 30.000 đồng, sinh viên 20.000 đồng, học sinh 10.000 đồng; gửi xe máy ban ngày khu vực cột 400 m 5.000 đồng/xe/lượt, ban đêm 8.000 đồng/xe/lượt, cột 1.100 m ban ngày 5.000 đồng/xe/lượt.",
+      "source_url": "https://mia.vn/cam-nang-du-lich/vuon-quoc-gia-ba-vi-dia-diem-ly-tuong-cho-nhung-chuyen-da-ngoai-2678",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Giá vé vào cổng: Người lớn: 60.000 đồng/người. Người cao tuổi, người tàn tật: 30.000 đồng/người. Sinh viên: 20.000 đồng/người. Học sinh: 10.000 đồng/người.\"; \"Giá dịch vụ trông giữ xe máy ban ngày khu vực cốt 400m: 5.000 đồng/xe/lượt, ban đêm 8.000 đồng/xe/lượt\"; \"khu vực cốt 1.100m: 5.000 đồng/xe/lượt\""
+    },
+    {
+      "claim": "Cung đường từ Hà Nội: đại lộ Thăng Long khoảng 30 km từ Big C Thăng Long qua cầu vượt Hòa Lạc về Yên Bài; hoặc QL32 khoảng 37 km từ Cầu Giấy tới ngã tư bến xe Sơn Tây, rẽ trái 3,5 km tới Viện 105, đi thẳng 9 km tới ngã ba Tản Lĩnh, rẽ trái 3,5 km tới ngã 5 hình sao nơi bán vé; vườn cách trung tâm Hà Nội chưa đầy 60 km.",
+      "source_url": "https://mia.vn/cam-nang-du-lich/vuon-quoc-gia-ba-vi-dia-diem-ly-tuong-cho-nhung-chuyen-da-ngoai-2678",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Xuất phát từ Big C Thăng Long đi theo đại lộ Thăng Long khoảng 30 km. Sau đó bạn đi qua cầu vượt Hòa Lạc rồi đi thẳng vào khu vực Làng văn hóa theo biển chỉ dẫn đến xã Yên Bài, núi Ba Vì.\"; \"Xuất phát từ khu vực Cầu Giấy, bạn chỉ cần theo đường Quốc lộ 32 khoảng 37 km tới ngã tư bến xe Sơn Tây thì rẽ trái tiếp 3,5 km đến ngã tư Viện 105. Sau đó bạn đi thẳng tiếp 9 km tới ngã ba Tản Lĩnh thì rẽ trái đi tiếp 3,5km đến ngã 5 hình sao, phía trước bên tay phải là Trạm bán vé tham quan Vườn Quốc gia Ba Vì.\"; \"Nằm cách trung tâm Hà Nội chưa đầy 60km\""
+    },
+    {
+      "claim": "Xe buýt tới khu vực: tuyến 214 từ bến xe Yên Nghĩa (Hà Đông) đi Xuân Khanh; tuyến 71, 74 từ Mỹ Đình đi Xuân Khanh. Vườn có diện tích 108,2 km², thuộc 15 xã 5 huyện; mùa mưa từ tháng 4 đến tháng 10, mùa khô từ tháng 11 đến tháng 3; hoa dã quỳ nở khoảng giữa tháng 11 đến đầu tháng 12.",
+      "source_url": "https://mia.vn/cam-nang-du-lich/vuon-quoc-gia-ba-vi-dia-diem-ly-tuong-cho-nhung-chuyen-da-ngoai-2678",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Tuyến 214 xuất phát từ bến xe Yên Nghĩa (Hà Đông, Hà Nội) - Xuân Khanh.\"; \"Tuyến 71 hoặc tuyến 74 từ Mỹ Đình - Xuân Khanh.\"; \"Vườn có tổng diện tích là 108,2km2, thuộc địa giới hành chính 15 xã, 5 huyện\"; \"Mùa mưa kéo dài từ tháng 4 - 10\"; \"Mùa khô kéo dài tháng 11 - 3\"; \"Hoa dã quỳ nở rộ vào tháng 11\""
+    },
+    {
+      "claim": "Các cơ sở cho thuê tại huyện: Lê Hiếu (xóm Đá Chông, thủ tục 10-15 phút), Dũng Phạm (Đồi Ngọc, Tiên Phong, thuê ngày/tuần/tháng), Minh Anh, Hoàng Oanh (Vạn Thắng); yêu cầu giấy tờ xe hợp lệ bản photo công chứng hoặc bản gốc.",
+      "source_url": "https://timthosuaxe.com/thue-xe-may-huyen-ba-vi/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Lê Hiếu là cái tên quen thuộc tại khu vực Đá Chông\"; \"Thủ tục thuê xe tại đây được tối giản hóa, chỉ mất từ 10 đến 15 phút\"; \"Địa chỉ: Xóm Đá Chông, Ba Vì, Hà Nội\"; \"Dũng Phạm cung cấp dịch vụ cho thuê linh hoạt theo ngày, tuần hoặc tháng\"; \"Đồi Ngọc, Tiên Phong, Ba Vì\"; \"Hoàng Oanh là điểm đến tin cậy tại khu vực Vạn Thắng\"; \"Đảm bảo cơ sở cho thuê xe cung cấp đầy đủ giấy tờ xe hợp lệ (bản photo công chứng hoặc bản gốc tùy theo thỏa thuận)\""
+    }
+  ]
+}

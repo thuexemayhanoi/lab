@@ -1,0 +1,133 @@
+{
+  "article_id": "A00077",
+  "primary_keyword": "thuê xe máy Chùa Hương",
+  "secondary_keywords": [
+    "thuê xe máy đi Chùa Hương",
+    "giá thuê xe máy Hà Nội đi Chùa Hương",
+    "đường đi Chùa Hương bằng xe máy",
+    "giữ xe máy ở bến Đục",
+    "vé thuyền Chùa Hương 2026"
+  ],
+  "search_intent": "informational-research — du khách đi lễ Chùa Hương cần biết cung đường 60 km từ Hà Nội tới bến Đục, mặt bằng thuê xe và phạm vi cho phép của các nhà xe, vé thắng cảnh - thuyền đò và cách giữ xe tại bến",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Chùa Hương",
+    "quần thể Hương Sơn",
+    "xã Hương Sơn",
+    "huyện Mỹ Đức",
+    "bến Đục",
+    "suối Yến",
+    "động Hương Tích",
+    "tuyến Long Vân",
+    "tuyến Tuyết Sơn",
+    "Quốc lộ 21C",
+    "cao tốc CT01",
+    "Quốc lộ 38",
+    "Tế Tiêu",
+    "tỉnh lộ 419",
+    "Vạn Tín",
+    "Mỹ Đình"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe tay ga",
+    "xe máy tự lái"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Vexere",
+    "Hoàng Hiệp",
+    "Phát Đạt",
+    "Goodbike",
+    "Mototrip",
+    "VnExpress",
+    "HTX Dịch vụ du lịch Hương Sơn"
+  ],
+  "model_entities": [
+    "Honda Blade",
+    "Honda Wave Alpha",
+    "Honda Future",
+    "Honda Air Blade",
+    "Honda Vision"
+  ],
+  "questions_found": [
+    "Đi Chùa Hương từ Hà Nội bằng xe máy mất bao lâu?",
+    "Thuê xe máy Hà Nội đi Chùa Hương giá bao nhiêu?",
+    "Nhà xe có cho chạy xe ra Chùa Hương không?",
+    "Vé Chùa Hương mùa lễ 2026 bao nhiêu tiền?"
+  ],
+  "related_queries": [
+    "thuê xe đi chùa hương",
+    "đường đi chùa hương bằng xe máy",
+    "giữ xe ở bến đục",
+    "vé thuyền suối yến 2026"
+  ],
+  "serp_patterns": "SERP 'thuê xe đi Chùa Hương' toàn bài cho thuê ô tô 4-45 chỗ (Minh Đức, Travelcar, Thuê xe 4 bánh); intent thuê xe máy chưa có trang riêng — khoảng trống cho bài cung đường + giá thuê xe máy + vé thuyền 2026.",
+  "official_sources": [
+    {
+      "source_url": "https://xaydungchinhsach.chinhphu.vn/thoi-gian-to-chuc-gia-dich-vu-tai-le-hoi-chua-huong-2025-119250120131618161.htm",
+      "source_domain": "chinhphu.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Lễ hội du lịch chùa Hương 2025 diễn ra từ 3/2 đến hết 1/5/2025; thuyền đò phục vụ du khách từ 4h30 đến 20h hằng ngày; hơn 3.700 thuyền đò của HTX Dịch vụ du lịch Hương Sơn được sửa sang, trang bị áo phao; huyện Mỹ Đức phát hành vé điện tử tham quan thắng cảnh tích hợp dịch vụ vận chuyển bằng thuyền đò; chỉnh trang tuyến tỉnh lộ 419 (từ Vạn Tín đi Hương Sơn)."
+    }
+  ],
+  "supporting_sources": [
+    {
+      "name": "VnExpress — Cẩm nang du lịch Chùa Hương (lễ hội 2026, giá vé, di chuyển)",
+      "url": "https://vnexpress.net/cam-nang-du-lich-chua-huong-5039763.html"
+    },
+    {
+      "name": "Vexere — Thuê xe máy Hà Nội (niêm yết Hoàng Hiệp, Phát Đạt, Goodbike, Mototrip)",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-ha-noi.vi"
+    },
+    {
+      "name": "Chinhphu.vn — Giá dịch vụ và những điểm mới tại lễ hội Chùa Hương 2025",
+      "url": "https://xaydungchinhsach.chinhphu.vn/thoi-gian-to-chuc-gia-dich-vu-tai-le-hoi-chua-huong-2025-119250120131618161.htm"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-pho-co-ha-noi/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-honda-vision-ha-noi/"
+  ],
+  "potential_cannibalization": "Khác biệt với thue-xe-may-ha-noi (A00001, intent thành phố) và thue-xe-may-pho-co-ha-noi (A00073, POI phố cổ): bài này nhắm intent POI 'Chùa Hương' — cung đường 60 km tới bến Đục, phạm vi cho phép của nhà xe, vé thuyền mùa lễ; link một chiều sang trang thành phố.",
+  "unique_angle": "Ghép ba lớp dữ liệu: cung đường Hà Nội - bến Đục theo QL21C/CT01+QL38, chính sách phạm vi 'Thành phố Hà Nội (cũ)' của các nhà xe trên Vexere đối chiếu vị trí Chùa Hương, và bảng vé thắng cảnh - thuyền đò mùa lễ 2026 theo cẩm nang VnExpress.",
+  "notes": "Hàng informational_only, geo Hà Nội: không dùng 'chúng tôi', không claim dịch vụ; disclosure P2 chuẩn bản Hà Nội. requires_official_sources=0 nhưng có nguồn chính phủ (chinhphu.vn) cho thông tin tổ chức lễ hội. Mọi claim định lượng có claim_evidence từ nguồn đã mở 2026-10-01.",
+  "claim_evidence": [
+    {
+      "claim": "Chùa Hương nằm ở xã Hương Sơn, Hà Nội, cách trung tâm Thủ đô khoảng 60 km về phía tây nam; từ trung tâm Hà Nội đến bến Đục mất khoảng hai tiếng theo Quốc lộ 21C hoặc cao tốc CT01 và Quốc lộ 38, xe máy hơn hai tiếng; xe buýt tuyến 211 từ Mỹ Đình tới Tế Tiêu; đi đò khoảng một tiếng dọc suối Yến.",
+      "source_url": "https://vnexpress.net/cam-nang-du-lich-chua-huong-5039763.html",
+      "source_domain": "vnexpress.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Chùa Hương nằm ở xã Hương Sơn, Hà Nội, cách trung tâm Thủ đô khoảng 60 km về phía tây nam.\"; \"Di chuyển từ trung tâm Hà Nội đến bến Đục (chùa Hương) mất khoảng hai tiếng, theo Quốc lộ 21C hoặc cao tốc CT01 và Quốc lộ 38.\"; \"Xe máy: ... Thời gian di chuyển hơn hai tiếng.\"; \"Xe buýt: Tuyến 211 từ Mỹ Đình đến Tế Tiêu, sau đó đi xe ôm vào bến Đục.\"; \"du khách sẽ đi đò khoảng một tiếng dọc suối Yến để vào các khu danh thắng chính.\""
+    },
+    {
+      "claim": "Vé mùa lễ 2026: tuyến Hương Tích vé thắng cảnh và thuyền đò người lớn 230.000 đồng, ưu tiên 170.000 đồng, trẻ em 60.000 đồng; tuyến Long Vân - Tuyết Sơn vé thắng cảnh miễn phí, thuyền đò 85.000 đồng/người lớn và 50.000 đồng/trẻ em; xe điện 20.000 đồng/người/lượt; cáp treo 260.000 đồng/người lớn khứ hồi, 180.000 đồng trẻ em và ưu tiên khứ hồi. Lễ hội khai hội ngày 22/2 và kéo dài đến 11/5.",
+      "source_url": "https://vnexpress.net/cam-nang-du-lich-chua-huong-5039763.html",
+      "source_domain": "vnexpress.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Tuyến Hương Tích — Vé thắng cảnh và thuyền đò với người lớn: 230.000 đồng/người, vé ưu tiên: 170.000 đồng/người, vé trẻ em: 60.000 đồng/người\"; \"Tuyến Long Vân - Tuyết Sơn — Vé thắng cảnh: miễn phí cho mọi du khách. Vé thuyền đò: 85.000 đồng/người lớn, 50.000 đồng/trẻ em. Xe điện: 20.000 đồng/người/lượt. Cáp treo: 260.000 đồng/người lớn khứ hồi, trẻ em và ưu tiên/180.000 đồng khứ hồi.\"; \"Lễ khai hội chùa Hương năm Bính Ngọ diễn ra ngày 22/2 (mùng 6 tháng giêng) và kéo dài đến 11/5.\""
+    },
+    {
+      "claim": "Niêm yết thuê xe máy Hà Nội trên Vexere: Hoàng Hiệp xe số Blade/Wave Alpha/Future 2018-2020 từ 120.000đ/ngày và xe ga Airblade/Vision từ 150.000đ/ngày kèm mũ bảo hiểm, áo mưa, 1 lít xăng, giao tận nơi; Phát Đạt Wave Alpha từ 130.000đ, xe ga từ 150.000đ; Goodbike Wave Alpha 2021-2023 từ 150.000đ, Future 125cc từ 2023 từ 175.000đ; Mototrip xe ga từ 160.000đ đến 190.000đ.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ha-noi.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Xe số phổ thông Hoàng Hiệp ... Honda Blade, Honda Wave Alpha, Honda Future ... Đời xe: 2018-2020 Mũ bảo hiểm, Áo mưa, Xăng (1 lít) Giao xe tận nơi Không cần cọc trước từ 120.000đ\"; \"Xe tay ga phổ thông Hoàng Hiệp ... Honda Airblade ... Honda Vision ... Đời xe: từ 2014 ... từ 150.000đ\"; \"Xe số phổ thông Phát Đạt ... Honda Wave Alpha Đời xe: từ 2015 ... từ 130.000đ\"; \"Xe tay ga phổ thông Phát Đạt ... từ 150.000đ\"; \"Xe số 110cc Goodbike ... Honda Wave Alpha Đời xe: 2021-2023 ... từ 150.000đ\"; \"Xe số 125cc Goodbike ... Honda Future Đời xe: từ 2023 ... từ 175.000đ\"; \"Xe tay ga phổ thông Mototrip ... Đời xe: từ 2010 ... từ 160.000đ\"; \"Xe tay ga phổ thông Mototrip ... Đời xe: từ 2019 ... từ 190.000đ\""
+    },
+    {
+      "claim": "Chính sách phạm vi của nhà xe trên Vexere ghi 'Vui lòng chỉ sử dụng xe trong phạm vi Thành phố Hà Nội (cũ). Nhà xe có quyền từ chối giao xe nếu khách hàng di chuyển ngoài phạm vi trên'; giấy tờ CCCD/Passport & GPLX bản gốc, cọc 3 triệu đồng (vé máy bay khứ hồi miễn cọc), giữ CCCD/Passport.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ha-noi.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Giấy tờ cần chuẩn bị: CCCD/Passport & GPLX (bản gốc) – Cọc 3tr (vé máy bay khứ hồi miễn phí cọc) – Giữ CCCD/Passport – Làm hợp đồng thuê xe * Vui lòng chỉ sử dụng xe trong phạm vi Thành phố Hà Nội (cũ). Nhà xe có quyền từ chối giao xe nếu khách hàng di chuyển ngoài phạm vi trên.\""
+    },
+    {
+      "claim": "Trong mùa lễ hội, thuyền đò phục vụ từ 4h30 đến 20h hằng ngày; hơn 3.700 thuyền của HTX Dịch vụ du lịch Hương Sơn được sửa sang, sơn màu xanh, trang bị áo phao; phát hành vé điện tử tham quan thắng cảnh tích hợp vận chuyển thuyền đò.",
+      "source_url": "https://xaydungchinhsach.chinhphu.vn/thoi-gian-to-chuc-gia-dich-vu-tai-le-hoi-chua-huong-2025-119250120131618161.htm",
+      "source_domain": "chinhphu.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "\"Thời gian phục vụ du khách bằng thuyền đò được bắt đầu từ 4h30 đến 20h hằng ngày.\"; \"Hơn 3.700 thuyền đò của Hợp tác xã Dịch vụ du lịch Hương Sơn đã được sửa sang, sơn bằng màu xanh, trang bị đầy đủ áo phao, giỏ đựng rác, ô che nắng, che mưa, ghế ngồi, nước uống miễn phí...\"; \"huyện Mỹ Đức quyết định phát hành vé điện tử tham quan thắng cảnh tích hợp với sử dụng dịch vụ vận chuyển bằng thuyền đò.\""
+    }
+  ]
+}
