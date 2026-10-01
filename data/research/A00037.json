@@ -1,0 +1,285 @@
+{
+  "article_id": "A00037",
+  "primary_keyword": "thuê xe máy Ba Đình",
+  "secondary_keywords": [
+    "cho thuê xe máy Ba Đình",
+    "thuê xe máy Ba Đình giá rẻ",
+    "thuê xe máy Quán Thánh",
+    "thuê xe máy Phúc Xá",
+    "thuê xe máy Đội Cấn"
+  ],
+  "search_intent": "local/commercial",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Ba Đình",
+    "Quán Thánh",
+    "Phúc Xá",
+    "Châu Long",
+    "Cửa Bắc",
+    "Nguyễn Trường Tộ",
+    "An Xá",
+    "Tân Ấp",
+    "Hồng Hà",
+    "Trúc Bạch",
+    "Yên Phụ",
+    "Đội Cấn",
+    "Cống Vị",
+    "Vĩnh Phúc",
+    "Bưởi",
+    "Hoàng Hoa Thám",
+    "Phan Đình Phùng",
+    "Kim Mã",
+    "Liễu Giai",
+    "Giảng Võ",
+    "Văn Cao",
+    "Ngọc Khánh",
+    "Láng Thượng",
+    "La Thành",
+    "Trần Phú",
+    "Điện Biên",
+    "hồ Tây",
+    "Lăng Bác",
+    "Bảo tàng Hồ Chí Minh",
+    "Hoàng Thành Thăng Long",
+    "phố cổ Hà Nội",
+    "sân bay Nội Bài"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe ga",
+    "xe tay côn",
+    "xe phân khối lớn",
+    "xe máy điện"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Piaggio",
+    "Vespa"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "SH",
+    "NVX",
+    "Winner",
+    "Exciter",
+    "Future",
+    "Jupiter",
+    "Click",
+    "Mio"
+  ],
+  "questions_found": [
+    "thuê xe máy Ba Đình giá bao nhiêu một ngày?",
+    "thuê xe máy Ba Đình cần giấy tờ gì, đặt cọc bao nhiêu?",
+    "ở Ba Đình có dịch vụ giao xe tận khách sạn không?",
+    "cho thuê xe máy theo tháng ở Ba Đình có không, giá thế nào?",
+    "khách nước ngoài thuê xe máy ở Ba Đình cần chuẩn bị gì?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Ba Đình",
+    "cho thuê xe máy Quán Thánh",
+    "thuê xe máy Phúc Xá",
+    "thuê xe máy gần Lăng Bác",
+    "cho thuê xe máy Ba Đình theo tháng"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy Ba Đình\" là hỗn hợp thư mục tổng hợp và trang nhà xe: timthosuaxe có bài top 10 cửa hàng quận Ba Đình kèm bảng giá tham khảo theo cửa hàng (Chungxe, Minh Nga, Hoàng Oanh, Duy Cương, Minh Lâm, Saigon Motorbike) và địa chỉ từng cơ sở; hanoireview tổng hợp 5 địa chỉ (Phát Đạt 99 Quán Thánh, Mr-Good Bikes 10 Ngõ 67 Văn Cao, Vivumotor, Thiên An xe điện, Nhật Phát); 2trip gợi ý 4 địa điểm (Hanoi Motor Tour Đội Cấn, Tigit Hoàng Hoa Thám, Motorbike Rental Hanoi Quán Thánh); giahuy.org lặp lại nhóm Tigit/Hanoi Motor Tour và điểm nhấn POI trung tâm (Bảo tàng Hồ Chí Minh, Hoàng Thành, Hồ Tây); xuất hiện cả trang GitHub Pages của nhà xe nhỏ và fanpage Facebook (Phát Đạt 99 Quán Thánh). Intent local/commercial nhấn mạnh giao tận nơi, thuê theo tháng, khu vực gần khách sạn và Lăng Bác.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://timthosuaxe.com/top-10-dia-chi-thue-xe-may-quan-ba-dinh/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng giá tham khảo 100.000đ – 400.000đ/ngày tùy dòng xe và địa chỉ từng cửa hàng tại Phúc Xá, Quán Thánh, Đội Cấn, Phan Đình Phùng, Ngọc Khánh"
+    },
+    {
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-thue-xe-may-tai-q-ba-dinh",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "5 địa chỉ tại Q. Ba Đình: Phát Đạt (99 Quán Thánh), Mr-Good Bikes (10 Ngõ 67 Văn Cao, Liễu Giai) thủ tục 5 phút giá dài hạn từ 50.000 VNĐ/ngày cứu hộ 24/24 trong 15 phút, Vivumotor (Ngõ 25 Phan Đình Phùng), Thiên An xe điện (35 Trần Phú), Nhật Phát (75 Quán Thánh)"
+    },
+    {
+      "source_url": "https://2trip.vn/toplist/cho-thue-xe-may-tai-ba-dinh-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "4 địa điểm: Hanoi Motor Tour (22 Ngõ 463 Đội Cấn) 100.000–1.200.000 đồng/ngày; Tigit Motorbikes (75 ngõ 173 Hoàng Hoa Thám) 150.000–800.000 đồng/ngày; Motorbike Rental Hanoi (75 Quán Thánh) 130.000–1.500.000 đồng/ngày cọc 2 triệu miễn cọc dưới 3 ngày cho khách có vé máy bay 2 chiều, giao 8km và Nội Bài 200.000 đồng/lượt"
+    },
+    {
+      "source_url": "https://giahuy.org/thue-xe-may-ba-dinh-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "điểm du lịch quanh Ba Đình (Bảo tàng Hồ Chí Minh, Hoàng Thành Thăng Long, Hồ Tây); các địa chỉ cho thuê tại La Thành, Hoàng Hoa Thám, Đội Cấn"
+    },
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "trang chính thức của nhà xe Nguyễn Tú: bảng giá công khai theo ngày/tuần/tháng, tiền cọc tham khảo, giao tận nơi Long Biên/Hoàn Kiếm/Phố Cổ/Ba Đình và các quận nội thành, giờ 09:00–21:00"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-hoan-kiem/",
+    "/lab/thue-xe-may/thue-xe-may-long-bien/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-noi-bai/",
+    "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-ba-dinh riêng biệt: A00001 (thuê xe máy Hà Nội) giữ vai trò bài thành phố tổng quát; A00035 (Long Biên) gắn khu đông và thuê tháng cư dân; A00036 (Hoàn Kiếm) gắn du khách phố cổ. Bài này gắn nhu cầu khách công tác/du khách tại khu trung tâm hành chính (Quán Thánh, Liễu Giai, Giảng Võ, Phúc Xá gần hồ Tây và Lăng Bác), phân tầng giá từ xe số bình dân tới SH/phân khối lớn — khác intent, khác geo, không trùng primary intent.",
+  "unique_angle": "Bài khu trung tâm hành chính duy nhất: định vị theo khách công tác và du khách lưu trú quanh Quán Thánh – Liễu Giai – Giảng Võ – Phúc Xá, tổng hợp bảng giá phân tầng từ xe số bình dân (Chungxe, Minh Lâm từ 100.000 đồng/ngày) tới xe SH/phân khối lớn (Duy Cương, Tigit tới 800.000 đồng/ngày), kèm chính sách cọc/giao xe của từng nhà xe ghi nhận công khai và gợi ý di chuyển Lăng Bác – Hoàng Thành – Hồ Tây — khác hẳn bài Hà Nội tổng quát, bài phố cổ du lịch và bài khu đông thuê tháng.",
+  "notes": "actual_service_area=hanoi_owner_verified: được phép dùng NAP đã xác minh từ config/business-facts.json và bảng giá công khai trên trang nhà xe; KHÔNG bịa giá ngoài bảng. \"Quận Ba Đình\" là tên cũ (LEGACY_SEARCH theo data/geography/localities.json — LC-003, Sắp xếp đơn vị hành chính 2025) — bài dùng tên địa danh quen thuộc và nêu rõ bối cảnh. Giá của từng nhà xe ngoài luôn dẫn theo công bố công khai của chính nhà xe đó (bài tổng hợp ghi nhận), không tổng quát hóa thành mặt bằng thị trường ngoài khoảng ghi nhận.",
+  "claim_evidence": [
+    {
+      "claim": "Mức giá thuê xe máy ở Ba Đình dao động 100.000đ – 400.000đ/ngày tùy dòng xe.",
+      "source_url": "https://timthosuaxe.com/top-10-dia-chi-thue-xe-may-quan-ba-dinh/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Với mức giá dao động từ 100.000đ – 400.000đ/ngày tùy dòng xe, bạn hoàn toàn có thể sở hữu một chiếc phương tiện đảm bảo an toàn."
+    },
+    {
+      "claim": "Bảng giá tham khảo các cửa hàng ghi nhận tại Ba Đình: Chungxe 100.000 – 180.000đ/ngày; Minh Nga 120.000 – 200.000đ/ngày; Hoàng Oanh 100.000 – 150.000đ/ngày; Duy Cương 150.000 – 400.000đ/ngày; Minh Lâm 100.000 – 160.000đ/ngày; Saigon Motorbike 150.000 – 300.000đ/ngày.",
+      "source_url": "https://timthosuaxe.com/top-10-dia-chi-thue-xe-may-quan-ba-dinh/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chungxe Ba Đình — Xe số (Wave, Sirius), xe ga (Vision, Air Blade) — 100.000 – 180.000đ/ngày. Cho thuê xe Minh Nga — Honda, Yamaha, Piaggio đời mới — 120.000 – 200.000đ/ngày. Hoàng Oanh (Tuấn Tú) — Xe số phổ thông, xe ga tiết kiệm xăng — 100.000 – 150.000đ/ngày. Cho thuê xe Duy Cương — Xe ga, xe SH, Xe côn tay/PKL (Winner, NVX) — 150.000 – 400.000đ/ngày. Minh Lâm Motorbike — Xe số, xe ga du lịch, xe theo tháng — 100.000 – 160.000đ/ngày. Saigon Motorbike Ba Đình — Xe ga, xe số cho khách Tây, phượt xe tay côn — 150.000 – 300.000đ/ngày."
+    },
+    {
+      "claim": "Minh Lâm có giá bình dân, chỉ từ 100.000 đồng/ngày cho xe số như Honda Wave, Sirius, và có dịch vụ cho thuê theo tháng.",
+      "source_url": "https://timthosuaxe.com/top-10-dia-chi-thue-xe-may-quan-ba-dinh/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Mức giá thuê tại Minh Lâm được đánh giá là cực kỳ bình dân, chỉ từ 100.000 đồng/ngày cho các dòng xe số như Honda Wave, Sirius. Đây là sự lựa chọn hợp lý cho sinh viên, thực tập sinh hoặc người đi làm tại khu vực trung tâm Ba Đình. — Minh Lâm không chỉ cung cấp xe thuê ngắn hạn mà còn linh hoạt cho thuê theo tháng với chi phí tối ưu."
+    },
+    {
+      "claim": "Các địa chỉ ghi nhận công khai: Chungxe 79-59 P. An Xá, Phúc Xá, Ba Đình; Minh Nga 9-15 Ng. Châu Long, Quán Thánh, Ba Đình; Duy Cương 102 P. Tân Ấp, Phúc Xá, Ba Đình và nhánh 2-80 Ng. 444 P. Đội Cấn, Cống Vị, Ba Đình; Saigon Motorbike 63 P. Trần Phú, Điện Biên, Ba Đình; Huy Vina 231-197 P. Phan Đình Phùng, Quán Thánh, Ba Đình; Hoài Nam 39 Đ. Hồng Hà, Phúc Xá, Ba Đình; cửa hàng Attila 7-13 P. Ngọc Khánh, Ngọc Khánh, Ba Đình.",
+      "source_url": "https://timthosuaxe.com/top-10-dia-chi-thue-xe-may-quan-ba-dinh/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Địa chỉ: 79-59 P. An Xá, Phúc xá, Ba Đình, Hà Nội (Chungxe). Địa chỉ: 9-15 Ng. Châu Long, Quán Thánh, Ba Đình, Hà Nội (Minh Nga). Địa chỉ: 102 P. Tân Ấp, Phúc Xá, Ba Đình, Hà Nội (Duy Cương). Địa chỉ: 2-80 Ng. 444 P. Đội Cấn, Cống Vị, Ba Đình, Hà Nội (Duy Cương — Đội Cấn). Địa chỉ: 63 P. Trần Phú, Điện Biên, Ba Đình, Hà Nội (Saigon Motorbike). Địa chỉ: 231-197 P. Phan Đình Phùng, Quán Thánh, Ba Đình, Hà Nội (Huy Vina). Địa chỉ: 39 Đ. Hồng Hà, Phúc Xá, Ba Đình, Hà Nội (Hoài Nam). Địa chỉ: 7-13 P. Ngọc Khánh, Ngọc Khánh, Ba Đình, Hà Nội (dịch vụ cho thuê Attila bàn giao tận nhà tại Ngọc Khánh)."
+    },
+    {
+      "claim": "Cửa hàng cho thuê xe Attila tại Ngọc Khánh có dịch vụ giao xe tận nhà, tận khách sạn tại khu vực Ngọc Khánh, Giảng Võ, Kim Mã, cam kết thời gian giao xe từ 10-15 phút.",
+      "source_url": "https://timthosuaxe.com/top-10-dia-chi-thue-xe-may-quan-ba-dinh/",
+      "source_domain": "timthosuaxe.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Dịch vụ giao xe tận nhà, tận khách sạn tại khu vực Ngọc Khánh, Giảng Võ, Kim Mã giúp bạn tiết kiệm thời gian. Với những khách hàng lưu trú tại các khách sạn lớn, cửa hàng cam kết thời gian giao xe chỉ từ 10-15 phút."
+    },
+    {
+      "claim": "Mr-Good Bikes (10 Ngõ 67 Văn Cao, Liễu Giai, Ba Đình) làm thủ tục trong khoảng 5 phút, giá thuê dài hạn chỉ từ 50.000 VNĐ/ngày, hỗ trợ cứu hộ 24/24 khắc phục sự cố trong vòng 15 phút.",
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-thue-xe-may-tai-q-ba-dinh",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thời gian làm thủ tục chỉ trong vòng 5 phút. Giá thuê xe chỉ từ 50.000 VNĐ/ngày khi khách hàng thuê xe dài hạn. Bên cạnh đó, dịch vụ cứu hộ 24/24 với đội ngũ giàu kinh nghiệm, khắc phục mọi sự cố chỉ trong vòng 15 phút. Địa chỉ: 10 Ngõ 67 Văn Cao, P. Liễu Giai, Q. Ba Đình"
+    },
+    {
+      "claim": "Phát Đạt (99 Quán Thánh, Ba Đình) niêm yết giá minh bạch cho nội thành Hà Nội và phụ thu 30.000đ/ngày đối với các chuyến đi tỉnh hoặc phượt.",
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-thue-xe-may-tai-q-ba-dinh",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Phát Đạt cam kết mức giá thuê xe máy hợp lý và minh bạch nhất tại Hà Nội. Giá thuê được niêm yết rõ ràng, không phát sinh chi phí ngoài mong muốn. Giá áp dụng cho nội thành Hà Nội và phụ thu 30.000đ/ngày đối với các chuyến đi tỉnh hoặc phượt. Địa chỉ: 99 Quán Thánh, P. Quán Thánh, Q. Ba Đình"
+    },
+    {
+      "claim": "Giá thuê xe số ở Ba Đình thường dao động 80.000 – 120.000 đồng/chiếc/ngày.",
+      "source_url": "https://2trip.vn/toplist/cho-thue-xe-may-tai-ba-dinh-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Thông thường, giá cho thuê xe sẽ dao động từ 80.000 – 120.000 đồng/ chiếc/ ngày đối với xe số, những chiếc xe phân khối lớn hơn sẽ có giá thuê lớn hơn."
+    },
+    {
+      "claim": "Tigit Motorbikes Hanoi (75 ngõ 173 Hoàng Hoa Thám, Ngọc Hà, Ba Đình) cho thuê theo ngày và theo tháng, giá dao động 150.000 – 800.000 đồng/xe/ngày, thủ tục khoảng 5 phút.",
+      "source_url": "https://2trip.vn/toplist/cho-thue-xe-may-tai-ba-dinh-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tigit Motorbikes Hanoi có dịch vụ cho thuê theo ngày và theo tháng với những mức giá và khoản đặt cọc phù hợp theo yêu cầu của chủ cho thuê. Thông thường, thủ tục chỉ kéo dài khoảng 5 phút nên có thể giúp bạn tiết kiệm được nhiều thời gian. Giá cho thuê: Dao động từ 150.000 – 800.000 đồng/ chiếc/ xe/ ngày. Địa chỉ: Số 75 ngõ 173 Hoàng Hoa Thám, phường Ngọc Hà, quận Ba Đình, thành phố Hà Nội"
+    },
+    {
+      "claim": "Motorbike Rental Hanoi (75 Quán Thánh, Ba Đình) ghi giá 130.000 – 1.500.000 đồng/ngày; đặt cọc khoảng 2 triệu kèm CCCD hoặc hộ chiếu; khách có vé máy bay 2 chiều thuê dưới 3 ngày được miễn đặt cọc; giao xe tận nơi trong bán kính 8km với phí bằng phí xe ôm công nghệ Grabbike; giao nhận tại sân bay Nội Bài giá 200.000 đồng/lượt.",
+      "source_url": "https://2trip.vn/toplist/cho-thue-xe-may-tai-ba-dinh-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá cho thuê: Dao động từ 130.000 – 1.500.000 đồng/ chiếc/ ngày. Để thuê xe tại Motorbike Rental Hanoi, khách hàng sẽ đặt cọc khoảng 2 triệu đồng và chứng minh nhân dân hoặc hộ chiếu. Đối với khách du lịch có đủ giấy tờ vé máy bay 2 chiều và thuê dưới 3 ngày sẽ miễn đặt cọc 100%, chỉ thanh toán tiền thuê xe. Thủ tục cho thuê xe đơn giản, giao xe tận nơi trong bán kính 8km với mức phí bằng phí của xe ôm công nghệ Grabbike. Đặc biệt, cửa hàng còn có dịch vụ giao nhận xe tại sân bay Nội Bài với mức giá là 200.000 đồng/ lượt. Địa chỉ: Số 75 Quán Thánh, quận Ba Đình, thành phố Hà Nội (cơ sở 1)"
+    },
+    {
+      "claim": "Hanoi Motor Tour (22 Ngõ 463 Đội Cấn, Vĩnh Phúc, Ba Đình) ghi giá 100.000 – 1.200.000 đồng/ngày tùy dòng xe; đặt cọc bằng giấy đăng ký xe (cavet) hoặc hộ chiếu hoặc 2 triệu/xe.",
+      "source_url": "https://2trip.vn/toplist/cho-thue-xe-may-tai-ba-dinh-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá cho thuê: Dao động từ 100.000 – 1.200.000 đồng/ chiếc/ ngày. Đồng thời, để lại giấy đăng ký xe (cavet) hay hộ chiếu hoặc 2 triệu/ xe nếu không có những giấy tờ trên. Địa chỉ: Số 22 Ngõ 463 – Đội Cấn, phường Vĩnh Phú, quận Ba Đình, thành phố Hà Nội"
+    },
+    {
+      "claim": "Ba Đình có nhiều điểm đến du lịch như Bảo tàng Hồ Chí Minh, Hoàng Thành Thăng Long, Đền Ngọc Sơn, Hồ Tây.",
+      "source_url": "https://giahuy.org/thue-xe-may-ba-dinh-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Ba Đình là một trong những quận trung tâm của Hà Nội, với nhiều điểm đến du lịch hấp dẫn như Bảo tàng Hồ Chí Minh, Văn Miếu – Quốc Tử Giám, Hoàng Thành Thăng Long, Đền Ngọc Sơn, Hồ Tây, Tổng Lãnh sự quán Mỹ"
+    },
+    {
+      "claim": "Dịch vụ của chủ trang web công bố giá thuê Honda Wave và Yamaha Sirius (xe số): 150.000đ/ngày; giá tuần 700.000đ; giá tháng 900.000–1.200.000đ.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 150.000đ/ngày. Giá tuần 700.000đ; giá tháng 900.000–1.200.000đ."
+    },
+    {
+      "claim": "Honda Click / Yamaha Mio (xe ga giá rẻ): 150.000đ/ngày; 700.000đ/tuần; 900.000–1.200.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Click / Yamaha Mio – xe ga giá rẻ: 150.000đ/ngày; 700.000đ/tuần; 900.000–1.200.000đ/tháng."
+    },
+    {
+      "claim": "Honda Vision: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000–2.000.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Vision – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000–2.000.000đ/tháng."
+    },
+    {
+      "claim": "Honda Air Blade: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Air Blade – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Xe máy điện: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy điện tại Nguyễn Tú: 200.000đ/ngày. — Giá thuê xe máy điện tại Nguyễn Tú: 1.000.000đ/tuần. — Giá thuê xe máy điện tại Nguyễn Tú: 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Tiền đặt cọc tham khảo: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiền đặt cọc tham khảo: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu."
+    },
+    {
+      "claim": "Dịch vụ giao xe tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chúng tôi giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành, giúp bạn khám phá Hà Nội an toàn và tiết kiệm."
+    },
+    {
+      "claim": "Địa điểm chính tại Long Biên; giá, tiền cọc và tình trạng xe được xác nhận trước khi chốt.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điểm khác biệt của Nguyễn Tú: địa điểm chính tại Long Biên, hỗ trợ giao xe theo khu vực và tư vấn loại xe theo thời gian thuê. Giá, tiền cọc và tình trạng xe được xác nhận trước khi chốt."
+    },
+    {
+      "claim": "Giờ làm việc 09:00 – 21:00 và không giao xe ngoài khung giờ này.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điện thoại: 0942 467 674 · 09:00 – 21:00 · Không giao xe máy ngoài giờ. (Địa điểm chính: Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội.)"
+    }
+  ]
+}

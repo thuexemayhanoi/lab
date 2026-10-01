@@ -1,0 +1,260 @@
+{
+  "article_id": "A00038",
+  "primary_keyword": "thuê xe máy Đống Đa",
+  "secondary_keywords": [
+    "cho thuê xe máy Đống Đa",
+    "thuê xe máy Đống Đa giá rẻ",
+    "thuê xe máy Chợ Dừa",
+    "thuê xe máy đường Láng",
+    "cho thuê xe máy Tây Sơn"
+  ],
+  "search_intent": "local/commercial",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Đống Đa",
+    "Chợ Dừa",
+    "Ô Chợ Dừa",
+    "La Thành",
+    "Láng Thượng",
+    "Tây Sơn",
+    "Quan Thổ",
+    "Trần Quý Cáp",
+    "Văn Miếu",
+    "Quốc Tử Giám",
+    "Tôn Đức Thắng",
+    "Đường Láng",
+    "Quang Trung",
+    "Kim Liên",
+    "Thái Hà",
+    "Công viên Đống Đa",
+    "gò Đống Đa",
+    "trường Cao đẳng Y",
+    "phố cổ Hà Nội"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe ga",
+    "xe tay côn",
+    "xe phân khối lớn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Piaggio",
+    "Sym",
+    "Vespa"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Lead",
+    "Exciter",
+    "Click",
+    "Mio"
+  ],
+  "questions_found": [
+    "thuê xe máy Đống Đa giá bao nhiêu một ngày?",
+    "thuê xe máy theo tháng ở Đống Đa giá thế nào?",
+    "thuê xe máy ở Chợ Dừa cần giấy tờ gì?",
+    "ở Đống Đa có dịch vụ giao xe tận nơi không, phụ phí bao nhiêu?",
+    "sinh viên thuê xe máy Đống Đa có được ưu đãi không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Đống Đa",
+    "cho thuê xe máy Chợ Dừa",
+    "thuê xe máy đường Láng",
+    "thuê xe máy theo tháng Đống Đa",
+    "cho thuê xe máy Tây Sơn"
+  ],
+  "serp_patterns": "SERP cho \"thuê xe máy Đống Đa\" là hỗn hợp thư mục tổng hợp và trang nhà xe: motogo.vn có bài 5 địa chỉ kèm giá công khai từng nơi (Bon Bon 127 Ngõ Quan Thổ 1, 13535 Ngõ 170 La Thành, Anh Hoàng 27 ngõ 62 Trần Quý Cáp, Hanoi Motor Tour 37 Ngõ 167 Tây Sơn); 2trip tổng hợp 7 địa điểm (Motogo, Bon Bon Motor, Vietnam Motorbike, Hanoi Motor Tour, Tâm Việt, Lộc Motorbike, Long Bình) kèm chính sách cọc/thủ tục; hanoireview tổng hợp 5 địa chỉ (Ô Chợ Dừa, MotoTrip, 123 Go, 13535 gần trường Cao đẳng Y); xethientri có bài bảng giá (chặn curl — không dùng làm evidence); dongda360.vn (blog địa phương) và các trang nhà xe nhỏ xuất hiện. Intent local/commercial nhấn mạnh giá rẻ, thuê tháng cho sinh viên/người đi làm, giao xe tận nơi.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-dong-da-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "5 địa chỉ thuê xe máy Đống Đa kèm giá công khai: Bon Bon (127 Ngõ Quan Thổ 1, Chợ Dừa) 50.000đ–150.000đ/ngày; 13535 (Ngõ 170 La Thành) xe số 130.000đ/ngày, xe ga 220.000đ/ngày; Anh Hoàng (27 ngõ 62 Trần Quý Cáp) 130.000đ/220.000đ; Hanoi Motor Tour (37 Ngõ 167 Tây Sơn) 50.000đ–150.000đ/ngày; MOTOGO từ 130.000đ/ngày tính theo 24h"
+    },
+    {
+      "source_url": "https://2trip.vn/toplist/cho-thue-xe-may-quan-dong-da-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "7 địa điểm: Motogo (16 Ngõ 317 Tây Sơn) 120.000–200.000 vnđ; Bon Bon Motor (246 Tôn Đức Thắng) 80.000–150.000 vnđ/ngày; Vietnam Motorbike (27 Ngõ 62 Trần Quý Cáp); Hanoi Motor Tour 100.000–1.200.000 vnđ; Tâm Việt (35 Đường Láng) 120.000–300.000 vnđ/ngày và 1.500.000–5.100.000 vnđ/tháng, giao tận nơi phụ phí 20.000–30.000 vnđ; Lộc Motorbike (1096 Đường Láng) 70.000–150.000 vnđ/ngày; Long Bình trên dưới 100.000 vnđ/ngày"
+    },
+    {
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-thue-xe-may-tai-q-dong-da",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "5 địa chỉ tại Q. Đống Đa: Ô Chợ Dừa (58 Ô Chợ Dừa) xe số từ 80.000 VNĐ/ngày xe ga từ 120.000 VNĐ/ngày mô tô từ 200.000 VNĐ; MotoTrip (29 Tôn Đức Thắng); 123 Go (47 Đ. Láng) xe số từ 100.000 VNĐ/ngày xe ga từ 140.000 VNĐ/ngày; 13535 (20 Tân Thất Tùng, gần trường Cao đẳng Y) 90.000 VNĐ/ngày xe số"
+    },
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "trang chính thức của nhà xe Nguyễn Tú: bảng giá công khai theo ngày/tuần/tháng, tiền cọc tham khảo, giao tận nơi Long Biên/Hoàn Kiếm/Phố Cổ/Ba Đình và các quận nội thành, giờ 09:00–21:00"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-hoan-kiem/",
+    "/lab/thue-xe-may/thue-xe-may-long-bien/",
+    "/lab/thue-xe-may/thue-xe-may-bac-ninh/",
+    "/lab/kinh-nghiem/",
+    "/lab/lien-he/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-dong-da riêng biệt: A00001 (thuê xe máy Hà Nội) giữ vai trò bài thành phố tổng quát; A00036 (Hoàn Kiếm) gắn du khách phố cổ; A00035 (Long Biên) gắn khu đông thuê tháng cư dân. Bài này gắn véc sinh viên–người đi làm quanh trục Chợ Dừa – La Thành – Tây Sơn – Láng với giá ngắn ngày thấp nhất trong các khu trung tâm và gói tháng cho người ở dài hạn — khác intent, khác geo, không trùng primary intent.",
+  "unique_angle": "Bài Đống Đa duy nhất định vị theo sinh viên và người đi làm quanh Chợ Dừa – La Thành – Tây Sơn – Láng: tổng hợp bảng giá ngắn ngày rẻ nhất các khu trung tâm (nhiều nơi ghi nhận từ 50.000đ – 80.000đ và 70.000 vnđ/ngày), gói tháng công khai duy nhất (Tâm Việt 1.500.000 vnđ – 5.100.000 vnđ/tháng), phụ phí giao tận nơi 20.000 vnđ – 30.000 vnđ, cách tính 24h của MOTOGO, gắn POI Văn Miếu – Công viên Đống Đa và nhu cầu thuê tháng gần các trường đại học — khác hẳn bài Hà Nội tổng quát, bài du khách phố cổ và bài khu đông.",
+  "notes": "actual_service_area=hanoi_owner_verified: được phép dùng NAP đã xác minh từ config/business-facts.json và bảng giá công khai trên trang nhà xe; KHÔNG bịa giá ngoài bảng. \"Quận Đống Đa\" là tên cũ (LEGACY_SEARCH theo data/geography/localities.json — LC-004, Sắp xếp đơn vị hành chính 2025) — bài dùng tên địa danh quen thuộc và nêu rõ bối cảnh. Giá của từng nhà xe ngoài luôn dẫn theo công bố công khai của chính nhà xe đó (bài tổng hợp ghi nhận), không tổng quát hóa thành mặt bằng thị trường ngoài khoảng ghi nhận. Bảng giá xethientri.com bị chặn truy cập tự động — không dùng làm evidence.",
+  "claim_evidence": [
+    {
+      "claim": "Bon Bon (127 Ngõ Quan Thổ 1, Chợ Dừa, Đống Đa) ghi giá thuê 50.000đ – 150.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-da-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bon Bon — Địa chỉ: 127 Ngõ Quan Thổ 1, Chợ Dừa, Đống Đa, Hà Nội. Giá thuê xe: 50.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "13535 (Ngõ 170 – La Thành, Chợ Dừa, Đống Đa) ghi giá xe số 130.000đ/ngày, xe ga 220.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-da-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "13535 — Địa chỉ: Ngõ 170 – La Thành, Chợ Dừa, Đống Đa, Hà Nội. Giá thuê xe số: 130.000đ/ngày. Giá thuê xe ga: 220.000đ/ngày"
+    },
+    {
+      "claim": "Anh Hoàng (27 ngõ 62 Trần Quý Cáp, Văn Miếu, Đống Đa) ghi giá xe số 130.000đ/ngày, xe ga 220.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-da-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Anh Hoàng — Địa chỉ: 27 ngõ 62 Trần Quý Cáp, Văn Miếu, Đống Đa, Hà Nội. Giá thuê xe số: 130.000đ/ngày. Giá thuê xe ga: 220.000đ/ngày"
+    },
+    {
+      "claim": "Hanoi Motor Tour (37 Ngõ 167 Tây Sơn, Quang Trung, Đống Đa) ghi giá thuê 50.000đ – 150.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-da-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Hanoi Motor Tour — Địa chỉ: 37 Ngõ 167 Tây Sơn, Quang Trung, Đống Đa, Hà Nội. Giá thuê xe: 50.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "MOTOGO cho thuê từ 130.000đ/ngày, tính giá theo 24h (giữ xe từ 8h sáng hôm trước đến 8h sáng hôm sau vẫn tính 1 ngày), thủ tục chỉ cần giấy tờ tùy thân có ảnh, đủ giấy tờ không mất cọc, có dịch vụ giao xe tận nơi nhanh chóng.",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-da-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Ngoài ra mức giá thuê xe tại MOTOGO còn rất hợp lý, chỉ từ 130.000đ/ngày. Nơi này tính giá theo 24h, bạn có thể giữ xe từ 8h sáng hôm trước đến 8h sáng hôm sau mà chỉ tính giá 1 ngày. Thủ tục nơi đây cũng khá đơn giản. Chỉ cần giấy tờ tùy thân có ảnh là được. Thậm chí khi đáp ứng đủ giấy tờ bạn còn không mất bất cứ khoản cọc nào. Đặc biệt, MOTOGO còn có dịch vụ giao xe tận nơi nhanh chóng."
+    },
+    {
+      "claim": "Bon Bon Motor (246 Đường Tôn Đức Thắng, Đống Đa) ghi giá khoảng 80.000 vnđ – 150.000 vnđ/xe/ngày tùy loại xe.",
+      "source_url": "https://2trip.vn/toplist/cho-thue-xe-may-quan-dong-da-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Xe máy tại Bon Bon Motor cho thuê với mức giá khoảng 80.000 vnđ – 150.000 vnđ/xe/ngày (tùy loại xe) nên phù hợp với điều kiện kinh tế của tất cả mọi người. Địa chỉ: Số 246, Đường Tôn Đức Thắng, Quận Đống Đa, Hà Nội"
+    },
+    {
+      "claim": "Tâm Việt (35 Đường Láng, Đống Đa) ghi giá 120.000 vnđ – 300.000 vnđ/xe/ngày và 1.500.000 vnđ – 5.100.000 vnđ/xe/tháng; hỗ trợ cứu hộ 24/7 ở khu vực nội thành; giao xe tận nơi trong nội thành với phụ phí 20.000 vnđ – 30.000 vnđ.",
+      "source_url": "https://2trip.vn/toplist/cho-thue-xe-may-quan-dong-da-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tâm Việt cung cấp gần như đầy đủ các dòng xe như xe số, Honda, Piaggio, Yamaha, Sym, xe côn, xe PKL… Thời gian cho thuê sẽ tính theo ngày, tuần hoặc tháng với mức giá dao động 120.000 vnđ – 300.000 vnđ/xe/ngày và 1.500.000 vnđ – 5.100.000 vnđ/xe/tháng. Tâm Việt hỗ trợ cứu hộ 24/7 nếu xe máy bạn thuê gặp sự cố ở khu vực nội thành Hà Nội. khi thuê xe tại đây, bạn có thể nhận xe và kí kết hợp đồng trực tiếp tại cửa hàng hoặc yêu cầu giao tận nơi (áp dụng trong khu vực nội thành) với mức phụ phí là 20.000 vnđ – 30.000 vnđ. Địa chỉ: Số 35, Đường Láng, Quận Đống Đa, Hà Nội"
+    },
+    {
+      "claim": "Lộc Motorbike (1096 Đường Láng, Đống Đa) ghi giá khoảng 70.000 vnđ đến 150.000 vnđ/xe/ngày, phù hợp sinh viên và người công tác dài ngày.",
+      "source_url": "https://2trip.vn/toplist/cho-thue-xe-may-quan-dong-da-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Lộc Motorbike chuyên cung cấp những dòng xe số và xe tay ga với mức giá hợp lý – khoảng 70.000 vnđ đến 150.000 vnđ/xe/ngày. Thích hợp với mọi đối tượng, đặc biệt là các bạn sinh viên hoặc các cá nhân đang học tập, làm việc, công tác, du lịch,… dài ngày. Địa chỉ: Số 1096, Đường Láng, Quận Đống Đa, Hà Nội"
+    },
+    {
+      "claim": "Long Bình ghi giá trên dưới 100.000 vnđ/xe/ngày tùy loại xe và thời gian thuê.",
+      "source_url": "https://2trip.vn/toplist/cho-thue-xe-may-quan-dong-da-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Mức giá cho thuê xe máy tại Long Bình rất hợp lý khi chỉ dao động trên dưới 100.000 vnđ/xe/ngày (tùy loại xe và thời gian thuê)."
+    },
+    {
+      "claim": "Motogo ghi nhận địa điểm tại Số 16 Ngõ 317 Tây Sơn, Đống Đa với giá 120.000 vnđ – 200.000 vnđ tùy xe số hoặc xe ga; thời gian kí kết hợp đồng khoảng 10 phút.",
+      "source_url": "https://2trip.vn/toplist/cho-thue-xe-may-quan-dong-da-ha-noi",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Về chi phí, Motogo cho thuê xe với mức giá dao động từ 120.00 vnđ – 200.000 vnđ (tùy xe số hoặc xe tay ga). Thủ tục thuê xe sẽ bao gồm bằng lái xe và giấy tờ tùy thân (hộ chiếu/passport hoặc chứng minh nhân dân/căn cước công dân). Thời gian kí kết hợp đồng sẽ khoảng 10 phút và sau đó, bạn có thể nhận xe tại địa chỉ mong muốn hoặc trực tiếp tại cửa hàng. Địa chỉ: Số 16, Ngõ 317, Đường Tây Sơn, Quận Đống Đa, Hà Nội"
+    },
+    {
+      "claim": "Cửa hàng tại 58 Ô Chợ Dừa ghi giá xe số từ 80.000 VNĐ/ngày, xe ga từ 120.000 VNĐ/ngày; xe tay côn hoặc mô tô khoảng 200.000 VNĐ trở lên.",
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-thue-xe-may-tai-q-dong-da",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy tại đây rất cạnh tranh. Xe số có giá từ 80.000 VNĐ/ngày, trong khi xe ga dao động từ 120.000 VNĐ/ngày. Đối với những chiếc xe cao cấp hơn như xe tay côn hoặc mô tô, giá thường rơi vào khoảng 200.000 VNĐ trở lên. Địa chỉ: 58 Ô Chợ Dừa, P. Chợ Dừa, Q. Đống Đa"
+    },
+    {
+      "claim": "123 Go (47 Đ. Láng, Đống Đa) niêm yết bảng giá rõ ràng: xe số từ 100.000 VNĐ/ngày, xe ga từ 140.000 VNĐ/ngày; khách hàng dài hạn được negotiated giá ưu đãi.",
+      "source_url": "https://hanoireview.vn/topAZ/dia-chi-thue-xe-may-tai-q-dong-da",
+      "source_domain": "hanoireview.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá tại 123 Go rất rõ ràng với xe số từ 100.000 VNĐ/ngày, xe ga từ 140.000 VNĐ/ngày. Khách hàng dài hạn sẽ được đàm phán mức giá hợp lý hơn với các gói khuyến mãi đặc biệt. Địa chỉ: 47 Đ. Láng, P. Thượng Đình, Q. Đống Đa"
+    },
+    {
+      "claim": "Dịch vụ của chủ trang web công bố giá thuê Honda Wave và Yamaha Sirius (xe số): 150.000đ/ngày; giá tuần 700.000đ; giá tháng 900.000–1.200.000đ.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 150.000đ/ngày. Giá tuần 700.000đ; giá tháng 900.000–1.200.000đ."
+    },
+    {
+      "claim": "Honda Click / Yamaha Mio (xe ga giá rẻ): 150.000đ/ngày; 700.000đ/tuần; 900.000–1.200.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Click / Yamaha Mio – xe ga giá rẻ: 150.000đ/ngày; 700.000đ/tuần; 900.000–1.200.000đ/tháng."
+    },
+    {
+      "claim": "Honda Vision: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000–2.000.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Vision – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.800.000–2.000.000đ/tháng."
+    },
+    {
+      "claim": "Honda Air Blade: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Honda Air Blade – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Xe máy điện: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Giá thuê xe máy điện tại Nguyễn Tú: 200.000đ/ngày. — Giá thuê xe máy điện tại Nguyễn Tú: 1.000.000đ/tuần. — Giá thuê xe máy điện tại Nguyễn Tú: 1.500.000đ/tháng."
+    },
+    {
+      "claim": "Tiền đặt cọc tham khảo: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tiền đặt cọc tham khảo: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu."
+    },
+    {
+      "claim": "Dịch vụ giao xe tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Chúng tôi giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành, giúp bạn khám phá Hà Nội an toàn và tiết kiệm."
+    },
+    {
+      "claim": "Địa điểm chính tại Long Biên; giá, tiền cọc và tình trạng xe được xác nhận trước khi chốt.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điểm khác biệt của Nguyễn Tú: địa điểm chính tại Long Biên, hỗ trợ giao xe theo khu vực và tư vấn loại xe theo thời gian thuê. Giá, tiền cọc và tình trạng xe được xác nhận trước khi chốt."
+    },
+    {
+      "claim": "Giờ làm việc 09:00 – 21:00 và không giao xe ngoài khung giờ này.",
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điện thoại: 0942 467 674 · 09:00 – 21:00 · Không giao xe máy ngoài giờ. (Địa điểm chính: Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội.)"
+    }
+  ]
+}
