@@ -1,15 +1,13 @@
 {
-  "generated_at": "2026-10-01T22:42:38.992Z",
+  "generated_at": "2026-10-01T22:54:55.700Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 83,
-    "PASS": 2,
+    "PUBLISHED": 85,
     "PLANNED": 9915
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 77,
-      "PASS": 2,
+      "PUBLISHED": 79,
       "PLANNED": 4921
     },
     "RESCUE": {
@@ -38,11 +36,8 @@
     }
   },
   "phase": "PRODUCTION",
-  "active_chunk": [
-    "A00076",
-    "A00077"
-  ],
-  "last_completed_id": "A00075",
+  "active_chunk": [],
+  "last_completed_id": "A00077",
   "next_claimable_id": "A00078",
   "blocked": [],
   "published": [
@@ -495,6 +490,18 @@
       "pk": "thuê xe máy Tam Đảo",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-tam-dao/"
+    },
+    {
+      "id": "A00076",
+      "pk": "thuê xe máy Ba Vì",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ba-vi/"
+    },
+    {
+      "id": "A00077",
+      "pk": "thuê xe máy Chùa Hương",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-chua-huong/"
     },
     {
       "id": "A00097",
