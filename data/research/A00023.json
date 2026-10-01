@@ -1,0 +1,169 @@
+{
+  "article_id": "A00023",
+  "primary_keyword": "thuê xe máy Quảng Bình",
+  "secondary_keywords": [
+    "cho thuê xe máy Quảng Bình",
+    "thuê xe máy Đồng Hới",
+    "thuê xe máy Phong Nha",
+    "thuê xe máy gần sân bay Đồng Hới"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Quảng Bình",
+    "Đồng Hới",
+    "Phong Nha",
+    "sân bay Đồng Hới",
+    "ga Đồng Hới",
+    "biển Nhật Lệ",
+    "Đá Nhảy",
+    "Vũng Chua",
+    "quốc lộ 1A"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe tay côn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "SYM"
+  ],
+  "model_entities": [
+    "Wave Alpha",
+    "Sirius",
+    "Jupiter",
+    "Vision",
+    "Lead",
+    "Air Blade",
+    "Exciter",
+    "Wave RSX",
+    "Nouvo"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Đồng Hới giá bao nhiêu một ngày?",
+    "đi Phong Nha nên thuê xe máy từ Đồng Hới hay thuê tại Phong Nha?",
+    "thuê xe máy Quảng Bình giao tận nơi mất bao nhiêu phí?",
+    "thuê xe máy ở Đồng Hới có cần đặt cọc không?",
+    "thuê nhiều ngày ở Quảng Bình có giảm giá không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Đồng Hới",
+    "cho thuê xe máy tự lái Quảng Bình giao tận nơi",
+    "thuê xe máy đi Phong Nha Đá Nhảy",
+    "kinh nghiệm du lịch Quảng Bình bằng xe máy"
+  ],
+  "serp_patterns": "SERP đậm đặc dịch vụ thực thụ: các đơn vị cho thuê tại Đồng Hới có website riêng với bảng giá công khai theo ngày/tuần/tháng (qbtravel, thuexemaydonghoi), cẩm nang tổng hợp của phuot3mien, 2trip, mia, khamphaquangbinh; thị trường chuyên nghiệp hóa cao nhờ du lịch hang động: bảng giá theo nhóm xe, phí giao xe chi tiết theo địa điểm, quy định trả trễ; nhiều đơn vị có thêm điểm nhận xe tại Phong Nha.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://qbtravel.vn/thue-xe-may-quang-binh/",
+      "source_domain": "qbtravel.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng giá thuê xe máy theo ngày/tháng chi tiết theo dòng xe, phí giao xe theo địa điểm và quy định giờ trả trễ của một đơn vị tại Đồng Hới"
+    },
+    {
+      "source_url": "https://thuexemaydonghoi.com/vi/trang-chu/",
+      "source_domain": "thuexemaydonghoi.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "mức giá công khai và dịch vụ giao xe tận nơi của cửa hàng tại Đồng Hới"
+    },
+    {
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-dong-hoi-quang-binh",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "mức giá xe số/xe ga/xe côn của các cửa hàng tại Đồng Hới"
+    },
+    {
+      "source_url": "https://phuot3mien.com/dia-diem-thue-xe-may-o-quang-binh.html",
+      "source_domain": "phuot3mien.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "mặt bằng giá tại Đồng Hới và các mức giá khởi điểm theo dòng xe"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-ha-tinh/",
+    "/lab/thue-xe-may/thue-xe-may-nghe-an/",
+    "/lab/thue-xe-may/thue-xe-may-thanh-hoa/",
+    "/lab/kinh-nghiem/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/",
+    "/lab/cuu-ho-xe-may/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-quang-binh: nhóm gốc cấp tỉnh. Phong Nha, Đá Nhảy, sân bay Đồng Hới là intent hẹp hơn (hiện chưa có row riêng) — bài này giữ tổng quan thị trường và hướng dẫn chọn điểm nhận xe (Đồng Hới trung tâm, sân bay, Phong Nha), không lấn intent POI.",
+  "unique_angle": "Bài tỉnh gốc cho thị trường du lịch hang động chuyên nghiệp nhất miền Trung: bảng giá công khai chi tiết theo dòng xe và theo độ dài thuê (1 ngày, trên ba ngày, trên bảy ngày), phí giao xe niêm yết theo từng địa điểm (ga, sân bay, khách sạn); góc viết là 'chọn điểm nhận xe theo lịch trình hang động hay biển' — khách bay vào sân bay Đồng Hới nhận xe ngay, khách ở lại Phong Nha thì chọn đơn vị có điểm nhận xe tại thị trấn.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; mọi mức giá dẫn theo bảng giá công khai (qbtravel, thuexemaydonghoi, 2trip, phuot3mien). Quảng Bình không đổi sau sắp xếp hành chính 2025 (legacy-names LG-029 UNCHANGED, geo VN-023 CURRENT). Đồng Hới là locality đã verify (LC-073). Phong Nha, Đá Nhảy, Vũng Chua, biển Nhật Lệ là POI du lịch nổi tiếng của tỉnh, chỉ nêu định tính, không kèm claim định lượng. Sân bay Đồng Hới, ga Đồng Hới là hạ tầng nổi tiếng, mức phí giao xe dẫn theo bảng giá qbtravel.",
+  "claim_evidence": [
+    {
+      "claim": "Một đơn vị cho thuê tại Đồng Hới niêm yết Wave Alpha 150.000đ/ngày, dòng Sirius/Jupiter/SYM Starx 130.000đ/ngày",
+      "source_url": "https://qbtravel.vn/thue-xe-may-quang-binh/",
+      "source_domain": "qbtravel.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá theo ngày: «Wave Alpha 2022 150.000₫ 130.000₫ 110.000₫ / Sirius-Jupiter-SYM Starx 130.000₫ 120.000₫ 110.000₫» (các cột: 1 ngày, trên 3 ngày, trên 7 ngày)."
+    },
+    {
+      "claim": "Cùng bảng giá: Vision/Lead 200.000đ/ngày, Air Blade 180.000đ/ngày, Exciter 250.000đ/ngày",
+      "source_url": "https://qbtravel.vn/thue-xe-may-quang-binh/",
+      "source_domain": "qbtravel.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Vision 2022/Lead 200.000₫ 180.000₫ 150.000₫ / Air Blade 180.000₫ 160.000₫ 150.000₫ / Exciter 250.000₫ 220.000₫ 190.000₫» (1 ngày, trên 3 ngày, trên 7 ngày)."
+    },
+    {
+      "claim": "Thuê càng dài giá càng giảm: trên 3 ngày và trên 7 ngày, các dòng giảm về mức 110.000đ–190.000đ/ngày tùy dòng xe",
+      "source_url": "https://qbtravel.vn/thue-xe-may-quang-binh/",
+      "source_domain": "qbtravel.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Cột trên 3 ngày: 130.000₫, 120.000₫, 180.000₫, 160.000₫, 220.000₫; cột trên 7 ngày: 110.000₫, 110.000₫, 150.000₫, 150.000₫, 190.000₫ theo thứ tự các dòng xe trong bảng."
+    },
+    {
+      "claim": "Thuê xe số theo tháng tại đơn vị này có giá 2.100.000đ–2.400.000đ/tháng",
+      "source_url": "https://qbtravel.vn/thue-xe-may-quang-binh/",
+      "source_domain": "qbtravel.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Mục «Xe số: 2.100.000₫ – 2.400.000₫/tháng»."
+    },
+    {
+      "claim": "Phí giao xe niêm yết: ga Đồng Hới và khu khách sạn bến xe 10.000đ, sân bay Đồng Hới 20.000đ, các phường/xã khác 20.000đ–50.000₫ tùy khoảng cách",
+      "source_url": "https://qbtravel.vn/thue-xe-may-quang-binh/",
+      "source_domain": "qbtravel.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng phí giao/nhận xe một chiều: «Ga Đồng Hới (Phường Nam Lý) 10.000₫», «Phường Hải Thành (Khách sạn) 10.000₫», «Phường Đồng Hải (Bến xe, khách sạn) 10.000₫», «Sân bay Đồng Hới (Xã Lộc Ninh) 20.000₫», «Các phường/xã khác 20.000₫ – 50.000₫ (tùy khoảng cách)»."
+    },
+    {
+      "claim": "Đơn vị này quy định trả xe trễ: quá giờ dưới năm tiếng tính thêm nửa ngày, từ năm tiếng trở lên tính thành một ngày mới",
+      "source_url": "https://qbtravel.vn/thue-xe-may-quang-binh/",
+      "source_domain": "qbtravel.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Nếu phát sinh thêm giờ, từ 1 – 5 tiếng sẽ tính thêm nửa ngày, trên 5 tiếng tính thành 1 ngày mới» — tức trả trễ dưới năm tiếng tính nửa ngày, từ năm tiếng trở lên tính trọn một ngày."
+    },
+    {
+      "claim": "Một cửa hàng cho thuê khác tại Đồng Hới công khai giá 120.000đ–150.000đ/ngày kèm giao xe tận nơi",
+      "source_url": "https://thuexemaydonghoi.com/vi/trang-chu/",
+      "source_domain": "thuexemaydonghoi.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Hotline: 0963029195 Thuê xe máy Quảng Bình giá 120.000đ – 150.000đ/ngày. Giao xe tận nơi, Phục vụ 24/24 tất cả các ngày. Địa chỉ số 377 Lý Thường Kiệt – Đồng Hới, Quảng Bình» và «Thuê xe máy Quảng Bình WIN – 150.000 VNĐ/ Ngày»."
+    },
+    {
+      "claim": "Tại Phong Nha, có đơn vị quảng bá mức thuê chỉ từ 120.000đ/ngày",
+      "source_url": "https://qbtravel.vn/thue-xe-may-quang-binh/",
+      "source_domain": "qbtravel.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Dịch vụ thuê xe máy Phong Nha chỉ từ 120k/ngày… giá cả phải chăng chỉ từ 120k/ngày» — tức 120.000đ/ngày."
+    },
+    {
+      "claim": "Mặt bằng tại Đồng Hới: một cửa hàng ghi xe số 120.000đ–150.000đ, xe ga 150.000đ–200.000đ, xe côn 250.000đ–500.000đ mỗi xe mỗi ngày",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-dong-hoi-quang-binh",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Tung Motorbike… đang áp dụng mức giá từ 120.000đ – 150.000đ đối với xe số và 150.000đ – 200.000đ đối với xe tay ga… xe tay côn có giá thuê từ 250.000đ/xe/ngày – 500.000đ/xe/ngày.»"
+    },
+    {
+      "claim": "Cẩm nang tổng hợp ghi mức khởi điểm rất thấp tại Đồng Hới: có chỗ từ 100.000đ/ngày, có chỗ 80.000đ–100.000đ/ngày",
+      "source_url": "https://phuot3mien.com/dia-diem-thue-xe-may-o-quang-binh.html",
+      "source_domain": "phuot3mien.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Chỉ từ 100.000đ/ngày, bạn đã có thể nhận được một chiếc xe cực tốt» và «Giá chỉ từ 80.000-100.000đ /ngày, đầy đủ các loại xe cho bạn thuê. Tuy nhiên, hãy kiểm tra xe thật cẩn thận»."
+    }
+  ]
+}

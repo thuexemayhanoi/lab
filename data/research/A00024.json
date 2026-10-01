@@ -1,0 +1,169 @@
+{
+  "article_id": "A00024",
+  "primary_keyword": "thuê xe máy Quảng Trị",
+  "secondary_keywords": [
+    "cho thuê xe máy Quảng Trị",
+    "thuê xe máy Đông Hà",
+    "thuê xe máy Cửa Tùng",
+    "thuê xe máy Quảng Trị giao tận nơi"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Quảng Trị",
+    "Đông Hà",
+    "thị xã Quảng Trị",
+    "Vĩnh Linh",
+    "biển Cửa Tùng",
+    "cầu Hiền Lương",
+    "sông Thạch Hãn",
+    "quốc lộ 1A",
+    "ga Đông Hà",
+    "bến xe Đông Hà"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe tay côn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Wave",
+    "Wave RSX",
+    "Sirius",
+    "Jupiter",
+    "Vision",
+    "Lead",
+    "Air Blade",
+    "Nouvo LX"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Đông Hà giá bao nhiêu một ngày?",
+    "thuê xe máy Quảng Trị có cần đặt cọc không?",
+    "đi biển Cửa Tùng, Vĩnh Linh nên thuê xe ở đâu?",
+    "thuê xe máy Quảng Trị theo tuần, theo tháng có giảm giá không?",
+    "khách sạn ở Quảng Trị có kiêm cho thuê xe máy không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Đông Hà",
+    "cho thuê xe máy tự lái Quảng Trị",
+    "thuê xe máy đi Cửa Tùng Vĩnh Linh",
+    "kinh nghiệm du lịch Quảng Trị DMZ bằng xe máy"
+  ],
+  "serp_patterns": "SERP gồm danh sách cửa hàng của giahuy.org (mức giá theo đơn vị, giao xe miễn phí tại bến xe/ga tàu/khách sạn), motogo.vn (bảng giá xe số/xe ga theo địa chỉ, có cả Cửa Tùng), nền tảng đặt xe vexere có trang riêng cho thành phố Đông Hà với giá theo mùa và chính sách không cần cọc trước; thị trường nhỏ gọn, giá thấp, tập trung ở Đông Hà và dải biển Vĩnh Linh.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://giahuy.org/thue-xe-may-quang-tri/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "mặt bằng giá các đơn vị cho thuê tại Đông Hà, khách sạn kiêm cho thuê, ưu đãi thuê tuần/tháng và chính sách giao xe miễn phí"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng giá xe số/xe ga của các cơ sở tại Đông Hà, thị xã Quảng Trị và Cửa Tùng kèm địa chỉ"
+    },
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-dong-ha.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng giá các đơn vị trên nền tảng đặt xe tại Đông Hà theo mùa (ngày thường, lễ 30/4-1/5, Tết) và chính sách cọc"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-quang-binh/",
+    "/lab/thue-xe-may/thue-xe-may-ha-tinh/",
+    "/lab/thue-xe-may/thue-xe-may-nghe-an/",
+    "/lab/kinh-nghiem/",
+    "/lab/cuu-ho-xe-may/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-quang-tri: nhóm gốc cấp tỉnh. Cửa Tùng, Vĩnh Linh, DMZ là intent hẹp hơn (hiện chưa có row riêng) — bài này giữ tổng quan thị trường tỉnh (giá theo khu vực, cọc, giao xe, thuê dài hạn), chỉ nhắc POI ở mức định hướng lịch trình, không lấn intent POI.",
+  "unique_angle": "Bài tỉnh gốc cho thị trường nhỏ mà 'dễ tính': mặt bằng thấp (có chỗ từ 80.000đ/ngày), nhiều đơn vị công khai không cần cọc tiền, chỉ giữ giấy tờ, giao xe miễn phí tại bến xe Đông Hà, ga tàu và khách sạn; góc viết là 'thuê xe cho hành trình DMZ – biển': chọn cửa hàng giao tận nơi miễn phí nếu đi tàu/xe khách vào Đông Hà, chọn chỗ gần biển Cửa Tùng nếu lưu trú ở Vĩnh Linh, và chốt giá tuần/tháng vì chính sách giảm ưu đãi khá hào phóng.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; mọi mức giá dẫn theo nguồn công khai (giahuy, motogo, vexere). Quảng Trị không đổi sau sắp xếp hành chính 2025 (legacy-names LG-030 UNCHANGED, geo VN-024 CURRENT). Đông Hà là locality đã verify (LC-074). Biển Cửa Tùng, Vĩnh Linh, cầu Hiền Lương, sông Thạch Hãn là POI nổi tiếng của tỉnh, chỉ nêu định tính, không kèm claim định lượng. Nguồn giahuy mô tả cả cơ sở tại biển Cửa Tùng (Phú Cường) — dẫn theo nguồn, không bịa.",
+  "claim_evidence": [
+    {
+      "claim": "Các đơn vị cho thuê xe máy tại Đông Hà phổ biến mức 80.000đ–150.000đ/ngày, thuê tuần hoặc tháng được giảm giá",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-tri/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá cho thuê từ 80k – 150k thuê nhiều ngày được giảm giá ưu đãi. Thuê theo tháng hay thuê theo tuần có giá giảm 10 -30%.» — tức 80.000đ–150.000đ/ngày."
+    },
+    {
+      "claim": "Nhiều đơn vị tại Đông Hà giao xe miễn phí tại bến xe Đông Hà, ga tàu hoặc khách sạn",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-tri/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Khi thuê xe ở đây, bạn được giao nhận tại bến xe Đông Hà, Ga Tàu hay tại khách sạn miễn phí»."
+    },
+    {
+      "claim": "Một cửa hàng tại Đông Hà (Thu Phương) niêm yết 100.000đ–150.000đ/ngày",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-tri/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Mức giá cho thuê xe máy tại Cửa hàng Thu Phương từ 100k ngày đến 150k» — tức 100.000đ–150.000đ/ngày."
+    },
+    {
+      "claim": "Một khách sạn tại Quảng Trị (Thụy Điển House) kiêm cho thuê xe với giá tay số từ 100.000đ/ngày, tay ga 150.000đ/ngày",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-tri/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá xe Thụy Điển House từ 100k các loại tay số 150k các loại tay ga» — tức tay số từ 100.000đ/ngày, tay ga 150.000đ/ngày."
+    },
+    {
+      "claim": "Tại biển Cửa Tùng có cơ sở cho thuê (Phú Cường) giá 100.000đ–150.000đ/ngày cho xe số và xe côn",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-tri/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Phú Cường… có địa điểm thuận lợi gần khu vực biển, giá thuê rẻ nhiều dòng xe. Giá từ 100k đến 150k xe số xe tay côn các loại» — tức 100.000đ–150.000đ/ngày."
+    },
+    {
+      "claim": "Một đơn vị khác tại Quảng Trị ghi 90.000đ/ngày cho dòng xe địa hình tốt",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-tri/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«mức giá cho thuê 90k ngày chất lượng hoàn toàn ổn định… Xe tương thích với nhiều địa hình đồi núi, dốc hay đi đèo đi phượt rất tốt» — tức 90.000đ/ngày."
+    },
+    {
+      "claim": "Các cơ sở tại Đông Hà, thị xã Quảng Trị và Cửa Tùng niêm yết xe số 90.000đ–120.000đ/ngày, xe ga 120.000đ/ngày; có nơi từ 100.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Danh sách: «Giá thuê xe số: 90.000đ – 120.000đ/ngày; Giá thuê xe ga: 120.000đ/ngày» (9 Lê Văn Hưu P1 Đông Hà; Thị xã Quảng Trị; Biển Cửa Tùng, huyện Vĩnh Linh) và «Giá thuê xe: từ 100.000đ/ngày» (52 Đoàn Khuê; 94 Tôn Thất Thuyết, Phường 5, Đông Hà)."
+    },
+    {
+      "claim": "Khởi điểm giá thấp: chỉ từ 80.000đ/ngày đã thuê được các dòng Air Blade, Nouvo LX, Lead, Wave RSX đời dưới ba năm",
+      "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Chỉ cần bỏ ra chi phí từ 80.000đ/ngày, bạn đã có thể lựa chọn chiếc xe phù hợp với mình. Các dòng xe bạn có thể lựa chọn như: Honda Airblade, Yamaha Nouvo LX, Honda Lead, Wave RSX… Tất cả chúng đều có tuổi đười dưới 3 năm.»"
+    },
+    {
+      "claim": "Trên nền tảng đặt xe, các đơn vị tại Đông Hà niêm yết ngày thường từ 120.000đ đến 140.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-dong-ha.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Các đơn vị ghi «từ 120.000 đ», «từ 130.000 đ», «từ 140.000 đ» (ngày thường) — tức 120.000đ, 130.000đ, 140.000đ/ngày."
+    },
+    {
+      "claim": "Dịp lễ 30/4-1/5 và Tết, giá tại Đông Hà tăng lên 130.000đ–150.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-dong-ha.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng theo mùa: «Lễ 30/4-1/5» ghi 130.000đ, 150.000đ; «Tết Âm» ghi 150.000đ cho các đơn vị ngày thường 120.000đ, 130.000đ, 140.000đ."
+    },
+    {
+      "claim": "Đặc thù của nhiều đơn vị trên nền tảng đặt xe tại Đông Hà: không cần cọc trước",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-dong-ha.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Điều khoản các đơn vị ghi «Không cần cọc trước» kèm «Giao xe tận nơi»."
+    }
+  ]
+}
