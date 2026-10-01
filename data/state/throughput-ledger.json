@@ -1338,6 +1338,29 @@
         "A00083"
       ],
       "count": 2
+    },
+    {
+      "op": "qa",
+      "started_at": "2026-10-01T23:42:18.814Z",
+      "finished_at": "2026-10-01T23:42:19.430Z",
+      "elapsed_ms": 616,
+      "ids": [
+        "A00082",
+        "A00083"
+      ],
+      "count": 2
+    },
+    {
+      "op": "publish",
+      "started_at": "2026-10-01T23:42:20.423Z",
+      "finished_at": "2026-10-01T23:42:22.587Z",
+      "elapsed_ms": 2164,
+      "ids": [
+        "A00082",
+        "A00083"
+      ],
+      "published": 2,
+      "phase": "PRODUCTION"
     }
   ]
 }

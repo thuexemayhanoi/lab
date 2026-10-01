@@ -1,15 +1,13 @@
 {
-  "generated_at": "2026-10-01T23:20:23.781Z",
+  "generated_at": "2026-10-01T23:42:22.844Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 89,
-    "PASS": 2,
+    "PUBLISHED": 91,
     "PLANNED": 9909
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 83,
-      "PASS": 2,
+      "PUBLISHED": 85,
       "PLANNED": 4915
     },
     "RESCUE": {
@@ -38,11 +36,8 @@
     }
   },
   "phase": "PRODUCTION",
-  "active_chunk": [
-    "A00082",
-    "A00083"
-  ],
-  "last_completed_id": "A00081",
+  "active_chunk": [],
+  "last_completed_id": "A00083",
   "next_claimable_id": "A00084",
   "blocked": [],
   "published": [
@@ -531,6 +526,18 @@
       "pk": "thuê xe máy Vịnh Hạ Long",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-vinh-ha-long/"
+    },
+    {
+      "id": "A00082",
+      "pk": "thuê xe máy Yên Tử",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-yen-tu/"
+    },
+    {
+      "id": "A00083",
+      "pk": "thuê xe máy Sa Pa",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-sa-pa/"
     },
     {
       "id": "A00097",
