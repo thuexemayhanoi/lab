@@ -1,0 +1,204 @@
+name: Factory writer submit
+
+# GITHUB-ONLY WRITER SUBMISSION CHANNEL (docs/WRITER-SUBMIT.md):
+# an external writer with ONLY the GitHub connector (no local git, no local
+# Node, no local _drafts/) pushes exactly ONE production pair (2 candidate
+# bodies) to an ephemeral branch writer/<pair>; this workflow IS the writer's
+# execution environment and performs the canonical deterministic pipeline.
+#
+# SUBMISSION INPUT (the ONLY files the writer ever pushes):
+#   writer-inbox/A00015.body.html   semantic body fragment (one <h1>; no shell)
+#   writer-inbox/A00016.body.html
+#   writer-inbox/submission.json     { "base_main_sha": "<40-hex>", "ids": [...] }
+#   data/research/A00015.json       research packet (engine policy applies)
+#   data/research/A00016.json
+#
+# DRAFT BOUNDARY: Pages serves the repository ROOT, so committed drafts would
+# be PUBLIC. _drafts/ stays gitignored FOREVER and is NEVER committed. This
+# runner IS the writer execution environment: it materializes
+# writer-inbox/<ID>.body.html into gitignored _drafts/ INSIDE THE RUNNER ONLY,
+# then runs the canonical writer direct CLI (operator.js
+# research/qa/publish --scope fast, default channel 'cli' — NEVER the actions
+# command-file channel). _drafts is never git-added, never committed.
+#
+# MAIN RECEIVES ONLY A CLEAN PRODUCTION COMMIT: the writer branch is NEVER
+# merged into main and main is NEVER fast-forwarded to the writer branch.
+# The production commit is built from a temp index seeded at the submission
+# base (writer-inbox/** and _drafts/** excluded + ls-files leak guard +
+# canonical-path allowlist), committed with commit-tree ON TOP of the base,
+# re-verified in a detached worktree, then pushed as a plain fast-forward.
+# Pages is served from branch main (root) — a writer branch is never a Pages
+# source, so this workflow never needs Pages permissions or artifacts.
+on:
+  push:
+    branches:
+      - 'writer/**'
+    paths:
+      - 'writer-inbox/**'
+      - 'data/research/**'
+
+permissions:
+  contents: write
+
+# A writer submission is a full production mutation (claim -> qa -> publish ->
+# main commit): it MUST serialize on the SAME global production group as
+# factory-operator.yml, and a queued run is never cancelled mid-flight
+# (cancel-in-progress: false) — engine discipline: no interleaved mutations.
+concurrency:
+  group: lab-factory-production
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    name: Validate -> claim -> QA -> atomic publish (canonical engine)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout the writer branch (full history — the production commit's parent must be the submission base)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate submission (branch contract + strict manifest + inbox fileset + packets)
+        run: node scripts/factory/writer-submission.js validate-submission --branch "$GITHUB_REF_NAME"
+
+      - name: Base freshness — origin/main must equal base_main_sha (STALE_WRITER_BASE refuse)
+        run: |
+          set -eu
+          git fetch origin main
+          ORIGIN_MAIN=$(git rev-parse origin/main)
+          if [ "$ORIGIN_MAIN" != "$SUBMISSION_BASE" ]; then
+            echo "::error::STALE_WRITER_BASE — origin/main ($ORIGIN_MAIN) != submission base_main_sha ($SUBMISSION_BASE). Main moved since the writer branch was created. Recreate the writer branch from FRESH main, re-apply the candidate files and resubmit. Nothing was claimed, nothing was published."
+            exit 1
+          fi
+          git merge-base --is-ancestor "$SUBMISSION_BASE" "$GITHUB_SHA" || {
+            echo "::error::BAD_WRITER_ANCESTRY — submission base $SUBMISSION_BASE is not an ancestor of the pushed branch head $GITHUB_SHA. Recreate the writer branch from fresh main and push the candidate files again."
+            exit 1
+          }
+          echo "OK: submission base == origin/main ($ORIGIN_MAIN)"
+
+      - name: Branch scope — ONLY the inbox + the pair packets may differ from the base
+        run: |
+          set -eu
+          PAIR_RE='^data/research/('"${SUBMISSION_IDS//,/|}"')\.json$'
+          OUT=$(git diff --name-only "$SUBMISSION_BASE" "$GITHUB_SHA" | grep -Ev "^writer-inbox/|${PAIR_RE}" || true)
+          if [ -n "$OUT" ]; then
+            echo "::error::WRITER_BRANCH_SCOPE — a writer submission branch may change ONLY writer-inbox/** and data/research/<pair-id>.json. Unexpected changes:"
+            echo "$OUT"
+            exit 1
+          fi
+          echo "OK: branch diff is exactly the submission input (inbox + pair packets)"
+
+      - name: Canonical recover (idempotent hygiene on a clean checkout)
+        run: node scripts/factory/operator.js recover
+
+      - name: Claim EXACTLY the submitted pair (canonical prepare-next + repository-truth assert)
+        run: node scripts/factory/writer-submission.js claim --ids "$SUBMISSION_IDS"
+
+      - name: Materialize candidate drafts INSIDE the runner (gitignored _drafts/; never committed)
+        run: node scripts/factory/writer-submission.js materialize --ids "$SUBMISSION_IDS"
+
+      - name: Wrap drafts (canonical shell, canonical link, breadcrumb, JSON-LD schema)
+        run: node scripts/factory/wrap-drafts.js
+
+      - name: Research (canonical op, fast scope)
+        run: node scripts/factory/operator.js research --ids "$SUBMISSION_IDS" --scope fast
+
+      - name: QA (canonical op, fast scope — the rubric 75/70 is the single authority)
+        run: node scripts/factory/operator.js qa --ids "$SUBMISSION_IDS" --scope fast
+
+      - name: Assert BOTH rows PASS (REVIEW 70-74 and REPAIR are never publishable)
+        run: node scripts/factory/writer-submission.js assert-pass --ids "$SUBMISSION_IDS"
+
+      - name: Publish (canonical atomic publish: stage -> build+verify -> commit; rollback on any failure)
+        run: node scripts/factory/operator.js publish --ids "$SUBMISSION_IDS" --scope fast
+
+      - name: Assert published (archives, sitemap, tx/lock clean, exactly-one ledger event)
+        run: node scripts/factory/writer-submission.js assert-published --ids "$SUBMISSION_IDS"
+
+      - name: Build the CLEAN production tree (temp index seeded at the base; submission artifacts can never reach main)
+        run: |
+          set -eu
+          export GIT_INDEX_FILE=/tmp/prod-index
+          rm -f "$GIT_INDEX_FILE"
+          git read-tree "$SUBMISSION_BASE"
+          git add -A .
+          git reset -q -- writer-inbox _drafts 2>/dev/null || true
+          if git ls-files | grep -E '^(writer-inbox|_drafts)/'; then
+            echo "::error::PRODUCTION_TREE_LEAK — submission/draft artifacts staged for the main tree. Refusing to publish."
+            exit 1
+          fi
+          TREE=$(git write-tree)
+          unset GIT_INDEX_FILE
+          echo "TREE=$TREE" >> "$GITHUB_ENV"
+          echo "clean production tree: $TREE"
+
+      - name: Production tree check (canonical outputs ONLY; hard leak guard + allowlist)
+        run: node scripts/factory/writer-submission.js production-tree-check --base "$SUBMISSION_BASE" --tree "$TREE"
+
+      - name: Commit the production tree on top of the base (the writer branch is NEVER merged)
+        run: |
+          set -eu
+          git config user.name "factory-writer-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          PROD_COMMIT=$(git commit-tree "$TREE" -p "$SUBMISSION_BASE" -m "factory: writer submission publish $SUBMISSION_IDS (QA PASS, atomic, source branch $GITHUB_REF_NAME)")
+          echo "PROD_COMMIT=$PROD_COMMIT" >> "$GITHUB_ENV"
+          echo "production commit: $PROD_COMMIT (parent $SUBMISSION_BASE)"
+
+      - name: Final FAST verify on the EXACT production tree (detached worktree)
+        run: |
+          set -eu
+          rm -rf /tmp/prod-verify
+          git worktree add --detach /tmp/prod-verify "$PROD_COMMIT"
+          cd /tmp/prod-verify
+          node scripts/factory/factory.js status
+          node scripts/factory/factory.js consistency
+          node scripts/factory/factory.js grounding ${SUBMISSION_IDS//,/ }
+          node scripts/factory/writer-submission.js assert-published --ids "$SUBMISSION_IDS"
+          test ! -d writer-inbox
+          test ! -d _drafts
+          echo "OK: production tree verified — no inbox, no drafts, repository truth coherent"
+
+      - name: Push the production commit to main (plain fast-forward; MAIN_MOVED_DURING_PUBLISH refuses races)
+        run: |
+          set -eu
+          git fetch origin main
+          ORIGIN_MAIN=$(git rev-parse origin/main)
+          if [ "$ORIGIN_MAIN" != "$SUBMISSION_BASE" ]; then
+            echo "::error::MAIN_MOVED_DURING_PUBLISH — origin/main ($ORIGIN_MAIN) != submission base ($SUBMISSION_BASE). STOP: no force push, no merge. Main was never mutated by this run; the publish existed only in this ephemeral runner. Recreate the writer branch from fresh main and resubmit."
+            exit 1
+          fi
+          # plain push of a commit whose parent IS origin/main == fast-forward;
+          # any race is rejected by git itself (never any kind of forced push)
+          git push origin "$PROD_COMMIT":refs/heads/main
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$PROD_COMMIT"
+          echo "MAIN PUBLISHED: $PROD_COMMIT"
+
+      - name: Delete the ephemeral writer branch (non-fatal cleanup)
+        run: |
+          if git push origin --delete "$GITHUB_REF_NAME"; then
+            echo "writer branch $GITHUB_REF_NAME deleted (ephemeral by contract)"
+          else
+            echo "::warning::could not delete writer branch ${GITHUB_REF_NAME} — the production publish already succeeded; delete the branch manually if desired. This is NOT a publish failure."
+          fi
+
+      - name: Summary (PASS)
+        if: success()
+        run: |
+          {
+            echo "## Factory writer submit — PASS"
+            echo "- Submission validated (branch contract, strict manifest, inbox fileset, packets): PASS"
+            echo "- Base freshness (STALE_WRITER_BASE / MAIN_MOVED_DURING_PUBLISH guards): PASS"
+            echo "- Claim EXACTLY the pair (canonical prepare-next + truth assert): PASS"
+            echo "- QA PASS >= 75 both rows (rubric authority; REVIEW 70-74 refused): PASS"
+            echo "- Atomic publish + post-publish invariants: PASS"
+            echo "- Clean production tree (no writer-inbox/**, no _drafts/**, canonical allowlist): PASS"
+            echo "- Final FAST verify on the production commit: PASS"
+            echo "- main updated by ONE clean fast-forward commit; writer branch deleted"
+          } >> "$GITHUB_STEP_SUMMARY"
