@@ -1,0 +1,306 @@
+name: Factory production
+
+# XƯỞNG SẢN XUẤT TURBO QUEUE — mô hình /vanchinh cho /lab.
+# Writer ngoài (Mistral) push WRITE-AHEAD QUEUE vào _drafts/: 2..queue_max
+# (mặc định 20) ID PLANNED LIÊN TIẾP theo thứ tự matrix trong MỘT commit
+# (wrapped _drafts/<ID>.html + _drafts/<ID>.body.html + data/research/<ID>.json).
+# Workflow tự hoàn tất trong CÙNG một production run:
+#   select (push-selection.js: validate không duplicate/PUBLISHED/BLOCKED,
+#   không skip trái thứ tự matrix; sort theo repository/matrix order; tách
+#   thành các PAIR 2 bài) → recover → claim TOÀN BỘ queue (một claim duy
+#   nhất) → mỗi pair tuần tự: research → QA (ngưỡng 75/70 KHÔNG đổi) →
+#   publish CHỈ hàng PASS (atomic stage → build → staged verify) →
+#   checkpoint → pair tiếp theo.
+#   Một pair FAIL: KHÔNG rollback các pair đã publish thành công; pair lỗi
+#   được giữ recoverable (draft còn nguyên, row ở trạng thái mở) và báo rõ
+#   ID; run tiếp tục với pair sau; commit cuối vẫn đẩy các pair đã publish.
+#
+# KHÔNG full-site audit, KHÔNG soak, KHÔNG test-suite trong hot loop —
+# publish op đã verify staged nội bộ; smoke chỉ là scoped consistency
+# + liveness. Commit publish xoá draft của các id đã publish → lần trigger
+# kế tiếp push-selection trả mode=skip → exit 0 sạch, không vòng lặp.
+#
+# Commit an toàn: chốt OPERATOR_VERIFIED_TREE (git write-tree) trước khi
+# commit; nếu truth di chuyển giữa chừng (writer push song song) thì
+# fetch + rebase origin/main + verify lại, tree khác tree đã verified là
+# STOP — KHÔNG BAO GIỜ force push. Publisher luôn concurrency=1 (group
+# lab-factory-production, không cancel) — không checkpoint/transaction
+# conflict.
+#
+# Writer loop: next_claimable_id (checkpoint) → research packet → body →
+# node scripts/factory/wrap-drafts.js → push queue 2..20 ID liên tiếp.
+# Repair: sửa _drafts/<ID>.body.html → wrap → push lại (mode=repair,
+# tối đa chunk_size=2 id/push).
+
+on:
+  push:
+    branches: [main]
+    paths: ['_drafts/**']
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'status | recover | diagnostics'
+        required: true
+        type: string
+
+concurrency:
+  group: lab-factory-production
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: github.repository == 'thuexemayhanoi/lab'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      ACTION: ${{ inputs.action || 'push' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Chốt repository truth base (revalidate trước commit, không force push)
+        if: github.event_name == 'push'
+        run: echo "OPERATOR_BASE_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Chọn phạm vi push (queue từ _drafts/ vừa push — validate + sort + tách pair)
+        id: select
+        if: github.event_name == 'push'
+        run: |
+          set -eu -o pipefail
+          git diff --name-only --diff-filter=A HEAD~1 HEAD -- _drafts/ > /tmp/added.txt || true
+          git diff --name-only --diff-filter=M HEAD~1 HEAD -- _drafts/ > /tmp/modified.txt || true
+          echo "drafts added: $(wc -l < /tmp/added.txt || echo 0), modified: $(wc -l < /tmp/modified.txt || echo 0)"
+          code=0
+          node scripts/factory/push-selection.js --added /tmp/added.txt --modified /tmp/modified.txt | tee /tmp/selection.json || code=$?
+          if [ "$code" = "3" ]; then
+            echo "::error::push REFUSED (vi phạm hợp đồng queue — xem log push-selection). KHÔNG có gì được claim/QA/publish."
+            exit 3
+          fi
+          if [ "$code" != "0" ]; then
+            echo "::error::push-selection FAIL (exit $code)"
+            exit "$code"
+          fi
+          node <<'EOF'
+          const fs = require('fs');
+          const sel = JSON.parse(fs.readFileSync('/tmp/selection.json', 'utf8').split('\n')[0]);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,
+            'proceed=' + String(sel.proceed).toLowerCase() + '\n' +
+            'mode=' + sel.mode + '\n' +
+            'claim_ids=' + sel.claim_ids.join(',') + '\n' +
+            'qa_ids=' + sel.qa_ids.join(',') + '\n' +
+            'pairs=' + (sel.pairs || []).map(p => p.join(',')).join(';') + '\n');
+          const label = sel.mode === 'skip' ? 'skip-noop'
+            : 'push-' + sel.mode + '-' + (sel.claim_ids.concat(sel.qa_ids).join(',') || 'none');
+          fs.appendFileSync(process.env.GITHUB_ENV, 'COMMIT_LABEL=' + label + '\n');
+          console.log('selection: mode=' + sel.mode + ' claim=' + sel.claim_ids.join(',') +
+            ' qa=' + sel.qa_ids.join(',') + ' pairs=' + (sel.pairs || []).length);
+          if (sel.mode === 'paused') console.log('production-control: enabled=false — DỪNG SẠCH trước khi claim.');
+          EOF
+
+      - name: 'Bảo trì (dispatch: status | recover | diagnostics)'
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          set -eu
+          case "$ACTION" in
+            status)      node scripts/factory/factory.js status ;;
+            recover)     node scripts/factory/operator.js recover ;;
+            diagnostics) node scripts/factory/factory.js consistency
+                          node scripts/factory/liveness-watchdog.js || true ;;
+            *) echo "::error::action không hỗ trợ: $ACTION (chỉ status|recover|diagnostics)" && exit 1 ;;
+          esac
+
+      - name: Recover transaction nếu treo (trước mọi op mutating; FAIL-CLOSED)
+        if: github.event_name == 'push' && steps.select.outputs.proceed == 'true'
+        run: node scripts/factory/operator.js recover
+
+      - name: Claim EXACT queue vừa push (một claim cho cả write-ahead queue)
+        id: claim
+        if: github.event_name == 'push' && steps.select.outputs.proceed == 'true' && steps.select.outputs.claim_ids != ''
+        run: node scripts/factory/operator.js prepare-next --ids "${{ steps.select.outputs.claim_ids }}" --scope fast
+
+      - name: 'Queue driver: xử lý tuần tự từng pair (research → QA → publish PASS → checkpoint)'
+        id: queue
+        if: github.event_name == 'push' && steps.select.outputs.proceed == 'true' && steps.select.outputs.qa_ids != '' && steps.claim.outcome != 'failure'
+        env:
+          QUEUE_PAIRS: ${{ steps.select.outputs.pairs }}
+        run: |
+          set -uo pipefail
+          matrix_ids_by_status() {
+            IDS="$1" STATUS="$2" node <<'MEOF'
+          const fs = require('fs');
+          const dir = 'data';
+          const parts = fs.readdirSync(dir).filter(f => /^content-matrix\.csv\.part/.test(f)).sort();
+          let text = parts.length ? parts.map(p => fs.readFileSync(dir + '/' + p, 'utf8')).join('') : '';
+          if (!text) text = fs.readFileSync('data/content-matrix.csv', 'utf8');
+          const lines = text.split('\n');
+          const H = lines[0].split(',');
+          const iI = H.indexOf('article_id'), sI = H.indexOf('status');
+          const want = new Set((process.env.IDS || '').split(',').filter(Boolean));
+          const ids = [];
+          for (const l of lines.slice(1)) { if (!l.trim()) continue; const c = l.split(','); if (want.has(c[iI]) && c[sI] === process.env.STATUS) ids.push(c[iI]); }
+          console.log(ids.join(','));
+          MEOF
+          }
+          log_checkpoint() {
+            node -e 'const c=JSON.parse(require("fs").readFileSync("data/state/checkpoint.json","utf8")); console.log("CHECKPOINT: published_count="+c.published_count+" next_claimable="+(c.next_claimable_id||"-")+" active_chunk=["+(c.active_chunk||[]).join(",")+"]");' || true
+          }
+          FAILED_PAIRS=""
+          RECOVERABLE_PAIRS=""
+          PUBLISHED_IDS=""
+          PAIR_INDEX=0
+          if [ -z "${QUEUE_PAIRS}" ]; then
+            echo "::error::queue driver: select không trả pair nào (qa_ids rỗng?) — không có gì để xử lý."
+            echo "FAILED_PAIRS=" >> "$GITHUB_ENV"
+            echo "PUBLISHED_IDS=" >> "$GITHUB_ENV"
+            echo "RECOVERABLE_PAIRS=" >> "$GITHUB_ENV"
+            exit 1
+          fi
+          IFS=';' read -r -a PAIR_SPECS <<< "$QUEUE_PAIRS"
+          for PAIR_SPEC in "${PAIR_SPECS[@]}"; do
+            PAIR_INDEX=$((PAIR_INDEX+1))
+            IFS=',' read -r -a PAIR_ARR <<< "$PAIR_SPEC"
+            PAIR_IDS="$(IFS=,; echo "${PAIR_ARR[*]}")"
+            echo "=== PAIR $PAIR_INDEX: $PAIR_IDS ==="
+            if ! node scripts/factory/operator.js recover; then
+              echo "::error::queue pair $PAIR_IDS: recover FAIL — pair giữ nguyên trạng thái recoverable, bỏ qua các pair còn lại (fail-closed)."
+              FAILED_PAIRS="$FAILED_PAIRS $PAIR_IDS"
+              break
+            fi
+            RESEARCH_IDS="$(matrix_ids_by_status "$PAIR_IDS" RESEARCH)"
+            if [ -n "$RESEARCH_IDS" ]; then
+              if ! node scripts/factory/operator.js research --ids "$RESEARCH_IDS" --scope fast; then
+                echo "::error::queue pair $PAIR_IDS: research FAIL — KHÔNG rollback các pair đã publish; pair giữ recoverable."
+                FAILED_PAIRS="$FAILED_PAIRS $PAIR_IDS"
+                node scripts/factory/operator.js recover || echo "::warning::recover sau pair lỗi $PAIR_IDS trả mã khác 0"
+                continue
+              fi
+            else
+              echo "pair $PAIR_IDS: không có row RESEARCH trong scope (repair push hoặc đã research xong)"
+            fi
+            if ! node scripts/factory/operator.js qa --ids "$PAIR_IDS" --scope fast; then
+              echo "::error::queue pair $PAIR_IDS: QA FAIL — KHÔNG rollback các pair đã publish; pair giữ recoverable (draft còn nguyên, row ở trạng thái mở)."
+              FAILED_PAIRS="$FAILED_PAIRS $PAIR_IDS"
+              node scripts/factory/operator.js recover || echo "::warning::recover sau pair lỗi $PAIR_IDS trả mã khác 0"
+              continue
+            fi
+            PASS_IDS="$(matrix_ids_by_status "$PAIR_IDS" PASS)"
+            if [ -n "$PASS_IDS" ]; then
+              if ! node scripts/factory/operator.js publish --ids "$PASS_IDS" --scope fast; then
+                echo "::error::queue pair $PAIR_IDS: publish FAIL — staged publish đã rollback deterministic; KHÔNG rollback các pair đã publish; pair giữ recoverable."
+                FAILED_PAIRS="$FAILED_PAIRS $PAIR_IDS"
+                node scripts/factory/operator.js recover || echo "::warning::recover sau pair lỗi $PAIR_IDS trả mã khác 0"
+                continue
+              fi
+              PUBLISHED_IDS="$PUBLISHED_IDS,$PASS_IDS"
+              PUBLISHED_IDS="${PUBLISHED_IDS#,}"
+              log_checkpoint
+            else
+              echo "pair $PAIR_IDS: không có hàng PASS trong lần QA này — giữ recoverable cho writer sửa draft rồi push lại (repair push)"
+              RECOVERABLE_PAIRS="$RECOVERABLE_PAIRS,$PAIR_IDS"
+              RECOVERABLE_PAIRS="${RECOVERABLE_PAIRS#,}"
+              log_checkpoint
+            fi
+          done
+          PUBLISHED_IDS="${PUBLISHED_IDS#,}"
+          RECOVERABLE_PAIRS="${RECOVERABLE_PAIRS#,}"
+          echo "QUEUE RESULT: published=[$PUBLISHED_IDS] recoverable=[$RECOVERABLE_PAIRS] failed=[$FAILED_PAIRS]"
+          node -e 'const fs=require("fs"); const a=process.argv;
+            fs.writeFileSync("/tmp/queue-result.json", JSON.stringify({
+              published: String(a[1]||"").split(",").filter(Boolean),
+              recoverable: String(a[2]||"").split(",").filter(Boolean),
+              failed: String(a[3]||"").trim() ? String(a[3]).trim().split(/\s+/) : []
+            }, null, 2));' "$PUBLISHED_IDS" "$RECOVERABLE_PAIRS" "$FAILED_PAIRS"
+          echo "PUBLISHED_IDS=$PUBLISHED_IDS" >> "$GITHUB_ENV"
+          echo "RECOVERABLE_PAIRS=$RECOVERABLE_PAIRS" >> "$GITHUB_ENV"
+          echo "FAILED_PAIRS=$(echo $FAILED_PAIRS | xargs)" >> "$GITHUB_ENV"
+          {
+            echo "## TURBO queue run"
+            echo ""
+            echo "- Pairs published: \`${PUBLISHED_IDS:-none}\`"
+            echo "- Pairs kept recoverable (REVIEW/REPAIR — writer sửa rồi push lại): \`${RECOVERABLE_PAIRS:-none}\`"
+            echo "- Pairs FAILED (giữ recoverable, KHÔNG rollback pair đã publish): \`${FAILED_PAIRS:-none}\`"
+            echo ""
+            echo "Checkpoint sau run:"
+            echo '```'
+            node -e 'const c=JSON.parse(require("fs").readFileSync("data/state/checkpoint.json","utf8")); console.log("published_count="+c.published_count+"\nnext_claimable_id="+(c.next_claimable_id||"-")+"\nactive_chunk=["+(c.active_chunk||[]).join(",")+"]");' || true
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ -n "$FAILED_PAIRS" ]; then
+            echo "::error::TURBO queue: các pair FAIL (recoverable, chờ repair): $FAILED_PAIRS"
+          fi
+
+      - name: Light smoke (scoped consistency + liveness — KHÔNG full verify)
+        if: github.event_name == 'push' && steps.select.outputs.proceed == 'true' && steps.claim.outcome != 'failure' && steps.queue.outcome != 'failure'
+        run: |
+          set -eu
+          node scripts/factory/factory.js consistency --ids "${{ steps.select.outputs.qa_ids }}"
+          code=0
+          node scripts/factory/liveness-watchdog.js || code=$?
+          if [ "$code" != "0" ] && [ "$code" != "2" ]; then
+            echo "::error::liveness watchdog FAIL (exit $code)"
+            exit 1
+          fi
+          echo "liveness watchdog exit $code (0 = PASS, 2 = WARN hygiene)"
+
+      - name: Commit + push (1 commit duy nhất, KHÔNG force push; revalidate truth trước khi push)
+        if: github.event_name == 'push' && steps.select.outputs.proceed == 'true' && steps.claim.outcome != 'failure' && steps.queue.outcome != 'failure'
+        run: |
+          set -eu
+          git config user.name "factory-operator-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "không có gì để commit"
+            exit 0
+          fi
+          OPERATOR_VERIFIED_TREE=$(git write-tree)
+          echo "OPERATOR_VERIFIED_TREE=$OPERATOR_VERIFIED_TREE"
+          git commit -m "factory-production: ${COMMIT_LABEL:-$ACTION} (deterministic outputs of canonical tooling only)"
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" != "$OPERATOR_BASE_SHA" ]; then
+            echo "repository truth di chuyển ($OPERATOR_BASE_SHA -> $(git rev-parse origin/main)) — rebase, KHÔNG force push"
+            git rebase origin/main
+            echo "OPERATOR_LOCAL_VERIFY_HEAD_POST_REBASE=$(git rev-parse HEAD)"
+            node scripts/factory/operator.js verify --scope fast
+            if ! git diff --quiet; then
+              echo "::error::cây commit khác cây đã verified (sau rebase) — STOP, không push"
+              exit 1
+            fi
+            if [ "$(git rev-parse HEAD^{tree})" != "$OPERATOR_VERIFIED_TREE" ]; then
+              echo "::error::cây commit khác cây đã verified (tree drift sau rebase) — STOP, không push"
+              exit 1
+            fi
+          fi
+          git push
+
+      - name: Xác nhận trạng thái sạch (txn inactive, lock free) + báo pair lỗi
+        if: github.event_name == 'push' && steps.select.outputs.proceed == 'true'
+        run: |
+          set -eu
+          node -e 'const fs=require("fs");
+          const t=JSON.parse(fs.readFileSync("data/state/transaction.json","utf8"));
+          const l=JSON.parse(fs.readFileSync("data/state/writer-lock.json","utf8"));
+          if (t.active) { console.error("txn còn active:", t.id, t.operation); process.exit(1); }
+          if (l.locked) { console.error("writer lock còn held:", l.holder); process.exit(1); }
+          console.log("FACTORY CLEAN: txn inactive, lock free");'
+          if [ "${{ steps.claim.outcome }}" = "failure" ]; then
+            echo "::error::claim queue REFUSED (xem step claim) — không có gì được publish."
+            exit 1
+          fi
+          if [ "${{ steps.queue.outcome }}" = "failure" ]; then
+            echo "::error::queue driver step FAIL (xem step queue) — không có gì được commit/push."
+            exit 1
+          fi
+          if [ -n "${FAILED_PAIRS:-}" ]; then
+            echo "::error::TURBO queue kết thúc với pair FAIL (recoverable, chờ repair): $FAILED_PAIRS"
+            exit 1
+          fi
+          echo "FACTORY QUEUE COMPLETE: published=[${PUBLISHED_IDS:-none}] recoverable=[${RECOVERABLE_PAIRS:-none}]"
