@@ -1,15 +1,13 @@
 {
-  "generated_at": "2026-10-01T21:28:13.719Z",
+  "generated_at": "2026-10-01T21:57:20.804Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 75,
-    "PASS": 2,
+    "PUBLISHED": 77,
     "PLANNED": 9923
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 69,
-      "PASS": 2,
+      "PUBLISHED": 71,
       "PLANNED": 4929
     },
     "RESCUE": {
@@ -38,11 +36,8 @@
     }
   },
   "phase": "PRODUCTION",
-  "active_chunk": [
-    "A00068",
-    "A00069"
-  ],
-  "last_completed_id": "A00067",
+  "active_chunk": [],
+  "last_completed_id": "A00069",
   "next_claimable_id": "A00070",
   "blocked": [],
   "published": [
@@ -447,6 +442,18 @@
       "pk": "thuê xe máy gần Bến xe An Sương",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ben-xe-an-suong/"
+    },
+    {
+      "id": "A00068",
+      "pk": "thuê xe máy gần Bến xe Trung tâm Đà Nẵng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ben-xe-trung-tam-da-nang/"
+    },
+    {
+      "id": "A00069",
+      "pk": "thuê xe máy gần Bến xe nước Rồng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-gan-ben-xe-nuoc-rong/"
     },
     {
       "id": "A00097",
