@@ -1,0 +1,124 @@
+{
+  "article_id": "A00075",
+  "primary_keyword": "thuê xe máy Tam Đảo",
+  "secondary_keywords": [
+    "cho thuê xe máy Tam Đảo",
+    "thuê xe máy Vĩnh Yên",
+    "giá thuê xe máy Tam Đảo",
+    "thuê xe máy thị trấn Tam Đảo",
+    "cho thuê xe máy Vĩnh Phúc"
+  ],
+  "search_intent": "informational-research — du khách đi Tam Đảo (Vĩnh Phúc) cần biết các cửa hàng cho thuê tại thị trấn Tam Đảo và thành phố Vĩnh Yên chân đèo, bảng giá k-notation niêm yết, thủ tục và lưu ý chạy xe đường đèo",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Tam Đảo",
+    "thị trấn Tam Đảo",
+    "Vĩnh Phúc",
+    "Vĩnh Yên",
+    "Đầm Vạc",
+    "QL2B",
+    "Tổ dân phố 2",
+    "Thôn 2",
+    "phường Đống Đa (Vĩnh Yên)",
+    "phường Liên Bảo",
+    "phường Tích Sơn",
+    "Định Trung",
+    "Hà Nội",
+    "Suối Đá Thái Nguyên",
+    "Cầu Mây",
+    "nhà thờ đá",
+    "phim trường Sake Garden"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe tay ga"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Nguyễn Chiến",
+    "Duy Định",
+    "Ngọc Lan",
+    "Thái Dương",
+    "An Du",
+    "Hoàng Quy",
+    "Phương Hoa",
+    "Hoàng Linh"
+  ],
+  "model_entities": [
+    "Honda Wave RSX",
+    "Yamaha Sirius",
+    "Honda Vision",
+    "Honda Air Blade",
+    "Honda SH"
+  ],
+  "questions_found": [
+    "Thuê xe máy Tam Đảo giá bao nhiêu một ngày?",
+    "Ở thị trấn Tam Đảo có chỗ nào cho thuê xe máy không?",
+    "Đi Tam Đảo thuê xe ở Vĩnh Yên hay nhận tại thị trấn?",
+    "Thuê xe máy lên đèo Tam Đảo cần lưu ý gì?"
+  ],
+  "related_queries": [
+    "thue xe may tam dao",
+    "cho thue xe may vinh yen",
+    "thue xe may tam dao gia re",
+    "thue xe may di phuot tam dao"
+  ],
+  "serp_patterns": "SERP \"thuê xe máy Tam Đảo\" gồm bài tổng hợp cửa hàng (Tripbike, Tripi) mô tả các cơ sở tại thị trấn Tam Đảo (Nguyễn Chiến, Duy Định) và Vĩnh Yên; repo chưa có trang Vĩnh Phúc trong cụm tỉnh — bài này chiếm intent POI Tam Đảo bằng bảng giá niêm yết, phân tầng nhận xe (thị trấn vs Vĩnh Yên vs tự lái từ Hà Nội) và lưu ý đường đèo.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "Tripbike — Thuê xe máy Tam Đảo (Nguyễn Chiến, Duy Định tại thị trấn; các cửa hàng Vĩnh Yên)",
+      "url": "https://tripbike.net/thue-xe-may-tam-dao/"
+    },
+    {
+      "name": "Tripi — 6 địa điểm cho thuê xe máy đáng tin cậy nhất tại thị trấn Tam Đảo",
+      "url": "https://tripi.vn/blog/vi/xep-hang/6-dia-diem-cho-thue-xe-may-dang-tin-cay-nhat-tai-thi-tran-tam-dao-tripi"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-thai-nguyen/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-honda-vision-ha-noi/"
+  ],
+  "potential_cannibalization": "Repo chưa có trang tỉnh/thành phố Vĩnh Phúc hay Vĩnh Yên; không trùng slug với trang nào hiện có. Bài POI Tam Đảo khác intent các trang Hà Nội mà nó nội liên tới (thue-xe-may-ha-noi, thue-xe-may-thai-nguyen) — không cross-link bài cùng cặp push (A00074 Hồ Tây).",
+  "unique_angle": "Phân tầng ba phương án: tự lái từ Hà Nội (khoảng 80km), nhận xe tại thị trấn Tam Đảo (Nguyễn Chiến — gần 100 chiếc, giao tận nơi miễn phí) hoặc thuê tại Vĩnh Yên trước chân đèo (bảng giá 100k-200k, nhiều nơi không cọc tiền); kèm lưu ý chạy xe đường đèo và sương mù thị trấn.",
+  "notes": "Hàng informational_only, geo NGOÀI Hà Nội (Vĩnh Phúc): disclosure P2 chuẩn có mệnh đề \"không có điểm nhận xe tại Vĩnh Phúc\"; không dùng \"chúng tôi\", không claim dịch vụ. requires_official_sources=0. Giá các cửa hàng niêm yết dạng k-notation (100-120k, 150-200k) — giữ nguyên dạng trong body để khớp claim_evidence. Mọi claim định lượng có claim_evidence từ nguồn đã mở 2026-10-01.",
+  "claim_evidence": [
+    {
+      "claim": "Nguyễn Chiến là cửa hàng cho thuê xe máy lớn tại thị trấn Tam Đảo (Tổ dân phố 2 / Thôn 2, thị trấn Tam Đảo, Vĩnh Phúc), gần 100 chiếc xe các loại; giá thuê từ 100-120k các loại xe tay số, 150-200k các loại xe tay ga; giao xe tận nơi miễn phí; hỗ trợ khi xe hư hỏng.",
+      "source_url": "https://tripbike.net/thue-xe-may-tam-dao/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tripbike: \"Trong 2 địa chỉ cho thuê xe gắn máy ở Tam Đảo Vĩnh Phúc, thì Nguyễn Chiến là cửa hàng lớn, rất nhiều xe cho thuê. Gần 100 chiếc\"; \"khi thuê được giao xe tận nơi miễn phí. Giá thuê từ 100-120k các loại tay số, 150-200k các loại xe tay ga\"; \"Địa chỉ: Tổ dân phố 2, Tam Đảo, Vĩnh Phúc\"."
+    },
+    {
+      "claim": "Duy Định là địa chỉ cho thuê xe máy tại QL2B, thị trấn Tam Đảo, Vĩnh Phúc, số lượng xe không nhiều nhưng máy khỏe chạy dài; hỗ trợ khách khi xe hư hỏng 24h; khách có thể đặt xe theo kiểu dáng, màu sắc và được nhân viên đem tới miễn phí; đơn vị này cũng nhận hỗ trợ cho thuê xe máy tại Thái Nguyên đi khu vực Suối Đá Thái Nguyên.",
+      "source_url": "https://tripbike.net/thue-xe-may-tam-dao/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tripbike: \"Địa chỉ này tuy số lượng xe không nhiều, những bù lại chất lượng cực tốt. Máy móc động cơ rất khỏe chạy đường dài êm\"; \"bạn có thể đặt xe, kiểu dáng màu sắc theo ý thích của mình, phía cửa hàng Duy Định sẽ có nhân viên đem tới cho bạn miễn phí\"; \"Hỗ trợ xe hư hỏng 24h\"; \"Địa chỉ: QL2B, TT. Tam Đảo Vĩnh Phúc\"; \"nhận hỗ trợ dịch vụ cho thuê xe máy tại Thái Nguyên đi phượt\" khu vực \"Suối Đá Thái Nguyên\"."
+    },
+    {
+      "claim": "Các cửa hàng cho thuê xe máy tại thành phố Vĩnh Yên (chân đường lên Tam Đảo) theo Tripbike: Thái Dương (Số 36 Đầm Vạc, phường Đống Đa) nhận giao xe tận nơi miễn phí trung tâm Vĩnh Yên, tặng kèm xăng xe, trang bị nón bảo hiểm, đổi xe ngay nếu hư hỏng; An Du (Số 339 đường Mê Linh, phường Liên Bảo) chỉ cần giấy phép lái xe hoặc thẻ căn cước, không cần đặt cọc tiền, giao xe tận nơi tại trung tâm thành phố hoặc khách sạn; Hoàng Quy (Số 7 Hà Huy Lập, phường Tích Sơn) cho thuê hai dòng xe số Honda Wave RSX và Yamaha Sirius, trang bị nón bảo hiểm và xăng xe, hỗ trợ hư hỏng 24h qua hotline; Phương Hoa (Số 47 phố Chùa Hà, Định Trung) hơn 50 mẫu xe các loại, giá thuê xe tay số 100 -120k, xe tay ga 150 – 180k; Hoàng Linh (Khu Hành chính 9, phường Đống Đa) giá thuê xe số 100k, xe tay ga 150k, được tặng xăng, có nón bảo hiểm, giao xe theo yêu cầu miễn phí, cho chạy thử và đổi xe nếu không ưng; Ngọc Lan (Số 1 Trần Phú, thành phố Vĩnh Yên) trang bị nón bảo hiểm, áo mưa và bản đồ địa phương.",
+      "source_url": "https://tripbike.net/thue-xe-may-tam-dao/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tripbike: Thái Dương \"nhận giao xe tận nơi miễn phí trung tâm Vĩnh Yên, tặng kèm xăng xe, trang bị nón bảo hiểm chất lượng... bị hư hỏng xe, phía anh Dương đổi xe ngay cho khách. Địa chỉ: Số 36 Đầm Vạc, Phường Đống Đa, Thành phố Vĩnh Yên\"; An Du \"chỉ cần có giấy phép lái xe hoặc thẻ căn cước là có thể thuê... khi thuê không cần đặt cọc tiền... giao xe tận nơi trung tâm thành phố hoặc tại khách sạn... Địa chỉ: Số 339 đường Mê Linh, Phường Liên Bảo, Thành phố Vĩnh Yên\"; Hoàng Quy \"2 dòng xe chính... là Wave rsx, và Sirius... trang bị nón bảo hiểm và xăng xe. Kèm theo dịch vụ hỗ trợ hư hỏng 24h... Địa chỉ: Số 7 Hà Huy Lập, Phường Tích Sơn, Thành phố Vĩnh Yên\"; Phương Hoa \"hơn 50 mẫu xe các loại... Với mức giá cho thuê xe tay số 100 -120k, xe tay ga 150 – 180k... Địa chỉ: Số 47 phố chùa Hà, Định Trung, Thành phố Vĩnh Yên\"; Hoàng Linh \"Giá thuê xe số 100k, xe tay ga 150k được tặng xăng, và có nón bảo hiểm. còn được giao xe theo yêu cầu miễn phí... được kiểm tra, chạy thử thoải mái, không thích thì đổi lại... Địa chỉ: Khu Hành chính 9, Phường Đống Đa, Thành phố Vĩnh Yên\"; Ngọc Lan \"bạn sẽ được trang bị nón bảo hiểm, áo mưa và bản đồ địa phương... Địa chỉ: Số 1 Trần Phú, Thành phố Vĩnh Yên\"."
+    },
+    {
+      "claim": "Tam Đảo cách Hà Nội tầm 80km; theo Tripi, Nguyễn Chiến (Thôn 2, Thị trấn Tam Đảo, Vĩnh Phúc) là địa chỉ thuê xe hàng đầu tại thị trấn, giao xe tận nơi miễn phí, từ đó di chuyển tới các điểm như Cầu Mây, nhà thờ đá, phim trường Sake Garden, quán cà phê Rock; Hoàng Linh (Khu Hành chính 9, Đống Đa, Vĩnh Yên) hỗ trợ giao xe tận nơi, không giới hạn thời gian nhận/trả xe và hoạt động 24/7; Thái Dương (36 Đầm Vạc, Vĩnh Yên) thủ tục chỉ cần CMND hoặc bằng lái xe; Phương Hoa (47 Chùa Hà, Vĩnh Yên) có các dòng xe từ bình dân đến cao cấp như SH, Airblade, Vision, thủ tục chỉ cần bằng lái và giấy tờ tùy thân; An Du (339 Mê Linh, Liên Bảo, Vĩnh Yên) cho thuê linh hoạt theo ngày/tuần/tháng; Ngọc Lan (1 Trần Phú, Vĩnh Yên) giao xe tận nơi tại khách sạn, bến xe hoặc địa điểm theo yêu cầu.",
+      "source_url": "https://tripi.vn/blog/vi/xep-hang/6-dia-diem-cho-thue-xe-may-dang-tin-cay-nhat-tai-thi-tran-tam-dao-tripi",
+      "source_domain": "tripi.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tripi: \"Nguyễn Chiến — Địa chỉ: Thôn 2, Thị Trấn Tam Đảo, Vĩnh Phúc... dịch vụ giao xe tận nơi miễn phí... Từ Cầu Mây lãng mạn đến nhà thờ đá cổ kính, từ phim trường Sake Garden đến quán cà phê Rock\"; \"Hoàng Linh — Khu Hành chính 9, Đống Đa, Vĩnh Yên... hỗ trợ giao xe tận nơi và không giới hạn thời gian nhận/trả xe... dịch vụ hoạt động 24/7\"; \"Thái Dương — 36 Đầm Vạc, Đống Đa, Vĩnh Yên... Thủ tục thuê xe đơn giản chỉ cần CMND hoặc bằng lái xe\"; \"Phương Hoa — 47 Chùa Hà, Định Trung, Vĩnh Yên... đa dạng các dòng xe từ bình dân đến cao cấp như SH, Airblade, Vision... chỉ cần xuất trình bằng lái và giấy tờ tùy thân\"; \"An Du — 339 Mê Linh, Liên Bảo, Vĩnh Yên... linh hoạt theo ngày/tuần/tháng\"; \"Ngọc Lan — 1 Trần Phú, Vĩnh Yên... giao xe tận nơi tại khách sạn, bến xe hoặc địa điểm theo yêu cầu\"."
+    },
+    {
+      "claim": "Tam Đảo cách Hà Nội tầm 80km theo Tripbike; thời gian thuê phổ biến tính 1 ngày 24h, nên hỏi cụ thể cách tính giờ để canh giờ trả xe cho đúng.",
+      "source_url": "https://tripbike.net/thue-xe-may-tam-dao/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tripbike: \"Cách Hà Nội tầm 80km, phượt Tam Đảo tận hưởng khi hậu toáng mát\"; \"Thời gian giờ giấc tính, 1 ngày 24h hay từ sáng đến tối là một ngày. Nên hỏi cụ thể để canh giờ trả xe cho đúng\"."
+    }
+  ]
+}

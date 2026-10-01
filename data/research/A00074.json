@@ -1,0 +1,139 @@
+{
+  "article_id": "A00074",
+  "primary_keyword": "thuê xe máy Hồ Tây",
+  "secondary_keywords": [
+    "thuê xe máy quận Tây Hồ",
+    "cho thuê xe máy quanh Hồ Tây",
+    "giá thuê xe máy Hồ Tây",
+    "thuê xe máy Quảng An Tây Hồ",
+    "thuê xe máy tự lái Tây Hồ"
+  ],
+  "search_intent": "informational-research — du khách lưu trú quanh Hồ Tây cần bảng giá niêm yết các cửa hàng trong quận, điểm nhận xe dọc ven hồ (Quảng An, Tứ Liên, Yên Phụ, Trích Sài, Thụy Khuê) và chính sách thuê/giao xe của từng nhà xe",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Hà Nội",
+    "Hồ Tây",
+    "quận Tây Hồ",
+    "Phủ Tây Hồ",
+    "Quảng An",
+    "Tứ Liên",
+    "Yên Phụ",
+    "Trích Sài",
+    "Thụy Khuê",
+    "Bưởi",
+    "Âu Cơ",
+    "Nghi Tàm",
+    "Xuân Diệu",
+    "Tô Ngọc Vân",
+    "Nhật Chiêu",
+    "đường Thanh Niên",
+    "hẻm Từ Hoa",
+    "Thung lũng hoa Hồ Tây",
+    "Hoàng Hoa Thám",
+    "Nguyễn Khả Trạc",
+    "Mai Dịch",
+    "đê Yên Phụ"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe tay ga",
+    "xe máy tự lái"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "MOTOGO",
+    "RentABike",
+    "Vietnam Dirt Bike Venture",
+    "Mr Goodbikes",
+    "Hoàng Hiệp",
+    "Hoàng Huy"
+  ],
+  "model_entities": [
+    "Honda Wave Alpha",
+    "Honda Blade",
+    "Honda Future",
+    "Honda Vision",
+    "Honda Air Blade",
+    "Honda Lead",
+    "Yamaha Sirius",
+    "Yamaha Janus"
+  ],
+  "questions_found": [
+    "Thuê xe máy Hồ Tây giá bao nhiêu một ngày?",
+    "Cho thuê xe máy quanh Hồ Tây có cần đặt cọc không?",
+    "Có cửa hàng nào giao xe tận nơi quanh Hồ Tây không?",
+    "Thuê xe máy ở Tây Hồ chạy được ra ngoài Hà Nội không?"
+  ],
+  "related_queries": [
+    "thuê xe máy tây hồ",
+    "cho thuê xe máy hồ tây giao tận nơi",
+    "giá thuê xe máy quận tây hồ",
+    "thue xe may quan tay ho khong coc"
+  ],
+  "serp_patterns": "SERP \"thuê xe máy Hồ Tây\" gồm bài tổng hợp cửa hàng (Motogo, Vexere) và website nhà xe; repo đã có trang quận-level thue-xe-may-tay-ho (A00042) — bài này chiếm intent POI \"Hồ Tây\" bằng bảng giá niêm yết từng cửa hàng dọc ven hồ, chính sách 24 giờ và khu vực giao xe miễn phí bán kính 3km quanh Phủ Tây Hồ.",
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "name": "Motogo — Thuê xe máy Hồ Tây Hà Nội (bảng giá 6 cửa hàng)",
+      "url": "https://motogo.vn/thue-xe-may-tay-ho-ha-noi/"
+    },
+    {
+      "name": "Vexere — Thuê xe máy gần Hồ Tây (Hoàng Hiệp, Hoàng Huy, Mr. Good Bikes; chính sách thuê)",
+      "url": "https://vexere.com/vn/thue-xe/xe-may-tai-tay-ho.vi"
+    }
+  ],
+  "existing_internal_pages": [
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-tay-ho/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-ho-hoan-kiem/",
+    "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-honda-vision-ha-noi/"
+  ],
+  "potential_cannibalization": "Khác biệt với trang quận-level thue-xe-may-tay-ho (A00042, từ khóa \"quận Tây Hồ\") và trang tổng quan thue-xe-may-ha-noi: bài này nhắm POI \"Hồ Tây\" — bảng giá niêm yết từng cửa hàng quanh ven hồ, chính sách thời gian 24 giờ, khu vực giao xe miễn phí bán kính 3km quanh Phủ Tây Hồ và các cung đường check-in ven hồ (hẻm Từ Hoa, đường Thanh Niên). Không cross-link bài cùng cặp push (A00075 Tam Đảo).",
+  "unique_angle": "Góc nhìn \"vòng ven hồ\": niêm yết 8 cửa hàng theo trục Quảng An - Tứ Liên - Yên Phụ - Trích Sài - Thụy Khuê, so sánh chính sách cọc (có nơi miễn cọc, có nơi cọc 3 triệu hoặc giữ giấy tờ) và quy tắc 24 giờ/ngày của các nhà xe quanh Hồ Tây.",
+  "notes": "Hàng informational_only, geo Hà Nội: không dùng \"chúng tôi\", không claim dịch vụ; disclosure P2 chuẩn bản Hà Nội (bỏ mệnh đề \"không có điểm nhận xe tại X\"). requires_official_sources=0. Mọi claim định lượng có claim_evidence từ nguồn đã mở 2026-10-01.",
+  "claim_evidence": [
+    {
+      "claim": "Bảng niêm yết trên Motogo cho các cửa hàng thuê xe quanh Hồ Tây: MOTOGO (81 Nguyễn Khả Trạc, Mai Dịch; 7 ngõ 267 Hoàng Hoa Thám, Ngọc Hà; sân bay Nội Bài) xe số 80.000đ – 130.000đ/ngày, xe ga 120.000đ – 200.000đ/ngày; RentABike – Hanoi (15a Ngõ 12 Đặng Thai Mai, Quảng An, Tây Hồ) xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày; Vietnam dirt bike venture (200 Âu Cơ, Tứ Liên, Tây Hồ) xe số 120.000đ/ngày, xe ga 200.000đ/ngày; Mr Goodbikes (Ngõ 149 P. Trích Sài, Bưởi, Tây Hồ) xe số 100.000đ/ngày, xe ga 120.000đ/ngày; \"Thuê xe máy Tây Hồ\" (Ngõ 72 An Dương, Yên Phụ, Tây Hồ) xe số 100.000đ/ngày, xe ga 180.000đ/ngày; Anh Hữu (464 Âu Cơ, Tây Hồ) giá thuê xe 130.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ho-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá Motogo: \"MOTOGO — Địa chỉ 1: 81 Nguyễn Khả Trạc, Mai Dịch, Hà Nội; Địa chỉ 2: 7 ngõ 267 Hoàng Hoa Thám, Ngọc Hà, Hà Nội; Địa chỉ 3: Sân bay Nội Bài — Giá thuê xe số: 80.000đ – 130.000đ/ngày; Giá thuê xe ga: 120.000đ – 200.000đ/ngày\"; \"RentABike – Hanoi — 15a Ngõ 12 – Đặng Thai Mai, Quảng An, Tây Hồ, Hà Nội — Giá thuê xe số: 80.000đ – 100.000đ/ngày; Giá thuê xe ga: 130.000đ – 140.000đ/ngày\"; \"Vietnam dirt bike venture — 200 Âu Cơ, Tứ Liên, Tây Hồ, Hà Nội — Giá thuê xe số: 120.000đ/ngày; Giá thuê xe ga: 200.000đ/ngày\"; \"Mr Goodbikes — Ngõ 149 P. Trích Sài, Bưởi, Tây Hồ, Hà Nội — Giá thuê xe số: 100.000đ/ngày; Giá thuê xe ga: 120.000đ/ngày\"; \"Thuê xe máy Tây Hồ — Ngõ 72 An Dương, Yên Phụ, Tây Hồ, Hà Nội — Giá thuê xe số: 100.000đ/ngày; Giá thuê xe ga: 180.000đ/ngày\"; \"Anh Hữu — 464 Âu Cơ, thôn Bắc, Tây Hồ, Hà Nội — Giá thuê xe: 130.000đ/ngày\"."
+    },
+    {
+      "claim": "MOTOGO không yêu cầu đặt cọc, thủ tục hoàn tất trong khoảng 10-15 phút, có giao xe tận nơi trong khu vực nội thành Hà Nội dù văn phòng không nằm trong quận Tây Hồ.",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ho-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Motogo: \"thủ tục thuê xe linh hoạt và đơn giản, không yêu cầu đặt cọc. Bạn chỉ cần dành khoảng 10-15 phút là đã hoàn tất quá trình thuê xe\"; \"MOTOGO còn hỗ trợ giao nhận xe trong khu vực nội thành Hà Nội. Mặc dù địa chỉ văn phòng không nằm trong quận Tây Hồ nhưng bạn vẫn luôn có thể thuê xe nhanh chóng\"."
+    },
+    {
+      "claim": "Hoàng Hiệp (140 Ngõ 56 phố Tứ Liên, Phường Hồng Hà, Hà Nội) cho thuê xe số Honda Blade, Wave Alpha, Future đời 2018-2020 từ 120.000đ/ngày và xe ga Airblade, Vision từ 150.000đ/ngày, kèm mũ bảo hiểm, áo mưa, xăng (1 lít), giao tận nơi, không cần cọc trước; nhận và trả xe hằng ngày từ 07:00 đến 20:00; mỗi ngày thuê tính bằng 24 giờ, trả quá mỗi 24 giờ tính thêm 1 ngày, trả chưa quá 3 giờ chỉ tính thêm 1/2 ngày; cọc 3tr (khách có vé máy bay khứ hồi miễn phí cọc), giữ CCCD/Passport; chỉ sử dụng xe trong phạm vi Thành phố Hà Nội (cũ); hỗ trợ giao xe miễn phí trong bán kính 3km khu vực Phủ Tây Hồ.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tay-ho.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Vexere: \"Hoàng Hiệp — 140 Ngõ 56 phố Tứ Liên, Phường Hồng Hà\"; \"Honda Blade, Honda Wave Alpha, Honda Future (giao ngẫu nhiên...) Đời xe: 2018-2020... từ 120.000đ\"; \"Honda Airblade, Honda Vision... từ 150.000đ\"; \"Mũ bảo hiểm, Áo mưa, Xăng (1 lít)\"; \"Giao xe tận nơi — Không cần cọc trước\"; \"Thời gian nhận xe và trả xe hằng ngày từ 07:00 đến 20:00. Mỗi ngày thuê được tính bằng 24 giờ... Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 3 giờ → chỉ tính thêm 1/2 ngày\"; \"Cọc 3tr (vé máy bay khứ hồi miễn phí cọc) — Giữ CCCD/Passport\"; \"chỉ sử dụng xe trong phạm vi Thành phố Hà Nội (cũ)\"; \"chính sách hỗ trợ giao xe miễn phí trong bán kính 3km khu vực Phủ Tây Hồ\"."
+    },
+    {
+      "claim": "Hoàng Huy (Số 12L, P. Đặng Thai Mai, Quảng An, Tây Hồ) cho thuê xe số từ 150.000đ/ngày, xe tay ga đời mới từ 160.000đ/ngày, mỗi ngày thuê tính tròn 24 giờ. Mr. Good Bikes (Số 10, Ngõ 378/65/42, Thụy Khuê, Tây Hồ) có dịch vụ giao xe tận nơi cho khách ở khu vực Phủ Tây Hồ, Trích Sài.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tay-ho.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Vexere: \"Cho thuê xe máy Hoàng Huy — Địa chỉ: Số 12L, P. Đặng Thai Mai, Quảng An, Tây Hồ, Hà Nội... các dòng xe số bền bỉ được cho thuê với mức giá từ 150.000đ/ngày, trong khi các dòng xe tay ga đời mới có giá từ 160.000đ/ngày... mỗi ngày thuê được tính tròn 24 giờ\"; \"Dịch vụ thuê xe máy Mr. Good Bikes — Địa chỉ: Số 10, Ngõ 378/65/42, Thụy Khuê, Tây Hồ, Hà Nội — Nếu bạn đang ở khách sạn sâu trong khu vực Phủ Tây Hồ hay Trích Sài và ngại đi tìm cửa hàng, Mr. Good Bikes là lựa chọn tối ưu với dịch vụ giao xe tận nơi\"."
+    },
+    {
+      "claim": "Mặt bằng giá thuê xe tại khu vực Hồ Tây theo Vexere: xe số phổ thông (Wave Alpha, Sirius, Blade) dao động 100.000đ – 120.000đ/ngày; xe tay ga phổ thông (Vision, Lead, Air Blade) khoảng 130.000đ – 160.000đ/ngày. Cung đường ven hồ dài gần 17km; các địa điểm check-in quanh hồ gồm hẻm Từ Hoa, Phủ Tây Hồ, đường Thanh Niên, Thung lũng hoa Hồ Tây; khu ngõ nhỏ dốc ở Xuân Diệu, Tô Ngọc Vân và đê Yên Phụ thường đi bằng xe số gọn nhẹ.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tay-ho.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Vexere: \"Hồ Tây với cung đường ven hồ dài gần 17km\"; \"Mức giá thuê xe số tại khu vực này rất hợp lý, dao động từ 100.000đ – 120.000đ/ngày\"; \"Giá thuê xe ga thường nằm trong khoảng 130.000đ – 160.000đ/ngày\"; mục lục \"Hẻm Từ Hoa; Phủ Tây Hồ; Đường Thanh Niên; Thung lũng hoa Hồ Tây\"; \"giúp bạn dễ dàng di chuyển qua những con ngõ nhỏ dốc ở khu vực Xuân Diệu, Tô Ngọc Vân hay leo lên dốc đường đê Yên Phụ\"."
+    },
+    {
+      "claim": "Mặt bằng thuê xe quanh Hồ Tây theo niêm yết các cửa hàng trên Motogo dao động khoảng 80.000đ – 200.000đ/ngày: xe số từ 80.000đ tới 130.000đ/ngày, xe ga từ 120.000đ tới 200.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ho-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Tổng hợp niêm yết Motogo: xe số thấp nhất 80.000đ – 100.000đ/ngày (RentABike), cao nhất 130.000đ/ngày (MOTOGO, Anh Hữu); xe ga thấp nhất 120.000đ/ngày (Mr Goodbikes), cao nhất 200.000đ/ngày (Vietnam dirt bike venture, MOTOGO) — khoảng dao động chung từ bảng giá các cửa hàng trên Motogo."
+    }
+  ]
+}
