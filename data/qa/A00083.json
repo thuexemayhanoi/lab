@@ -1,11 +1,11 @@
 {
   "article_id": "A00083",
-  "scored_at": "2026-10-01T23:16:54.683Z",
+  "scored_at": "2026-10-01T23:20:23.470Z",
   "scorer": "factory-qa-deterministic-v1",
   "score": 100,
-  "words": 2633,
+  "words": 2634,
   "result": "PASS",
   "fails": [],
-  "draft_sha256": "a8f7c535ea479b25a9b364ab9a49221ab4f808f8f2ac30136f61be333b62f1b9",
+  "draft_sha256": "01e4811018469652aa1d8b71a9e1c4dba05b17f826ee67a92fc74271f3e67464",
   "matrix_status_after": "PASS"
 }
