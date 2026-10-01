@@ -1,0 +1,227 @@
+{
+  "article_id": "A00031",
+  "primary_keyword": "thuê xe máy Vĩnh Long",
+  "secondary_keywords": [
+    "cho thuê xe máy Vĩnh Long giao tận nơi",
+    "thuê xe máy Vĩnh Long giá rẻ",
+    "bảng giá thuê xe máy Vĩnh Long",
+    "thuê xe máy cù lao An Bình"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Vĩnh Long",
+    "thành phố Vĩnh Long",
+    "Long Hồ",
+    "cù lao An Bình",
+    "Phường 1 Vĩnh Long",
+    "Bến Tre",
+    "Trà Vinh"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe tay côn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki",
+    "SYM"
+  ],
+  "model_entities": [
+    "Wave",
+    "Wave RSX",
+    "Sirius",
+    "Jupiter",
+    "Vision",
+    "Lead",
+    "Air Blade",
+    "Nouvo",
+    "Attila",
+    "Grande",
+    "Janus",
+    "Exciter"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Vĩnh Long giá bao nhiêu một ngày?",
+    "thuê xe máy Vĩnh Long có cần đặt cọc không, cọc bao nhiêu?",
+    "thuê xe máy Vĩnh Long có được giao xe tận nơi miễn phí không?",
+    "có chỗ nào cho thuê xe máy Vĩnh Long không cần cọc không?",
+    "sau sáp nhập 2025, Bến Tre và Trà Vinh có thuộc Vĩnh Long không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Vĩnh Long 2026",
+    "cho thuê xe máy tự lái Vĩnh Long giao tận nơi",
+    "thuê xe máy cù lao An Bình Long Hồ",
+    "thuê xe máy Vĩnh Long cho sinh viên"
+  ],
+  "serp_patterns": "SERP cho Vĩnh Long có bài riêng của motogo (5 địa điểm kèm bảng giá theo từng cơ sở và bảng giá theo dòng xe), bài tổng hợp của 2trip liệt kê 5 cửa hàng kèm dải giá 80.000đ–150.000đ và 80.000đ–160.000đ mỗi cửa hàng, bài của tripbike mô tả chi tiết Anh Duy (giao xe nhanh 5 – 10 phút, giao nhận miễn phí nội thành, không cần đặt cọc) và Nam Thanh (150k xe số, 200k xe ga), cùng bài kinh nghiệm của xemayanthanhphat (xe số 80.000–100.000 VNĐ/ngày, cọc 1–3 triệu đồng, nhiều đơn vị hỗ trợ giao xe tận nơi). Điểm nhấn thị trường: giá rẻ ngang mặt bằng miền Tây, nhiều cơ sở nằm ở Phường 1 và An Bình Long Hồ gần cù lao du lịch, có nơi cho thuê không cần cọc chỉ cần giấy tờ.",
+  "official_sources": [
+    {
+      "source_url": "https://luatvietnam.vn/hanh-chinh/nghi-quyet-202-2025-qh15-cua-quoc-hoi-ve-viec-sap-xep-don-vi-hanh-chinh-cap-tinh-402728-d1.html",
+      "source_domain": "luatvietnam.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nghị quyết 202/2025/QH15: «Tỉnh Vĩnh Long: Sáp nhập tỉnh Bến Tre, Trà Vinh và Vĩnh Long, diện tích 6.296,20 km², dân số 4.257.581 người.»"
+    }
+  ],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "danh sách 5 địa điểm cho thuê tại Vĩnh Long kèm giá theo từng cơ sở và bảng giá theo dòng xe"
+    },
+    {
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-vinh-long",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng tổng hợp 5 cửa hàng tại Vĩnh Long kèm dải giá từng cửa hàng và mô tả dịch vụ"
+    },
+    {
+      "source_url": "https://tripbike.net/thue-xe-may-vinh-long/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "mô tả chi tiết cơ sở Anh Duy và Nam Thanh tại Vĩnh Long: giá theo dòng xe, giao xe tận nơi, không cần đặt cọc"
+    },
+    {
+      "source_url": "https://xemayanthanhphat.com/thue-xe-may-vinh-long.html",
+      "source_domain": "xemayanthanhphat.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "kinh nghiệm thuê xe máy Vĩnh Long: mặt bằng giá xe số, xe ga, khoản tiền cọc và dịch vụ giao xe tận nơi"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-tp-hcm/",
+    "/lab/thue-xe-may/thue-xe-may-can-tho/",
+    "/lab/thue-xe-may/thue-xe-may-dong-nai/",
+    "/lab/kinh-nghiem/",
+    "/lab/cuu-ho-xe-may/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-vinh-long: nhóm gốc cấp tỉnh. Matrix đã có row giá theo từng dòng xe tại Vĩnh Long (A00127 Vision, A00161 Air Blade, A00195 Wave, A00229 Winner, A00263 Sirius, A00297 Exciter, A00331 Grande…). Bài tỉnh gốc chỉ nêu giá theo dòng xe ở mức tham khảo trong bảng tổng hợp, không lạm bàn riêng từng mẫu — các row hẹp sẽ xử lý riêng. Cụm 'thuê xe máy cù lao An Bình' hiện chưa có row riêng nên chỉ đề cập định tính trong bài.",
+  "unique_angle": "Bài tỉnh gốc cho thị trường miền Tây sông nước ngay trước đêm khuya sáp nhập: sau 2025, Vĩnh Long là tỉnh mới gộp cả Bến Tre và Trà Vinh, nhưng thị trường thuê xe vẫn dồn về thành phố Vĩnh Long và cù lao An Bình. Điểm đáng viết: mặt bằng giá rất mềm (nhiều cơ sở xe số 80.000đ–100.000đ/ngày), có cơ sở cho thuê KHÔNG cần đặt cọc chỉ cần giấy tờ (Anh Duy) — điểm khác biệt lớn so với các tỉnh du lịch, cùng lúc nơi khác ghi cọc 1–3 triệu đồng; dịch vụ giao xe miễn phí nội thành và giao nhanh 5 – 10 phút; nhiều cơ sở nằm ngay Phường 1 và An Bình Long Hồ nên khách đi cù lao nhận xe tiện.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; mọi mức giá dẫn theo nguồn công khai. Vĩnh Long VN-031 CURRENT giữ tên; Bến Tre (LG-053) và Trà Vinh (LG-054) MERGED_INTO Vĩnh Long theo Nghị quyết 202/2025/QH15. tripbike dùng k-notation («150k xe tay số, 200k xe tay ga») — ghi chú quy đổi trong claim_supported; motogo dùng «130.000đ», «180.000đ», «250.000đ/ngày» theo dòng xe cho cơ sở Anh Duy; bảng giá theo dòng xe của motogo dùng vnd (Wave S 80.000 vnd…). Địa chỉ cửa hàng dẫn theo bảng công khai: Lộc Phúc 50 Nguyễn Thị Út Phường 1, Ngọc Sang An Bình Long Hồ, Nam Thanh 172/9 Bình Lương An Bình, Anh Duy 130 đường 8-3 phường 5, Khách sạn Thiên Thanh 2G Hùng Vương Phường 1. POI: cù lao An Bình chỉ nêu định tính.",
+  "claim_evidence": [
+    {
+      "claim": "Giá thuê xe máy Vĩnh Long dao động trong khoảng từ 80.000đ – 150.000đ",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-vinh-long",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Ngoài ra, giá cả thuê xe máy Vĩnh Long cũng phải chăng, giao động trong khoảng từ 80.000đ – 150.000đ.»"
+    },
+    {
+      "claim": "Nhiều cơ sở ghi xe số 80.000đ–100.000đ/ngày và xe ga 120.000đ–160.000đ/ngày (Lộc Phúc, Ngọc Sang, Anh Duy)",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá ghi «Giá thuê xe số: 80.000đ – 100.000đ/ngày; Giá thuê xe ga: 120.000đ -160.000đ/ngày» cho Lộc Phúc, Ngọc Sang và Anh Duy."
+    },
+    {
+      "claim": "Nam Thanh ghi xe số 80.000đ–100.000đ/ngày, xe ga 130.000đ–140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá ghi «Nam Thanh … Giá thuê xe số: 80.000đ – 100.000đ/ngày; Giá thuê xe ga: 130.000đ – 140.000đ/ngày»."
+    },
+    {
+      "claim": "Khách sạn Thiên Thanh ghi xe số 100.000đ/ngày, xe ga 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá ghi «Khách sạn Thiên Thanh … Giá thuê xe số: 100.000đ/ngày; Giá thuê xe ga: 150.000đ/ngày»."
+    },
+    {
+      "claim": "Tại Anh Duy, xe số như Wave RSX, Wave S giá 130.000đ/ngày; xe ga như Lead, Vision, Grande 180.000đ/ngày; Exciter 250.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Các loại xe số như Wave RSX, Wave S hay xe tương tự giá thuê là 130.000đ/ngày. Các dòng tay ga mới hơn như Lead, Vision hay Grande thì giá cao hơn chút, 180.000đ/ngày. Loại xe có giá thuê cao nhất tại đây là Exciter với chi phí 250.000đ/ngày.»"
+    },
+    {
+      "claim": "Theo 2trip, giá xe Wave RSX, Wave S tại Anh Duy là 130.000đ, xe Lead, Vision, Grande là 180.000đ và Exciter là 250.000đ/ngày",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-vinh-long",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Trong đó, giá của xe Wave RSX, Wave S là 130.000đ, xe Lead, Vision hay Grande là 180.000đ và Exciter là 250.000đ/ngày.»"
+    },
+    {
+      "claim": "Chỉ từ 80.000đ đã thuê được xe số mới; xe ga nhỉnh hơn là 160.000đ (Ngọc Sang)",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-vinh-long",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Ngọc Sang là lựa chọn lý tưởng cho những ai đang có nhu cầu thuê xe máy Vĩnh Long giá rẻ. Chỉ từ 80.000đ là bạn đã có thể thuê được một con xe số mới toanh. Còn nếu như xe ga thì mức giá sẽ nhỉnh hơn là 160.000đ.»"
+    },
+    {
+      "claim": "Dải giá theo cửa hàng: Anh Duy, Lộc Phúc, Ngọc Sang 80.000đ – 160.000đ; Khách sạn Thiên Thanh 100.000đ – 150.000đ; Nam Thanh 80.000đ – 140.000đ",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-vinh-long",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng tổng hợp ghi «Anh Duy … 80.000đ – 160.000đ», «Khách sạn Thiên Thanh … 100.000đ – 150.000đ», «Lộc Phúc … 80.000đ – 160.000đ», «Ngọc Sang … 80.000đ – 160.000đ», «Nam Thanh … 80.000đ – 140.000đ»."
+    },
+    {
+      "claim": "Có cơ sở cho thuê không cần đặt cọc hay thế chấp tiền, chỉ cần đầy đủ giấy tờ tùy thân (Anh Duy)",
+      "source_url": "https://tripbike.net/thue-xe-may-vinh-long/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Khi thuê khách hàng không cần phải đặt cọc hay thế chấp bất cứ khoản tiền nào. Là một trong 5 cửa hàng ở Vĩnh Long, không cần đặt cọc. … Chỉ cần có đầy đủ các giấy tờ tùy thân yêu cầu được quy định»."
+    },
+    {
+      "claim": "Anh Duy giao xe nhanh trong 5 – 10 phút và có giao nhận xe miễn phí trong nội thành",
+      "source_url": "https://tripbike.net/thue-xe-may-vinh-long/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giao xe nhanh chóng 5 – 10 phút. … Anh Duy hiện có giao nhận xe miễn phí ở trong nội thành.»"
+    },
+    {
+      "claim": "Theo tripbike, Anh Duy ghi xe tay số thông thường 130.000đ/ngày, xe tay ga thường 150.000đ/ngày, tay ga cao cấp 180.000đ/ngày, tay côn Exciter 250.000đ/ngày",
+      "source_url": "https://tripbike.net/thue-xe-may-vinh-long/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Xe tay số thông thường : Wave s rs rsx sirius jupiter …130.000nvd ngày»; «Xe tay ga thường Nouvolx hayate attila, mio…150.000vnd ngày»; «Tay ga cao cấp đời mới ab Lead Vision Janus Grande, 180.000vnd ngày»; «Tay côn exciter 135 150 250.000vnd ngày» — tức 130.000đ, 150.000đ, 180.000đ, 250.000đ/ngày."
+    },
+    {
+      "claim": "Nam Thanh cung cấp 150.000đ xe tay số và 200.000đ xe tay ga, cao hơn các chỗ khác; bảng dòng xe ghi Sirius, Wave Rsx 100.000–120.000, Lead, Vision 150.000–200.000",
+      "source_url": "https://tripbike.net/thue-xe-may-vinh-long/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«giá cao hơn các chỗ khác, 150k xe tay số, 200k xe tay ga là những gì Nam Thanh cung cấp» — tức 150.000đ và 200.000đ; bảng ghi «Sirius 100.000 – 120.000 … Wave Rsx 100.000 – 120.000 … Lead 150.000 – 200.000 … Vision 150.000 – 200.000»."
+    },
+    {
+      "claim": "Giá thuê xe số phổ thông tại Vĩnh Long thường dao động từ 80.000 VNĐ đến 100.000 VNĐ mỗi ngày",
+      "source_url": "https://xemayanthanhphat.com/thue-xe-may-vinh-long.html",
+      "source_domain": "xemayanthanhphat.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê xe số phổ thông tại Vĩnh Long thường dao động từ 80.000 VNĐ đến 100.000 VNĐ mỗi ngày, tùy thuộc vào đời xe và đơn vị cho thuê.»"
+    },
+    {
+      "claim": "Xe tay ga phổ thông như Vision hay Lead khoảng 120.000 VNĐ/ngày; xe ga đời mới như Air Blade đời 2016 trở lên có thể đạt tới 160.000 VNĐ/ngày",
+      "source_url": "https://xemayanthanhphat.com/thue-xe-may-vinh-long.html",
+      "source_domain": "xemayanthanhphat.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«các dòng xe tay ga phổ thông như Vision hay Lead sẽ có giá khoảng 120.000 VNĐ/ngày. Với các dòng xe tay ga cao cấp hoặc đời mới hơn như Air Blade đời 2016 trở lên, mức giá thuê có thể đạt tới 160.000 VNĐ/ngày.»"
+    },
+    {
+      "claim": "Khoản tiền cọc khi thuê xe máy tại Vĩnh Long thường dao động từ 1 đến 3 triệu đồng tùy xe",
+      "source_url": "https://xemayanthanhphat.com/thue-xe-may-vinh-long.html",
+      "source_domain": "xemayanthanhphat.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Khoản tiền cọc thường nằm trong khoảng từ 1 đến 3 triệu đồng, tùy thuộc vào giá trị và độ mới của chiếc xe bạn chọn.» và «Khoản tiền đặt cọc thường dao động từ 1 đến 3 triệu đồng.»"
+    },
+    {
+      "claim": "Một số đơn vị thuê xe máy Vĩnh Long uy tín có hỗ trợ giao xe tận nơi theo yêu cầu",
+      "source_url": "https://xemayanthanhphat.com/thue-xe-may-vinh-long.html",
+      "source_domain": "xemayanthanhphat.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Một số đơn vị cung cấp dịch vụ thuê xe máy Vĩnh Long uy tín có hỗ trợ giao xe tận nơi theo yêu cầu của khách hàng.»"
+    },
+    {
+      "claim": "Sau sáp nhập 2025, tỉnh Vĩnh Long hợp nhất Bến Tre, Trà Vinh và Vĩnh Long thành tỉnh Vĩnh Long mới",
+      "source_url": "https://luatvietnam.vn/hanh-chinh/nghi-quyet-202-2025-qh15-cua-quoc-hoi-ve-viec-sap-xep-don-vi-hanh-chinh-cap-tinh-402728-d1.html",
+      "source_domain": "luatvietnam.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nghị quyết 202/2025/QH15: «Tỉnh Vĩnh Long: Sáp nhập tỉnh Bến Tre, Trà Vinh và Vĩnh Long, diện tích 6.296,20 km², dân số 4.257.581 người.»"
+    }
+  ]
+}

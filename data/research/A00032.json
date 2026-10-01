@@ -1,0 +1,236 @@
+{
+  "article_id": "A00032",
+  "primary_keyword": "thuê xe máy Đồng Tháp",
+  "secondary_keywords": [
+    "cho thuê xe máy Cao Lãnh giao tận nơi",
+    "thuê xe máy Sa Đéc giá rẻ",
+    "bảng giá thuê xe máy Đồng Tháp",
+    "thuê xe máy làng hoa Sa Đéc"
+  ],
+  "search_intent": "informational",
+  "research_date": "2026-10-01",
+  "geo_entities": [
+    "Đồng Tháp",
+    "Cao Lãnh",
+    "Sa Đéc",
+    "Mỹ Tho",
+    "Tiền Giang",
+    "làng hoa Sa Đéc",
+    "quốc lộ 30"
+  ],
+  "vehicle_entities": [
+    "xe số phổ thông",
+    "xe tay ga",
+    "xe tay côn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Lead",
+    "Air Blade",
+    "Exciter",
+    "Winner",
+    "Xipo"
+  ],
+  "questions_found": [
+    "thuê xe máy ở Đồng Tháp – Cao Lãnh giá bao nhiêu một ngày?",
+    "thuê xe máy Đồng Tháp có cần đặt cọc không, cọc bao nhiêu?",
+    "thuê xe máy Cao Lãnh có được giao xe tận nơi miễn phí không?",
+    "thuê xe máy ở Sa Đéc gần làng hoa giá thế nào?",
+    "sau sáp nhập 2025, Tiền Giang có thuộc Đồng Tháp không?"
+  ],
+  "related_queries": [
+    "bảng giá thuê xe máy Đồng Tháp 2026",
+    "cho thuê xe máy tự lái Cao Lãnh giao tận nơi",
+    "thuê xe máy Sa Đéc làng hoa",
+    "thuê Exciter Đồng Tháp"
+  ],
+  "serp_patterns": "SERP cho Đồng Tháp xoay quanh hai thị trường Cao Lãnh và Sa Đéc: motogo có bài riêng (5 địa chỉ kèm bảng giá từng cơ sở và bảng giá theo dòng xe, ghi nhận đa phần xe cho thuê chỉ từ 100k/ngày), 2trip liệt kê 6 cửa hàng kèm dải giá từng nơi (Chị Lan, Lợi Thế, Bảo Trâm, Minh Chánh, Ngọc Phát, khách sạn Phương Nam), tripbike mô tả Lợi Thế (giao nhận tại bến xe, nhà ga, khách sạn miễn phí; 100k xe số 120k xe ga) và Bảo Trâm (không cần đặt cọc chỉ cần cmnd, tính giờ 24h, hỗ trợ hư hỏng 24/24h), limoutrip có bài 6 địa chỉ Cao Lãnh – Sa Đéc kèm cam kết không tăng giá lễ Tết. Điểm nhấn thị trường: Lợi Thế mở cửa 24/24, giao xe tận nơi miễn phí; nhiều cơ sở nằm ngay trung tâm Cao Lãnh và trong làng hoa Sa Đéc.",
+  "official_sources": [
+    {
+      "source_url": "https://luatvietnam.vn/hanh-chinh/nghi-quyet-202-2025-qh15-cua-quoc-hoi-ve-viec-sap-xep-don-vi-hanh-chinh-cap-tinh-402728-d1.html",
+      "source_domain": "luatvietnam.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nghị quyết 202/2025/QH15: «Tỉnh Đồng Tháp: Sáp nhập tỉnh Tiền Giang và Đồng Tháp, diện tích 5.938,64 km²»."
+    }
+  ],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "danh sách 5 địa chỉ cho thuê tại Cao Lãnh – Sa Đéc Đồng Tháp kèm bảng giá theo cơ sở, bảng giá theo dòng xe và mô tả dịch vụ Lợi Thế giao xe tận nơi"
+    },
+    {
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-cao-lanh-sa-dec-dong-thap",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "bảng tổng hợp 6 cửa hàng Cao Lãnh – Sa Đéc kèm dải giá từng nơi, mô tả Minh Chánh trong làng hoa Sa Đéc, Lợi Thế giao tận nơi miễn phí mở cửa 24/24, khách sạn Phương Nam và mức cọc 1 – 3 triệu đồng"
+    },
+    {
+      "source_url": "https://tripbike.net/thue-xe-may-cao-lanh/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "mô tả Lợi Thế (giao nhận tại bến xe nhà ga khách sạn miễn phí), Bảo Trâm (không cần đặt cọc chỉ cần cmnd, thời gian cho thuê 24h, hỗ trợ hư hỏng 24/24h) và giá các cửa hàng theo k-notation"
+    },
+    {
+      "source_url": "https://limoutrip.com/thue-xe-may-cao-lanh/",
+      "source_domain": "limoutrip.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "6 địa chỉ cho thuê xe máy Cao Lãnh – Sa Đéc kèm mức giá tham khảo từng nơi và chính sách không tăng giá ngày lễ Tết"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-tp-hcm/",
+    "/lab/thue-xe-may/thue-xe-may-can-tho/",
+    "/lab/thue-xe-may/thue-xe-may-vinh-long/",
+    "/lab/kinh-nghiem/",
+    "/lab/cuu-ho-xe-may/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/"
+  ],
+  "potential_cannibalization": "CG-rental-loc-dong-thap: nhóm gốc cấp tỉnh. Matrix đã có row giá theo từng dòng xe tại Đồng Tháp (A00128 Vision, A00162 Air Blade, A00196 Wave, A00230 Winner, A00264 Sirius, A00298 Exciter…). Bài tỉnh gốc chỉ nêu giá theo dòng xe ở mức tham khảo trong bảng tổng hợp, không lạm bàn riêng từng mẫu — các row hẹp sẽ xử lý riêng. Cụm 'thuê xe máy Sa Đéc' hiện chưa có row riêng nên chỉ đề cập định tính trong bài.",
+  "unique_angle": "Bài tỉnh gốc cho thị trường đồng bằng gộp đôi sau sáp nhập 2025: Đồng Tháp giờ rộng thêm cả Tiền Giang cũ (Mỹ Tho, Cai Lậy), nhưng thị trường thuê xe vẫn chia đôi giữa Cao Lãnh và Sa Đéc. Điểm đáng viết: Lợi Thế là hiện tượng dịch vụ (mở cửa 24/24, giao xe tận nơi hoàn toàn miễn phí, xe có sẵn xăng, mũ bảo hiểm, áo mưa, giao nhận cả tại bến xe và khách sạn); Bảo Trâm cho thuê không cần đặt cọc chỉ cần cmnd và tính thuê theo 24h; Minh Chánh nằm ngay trong làng hoa Sa Đéc với giá rẻ nhất nhì vùng; đa phần xe chỉ từ 100k/ngày; có cơ sở cam kết không tăng giá lễ Tết.",
+  "notes": "actual_service_area=informational_only: KHÔNG bịa cửa hàng; mọi mức giá dẫn theo nguồn công khai. Đồng Tháp VN-032 CURRENT giữ tên; Tiền Giang (LG-052) MERGED_INTO Đồng Tháp theo Nghị quyết 202/2025/QH15. Nguồn dùng k-notation nhiều (100k, 120k, 170k, 100 – 150k, 100 -120k, 180-200k) — ghi chú quy đổi trong claim_supported; bảng motogo ghi VNĐ (Sirius 100.000 -120.000 VNĐ/ngày…). Địa chỉ dẫn theo bảng công khai: Chị Lan 34/1 Nguyễn Văn Trỗi Phường 2 TP Cao Lãnh; Lợi Thế 212 Phạm Hữu Lầu Cao Lãnh (2trip ghi 205 Cách Mạng Tháng 8); Bảo Trâm 209 Mai Văn Khải Cao Lãnh; Minh Chánh Ấp Tân Lập Sa Đéc (trong làng hoa); Ngọc Phát 317 QL30 phường Mỹ Phú Cao Lãnh; khách sạn Phương Nam 384A Nguyễn Sinh Sắc Sa Đéc. POI: làng hoa Sa Đéc, vườn cò chỉ nêu định tính.",
+  "claim_evidence": [
+    {
+      "claim": "Đa phần xe cho thuê ở Đồng Tháp chỉ từ 100k/ngày tức 100.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Gía thuê xe máy ở Đồng Tháp không hề cao, mà ngược lại hầu hết các cửa hàng đều đưa ra mức giá khá tốt để hỗ trợ tối đa cho du khách. Đa phần xe cho thuê chỉ từ 100k/ngày mà chất lượng cực đảm bảo.»"
+    },
+    {
+      "claim": "Chị Lan (Cao Lãnh) ghi xe số 100.000đ–120.000đ/ngày, xe ga 120.000đ–150.000đ/ngày; Bảo Trâm cùng dải giá này",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá ghi «Chị Lan … Giá thuê xe số: 100.000đ – 120.000đ/ngày; Giá thuê xe ga: 120.000đ -150.000đ/ngày» và «Bảo Trâm … Giá thuê xe số: 100.000đ – 120.000đ/ngày; Giá thuê xe ga: 120.000đ -150.000đ/ngày»."
+    },
+    {
+      "claim": "Lợi Thế (Cao Lãnh) ghi xe số 100.000đ/ngày, xe ga 150.000đ/ngày; dải giá theo loại xe rơi vào khoảng từ 120.000đ – 200.000đ/ngày, xe kèm sẵn xăng, mũ bảo hiểm, áo mưa",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá ghi «Lợi Thế … Giá thuê xe số: 100.000đ/ngày; Giá thuê xe ga: 150.000đ/ngày»; «Giá thuê xe tại Lợi Thế rơi vào khoảng từ 120.000đ – 200.000đ/ngày tùy loại xe … cửa hàng sẽ chuẩn bị sẵn xăng xe, mũ bảo hiểm kèm theo áo mưa trong mỗi chiếc xe.»"
+    },
+    {
+      "claim": "Lợi Thế có dịch vụ giao xe tận nơi cho khách thuê xe máy Đồng Tháp, đặt xe chỉ bằng một cuộc gọi",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Lợi Thế có dịch vụ giao xe tận nơi đối với các khách hàng thuê xe máy Đồng Tháp tại đây.» và «Điểm cộng lớn nhất của Lợi Thế chính là dịch vụ giao xe tận nơi cực tiện lợi. Khi sử dụng dịch vụ này bạn có thể đặt xe chỉ bằng một cuộc gọi.»"
+    },
+    {
+      "claim": "Minh Chánh (Sa Đéc) ghi xe số 80.000đ–100.000đ/ngày, xe ga 130.000đ–140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá ghi «Minh Chánh … Ấp Tân Lập, Sa Đéc, Đồng Tháp; Giá thuê xe số: 80.000đ – 100.000đ/ngày; Giá thuê xe ga: 130.000đ – 140.000đ/ngày»."
+    },
+    {
+      "claim": "Phương Nam Hotel (Sa Đéc) ghi xe số 100.000đ–120.000đ/ngày, xe ga 120.000đ–150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá ghi «Phương Nam Hotel … TP Sa Đéc, Đồng Tháp. Giá thuê xe số: 100.000đ – 120.000đ/ngày; Giá thuê xe ga: 120.000đ -150.000đ/ngày»."
+    },
+    {
+      "claim": "Có cơ sở tại Đồng Tháp tính giá theo 24h và mức giá từ 100.000đ đến 130.000đ đã thuê được xe ưng ý",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Một điểm khác biệt của cơ sở này là cách tính giá theo 24h. … Bạn chỉ cần bỏ ra từ 100.000đ đến 130.000đ là đã có thể sở hữu một chiếc xe ưng ý rồi.»"
+    },
+    {
+      "claim": "Bảng giá theo dòng xe tại Đồng Tháp: Sirius 100.000–120.000 VNĐ/ngày; Wave Rs, RSX 100.000–120.000 VNĐ/ngày; Vision, Lead, Air Blade 120.000–150.000 VNĐ/ngày; Exciter 150.000–200.000 VNĐ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng giá ghi «Yamaha Sirius 100.000 -120.000 VNĐ/ngày; Honda Wave Rs, RSX 100.000 -120.000 VNĐ/ngày; Honda Vision 120.000 -150.000 VNĐ/ngày; Honda Lead 120.000 -150.000 VNĐ/ngày; Honda Air Blade 120.000 -150.000 VNĐ/ngày; Yamaha Exciter 150.000 -200.000 VNĐ/ngày»."
+    },
+    {
+      "claim": "Dải giá theo cửa hàng (2trip): Chị Lan 100.000đ – 150.000đ; Lợi Thế 120.000đ – 200.000đ; Bảo Trâm 100.000đ – 150.000đ; Minh Chánh 80.000đ – 140.000đ; Ngọc Phát 100.000đ – 150.000đ; khách sạn Phương Nam 100.000đ – 200.000đ",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-cao-lanh-sa-dec-dong-thap",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Bảng tổng hợp ghi «Chị Lan … 100.000đ – 150.000đ», «Lợi Thế … 120.000đ – 200.000đ», «Bảo Trâm … 100.000đ – 150.000đ», «Minh Chánh … 80.000đ – 140.000đ», «Ngọc Phát … 100.000đ – 150.000đ», «Khách sạn Phương Nam … 100.000đ – 200.000đ»."
+    },
+    {
+      "claim": "Minh Chánh là cửa hàng giá rẻ nhất nhì Đồng Tháp: xe số từ 80.000đ – 100.000đ/ngày, xe ga từ 130.000đ – 140.000đ/ngày, nằm trong làng hoa Sa Đéc",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-cao-lanh-sa-dec-dong-thap",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Cửa hàng thuê xe máy Cao Lãnh – Sa Đéc Đồng Tháp – Minh Chánh là một trong những cửa hàng có mức giá rẻ nhất nhì nơi đây. Đối với xe số, bạn chỉ cần bỏ ra từ 80.000đ – 100.000đ/ngày để thuê. Còn đối với xe ga, mức giá dao động sẽ từ 130.000đ – 140.000đ/ngày.» và «Cửa hàng có vị trí đẹp nằm trong làng hoa Sa Đéc.»"
+    },
+    {
+      "claim": "Lợi Thế giao xe tận nơi hoàn toàn miễn phí và mở cửa 24/24",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-cao-lanh-sa-dec-dong-thap",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Ngoài ra, cửa hàng Lợi Thế còn được khách hàng đánh giá cao bởi dịch vụ giao xe tận nơi hoàn toàn miễn phí. … Đặc biệt, Lợi Thế có thời gian mở cửa 24/24 nên du khách có thể gọi điện đặt xe hay tới cửa hàng thuê xe bất cứ lúc nào.»"
+    },
+    {
+      "claim": "Một vài cửa hàng ở Đồng Tháp yêu cầu đóng tiền cọc, chuẩn bị sẵn từ 1 – 3 triệu đồng",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-cao-lanh-sa-dec-dong-thap",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Một vài cửa hàng yêu cầu khách hàng đóng tiền cọc nên bạn cần chuẩn bị sẵn từ 1 – 3 triệu đồng.»"
+    },
+    {
+      "claim": "Khách sạn Phương Nam (Sa Đéc): xe số 100.000đ – 120.000đ một ngày, xe tay ga 180.000đ – 200.000đ một ngày; khách lưu trú chỉ cần liên hệ lễ tân",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-cao-lanh-sa-dec-dong-thap",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Mức giá thuê xe số tại đây sẽ dao động từ 100.000đ – 120.000đ một ngày. Còn xe tay ga sẽ cao hơn khoảng tầm 180.000đ – 200.000đ một ngày.» và «Nếu là du khách lưu trú tại khách sạn, bạn chỉ cần liên hệ với bên lễ tân và thuê xe mà không cần chuẩn bị gì.»"
+    },
+    {
+      "claim": "Lợi Thế ghi 100k xe tay số, 120k xe tay ga tức 100.000đ và 120.000đ; giao nhận tại bến xe, nhà ga, khách sạn miễn phí",
+      "source_url": "https://tripbike.net/thue-xe-may-cao-lanh/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«là đơn vị cho thuê xe máy giá rẻ Cao Lãnh, 100k xe tay số 120k xe tay ga. … Tại cửa hàng Lợi thế khi thuê xe được giao nhận tại bến xe, nhà ga khách sạn miễn phí.»"
+    },
+    {
+      "claim": "Bảo Trâm cho thuê không cần đặt cọc chỉ cần cmnd; thời gian cho thuê áp dụng 24h từ khi thuê đến khi trả; hỗ trợ hư hỏng 24/24h; côn tay Exciter giá 170k tức 170.000đ",
+      "source_url": "https://tripbike.net/thue-xe-may-cao-lanh/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Về dịch vụ, được nhận xe tận nơi miễn phí, thuê xe không cần đặt cọc chỉ cần cmnd. … Thời gian cho thuê được áp dụng 24h ngày, từ khi thuê đến khi trả. Hỗ trợ hư hỏng 24/24h.» và «Bảo Trâm là đơn vị chuyên về cho thuê xe máy, côn tay giá 170k» — tức 170.000đ."
+    },
+    {
+      "claim": "Một cửa hàng tại Cao Lãnh ghi giá 100 – 150k kèm thủ tục căn cước công dân là có thể thuê, tức 100.000đ–150.000đ",
+      "source_url": "https://tripbike.net/thue-xe-may-cao-lanh/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«giá 100 – 150k kèm thủ tục căn cước công dân là có thể thuê» — tức 100.000đ–150.000đ."
+    },
+    {
+      "claim": "Giá thuê xe tại Cao Lãnh trung bình dao động từ 100 đến 160 nghìn đồng mỗi xe kèm dịch vụ giao xe miễn phí; có nơi cam kết không tăng giá vào các ngày lễ và Tết",
+      "source_url": "https://limoutrip.com/thue-xe-may-cao-lanh/",
+      "source_domain": "limoutrip.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Giá thuê xe tại đây trung bình dao động từ 100 đến 160 nghìn đồng mỗi xe và còn có dịch vụ giao xe miễn phí.» và «cửa hàng cam kết không tăng giá vào các ngày lễ và Tết.»"
+    },
+    {
+      "claim": "Các mức giá tham khảo tại Cao Lãnh – Sa Đéc: dao động từ 100.000 VND – 200.000 VND/ngày; chỉ khoảng 120.000 VND/ngày; khoảng 150.000 VND/ngày; dao động từ 100.000 đến 150.000 đồng mỗi ngày",
+      "source_url": "https://limoutrip.com/thue-xe-may-cao-lanh/",
+      "source_domain": "limoutrip.com",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "«Mức giá tham khảo: dao động từ 100.000 VND – 200.000 VND/ ngày»; «Mức giá tham khảo: chỉ khoảng 120.000 VND/ ngày»; «Giá thành tham khảo: khoảng 150.000 VND/ ngày»; «Mức giá thuê xe tại đây tương đối hợp lý, dao động từ 100.000 đến 150.000 đồng mỗi ngày.»"
+    },
+    {
+      "claim": "Sau sáp nhập 2025, tỉnh Đồng Tháp hợp nhất Tiền Giang và Đồng Tháp thành tỉnh Đồng Tháp mới",
+      "source_url": "https://luatvietnam.vn/hanh-chinh/nghi-quyet-202-2025-qh15-cua-quoc-hoi-ve-viec-sap-xep-don-vi-hanh-chinh-cap-tinh-402728-d1.html",
+      "source_domain": "luatvietnam.vn",
+      "date_accessed": "2026-10-01",
+      "claim_supported": "Nghị quyết 202/2025/QH15: «Tỉnh Đồng Tháp: Sáp nhập tỉnh Tiền Giang và Đồng Tháp, diện tích 5.938,64 km²»."
+    }
+  ]
+}
