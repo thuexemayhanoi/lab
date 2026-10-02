@@ -1,14 +1,14 @@
 {
-  "last_run": "2026-10-02T00:29:05.754Z",
+  "last_run": "2026-10-02T00:42:41.098Z",
   "phase": "PRODUCTION",
   "matrix_rows": 10000,
-  "published_count": 101,
+  "published_count": 103,
   "last_batch": [
-    "A00092",
-    "A00093"
+    "A00094",
+    "A00095"
   ],
-  "last_completed_id": "A00093",
-  "next_claimable_id": "A00094",
+  "last_completed_id": "A00095",
+  "next_claimable_id": "A00096",
   "active_chunk": [],
   "notes": "Staged publish of 2 articles (commit only after build+verify PASS; rollback on failure)."
 }
