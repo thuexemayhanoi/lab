@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T23:58:43.206Z",
+  "generated_at": "2026-10-02T00:06:34.380Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 97,
-    "PLANNED": 9903
+    "PUBLISHED": 99,
+    "PLANNED": 9901
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 91,
-      "PLANNED": 4909
+      "PUBLISHED": 93,
+      "PLANNED": 4907
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00089",
-  "next_claimable_id": "A00090",
+  "last_completed_id": "A00091",
+  "next_claimable_id": "A00092",
   "blocked": [],
   "published": [
     {
@@ -574,6 +574,18 @@
       "pk": "thuê xe máy Thác Datanla",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-thac-datanla/"
+    },
+    {
+      "id": "A00090",
+      "pk": "thuê xe máy Đảo Phú Quốc",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-dao-phu-quoc/"
+    },
+    {
+      "id": "A00091",
+      "pk": "thuê xe máy Mũi Né",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-xe-may-mui-ne/"
     },
     {
       "id": "A00097",
