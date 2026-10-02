@@ -1,0 +1,111 @@
+{
+  "article_id": "A00107",
+  "primary_keyword": "giá thuê Vision Cao Bằng",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết khung giá thuê Honda Vision tại Cao Bằng theo bảng giá tham khảo công khai (Vision 130.000 – 160.000 VNĐ/ngày), so sánh các dòng xe ga/xe số và lưu ý thuê xe chạy đường núi lên Bản Giốc, Pắc Bó",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Cao Bằng",
+    "thành phố Cao Bằng",
+    "thác Bản Giốc",
+    "Trùng Khánh",
+    "khu di tích Pắc Bó",
+    "hồ Thăng Hen",
+    "quốc lộ 3",
+    "quốc lộ 4A"
+  ],
+  "vehicle_entities": [
+    "xe ga",
+    "xe số",
+    "xe tay ga"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Vision",
+    "Airblade",
+    "Lead",
+    "Wave S",
+    "Wave RSX",
+    "Sirius",
+    "Sirius Fi",
+    "Jupiter"
+  ],
+  "questions_found": [
+    "Thuê Honda Vision ở Cao Bằng giá bao nhiêu một ngày?",
+    "Xe ga ở Cao Bằng có đắt hơn xe số không?",
+    "Thuê xe máy ở Cao Bằng có dễ không, ở đâu nhận xe?",
+    "Vision có đủ sức chạy từ thành phố Cao Bằng lên thác Bản Giốc không?",
+    "Cho thuê xe ở Cao Bằng có niêm yết giá theo dòng xe không?"
+  ],
+  "related_queries": [
+    "gia thue vision cao bang",
+    "cho thue xe may cao bang",
+    "thue xe ga cao bang gia",
+    "thue xe may cao bang ban gioc",
+    "cho thue xe may o cao bang"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Cao Bằng với bảng giá tham khảo theo dòng xe, Vision được niêm yết riêng ở mức 130.000 – 160.000 VNĐ/ngày",
+    "Các dòng xe số phổ thông (Sirius, Jupiter, Wave) cùng khung 100.000 – 140.000 VNĐ/ngày, thấp hơn nhóm xe ga",
+    "Bài nhấn mạnh địa hình đồi núi Cao Bằng nên khách hay cân nhắc giữa xe số bền bỉ và xe ga thoải mái"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-cao-bang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá thuê xe máy tại Cao Bằng (tham khảo): Honda Vision 130.000 – 160.000 VNĐ/ngày; Honda Lead 130.000 – 140.000 VNĐ/ngày; Honda Airblade 130.000 – 160.000 VNĐ/ngày; nhóm xe số 100.000 – 140.000 VNĐ/ngày"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/",
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-cao-bang/",
+    "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+    "/lab/thue-xe-may/gia-thue-vision-hai-phong/",
+    "/lab/thue-xe-may/thue-xe-may-lang-son/"
+  ],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-cao-bang theo matrix; từ khóa \"giá thuê Vision Cao Bằng\" chưa có bài nào dùng. Bài geo hub Cao Bằng đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Cao Bằng: mức 130.000 – 160.000 VNĐ/ngày trong bảng tham khảo theo dòng xe, đối chiếu Lead (130.000 – 140.000), Airblade (130.000 – 160.000) và nhóm xe số 100.000 – 140.000, kèm phân tích Vision có phù hợp với cung đường núi lên Bản Giốc, Pắc Bó hay không.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Bảng giá là tham khảo công khai của motogo.vn (bản 2021 vẫn là bảng duy nhất được trang này niêm yết cho Cao Bằng — cần ghi rõ tính tham khảo và có thể thay đổi). Không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy tại Cao Bằng (tham khảo) ghi nhận Honda Vision 130.000 – 160.000 VNĐ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-cao-bang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision 130.000 – 160.000 VNĐ/ngày"
+    },
+    {
+      "claim": "Bảng giá ghi nhận Honda Lead 130.000 – 140.000 VNĐ/ngày và Honda Airblade 130.000 – 160.000 VNĐ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-cao-bang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Lead 130.000 – 140.000 VNĐ/ngày Honda Airblade 130.000 – 160.000 VNĐ/ngày"
+    },
+    {
+      "claim": "Bảng giá ghi nhận nhóm xe số tại Cao Bằng: Yamaha Sirius 100.000 – 140.000 VNĐ/ngày, Yamaha Sirius Fi 100.000 – 140.000 VNĐ/ngày, Yamaha Jupiter 100.000 – 140.000 VNĐ/ngày, Honda Wave S 100.000 – 140.000 VNĐ/ngày, Honda Wave RSX 100.000 – 140.000 VNĐ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-cao-bang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Yamaha Sirius 100.000 – 140.000 VNĐ/ngày Yamaha Sirius Fi 100.000 – 140.000 VNĐ/ngày Yamaha Jupiter 100.000 – 140.000 VNĐ/ngày Honda Wave S 100.000 – 140.000 VNĐ/ngày Honda Wave RSX 100.000 – 140.000 VNĐ/ngày"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

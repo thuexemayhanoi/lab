@@ -1,0 +1,142 @@
+{
+  "article_id": "A00102",
+  "primary_keyword": "giá thuê Vision Cần Thơ",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết khung giá thuê Honda Vision tại Cần Thơ theo nguồn niêm yết công khai, so sánh xe ga với xe số, bảng giá giao xe tận nơi, cách tính ngày thuê và phụ thu quá giờ",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Cần Thơ",
+    "Bến Ninh Kiều",
+    "chợ nổi Cái Răng",
+    "Vincom Plaza Cần Thơ",
+    "quận Ninh Kiều",
+    "phường Cái Khế",
+    "đường Cách Mạng Tháng Tám",
+    "sông Hậu",
+    "quốc lộ 1A"
+  ],
+  "vehicle_entities": [
+    "xe ga",
+    "xe số",
+    "xe tay ga"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "SYM"
+  ],
+  "model_entities": [
+    "Vision",
+    "Airblade",
+    "Lead",
+    "Wave RSX",
+    "Wave Alpha",
+    "Sirius",
+    "Nouvo",
+    "Elizabeth",
+    "Cub 50cc"
+  ],
+  "questions_found": [
+    "Thuê Honda Vision ở Cần Thơ giá bao nhiêu một ngày?",
+    "Thuê xe ga ở Cần Thơ có đắt hơn xe số nhiều không?",
+    "Giữ xe quá giờ ở Cần Thơ tính thế nào?",
+    "Ở Cần Thơ có dịch vụ giao xe tận nơi không, phí thế nào?",
+    "Vision có phù hợp chạy từ Ninh Kiều ra chợ nổi Cái Răng không?"
+  ],
+  "related_queries": [
+    "gia thue vision can tho",
+    "cho thue xe may vision can tho",
+    "thue xe ga can tho gia",
+    "thue xe may can tho giao tan noi",
+    "thue xe may ben ninh kieu"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp Vexere xếp cao với bài giá thuê xe máy Cần Thơ: 120.000 đến 150.000 đồng mỗi ngày, xe ga khoảng 150.000 đến 170.000 đồng/xe, kèm bảng giá giao tận nơi 2025",
+    "Cửa hàng Anh Phong (số 16 Cách Mạng Tháng Tám, phường Cái Khế) được mô tả niêm yết xe ga AirBlade, Vision 150.000đ/ngày và giao xe bán kính 2km quanh Bến Ninh Kiều",
+    "Trên Vexere có điểm thuê 'Xe tay ga phổ thông Anh Phong' từ 150.000 đ không cần cọc, giao xe tận nơi kèm 1 lít xăng"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-can-tho.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe máy ở Cần Thơ giao động từ 120.000 đến 150.000 đồng mỗi ngày; xe ga khoảng 150.000 đến 170.000 đồng/xe; bảng giá giao tận nơi: xe tay ga phổ thông 150.000-200.000, xe số phổ thông 130.000 – 150.000, Honda Cub 50cc 180.000"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/",
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-can-tho/",
+    "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+    "/lab/thue-xe-may/gia-thue-vision-hai-phong/",
+    "/lab/thue-xe-may/thue-xe-may-vinh-long/"
+  ],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-can-tho theo matrix; từ khóa \"giá thuê Vision Cần Thơ\" chưa có bài nào dùng. Bài geo hub Cần Thơ đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá model-specific tại Cần Thơ: nhóm xe ga 150.000 đến 170.000 đồng/xe với Vision cùng Airblade, Lead, Nouvo, đối chiếu bảng giá giao xe tận nơi (xe ga 150.000-200.000) và trường hợp cửa hàng Anh Phong niêm yết riêng AirBlade/Vision 150.000đ/ngày kèm giao xe bán kính 2km quanh Bến Ninh Kiều.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Giá là niêm yết công khai tại thời điểm nghiên cứu, có thể thay đổi theo mùa và quy định từng cửa hàng; không bịa địa chỉ hay số điện thoại ngoài các địa chỉ chính ghi nhận từ nguồn.",
+  "claim_evidence": [
+    {
+      "claim": "Giá thuê xe máy ở Cần Thơ giao động từ 120.000 đến 150.000 đồng mỗi ngày tùy dòng xe và thời gian thuê",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-can-tho.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe máy ở Cần Thơ giao động từ 120.000 đến 150.000 đồng mỗi ngày tùy theo dòng xe và thời gian thuê"
+    },
+    {
+      "claim": "Một ngày chi phí thuê xe ga ở Cần Thơ rơi vào khoảng 150.000 đến 170.000 đồng/xe; Honda Vision là một trong các dòng xe tay ga được cho thuê phổ biến cùng Airblade, Lead, Nouvo",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-can-tho.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Một ngày chi phí thuê xe ga rơi vào khoảng 150.000 đến 170.000 đồng/xe. Các dòng xe tay ga thường được cho thuê ở Cần Thơ rất phong phú như Honda Airblade, Honda Lead, Honda Vision, Yamaha Nouvo, SYM Elizabeth…"
+    },
+    {
+      "claim": "Bảng giá thuê xe máy Cần Thơ giao tận nơi 2025 niêm yết: xe tay ga phổ thông (Honda Airblade, Honda Lead, Honda Vision) 150.000-200.000; xe số phổ thông (Honda Wave RSX, Honda Wave Alpha, Yamaha Sirius) 130.000 – 150.000; xe số Honda Cub 50cc 180.000",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-can-tho.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Xe tay ga phổ thông (Honda Airblade, Honda Lead, Honda Vision) 150.000-200.000 Xe số phổ thông (Honda Wave RSX, Honda Wave Alpha, Yamaha Sirius) 130.000 – 150.000 Xe số Honda Cub 50cc 180.000"
+    },
+    {
+      "claim": "Cửa hàng cho thuê xe Anh Phong (số 16 Cách Mạng Tháng Tám, phường Cái Khế, TP. Cần Thơ) niêm yết xe số Wave, Sirius khoảng 130.000đ/ngày và các dòng xe tay ga như AirBlade, Vision có giá 150.000đ/ngày; thời gian thuê 1 ngày tính trọn vẹn 24 tiếng kể từ giờ nhận xe; hỗ trợ giao xe tận nơi từ 7h30 đến 16h trong phạm vi 2km quanh Bến Ninh Kiều, Vincom Plaza và các khách sạn lớn lân cận",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-can-tho.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "xe số (Wave, Sirius) khoảng 130.000đ/ngày; các dòng xe tay ga như AirBlade, Vision có giá 150.000đ/ngày. Thời gian thuê 1 ngày được tính trọn vẹn 24 tiếng kể từ giờ nhận xe. Cửa hàng hỗ trợ giao xe tận nơi từ 7h30 đến 16h trong phạm vi 2km quanh Bến Ninh Kiều, Vincom Plaza và các khách sạn lớn lân cận. Địa chỉ: Số 16 Cách Mạng Tháng Tám, Phường Cái Khế, TP. Cần Thơ"
+    },
+    {
+      "claim": "Vào các dịp lễ, giá thuê xe máy Cần Thơ thường tăng khoảng 20% đến 30%",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-can-tho.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Vào các dịp lễ như Tết Âm Lịch, Tết Dương Lịch, Lễ 30/4 hay 2/9, giá thuê xe máy Cần Thơ thường tăng khoảng 20-30%"
+    },
+    {
+      "claim": "Một ngày thuê xe máy ở Cần Thơ thông thường tính bằng 24 tiếng; khi giữ xe dưới 5 tiếng trong ngày kế tiếp bạn sẽ chỉ phải phụ thu thêm nửa ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-can-tho.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Một ngày thuê xe máy ở Cần Thơ thông thường tính bằng bằng 24 tiếng. Khi giữ xe dưới 5 tiếng trong ngày kế tiếp bạn sẽ chỉ phải p[hụ thu thêm nửa ngày]"
+    },
+    {
+      "claim": "Trên Vexere, điểm thuê 'Xe tay ga phổ thông Anh Phong' niêm yết Honda Airblade hoặc dòng xe tương tự (giao ngẫu nhiên trong nhóm Airblade, Honda Vision), đời xe từ 2010, kèm mũ bảo hiểm, 1 lít xăng, giao xe tận nơi, không cần cọc trước từ 150.000 đ",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-can-tho.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Xe tay ga phổ thông Anh Phong 5.0 Honda Airblade hoặc dòng xe tương tự Honda Airblade, Honda Vision (giao ngẫu nhiên tùy tình trạng xe thực tế) Đời xe: từ 2010 Mũ bảo hiểm, Xăng (1 lít) Giao xe tận nơi Không cần cọc trước từ 150.000 đ"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

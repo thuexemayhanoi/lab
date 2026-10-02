@@ -1,0 +1,136 @@
+{
+  "article_id": "A00105",
+  "primary_keyword": "giá thuê Vision Sơn La",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết khung giá thuê Honda Vision tại Sơn La theo bảng giá công khai (Vision 130k/ngày trong bảng tham khảo), so sánh các dòng xe, cơ sở ghi nhận ở Mộc Châu và thành phố Sơn La, lưu ý thuê xe đi cao nguyên",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Sơn La",
+    "thành phố Sơn La",
+    "Mộc Châu",
+    "Bắc Yên",
+    "đường Nguyễn Lương Bằng",
+    "quốc lộ 6",
+    "Phíêng Luông",
+    "hồ Sơn La"
+  ],
+  "vehicle_entities": [
+    "xe ga",
+    "xe số",
+    "xe côn",
+    "xe cào cào"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki"
+  ],
+  "model_entities": [
+    "Vision",
+    "Airblade",
+    "Wave",
+    "Wave RSX Fi",
+    "Future",
+    "Sirius",
+    "Nouvo",
+    "Exciter",
+    "Winner",
+    "Viva"
+  ],
+  "questions_found": [
+    "Thuê Honda Vision ở Sơn La giá bao nhiêu một ngày?",
+    "Xe ga ở Sơn La có đắt hơn xe số không?",
+    "Ở Mộc Châu có chỗ nào cho thuê xe máy không?",
+    "Thuê xe côn hay xe số đi Sơn La tốt hơn?",
+    "Vision có đủ khỏe chạy quốc lộ 6 lên Sơn La không?"
+  ],
+  "related_queries": [
+    "gia thue vision son la",
+    "cho thue xe may son la",
+    "thue xe may moc chau gia",
+    "cho thue xe may tp son la",
+    "thue xe may son la quoc lo 6"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Sơn La với bảng giá theo dòng xe dùng đơn vị nghìn đồng (k): Honda Vision 130k/ngày",
+    "Các cơ sở ghi nhận tập trung ở Mộc Châu (Phíêng Luông) và thành phố Sơn La, nhiều nơi gắn với khách sạn/nhà sàn",
+    "Nhóm xe côn Exciter/Winner và xe cào cào có giá cao hơn hẳn, phục vụ khách chinh phục đèo dốc"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá Sơn La theo dòng xe: Honda Vision 130k/ngày; Honda Wave RSX Fi 125k; nhóm xe số 100k – 120k; Exciter/Winner 300k; xe cào cào 500k. Cơ sở: Nhà sàn 88 (Mộc Châu) 120.000đ – 150.000đ/ngày; Thành Đồng (TP Sơn La) xe số 120.000đ/ngày"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/",
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-son-la/",
+    "/lab/thue-xe-may/thue-xe-may-mui-ne/",
+    "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+    "/lab/thue-xe-may/gia-thue-vision-hai-phong/"
+  ],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-son-la theo matrix; từ khóa \"giá thuê Vision Sơn La\" chưa có bài nào dùng. Bài geo hub Sơn La đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá model-specific tại Sơn La: Vision 130k/ngày trong bảng giá theo dòng xe, đối chiếu các dòng xe số/ga/côn/cào cào, kèm hai vùng nhận xe chính (Mộc Châu phục vụ cao nguyên, thành phố Sơn La dọc quốc lộ 6) và lưu ý đường đèo giữa các huyện — góc không trùng bài geo hub.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Giá bảng tham khảo của motogo.vn dùng đơn vị nghìn đồng (k); các cơ sở chỉ ghi nhận lại đúng như nguồn công khai; không bịa địa chỉ hay số điện thoại mới.",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Sơn La (tham khảo) của motogo.vn ghi nhận Honda Vision 130k/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Future Fi mới, Honda Vision 130k"
+    },
+    {
+      "claim": "Cùng bảng ghi nhận Honda Wave RSX Fi 125k/ngày; nhóm Honda Wave, Suzuki Smart 100k/ngày; nhóm Suzuki Viva Fi, Honda Future 2, Yamaha Sirius Fi, Yamaha nouvo 3, Honda cub 50cc 120k/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Wave, Suzuki Smart 100k Suzuki Viva Fi, Honda Future 2, Yamaha Sirius Fi, Yamaha nouvo 3, Honda cub 50cc 120k Honda Wave RSX Fi 125k"
+    },
+    {
+      "claim": "Bảng giá ghi nhận nhóm xe thể thao Yamaha Exciter, Honda Winner 300k/ngày và xe cào cào 500k/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Yamaha exciter, Honda Winner 300k Xe cào cào 500k"
+    },
+    {
+      "claim": "Nhà sàn 88 (QL6, Phiêng Luông, Mộc Châu, Sơn La) được ghi nhận cho thuê xe 120.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Nhà sàn 88 Điện thoại: 084 3769 499 Địa chỉ: QL6, Phiêng Luông, Mộc Châu, Sơn La Giá thuê xe: 120.000đ – 150.000đ/ngày 4.1/5"
+    },
+    {
+      "claim": "Thành Đồng (94H Nguyễn Lương Bằng, phường Quyết Thắng, thành phố Sơn La) được ghi nhận cho thuê xe số 120.000đ/ngày; Thành Mỹ (thị trấn Bắc Yên) ghi nhận xe số 120.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thành Đồng Điện thoại: 090 486 29 99 Địa chỉ: 94H Nguyễn Lương Bằng, P. Quyết Thắng, Sơn La Giá thuê xe số: 120.000đ/ngày 4.0/5 Thành Mỹ Điện thoại: 097 290 89 99 Địa chỉ: TT. Bắc Yên, Bắc Yên, Sơn La Giá thuê xe số: 120.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "Dũng Nga (ngã ba Bắc Yên, Sơn La) được ghi nhận cho thuê xe số 150.000đ/ngày và xe cào cào 500.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Dũng Nga Điện thoại: 096 665 25 67 Địa chỉ: Ngã ba, Bắc Yên, Sơn La Giá thuê xe số: 150.000đ/ngày Giá thuê xe cào cào: 500.000đ/ngày 5.0/5"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

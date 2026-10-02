@@ -1,0 +1,125 @@
+{
+  "article_id": "A00104",
+  "primary_keyword": "giá thuê Vision Điện Biên",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết khung giá thuê Honda Vision tại Điện Biên theo nguồn niêm yết công khai, nhóm xe ga AirBlade/Vision có mức 80.000đ – 150.000đ/ngày, danh sách cơ sở ghi nhận và lưu ý thuê xe địa hình đồi núi",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Điện Biên",
+    "thành phố Điện Biên Phủ",
+    "Mường Thanh",
+    "hồ Pa Khoang",
+    "Mường Nhé",
+    "đường 279",
+    "quốc lộ 12",
+    "chợ Mường Thanh"
+  ],
+  "vehicle_entities": [
+    "xe ga",
+    "xe số",
+    "xe côn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Vision",
+    "AirBlade",
+    "Lead",
+    "Nouvo",
+    "Wave",
+    "Sirius",
+    "Exciter",
+    "Winner"
+  ],
+  "questions_found": [
+    "Thuê Honda Vision ở Điện Biên giá bao nhiêu một ngày?",
+    "Xe ga ở Điện Biên có đắt hơn xe số không?",
+    "Ở Điện Biên thuê xe máy có cần cọc nhiều không?",
+    "Có điểm nào cho thuê xe qua đêm sớm không?",
+    "Vision có phù hợp chạy từ TP Điện Biên Phủ ra Mường Nhé không?"
+  ],
+  "related_queries": [
+    "gia thue vision dien bien",
+    "cho thue xe may dien bien",
+    "thue xe ga dien bien gia",
+    "thue xe may dien bien phu",
+    "cho thue xe may dien bien khong coc"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Điện Biên với bảng giá theo đơn vị: nhóm xe ga AirBlade, Vision phổ biến ở mức 80.000đ – 150.000đ/ngày",
+    "Các cơ sở cho thuê tại Điện Biên hay gắn liền homestay/khách sạn, hỗ trợ nhận xe sáng sớm cho khách đi xe khách",
+    "Nhiều điểm ghi nhận dịch vụ hoạt động 24/24 và giá thuê theo tuần giảm"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-dien-bien/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá thuê xe máy Điện Biên theo đơn vị: Phương Dung, Vương Khánh, Đức Tài, Anh Tuấn đều có nhóm xe ga AirBlade, Vision 80.000đ – 150.000đ/ngày; Đức Tài niêm yết xe ga 120 000 – 250 000/ngày"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/",
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-dien-bien/",
+    "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+    "/lab/thue-xe-may/gia-thue-vision-hai-phong/",
+    "/lab/thue-xe-may/thue-xe-may-lai-chau/"
+  ],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-dien-bien theo matrix; từ khóa \"giá thuê Vision Điện Biên\" chưa có bài nào dùng. Bài geo hub Điện Biên đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá model-specific tại Điện Biên: nhóm xe ga AirBlade, Vision được nhiều cơ sở niêm yết chung ở khung 80.000đ – 150.000đ/ngày, đối chiếu biên độ rộng 120 000 – 250 000/ngày của một cơ sở theo niên đại xe, kèm đặc thù nhận xe sáng sớm và đi đường trường ra Mường Nhé, Pa Khoang.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Các cơ sở và khung giá chỉ ghi nhận lại đúng như nguồn motogo.vn công khai; không bịa địa chỉ hay số điện thoại mới.",
+  "claim_evidence": [
+    {
+      "claim": "Phương Dung (cho thuê xe máy Mường Nhé, Điện Biên) được motogo.vn ghi nhận cho thuê xe số Wave, Sirius 110cc và xe ga AirBlade, Vision ở mức 80.000đ -150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dien-bien/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Phương Dung Xe số: Wave, Sirius 110cc Xe ga: AirBlade, Vision 80.000đ -150.000đ 02303 740 868 – 0915 819 950"
+    },
+    {
+      "claim": "Vương Khánh được ghi nhận cho thuê xe số Wave 110cc, Sirius và xe ga AirBlade, Vision, Lead ở mức 80.000đ -140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dien-bien/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Vương Khánh Xe số: Wave 110cc, Sirius Xe ga: AirBlade, Vision, Lead 80.000đ -140.000đ 0904 875 050"
+    },
+    {
+      "claim": "Đức Tài được ghi nhận cho thuê xe số Wave, Sirius 110cc và xe ga AirBlade, Vision, Nouvo ở mức 80.000đ -150.000đ/ngày; riêng mô tả chi tiết niêm yết giá thuê xe số từ 80 000 – 150 000/ngày và xe ga là 120 000 – 250 000/ngày, dịch vụ hoạt động 24/24",
+      "source_url": "https://motogo.vn/thue-xe-may-dien-bien/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Đức Tài Xe số: Wave, Sirius 110cc Xe ga: AirBlade, Vision, Nouvo 80.000đ -150.000đ 0332 272 727 … Giá thuê xe số là từ 80 000 – 150 000/ngày, đối với xe ga là 120 000 – 250 000/ngày. Nhìn chung mức giá này khá phù hợp với chất lượng xe tại đây. Ngoài ra dịch vụ hoạt động 24/24 tại nơi này"
+    },
+    {
+      "claim": "Anh Tuấn được ghi nhận cho thuê xe số Yamaha, Honda Wave và xe ga AirBlade, Vision, Lead, Nouvo ở mức 80.000đ -150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dien-bien/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Anh Tuấn Xe số: Yamaha, Honda Wave Xe ga: AirBlade, Vision, Lead, Nouvo 80.000đ -150.000đ 0215 386 6866"
+    },
+    {
+      "claim": "Anh Đức được ghi nhận cho thuê xe số Wave, Sirius 110cc, xe ga Lead, Vision, AirBlade và xe côn Exciter, Winner 150cc ở mức 100.000đ -150.000đ/ngày; mô tả chi tiết nêu giá thuê tại Anh Đức chỉ từ 80.000 -120.000/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dien-bien/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Anh Đức Xe số: Wave, Sirius 110cc Xe ga:Lead, Vision, AirBlade Xe côn: Exciter, Winner 150cc 100.000đ -150.000đ 0968 734 734 – 0869 190 190 … Chỉ cần bỏ ra từ 80.000 -120.000/ngày là bạn đã thuê được một chiếc xe tốt rồi đó"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

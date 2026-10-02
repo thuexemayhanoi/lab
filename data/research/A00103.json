@@ -1,0 +1,143 @@
+{
+  "article_id": "A00103",
+  "primary_keyword": "giá thuê Vision Lai Châu",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết khung giá thuê Honda Vision tại Lai Châu theo bảng giá niêm yết công khai, so sánh với các dòng xe ga/xe số khác, danh sách cơ sở cho thuê ghi nhận công khai và lưu ý thuê xe leo đèo miền núi",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Lai Châu",
+    "thành phố Lai Châu",
+    "bến xe Lai Châu",
+    "đèo Ô Quy Hồ",
+    "Tam Đường",
+    "Sìn Cheng",
+    "đường Hoàng Minh Giám",
+    "đường Trần Hưng Đạo",
+    "quốc lộ 4D"
+  ],
+  "vehicle_entities": [
+    "xe ga",
+    "xe số",
+    "xe tay ga"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "SYM"
+  ],
+  "model_entities": [
+    "Vision",
+    "Airblade",
+    "Lead",
+    "Wave S",
+    "Wave RS",
+    "Wave RSX",
+    "Sirius",
+    "Jupiter",
+    "Nouvo",
+    "Attila"
+  ],
+  "questions_found": [
+    "Thuê Honda Vision ở Lai Châu giá bao nhiêu một ngày?",
+    "Xe ga ở Lai Châu cho thuê nhiều không, có đắt hơn xe số không?",
+    "Ở đâu thuê xe máy gần bến xe Lai Châu?",
+    "Thuê xe máy ở Lai Châu cần thủ tục gì?",
+    "Vision có đủ khỏe để chạy đèo Ô Quy Hồ không?"
+  ],
+  "related_queries": [
+    "gia thue vision lai chau",
+    "cho thue xe may lai chau",
+    "thue xe ga lai chau gia",
+    "thue xe may o lai chau bao nhieu",
+    "thue xe may deo o quy ho"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp motogo.vn (cập nhật 08/09/2026) xếp cao cho truy vấn thuê xe máy Lai Châu với 5 cơ sở ghi nhận kèm địa chỉ và giá theo ngày",
+    "Bảng giá tham khảo theo dòng xe được niêm yết riêng: Honda Vision 130.000 vnd/ngày, cùng nhóm xe ga Airblade/Lead có mức 130.000 – 160.000 vnd",
+    "Điểm thuê quanh bến xe thành phố Lai Châu được nhấn mạnh vì du khách hay đi xe khách lên rồi nhận xe tại chỗ"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá thuê xe máy Lai Châu (tham khảo): Honda Vision 130.000 vnd/ngày; các cơ sở ghi nhận cho thuê xe ga 120.000đ – 160.000đ/ngày, xe số 80.000đ – 120.000đ/ngày"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/",
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-lai-chau/",
+    "/lab/thue-xe-may/thue-xe-may-sa-pa/",
+    "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+    "/lab/thue-xe-may/gia-thue-vision-hai-phong/"
+  ],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-lai-chau theo matrix; từ khóa \"giá thuê Vision Lai Châu\" chưa có bài nào dùng. Bài geo hub Lai Châu đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Lai Châu: mức 130.000 vnd/ngày trong bảng giá tham khảo theo dòng xe, đối chiếu biên độ xe ga của các cơ sở ghi nhận (120.000đ – 160.000đ/ngày) và xe số (80.000đ – 120.000đ/ngày), kèm lưu ý đặc thù miền núi: nhận xe gần bến xe, kiểm tra phanh/mãnh xe trước khi leo đèo Ô Quy Hồ.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Các cơ sở và địa chỉ chỉ ghi nhận lại đúng như nguồn motogo.vn công khai; không bịa địa chỉ hay số điện thoại mới.",
+  "claim_evidence": [
+    {
+      "claim": "Trong bảng giá thuê xe máy Lai Châu (tham khảo) của motogo.vn, xe tay ga Honda Vision niêm yết 130.000 vnd/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Xe tay ga Honda Vision 130.000 vnd"
+    },
+    {
+      "claim": "Bảng giá tham khảo còn ghi nhận xe tay ga Honda Airblade đời 2012 ở mức 130.000 vnd, đời 2013-2015 ở mức 150.000 vnd, đời 2016-2018 ở mức 160.000 vnd; Honda Lead 130.000 vnd",
+      "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Xe tay ga Honda Airblade 2012 130.000 vnd Xe tay ga Honda Airblade 2013-2015 150.000 vnd Xe tay ga Honda Airblade 2016- 2017 – 2018 160.000 vnd Xe tay ga Honda Lead 130.000 vnd"
+    },
+    {
+      "claim": "Bảng giá tham khảo ghi nhận nhóm xe số ở Lai Châu: Wave S 100.000 vnd, Wave RS 100.000 vnd, Wave RSX – fi 110.000 vnd, Yamaha Sirius FI 100.000 vnd, Yamaha Jupiter gravita 90.000 vnd; nhóm xe ga Yamaha Nouvo LX 100.000 vnd, Nouvo SX fi 130.000 vnd, Attila Victoria/Elizabeth 120.000 vnd",
+      "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Xe số Wave S 100.000 vnd Xe số Wave RS 100.000 vnd Xe số Wave RSX – fi 110.000 vnd Xe số Yamaha Sirius 2015 – 2018 FI 100.000 vnd Xe số Yamaha Jupiter gravita 90.000 vnd Xe tay ga Yamaha Nouvo LX 100.000 vnd Xe tay ga Yamaha Nouvo SX fi 130.000 vnd Xe tay ga attilla Victoria , Elizabeth 120.000 vnd"
+    },
+    {
+      "claim": "Phúc An (đối diện bến xe Lai Châu, đường Hoàng Minh Giám, thành phố Lai Châu) được motogo.vn ghi nhận cho thuê xe số 90.000đ – 120.000đ/ngày và xe ga 140.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Phúc An Điện thoại: 0961 215 215 Địa chỉ: Đối diện bến xe Lai Châu, Hoàng Minh Giám, Tp Lai Châu, Lai Châu Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày 5.0/5"
+    },
+    {
+      "claim": "Dịch vụ thuê xe máy Lai Châu (51 Trần Hưng Đạo, phường Đoàn Kết, thành phố Lai Châu) được ghi nhận cho thuê xe số 80.000đ – 100.000đ/ngày và xe ga 130.000đ – 140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thuê xe máy Lai Châu Điện thoại: 0394 816 947 Địa chỉ: 51 Trần Hưng Đạo, Phường Đoàn Kết, Tp Lai Châu, Lai Châu Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày"
+    },
+    {
+      "claim": "Anh Kiên (đường 2 Tháng 8, Tân Phong, thành phố Lai Châu) được ghi nhận cho thuê xe số 80.000đ – 100.000đ/ngày và xe ga 130.000đ – 160.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Anh Kiên Điện thoại: 0869 299 959 Địa chỉ: 2 Tháng 8, Tân Phong, Thị xã Lai Châu, Lai Châu Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 160.000đ/ngày"
+    },
+    {
+      "claim": "Anh Hùng (Hoàng Minh Giám, Tam Đường, thành phố Lai Châu) được ghi nhận cho thuê xe số 90.000đ – 120.000đ/ngày và xe ga 120.000đ -150.000đ/ngày; Nhà nghỉ Hoa Sữa (179 Lê Duẩn, Tân Phong) ghi nhận xe số 100.000đ/ngày và xe ga 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Anh Hùng Địa chỉ: Hoàng Minh Giám, Tam Đường, Thị xã Lai Châu Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -150.000đ/ngày … Nhà nghỉ Hoa Sữa Địa chỉ: 179 Lê Duẩn, Tân Phong, Thị xã Lai Châu Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

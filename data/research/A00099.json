@@ -1,0 +1,146 @@
+{
+  "article_id": "A00099",
+  "primary_keyword": "giá thuê Vision Huế",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết khung giá thuê Honda Vision tại Huế theo nguồn niêm yết công khai, cách tính ngày thuê và phụ thu quá giờ, các khoản đi kèm (mũ, xăng, cọc, giao xe) và kinh nghiệm chọn xe ga cho hành trình cố đô",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Huế",
+    "ga Huế",
+    "Đại Nội Huế",
+    "lăng Tự Đức",
+    "Phá Thuận An",
+    "Phong Điền",
+    "quận Phú Hội",
+    "quận Thuận Hóa",
+    "quốc lộ 1A",
+    "sông Hương"
+  ],
+  "vehicle_entities": [
+    "xe ga",
+    "xe số",
+    "xe tay ga",
+    "xe máy điện"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Vision",
+    "Airblade",
+    "Lead",
+    "Vario",
+    "Janus"
+  ],
+  "questions_found": [
+    "Thuê Honda Vision ở Huế giá bao nhiêu một ngày?",
+    "Thuê xe ga ở Huế có đắt hơn xe số không?",
+    "Ngày thuê xe ở Huế tính thế nào, quá giờ bị phụ thu ra sao?",
+    "Mùa cao điểm giá thuê xe ở Huế tăng bao nhiêu?",
+    "Vision có phù hợp chạy từ trung tâm Huế ra các lăng và phá Thuận An không?"
+  ],
+  "related_queries": [
+    "gia thue vision hue",
+    "cho thue xe may vision hue",
+    "thue xe ga hue gia",
+    "thue xe may o hue bao nhieu tien",
+    "thue xe may gan ga hue"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp đặt xe của Vexere chiếm vị trí cao với bài phân tích giá thuê xe máy Huế theo từng loại xe, kèm bảng giá tham khảo và chính sách tính giờ",
+    "Các cửa hàng địa phương niêm yết gói 'xe tay ga phổ thông' giao ngẫu nhiên trong nhóm Airblade/Lead/Vision/Vario với giá từ 130.000 đ, không cần cọc",
+    "Trang hướng dẫn du lịch nhấn mạnh xe ga dễ sử dụng cho khách nước ngoài khi khám phá kinh thành và các điểm lăng tẩm quanh thành phố"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe số tại Huế thường dao động từ 100.000 đến 120.000 đồng mỗi ngày; xe tay ga mới khoảng 130.000 đến 160.000, xe cũ rẻ hơn từ 20.000 đến 30.000 mỗi ngày; xe máy điện từ 180.000 đến 200.000 đồng"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/",
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-hue/",
+    "/lab/thue-xe-may/thue-xe-may-gan-ga-hue/",
+    "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+    "/lab/thue-xe-may/gia-thue-vision-hai-phong/"
+  ],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-hue theo matrix; từ khóa \"giá thuê Vision Huế\" chưa có bài nào dùng. Bài thuê xe máy Huế (geo hub) đã publish với intent tổng quát, bài giá thuê Vision Hải Phòng là bài giá model-specific cho tỉnh khác — cả hai được dẫn chéo, không tranh từ khóa chính.",
+  "unique_angle": "Bài đi sâu vào góc giá của riêng dòng Honda Vision tại Huế: xe ga mới niêm yết 130.000 – 160.000 mỗi ngày (Vision nằm trong nhóm xe ga được thuê nhiều cùng Airblade, Lead, Janus), cách tính chu kỳ 24 tiếng và phụ thu giữ xe dưới 6 tiếng, mức tăng giá cao điểm 20% đến 30% — thứ mà bài geo hub không đi sâu theo từng dòng xe.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không cửa hàng nào tại Huế niêm yết giá riêng cho dòng Vision trong các nguồn đã mở; giá nhóm xe ga phổ thông (gồm Vision) là mức công khai của Vexere. Không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Giá thuê xe tay ga tại Huế cho những dòng xe mới vào khoảng 130.000 đến 160.000 đồng mỗi ngày; Honda Vision nằm trong các dòng xe tay ga được thuê nhiều ở Huế cùng Honda Airblade, Honda Lead, Yamaha Janus",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe tay ga tại Huế cho những dòng xe mới vào khoảng 130.000 đến 160.000, trong khi các dòng xe cũ thì có thể rẻ hơn từ 20.000 đến 30.000 mỗi ngày. Các dòng xe tay ga được thuê nhiều ở Huế bao gồm Honda Airblade, Honda Vision, Honda Lead hay Yamaha Janus"
+    },
+    {
+      "claim": "Giá thuê xe số tại Huế thường dao động từ 100.000 đến 120.000 đồng mỗi ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe số tại Huế thường dao động từ 100.000 đến 120.000 đồng mỗi ngày, tùy thuộc vào loại xe và thời gian sản xuất"
+    },
+    {
+      "claim": "Thuê xe máy điện tại Huế thường có giá từ 180.000 đến 200.000 đồng",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe máy điện tương đối cao, thường từ 180.000 đến 200.000 đồng"
+    },
+    {
+      "claim": "Giá thuê xe máy phổ thông tại Huế chỉ khoảng 100.000 đến 140.000 đồng mỗi ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe máy ở Huế đối với các dòng xe phổ thông như xe số và xe tay ga chỉ khoảng 100.000 đến 140.000 đồng mỗi ngày"
+    },
+    {
+      "claim": "Một ngày thuê xe máy ở Huế thường tính theo chu kỳ 24 tiếng; giữ xe thêm dưới 6 tiếng chỉ phải tính thêm nửa ngày thuê xe",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thời gian thuê một ngày xe máy ở Huế thường tính theo chu kỳ 24 tiếng. Khách hàng giữ xe thêm dưới 6 tiếng chỉ phải tính thêm nửa ngày thuê xe"
+    },
+    {
+      "claim": "Vào các dịp cao điểm, giá thuê xe máy ở Huế thường tăng khoảng 20% đến 30%",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Vào các dịp cao điểm như Lễ 30/4, Quốc khánh 2/9, Tết Dương Lịch, Tết Âm Lịch,… giá thuê xe máy ở Huế thường tăng từ 20-30%"
+    },
+    {
+      "claim": "Bảng giá tham khảo của Vexere niêm yết xe tay ga (Honda Airblade, Honda Lead, Honda Vision, Yamaha Janus) 130.000 – 160.000 và xe số (Honda Wave Alpha, Yamaha Sirius) 100.000 – 120.000",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Xe tay ga (Honda Airblade, Honda Lead, Honda Vision, Yamaha Janus) 130.000 – 160.000 Xe số (Honda Wave Alpha, Yamaha Sirius) 100.000 – 120.000"
+    },
+    {
+      "claim": "Trên Vexere có điểm thuê 'xe tay ga phổ thông' giao ngẫu nhiên trong nhóm Honda Airblade, Honda Lead, Honda Vision, Honda Vario, đời xe từ 2020, kèm mũ bảo hiểm, 1 lít xăng, giao xe tận nơi, không cần cọc trước",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Airblade hoặc dòng xe tương tự Honda Airblade, Honda Lead, Honda Vision, Honda Vario (giao ngẫu nhiên tùy tình trạng xe thực tế) Đời xe: từ 2020 Mũ bảo hiểm, Xăng (1 lít) Giao xe tận nơi Không cần cọc trước"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

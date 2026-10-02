@@ -1,0 +1,116 @@
+{
+  "article_id": "A00106",
+  "primary_keyword": "giá thuê Vision Lạng Sơn",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết khung giá thuê Honda Vision tại Lạng Sơn theo nguồn công khai, biên độ xe ga 120.000đ – 200.000đ/ngày của các cơ sở ghi nhận, so sánh xe số/xe ga và lưu ý thuê xe đi cửa khẩu, vùng núi",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Lạng Sơn",
+    "thành phố Lạng Sơn",
+    "cửa khẩu Hữu Nghị",
+    "Đồng Đăng",
+    "chợ Kỳ Lừa",
+    "núi Mẫu Sơn",
+    "đường Trần Đăng Ninh",
+    "đường Ngô Quyền",
+    "quốc lộ 4B"
+  ],
+  "vehicle_entities": [
+    "xe ga",
+    "xe số",
+    "xe tay ga"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Vision",
+    "Airblade",
+    "Lead",
+    "Wave",
+    "Sirius"
+  ],
+  "questions_found": [
+    "Thuê Honda Vision ở Lạng Sơn giá bao nhiêu một ngày?",
+    "Xe ga ở Lạng Sơn có đắt hơn xe số không?",
+    "Khách sạn ở Lạng Sơn có cho thuê xe máy không?",
+    "Thuê xe máy ở Lạng Sơn cần thủ tục gì?",
+    "Vision có phù hợp chạy lên Mẫu Sơn hoặc cửa khẩu Hữu Nghị không?"
+  ],
+  "related_queries": [
+    "gia thue vision lang son",
+    "cho thue xe may lang son",
+    "thue xe ga lang son gia",
+    "thue xe may o lang son bao nhieu",
+    "cho thue xe may cua khau huong nghi"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Lạng Sơn với 6 cơ sở ghi nhận, phần lớn là khách sạn kết hợp cho thuê xe trong thành phố Lạng Sơn",
+    "Biên độ xe ga của các cơ sở ghi nhận ở mức 120.000đ – 200.000đ/ngày, xe số 100.000đ – 120.000đ/ngày",
+    "Dòng Vision không được niêm yết giá riêng ở mức phổ biến; giá nhóm xe ga (gồm xe ga phổ thông) là khung tham chiếu chính"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-lang-son/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khách sạn Vạn Xuân, Mường Thanh, Trần Lục, Anh Tuấn, Khách sạn Kim Sơn ghi nhận xe ga 120.000đ – 200.000đ/ngày, xe số 100.000đ – 120.000đ/ngày; Hoàng Trường xe số 100.000đ/ngày, xe ga 150.000đ/ngày"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/",
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-lang-son/",
+    "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+    "/lab/thue-xe-may/gia-thue-vision-hai-phong/",
+    "/lab/thue-xe-may/thue-xe-may-cao-bang/"
+  ],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-lang-son theo matrix; từ khóa \"giá thuê Vision Lạng Sơn\" chưa có bài nào dùng. Bài geo hub Lạng Sơn đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá của dòng xe ga (nơi Vision thuộc nhóm phổ thông) tại Lạng Sơn: biên độ 120.000đ – 200.000đ/ngày giữa các cơ sở ghi nhận, đối chiếu xe số 100.000đ – 120.000đ/ngày, kèm đặc thù nhận xe tại khách sạn trong thành phố và hành trình lên cửa khẩu Hữu Nghị, Mẫu Sơn.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không cơ sở nào niêm yết giá riêng cho Vision trong nguồn đã mở; khung giá nhóm xe ga là mức công khai của motogo.vn ghi nhận từ các cơ sở. Không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Khách sạn Vạn Xuân (147 Trần Đăng Ninh, phường Tam Thanh, thành phố Lạng Sơn) được motogo.vn ghi nhận cho thuê xe số 120.000đ/ngày và xe ga 120.000đ – 200.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lang-son/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khách sạn Vạn Xuân Điện thoại: 025 3710 440 Địa chỉ: Số 147 Trần Đăng Ninh, phường Tam Thanh, Tp Lạng Sơn, Lạng Sơn Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 120.000đ – 200.000đ/ngày 5/5"
+    },
+    {
+      "claim": "Khách sạn Mường Thanh (68 Ngô Quyền, phường Vĩnh Trại) và Trần Lục (90 Ngô Quyền) đều ghi nhận xe số 120.000đ/ngày, xe ga 120.000đ – 200.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lang-son/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Mường Thanh Địa chỉ: Số 68 Ngô Quyền, phường Vĩnh Trại, Tp Lạng Sơn, Lạng Sơn Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 120.000đ – 200.000đ/ngày … Trần Lục Địa chỉ: Số 90 Ngô Quyền, Ngã Tư Mỹ Sơn, Tp Lạng Sơn, Lạng Sơn Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 120.000đ – 200.000đ/ngày"
+    },
+    {
+      "claim": "Hoàng Trường (219 QL4B, Vĩnh Trại, thành phố Lạng Sơn) được ghi nhận cho thuê xe số 100.000đ/ngày và xe ga 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lang-son/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Hoang Trường Điện thoại: 097 245 0113 Địa chỉ: Số 219 QL4B, Vĩnh Trại, Tp Lạng Sơn, Lạng Sơn Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày"
+    },
+    {
+      "claim": "Anh Tuấn (248 Trần Đăng Ninh, phường Hoàng Văn Thụ) và Khách sạn Kim Sơn (3 Minh Khai) ghi nhận xe số 120.000đ/ngày, xe ga 120.000đ – 200.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lang-son/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Anh Tuấn Địa chỉ: Số 248 Trần Đăng Ninh, Hoàng Văn Thụ, Tp Lạng Sơn Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 120.000đ – 200.000đ/ngày … Khách sạn Kim Sơn Địa chỉ: Số 3 Minh Khai, phường Hoàng Văn Thụ, Tp Lạng Sơn Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 120.000đ – 200.000đ/ngày"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "article_id": "A00108",
+  "primary_keyword": "giá thuê Vision Tuyên Quang",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết khung giá thuê Honda Vision tại Tuyên Quang theo nguồn công khai, biên độ xe ga 120.000đ – 180.000đ/ngày của các cơ sở ghi nhận, so sánh xe số/xe ga, thủ tục thuê và lưu ý đi Na Hang, Lâm Bình",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Tuyên Quang",
+    "thành phố Tuyên Quang",
+    "hồ Na Hang",
+    "Lâm Bình",
+    "thác Bản Ba",
+    "phường Nông Tiến",
+    "đường Nguyễn Trãi",
+    "đường Hưng Thành",
+    "quốc lộ 37",
+    "quốc lộ 2"
+  ],
+  "vehicle_entities": [
+    "xe ga",
+    "xe số",
+    "xe tay ga"
+  ],
+  "brand_entities": [
+    "Honda"
+  ],
+  "model_entities": [
+    "Vision",
+    "AirBlade",
+    "Wave",
+    "Sirius"
+  ],
+  "questions_found": [
+    "Thuê Honda Vision ở Tuyên Quang giá bao nhiêu một ngày?",
+    "Xe ga ở Tuyên Quang có đắt hơn xe số không?",
+    "Thuê xe máy ở Tuyên Quang cần thủ tục gì?",
+    "Ở Tuyên Quang có chỗ nào giao xe tận nơi không?",
+    "Vision có phù hợp chạy từ thành phố Tuyên Quang lên Na Hang không?"
+  ],
+  "related_queries": [
+    "gia thue vision tuyen quang",
+    "cho thue xe may tuyen quang",
+    "thue xe ga tuyen quang gia",
+    "thue xe may o tuyen quang bao nhieu",
+    "cho thue xe may na hang"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Tuyên Quang với 5 cơ sở ghi nhận, nhiều nơi là guest house/hotel kết hợp cho thuê",
+    "Biên độ xe ga ghi nhận ở mức 120.000đ – 180.000đ/ngày, xe số 80.000đ – 150.000đ/ngày",
+    "Thủ tục đơn giản: giấy tờ tùy thân có ảnh và tiền cọc là hai thứ phổ biến nhất"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-tuyen-quang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Các cơ sở ghi nhận: Minh Thanh Guest House (xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày); Lô Giang (xe số 90.000đ – 120.000đ/ngày, xe ga 120.000đ -150.000đ/ngày); bảng tham khảo xe số 90.000đ – 150.000đ, xe ga 120.000đ – 180.000đ"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/",
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-tuyen-quang/",
+    "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+    "/lab/thue-xe-may/gia-thue-vision-hai-phong/",
+    "/lab/thue-xe-may/thue-xe-may-ha-giang/"
+  ],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-tuyen-quang theo matrix; từ khóa \"giá thuê Vision Tuyên Quang\" chưa có bài nào dùng. Bài geo hub Tuyên Quang đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá của dòng xe ga (nơi Vision thuộc nhóm phổ thông) tại Tuyên Quang: biên độ 120.000đ – 180.000đ/ngày giữa các cơ sở, đối chiếu xe số 80.000đ – 150.000đ/ngày, kèm thủ tục giấy tờ đơn giản và hành trình từ thành phố lên hồ Na Hang, Lâm Bình.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không cơ sở nào niêm yết giá riêng cho Vision trong nguồn đã mở; khung giá nhóm xe ga là mức công khai do motogo.vn ghi nhận. Không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Minh Thanh Guest House (Tổ 10, phố Bình Ca, phường Nông Tiến, thành phố Tuyên Quang) được motogo.vn ghi nhận cho thuê xe số 80.000đ – 100.000đ/ngày và xe ga 130.000đ – 140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tuyen-quang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Minh Thanh Guest House Địa chỉ: Tổ 10, Phố Bình Ca , Phường Nông Tiến, Thành phố Tuyên Quang Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày"
+    },
+    {
+      "claim": "Lô Giang (2, đường 17/8, phường Minh Xuân, TP. Tuyên Quang) được ghi nhận cho thuê xe số 90.000đ – 120.000đ/ngày và xe ga 120.000đ -150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tuyen-quang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Lô Giang Địa chỉ: 2, Đường 17/8, Phường Minh Xuân, TP. Tuyên Quang, Tuyên Quang. Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -150.000đ/ngày"
+    },
+    {
+      "claim": "Thuê xe máy tại Tuyên Quang (55 Hưng Thạnh, TP. Tuyên Quang) được ghi nhận cho thuê xe số 100.000đ/ngày và xe ga 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tuyen-quang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thuê xe máy tại Tuyên Quang Địa chỉ: Số 55 Hưng Thạnh, TP. Tuyên Quang, Tuyên Quang Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày"
+    },
+    {
+      "claim": "Mai Sơn (04 Nguyễn Trãi, TP. Tuyên Quang) được ghi nhận cho thuê xe số 90.000đ – 120.000đ/ngày và xe ga 140.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tuyen-quang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Mai Sơn Địa chỉ: 04 Nguyễn Trãi, TP. Tuyên Quang, Tuyên Quang Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày 3.9/5"
+    },
+    {
+      "claim": "Tân Trang Hotel (25 Nguyễn Trãi, phường Tân Quang, TP. Tuyên Quang) được ghi nhận cho thuê xe số 80.000đ – 100.000đ/ngày và xe ga 130.000đ – 140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tuyen-quang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Tân Trang Hotel Địa chỉ: 25 Nguyễn Trãi, P. Tân Quang, TP. Tuyên Quang, Tuyên Quang Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày 2.5/5"
+    },
+    {
+      "claim": "Bảng giá thuê xe máy Tuyên Quang (tham khảo) ghi nhận xe số 90.000đ – 150.000đ/ngày và xe ga 120.000đ – 180.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tuyen-quang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Loại xe Giá/ngày Xe số 90.000đ – 150.000đ Xe ga 120.000đ – 180.000đ Bảng giá thuê xe máy Tuyên Quang (tham khảo)"
+    },
+    {
+      "claim": "Thủ tục thuê xe máy tại Tuyên Quang chủ yếu cần giấy tờ cá nhân (CMND, căn cước, hộ chiếu) và tiền cọc",
+      "source_url": "https://motogo.vn/thue-xe-may-tuyen-quang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Các địa chỉ cho thuê xe máy tại khu vực này đều không đòi hỏi các loại giấy tờ phức tạp … Giấy tờ cá nhân: Các loại giấy tờ tùy thân có ảnh như CMND, căn cước, hộ chiếu,…"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

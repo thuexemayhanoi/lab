@@ -1,0 +1,127 @@
+{
+  "article_id": "A00100",
+  "primary_keyword": "giá thuê Vision Đà Nẵng",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết khung giá thuê Honda Vision tại Đà Nẵng theo nguồn niêm yết công khai, so sánh xe số/xe ga/xe côn, cách tính ngày thuê, cọc và giấy tờ, kèm kinh nghiệm chọn xe ga chạy phố biển",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Đà Nẵng",
+    "sân bay quốc tế Đà Nẵng",
+    "ga Đà Nẵng",
+    "bến xe Trung tâm Đà Nẵng",
+    "Bà Nà Hills",
+    "Sơn Trà",
+    "Ngũ Hành Sơn",
+    "Hội An",
+    "đường Võ Nguyên Giáp",
+    "quận Hải Châu"
+  ],
+  "vehicle_entities": [
+    "xe ga",
+    "xe số",
+    "xe tay ga",
+    "xe côn tay"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Vision",
+    "Air Blade",
+    "Lead",
+    "Wave Alpha",
+    "Wave RSX",
+    "Exciter",
+    "Winner"
+  ],
+  "questions_found": [
+    "Thuê Honda Vision ở Đà Nẵng giá bao nhiêu một ngày?",
+    "Xe ga ở Đà Nẵng thuê có đắt hơn xe số không?",
+    "Thuê xe máy Đà Nẵng cần giấy tờ gì, có phải đặt cọc không?",
+    "Mùa cao điểm giá thuê xe ở Đà Nẵng tăng thế nào?",
+    "Vision có phù hợp chạy từ Đà Nẵng sang Hội An không?"
+  ],
+  "related_queries": [
+    "gia thue vision da nang",
+    "cho thue xe may vision da nang",
+    "thue xe ga da nang gia",
+    "thue xe may o da nang bao nhieu",
+    "thue xe may gan san bay da nang"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp Vexere xếp cao với phân tích giá thuê xe máy Đà Nẵng theo loại xe: xe số 90.000 – 110.000 VNĐ/ngày, xe ga 110.000 – 140.000 VNĐ/ngày với Vision trong nhóm xe được ưa chuộng",
+    "Trang hướng dẫn motogo.vn giới thiệu các cửa hàng cho thuê tại Đà Nẵng kèm thủ tục giấy tờ, tiền cọc và kinh nghiệm kiểm tra xe",
+    "Cửa hàng địa phương hay niêm yết gói giao xe tận nơi quanh sân bay, ga và khu vực Hải Châu, Sơn Trà"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe số ở Đà Nẵng dao động từ 90.000 – 110.000 VNĐ/ngày; xe tay ga 110.000 – 140.000 VNĐ/ngày với Honda Vision, Air Blade, Lead là các dòng ưa chuộng; xe côn tay khoảng 150.000 VNĐ/ngày"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-da-nang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bài hướng dẫn thuê xe máy Đà Nẵng gồm các mục giá theo ngày/theo giờ/theo tháng, thủ tục giấy tờ, tiền đặt cọc xe, tính thời gian thuê và các lưu ý kiểm tra xe trước khi nhận"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/",
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-da-nang/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-da-nang/",
+    "/lab/thue-xe-may/thue-xe-may-gan-ga-da-nang/",
+    "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+    "/lab/thue-xe-may/gia-thue-vision-hai-phong/"
+  ],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-da-nang theo matrix; từ khóa \"giá thuê Vision Đà Nẵng\" chưa có bài nào dùng. Bài geo hub Đà Nẵng và các bài gần sân bay/ga Đà Nẵng đã publish với intent khác, được dẫn chéo.",
+  "unique_angle": "Bài tập trung góc giá model-specific tại Đà Nẵng: đối chiếu nhóm xe ga 110.000 – 140.000 VNĐ/ngày (Vision nằm trong nhóm ưa chuộng cùng Air Blade, Lead) với xe số 90.000 – 110.000 và xe côn 150.000, kèm khung tham khảo dao động chung 90.000 – 140.000 VNĐ/ngày và lưu ý cao điểm — góc mà bài geo hub không đi sâu theo dòng xe.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không cửa hàng niêm yết giá riêng cho Vision trong các nguồn đã mở; giá nhóm xe ga phổ thông (gồm Vision) là mức công khai của Vexere. Không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Giá thuê xe tay ga ở Đà Nẵng thường dao động từ 110.000 – 140.000 VNĐ/ngày; Honda Vision, Air Blade, Lead là các mẫu xe phổ biến được ưa chuộng",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe tay ga ở Đà Nẵng thường dao động từ 110.000 – 140.000 VNĐ/ngày, tùy loại xe và thời điểm. Các mẫu xe phổ biến như Honda Vision, Air Blade, Lead luôn nằm trong danh sách được ưa chuộng"
+    },
+    {
+      "claim": "Giá thuê xe số ở Đà Nẵng dao động từ 90.000 – 110.000 VNĐ/ngày tùy đời xe và thời điểm thuê",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe số ở Đà Nẵng dao động từ 90.000 – 110.000 VNĐ/ngày, tùy thuộc vào đời xe và thời điểm thuê"
+    },
+    {
+      "claim": "Giá thuê xe côn tay ở Đà Nẵng dao động khoảng 150.000 VNĐ/ngày với các dòng như Honda Winner, Yamaha Exciter",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe côn tay ở Đà Nẵng dao động khoảng 150.000 VNĐ/ngày, phù hợp với các dòng xe phổ biến như Honda Winner, Yamaha Exciter là lựa chọn hàng đầu"
+    },
+    {
+      "claim": "Nhìn chung giá thuê xe máy tại Đà Nẵng thường dao động từ 90.000 – 140.000 VNĐ/ngày tùy loại xe và thời điểm thuê",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe máy tại Đà Nẵng thường dao động từ 90.000 – 140.000 VNĐ/ngày, tùy thuộc vào loại xe và thời điểm thuê. Vào mùa du lịch cao điểm như lễ, Tết hoặc mùa hè, giá thuê thường tăng"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

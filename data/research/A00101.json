@@ -1,0 +1,158 @@
+{
+  "article_id": "A00101",
+  "primary_keyword": "giá thuê Vision TP.HCM",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết khung giá thuê Honda Vision tại TP.HCM theo nguồn niêm yết công khai, so sánh xe số/xe ga/xe điện, phí giao xe tận nơi, cách tính ngày thuê và kinh nghiệm chọn xe cho phố đông",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "TP.HCM",
+    "Sài Gòn",
+    "quận 1",
+    "Bến Thành",
+    "nhà thờ Đức Bà",
+    "sân bay Tân Sơn Nhất",
+    "Thủ Đức",
+    "Củ Chi",
+    "Chợ Lớn",
+    "phố đi bộ Nguyễn Huệ"
+  ],
+  "vehicle_entities": [
+    "xe ga",
+    "xe số",
+    "xe tay ga",
+    "xe máy điện"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "VinFast"
+  ],
+  "model_entities": [
+    "Vision",
+    "Air Blade",
+    "Lead",
+    "Janus",
+    "Grande",
+    "Freego",
+    "Wave Alpha",
+    "Evo",
+    "Feliz"
+  ],
+  "questions_found": [
+    "Thuê Honda Vision ở TP.HCM giá bao nhiêu một ngày?",
+    "Xe ga phổ thông ở Sài Gòn giá thuê bao nhiêu, có tính phí giao xe không?",
+    "Thuê xe máy ở TP.HCM có cần đặt cọc không?",
+    "Giá thuê xe Sài Gòn mùa cao điểm tăng bao nhiêu?",
+    "Vision chạy phố Sài Gòn có tiện không, đổ xăng thế nào?"
+  ],
+  "related_queries": [
+    "gia thue vision tp hcm",
+    "cho thue xe may vision sai gon",
+    "thue xe ga tphcm gia",
+    "thue xe may quan 1 gia",
+    "thue xe may gan san bay tan son nhat"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp Vexere xếp cao với bài giá thuê xe máy Sài Gòn: ngày thường 80.000 đến 180.000, xe ga phổ thông 100.000đ đến 150.000đ/ngày gồm Vision, Air Blade, Lead",
+    "Trên Vexere có điểm thuê 'Xe tay ga phổ thông Gia Bảo' niêm yết Honda Vision hoặc dòng tương tự, không cần cọc trước từ 200.000 đ",
+    "Các trang địa phương nhấn mạnh phí giao nhận xe tận nơi 20.000đ – 50.000đ/lượt và mức giá quận trung tâm nhỉnh hơn các quận khác"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Mức giá thuê ngày thường ở Sài Gòn dao động từ 80.000 đến 180.000; cao điểm có thể tăng từ 30-50%; xe ga phổ thông 100.000đ đến 150.000đ/ngày gồm Vision, Air Blade, Lead, Janus, Grande, Freego; phí giao nhận tận nơi 20.000đ – 50.000đ/lượt"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/",
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-tp-hcm/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-tan-son-nhat/",
+    "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+    "/lab/thue-xe-may/gia-thue-vision-hai-phong/"
+  ],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-tp-hcm theo matrix; từ khóa \"giá thuê Vision TP.HCM\" chưa có bài nào dùng. Bài geo hub TP.HCM và bài gần sân bay Tân Sơn Nhất đã publish với intent khác, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài tập trung góc giá model-specific tại Sài Gòn: điểm thuê Gia Bảo niêm yết Honda Vision hoặc dòng tương tự từ 200.000 đ không cần cọc, đối chiếu khung xe ga phổ thông 100.000đ đến 150.000đ/ngày và phí giao xe 20.000đ – 50.000đ/lượt, kèm lưu ý giá quận trung tâm cao hơn — góc không trùng bài geo hub.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Giá là niêm yết công khai tại thời điểm nghiên cứu, có thể thay đổi theo mùa và quy định từng điểm thuê; không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Mức giá thuê xe máy ngày thường ở Sài Gòn dao động từ 80.000 đến 180.000 tùy loại xe và thời điểm thuê",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Mức giá thuê ngày thường dao động từ 80.000 đến 180.000"
+    },
+    {
+      "claim": "Vào các dịp cao điểm, giá thuê xe máy ở Sài Gòn có thể tăng khoảng 30% đến 50% theo từng thời điểm",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Vào các dịp cao điểm như Lễ 30/4, Quốc khánh 2/9, Tết Dương Lịch, Tết Âm Lịch,… giá thuê xe máy ở Sài Gòn có thể tăng từ 30-50% theo từng thời điểm"
+    },
+    {
+      "claim": "Giá thuê xe ga phổ thông ở Sài Gòn dao động từ 100.000đ đến 150.000đ/ngày; các dòng cho thuê đa dạng gồm Vision, Air Blade, Lead, Janus, Grande, Freego",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe tay ga phổ thông ở Sài Gòn dao động từ 100.000đ đến 150.000đ/ngày … dòng xe đa dạng hơn, gồm cả Vision, Air Blade, Lead, Janus, Grande hay Freego…"
+    },
+    {
+      "claim": "Mức giá thuê xe ga phổ thông chưa bao gồm phí giao nhận xe tận nơi, thường từ 20.000đ – 50.000đ/lượt nếu giao ở xa trung tâm",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Mức giá này chưa bao gồm phí giao nhận xe tận nơi, thường từ 20.000đ – 50.000đ/lượt nếu giao ở xa trung tâm"
+    },
+    {
+      "claim": "Giá thuê xe số phổ thông ở Sài Gòn trung bình từ 80.000 đồng/ngày với xe đời cũ và khoảng 100.000 đồng/ngày với xe đời mới",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê các dòng xe số phổ thông ở Sài Gòn trung bình từ 80.000 đồng/ngày với xe đời cũ và khoảng 100.000 đồng/ngày với xe đời mới"
+    },
+    {
+      "claim": "Giá thuê xe máy điện ở Sài Gòn trung bình dao động khoảng 120.000đ – 180.000đ/ngày tùy mẫu xe, chất lượng và thời gian thuê",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê trung bình dao động khoảng 120.000đ – 180.000đ/ngày, tùy mẫu xe, chất lượng và thời gian thuê"
+    },
+    {
+      "claim": "Trên Vexere, điểm thuê 'Xe tay ga phổ thông Gia Bảo' niêm yết Honda Vision hoặc dòng xe tương tự (giao ngẫu nhiên cùng Honda Airblade), đời xe từ 2015, kèm mũ bảo hiểm, 1 lít xăng, giao xe tận nơi, không cần cọc trước từ 200.000 đ",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Xe tay ga phổ thông Gia Bảo 4.9 Honda Vision hoặc dòng xe tương tự Honda Vision, Honda Airblade (giao ngẫu nhiên tùy tình trạng xe thực tế) Đời xe: từ 2015 Mũ bảo hiểm, Xăng (1 lít) Giao xe tận nơi Không cần cọc trước từ 200.000 đ"
+    },
+    {
+      "claim": "Mỗi ngày thuê xe trên Vexere được tính bằng 24 giờ kể từ thời điểm nhận xe; trả xe quá mỗi 24 giờ thì tính thêm 1 ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe. – Thuê tối thiểu từ 1 ngày. – Trả xe quá mỗi 24 giờ → tính thêm 1 ngày"
+    },
+    {
+      "claim": "Giá thuê xe ở Quận 1 thường nhỉnh hơn một chút so với các quận khác, đổi lại chất lượng xe thường mới hơn",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê ở Quận 1 thường nhỉnh hơn một chút so với các quận khác, nhưng đổi lại chất lượng xe thường mới hơn cùng thời gian giao xe nhanh chóng"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}
