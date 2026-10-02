@@ -1,0 +1,281 @@
+{
+  "article_id": "A00090",
+  "primary_keyword": "thuê xe máy Đảo Phú Quốc",
+  "secondary_keywords": [
+    "giá thuê xe máy Phú Quốc",
+    "thuê xe máy ở Phú Quốc",
+    "thuê xe máy sân bay Phú Quốc",
+    "thuê xe máy cảng Bãi Vòng",
+    "xe máy Phú Quốc giá bao nhiêu một ngày"
+  ],
+  "search_intent": "informational — du khách tìm mặt bằng giá, quy trình nhận xe tại sân bay/cảng tàu và kinh nghiệm chạy xe trên đảo trước chuyến đi",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Phú Quốc",
+    "Đảo Phú Quốc",
+    "Dương Đông",
+    "Bãi Sao",
+    "Bãi Khem",
+    "Gành Dầu",
+    "Hàm Ninh",
+    "cảng Bãi Vòng",
+    "sân bay Phú Quốc",
+    "Rạch Giá",
+    "Hà Tiên",
+    "DT48"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe ga",
+    "xe ga 150cc"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Blade",
+    "Wave RSX",
+    "Air Blade",
+    "Lead",
+    "Vision",
+    "PCX",
+    "NVX"
+  ],
+  "questions_found": [
+    "Thuê xe máy ở Phú Quốc giá bao nhiêu một ngày?",
+    "Có nhận xe ngay tại sân bay hoặc cảng Bãi Vòng không?",
+    "Thuê xe ở Phú Quốc cần giấy tờ gì?",
+    "Đi tàu cao tốc vào đảo mất bao lâu?",
+    "Mùa cao điểm giá thuê tăng bao nhiêu?"
+  ],
+  "related_queries": [
+    "giá thuê xe máy phú quốc",
+    "cho thuê xe máy phú quôc sân bay",
+    "thuê xe máy bến tàu phú quốc",
+    "cọc thuê xe máy phú quốc"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp giá của các điểm cho thuê địa phương (motogo)",
+    "Trang nền tảng đặt xe có bảng giá theo loại xe và phụ phí giao xe tại cảng (vexere)",
+    "Trang cẩm nang du lịch của cụm vui chơi giải trí (vinwonders)",
+    "Đa số trang đều có bảng giá theo dòng xe và khuyến nghị đặt trước mùa cao điểm"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-phu-quoc/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá các điểm cho thuê tại Phú Quốc (Mai Hương, Thiên Phú, Cường Thịnh, Đại Phát), chính sách giấy tờ, thời gian nhận xe và cảnh báo xe ôm bến tàu"
+    },
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-phu-quoc.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Mặt bằng giá theo loại xe, mức tăng mùa cao điểm, cọc, phí giao xe tại cảng, thời gian tàu cao tốc Rạch Giá/Hà Tiên và cước taxi từ cảng"
+    },
+    {
+      "source_url": "https://vinwonders.com/vi/wonderpedia/news/thue-xe-may-phu-quoc/",
+      "source_domain": "vinwonders.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Mặt bằng giá phổ biến và bảng giá theo dòng xe Honda, Yamaha tại Phú Quốc"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/kinh-nghiem/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-phu-quoc/",
+    "/lab/thue-xe-may/thue-xe-may-cu-lao-cham/",
+    "/lab/thue-xe-may/thue-xe-may-bien-nha-trang/"
+  ],
+  "potential_cannibalization": "Bài \"thuê xe máy gần sân bay quốc tế Phú Quốc\" đã publish nhưng intent hẹp hơn (nhận xe quanh sân bay); bài này phủ toàn đảo theo pk \"thuê xe máy Đảo Phú Quốc\" của hàng matrix CG-rental-poi-dao-phu-quoc — khác pk, khác slug, không trùng lặp thực dụng.",
+  "unique_angle": "Gộp mặt bằng giá theo dòng xe từ ba nguồn độc lập, luồng nhận xe theo cửa ngõ vào đảo (sân bay, tàu cao tốc Rạch Giá/Hà Tiên cập cảng Bãi Vòng), cảnh báo cước 200k của xe ôm bến tàu và mẹo đổ xăng tại cây xăng DT48.",
+  "notes": "Các nguồn đã được mở và kiểm chứng trong phiên research; mọi con số trong bài đều có claim_evidence tương ứng. Hàng informational_only: không chào dịch vụ, không dùng ngôi \"chúng tôi\".",
+  "claim_evidence": [
+    {
+      "claim": "Mặt bằng giá thuê xe máy ở Phú Quốc dao động từ 120.000đ – 200.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-phu-quoc.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Trang tổng hợp của Vexere ghi giá thuê xe máy tại Phú Quốc dao động từ 120.000 VNĐ đến 200.000 đồng/ngày"
+    },
+    {
+      "claim": "Nguồn tổng hợp độc lập thứ hai cũng ghi mức phổ biến 120.000đ – 200.000đ/ngày ở Phú Quốc",
+      "source_url": "https://vinwonders.com/vi/wonderpedia/news/thue-xe-may-phu-quoc/",
+      "source_domain": "vinwonders.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "VinWonders ghi mức thuê xe máy ở Phú Quốc khoảng 120.000 VND đến 200.000 VND mỗi ngày (24 giờ)"
+    },
+    {
+      "claim": "Honda Wave và Yamaha Sirius được công bố ở mức 100.000 – 120.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-phu-quoc/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá trên Motogo: Honda Wave 100.000đ – 120.000đ/ngày; Yamaha Sirius 100.000đ – 120.000đ/ngày"
+    },
+    {
+      "claim": "Honda Wave được niêm yết 100.000 – 120.000đ/ngày",
+      "source_url": "https://vinwonders.com/vi/wonderpedia/news/thue-xe-may-phu-quoc/",
+      "source_domain": "vinwonders.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá VinWonders: Honda Wave 100.000 – 120.000 VNĐ/ngày"
+    },
+    {
+      "claim": "Yamaha Sirius được niêm yết 100.000 – 120.000đ/ngày",
+      "source_url": "https://vinwonders.com/vi/wonderpedia/news/thue-xe-may-phu-quoc/",
+      "source_domain": "vinwonders.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá VinWonders: Sirius 100.000 – 120.000 VNĐ/ngày"
+    },
+    {
+      "claim": "Honda Blade được công bố 120.000 – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-phu-quoc/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá trên Motogo: Honda Blade 120.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "Honda Wave RSX được niêm yết 120.000 – 150.000đ/ngày",
+      "source_url": "https://vinwonders.com/vi/wonderpedia/news/thue-xe-may-phu-quoc/",
+      "source_domain": "vinwonders.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá VinWonders: Wave RSX 120.000 – 150.000 VNĐ/ngày"
+    },
+    {
+      "claim": "Honda Air Blade được niêm yết 130.000 – 150.000đ/ngày",
+      "source_url": "https://vinwonders.com/vi/wonderpedia/news/thue-xe-may-phu-quoc/",
+      "source_domain": "vinwonders.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá VinWonders: Air Blade 130.000 – 150.000 VNĐ/ngày"
+    },
+    {
+      "claim": "Honda Lead và Honda Vision được niêm yết 130.000 – 150.000đ/ngày",
+      "source_url": "https://vinwonders.com/vi/wonderpedia/news/thue-xe-may-phu-quoc/",
+      "source_domain": "vinwonders.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá VinWonders: Lead/Vision 130.000 – 150.000 VNĐ/ngày"
+    },
+    {
+      "claim": "Honda PCX được niêm yết 150.000 – 200.000đ/ngày",
+      "source_url": "https://vinwonders.com/vi/wonderpedia/news/thue-xe-may-phu-quoc/",
+      "source_domain": "vinwonders.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá VinWonders: PCX 150.000 – 200.000 VNĐ/ngày"
+    },
+    {
+      "claim": "Xe số phổ thông khoảng 120.000đ/ngày, xe ga phổ thông khoảng 150.000đ/ngày, nhóm xe ga 150cc khoảng 200.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-phu-quoc.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá Vexere: xe số phổ thông 120.000; xe ga phổ thông 150.000; xe ga 150cc (PCX, NVX) 200.000"
+    },
+    {
+      "claim": "Nhóm xe ga 150cc có mức công bố từ 200.000đ – 250.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-phu-quoc.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Xe ga 150cc cho thuê từ 200.000 đến 250.000 đồng/ngày"
+    },
+    {
+      "claim": "Điểm Mai Hương công bố 120.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-phu-quoc/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Mai Hương 120.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "Thiên Phú và Cường Thịnh công bố 120.000đ – 160.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-phu-quoc/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thiên Phú/Cường Thịnh 120.000đ – 160.000đ/ngày"
+    },
+    {
+      "claim": "Thiên Phú cho thuê xe số từ 120.000đ/ngày và xe ga từ 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-phu-quoc/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thiên Phú: từ 120.000đ/xe số và 150.000đ/xe ga"
+    },
+    {
+      "claim": "Đại Phát công bố 120.000đ – 170.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-phu-quoc/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Đại Phát 120.000đ – 170.000đ/ngày"
+    },
+    {
+      "claim": "Thiên Phú nhận xe sau 15 phút",
+      "source_url": "https://motogo.vn/thue-xe-may-phu-quoc/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thiên Phú: nhận xe sau 15 phút"
+    },
+    {
+      "claim": "Có điểm giao xe miễn phí tận sân bay, bến tàu chỉ trong vòng 10 phút; nhận xe tại cửa hàng chỉ mất khoảng 10 – 15 phút",
+      "source_url": "https://motogo.vn/thue-xe-may-phu-quoc/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Anh Tính: giao xe miễn phí tận sân bay, bến tàu, vòng 10 phút; chỉ mất khoảng 10 – 15 phút nhận xe"
+    },
+    {
+      "claim": "Tàu cao tốc từ Rạch Giá vào đảo mất 2 tiếng 30 phút, từ Hà Tiên mất 1 tiếng 30 phút rồi cập cảng Bãi Vòng",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-phu-quoc.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Tàu cao tốc từ Rạch Giá mất 2 tiếng 30 phút, từ Hà Tiên mất 1 tiếng 30 phút, cập cảng Bãi Vòng"
+    },
+    {
+      "claim": "Dịch vụ giao xe tại cảng công bố từ 20.000đ – 30.000đ/xe",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-phu-quoc.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giao xe tại cảng chỉ từ 20.000đ – 30.000đ/xe"
+    },
+    {
+      "claim": "Taxi từ cảng về trung tâm đảo khoảng 200.000đ – 300.000đ",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-phu-quoc.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Taxi về trung tâm 200.000đ – 300.000đ"
+    },
+    {
+      "claim": "Cây xăng đầu tiên trên trục DT48 cách cảng khoảng 1.5km – 2km",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-phu-quoc.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Cây xăng 1.5km – 2km trên DT48"
+    },
+    {
+      "claim": "Mùa cao điểm giá thuê tăng từ 20% đến 50%, dao động từ 150.000đ đến 350.000đ/ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-phu-quoc.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Cao điểm giá tăng từ 20% đến 50%, dao động từ 150.000 đến 350.000 đồng/ngày"
+    },
+    {
+      "claim": "Theo công bố của một số cửa hàng, thuê xe chỉ cần hộ chiếu hoặc chứng minh nhân dân",
+      "source_url": "https://motogo.vn/thue-xe-may-phu-quoc/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Anh Phú: khoảng 120.000 vnđ – 150.000 vnđ/xe/ngày, chỉ cần hộ chiếu hoặc chứng minh nhân dân"
+    },
+    {
+      "claim": "Nền tảng đặt xe trực tuyến ghi cọc 150.000đ/xe",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-phu-quoc.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Cọc Vexere 150.000 đ/xe"
+    },
+    {
+      "claim": "Cảnh giác với xe ôm ở bến tàu dụ dỗ thuê xe 200k",
+      "source_url": "https://motogo.vn/thue-xe-may-phu-quoc/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Đừng nghe mấy bác xe ôm ở ngay bến tàu dụ dỗ thuê xe 200k"
+    }
+  ]
+}

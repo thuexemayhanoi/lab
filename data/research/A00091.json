@@ -1,0 +1,210 @@
+{
+  "article_id": "A00091",
+  "primary_keyword": "thuê xe máy Mũi Né",
+  "secondary_keywords": [
+    "giá thuê xe máy Mũi Né",
+    "thuê xe máy ở Mũi Né",
+    "thuê xe máy Phan Thiết",
+    "thuê xe máy ga Phan Thiết",
+    "cho thuê xe máy Hàm Tiến"
+  ],
+  "search_intent": "informational — du khách tìm mặt bằng giá, điểm nhận xe quanh ga Phan Thiết và khu resort ven biển, kinh nghiệm chạy xe vùng đồi cát",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Mũi Né",
+    "Phan Thiết",
+    "Hàm Tiến",
+    "Phú Hải",
+    "ga Phan Thiết",
+    "đường Nguyễn Đình Chiểu",
+    "đường Lê Duẩn",
+    "Thủ Khoa Huân",
+    "Nguyễn Thông",
+    "Huỳnh Thúc Kháng",
+    "Bà cô chùa Nứa",
+    "đồi cát Mũi Né"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe ga",
+    "xe côn thể thao"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "Suzuki"
+  ],
+  "model_entities": [
+    "Wave",
+    "Vision",
+    "Lead",
+    "Viva Fi",
+    "Exciter 135",
+    "Winner",
+    "SH"
+  ],
+  "questions_found": [
+    "Thuê xe máy ở Mũi Né giá bao nhiêu một ngày?",
+    "Nhận xe gần ga Phan Thiết giá thế nào?",
+    "Xe thuê có kèm mũ bảo hiểm và áo mưa không?",
+    "Nên thuê xe số hay xe ga để chạy quanh Mũi Né?"
+  ],
+  "related_queries": [
+    "giá thuê xe máy mũi né",
+    "cho thuê xe máy phan thiết",
+    "thuê xe máy gần ga phan thiết",
+    "xe máy mũi né bao nhiêu tiền"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp giá các điểm cho thuê địa phương (motogo)",
+    "Trang tổng hợp thuê xe có bảng giá theo dòng xe (motorbike.vn)",
+    "Trang của dịch vụ cho thuê riêng bị robots chặn — không dùng",
+    "Nội dung phổ biến: bảng giá theo shop, phụ kiện kèm xe, nhận xe quanh ga Phan Thiết"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-phan-thiet/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá cụ thể của các điểm cho thuê tại Phan Thiết — Mũi Né kèm khu vực công bố (Thủ Khoa Huân, Nguyễn Thông, Nguyễn Đình Chiểu, Huỳnh Thúc Kháng, Hàm Tiến)"
+    },
+    {
+      "source_url": "https://motorbike.vn/thue-xe-may-mui-ne/",
+      "source_domain": "motorbike.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Mặt bằng trung bình, bảng giá theo dòng xe, giá nhóm điểm quanh ga Phan Thiết và phụ kiện kèm theo khi thuê"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/thue-xe-may/",
+    "/lab/kinh-nghiem/",
+    "/lab/thue-xe-may/thue-xe-may-tp-hcm/",
+    "/lab/thue-xe-may/thue-xe-may-bien-nha-trang/",
+    "/lab/thue-xe-may/thue-xe-may-da-lat/"
+  ],
+  "potential_cannibalization": "Chưa có bài Mũi Né/Bình Thuận nào được publish; bài gần nhất về mặt địa lý là \"thuê xe máy TP.HCM\" (khác intent — điểm xuất phát thành phố). Hàng matrix CG-rental-poi-mui-ne là hàng POI riêng, không trùng nhóm cannibalization nào đã publish.",
+  "unique_angle": "Bài gộp bảng giá theo dòng xe và theo điểm cho thuê có địa chỉ công bố thật, luồng nhận xe quanh ga Phan Thiết cho khách đi tàu, và kinh nghiệm chạy xe vùng có cát lấn đường, gió biển mạnh — đặc thù Mũi Né.",
+  "notes": "Nguồn motogo.vn/thue-xe-may-phan-thiet và motorbike.vn/thue-xe-may-mui-ne đã mở và kiểm chứng; trang chothuexemaymuine.com bị robots chặn nên không dùng. Hàng informational_only: không chào dịch vụ.",
+  "claim_evidence": [
+    {
+      "claim": "Giá thuê xe máy ở Mũi Né trung bình khoảng 100.000đ – 250.000đ/xe/ngày",
+      "source_url": "https://motorbike.vn/thue-xe-may-mui-ne/",
+      "source_domain": "motorbike.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Trung bình 100.000VNĐ – 250.000VNĐ/xe/ngày"
+    },
+    {
+      "claim": "Có điểm cho thuê xe số chỉ từ 80.000đ/ngày và xe ga chỉ từ 120.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-phan-thiet/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thanh Phong: giá thuê xe số chỉ từ 80.000đ/ngày, xe ga chỉ từ 120.000đ/ngày"
+    },
+    {
+      "claim": "Honda Wave được niêm yết 100.000đ/ngày",
+      "source_url": "https://motorbike.vn/thue-xe-may-mui-ne/",
+      "source_domain": "motorbike.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá: Honda Wave 100.000"
+    },
+    {
+      "claim": "Honda Vision được niêm yết 130.000đ/ngày",
+      "source_url": "https://motorbike.vn/thue-xe-may-mui-ne/",
+      "source_domain": "motorbike.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá: Vision 130.000"
+    },
+    {
+      "claim": "Honda Lead và Suzuki Viva Fi được niêm yết 150.000đ/ngày",
+      "source_url": "https://motorbike.vn/thue-xe-may-mui-ne/",
+      "source_domain": "motorbike.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá: Lead 150.000; Suzuki Viva Fi 150.000"
+    },
+    {
+      "claim": "Yamaha Exciter 135 được niêm yết 180.000đ/ngày",
+      "source_url": "https://motorbike.vn/thue-xe-may-mui-ne/",
+      "source_domain": "motorbike.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá: Exciter 135 180.000"
+    },
+    {
+      "claim": "Honda Winner và Honda SH được niêm yết 250.000đ/ngày",
+      "source_url": "https://motorbike.vn/thue-xe-may-mui-ne/",
+      "source_domain": "motorbike.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá: Winner 250.000; SH 250.000"
+    },
+    {
+      "claim": "Tâm Chung công bố xe số 80.000đ – 100.000đ/ngày và xe ga 120.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-phan-thiet/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Tâm Chung (280 Thủ Khoa Huân): 80.000đ – 100.000đ/ngày (xe số); 120.000đ – 150.000đ/ngày (xe ga)"
+    },
+    {
+      "claim": "Ngọc Tiến công bố xe số 100.000đ – 130.000đ/ngày và xe ga 120.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-phan-thiet/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Ngọc Tiến (390 Nguyễn Thông): 100.000đ/ngày – 130.000đ/ngày; 120.000đ/ngày – 150.000đ/ngày"
+    },
+    {
+      "claim": "Tuyết Liên công bố xe số 100.000đ – 130.000đ/ngày và xe ga 120.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-phan-thiet/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Tuyết Liên (98 Nguyễn Đình Chiểu, Mũi Né): 100.000 – 130.000đ/ngày; 120.000 – 150.000đ/ngày"
+    },
+    {
+      "claim": "Mr Dư công bố xe số 90.000đ – 120.000đ/ngày và xe ga 140.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-phan-thiet/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Mr Dư (02 Nguyễn Đình Chiểu, Hàm Tiến): 90.000đ – 120.000đ/ngày; 140.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "Hoàng Hiếu cho thuê xe số 80.000đ/ngày và xe ga 120.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-phan-thiet/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Hoàng Hiếu (50 Nguyễn Đình Chiểu): xe số 80.000đ/ngày; xe ga 120.000đ/ngày"
+    },
+    {
+      "claim": "Nhi Nguyễn cho thuê xe số 80.000đ/ngày và xe ga 120.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-phan-thiet/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Nhi Nguyễn (41 Huỳnh Thúc Kháng, Hàm Tiến): xe số 80.000đ/ngày; xe ga 120.000đ/ngày"
+    },
+    {
+      "claim": "Nhóm điểm cho thuê quanh ga Phan Thiết công bố 120.000đ – 250.000đ/xe/ngày",
+      "source_url": "https://motorbike.vn/thue-xe-may-mui-ne/",
+      "source_domain": "motorbike.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thuê tại ga Phan Thiết (Lê Duẩn, Phong Nẫm): 120.000VNĐ – 250.000VNĐ/xe/ngày"
+    },
+    {
+      "claim": "Một điểm cho thuê trên đường Lê Duẩn công bố 100.000đ – 160.000đ/xe/ngày",
+      "source_url": "https://motorbike.vn/thue-xe-may-mui-ne/",
+      "source_domain": "motorbike.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Mr Năm (Lê Duẩn, Phong Nẫm): 100.000VNĐ – 160.000VNĐ/xe/ngày"
+    },
+    {
+      "claim": "Có điểm nhận đặt trước rồi liên hệ chốt xe sau khoảng 15 phút",
+      "source_url": "https://motorbike.vn/thue-xe-may-mui-ne/",
+      "source_domain": "motorbike.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Anh Châu: từ 100.000VNĐ/xe/ngày; sau khoảng 15 phút liên hệ"
+    },
+    {
+      "claim": "Xe cho thuê thường kèm hai mũ bảo hiểm, hai áo mưa và một lít xăng",
+      "source_url": "https://motorbike.vn/thue-xe-may-mui-ne/",
+      "source_domain": "motorbike.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Kèm theo 2 mũ bảo hiểm, 2 áo mưa và 1 lít xăng"
+    }
+  ]
+}
