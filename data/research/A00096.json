@@ -1,0 +1,179 @@
+{
+  "article_id": "A00096",
+  "primary_keyword": "thuê xe máy Đền Hùng",
+  "secondary_keywords": [],
+  "search_intent": "informational — người đọc cần biết có nên thuê xe máy để đi Đền Hùng, nhận xe ở Hà Nội hay Việt Trì, khung giá thuê tham khảo tại Việt Trì, thủ tục và kinh nghiệm đi mùa Giỗ Tổ Hùng Vương",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Đền Hùng",
+    "núi Nghĩa Lĩnh",
+    "xã Hy Cương",
+    "thành phố Việt Trì",
+    "tỉnh Phú Thọ",
+    "đền Thượng",
+    "núi Sim",
+    "vườn quốc gia Xuân Sơn",
+    "đồi chè Long Cốc",
+    "chùa Tây Thiên",
+    "đại lộ Hùng Vương",
+    "phường Thanh Miếu",
+    "Vân Phú",
+    "Giỗ Tổ Hùng Vương"
+  ],
+  "vehicle_entities": [
+    "xe ga",
+    "xe số",
+    "xe côn tay"
+  ],
+  "brand_entities": [
+    "Honda"
+  ],
+  "model_entities": [
+    "Vision",
+    "Wave",
+    "Sirius",
+    "Exciter"
+  ],
+  "questions_found": [
+    "Thuê xe máy đi Đền Hùng thì nhận xe ở đâu?",
+    "Giá thuê xe máy tại Việt Trì bao nhiêu một ngày?",
+    "Đền Hùng cách trung tâm Việt Trì bao xa?",
+    "Đi xe máy từ Hà Nội lên Đền Hùng có phù hợp không?",
+    "Mùa Giỗ Tổ có khó thuê xe ở Việt Trì không?"
+  ],
+  "related_queries": [
+    "thue xe may den hung",
+    "thue xe may viet tri gia",
+    "cho thue xe may phu tho",
+    "den hung cach viet tri bao xa",
+    "gio to hung vuong 10/3 am lich"
+  ],
+  "serp_patterns": [
+    "Bảng tổng hợp địa chỉ cho thuê xe máy Việt Trì – Phú Thọ (motogo, tripbike, giahuy) chiếm vị trí cao, kèm khung giá niêm yết theo ngày",
+    "Trang Wikipedia và các trang du lịch lớn (vinpearl) chiếm vị trí đầu cho truy vấn về vị trí, lịch sử và lễ hội Đền Hùng",
+    "Các trang dịch vụ xe đi Đền Hùng từ Hà Nội (xelinhan) xuất hiện cho truy vấn \"thuê xe đi Đền Hùng\" — khách có nhu cầu thuê cả xe máy lẫn ô tô"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://vi.wikipedia.org/wiki/%C4%90%E1%BB%81n_H%C3%B9ng",
+      "source_domain": "vi.wikipedia.org",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Đền Hùng trên núi Nghĩa Lĩnh, xã Hy Cương, tỉnh Phú Thọ; lễ hội hàng năm vào 10 tháng 3 âm lịch; núi cao 175 mét, cách trung tâm TP Việt Trì khoảng 10 km; xếp hạng khu di tích đặc biệt quốc gia 1962; đền Lạc Long Quân trên núi Sim cách núi Nghĩa Lĩnh khoảng 1 km"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-viet-tri-phu-tho/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá các cửa hàng Việt Trì: khu Liên Phương xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 150.000đ/ngày; Trần Nguyên Hãn xe số 80.000đ – 100.000đ/ngày; Vân Phú (Sao Việt) xe số 80.000đ – 120.000đ/ngày, xe ga 120.000đ -160.000đ/ngày; Thủy Hùng 44 Đại lộ Hùng Vương"
+    },
+    {
+      "source_url": "https://giahuy.org/thue-xe-may-phu-tho/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Viet Tri Motorbike cho thuê dao động từ 100k-200k, xe phổ thông tay số 100k, xe tay côn Exciter 200k; Sao Việt thủ tục không cầu kỳ, không cần đặt cọc, chỉ để lại giấy tùy thân, có trang bị mũ bảo hiểm"
+    },
+    {
+      "source_url": "https://vinpearl.com/vi/le-hoi-den-hung-phu-tho-bieu-tuong-van-hoa-cao-dep-cua-dan-toc",
+      "source_domain": "vinpearl.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Lễ hội Đền Hùng tổ chức tại Đền Hùng trên núi Nghĩa Lĩnh, xã Hy Cương, thành phố Việt Trì; Giỗ Tổ là mồng 10 tháng 3 âm lịch, trước đó hàng tuần đã diễn ra nhiều hoạt động và kết thúc bằng lễ rước kiệu, dâng hương tại Đền Thượng"
+    },
+    {
+      "source_url": "https://tripbike.net/thue-xe-may-viet-tri/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Các điểm du lịch Phú Thọ gồm Đồi chè Long Cốc, Cầu đi bộ – Lầu kén rể, Cánh đồng cỏ lau, Vườn quốc gia Xuân Sơn, Đền Hùng; Thủy Hùng ở 44 Đại lộ Hùng Vương, phường Thanh Miếu"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/",
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-phu-tho/",
+    "/lab/thue-xe-may/thue-xe-may-chua-tay-thien/",
+    "/lab/thue-xe-may/thue-xe-may-ba-vi/",
+    "/lab/thue-xe-may/thue-honda-vision-ha-noi/"
+  ],
+  "potential_cannibalization": "Hàng CG-rental-poi-den-hung theo matrix; từ khóa chính chưa có bài nào trên site sử dụng. Bài thuê xe máy Phú Thọ (geo) và thuê xe máy Chùa Tây Thiên (POI lân cận) đã publish với intent khác, được dẫn liên kết thay vì tranh từ khóa.",
+  "unique_angle": "Bài gộp hai phương án nhận xe (phượt đường trường từ Hà Nội theo hướng quốc lộ 32 hoặc nhận xe ngay tại Việt Trì cách khu di tích khoảng 10 km) trong cùng khung giá niêm yết công khai, đồng thời gắn chi tiết mùa Giỗ Tổ 10 tháng 3 âm lịch — yếu tố quyết định cung — cầu xe thuê tại địa phương.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Giá là mức niêm yết công khai của các cửa hàng/quần bày tổng hợp tại thời điểm nghiên cứu, thay đổi theo mùa lễ hội và quy định của từng cửa hàng. Không nêu địa chỉ do mình tự chế — mọi địa bàn, cửa hàng đều dẫn theo nguồn đã mở.",
+  "claim_evidence": [
+    {
+      "claim": "Quần thể di tích Đền Hùng nằm trên núi Nghĩa Lĩnh cao 175 mét, thuộc xã Hy Cương, tỉnh Phú Thọ, cách trung tâm thành phố Việt Trì khoảng 10 km",
+      "source_url": "https://vi.wikipedia.org/wiki/%C4%90%E1%BB%81n_H%C3%B9ng",
+      "source_domain": "vi.wikipedia.org",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Quần thể di tích đền Hùng nằm từ chân núi đến đỉnh ngọn núi Nghĩa Lĩnh cao 175 mét … thuộc địa phận xã Hy Cương, tỉnh Phú Thọ … cách trung tâm thành phố Việt Trì khoảng 10 km"
+    },
+    {
+      "claim": "Lễ hội Đền Hùng – Giỗ Tổ Hùng Vương tổ chức hàng năm vào ngày 10 tháng 3 âm lịch tại khu di tích",
+      "source_url": "https://vi.wikipedia.org/wiki/%C4%90%E1%BB%81n_H%C3%B9ng",
+      "source_domain": "vi.wikipedia.org",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "gắn với Giỗ Tổ Hùng Vương - Lễ hội Đền Hùng được tổ chức tại địa điểm đó hàng năm vào ngày 10 tháng 3 âm lịch"
+    },
+    {
+      "claim": "Trước ngày chính hội, lễ hội đã diễn ra hàng tuần và kết thúc bằng lễ rước kiệu, dâng hương tại Đền Thượng",
+      "source_url": "https://vinpearl.com/vi/le-hoi-den-hung-phu-tho-bieu-tuong-van-hoa-cao-dep-cua-dan-toc",
+      "source_domain": "vinpearl.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Ngày Giỗ Tổ Hùng Vương là ngày mồng 10 tháng 3 âm lịch hàng năm, thế nhưng trước đó hàng tuần, lễ hội đã được tổ chức với nhiều hoạt động văn hoá đặc sắc, và sẽ kết thúc bằng Lễ rước kiệu và dâng hương tại Đền Thượng"
+    },
+    {
+      "claim": "Một cửa hàng ở khu Liên Phương, TP Việt Trì niêm yết xe số 90.000đ – 120.000đ/ngày và xe ga 140.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-viet-tri-phu-tho/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Tổ 50, khu Liên Phương, TP Việt Trì, Phú Thọ Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "Cửa hàng ở đường Trần Nguyên Hãn, phường Thanh Miếu niêm yết xe số 80.000đ – 100.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-viet-tri-phu-tho/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Trần Nguyên Hãn, Phường Thanh Miếu, Tp Việt Trì, Phú Thọ Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga:"
+    },
+    {
+      "claim": "Cửa hàng Sao Việt ở Vân Phú niêm yết xe số 80.000đ – 120.000đ/ngày và xe ga 120.000đ – 160.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-viet-tri-phu-tho/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "117, Tổ 26A, Vân Phú, Thành phố Việt Trì, Phú Thọ Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày"
+    },
+    {
+      "claim": "Trung tâm Việt Trì Motorbike cho thuê với mức dao động 100k-200k, xe số 100k, xe côn tay Exciter 200k",
+      "source_url": "https://giahuy.org/thue-xe-may-phu-tho/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Và mức giá Viet Tri Motorbike đang cho thuê dao động từ 100k -200k, xe phổ thông tay số 100k, xe tay côn exciter 200k"
+    },
+    {
+      "claim": "Có cửa hàng tại Việt Trì thủ tục không cầu kỳ, không cần đặt cọc, chỉ để lại giấy tùy thân",
+      "source_url": "https://giahuy.org/thue-xe-may-phu-tho/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Còn thủ tục thuê xe không cầu kì, không cần đặt cọc, chỉ để lại giấy tùy thân là có thể thuê xe"
+    },
+    {
+      "claim": "Đền thờ Lạc Long Quân trên núi Sim cách núi Nghĩa Lĩnh khoảng 1 km về phía Đông Nam",
+      "source_url": "https://vi.wikipedia.org/wiki/%C4%90%E1%BB%81n_H%C3%B9ng",
+      "source_domain": "vi.wikipedia.org",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Hiện nay đền thờ Lạc Long Quân nằm tại núi Sim của khu di tích lịch sử Đền Hùng, cách núi Nghĩa Lĩnh (hay còn gọi là núi Hùng) khoảng 1 km về phía Đông Nam"
+    },
+    {
+      "claim": "Đền Hùng được xếp hạng khu di tích đặc biệt của quốc gia từ năm 1962",
+      "source_url": "https://vi.wikipedia.org/wiki/%C4%90%E1%BB%81n_H%C3%B9ng",
+      "source_domain": "vi.wikipedia.org",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Đền Hùng được Bộ Văn hóa thông tin xếp hạng là khu di tích đặc biệt của quốc gia vào năm 1962"
+    },
+    {
+      "claim": "Các điểm du lịch quanh Phú Thọ gồm Đồi chè Long Cốc, Cầu đi bộ – Lầu kén rể, Cánh đồng cỏ lau, Vườn quốc gia Xuân Sơn, Đền Hùng",
+      "source_url": "https://tripbike.net/thue-xe-may-viet-tri/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Phú Thọ khám phá những địa danh du lịch Đồi chè Long Cốc, Cầu đi bộ – Lầu kén rể, Cánh đồng cỏ lau, Vườn quốc gia Xuân Sơn, Đền Hùng…"
+    }
+  ]
+}

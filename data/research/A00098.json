@@ -1,0 +1,148 @@
+{
+  "article_id": "A00098",
+  "primary_keyword": "giá thuê Vision Hải Phòng",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết khung giá thuê Honda Vision tại Hải Phòng theo nguồn niêm yết công khai, các khoản đi kèm (mũ, áo mưa, cọc, giao xe), cách tính phụ thu quá giờ và kinh nghiệm đặt xe hợp lý",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Hải Phòng",
+    "Đồ Sơn",
+    "đảo Cát Bà",
+    "cầu Bính",
+    "sân bay quốc tế Cát Bi",
+    "quận Lê Chân",
+    "quận Ngô Quyền",
+    "quốc lộ 5",
+    "ga Hải Phòng"
+  ],
+  "vehicle_entities": [
+    "xe ga",
+    "xe số",
+    "xe tay ga"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Vision",
+    "Airblade",
+    "Lead",
+    "Click"
+  ],
+  "questions_found": [
+    "Thuê Honda Vision ở Hải Phòng giá bao nhiêu một ngày?",
+    "Thuê Vision ở Hải Phòng có phải đặt cọc không?",
+    "Thuê xe theo tuần, theo tháng ở Hải Phòng có rẻ hơn không?",
+    "Giữ xe quá giờ trả bị tính thế nào?",
+    "Vision có phù hợp chạy từ trung tâm Hải Phòng ra Đồ Sơn không?"
+  ],
+  "related_queries": [
+    "gia thue vision hai phong",
+    "cho thue xe may vision hai phong",
+    "thue xe may hai phong gia",
+    "thue xe ga hai phong bao nhieu tien",
+    "thue xe may cat bi"
+  ],
+  "serp_patterns": [
+    "Trang niêm yết giá riêng cho dòng Honda Vision của các cửa hàng địa phương (thuexemayhaiphong.com) xếp đầu cho truy vấn model-specific",
+    "Nền tảng tổng hợp đặt vé (vexere) hiển thị bảng giá trung bình theo dòng xe và chính sách phụ thu quá giờ cho thuê xe máy tại Hải Phòng",
+    "Trang hướng dẫn tổng hợp (motogo) chiếm vị trí cao với khung giá 70.000 – 180.000vnd/ngày kèm địa chỉ cửa hàng giao tận nơi"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://thuexemayhaiphong.com/xe-thue/honda-vision/",
+      "source_domain": "thuexemayhaiphong.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision 120.000 ₫/ Ngày; kèm 02 mũ bảo hiểm 1/2 đầu, 02 áo mưa dùng một lần, bảo hiểm + đăng ký xe photo, dịch vụ cứu hộ"
+    },
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hai-phong.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe ga Hải Phòng trung bình từ 130.000 đến 160.000 đồng một ngày; Honda Airblade, Honda Lead, Honda Vision, Honda Click là các dòng được ưa chuộng; giữ xe qua ngày không quá 5 tiếng phụ thu khoảng 10.000 mỗi giờ; gói kèm mũ bảo hiểm, xăng 1 lít, giao tận nơi, không cần cọc trước từ 130.000đ"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-hai-phong/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe máy tại Hải Phòng dao động từ 70.000 – 180.000vnd/ngày tùy dòng xe ga hay xe số; thuê theo tuần, theo tháng giá giảm đáng kể; xe khách/tàu hỏa Hà Nội – Hải Phòng khoảng 100k/người"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thông số Honda Vision: khối lượng bản thân 97 kg, bánh xe trước 16 inch, động cơ eSP 110cc 4 kỳ xy-lanh đơn làm mát bằng không khí, bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/",
+    "/lab/thue-xe-may/",
+    "/lab/thue-xe-may/thue-xe-may-hai-phong/",
+    "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+    "/lab/thue-xe-may/vision-hay-air-blade-nen-thue-dong-nao/",
+    "/lab/thue-xe-may/thue-xe-may-gan-san-bay-quoc-te-cat-bi/"
+  ],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-hai-phong theo matrix; từ khóa \"giá thuê Vision Hải Phòng\" chưa có bài nào dùng. Bài thuê xe máy Hải Phòng (geo hub) và thuê Honda Vision Hà Nội (model) đã publish với intent khác, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài tập trung vào góc giá của riêng dòng Honda Vision tại Hải Phòng: đối chiếu mức niêm yết riêng của cửa hàng địa phương với khung trung bình thị trường xe ga thành phố, kèm các khoản phí phụ thu thường gặp (quá giờ, theo tuần/tháng) — thứ mà bài geo hub không đi sâu.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Giá là niêm yết công khai tại thời điểm nghiên cứu, có thể thay đổi tùy mùa và quy định của từng cửa hàng; không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Đơn vị Thuê Xe Máy Hải Phòng LV niêm yết Honda Vision 120.000 ₫/ngày kèm 2 mũ bảo hiểm, áo mưa và photo đăng ký xe",
+      "source_url": "https://thuexemayhaiphong.com/xe-thue/honda-vision/",
+      "source_domain": "thuexemayhaiphong.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision 120.000 ₫/ Ngày * 02 mũ bảo hiểm 1/2 đầu * 02 áo mưa dùng một lần * Bảo hiểm + Đăng ký xe photo * Dịch vụ cứu hộ"
+    },
+    {
+      "claim": "Giá thuê xe ga tại Hải Phòng trung bình từ 130.000 đến 160.000 đồng một ngày; Honda Vision là một trong các dòng xe tay ga được ưa chuộng và cho thuê nhiều nhất",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hai-phong.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe ga Hải Phòng không cao hơn nhiều so với xe số, với mức trung bình từ 130.000 đến 160.000 đồng một ngày. Honda Airblade, Honda Lead, Honda Vision, hay Honda Click là những dòng xe tay ga được ưa chuộng và cho thuê nhiều nhất tại Hải Phòng"
+    },
+    {
+      "claim": "Giữ xe qua ngày kế tiếp không quá 5 tiếng thường chỉ phụ thu thêm khoảng 10.000 mỗi giờ cho tới chi phí nửa ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hai-phong.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Trường hợp giữ xe qua ngày kế tiếp không quá 5 tiếng, bạn thường chỉ phải phụ thu thêm khoảng 10.000 mỗi giờ cho tới chi phí cho nửa ngày thuê xe"
+    },
+    {
+      "claim": "Có gói niêm yết kèm mũ bảo hiểm, 1 lít xăng, giao xe tận nơi, không cần cọc trước từ 130.000đ",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hai-phong.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Mũ bảo hiểm, Xăng (1 lít) Giao xe tận nơi Không cần cọc trước từ 130.000đ"
+    },
+    {
+      "claim": "Khung giá thuê xe máy tại Hải Phòng dao động 70.000 – 180.000vnd/ngày tùy dòng xe ga hay xe số; thuê theo tuần, theo tháng giá giảm đáng kể",
+      "source_url": "https://motogo.vn/thue-xe-may-hai-phong/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Gía thuê xe máy tại Hải Phòng dao động từ 70.000 – 180.000vnd/ngày tùy từng dòng xe bạn thuê là xe ga hay xe số. Nếu bạn thuê xe theo tuần hay theo tháng thì giá thuê xe sẽ giảm đáng kể"
+    },
+    {
+      "claim": "Đi từ Hà Nội tới Hải Phòng bằng xe khách hoặc tàu hỏa có mức giá phổ biến khoảng 100k/người",
+      "source_url": "https://motogo.vn/thue-xe-may-hai-phong/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bạn có thể đến Hải Phòng bằng xe khách hoặc tàu hỏa, giá đều dao động khoảng 100k/người"
+    },
+    {
+      "claim": "Thuê xe máy giúp dễ dàng khám phá Đồ Sơn, Cát Bà, cầu Bính và food tour quanh trung tâm Hải Phòng",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hai-phong.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "thuê xe máy giúp bạn dễ dàng khám phá Đồ Sơn, Cát Bà, Cầu Bính và thực hiện những chuyến food tour hấp dẫn quanh trung tâm"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ eSP 110cc, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … Động cơ eSP … 110cc, 4 kỳ, xy-lanh đơn, làm mát bằng không khí … Dung tích bình xăng 4,8 lít"
+    }
+  ]
+}
