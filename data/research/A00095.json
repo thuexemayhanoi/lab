@@ -1,0 +1,178 @@
+{
+  "article_id": "A00095",
+  "primary_keyword": "thuê xe máy Chùa Tây Thiên",
+  "secondary_keywords": [],
+  "search_intent": "informational — du khách cần quãng đường Hà Nội – Tây Thiên, bảng giá thuê xe máy tại Hà Nội theo dòng xe, giá vé cáp treo và xe điện kèm giờ vận hành, cùng kinh nghiệm tự lái cuối tuần lên Tam Đảo",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Chùa Tây Thiên",
+    "Thiền viện Trúc Lâm Tây Thiên",
+    "khu di tích Tây Thiên cổ tự",
+    "núi Thạch Bàn",
+    "thị trấn Đại Đình",
+    "huyện Tam Đảo",
+    "tỉnh Vĩnh Phúc",
+    "Hà Nội",
+    "Tam Đảo"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe ga",
+    "xe côn tay"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Winner X"
+  ],
+  "questions_found": [
+    "Từ Hà Nội đến Chùa Tây Thiên bao xa?",
+    "Thuê xe máy ở Hà Nội giá bao nhiêu một ngày?",
+    "Vé cáp treo Tây Thiên giá bao nhiêu?",
+    "Cáp treo Tây Thiên hoạt động đến mấy giờ?",
+    "Đi Tây Thiên nên chọn xe số hay xe ga?"
+  ],
+  "related_queries": [
+    "thue xe may di chua tay thien",
+    "chua tay thien cach ha noi bao xa",
+    "gia ve cap treo tay thien",
+    "thue xe may ha noi gia",
+    "tu ha noi den tay thien bao nhieu km"
+  ],
+  "serp_patterns": [
+    "Trang cập nhật giá vé cáp treo Tây Thiên kèm giờ vận hành (dulichgiatot)",
+    "Trang giá thuê xe máy Hà Nội theo từng dòng xe cụ thể (motogo)",
+    "Cẩm nang du lịch về chùa Tây Thiên/thiền viện (mia) ghi nhận khoảng cách 85km",
+    "Trang hỏi đáp khoảng cách Hà Nội – Tây Thiên (xeducvinh) ghi nhận khoảng 80km tùy điểm tính"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://dulichgiatot.com.vn/gia-ve-cap-treo-tay-thien-vinh-phuc.html",
+      "source_domain": "dulichgiatot.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá vé cáp treo Tây Thiên một chiều/khứ hồi cho người lớn và trẻ em, giá vé xe điện, giờ vận hành cáp treo"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-ha-noi/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe máy Hà Nội theo dòng xe Sirius/Vision/Air Blade/Winner X và quy tắc tính ngày thuê 24h"
+    },
+    {
+      "source_url": "https://mia.vn/cam-nang-du-lich/kham-pha-chua-tay-thien-voi-gia-tri-van-hoa-lich-su-doc-dao-12230",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Chùa Tây Thiên cách Hà Nội khoảng 85km về phía Tây Bắc, là một trong ba thiền viện lớn nhất Việt Nam"
+    },
+    {
+      "source_url": "https://xeducvinh.com.vn/tay-thien-cach-ha-noi-bao-xa/",
+      "source_domain": "xeducvinh.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khu di tích Tây Thiên tại núi Thạch Bàn, thị trấn Đại Đình, huyện Tam Đảo; cách Hà Nội khoảng 80km; Thiền viện Trúc Lâm Tây Thiên khởi lập 2004"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/",
+    "/lab/thue-xe-may/",
+    "/lab/kinh-nghiem/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/",
+    "/lab/thue-xe-may/thue-xe-may-tam-dao/",
+    "/lab/thue-xe-may/thue-xe-may-chua-huong/",
+    "/lab/thue-xe-may/thue-xe-may-phu-tho/"
+  ],
+  "potential_cannibalization": "Nhóm CG-rental-poi-chua-tay-thien theo matrix; chưa có bài nào trên site dùng từ khóa chính. Bài thuê xe máy Tam Đảo, Chùa Hương, Phú Thọ đã publish thuộc POI khác, được dẫn liên quan thay vì tranh từ khóa.",
+  "unique_angle": "Bài ghép ba mảng quyết định của người tự lái từ Hà Nội trong một trang: bảng giá thuê theo dòng xe cụ thể (xe số rẻ nhất tới xe côn tay), khoảng cách 80km – 85km tùy điểm tính, và bảng giá cáp treo/xe điện kèm giờ vận hành từ 7h tới 17h30 để kẹp lịch trình trong ngày.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Giá vé và giá thuê là mức niêm yết công khai tại thời điểm nghiên cứu, có thể thay đổi theo mùa và dịp lễ; giờ vận hành cáp treo có thể thay đổi vào ngày rằm, cuối tuần.",
+  "claim_evidence": [
+    {
+      "claim": "Vé cáp treo Tây Thiên một chiều: người lớn 150.000 đồng/người, trẻ em từ 1m – 1,3m 100.000 đồng/trẻ em, trẻ dưới 1m miễn phí",
+      "source_url": "https://dulichgiatot.com.vn/gia-ve-cap-treo-tay-thien-vinh-phuc.html",
+      "claim_supported": "Giá vé cáp treo Tây Thiên 1 chiều: Người lớn: 150.000 đồng/người, Trẻ em từ 1m – 1,3m: 100.000 đồng/trẻ em, Trẻ dưới 1m: Miễn phí",
+      "source_domain": "dulichgiatot.com.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Vé cáp treo Tây Thiên khứ hồi: người lớn 240.000 đồng/người, trẻ em từ 1m – 1,3m 160.000 đồng/trẻ em",
+      "source_url": "https://dulichgiatot.com.vn/gia-ve-cap-treo-tay-thien-vinh-phuc.html",
+      "claim_supported": "Giá vé cáp treo Tây Thiên khứ hồi: Người lớn: 240.000 đồng/người, Trẻ em từ 1m – 1,3m 160.000 đồng/trẻ em, Trẻ dưới 1m: Miễn phí",
+      "source_domain": "dulichgiatot.com.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Vé xe điện ở Tây Thiên 20.000đ/người, khứ hồi 40.000đ/người",
+      "source_url": "https://dulichgiatot.com.vn/gia-ve-cap-treo-tay-thien-vinh-phuc.html",
+      "claim_supported": "Giá vé xe điện ở Tây Thiên: 20.000đ/người (khứ hồi: 40.000đ/người)",
+      "source_domain": "dulichgiatot.com.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Cáp treo Tây Thiên vận hành từ 7h tới 17h30 các ngày trong tuần",
+      "source_url": "https://dulichgiatot.com.vn/gia-ve-cap-treo-tay-thien-vinh-phuc.html",
+      "claim_supported": "Thời gian vận hành cáp treo: Từ 7h tới 17h30 các ngày trong tuần",
+      "source_domain": "dulichgiatot.com.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Thuê Yamaha Sirius 110cc tại Hà Nội 130.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-noi/",
+      "claim_supported": "Sirius 110cc 130.000đ/ngày",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Thuê Honda Vision 110cc tại Hà Nội 180.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-noi/",
+      "claim_supported": "Vision 110cc 180.000đ/ngày",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Thuê Honda Air Blade 125cc tại Hà Nội 200.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-noi/",
+      "claim_supported": "Air Blade 125cc 200.000đ/ngày",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Thuê Honda Winner X 150cc tại Hà Nội 300.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-noi/",
+      "claim_supported": "Winner X 150cc 300.000đ/ngày",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Mỗi ngày thuê xe tính là 24h kể từ thời điểm thuê xe",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-noi/",
+      "claim_supported": "1 ngày thuê xe là 24h, tính từ thời điểm thuê xe",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Chùa Tây Thiên cách Hà Nội khoảng 85km về phía Tây Bắc và là một trong ba thiền viện lớn nhất Việt Nam",
+      "source_url": "https://mia.vn/cam-nang-du-lich/kham-pha-chua-tay-thien-voi-gia-tri-van-hoa-lich-su-doc-dao-12230",
+      "claim_supported": "Chùa Tây Thiên nằm cách Hà Nội khoảng 85km về phía Tây Bắc và là một trong ba thiền viện lớn nhất Việt Nam",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Khu di tích Tây Thiên tại núi Thạch Bàn, thị trấn Đại Đình, huyện Tam Đảo, Vĩnh Phúc, cách trung tâm Hà Nội khoảng 80km về hướng Tây Bắc",
+      "source_url": "https://xeducvinh.com.vn/tay-thien-cach-ha-noi-bao-xa/",
+      "claim_supported": "Khu di tích Tây Thiên tọa lạc ngay tại núi Thạch Bàn, thuộc thị trấn Đại Đình, huyện Tam Đảo, Vĩnh Phúc, cách trung tâm thủ đô Hà Nội khoảng 80km về hướng phía Tây Bắc",
+      "source_domain": "xeducvinh.com.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Thiền viện Trúc Lâm Tây Thiên thuộc dòng thiền Trúc Lâm Yên Tử, khởi lập năm 2004, nằm tại thị trấn Đại Đình, cách Hà Nội khoảng 85 km về phía tây",
+      "source_url": "https://xeducvinh.com.vn/tay-thien-cach-ha-noi-bao-xa/",
+      "claim_supported": "Thiền viện thuộc dòng thiền Trúc Lâm Yên Tử nằm tại thị trấn Đại Đình, huyện Tam Đảo, tỉnh Vĩnh Phúc, cách Hà Nội khoảng 85 km về phía tây... Khởi lập: 2004",
+      "source_domain": "xeducvinh.com.vn",
+      "date_accessed": "2026-10-02"
+    }
+  ]
+}

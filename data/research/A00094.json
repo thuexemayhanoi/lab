@@ -1,0 +1,191 @@
+{
+  "article_id": "A00094",
+  "primary_keyword": "thuê xe máy Đèo Hải Vân",
+  "secondary_keywords": [],
+  "search_intent": "informational — du khách cần biết nên nhận xe máy ở Huế hay Đà Nẵng để đi đèo Hải Vân, khung giá thuê tham khảo, phí tham quan Hải Vân Quan, quy định của hầm đối với xe máy và kinh nghiệm lái đèo an toàn",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Đèo Hải Vân",
+    "Hải Vân Quan",
+    "hầm Hải Vân",
+    "Thừa Thiên Huế",
+    "TP Huế",
+    "Đà Nẵng",
+    "vịnh Lăng Cô",
+    "quốc lộ 1A",
+    "Cây Thông Cô Đơn",
+    "Quán Cafe Hòn Đá Cụ Rùa"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe ga",
+    "xe côn tay"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Exciter",
+    "Winner"
+  ],
+  "questions_found": [
+    "Thuê xe máy đi đèo Hải Vân giá bao nhiêu một ngày?",
+    "Xe máy có được đi qua hầm Hải Vân không?",
+    "Vé tham quan Hải Vân Quan bao nhiêu tiền?",
+    "Nên nhận xe ở Huế hay Đà Nẵng để đi đèo Hải Vân?",
+    "Thủ tục nhận xe mất bao lâu?"
+  ],
+  "related_queries": [
+    "thue xe may deo hai van",
+    "hai van quan ve tham quan",
+    "thue xe may da nang gia",
+    "thue xe may hue gia",
+    "xe may co duoc di ham hai van khong"
+  ],
+  "serp_patterns": [
+    "Báo chí chính thống đưa nghị quyết của HĐND TP Huế về mức phí tham quan Hải Vân Quan (VOV)",
+    "Trang tổng hợp giá thuê xe máy theo thành phố (motogo) có bảng giá cho Đà Nẵng và Huế",
+    "Blog kinh nghiệm phượt đèo Hải Vân bằng xe máy (payd) nhấn mạnh chọn xe số/côn tay và phanh bằng số khi đổ đèo",
+    "Blog hướng dẫn đi hầm Hải Vân (xeghepthuanphat) nhắc rõ xe máy không được qua hầm, có xe trung chuyển"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://vov.vn/van-hoa/di-san/thu-phi-tham-quan-di-tich-quoc-gia-hai-van-quan-voi-muc-70000-dong-post1294351.vov",
+      "source_domain": "vov.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Nghị quyết của HĐND TP Huế về mức thu phí tham quan di tích Hải Vân Quan và khung mức 50.000 - 70.000 đồng/lượt/người"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-da-nang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khung giá thuê xe máy Đà Nẵng 80k-120k xe số, 120k-160k xe ga; nhận xe nhanh; giao xe tận sân bay miễn phí"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-tai-hue/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá thuê xe máy Huế: xe số từ 80k/ngày, xe ga từ 120-150k/ngày, mức niêm yết từ 120.000đ/ngày; thủ tục khoảng 10-15 phút"
+    },
+    {
+      "source_url": "https://payd.vn/vi/blogs/kinh-nghiem-phuot-deo-hai-van-bang-xe-may",
+      "source_domain": "payd.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Đèo Hải Vân dài 20km; Hải Vân Quan ở độ cao 500m là ranh giới giữa Đà Nẵng và Thừa Thiên Huế; khuyên dùng xe số/côn tay và phanh bằng số"
+    },
+    {
+      "source_url": "https://xeghepthuanphat.com/kinh-nghiem-di-ham-hai-van/",
+      "source_domain": "xeghepthuanphat.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Xe máy không được đi qua hầm Hải Vân, bắt buộc đi đường đèo; tốc độ trong hầm tối đa 70km/h, thấp nhất 40km/h; có xe trung chuyển"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/",
+    "/lab/thue-xe-may/",
+    "/lab/kinh-nghiem/",
+    "/lab/thue-xe-may/thue-xe-may-da-nang/",
+    "/lab/thue-xe-may/thue-xe-may-hue/",
+    "/lab/thue-xe-may/thue-xe-may-ba-na-hills/"
+  ],
+  "potential_cannibalization": "Nhóm CG-rental-poi-deo-hai-van theo matrix; chưa có bài nào trên site dùng từ khóa chính. Các bài thuê xe máy Đà Nẵng, Huế, Bà Nà Hills, cố đô Huế đã publish thuộc POI/hub khác, được dẫn liên kết thay vì tranh từ khóa.",
+  "unique_angle": "Bài gộp mặt bằng giá của cả hai đầu đèo (Huế và Đà Nẵng) trong một bảng tham khảo, đồng thời làm rõ hai ràng buộc đặc thù của cung đường này: xe máy bị cấm qua hầm Hải Vân nên bắt buộc đi đường đèo, và mức phí tham quan Hải Vân Quan 70.000 đồng/lượt/người áp dụng chung cho khách Việt Nam và quốc tế.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Giá thuê là mức tham khảo công khai của nền tảng tổng hợp tại thời điểm nghiên cứu và thay đổi theo mùa; mức phí tham quan có thể thay đổi theo nghị quyết mới của HĐND TP Huế — luôn kiểm tra niêm yết tại chỗ.",
+  "claim_evidence": [
+    {
+      "claim": "Mức phí tham quan Hải Vân Quan là 70.000 đồng/lượt/người, áp dụng thống nhất đối với khách Việt Nam và khách quốc tế",
+      "source_url": "https://vov.vn/van-hoa/di-san/thu-phi-tham-quan-di-tich-quoc-gia-hai-van-quan-voi-muc-70000-dong-post1294351.vov",
+      "claim_supported": "Theo nghị quyết của Hội đồng Nhân dân thành phố Huế, mức phí tham quan Hải Vân Quan là 70.000 đồng/lượt/người, áp dụng thống nhất đối với khách Việt Nam và khách quốc tế",
+      "source_domain": "vov.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "HĐND TP Huế từng thống nhất khung mức thu phí từ 50.000 - 70.000 đồng/lượt/người",
+      "source_url": "https://vov.vn/van-hoa/di-san/thu-phi-tham-quan-di-tich-quoc-gia-hai-van-quan-voi-muc-70000-dong-post1294351.vov",
+      "claim_supported": "thống nhất khung mức thu phí từ 50.000 - 70.000 đồng/lượt/người",
+      "source_domain": "vov.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Việc thu phí nhằm bù đắp chi phí bảo tồn, tu bổ và quản lý di tích",
+      "source_url": "https://vov.vn/van-hoa/di-san/thu-phi-tham-quan-di-tich-quoc-gia-hai-van-quan-voi-muc-70000-dong-post1294351.vov",
+      "claim_supported": "Việc thu phí nhằm bù đắp chi phí bảo tồn, tu bổ và quản lý di tích, đồng thời bảo đảm công khai, minh bạch và đúng quy định",
+      "source_domain": "vov.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Ở Đà Nẵng, khung giá thuê xe máy dao động 80k-120k cho xe số và 120k-160k cho xe ga",
+      "source_url": "https://motogo.vn/thue-xe-may-da-nang/",
+      "claim_supported": "Khung giá tại đây dao động từ 80k-120k cho xe số và 120k-160k cho xe ga",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Thủ tục nhận xe tại Đà Nẵng nhanh, khoảng 5 phút",
+      "source_url": "https://motogo.vn/thue-xe-may-da-nang/",
+      "claim_supported": "khoảng 5 phút là đã nhận được xe máy ngay, các bạn không cần phải đợi lâu",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Một số điểm cho thuê ở Đà Nẵng hỗ trợ giao xe tận sân bay miễn phí",
+      "source_url": "https://motogo.vn/thue-xe-may-da-nang/",
+      "claim_supported": "tại đây có dịch vụ giao xe tận sân bay hoàn toàn miễn phí",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Ở Huế xe số chỉ từ 80k/ngày, xe ga giá từ 120-150k/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-hue/",
+      "claim_supported": "Với xe số chỉ từ 80k/ngày, xe ga giá từ 120-150k/ngày",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Thời gian làm thủ tục thuê xe ở Huế khoảng 10-15 phút",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-hue/",
+      "claim_supported": "chỉ mất khoảng 10-15 phút để thuê xe",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Một số nhà xe ở Huế niêm yết giá thuê từ 120.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-hue/",
+      "claim_supported": "Giá thuê xe: từ 120.000đ/ngày",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Đèo Hải Vân dài 20km; Hải Vân Quan nằm ở độ cao 500m, ranh giới tự nhiên giữa Đà Nẵng và Thừa Thiên Huế",
+      "source_url": "https://payd.vn/vi/blogs/kinh-nghiem-phuot-deo-hai-van-bang-xe-may",
+      "claim_supported": "Dọc chiều dài 20km của đèo Hải Vân... Hải Vân Quan (Đỉnh đèo): Nằm ở độ cao 500m so với mực nước biển, đây là ranh giới tự nhiên giữa Đà Nẵng và Thừa Thiên Huế",
+      "source_domain": "payd.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Các điểm dừng chân ngắm cảnh trên đèo gồm Cây Thông Cô Đơn và quán cafe Hòn Đá Cụ Rùa",
+      "source_url": "https://payd.vn/vi/blogs/kinh-nghiem-phuot-deo-hai-van-bang-xe-may",
+      "claim_supported": "Cây Thông Cô Đơn: Nằm lẻ loi bên khúc cua... Quán Cafe Hòn Đá Cụ Rùa: Gần đỉnh đèo có một hòn đá lớn nhô hẳn ra ngoài vực",
+      "source_domain": "payd.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Khi đổ đèo nên dùng phanh bằng số, ưu tiên xe số hoặc xe côn tay Wave, Sirius, Exciter, Winner",
+      "source_url": "https://payd.vn/vi/blogs/kinh-nghiem-phuot-deo-hai-van-bang-xe-may",
+      "claim_supported": "Chọn \"chiến mã\" chuẩn: Bắt buộc phải thuê xe số (Wave, Sirius) hoặc xe côn tay (Exciter, Winner). Khi đổ đèo, bạn phải dùng phanh bằng số (về số 1)",
+      "source_domain": "payd.vn",
+      "date_accessed": "2026-10-02"
+    },
+    {
+      "claim": "Xe máy không được đi qua hầm Hải Vân, bắt buộc chọn đường đèo; trong hầm ô tô giới hạn tốc độ tối đa 70km/h và thấp nhất 40km/h; có xe trung chuyển qua hầm",
+      "source_url": "https://xeghepthuanphat.com/kinh-nghiem-di-ham-hai-van/",
+      "claim_supported": "Tốc độ tối đa 70km/h. Thấp nhất là 40km/h. Xe máy (đi bộ, xe đạp, xe 3 bánh) không được đi qua hầm: Nếu bạn di chuyển bằng xe máy, bắt buộc phải chọn đường đèo Hải Vân. Có thể đi xe trung chuyển qua hầm",
+      "source_domain": "xeghepthuanphat.com",
+      "date_accessed": "2026-10-02"
+    }
+  ]
+}
