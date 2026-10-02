@@ -1519,6 +1519,29 @@
         "A00093"
       ],
       "count": 2
+    },
+    {
+      "op": "qa",
+      "started_at": "2026-10-02T00:29:03.621Z",
+      "finished_at": "2026-10-02T00:29:04.159Z",
+      "elapsed_ms": 538,
+      "ids": [
+        "A00092",
+        "A00093"
+      ],
+      "count": 2
+    },
+    {
+      "op": "publish",
+      "started_at": "2026-10-02T00:29:05.263Z",
+      "finished_at": "2026-10-02T00:29:07.270Z",
+      "elapsed_ms": 2007,
+      "ids": [
+        "A00092",
+        "A00093"
+      ],
+      "published": 2,
+      "phase": "PRODUCTION"
     }
   ]
 }
