@@ -1,0 +1,115 @@
+{
+ "article_id": "A00122",
+ "primary_keyword": "giá thuê Vision Gia Lai",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mức giá thuê Honda Vision tại Gia Lai (Pleiku) theo bảng giá theo đời xe (Vision 120.000 vnd/ngày), đối chiếu 6 điểm ghi nhận quanh Nguyễn Tất Thành, Trường Chinh, Lê Thánh Tôn và lưu ý cọc, cách tính ngày",
+ "research_date": "2026-10-02",
+ "geo_entities": [
+  "Gia Lai",
+  "Pleiku",
+  "biển Hồ Gia Lai",
+  "núi lửa Chư Đen Ya Krăk",
+  "đường Nguyễn Tất Thành",
+  "hồ Yaly"
+ ],
+ "vehicle_entities": [
+  "xe ga",
+  "xe số",
+  "xe tay ga"
+ ],
+ "brand_entities": [
+  "Honda",
+  "Yamaha",
+  "SYM"
+ ],
+ "model_entities": [
+  "Vision",
+  "Airblade",
+  "Lead",
+  "Wave",
+  "Sirius",
+  "Jupiter",
+  "Nouvo",
+  "Attila"
+ ],
+ "questions_found": [
+  "Thuê Honda Vision ở Pleiku giá bao nhiêu một ngày?",
+  "Thuê xe máy Gia Lai cần cọc bao nhiêu?",
+  "Xe ga ở Pleiku có đắt hơn xe số không?",
+  "Ở Pleiku thuê xe máy đâu ghi nhận uy tín?",
+  "Giá thuê xe Gia Lai có thay đổi dịp lễ Tết không?"
+ ],
+ "related_queries": [
+  "gia thue vision gia lai",
+  "cho thue xe may pleiku",
+  "thue xe may gia lai gia",
+  "gia thue xe may pleiku"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Pleiku với 6 điểm ghi nhận tập trung trên trục Nguyễn Tất Thành",
+  "Bảng giá theo đời xe niêm yết Vision 120.000 vnd/ngày; điểm ghi nhận xe ga 150.000đ đến 200.000đ/ngày — mặt bằng cao hơn các tỉnh duyên hải cùng chuỗi"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-gia-lai/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Địa điểm cho thuê xe máy ở Pleiku Gia Lai uy tín nhất … Tổng hợp những địa chỉ cho thuê xe máy Pleiku tốt nhất"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ],
+ "existing_internal_pages": [
+  "/lab/",
+  "/lab/thue-xe-may/",
+  "/lab/thue-xe-may/thue-xe-may-gia-lai/",
+  "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+  "/lab/thue-xe-may/gia-thue-vision-hai-phong/",
+  "/lab/thue-xe-may/gia-thue-vision-nghe-an/"
+ ],
+ "potential_cannibalization": "Hàng CG-rental-price-vision-gia-lai theo matrix; từ khóa \"giá thuê Vision Gia Lai\" chưa có bài nào dùng. Bài geo hub Gia Lai đã publish, được dẫn chéo.",
+ "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Gia Lai: mức 120.000 vnd/ngày theo bảng đời xe đối lập với mặt bằng ghi nhận 150.000đ – 200.000đ/ngày tại các điểm Pleiku — bài giải thích khoảng cách bằng chất lượng xe và đời xe, kèm cọc 500.000đ – 3.000.000đ và lưu ý cách tính 24h.",
+ "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không bịa địa chỉ/số điện thoại. Mọi con số trích từ motogo.vn.",
+ "claim_evidence": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-gia-lai/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Thuê xe Pleiku (35C Nguyễn Tất Thành, phường Hoa Lư, Pleiku) ghi nhận xe số 100.000đ/ngày, xe ga 150.000đ/ngày; Thuê Xe Máy Gia Lai – Giao Nhận Xe Tận Nơi (12 Lý Nam Đế, Phù Đổng, Pleiku) ghi nhận xe số 150.000đ/ngày, xe ga 200.000đ/ngày",
+   "claim_supported": "Thuê xe Pleiku Điện thoại: 096 610 87 77 Địa chỉ: 35C Nguyễn Tất Thành, P. Hoa Lư, Thành phố Pleiku, Gia Lai. Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày 4.5/5 … Thuê Xe Máy Gia Lai – Giao Nhận Xe Tận Nơi Điện thoại: 0888 527 981 Địa chỉ: 12 Lý Nam Đế, Phù Đổng, Thành phố Pleiku, Gia Lai Giá thuê xe số: 150.000đ/ngày Giá thuê xe ga: 200.000đ/ngày 3.0/5"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-gia-lai/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Thuê xe máy tại Gia Lai (290 Nguyễn Tất Thành, Phù Đổng, Pleiku) và IFT Gia Lai (107 Lê Thánh Tôn, phường Diên Hồng) ghi nhận giá thuê xe từ 80.000đ/ngày; Anh Đức (420 Trường Chinh, phường Trà Bá) ghi nhận xe số 150.000đ/ngày; điểm thuê đường Nguyễn Tất Thành (37 Nguyễn Tất Thành, P. Hoa Lư) ghi nhận xe số 150.000đ/ngày",
+   "claim_supported": "Thuê xe máy tại Gia Lai Điện thoại: 0869 697 981 Địa chỉ: 290 Nguyễn Tất Thành, Phù Đổng, Thành phố Pleiku, Gia Lai Giá thuê xe: từ 80.000đ/ngày 4.9/5 … Anh Đức Điện thoại: 098 864 44 46 Địa chỉ: 420 Đ. Trường Chinh, P.Trà Bá, Thành phố Pleiku, Gia Lai. Giá thuê xe số: 150.000đ/ngày 4.9/5 IFT Gia Lai Điện thoại: 094 101 00 33 Địa chỉ: 107 Đường Lê Thánh Tôn, P. Diên Hông, Thành phố Pleiku, Gia Lai. Giá thuê xe: từ 80.000đ/ngày 4.6/5 … Thuê xe máy đường Nguyễn Tất Thành Điện thoại: 0834 271 888 Địa chỉ: 37 Nguyễn Tất Thành, P. Hoa Lư, Thành phố Pleiku, Gia Lai Giá thuê xe số: 150.000đ/ngày N/A"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-gia-lai/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Bảng giá xe máy cho thuê ở Pleiku theo đời xe ghi nhận Honda Vision 120.000 vnd, Lead 120.000 vnd, Airblade 2012 120.000 vnd, Airblade 2013-2015 140.000 vnd, Airblade 2016-2018 160.000 vnd; xe số Wave S, Wave RS 80.000 vnd, RSX-fi, Sirius FI 90.000 vnd, Jupiter gravita 80.000 vnd; Nouvo LX 100.000 vnd, Nouvo SX fi 120.000 vnd, Attila 100.000 vnd",
+   "claim_supported": "Các loại xe – Đời xe Giá thuê xe 1 ngày Xe tay ga Honda Airblade 2012 120.000 vnd Xe tay ga Honda Airblade 2013-2015 140.000 vnd Xe tay ga Honda Airblade 2016- 2017 – 2018 160.000 vnd Xe tay ga Honda Lead 120.000 vnd Xe tay ga Honda Vision 120.000 vnd Xe số Wave S 80.000 vnd Xe số Wave RS 80.000 vnd Xe số Wave RSX – fi 90.000 vnd Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd Xe số Yamaha Jupiter gravita 80.000 vnd Xe tay ga Yamaha Nouvo LX 100.000 vnd Xe tay ga Yamaha Nouvo SX fi 120.000 vnd Xe tay ga attilla Victoria , Elizabeth 100.000 vnd"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-gia-lai/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Tiền đặt cọc thuê xe máy ở Gia Lai dao động khoảng 500.000đ – 3.000.000đ; giá có thể thay đổi dịp lễ Tết; một số cửa hàng tính giá theo ngày, một số tính theo 24h",
+   "claim_supported": "Lưu ý: Giá thuê xe máy ở Gia Lai có thể thay đổi vào dịp lễ, Tết … Số tiền đặt cọc thường dao động trong khoảng 500.000đ – 3.000.000đ … Một số cửa hàng khách lại tính giá theo 24h. Theo đó thời gian sử dụng xe của bạn sẽ được tận dụng tốt hơn. Từ 8h sáng hôm trước đến 8h sáng hôm sau chỉ mất tiền 1 ngày"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … động cơ 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ]
+}

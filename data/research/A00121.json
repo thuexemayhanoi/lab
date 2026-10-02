@@ -1,0 +1,120 @@
+{
+ "article_id": "A00121",
+ "primary_keyword": "giá thuê Vision Quảng Ngãi",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mức giá thuê Honda Vision tại Quảng Ngãi theo bảng giá theo dòng xe (Vision 120.000đ – 200.000đ/ngày), đối chiếu 7 điểm ghi nhận ở TP Quảng Ngãi, Nghĩa Lộ, La Hà và đảo Lý Sơn, kèm thủ tục thuê xe",
+ "research_date": "2026-10-02",
+ "geo_entities": [
+  "Quảng Ngãi",
+  "thành phố Quảng Ngãi",
+  "Nghĩa Lộ",
+  "La Hà",
+  "Tư Nghĩa",
+  "đảo Lý Sơn",
+  "sông Trà Khúc"
+ ],
+ "vehicle_entities": [
+  "xe ga",
+  "xe số",
+  "xe tay ga"
+ ],
+ "brand_entities": [
+  "Honda",
+  "Yamaha",
+  "SYM",
+  "Piaggio"
+ ],
+ "model_entities": [
+  "Vision",
+  "AirBlade",
+  "Lead",
+  "Liberty",
+  "Attila",
+  "Nouvo",
+  "Wave",
+  "Sirius",
+  "Jupiter",
+  "Future",
+  "Blade"
+ ],
+ "questions_found": [
+  "Thuê Honda Vision ở Quảng Ngãi giá bao nhiêu một ngày?",
+  "Bảng giá thuê xe máy Quảng Ngãi thế nào?",
+  "Ở đảo Lý Sơn có thuê xe máy không?",
+  "Thuê xe Quảng Ngãi cần giấy tờ gì?",
+  "Xe ga Quảng Ngãi đắt hơn xe số bao nhiêu?"
+ ],
+ "related_queries": [
+  "gia thue vision quang ngai",
+  "cho thue xe may quang ngai",
+  "thue xe may ly son",
+  "gia thue xe may tp quang ngai"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Quảng Ngãi với 7 điểm ghi nhận trải từ TP Quảng Ngãi ra đảo Lý Sơn",
+  "Bảng giá theo dòng xe niêm yết riêng Honda Vision 120.000đ – 200.000đ/ngày — dải rộng nhất trong chuỗi các tỉnh, phản ánh độ tuổi xe phân hóa mạnh"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-quang-ngai/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Các địa điểm cho thuê xe máy Quảng Ngãi thường tại một số khu vực. Những nơi có nhiều khách du lịch như Tp. Quảng Ngãi hay đảo Lý Sơn sẽ có nhiều cửa hàng hơn … hầu hết các cơ sở đều có dịch vụ giao xe tận nơi"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ],
+ "existing_internal_pages": [
+  "/lab/",
+  "/lab/thue-xe-may/",
+  "/lab/thue-xe-may/thue-xe-may-quang-ngai/",
+  "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+  "/lab/thue-xe-may/gia-thue-vision-hai-phong/",
+  "/lab/thue-xe-may/gia-thue-vision-hue/"
+ ],
+ "potential_cannibalization": "Hàng CG-rental-price-vision-quang-ngai theo matrix; từ khóa \"giá thuê Vision Quảng Ngãi\" chưa có bài nào dùng. Bài geo hub Quảng Ngãi đã publish, được dẫn chéo.",
+ "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Quảng Ngãi: dải 120.000đ – 200.000đ/ngày theo dòng xe — dải rộng hiếm thấy, phần dưới là xe đời cũ, phần trên là xe gần mới; đối chiếu 7 điểm ghi nhận từ TP Quảng Ngãi đến đảo Lý Sơn (Võ Gia) với mặt bằng xe ga 150.000đ/ngày, kèm đánh giá Vision cho cung biển Mỹ Khê Đông và đường lên Lý Sơn.",
+ "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Vision được niêm yết riêng trong bảng theo dòng xe — dữ liệu tốt. Không bịa địa chỉ/số điện thoại.",
+ "claim_evidence": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-quang-ngai/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Bảng giá thuê xe máy Quảng Ngãi ghi nhận Honda Vision 120.000đ – 200.000đ/ngày cùng nhóm xe ga Lead, AirBlade, Nouvo, Liberty, Attila; nhóm xe số Sirius, Wave, Blade, Wave RSX, Jupiter, Future 100.000đ – 150.000đ/ngày",
+   "claim_supported": "Dòng xe Giá thuê xe/ngày Yamaha Sirius 100.000đ – 150.000đ/ngày Honda Wave 100.000đ – 150.000đ/ngày Honda Blade 100.000đ – 150.000đ/ngày Honda Wave RSX 100.000đ – 150.000đ/ngày Yamaha Jupiter 100.000đ – 150.000đ/ngày Yamaha Future 100.000đ – 150.000đ/ngày Honda Lead 120.000đ – 200.000đ/ngày Honda Vision 120.000đ – 200.000đ/ngày Honda AirBlade 120.000đ – 200.000đ/ngày Yamaha Nouvo 120.000đ – 200.000đ/ngày Liberty 120.000đ – 200.000đ/ngày Attila 120.000đ – 200.000đ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-quang-ngai/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Hoa Muống Biển (118 Nguyễn Nghiêm, phường Nghĩa Chánh, TP Quảng Ngãi) ghi nhận xe số 120.000đ/ngày, xe ga 150.000đ/ngày; Thanh Bình (117 Trần Quang Diệu, Nghĩa Lộ), Phong Hiền (12 Hùng Vương), Đồng Hưng Hotel (497 Quang Trung), Võ Gia (đảo Lý Sơn) ghi nhận xe số 100.000đ/ngày, xe ga 150.000đ/ngày",
+   "claim_supported": "Hoa Muống Biển Điện thoại: 0905 395 269 Địa chỉ: 118 Nguyễn Nghiêm, P. Nghĩa Chánh, TP. Quảng Ngãi Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 150.000đ/ngày 5.0/5 Thanh Bình Điện thoại: 0935 631 863 Địa chỉ: 117 Trần Quang Diệu, Nghĩa Lộ, Quảng Ngãi Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày N/A Phong Hiền Điện thoại: 0919 375 768 Địa chỉ: 12 Hùng Vương, TP. Quảng Ngãi, Quảng Ngãi Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày N/A Đồng Hưng Hotel Điện thoại: 0255 382 1704 Địa chỉ: 497 Quang Trung, Tp. Quảng Ngãi, Quảng Ngãi Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày N/A Võ Gia Điện thoại: 0914 244 269 Địa chỉ: Thôn Tân An, xã An Vĩnh, Lý Sơn, Quảng Ngãi Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày N/A"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-quang-ngai/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Lê Trần (thị trấn La Hà, huyện Tư Nghĩa) ghi nhận xe số 120.000đ/ngày, xe ga 200.000đ/ngày; Minh Phương (39 Hùng Vương, thành phố Quảng Ngãi) ghi nhận xe số 120.000đ/ngày, xe ga 150.000đ – 200.000đ/ngày",
+   "claim_supported": "Lê Trần Điện thoại: 0968 126 859 Địa chỉ: Khối 1, TT. La Hà, huyện Tư Nghĩa, Quảng Ngãi Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 200.000đ/ngày N/A Minh Phương Điện thoại: 0914 960 787 Địa chỉ: 39 Hùng Vương, thành phố Quảng Ngãi Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 150.000đ – 200.000đ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-quang-ngai/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Thủ tục thuê xe máy ở Quảng Ngãi: đặt lại giấy tờ tùy thân cá nhân chính chủ như CMND, căn cước, bằng lái xe hay hộ chiếu; hầu hết các cơ sở có dịch vụ giao xe tận nơi",
+   "claim_supported": "Hầu hết các đơn vị tại đây đều chỉ yêu cầu khách du lịch đặt lại giấy tờ tùy thân cá nhân chính chủ. Bạn có thể để lại một trong những giấy tờ như: Chứng Minh Nhân Dân. Căn Cước Công Dân, Bằng Lái Xe hay Hộ Chiếu đều được … hầu hết các cơ sở đều có dịch vụ giao xe tận nơi hết sức tiện lợi"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … động cơ 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ]
+}

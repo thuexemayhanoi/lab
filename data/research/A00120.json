@@ -1,0 +1,108 @@
+{
+ "article_id": "A00120",
+ "primary_keyword": "giá thuê Vision Quảng Trị",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mức giá thuê Honda Vision tại Quảng Trị theo bảng giá theo đời xe (Vision 120.000 vnd/ngày), đối chiếu giá các nhà nghỉ, cửa hàng ghi nhận ở Đông Hà, thị xã Quảng Trị, Cửa Tùng và thủ tục thuê xe",
+ "research_date": "2026-10-02",
+ "geo_entities": [
+  "Quảng Trị",
+  "Đông Hà",
+  "thị xã Quảng Trị",
+  "biển Cửa Tùng",
+  "Vĩnh Linh",
+  "sông Thạch Hãn"
+ ],
+ "vehicle_entities": [
+  "xe ga",
+  "xe số",
+  "xe tay ga"
+ ],
+ "brand_entities": [
+  "Honda",
+  "Yamaha",
+  "SYM"
+ ],
+ "model_entities": [
+  "Vision",
+  "Airblade",
+  "Lead",
+  "Wave",
+  "Sirius",
+  "Jupiter",
+  "Nouvo",
+  "Attila"
+ ],
+ "questions_found": [
+  "Thuê Honda Vision ở Quảng Trị giá bao nhiêu một ngày?",
+  "Thuê xe máy ở Đông Hà giá thế nào?",
+  "Ở Quảng Trị thuê xe cần giấy tờ gì?",
+  "Xe ga ở Quảng Trị có đắt hơn xe số không?",
+  "Thuê xe ở Cửa Tùng có điểm nào ghi nhận?"
+ ],
+ "related_queries": [
+  "gia thue vision quang tri",
+  "cho thue xe may dong ha",
+  "thue xe may quang tri",
+  "thue xe may cua tung"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Quảng Trị với 5 điểm ghi nhận gắn nhà nghỉ và cửa hàng ở Đông Hà, thị xã Quảng Trị, Cửa Tùng",
+  "Bảng giá theo đời xe niêm yết Vision 120.000 vnd/ngày; mức xe ga ghi nhận tại các điểm đều 120.000đ/ngày"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Địa điểm thuê xe máy Quảng Trị Tại Quảng Trị, bạn có thể chọn thuê xe máy ở nhiều khu vực như Tp. Đông Hà, thị xã Quảng Trị,… Các loại xe – Đời xe máy cho thuê ở Quảng Trị Giá thuê xe 1 ngày"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ],
+ "existing_internal_pages": [
+  "/lab/",
+  "/lab/thue-xe-may/",
+  "/lab/thue-xe-may/thue-xe-may-quang-tri/",
+  "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+  "/lab/thue-xe-may/gia-thue-vision-hai-phong/",
+  "/lab/thue-xe-may/gia-thue-vision-hue/"
+ ],
+ "potential_cannibalization": "Hàng CG-rental-price-vision-quang-tri theo matrix; từ khóa \"giá thuê Vision Quảng Trị\" chưa có bài nào dùng. Bài geo hub Quảng Trị đã publish, được dẫn chéo.",
+ "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Quảng Trị: mức 120.000 vnd/ngày theo bảng đời xe, đối chiếu 5 điểm ghi nhận gắn với nhà nghỉ (Thụy Điển, Phú Cường ở Cửa Tùng) — thị trường mỏng nhưng giá đồng nhất ở mức xe ga 120.000đ/ngày, kèm thủ tục giấy tờ cọc gọn và đánh giá Vision cho các cung Đông Hà — Cửa Tùng.",
+ "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không bịa địa chỉ/số điện thoại; mọi con số trích từ nguồn motogo.vn.",
+ "claim_evidence": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Nhà nghỉ Thụy Điển (9 Lê Văn Hưu, phường 1, Đông Hà) ghi nhận xe số 90.000đ – 120.000đ/ngày, xe ga 120.000đ/ngày; Thu Phương (thị xã Quảng Trị) và Phú Cường (biển Cửa Tùng, Vĩnh Linh) ghi nhận cùng mức",
+   "claim_supported": "Nhà nghỉ Thụy Điển Điện thoại: 0233 3857 187 Địa chỉ: 9 Lê Văn Hưu, P1, Tp Đông Hà, Quảng Trị Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ/ngày 3.3/5 Thu Phương Điện thoại: 0932 562 263 Địa chỉ: Thị xã Quảng Trị, Quảng Trị Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ/ngày N/A Hoàn Hão Điện thoại: 091 715 84 44 Địa chỉ: 52 Đoàn Khuê, Phường 5, Đông Hà, Quảng Trị Giá thuê xe: từ 100.000đ/ngày 5.0/5 Anh Quang Điện thoại: 091 818 92 31 Địa chỉ: 94 Tôn Thất Thuyết, Phường 5, Đông Hà, Quảng Trị Giá thuê xe: từ 100.000đ/ngày 5.0/5 Phú Cường Điện thoại: 0233 3823 204 Địa chỉ: Biển Cửa Tùng, Huyện Vĩnh Linh Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ/ngày N/A"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Bảng giá xe máy cho thuê ở Quảng Trị theo đời xe ghi nhận Honda Vision 120.000 vnd, Lead 120.000 vnd, Airblade 2012 120.000 vnd, Airblade 2013-2015 140.000 vnd, Airblade 2016-2018 160.000 vnd; xe số Wave S, Wave RS 80.000 vnd, RSX-fi, Sirius FI 90.000 vnd, Jupiter gravita 80.000 vnd; Nouvo LX 100.000 vnd, Nouvo SX fi 120.000 vnd, Attila 100.000 vnd",
+   "claim_supported": "Các loại xe – Đời xe máy cho thuê ở Quảng Trị Giá thuê xe 1 ngày Xe tay ga Honda Airblade 2012 120.000 vnd Xe tay ga Honda Airblade 2013-2015 140.000 vnd Xe tay ga Honda Airblade 2016- 2017 – 2018 160.000 vnd Xe tay ga Honda Lead 120.000 vnd Xe tay ga Honda Vision 120.000 vnd Xe số Wave S 80.000 vnd Xe số Wave RS 80.000 vnd Xe số Wave RSX – fi 90.000 vnd Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd Xe số Yamaha Jupiter gravita 80.000 vnd Xe tay ga Yamaha Nouvo LX 100.000 vnd Xe tay ga Yamaha Nouvo SX fi 120.000 vnd Xe tay ga attilla Victoria , Elizabeth 100.000 vnd"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Thủ tục thuê xe máy Quảng Trị: giấy tờ và tiền đặt cọc để làm tin; giấy tờ gồm căn cước, CMND, hộ chiếu và bằng lái xe; mức giá chung từ 80.000đ/ngày",
+   "claim_supported": "Chỉ cần bỏ ra chi phí từ 80.000đ/ngày, bạn đã có thể lựa chọn chiếc xe phù hợp với mình … Thủ tục thuê xe máy Quảng Trị Nhìn chung các cửa hàng cho thuê xe máy tại Quảng Trị có chính sách khá giống nhau. Họ thường yêu cầu giấy tờ và tiền đặt cọc để làm tin. Nếu bạn biết và chuẩn bị trước những thứ ấy thì có thể hoàn thành thủ tục một cách nhanh chóng. Các loại giấy tờ thường được dùng là căn cước, CMND, hộ chiếu và bằng lái xe"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … động cơ 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ]
+}

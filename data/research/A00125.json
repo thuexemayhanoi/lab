@@ -1,0 +1,113 @@
+{
+ "article_id": "A00125",
+ "primary_keyword": "giá thuê Vision Đồng Nai",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mức giá thuê Honda Vision tại Đồng Nai (Biên Hòa, Nhơn Trạch) theo các điểm ghi nhận, đối chiếu mặt bằng xe ga 120.000đ -160.000đ/ngày và chính sách không cọc, giao xe tận nơi",
+ "research_date": "2026-10-02",
+ "geo_entities": [
+  "Đồng Nai",
+  "Biên Hòa",
+  "Nhơn Trạch",
+  "quốc lộ 51",
+  "phường Quyết Thắng",
+  "sông Đồng Nai"
+ ],
+ "vehicle_entities": [
+  "xe ga",
+  "xe số",
+  "xe tay ga",
+  "xe tay côn"
+ ],
+ "brand_entities": [
+  "Honda",
+  "Yamaha",
+  "SYM"
+ ],
+ "model_entities": [
+  "Vision",
+  "Air Blade",
+  "Lead",
+  "Wave",
+  "Sirius"
+ ],
+ "questions_found": [
+  "Thuê Honda Vision ở Đồng Nai, Biên Hòa giá bao nhiêu?",
+  "Thuê xe máy Biên Hòa có cần cọc không?",
+  "Xe ga ở Biên Hòa giá theo ngày thế nào?",
+  "Ở Nhơn Trạch có điểm thuê xe máy không?",
+  "Có điểm nào giao xe tận nơi ở Đồng Nai không?"
+ ],
+ "related_queries": [
+  "gia thue vision dong nai",
+  "cho thue xe may bien hoa",
+  "thue xe may dong nai gia",
+  "thue xe may nhan trach"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Đồng Nai với 6 địa chỉ ghi nhận tập trung tại Biên Hòa và Nhơn Trạch",
+  "Mặt bằng xe ga ghi nhận 120.000đ -160.000đ/ngày (Thắng Lê), các điểm còn lại 130.000đ – 150.000đ/ngày; Thắng Lê ghi nhận không thu tiền cọc"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Tại Đồng Nai có rất nhiều cơ sở cho thuê xe máy … tổng hợp danh sách những địa điểm thuê xe máy Biên Hòa Đồng Nai chất lượng nhất"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ],
+ "existing_internal_pages": [
+  "/lab/",
+  "/lab/thue-xe-may/",
+  "/lab/thue-xe-may/thue-xe-may-dong-nai/",
+  "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+  "/lab/thue-xe-may/gia-thue-vision-hai-phong/",
+  "/lab/thue-xe-may/thue-xe-may-bac-ninh/"
+ ],
+ "potential_cannibalization": "Hàng CG-rental-price-vision-dong-nai theo matrix; từ khóa \"giá thuê Vision Đồng Nai\" chưa có bài nào dùng. Bài geo hub Đồng Nai đã publish, được dẫn chéo.",
+ "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Đồng Nai: thị trường卫 satellite của Sài Gòn với khách công tác cao, mặt bằng xe ga 120.000đ -160.000đ/ngày, chính sách không cọc tại Thắng Lê và giao xe tận nơi tại Gia Bảo — cộng giá trị cho khách thuê dài ngày.",
+ "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không bịa địa chỉ/số điện thoại.",
+ "claim_evidence": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Thắng Lê (104B Võ Thị Sáu, phường Quyết Thắng, Biên Hòa) ghi nhận xe số 80.000đ – 120.000đ/ngày, xe ga 120.000đ -160.000đ/ngày và không thu tiền cọc",
+   "claim_supported": "Thắng Lê Điện thoại: 0844 000 666 Địa chỉ: Số 104B, Võ Thị Sáu, phường Quyết Thắng, Biên Hòa, Đồng Nai Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày 5.0/5 … Thắng Lê không thu bất kỳ khoản tiền cọc nào giúp bạn có thê chi phí cho chuyến đi"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Hiếu Bình (ấp 3, xã Tân Hạnh, Biên Hòa) ghi nhận xe số 100.000đ/ngày, xe ga 150.000đ/ngày; Thanh Thùy Dương (ấp 1, Hiệp Phước, Nhơn Trạch) ghi nhận xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 150.000đ/ngày",
+   "claim_supported": "Hiếu Bình Điện thoại: 0982 075 072 Địa chỉ: Số 46, Ấp 3, xã Tân Hạnh, Tân Hạnh, Tp. Biên Hòa, Đồng Nai Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày 4.0/5 Thanh Thùy Dương Điện thoại: 090 341 30 08 Địa chỉ: Ấp 1, Xã Hiệp Phước, Huyện Nhơn Trạch, Hiệp Phước, Nhơn Trạch, Đồng Nai Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày 3.8/5"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Thành Cư (14/1, khu phố 7, quốc lộ 1, phường Tân Hòa, Biên Hòa), Gia Bảo (1099, quốc lộ 51, ấp 2, xã An Hòa, Biên Hòa) và Nam Khương (1103 Phạm Văn Thuận, Biên Hòa) đều ghi nhận xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày",
+   "claim_supported": "Thành Cư Địa chỉ: Số 14/1, khu phố 7, quốc lộ 1, phường Tân Hòa, Tân Hòa, Tp. Biên Hòa, Đồng Nai. Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày N/A Gia Bảo Điện thoại: 0186 9646 761 Địa chỉ: Số 1099, quốc lộ 51, ấp 2, xã An Hòa, Tp. Biên Hòa, Đồng Nai Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày N/A Nam Khương Điện thoại: 0251 3824 075 Địa chỉ: Số 1103 Phạm Văn Thuận, Tp. Biên Hòa, Đồng Nai Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày 4.1/5"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Gia Bảo ghi nhận mức thuê chỉ từ 120.000đ/ngày, kèm 2 mũ bảo hiểm đạt chuẩn và dịch vụ giao nhận xe tận nơi; Nam Khương ghi nhận chi phí thuê xe chỉ từ 100.000đ/ngày",
+   "claim_supported": "Chỉ ừ 120.000đ/ngày là bạn đã thuê ngay được xe tại đây rồi … Gia Bảo còn cung cấp 2 chiếc mũ bảo hiểm đạt chuẩn cho khách hàng … nơi đây còn có dịch vụ giao nhận xe tận nơi … Với chi phí thuê xe chỉ từ 100.000đ/ngày, bạn đã thuê ngay được một chiếc xe tại đây"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … động cơ 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ]
+}

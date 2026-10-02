@@ -1,0 +1,119 @@
+{
+ "article_id": "A00119",
+ "primary_keyword": "giá thuê Vision Quảng Bình",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mức giá thuê Honda Vision tại Quảng Bình theo bảng giá theo đời xe (Vision 120.000 vnd/ngày), đối chiếu giá 11 đơn vị ghi nhận tại Đồng Hới và lưu ý hành trình Phong Nha, biển Nhật Lê",
+ "research_date": "2026-10-02",
+ "geo_entities": [
+  "Quảng Bình",
+  "Đồng Hới",
+  "Phong Nha",
+  "bến xe Đồng Hới",
+  "biển Nhật Lê",
+  "sân bay Đồng Hới"
+ ],
+ "vehicle_entities": [
+  "xe ga",
+  "xe số",
+  "xe tay ga",
+  "xe côn tay"
+ ],
+ "brand_entities": [
+  "Honda",
+  "Yamaha",
+  "Suzuki",
+  "SYM"
+ ],
+ "model_entities": [
+  "Vision",
+  "Airblade",
+  "Air Blade",
+  "Lead",
+  "Wave",
+  "Sirius",
+  "Jupiter",
+  "Nouvo",
+  "Attila",
+  "Winner"
+ ],
+ "questions_found": [
+  "Thuê Honda Vision ở Quảng Bình giá bao nhiêu một ngày?",
+  "Thuê xe ở Đồng Hới có cần đặt cọc không?",
+  "Giá thuê xe ga ở Quảng Bình cao hơn xe số bao nhiêu?",
+  "Vision có chạy lên Phong Nha được không?",
+  "Ở Quảng Bình thuê xe máy cần giấy tờ gì?"
+ ],
+ "related_queries": [
+  "gia thue vision quang binh",
+  "cho thue xe may dong hoi",
+  "thue xe may quang binh gia",
+  "thue xe phong nha"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Quảng Bình với 11 đơn vị ghi nhận, bảng giá theo đời xe niêm yết Vision 120.000 vnd/ngày",
+  "Các đơn vị ghi nhận nhóm xe ga (AirBlade, Vision, Lead) 120.000đ đến 180.000đ; riêng Anh Lộc không yêu cầu cọc với khách du lịch"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Top 11 địa điểm thuê xe máy Quảng Bình uy tín, giá rẻ – giao xe tận nơi … Bảng giá thuê xe máy Quảng Bình … Danh sách 11 địa điểm thuê xe máy Đồng Hới Quảng Bình"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ],
+ "existing_internal_pages": [
+  "/lab/",
+  "/lab/thue-xe-may/",
+  "/lab/thue-xe-may/thue-xe-may-quang-binh/",
+  "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+  "/lab/thue-xe-may/gia-thue-vision-hai-phong/",
+  "/lab/thue-xe-may/gia-thue-vision-hue/"
+ ],
+ "potential_cannibalization": "Hàng CG-rental-price-vision-quang-binh theo matrix; từ khóa \"giá thuê Vision Quảng Bình\" chưa có bài nào dùng. Bài geo hub Quảng Bình đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+ "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Quảng Bình: mức 120.000 vnd/ngày trong bảng giá theo đời xe — thấp nhất trong chuỗi các tỉnh đã khảo sát, đối chiếu 11 đơn vị ghi nhận quanh Đồng Hới với nhóm xe ga 120.000đ đến 180.000đ, kèm chính sách không cọc của Anh Lộc và đánh giá Vision cho cung đường Phong Nha.",
+ "notes": "Hàng informational_only: không dùng \"chúng tôi\" cho dịch vụ, không chào dịch vụ. Bảng đơn vị gốc ghi giá xe ga kèm dấu cách (180 000đ) — trích nguyên văn trong claim_supported, phần diễn giải dùng số có dấu chấm khớp với trích dẫn. Không bịa địa chỉ, không bịa số điện thoại.",
+ "claim_evidence": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Bảng 11 đơn vị cho thuê xe máy tại Quảng Bình ghi nhận nhóm xe ga gồm AirBlade, Vision, Lead; các đơn vị ghi nhận giá từ 120.000đ đến 180.000đ (Beach House 140.000đ – 180.000đ), đơn vị thấp nhất Quảng Bình Motorbike rental ghi nhận 100.000đ – 200.000đ, các đơn vị có xe côn tay Honda XR ghi nhận 130.000đ – 480.000đ hoặc 120.000 đ – 500.000đ",
+   "claim_supported": "Đơn vị Loại xe máy Giá thuê Liên hệ Lộc Quảng Bình Xe số: Wave, Sirius 110cc Xe ga: AirBlade, Vision, Lead 130.000đ – 180 000đ đang cập nhật 58 – Anh Mạnh Xe số: Wave, Sirius 110cc Xe ga: AirBlade, Vision, Lead 130.000đ – 180 000đ đang cập nhật Công ty TNHH Đại Mộc Xe số: Wave, Sirius 110cc Xe ga: AirBlade, Vision, Lead 130.000đ – 180 000đ 0911 377 268 Chị Thu Xe số: Wave, Sirius 110cc Xe ga: AirBlade, Vision, Lead Xe côn tay: Honda XR 120.000 đ – 500.000đ 0915 960 481 Beach House Xe số: Wave, Sirius 110cc Xe ga: AirBlade, Vision, Lead 140.000đ – 180.000đ 0911 079 136 Dong Hoi Motorbike Rental Xe số: Wave, Sirius 110cc Xe ga: AirBlade, Vision, Lead 120.000đ – 180 000đ 0905 011 886 Phong Nha motorbike Xe số: Wave, Sirius 110cc Xe ga: AirBlade, Vision, Lead 120.000đ – 180 000đ 0935 922 866 Thuê xe máy Đồng Hới QB Xe số: Wave, Sirius 110cc Xe ga: AirBlade, Vision, Lead 130.000đ – 180 000đ 0902 996 807 QB Travel Xe số: Wave, Sirius 110cc Xe ga: AirBlade, Vision, Lead Xe côn tay: Honda XR 130.000đ – 480.000đ 0911 079 136 Quảng Bình Motorbike rental Xe số: Wave, Sirius 110cc Xe ga: AirBlade, Vision, Lead 100.000đ – 200.000đ 0963 029 195 Tung Motorbike Xe số: Wave, Sirius 110cc Xe ga: AirBlade, Vision, Lead Xe côn tay: Honda XR 120.000 đ – 500.000đ"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Bảng giá thuê xe máy Quảng Bình theo đời xe ghi nhận Honda Vision 120.000 vnd, Honda Lead 120.000 vnd, Airblade 2012 120.000 vnd, Airblade 2013-2015 140.000 vnd, Airblade 2016-2018 160.000 vnd; xe số Wave S, Wave RS 80.000 vnd, Wave RSX-fi và Sirius FI 90.000 vnd, Jupiter gravita 80.000 vnd; Nouvo LX 100.000 vnd, Nouvo SX fi 120.000 vnd, Attila 100.000 vnd",
+   "claim_supported": "Các loại xe Giá thuê xe 1 ngày Xe tay ga Honda Airblade 2012 120.000 vnd Xe tay ga Honda Airblade 2013-2015 140.000 vnd Xe tay ga Honda Airblade 2016- 2017 – 2018 160.000 vnd Xe tay ga Honda Lead 120.000 vnd Xe tay ga Honda Vision 120.000 vnd Xe số Wave S 80.000 vnd Xe số Wave RS 80.000 vnd Xe số Wave RSX – fi 90.000 vnd Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd Xe số Yamaha Jupiter gravita 80.000 vnd Xe tay ga Yamaha Nouvo LX 100.000 vnd Xe tay ga Yamaha Nouvo SX fi 120.000 vnd Xe tay ga attila Victoria , Elizabeth 100.000 vnd"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Anh Lộc Quảng Bình ghi nhận mức giá niêm yết 100.000đ – 150.000đ/ngày, khung 24h, không yêu cầu cọc với khách du lịch, để lại căn cước công dân, có giao nhận xe miễn phí tại thành phố, giá thuê chi tiết 100.000đ – 120.000đ",
+   "claim_supported": "Hiện nay mức giá niêm yết tại thuê xe máy anh Lộc dao động từ 100.000đ – 150.000đ/ngày. Giá thuê xe được áp dụng trong khung 24h, tiết kiệm cho quý khách … Một trong những điểm đặc biệt tại Anh Lộc Quảng Bình là không yêu cầu cọc với khách du lịch. Du khách cần để lại căn cước công dân, giấy tờ tùy thân là có thể làm thủ tục thuê xe nhanh chóng dễ dàng. Đặc biệt anh Lộc có giao nhận xe miễn phí tại thành phố … Thông tin chi tiết: Giá thuê xe: 100.000đ – 120.000đ"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Anh Mạnh có địa chỉ 187 Trương Pháp, Bắc Lý, Đồng Hới, Quảng Bình, cho thuê đủ xe tay ga Air Blade, Vision và xe số Sirius, Wave",
+   "claim_supported": "Thông tin liên hệ: Điện thoại: 094 777 49 18 Địa chỉ: 187 Trương Pháp, Bắc Lý, Đồng Hới, Quảng Bình … Những chiếc xe máy tại địa chỉ này có rất nhiều loại đa dạng. Từ xe tay ga như Air Blade, Vision đến xe số như Sirius, Wave,… đều đầy đủ cả"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … động cơ 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ]
+}

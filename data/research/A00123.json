@@ -1,0 +1,123 @@
+{
+ "article_id": "A00123",
+ "primary_keyword": "giá thuê Vision Khánh Hòa",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mức giá thuê Honda Vision tại Khánh Hòa (Nha Trang, Cam Ranh) theo bảng giá theo ngày và các điểm ghi nhận, kèm chính sách không cọc đặc thù thị trường du lịch biển",
+ "research_date": "2026-10-02",
+ "geo_entities": [
+  "Khánh Hòa",
+  "Nha Trang",
+  "Cam Ranh",
+  "phường Lộc Thọ",
+  "đường Trần Phú",
+  "vinh Nha Trang",
+  "bãi biển Nha Trang"
+ ],
+ "vehicle_entities": [
+  "xe ga",
+  "xe số",
+  "xe tay ga"
+ ],
+ "brand_entities": [
+  "Honda",
+  "Yamaha",
+  "SYM"
+ ],
+ "model_entities": [
+  "Vision",
+  "Air Blade",
+  "AirBlade",
+  "Lead",
+  "Nouvo",
+  "Wave",
+  "Sirius",
+  "Jupiter"
+ ],
+ "questions_found": [
+  "Thuê Honda Vision ở Nha Trang giá bao nhiêu một ngày?",
+  "Thuê xe máy Nha Trang có cần cọc không?",
+  "Ở Cam Ranh có điểm cho thuê xe máy không?",
+  "Giá thuê xe theo tháng ở Nha Trang thế nào?",
+  "Vision có phù hợp chạy Nha Trang – Đà Lạt không?"
+ ],
+ "related_queries": [
+  "gia thue vision khanh hoa",
+  "cho thue xe may nha trang",
+  "thue xe may cam ranh",
+  "gia thue xe may nha trang theo ngay"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Nha Trang với 12+ địa điểm ghi nhận; nhiều điểm ghi nhận chính sách không cần cọc, thế chấp giấy tờ",
+  "Bảng theo ngày ghi nhận trung bình 80.000đ – 130.000đ/ngày; nhóm xe ga Air Blade, Lead 120.000 – 150.000 VNĐ/ngày; Vision được nêu đích danh ở Lệ Oanh và True Friends Easy Rider"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Top 12 địa điểm cho thuê xe máy Nha Trang giá rẻ, uy tín nhất … Giá thuê xe máy Nha Trang theo ngày"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ],
+ "existing_internal_pages": [
+  "/lab/",
+  "/lab/thue-xe-may/",
+  "/lab/thue-xe-may/thue-xe-may-khanh-hoa/",
+  "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+  "/lab/thue-xe-may/gia-thue-vision-hai-phong/",
+  "/lab/thue-xe-may/gia-thue-vision-da-nang/"
+ ],
+ "potential_cannibalization": "Hàng CG-rental-price-vision-khanh-hoa theo matrix; từ khóa \"giá thuê Vision Khánh Hòa\" chưa có bài nào dùng. Bài geo hub Khánh Hòa đã publish, được dẫn chéo.",
+ "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Khánh Hòa: điểm hiếm hoi nêu đích danh Vision trong kho xe (Lệ Oanh 110.000đ – 140.000đ/ngày cho nhóm xe ga có Vision; True Friends cho thuê Vision tự lái 120.000đ – 180.000đ/ngày), đối chiếu bảng theo ngày và chính sách không cọc bằng giấy tờ của thị trường du lịch biển.",
+ "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không bịa địa chỉ/số điện thoại. Bảng gốc ghi giá dạng cách (80.000 – 130.000 VNĐ/ngày) — trích nguyên văn, phần diễn giải dùng số khớp trích dẫn.",
+ "claim_evidence": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Bảng giá thuê xe máy Nha Trang theo ngày ghi nhận trung bình 80.000đ – 130.000đ/ngày; Honda Wave Alpha, Wave S, Yamaha Sirius, Jupiter 80.000 – 130.000 VNĐ/ngày; Honda Air Blade, Lead, Yamaha Nouvo 120.000 – 150.000 VNĐ/ngày",
+   "claim_supported": "Trung bình mức giá thuê xe máy từ 80.000đ – 130.000đ/ngày bao gồm các chi phí, dịch vụ đi kèm khác. Dòng xe Giá thuê xe Honda Wave Alpha 80.000 – 130.000 VNĐ/ngày Honda Wave S 80.000 – 130.000 VNĐ/ngày Yamaha Sirius 80.000 – 130.000 VNĐ/ngày Yamaha Jupiter 80.000 – 130.000 VNĐ/ngày Honda Air Blade 120.000 – 150.000 VNĐ/ngày Honda Lead 120.000 – 150.000 VNĐ/ngày Yamaha Nouvo 120.000 – 150.000 VNĐ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Lệ Oanh (14A Mạc Đĩnh Chi, Phước Tiến, Nha Trang) có sẵn các xe ga phổ biến honda lead, honda vision, honda airblade, ghi nhận xe số 80.000đ – 90.000đ/ngày và xe ga 110.000đ – 140.000đ/ngày",
+   "claim_supported": "Cửa hàng luôn có sẵn các loại xe ga phổ biến như honda lead, honda vision, honda airblade. Ngoài ra Lệ Oanh còn có các xe số Wave, Sirius … Đối với các loại xe số, giá thuê xe máy Nha Trang theo ngày nằm trong khoảng 80.000đ – 90.000đ/ngày. Ngoài ra còn có xe ga với chi phí giá rẻ từ 110.000đ – 140.000đ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Các điểm ghi nhận tại Nha Trang: Anh Trưởng MOTO (33/16 Biệt Thự, Tân Tiến) xe số từ 80.000đ/ngày, xe ga từ 100.000đ/ngày; Hải Anh (114/23 Hoàng Hoa Thám, Lộc Thọ) xe số 110.000đ/ngày, xe ga 180.000đ/ngày; Tùng Nha Trang (96 Trần Phú, Lộc Thọ) xe số 80.000đ/ngày, xe ga 100.000đ – 150.000đ/ngày; Tuấn Cường (8A Lý Tự Trọng) xe số 80.000đ/ngày, xe ga 120.000đ/ngày",
+   "claim_supported": "Thuê xe máy Anh Trưởng MOTO Địa chỉ: 33/16 Biệt Thự, Tân Tiến, Nha Trang Giá thuê xe số: từ 80.000đ/ngày Giá thuê xe ga: từ 100.000đ/ngày … Hải Anh Địa chỉ: 114/23 Hoàng Hoa Thám, Phường Lộc Thọ, Thành phố Nha Trang Giá thuê xe số: 110.000đ/ngày Giá thuê xe ga: 180.000đ/ngày … Tùng Nha Trang Địa chỉ: Số 96 đường Trần Phú, phường Lộc Thọ, Thành phố Nha Trang Giá thuê xe số: 80.000đ/ngày Giá thuê xe ga: 100.000đ – 150.000đ/ngày … Tuấn Cường Địa chỉ: Số 8A Lý Tự Trọng, Thành phố Nha Trang Giá thuê xe số: 80.000đ/ngày Giá thuê xe ga: 120.000đ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Vạn Phúc (79 Phan Bội Châu, Cam Phú, Cam Ranh) ghi nhận xe số 80.000đ/ngày, xe ga 120.000đ/ngày; Huy Hoàng (79 Phan Bội Châu, Cam Ranh) ghi nhận 80.000 – 120.000đ/ngày, không cần cọc, thế chấp bằng căn cước công dân hoặc bằng lái xe máy B2; Nam Việt Cam Ranh ghi nhận xe số 120.000đ/ngày, xe ga 180.000đ/ngày, tính theo 24h, không yêu cầu cọc",
+   "claim_supported": "Vạn Phúc Địa chỉ: số79 Phan Bội Châu, phường Cam Phú, Thành Phố Cam Ranh Giá thuê xe số: 80.000đ/ngày Giá thuê xe ga: 120.000đ/ngày … thuê xe máy tại Huy Hoàng không cần cọc. Khách hàng cần chuẩn bị các loại giấy tờ căn cước công dân hoặc bằng lái xe máy B2 để thế chấp. … Địa chỉ: 79 Phan Bội Châu, phường Cam Phú, Thành Phố Cam Ranh Giá thuê tham khảo: 80.000 – 120.000đ/ngày … Giá thuê xe máy tại đơn vị thuê xe Nam Việt nằm trong mức 120.000đ/ngày với xe số. Giá thuê xe ga là 180.000đ/ngày. Giá thuê xe máy tại Nam Việt được tính theo 24h. Thuê xe máy không yêu cầu cọc"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "True Friends Easy Rider (60 Nguyễn Thiện Thuật, Nha Trang) cho thuê xe ga Honda Lead, Honda Vision, AirBlade; giá thuê xe tự lái 120.000đ – 180.000đ/ngày, có giao nhận xe tận nơi và hỗ trợ thuê xe đi Đà Lạt không phụ thu",
+   "claim_supported": "Ngoài ra tại True Friends Easy Rider còn có cung cấp xe ga như Honda Lead, Honda Vision, AirBlade,… … Với giá thuê xe tự lái là 120.000đ – 180.000đ/ngày … Đơn vị True Friends Easy Rider có hỗ trợ giao nhận xe tận nơi trong khu vực thành phố Nha Trang. Đặc biệt tại đây còn cung cấp thuê xe máy Nha Trang đi Đà Lạt hoặc nhiều tỉnh thành khách không có phụ thu"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … động cơ 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ]
+}

@@ -1,0 +1,102 @@
+{
+ "article_id": "A00128",
+ "primary_keyword": "giá thuê Vision Đồng Tháp",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mức giá thuê Honda Vision tại Đồng Tháp (Cao Lãnh, Sa Đéc) theo các điểm ghi nhận, đối chiếu mặt bằng xe ga 120.000đ -150.000đ/ngày và đặc thù tỉnh đồng bằng sông Cửu Long",
+ "research_date": "2026-10-02",
+ "geo_entities": [
+  "Đồng Tháp",
+  "Cao Lãnh",
+  "Sa Đéc",
+  "phường 2 Cao Lãnh",
+  "làng hoa Sa Đéc",
+  "sông Tiền"
+ ],
+ "vehicle_entities": [
+  "xe ga",
+  "xe số",
+  "xe tay ga"
+ ],
+ "brand_entities": [
+  "Honda",
+  "Yamaha"
+ ],
+ "model_entities": [
+  "Vision",
+  "Wave",
+  "Air Blade"
+ ],
+ "questions_found": [
+  "Thuê Honda Vision ở Đồng Tháp, Cao Lãnh giá bao nhiêu?",
+  "Thuê xe máy Cao Lãnh cần thủ tục gì?",
+  "Ở Sa Đéc có điểm cho thuê xe máy không?",
+  "Xe ga ở Đồng Tháp đắt hơn xe số không?",
+  "Có điểm nào giao xe tận nơi ở Đồng Tháp?"
+ ],
+ "related_queries": [
+  "gia thue vision dong thap",
+  "cho thue xe may cao lanh",
+  "thue xe may dong thap",
+  "thue xe may sa dec"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Đồng Tháp với 5 điểm ghi nhận tập trung ở Cao Lãnh và Sa Đéc",
+  "Mặt bằng xe ga ghi nhận 120.000đ -150.000đ/ngày; Lợi Thế ghi nhận 120.000đ – 200.000đ/ngày tùy loại xe, kèm xăng, mũ bảo hiểm, áo mưa"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Những địa chỉ thuê xe máy Cao Lãnh Đồng Tháp uy tín chủ yếu tập trung ở khu vực này … hai thành phố Cao Lãnh và Sa Đéc là trung tâm du lịch của tỉnh"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ],
+ "existing_internal_pages": [
+  "/lab/",
+  "/lab/thue-xe-may/",
+  "/lab/thue-xe-may/thue-xe-may-dong-thap/",
+  "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+  "/lab/thue-xe-may/gia-thue-vision-hai-phong/",
+  "/lab/thue-xe-may/gia-thue-vision-can-tho/"
+ ],
+ "potential_cannibalization": "Hàng CG-rental-price-vision-dong-thap theo matrix; từ khóa \"giá thuê Vision Đồng Tháp\" chưa có bài nào dùng. Bài geo hub Đồng Tháp đã publish, được dẫn chéo.",
+ "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Đồng Tháp: mặt bằng xe ga 120.000đ -150.000đ/ngày đồng nhất giữa Cao Lãnh và Sa Đéc, thủ tục nhẹ (chỉ cần CMND tại Chị Lan), giá trị cộng thêm xăng + mũ + áo mưa tại Lợi Thế, và đánh giá Vision cho các cung phẳng giữa Cao Lãnh, Sa Đéc, làng hoa.",
+ "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không bịa địa chỉ/số điện thoại. Địa chỉ Phương Nam Hotel ghi nhận trên nguồn có dấu thiếu chính xác — phần diễn giải chỉ nêu tên điểm và thành phố.",
+ "claim_evidence": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Chị Lan (34/1 Nguyễn Văn Trỗi, phường 2, Cao Lãnh) ghi nhận xe số 100.000đ – 120.000đ/ngày, xe ga 120.000đ -150.000đ/ngày, chủ yếu xe Wave, thủ tục chỉ cần để lại CMND; Lợi Thế (212 Phạm Hữu Lầu, Cao Lãnh) ghi nhận xe số 100.000đ/ngày, xe ga 150.000đ/ngày và có dịch vụ giao xe tận nơi",
+   "claim_supported": "Chị Lan Điện thoại: 091 875 00 16 Địa chỉ: 34/1 Nguyễn Văn Trỗi, Phường 2, TP. Cao Lãnh, Đồng Tháp Giá thuê xe số: 100.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -150.000đ/ngày 5.0/5 … Cửa hàng không có quá nhiều loại xe mà chủ yếu là xe Wave … thủ tục thuê xe tại đây còn vô cùng đơn giản. Bạn chỉ cần để lại CMND là được … Lợi Thế Điện thoại: 0772.772.227 Địa chỉ: 212 Phạm Hữu Lầu, phường Cao Lãnh, tỉnh Đồng Tháp Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày 3.0/5 … Lợi Thế có dịch vụ giao xe tận nơi đối với các khách hàng thuê xe máy Đồng Tháp tại đây"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Bảo Trâm (209 Mai Văn Khải, Cao Lãnh) ghi nhận xe số 100.000đ – 120.000đ/ngày, xe ga 120.000đ -150.000đ/ngày; Phương Nam Hotel (Sa Đéc) ghi nhận xe số 100.000đ – 120.000đ/ngày, xe ga 120.000đ -150.000đ/ngày; Minh Chánh (ấp Tân Lập, Sa Đéc) ghi nhận xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày",
+   "claim_supported": "Bảo Trâm Địa chỉ: 209 Mai Văn Khải, Tp. Cao Lãnh, Đồng Tháp Giá thuê xe số: 100.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -150.000đ/ngày 3.8/5 Minh Chánh Điện thoại: 0796 262 623 Địa chỉ: Ấp Tân Lập, Sa Đéc, Đồng Tháp Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày N/A Phương Nam Hotel Điện thoại: 0227 3867 867 Địa chỉ: 384A, Đường Nguyễn Sinh Dung nhan, TP Sa Đéc, Đồng Tháp. Giá thuê xe số: 100.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -150.000đ/ngày N/A"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Lợi Thế ghi nhận giá thuê rơi vào khoảng từ 120.000đ – 200.000đ/ngày tùy loại xe, kèm xăng xe, mũ bảo hiểm, áo mưa; Đồng Tháp có hai thành phố Cao Lãnh và Sa Đéc là trung tâm du lịch của tỉnh",
+   "claim_supported": "Giá thuê xe tại Lợi Thế rơi vào khoảng từ 120.000đ – 200.000đ/ngày tùy loại xe. Với số tiền không lớn này, bạn còn nhận được thêm nhiều vật phẩm tiện dụng khác. Cụ thể, cửa hàng sẽ chuẩn bị sẵn xăng xe, mũ bảo hiểm kèm theo áo mưa trong mỗi chiếc xe … Đồng Tháp có hai thành phố Cao Lãnh và Sa Đéc là trung tâm du lịch của tỉnh"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … động cơ 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ]
+}

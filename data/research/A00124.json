@@ -1,0 +1,126 @@
+{
+ "article_id": "A00124",
+ "primary_keyword": "giá thuê Vision Lâm Đồng",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mức giá thuê Honda Vision tại Lâm Đồng (Đà Lạt) theo bảng giá nhóm xe ga phổ thông (100.000đ – 150.000đ/ngày), đối chiếu 15+ điểm ghi nhận trong thành phố và thủ tục đặc thù thị trường du lịch",
+ "research_date": "2026-10-02",
+ "geo_entities": [
+  "Lâm Đồng",
+  "Đà Lạt",
+  "phường 1 Đà Lạt",
+  "bến xe Phương Trang",
+  "hồ Xuân Hương",
+  "đèo Prenn",
+  "đèo Tà Nùng"
+ ],
+ "vehicle_entities": [
+  "xe ga",
+  "xe số",
+  "xe tay ga"
+ ],
+ "brand_entities": [
+  "Honda",
+  "Yamaha",
+  "Suzuki",
+  "SYM"
+ ],
+ "model_entities": [
+  "Vision",
+  "Air Blade",
+  "Lead",
+  "Vario",
+  "PG-1",
+  "Wave",
+  "Sirius",
+  "Jupiter",
+  "Future",
+  "Exciter"
+ ],
+ "questions_found": [
+  "Thuê Honda Vision ở Đà Lạt giá bao nhiêu một ngày?",
+  "Thuê xe máy Đà Lạt có cần đặt cọc không?",
+  "Bảng giá thuê xe máy Đà Lạt thế nào?",
+  "Thuê xe ở Đà Lạt cần giấy tờ gì?",
+  "Vision có chạy cung đèo quanh Đà Lạt được không?"
+ ],
+ "related_queries": [
+  "gia thue vision lam dong",
+  "cho thue xe may da lat",
+  "gia thue xe may da lat",
+  "thue xe may da lat can gi"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Đà Lạt với 15+ điểm ghi nhận, hầu hết giao xe tận nơi trong thành phố",
+  "Bảng giá ghi nhận nhóm xe ga phổ thông (gồm Vision mới) 100.000đ – 150.000đ/ngày; thủ tục thường không cần cọc, một số ít cọc khoảng 500.000 vnd – 1.000.000 vnd"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tai-da-lat/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Top 15+ địa điểm cho thuê xe máy ở Đà Lạt giá rẻ, giao xe linh hoạt … Bảng giá thuê xe máy ở Đà Lạt … Thuê xe máy Đà Lạt cần những gì?"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ],
+ "existing_internal_pages": [
+  "/lab/",
+  "/lab/thue-xe-may/",
+  "/lab/thue-xe-may/thue-xe-may-lam-dong/",
+  "/lab/thue-xe-may/thue-xe-may-da-lat/",
+  "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+  "/lab/thue-xe-may/gia-thue-vision-hai-phong/"
+ ],
+ "potential_cannibalization": "Hàng CG-rental-price-vision-lam-dong theo matrix; từ khóa \"giá thuê Vision Lâm Đồng\" chưa có bài nào dùng. Bài geo hub Lâm Đồng và bài thuê xe máy Đà Lạt đã publish, được dẫn chéo thay vì tranh từ khóa.",
+ "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Lâm Đồng: bảng giá xếp Vision mới vào nhóm xe ga phổ thông 100.000đ – 150.000đ/ngày — thấp hơn các tỉnh du lịch biển, đối chiếu 15+ điểm ghi nhận trong thành phố, thủ tục không cọc dùng giấy tờ + số phòng khách sạn, và đánh giá Vision cho các cung đèo Prenn, Tà Nùng.",
+ "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Bảng gốc ghi một dòng giá ghép hai mức (100.000đ – 150.000đ/ngày 160.000đ – 180.000đ/ngày) — trích nguyên văn, phần diễn giải chỉ dùng mức 100.000đ – 150.000đ cho nhóm Vision. Không bịa địa chỉ/số điện thoại.",
+ "claim_evidence": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tai-da-lat/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Bảng giá thuê xe máy ở Đà Lạt ghi nhận nhóm xe số Wave alpha, Wave S, Sirius, Jupiter, Future 80.000đ – 130.000đ; nhóm xe ga phổ thông gồm cả Vision mới (cùng Mio, Atila, Click, Hayate, Air blade Fi 2012, Lead Fi Air Blade 125cc, Lead mới) 100.000đ – 150.000đ/ngày; nhóm thể thao Exciter, Raider, cào cào, CBR 180.000đ – 200.000đ/ngày",
+   "claim_supported": "Dòng xe Giá thuê xe máy Đà Lạt Honda wave alpha, Honda wave S, Yamaha Sirius, Yamaha Jupiter, Honda future 80.000đ – 130.000đ Mio – Atila, Click, Hayate, Air blade Fi 2012, Lead Fi Air Blade 125cc, Lead mới, Vision mới 100.000đ – 150.000đ/ngày 160.000đ – 180.000đ/ngày Yamaha exciter – suzuki raider – cào cào – CBR 180.000đ – 200.000đ/ngày PG-1 150.000đ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tai-da-lat/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Lavender (CS1 14 Nam Kỳ Khởi Nghĩa phường 1; CS2 01 Tô Hiến Thành phường 3, sau lưng bến xe Phương Trang) ghi nhận xe số 100.000đ/ngày, xe ga 120.000đ/ngày, Air Blade 2026 140.000đ/ngày; thời gian thuê tính từ 12h trưa đến 12h trưa hôm sau",
+   "claim_supported": "Thuê xe máy Lavender Địa chỉ CS1: 14 Nam Kỳ Khởi Nghĩa, phường 1, thành phố Đà Lạt. Địa chỉ CS2: 01 Tô Hiến Thành. Phường 3, tp Đà Lạt (sau lưng bến xe Phương Trang) Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 120.000đ/ngày Giá thuê xe AB 2026: 140.000đ/ngày … Tại đây, thời gian thuê được tính rõ ràng từ 12h trưa đến 12h trưa hôm sau, minh bạch và dễ hiểu như khi đặt phòng khách sạn"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tai-da-lat/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Hoàng Oanh (5/28 Lý Nam Đế, phường Lâm Viên, Đà Lạt) ghi nhận giá thuê từ 100.000 – 150.000đ/ngày, có dàn xe Vision 110cc, Air Blade 125cc, Air Blade 160cc, Vario 160cc; Go HAPPY (40 Phan Bội Châu, phường 2) ghi nhận xe số 100.000đ/ngày, xe ga 120.000đ – 150.000đ/ngày; Mr Din (78 Lý Tự Trọng, phường 2) ghi nhận xe số 80.000đ/ngày, xe ga 120.000đ – 150.000đ/ngày",
+   "claim_supported": "Thuê xe máy Hoàng Oanh Đà Lạt Địa chỉ: 5/28 Lý Nam Đế, phường Lâm Viên, TP. Đà Lạt Giá thuê xe: từ 100.000 – 150.000đ/ngày … dàn xe mới cực chất lượng, từ các dòng xe ga phổ biến như Vision 110cc, Air Blade 125cc, Air Blade 160cc đến Vario 160cc … Thuê xe máy Go HAPPY Địa chỉ: 40 Phan Bội Châu, phường 2, TP. Đà Lạt Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 120.000đ – 150.000đ/ngày … Thuê xe máy Mr Din Đà Lạt Địa chỉ: số 78 đường Lý Tự Trọng, phường 2, TP. Đà Lạt Giá thuê xe số: 80.000đ/ngày Giá thuê xe ga: 120.000đ – 150.000đ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tai-da-lat/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Các điểm ghi nhận khác tại Đà Lạt: Cub50 (340 Phan Đình Phùng, phường 2) xe số 80.000đ/ngày, xe ga 100.000đ – 150.000đ/ngày; Chị Hà (2 Nguyễn Chí Thanh, phường 1) xe số 80.000đ/ngày, xe ga 120.000đ – 130.000đ/ngày; Văn Phú (khu quy hoạch Bùi Thị Xuân, phường 2) xe số 100.000đ/ngày, xe ga 120.000đ – 160.000đ/ngày; Anh Tân (8/37 Bis Võ Trường Toản, phường 8) xe số 100.000đ/ngày, xe ga 150.000đ/ngày",
+   "claim_supported": "Thuê xe máy Cub50 Đà Lạt Địa chỉ: 340 Phan Đình Phùng, phường 2, thành phố Đà Lạt Giá thuê xe số: 80.000đ/ngày Giá thuê xe ga: 100.000đ – 150.000đ/ngày … Thuê xe máy Chị Hà Đà Lạt Địa chỉ: số 2 Nguyễn Chí Thanh, phường 1, thành phố Đà Lạt Giá thuê xe số: 80.000đ/ngày Giá thuê xe ga: 120.000đ – 130.000đ/ngày … Văn Phú Địa chỉ: L8 Khu Quy Hoạch, Đường Bùi Thị Xuân, Phường 2, Thành phố Đà Lạt, Lâm Đồng Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 120.000đ – 160.000đ/ngày … Anh Tân Địa chỉ: Số 8/37 Bis Võ Trường Toản, Phường 8, Thành phố Đà Lạt Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tai-da-lat/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Thủ tục thuê xe máy Đà Lạt: CMND, hộ chiếu, cavet xe trùng tên, bằng lái xe; nếu khách sạn giữ CMND hoặc hộ chiếu thì cung cấp tên khách sạn và số phòng; các địa điểm thường không yêu cầu đặt cọc, một số ít cần cọc khoảng 500.000 vnd – 1.000.000 vnd",
+   "claim_supported": "Thủ tục cơ bản bao gồm: Giấy chứng minh thư nhân dân, hộ chiếu, cavet xe trùng với tên mình, bằng lái xe là thuê đủ. Trong trường hợp khách sạn đang giữ CMND hoặc Passport, bạn có thể cung cấp tên khách sạn và số phòng để xác nhận thông tin. Các địa điểm thường không yêu cầu đặt cọc. Một số ít địa điểm cần cọc khoảng 500.000vnd – 1.000.000vnd"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … động cơ 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ]
+}

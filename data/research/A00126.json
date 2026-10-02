@@ -1,0 +1,105 @@
+{
+ "article_id": "A00126",
+ "primary_keyword": "giá thuê Vision Tây Ninh",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mức giá thuê Honda Vision tại Tây Ninh theo các điểm ghi nhận (thành phố và Gò Dầu), đối chiếu mặt bằng xe ga 100.000đ -160.000đ/ngày và thủ tục cọc 1 triệu",
+ "research_date": "2026-10-02",
+ "geo_entities": [
+  "Tây Ninh",
+  "thành phố Tây Ninh",
+  "Gò Dầu",
+  "KCN Phước Đông",
+  "bến xe Tây Ninh",
+  "núi Bà Đen"
+ ],
+ "vehicle_entities": [
+  "xe ga",
+  "xe số",
+  "xe tay ga"
+ ],
+ "brand_entities": [
+  "Honda",
+  "Yamaha",
+  "SYM"
+ ],
+ "model_entities": [
+  "Vision",
+  "Air Blade",
+  "AB",
+  "Wave",
+  "Sirius"
+ ],
+ "questions_found": [
+  "Thuê Honda Vision ở Tây Ninh giá bao nhiêu một ngày?",
+  "Thuê xe máy Tây Ninh cần cọc bao nhiêu?",
+  "Ở Gò Dầu có điểm cho thuê xe máy không?",
+  "Xe ga ở Tây Ninh có đắt hơn xe số không?",
+  "Thuê xe ở Tây Ninh cần giấy tờ gì?"
+ ],
+ "related_queries": [
+  "gia thue vision tay ninh",
+  "cho thue xe may tay ninh",
+  "thue xe may go dau",
+  "thue xe may ta ninh gia"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Tây Ninh với 5 điểm ghi nhận, nhiều điểm nằm sát bến xe thành phố",
+  "Mặt bằng xe ga đồng nhất 100.000đ -160.000đ/ngày; riêng Tân Quốc Việt ở Gò Dầu ghi nhận thấp bất thường 50.000đ – 120.000đ/ngày cho xe ga"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tay-ninh/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Dịch vụ cho thuê xe máy Tây Ninh cũng khá phát triển. Tại các khu vực gần thành phố có rất nhiều cửa hàng cho thuê xe máy"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ],
+ "existing_internal_pages": [
+  "/lab/",
+  "/lab/thue-xe-may/",
+  "/lab/thue-xe-may/thue-xe-may-tay-ninh/",
+  "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+  "/lab/thue-xe-may/gia-thue-vision-hai-phong/",
+  "/lab/thue-xe-may/gia-thue-vision-lao-cai/"
+ ],
+ "potential_cannibalization": "Hàng CG-rental-price-vision-tay-ninh theo matrix; từ khóa \"giá thuê Vision Tây Ninh\" chưa có bài nào dùng. Bài geo hub Tây Ninh đã publish, được dẫn chéo.",
+ "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Tây Ninh: mặt bằng xe ga 100.000đ -160.000đ/ngày đồng nhất tại 4 điểm thị xã, đối lập với ngoại lệ rẻ bất thường ở Gò Dầu (Tân Quốc Việt 50.000đ – 120.000đ/ngày), kèm thủ tục cọc trước 1 triệu và đánh giá Vision cho cung lên núi Bà Đen.",
+ "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không bịa địa chỉ/số điện thoại. Lưu ý nguồn ghi giá mô tả (120.000 – 180.000đ) khác bảng — trích nguyên văn cả hai, phần diễn giải ưu tiên bảng.",
+ "claim_evidence": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tay-ninh/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Phượng (4/28b khu phố 5, phường 4, thị xã Tây Ninh), Hoàng Gia (19 đường 781, ấp Bình Hòa, Thái Hòa, Châu Thành), Hùng Vương (652 Cách Mạng Tháng 8, phường 3) và Thanh Đồng (912, khu phố 1, phường 4) đều ghi nhận xe số 80.000đ – 120.000đ/ngày, xe ga 100.000đ -160.000đ/ngày",
+   "claim_supported": "Phượng Điện thoại: 0276 3824 728 Địa chỉ: 4/28b Kp5, P.4, Thị Xã Tây Ninh, Tây Ninh, Phường 4, Tây Ninh Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 100.000đ -160.000đ/ngày 4.3/5 Hoàng Gia Điện thoại: 0276 3824 728 Địa chỉ: 19 đường 781, ấp Bình Hòa, Thái Hòa, Châu Thành, Tây Ninh Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 100.000đ -160.000đ/ngày N/A Hùng Vương Điện thoại: 093 121 16 68 Địa chỉ: 652 Cách Mạng Tháng 8, Phường 3, Tây Ninh Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 100.000đ -160.000đ/ngày 5.0/5 Thanh Đồng Điện thoại: 0276 382 3440 Địa chỉ: 912, Khu Phố 1, Phường 4, Thị Xã Tây Ninh, Phường 4, Tây Ninh Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 100.000đ -160.000đ/ngày N/A"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tay-ninh/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Tân Quốc Việt (ngã 4 đường Nông Trường, KCN Phước Đông, Gò Dầu) ghi nhận xe số 40.000đ – 90.000đ/ngày, xe ga 50.000đ – 120.000đ/ngày; phần mô tả ghi nhận xe số từ 80.000đ/ngày, xe ga khoảng 120.000 – 180.000đ/ngày; thủ tục giấy tờ và cọc trước 1 triệu",
+   "claim_supported": "Tân Quốc Việt Điện thoại: 0789 3979 83 Địa chỉ: Ngã 4, Đường Nông Trường, KCN Phước Đông, Gò Dầu Giá thuê xe số: 40.000đ – 90.000đ/ngày Giá thuê xe ga: 50.000đ – 120.000đ/ngày 5.0/5 … Chỉ cần bỏ ra từ 80.000đ/ngày bạn đã thuê được ngay một chiếc xe số siêu khỏe rồi. Với xe ga thì giá cao hơn chút, khoảng 120.000 – 180.000đ/ngày. Thủ tục cho thuê xe cũng gọn nhẹ, chỉ cần giấy tờ và tiền cọc là xong. Bạn sẽ đưa trước 1 triệu để thế chân, sau đó sẽ được nhận lại khi trả xe"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tay-ninh/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Tân Quốc Việt có nhiều loại xe như Wave, Sirius, Vision, AB; Hoàng Gia nằm ngay cạnh bến xe Tây Ninh",
+   "claim_supported": "Nơi này có rất nhiều loại xe như Wave, Sirius, Vision, AB,… Tất cả chúng đều rất bền và mới … Hoàng Gia là cái tên không còn xa lạ với những người đến Tây Ninh thuê xe. Địa chỉ nơi đây nằm ngay cạnh bến xe nên rất thuận tiện"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … động cơ 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ]
+}

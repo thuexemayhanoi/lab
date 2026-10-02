@@ -1,0 +1,102 @@
+{
+ "article_id": "A00127",
+ "primary_keyword": "giá thuê Vision Vĩnh Long",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mức giá thuê Honda Vision tại Vĩnh Long theo các điểm ghi nhận (homestay, khách sạn), đối chiếu mặt bằng xe ga 120.000đ -160.000đ/ngày và lưu ý thị trường mỏng kiểu miền Tây",
+ "research_date": "2026-10-02",
+ "geo_entities": [
+  "Vĩnh Long",
+  "thành phố Vĩnh Long",
+  "đảo An Bình",
+  "Long Hồ",
+  "chợ nổi Cái Bè",
+  "sông Cổ Chiên"
+ ],
+ "vehicle_entities": [
+  "xe ga",
+  "xe số",
+  "xe tay ga"
+ ],
+ "brand_entities": [
+  "Honda",
+  "Yamaha"
+ ],
+ "model_entities": [
+  "Vision",
+  "Air Blade",
+  "Wave"
+ ],
+ "questions_found": [
+  "Thuê Honda Vision ở Vĩnh Long giá bao nhiêu một ngày?",
+  "Ở Vĩnh Long có khó thuê xe máy không?",
+  "Homestay nào ở Vĩnh Long có cho thuê xe?",
+  "Xe ga ở Vĩnh Long đắt hơn xe số không?",
+  "Thuê xe ở đảo An Bình có điểm nào ghi nhận?"
+ ],
+ "related_queries": [
+  "gia thue vision vinh long",
+  "cho thue xe may vinh long",
+  "thue xe may vinh long gia",
+  "thue xe may an binh vinh long"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Vĩnh Long với 5 điểm ghi nhận, phần lớn là homestay, khách sạn cho thuê kèm",
+  "Mặt bằng xe ga ghi nhận 120.000đ -160.000đ/ngày; Lộc Phúc ghi nhận có sẵn các dòng Wave, Vision, Air Blade"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Tìm hiểu ngay các địa chỉ cho thuê xe máy Vĩnh Long chất lượng nhất … Các nơi cho thuê xe máy Vĩnh Long thường nằm gần thành phố"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ],
+ "existing_internal_pages": [
+  "/lab/",
+  "/lab/thue-xe-may/",
+  "/lab/thue-xe-may/thue-xe-may-vinh-long/",
+  "/lab/thue-xe-may/thue-honda-vision-ha-noi/",
+  "/lab/thue-xe-may/gia-thue-vision-hai-phong/",
+  "/lab/thue-xe-may/gia-thue-vision-can-tho/"
+ ],
+ "potential_cannibalization": "Hàng CG-rental-price-vision-vinh-long theo matrix; từ khóa \"giá thuê Vision Vĩnh Long\" chưa có bài nào dùng. Bài geo hub Vĩnh Long đã publish, được dẫn chéo.",
+ "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Vĩnh Long: thị trường mỏng kiểu miền Tây — cho thuê là dịch vụ đi kèm homestay, khách sạn; Vision được nêu đích danh trong kho xe của Lộc Phúc, mặt bằng xe ga 120.000đ -160.000đ/ngày, kèm lời khuyên đặt xe cùng homestay và tham khảo Cần Thơ khi ở xa.",
+ "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không bịa địa chỉ/số điện thoại.",
+ "claim_evidence": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Lộc Phúc (50 Nguyễn Thị Út, phường 1, Vĩnh Long) ghi nhận xe số 80.000đ – 100.000đ/ngày, xe ga 120.000đ -160.000đ/ngày, có các loại xe Wave, Vision, Air Blade; Ngọc Sang (95/8 ấp Bình Lương, xã An Bình, Long Hồ) và Anh Duy (130 đường 8-3, phường 5) ghi nhận cùng mức",
+   "claim_supported": "Lộc Phúc Điện thoại: 091 949 45 56 Địa chỉ: 50 Đường Nguyễn Thị Út, Phường 1, Vĩnh Long, Việt Nam Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày 3.6/5 Ngọc Sang Điện thoại: 0270 385 8694 Địa chỉ: Số 95/8 Ấp Bình Lương Xã An Bình, Huyện Long Hồ, Tỉnh Vĩnh Long Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày 5/5 … Anh Duy Điện thoại: 0944 355 58 Địa chỉ: 130 đường 8-3 p5 Thành phố Vĩnh Long Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày N/A … Nơi này cũng có những nguyên tắc nhất định … Đảm bảo có các loại xe phổ biến như Wave, Vision hay Air Blade"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Nam Thanh (172/9 Bình Lương, An Bình, Long Hồ) ghi nhận xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày; khách sạn Thiên Thanh (2G Hùng Vương, phường 1) ghi nhận xe số 100.000đ/ngày, xe ga 150.000đ/ngày",
+   "claim_supported": "Nam Thanh Điện thoại: 091 871 79 86 Địa chỉ: 172/9 Bình Lương, An Bình, Long Hồ, Vĩnh Long Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày 4.4/5 Khách sạn Thiên Thanh Điện thoại: 0270 3822 099 Địa chỉ: 2G Hùng Vương, Phường 1, Vĩnh Long, Việt Nam Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày 3.8/5"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Thị trường Vĩnh Long không có nhiều địa chỉ thuê xe máy chuyên nghiệp — các điểm cho thuê thường là dịch vụ đi kèm của homestay, khách sạn; nếu ở xa khu vực sát sông Hậu nên cân nhắc dịch vụ thuê xe máy Cần Thơ",
+   "claim_supported": "Tại Vĩnh Long không có nhiều địa điểm thuê xe máy chuyên nghiệp. Các địa điểm dưới đây cho thuê xe máy Vĩnh Long như một dịch vụ đi kèm. Vì thế nếu đến đây lần đầu bạn sẽ rất khó khăn trong việc tìm kiếm thông tin … Các nơi cho thuê xe máy Vĩnh Long thường nằm gần thành phố. Nếu bạn ở xa khu vực sát sông Hậu thì nên cân nhắc đến dịch vụ thuê xe máy Cần Thơ. Tại đó sẽ có nhiều lựa chọn hơn"
+  },
+  {
+   "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+   "source_domain": "www.honda.com.vn",
+   "date_accessed": "2026-10-02",
+   "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+   "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … động cơ 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+  }
+ ]
+}
