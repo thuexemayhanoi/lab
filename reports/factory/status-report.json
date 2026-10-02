@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-02T01:16:35.833Z",
+  "generated_at": "2026-10-02T04:04:26.237Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 105,
-    "PLANNED": 9895
+    "PUBLISHED": 115,
+    "PLANNED": 9885
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 99,
-      "PLANNED": 4901
+      "PUBLISHED": 109,
+      "PLANNED": 4891
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00098",
-  "next_claimable_id": "A00099",
+  "last_completed_id": "A00108",
+  "next_claimable_id": "A00109",
   "blocked": [],
   "published": [
     {
@@ -628,6 +628,66 @@
       "pk": "giá thuê Vision Hải Phòng",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-vision-hai-phong/"
+    },
+    {
+      "id": "A00099",
+      "pk": "giá thuê Vision Huế",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-vision-hue/"
+    },
+    {
+      "id": "A00100",
+      "pk": "giá thuê Vision Đà Nẵng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-vision-da-nang/"
+    },
+    {
+      "id": "A00101",
+      "pk": "giá thuê Vision TP.HCM",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-vision-tp-hcm/"
+    },
+    {
+      "id": "A00102",
+      "pk": "giá thuê Vision Cần Thơ",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-vision-can-tho/"
+    },
+    {
+      "id": "A00103",
+      "pk": "giá thuê Vision Lai Châu",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-vision-lai-chau/"
+    },
+    {
+      "id": "A00104",
+      "pk": "giá thuê Vision Điện Biên",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-vision-dien-bien/"
+    },
+    {
+      "id": "A00105",
+      "pk": "giá thuê Vision Sơn La",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-vision-son-la/"
+    },
+    {
+      "id": "A00106",
+      "pk": "giá thuê Vision Lạng Sơn",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-vision-lang-son/"
+    },
+    {
+      "id": "A00107",
+      "pk": "giá thuê Vision Cao Bằng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-vision-cao-bang/"
+    },
+    {
+      "id": "A00108",
+      "pk": "giá thuê Vision Tuyên Quang",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-vision-tuyen-quang/"
     },
     {
       "id": "A00465",
