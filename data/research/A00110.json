@@ -1,0 +1,94 @@
+{
+  "article_id": "A00110",
+  "primary_keyword": "giá thuê Vision Thái Nguyên",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết khung giá thuê Honda Vision tại Thái Nguyên theo bảng giá tham khảo công khai (Vision 120.000 vnd/ngày), so sánh Airblade theo niên đại, xe số và giá các cơ sở ghi nhận",
+  "research_date": "2026-10-02",
+  "geo_entities": ["Thái Nguyên", "thành phố Thái Nguyên", "đường Z115", "phường Tân Thịnh", "đường Lương Thế Vinh", "đường Quang Trung", "đường Ba Tháng Hai", "hồ Núi Cốc"],
+  "vehicle_entities": ["xe ga", "xe số", "xe tay ga"],
+  "brand_entities": ["Honda", "Yamaha", "SYM"],
+  "model_entities": ["Vision", "Airblade", "Lead", "Wave S", "Wave RS", "Wave RSX", "Sirius", "Jupiter", "Nouvo", "Attila"],
+  "questions_found": [
+    "Thuê Honda Vision ở Thái Nguyên giá bao nhiêu một ngày?",
+    "Xe ga ở Thái Nguyên có đắt hơn xe số không?",
+    "Thuê xe máy ở Thái Nguyên cần thủ tục gì?",
+    "Vision có phù hợp đi hồ Núi Cốc không?",
+    "Ở Thái Nguyên có chỗ nào giao xe tận nơi không?"
+  ],
+  "related_queries": ["gia thue vision thai nguyen", "cho thue xe may thai nguyen", "thue xe ga thai nguyen gia", "thue xe may o thai nguyen bao nhieu", "cho thue xe may nui coc"],
+  "serp_patterns": [
+    "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Thái Nguyên với 5 cơ sở ghi nhận, xe ga dao động 120.000đ – 160.000đ/ngày",
+    "Bảng giá tham khảo theo dòng xe niêm yết Honda Vision 120.000 vnd/ngày — ngang Honda Lead và Airblade 2012, thấp hơn Airblade 2016-2018 (160.000 vnd)",
+    "Thủ tục đơn giản: giấy tờ tùy thân có ảnh và đặt cọc tiền"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-thai-nguyen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá thuê xe máy Thái Nguyên (tham khảo): Xe tay ga Honda Vision 120.000 vnd; Xe tay ga Honda Lead 120.000 vnd; Xe tay ga Honda Airblade 2012 120.000 vnd, 2013-2015 140.000 vnd, 2016-2018 160.000 vnd; nhóm xe số 80.000 – 90.000 vnd"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": ["/lab/", "/lab/thue-xe-may/", "/lab/thue-xe-may/thue-xe-may-thai-nguyen/", "/lab/thue-xe-may/thue-honda-vision-ha-noi/", "/lab/thue-xe-may/gia-thue-vision-hai-phong/", "/lab/thue-xe-may/thue-xe-may-bac-ninh/"],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-thai-nguyen theo matrix; từ khóa \"giá thuê Vision Thái Nguyên\" chưa có bài nào dùng. Bài geo hub Thái Nguyên đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Thái Nguyên: mức 120.000 vnd/ngày trong bảng giá tham khảo — ngang Lead và Airblade 2012, thấp hơn Airblade mới; đối chiếu 5 cơ sở ghi nhận quanh trung tâm thành phố với xe ga 120.000đ – 160.000đ/ngày, kèm chính sách giao xe miễn phí của một số cửa hàng.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Vision được niêm yết riêng trong bảng giá tham khảo. Không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Thái Nguyên (tham khảo) ghi nhận Xe tay ga Honda Vision 120.000 vnd/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-thai-nguyen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá thuê xe máy Thái Nguyên | Các loại xe – Đời xe | Giá thuê xe 1 ngày | Xe tay ga Honda Airblade 2012 | 120.000 vnd | Xe tay ga Honda Airblade 2013-2015 | 140.000 vnd | Xe tay ga Honda Airblade 2016- 2017 – 2018 | 160.000 vnd | Xe tay ga Honda Lead | 120.000 vnd | Xe tay ga Honda Vision | 120.000 vnd"
+    },
+    {
+      "claim": "Bảng giá ghi nhận nhóm xe số tại Thái Nguyên: Wave S 80.000 vnd, Wave RS 80.000 vnd, Wave RSX-fi 90.000 vnd, Sirius 2015-2018 FI 90.000 vnd, Jupiter gravita 80.000 vnd; xe ga khác: Nouvo LX 100.000 vnd, Nouvo SX fi 120.000 vnd, Attila 100.000 vnd",
+      "source_url": "https://motogo.vn/thue-xe-may-thai-nguyen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Xe số Wave S | 80.000 vnd | Xe số Wave RS | 80.000 vnd | Xe số Wave RSX – fi | 90.000 vnd | Xe số Yamaha Sirius 2015 – 2018 FI | 90.000 vnd | Xe số Yamaha Jupiter gravita | 80.000 vnd | Xe tay ga Yamaha Nouvo LX | 100.000 vnd | Xe tay ga Yamaha Nouvo SX fi | 120.000 vnd | Xe tay ga attila Victoria , Elizabeth | 100.000 vnd"
+    },
+    {
+      "claim": "Minh Việt (168 đường Z115, phường Tân Thịnh, TP Thái Nguyên) ghi nhận xe số 80.000đ – 120.000đ/ngày, xe ga 120.000đ -160.000đ/ngày và có chính sách giao nhận xe miễn phí",
+      "source_url": "https://motogo.vn/thue-xe-may-thai-nguyen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Minh Việt Điện thoại: 097 299 71 06 Địa chỉ: 168, Đường Z115, Phường Tân Thịnh, Tân Thịnh, TP Thái Nguyên Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày 4.0/5 … Minh Việt còn có chính sách giao nhận xe miễn phí, hỗ trợ đổi trả cho khách nếu gặp vấn đề lỗi kỹ thuật xe"
+    },
+    {
+      "claim": "Khánh Dương (322 Quang Trung, phường Thịnh Đán, TP Thái Nguyên) ghi nhận xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-thai-nguyen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khánh Dương Điện thoại: 0989 447666 Địa chỉ: 322 Quang Trung, Phường Thịnh Đán, Tp Thái Nguyên, Thái Nguyên Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày 3.0/5"
+    },
+    {
+      "claim": "Quang Trung (490 Ba Tháng Hai, phường Tân Lập) và Long Khánh (1111 Ba Tháng Hai, phường Phú Xá) đều ghi nhận xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày; Khương Chuyên (106 Lương Thế Vinh, phường Quang Trung) ghi nhận xe số 100.000đ/ngày, xe ga 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-thai-nguyen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Quang Trung Điện thoại: 0972 373888 Địa chỉ: 490 Ba Tháng Hai, Phường Tân Lập, Thái Nguyên Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày … Long Khánh Điện thoại: 0975 466789 Địa chỉ: 1111 Ba Tháng Hai, Phường Phú Xá, Tp Thái Nguyên, Thái Nguyên Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày … Khương Chuyên Điện thoại: 0912 735190 Địa chỉ: 106 Lương Thế Vinh, Phường Quang Trung, Tp Thái Nguyên, Thái Nguyên Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày"
+    },
+    {
+      "claim": "Thủ tục thuê xe máy Thái Nguyên: đặt cọc tiền và để lại giấy tờ cá nhân; mọi loại giấy tờ tùy thân có ảnh như CMND, căn cước hay hộ chiếu đều được chấp nhận",
+      "source_url": "https://motogo.vn/thue-xe-may-thai-nguyen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Hầu hết các địa chỉ đều yêu cầu đặt cọc tiền và để lại giấy tờ cá nhân … Tất cả các loại giấy tờ tùy thân có ảnh như CMND, căn cước hay hộ chiếu đều được chấp nhận"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "article_id": "A00117",
+  "primary_keyword": "giá thuê Vision Nghệ An",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết giá thuê Honda Vision tại Nghệ An (Vinh) theo bảng giá công khai (Honda Vision 150.000 VNĐ/ngày), đối chiếu 5 cơ sở ghi nhận trong thành phố Vinh và bảng xe số tham khảo",
+  "research_date": "2026-10-02",
+  "geo_entities": ["Nghệ An", "thành phố Vinh", "phường Hưng Bình", "phường Trung Đô", "phường Bến Thủy", "Cù Chính Lan", "Bạch Liêu", "biển Cửa Lò", "quốc lộ 1"],
+  "vehicle_entities": ["xe ga", "xe số", "xe côn", "xe tay ga"],
+  "brand_entities": ["Honda", "Yamaha", "SYM", "Suzuki"],
+  "model_entities": ["Vision", "AirBlade", "Lead", "Attila", "Nouvo", "Wave", "Sirius", "Future", "Jupiter", "Exciter", "SH", "LX"],
+  "questions_found": [
+    "Thuê Honda Vision ở Vinh giá bao nhiêu một ngày?",
+    "Xe ga ở Nghệ An có đắt hơn xe số không?",
+    "Thuê xe máy ở Vinh cần thủ tục gì?",
+    "Vision có chạy từ Vinh ra Cửa Lò được không?",
+    "Bảng giá thuê xe máy Nghệ An niêm yết theo dòng xe không?"
+  ],
+  "related_queries": ["gia thue vision nghe an", "cho thue xe may vinh", "thue xe ga nghe an gia", "thue xe may o vinh bao nhieu", "cho thue xe may cua lo"],
+  "serp_patterns": [
+    "Trang tổng hợp motogo.vn cho Vinh xếp cao với 5 cơ sở ghi nhận, xe ga dao động 120.000đ – 160.000đ/ngày",
+    "Bảng giá xe ga niêm yết Honda Vision 150.000 VNĐ/ngày — cùng mức với AirBlade và Lead, cao hơn Attila 130.000 và Nouvo 120.000",
+    "Bảng giá xe số tham khảo: Wave, Sirius, Future 80.000 VNĐ/ngày; Jupiter, Wave RSX 100.000 VNĐ/ngày"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-vinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá thuê xe ga ghi nhận Honda Vision 150.000 VNĐ/ngày; Honda AirBlade 150.000 VNĐ/ngày; Honda Lead 150.000 VNĐ/ngày; SYM Attila 130.000 VNĐ/ngày; Yamaha Nouvo 120.000 VNĐ/ngày; bảng xe số tham khảo Wave, Sirius, Future 80.000 VNĐ/ngày, Jupiter và Wave RSX 100.000 VNĐ/ngày"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": ["/lab/", "/lab/thue-xe-may/", "/lab/thue-xe-may/thue-xe-may-nghe-an/", "/lab/thue-xe-may/thue-honda-vision-ha-noi/", "/lab/thue-xe-may/gia-thue-vision-hai-phong/", "/lab/thue-xe-may/thue-xe-may-ha-tinh/"],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-nghe-an theo matrix; từ khóa \"giá thuê Vision Nghệ An\" chưa có bài nào dùng. Bài geo hub Nghệ An đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Vinh — thành phố lớn nhất Bắc Trung Bộ: mức 150.000 VNĐ/ngày trong bảng giá xe ga niêm yết, cao hơn mặt bằng xe ga các cơ sở ghi nhận (130.000đ – 140.000đ/ngày), đối chiếu nhóm xe số 80.000 – 100.000 VNĐ/ngày và phân tích Vision cho cung Vinh — Cửa Lò.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Vision được niêm yết riêng trong bảng giá xe ga — mức cao nhất trong nhóm xe ga phổ thông. Không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe ga tại Vinh ghi nhận Honda Vision 150.000 VNĐ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Dòng xe | Giá thuê xe | Honda AirBlade | 150.000 VNĐ/ngày | Honda Lead | 150.000 VNĐ/ngày | Honda Vision | 150.000 VNĐ/ngày | SYM Attila | 130.000 VNĐ/ngày | Yamaha Nouvo | 120.000 VNĐ/ngày | LX | 250.000 VNĐ/ngày | SH | 300.000 VNĐ/ngày"
+    },
+    {
+      "claim": "Bảng giá thuê xe số (tham khảo) ghi nhận Honda Wave 80.000 VNĐ/ngày, Yamaha Sirius 80.000 VNĐ/ngày, Honda Future 80.000 VNĐ/ngày, Yamaha Jupiter 100.000 VNĐ/ngày, Honda Wave RSX 100.000 VNĐ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá thuê xe số 2024 (tham khảo) | Dòng xe | Giá thuê xe | Honda Wave | 80.000 VNĐ/ngày | Yamaha Sirius | 80.000 VNĐ/ngày | Honda Future | 80.000 VNĐ/ngày | Yamaha Jupiter | 100.000 VNĐ/ngày | Honda Wave RSX | 100.000 VNĐ/ngày"
+    },
+    {
+      "claim": "Ngô Thị Thu Hương (số 53 Khối Liên Cơ, phường Hưng Bình, TP Vinh) ghi nhận xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Ngô Thị Thu Hương Địa chỉ: Số 53 Khối Liên Cơ, phường Hưng Bình, Tp Vinh, Nghệ An Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày"
+    },
+    {
+      "claim": "Đinh Nghĩa (số 44 Cù Chính Lan, Trung Đô, TP Vinh) ghi nhận xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Đinh Nghĩa Địa chỉ: Số 44 Cù Chính Lan, Trung Đô, Tp Vinh, Nghệ An. Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày"
+    },
+    {
+      "claim": "Hồng Dương (số 26 Bạch Liêu, phường Bến Thủy, TP Vinh) ghi nhận xe số 80.000đ – 120.000đ/ngày, xe ga 120.000đ -160.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Hồng Dương Địa chỉ: Số 26 Bạch Liêu, Phường Bến Thủy, Tp Vinh, Nghệ An Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày"
+    },
+    {
+      "claim": "Anh Dũng (số 18 Phượng Hoàng, Trung Đô, thành phố Vinh) ghi nhận xe số 100.000đ/ngày, xe ga 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Anh Dũng Địa chỉ: Số 18 Phượng Hoàng, Trung Đô, thành phố Vinh, Nghệ An. Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày"
+    },
+    {
+      "claim": "Mr Danh (số 12, ngõ 86 Độc Thiết, TP Vinh) ghi nhận xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Mr Danh Địa chỉ: Số 12, ngõ 86 Độc Thiết, Tp Vinh, Nghệ An. Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

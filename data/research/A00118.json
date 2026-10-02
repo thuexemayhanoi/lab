@@ -1,0 +1,94 @@
+{
+  "article_id": "A00118",
+  "primary_keyword": "giá thuê Vision Hà Tĩnh",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết giá thuê Honda Vision tại Hà Tĩnh theo bảng giá tham khảo công khai (Vision 120.000 vnd/ngày), đối chiếu 5 cơ sở ghi nhận từ thành phố Hà Tĩnh đến Nghi Xuân, Kỳ Anh và thủ tục thuê xe",
+  "research_date": "2026-10-02",
+  "geo_entities": ["Hà Tĩnh", "thành phố Hà Tĩnh", "đường Hà Huy Tập", "đường 26/3", "thị trấn Xuân An", "huyện Nghi Xuân", "Kỳ Anh", "Kỳ Phong", "biển Thiên Cầm", "quốc lộ 1"],
+  "vehicle_entities": ["xe ga", "xe số", "xe tay ga"],
+  "brand_entities": ["Honda", "Yamaha", "SYM"],
+  "model_entities": ["Vision", "Airblade", "Lead", "Wave S", "Wave RS", "Wave RSX", "Sirius", "Jupiter", "Nouvo", "Attila"],
+  "questions_found": [
+    "Thuê Honda Vision ở Hà Tĩnh giá bao nhiêu một ngày?",
+    "Xe ga ở Hà Tĩnh có đắt hơn xe số không?",
+    "Thuê xe máy ở Hà Tĩnh cần thủ tục gì?",
+    "Ở Hà Tĩnh có cơ sở cho thuê xe ngoài thành phố không?",
+    "Vision có chạy từ Hà Tĩnh ra biển Thiên Cầm được không?"
+  ],
+  "related_queries": ["gia thue vision ha tinh", "cho thue xe may ha tinh", "thue xe ga ha tinh gia", "thue xe may o ha tinh bao nhieu", "cho thue xe may thien cam"],
+  "serp_patterns": [
+    "Trang tổng hợp motogo.vn cho Hà Tĩnh ghi nhận tỉnh không có cơ sở cho thuê xe quy mô lớn, phần lớn cửa hàng kinh doanh thêm dịch vụ khác",
+    "Bảng giá tham khảo theo dòng xe niêm yết Honda Vision 120.000 vnd/ngày — ngang Lead, Airblade 2012 và Nouvo SX fi",
+    "Thủ tục: đặt cọc tiền và giấy tờ cá nhân có ảnh; xe phổ thông cọc khoảng 1 đến 3 triệu"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-ha-tinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá thuê xe máy Hà Tĩnh (tham khảo): Xe tay ga Honda Vision 120.000 vnd; Honda Lead 120.000 vnd; Airblade 2012 120.000 vnd, 2013-2015 140.000 vnd, 2016-2018 160.000 vnd; nhóm xe số 80.000 – 90.000 vnd; thủ tục đặt cọc tiền và giấy tờ cá nhân"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": ["/lab/", "/lab/thue-xe-may/", "/lab/thue-xe-may/thue-xe-may-ha-tinh/", "/lab/thue-xe-may/thue-honda-vision-ha-noi/", "/lab/thue-xe-may/gia-thue-vision-hai-phong/", "/lab/thue-xe-may/thue-xe-may-nghe-an/"],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-ha-tinh theo matrix; từ khóa \"giá thuê Vision Hà Tĩnh\" chưa có bài nào dùng. Bài geo hub Hà Tĩnh đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Hà Tĩnh — thị trường phân tán từ thành phố Hà Tĩnh đến Nghi Xuân, Kỳ Anh: mức 120.000 vnd/ngày trong bảng giá tham khảo, đối chiếu 5 cơ sở ghi nhận với xe ga 120.000đ – 160.000đ/ngày, kèm thủ tục cọc đơn giản và hành trình ra biển Thiên Cầm.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Vision được niêm yết riêng trong bảng giá tham khảo. Không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Hà Tĩnh (tham khảo) ghi nhận Xe tay ga Honda Vision 120.000 vnd/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-tinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Xe tay ga Honda Airblade 2012 | 120.000 vnd | Xe tay ga Honda Airblade 2013-2015 | 140.000 vnd | Xe tay ga Honda Airblade 2016- 2017 – 2018 | 160.000 vnd | Xe tay ga Honda Lead | 120.000 vnd | Xe tay ga Honda Vision | 120.000 vnd | Xe số Wave S | 80.000 vnd | Xe số Wave RS | 80.000 vnd | Xe số Wave RSX – fi | 90.000 vnd | Xe số Yamaha Sirius 2015 – 2018 FI | 90.000 vnd | Xe số Yamaha Jupiter gravita | 80.000 vnd | Xe tay ga Yamaha Nouvo LX | 100.000 vnd | Xe tay ga Yamaha Nouvo SX fi | 120.000 vnd | Xe tay ga attilla Victoria , Elizabeth | 100.000 vnd | Bảng giá thuê xe máy Hà Tĩnh (tham khảo)"
+    },
+    {
+      "claim": "Anh Hoàng (255 đường Hà Huy Tập, thành phố Hà Tĩnh) ghi nhận xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-tinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Anh Hoàng Địa chỉ: 255 Đường Hà Huy Tập, thành Phố Hà Tĩnh Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày 5.0/5"
+    },
+    {
+      "claim": "Anh Tâm (số nhà 7 đường 26/3, thành phố Hà Tĩnh) ghi nhận xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-tinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Anh Tâm Điện thoại: 0944640777 Địa chỉ: Số nhà 7 đường 26/3, Tp Hà Tĩnh, Hà Tĩnh Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày"
+    },
+    {
+      "claim": "Hoa Đô Hotel (Khối 1 thị trấn Xuân An, Nghi Xuân, Hà Tĩnh) ghi nhận xe số 80.000đ – 120.000đ/ngày, xe ga 120.000đ -160.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-tinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Hoa Đô Hotel Điện thoại: 0913 673 370 Địa chỉ: Khối 1 Thị trấn Xuân An, Nghi Xuân, Hà Tĩnh Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày"
+    },
+    {
+      "claim": "Khách sạn Tuyết Hoa (Kỳ Phong, Kỳ Anh, Hà Tĩnh) ghi nhận xe số 100.000đ/ngày, xe ga 150.000đ/ngày; Hồng Nghị (352 Hà Huy Tập, thành phố Hà Tĩnh) ghi nhận xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-tinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khách sạn Tuyết Hoa Điện thoại: 033 584 1125 Địa chỉ: Kỳ Phong, Kỳ Anh, Hà Tĩnh Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày … Hồng Nghị Điện thoại: 0868341851 Địa chỉ: 352 Hà Huy Tập, Tp Hà Tĩnh, Hà Tĩnh Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "Thủ tục thuê xe máy Hà Tĩnh đơn giản: đặt cọc tiền và giấy tờ cá nhân; giấy tờ có ảnh như CMND, căn cước, hộ chiếu đều được đặt lại; xe phổ thông cọc khoảng 1 đến 3 triệu",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-tinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Hầu hết các cửa hàng cho thuê xe máy Hà Tĩnh đều khá đơn giản. Họ chỉ yêu cầu bạn đặt cọc tiền và giấy tờ cá nhân là được. Các loại giấy tờ cá nhân được chấp nhận phải có ảnh và thông tin chi tiết. Vì thế CMND, căn cước hay hộ chiếu đều có thể đặt lại. Về tiền đặt cọc thì tùy loại xe mà sẽ có các mức khác nhau. Đối với các loại xe phổ thông thì tiền cọc rơi vào khoảng 1 đến 3 triệu"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

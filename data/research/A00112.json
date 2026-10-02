@@ -1,0 +1,94 @@
+{
+  "article_id": "A00112",
+  "primary_keyword": "giá thuê Vision Bắc Ninh",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết khung giá thuê Honda Vision tại Bắc Ninh theo nguồn công khai: bảng tham khảo xe ga 120k – 250k/ngày, các cơ sở ghi nhận quanh thành phố Bắc Ninh, Yên Phong, Quế Võ và lưu ý thuê xe đi làng quan họ",
+  "research_date": "2026-10-02",
+  "geo_entities": ["Bắc Ninh", "thành phố Bắc Ninh", "huyện Yên Phong", "huyện Quế Võ", "phường Vệ An", "đường Trần Hưng Đạo", "phường Đại Phúc", "làng quan họ", "đền Đó"],
+  "vehicle_entities": ["xe ga", "xe số", "xe côn", "xe tay ga"],
+  "brand_entities": ["Honda", "Yamaha", "Suzuki"],
+  "model_entities": ["Vision", "Airblade", "Lead", "Wave", "Sirius", "Jupiter"],
+  "questions_found": [
+    "Thuê Honda Vision ở Bắc Ninh giá bao nhiêu một ngày?",
+    "Xe ga ở Bắc Ninh có đắt hơn xe số không?",
+    "Thuê xe máy ở Bắc Ninh cần thủ tục gì?",
+    "Bắc Ninh có cơ sở cho thuê xe ga giao tận nơi không?",
+    "Vision có phù hợp di chuyển từ Bắc Ninh về Hà Nội không?"
+  ],
+  "related_queries": ["gia thue vision bac ninh", "cho thue xe may bac ninh", "thue xe ga bac ninh gia", "thue xe may o bac ninh bao nhieu", "cho thue xe may yen phong"],
+  "serp_patterns": [
+    "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Bắc Ninh với 6 cơ sở ghi nhận, phân bố tại thành phố Bắc Ninh, Yên Phong, Quế Võ",
+    "Bảng giá tham khảo dùng đơn vị nghìn đồng: xe số 80k – 150k, xe ga 120k – 250k, xe côn 250 -350k mỗi ngày",
+    "Nhu cầu thuê xe cao do Bắc Ninh tập trung nhiều khu công nghiệp, cách trung tâm Hà Nội khoảng 50km"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-bac-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá thuê xe máy Bắc Ninh (tham khảo): Xe số 80k – 150k; Xe ga 120k – 250k; Xe côn 250 -350k"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": ["/lab/", "/lab/thue-xe-may/", "/lab/thue-xe-may/thue-xe-may-bac-ninh/", "/lab/thue-xe-may/thue-honda-vision-ha-noi/", "/lab/thue-xe-may/gia-thue-vision-hai-phong/", "/lab/thue-xe-may/thue-xe-may-hung-yen/"],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-bac-ninh theo matrix; từ khóa \"giá thuê Vision Bắc Ninh\" chưa có bài nào dùng. Bài geo hub Bắc Ninh đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá của Honda Vision tại Bắc Ninh — tỉnh có nhu cầu thuê xe cao do gần Hà Nội và nhiều khu công nghiệp: khung xe ga 120k – 250k/ngày trong bảng tham khảo, đối chiếu 6 cơ sở ghi nhận với xe ga 120.000đ – 150.000đ/ngày, kèm đánh giá Vision cho cung đường Bắc Ninh — Hà Nội.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không cơ sở nào niêm yết giá riêng cho Vision trong nguồn đã mở; khung nhóm xe ga (k-notation) là dữ liệu công khai. Không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Bắc Ninh (tham khảo) ghi nhận xe số 80k – 150k, xe ga 120k – 250k, xe côn 250 -350k mỗi ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-bac-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Mỗi cửa hàng lại có chính sách giá cho thuê xe máy riêng. Vì thế bảng giá dưới đây chỉ mang tính chất tham khảo dựa trên thị trường chung … Loại xe | Giá/ngày | Xe số | 80k – 150k | Xe ga | 120k – 250k | Xe côn | 250 -350k | Bảng giá thuê xe máy Bắc Ninh (tham khảo)"
+    },
+    {
+      "claim": "Thiên Trang (34 Thiên Đức, phường Vệ An, thành phố Bắc Ninh) ghi nhận xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày; Mr Hảo (Trần Xá, xã Yên Trung, huyện Yên Phong) ghi nhận cùng mức",
+      "source_url": "https://motogo.vn/thue-xe-may-bac-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thiên Trang Điện thoại: 0241 382 1758 Địa chỉ: 34 Thiên Đức, phường Vệ An, Tp Bắc Ninh, tỉnh Bắc Ninh Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày … Mr Hảo Điện thoại: 0376 513 571 Địa chỉ: Trần Xá, xã Yên Trung, huyện Yên Phong, tỉnh Bắc Ninh Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày"
+    },
+    {
+      "claim": "Thuê xe máy Quế Võ (Thôn Đỉnh, thị trấn Phố Mới, huyện Quế Võ) ghi nhận xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-bac-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thuê xe máy Quế Võ Điện thoại: 0222 3863 275 Địa chỉ: Thôn Đỉnh, Thị Trấn Phố Mới, Huyện Quế Võ, TT. Phố Mới, Quế Võ, Bắc Ninh Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày"
+    },
+    {
+      "claim": "Anh Cường (53 Trần Hưng Đạo, phường Đại Phúc, thành phố Bắc Ninh) ghi nhận xe số 80.000đ – 120.000đ/ngày, xe ga 120.000đ -160.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-bac-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Anh Cường Điện thoại: 0369 564 769 Địa chỉ: 53 Trần Hưng Đạo, phường Đại Phúc, Tp Bắc Ninh, tỉnh Bắc Ninh Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày"
+    },
+    {
+      "claim": "Khách sạn Hoa Sen (55 Bờ Trạch, phường Ninh Xã, thành phố Bắc Ninh) ghi nhận xe số 100.000đ/ngày, xe ga 150.000đ/ngày; Hoa Tuấn (310B Hòa Đình, phường Võ Cường) ghi nhận xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-bac-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khách sạn Hoa Sen Điện thoại: 0241 381 0304 Địa chỉ: 55 Bờ Trạch, phường Ninh Xã, Tp Bắc Ninh, tỉnh Bắc Ninh Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày … Hoa Tuấn Địa chỉ: 310B Hòa Đình, phường Võ Cường, Tp Bắc Ninh, tỉnh Bắc Ninh Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "Bắc Ninh cách trung tâm Hà Nội khoảng 50km và là nơi tập trung nhiều khu công nghiệp trọng điểm, khiến nhu cầu đi lại công tác cao",
+      "source_url": "https://motogo.vn/thue-xe-may-bac-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Cách trung tâm Hà Nội khoảng 50km. Bắc Ninh là nơi tập trung khá nhiều khu Công Nghiệp trọng điểm. Chính vì thế nhu cầu di chuyển đi lại, công tác khá cao"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

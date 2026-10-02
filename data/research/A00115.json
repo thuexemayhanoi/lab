@@ -1,0 +1,94 @@
+{
+  "article_id": "A00115",
+  "primary_keyword": "giá thuê Vision Quảng Ninh",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết khung giá thuê Honda Vision tại Quảng Ninh (Hạ Long) theo cơ sở ghi nhận công khai: xe ga 100.000đ – 180.000đ/ngày, điểm nhận xe ở Bãi Cháy, Vườn Đào và lưu ý thuê xe du lịch vịnh Hạ Long",
+  "research_date": "2026-10-02",
+  "geo_entities": ["Quảng Ninh", "thành phố Hạ Long", "Bãi Cháy", "phường Bãi Cháy", "Vườn Đào", "đường Hoàng Quốc Việt", "Sun World Hạ Long", "vịnh Hạ Long", "Hồng Hải"],
+  "vehicle_entities": ["xe ga", "xe số", "xe tay ga"],
+  "brand_entities": ["Honda", "Yamaha"],
+  "model_entities": ["Vision", "Airblade", "Lead", "Wave", "Sirius"],
+  "questions_found": [
+    "Thuê Honda Vision ở Hạ Long giá bao nhiêu một ngày?",
+    "Xe ga ở Hạ Long có đắt hơn xe số không?",
+    "Thuê xe máy ở Hạ Long cần thủ tục gì?",
+    "Ở Bãi Cháy có chỗ nào cho thuê xe máy không?",
+    "Vision có phù hợp chạy quanh vịnh Hạ Long không?"
+  ],
+  "related_queries": ["gia thue vision quang ninh", "cho thue xe may ha long", "thue xe ga bai chay gia", "thue xe may o ha long bao nhieu", "cho thue xe may vinh ha long"],
+  "serp_patterns": [
+    "Trang tổng hợp motogo.vn cho Hạ Long xếp cao với 8 cơ sở ghi nhận, tập trung ở Bãi Cháy và khu Sun World",
+    "Biên độ xe ga các cơ sở ghi nhận 100.000đ – 180.000đ/ngày, xe số 80.000đ – 130.000đ/ngày",
+    "Thị trường Hạ Long phục vụ du lịch mạnh nên nhiều cơ sở có xe đời mới và dịch vụ giao xe"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-ha-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Các cơ sở ghi nhận tại Hạ Long: Kim's Motorbike (ngõ 86 Vườn Đào, Bãi Cháy) xe ga 160.000đ -180.000đ/ngày; Sun World Quảng Ninh xe số 130.000đ/ngày, xe ga 180.000đ/ngày; MOTOGO xe ga 100.000đ – 180.000đ/ngày; các cơ sở khác 130.000đ – 150.000đ/ngày"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": ["/lab/", "/lab/thue-xe-may/", "/lab/thue-xe-may/thue-xe-may-quang-ninh/", "/lab/thue-xe-may/thue-honda-vision-ha-noi/", "/lab/thue-xe-may/gia-thue-vision-hai-phong/", "/lab/thue-xe-may/thue-xe-may-bac-ninh/"],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-quang-ninh theo matrix; từ khóa \"giá thuê Vision Quảng Ninh\" chưa có bài nào dùng. Bài geo hub Quảng Ninh đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá của Honda Vision tại Hạ Long — thị trường du lịch lớn: biên độ xe ga 100.000đ – 180.000đ/ngày giữa các cơ sở ở Bãi Cháy và khu Sun World, đối chiếu xe số 80.000đ – 130.000đ/ngày, kèm lưu ý nhận xe gần Sun World để thuận tiện khám phá vịnh và cáp treo.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không cơ sở nào niêm yết giá riêng cho Vision trong nguồn đã mở; khung nhóm xe ga là dữ liệu công khai. Không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Kim's Motorbike (ngõ 86 Vườn Đào, phường Bãi Cháy, TP Hạ Long) ghi nhận xe số 80.000đ – 130.000đ/ngày, xe ga 160.000đ -180.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Kim's Motorbike Địa chỉ: ngõ 86 Vườn Đào, P. Bãi Cháy, TP.Hạ Long Giá thuê xe số: 80.000đ – 130.000đ/ngày Giá thuê xe ga: 160.000đ -180.000đ/ngày"
+    },
+    {
+      "claim": "Sun World Quảng Ninh (Sun World, Hạ Long, Bãi Cháy, thành phố Hạ Long) ghi nhận xe số 130.000đ/ngày, xe ga 180.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Sun World Quảng Ninh Địa chỉ: Sun World, Hạ Long, Bãi Cháy, Thành phố Hạ Long Giá thuê xe số: 130.000đ/ngày Giá thuê xe ga: 180.000đ/ngày"
+    },
+    {
+      "claim": "MOTOGO (Hạ Long, Quảng Ninh) ghi nhận xe số 80.000đ – 130.000đ/ngày, xe ga 100.000đ – 180.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "MOTOGO Địa chỉ: Hạ Long, Quảng Ninh Giá thuê xe số: 80.000đ – 130.000đ/ngày Giá thuê xe ga: 100.000đ – 180.000đ/ngày"
+    },
+    {
+      "claim": "Nest Travel (SN106, toà S7, chung cư Sunrise, đường Hoàng Quốc Việt, Hạ Long) ghi nhận xe số 100.000đ/ngày, xe ga 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Nest Travel Địa chỉ: SN106, Toà S7, Chung Cư Sunrise, Đ. Hoàng Quốc Việt, Hạ Long Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày"
+    },
+    {
+      "claim": "Minh Thành (Dốc hương trầm tổ 5, khu 2, Hạ Long) ghi nhận xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày; Tân Trường Phát Travel (Hải Long, Hồng Hải) ghi nhận xe số 130.000đ/ngày, xe ga 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Minh Thành Địa chỉ: Dốc hương trầm tổ 5, Khu 2, Hạ Long Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày … Tân Trường Phát Travel Địa chỉ: Hải Long, Hồng Hải, Thành phố Hạ Long, Quảng Ninh Giá thuê xe số: 130.000đ/ngày Giá thuê xe ga: 150.000đ/ngày"
+    },
+    {
+      "claim": "Ruby's Motorbike Rentals (54 Bãi Cháy, thành phố Hạ Long) ghi nhận xe số 100.000đ/ngày, xe ga 130.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Ruby's Motorbike Rentals Địa chỉ: 54 Bãi Cháy, Thành phố Hạ Long, Quảng Ninh Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 130.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

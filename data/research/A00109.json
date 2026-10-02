@@ -1,0 +1,101 @@
+{
+  "article_id": "A00109",
+  "primary_keyword": "giá thuê Vision Lào Cai",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết mức giá thuê Honda Vision tại Lào Cai theo bảng giá du lịch công khai (Vision, Airblade 200.000 VNĐ/ngày), đối chiếu giá xe ga các cơ sở ghi nhận và lưu ý thuê xe đi Sapa, Y Tý",
+  "research_date": "2026-10-02",
+  "geo_entities": ["Lào Cai", "thành phố Lào Cai", "thị trấn Sapa", "ga Lào Cai", "Y Tý", "Bát Xát", "đường Phan Đình Phùng", "đường Nguyễn Huệ", "phường Phố Mới"],
+  "vehicle_entities": ["xe ga", "xe số", "xe tay ga", "xe côn tay"],
+  "brand_entities": ["Honda", "Yamaha", "Suzuki", "SYM"],
+  "model_entities": ["Vision", "Airblade", "Lead", "Wave", "Jupiter", "Nouvo", "Exciter", "Winner", "Vespa", "Attila"],
+  "questions_found": [
+    "Thuê Honda Vision ở Lào Cai giá bao nhiêu một ngày?",
+    "Sapa có cho thuê Honda Vision không?",
+    "Giá thuê xe ga ở Lào Cai có đắt hơn xe số không?",
+    "Thuê xe máy ở Lào Cai cần thủ tục gì?",
+    "Vision có chạy được lên Y Tý, Bát Xát không?"
+  ],
+  "related_queries": ["gia thue vision lao cai", "cho thue xe may lao cai", "thue xe ga sapa gia", "thue xe may o lao cai bao nhieu", "cho thue xe may y ty"],
+  "serp_patterns": [
+    "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Lào Cai với 9 cơ sở ghi nhận, tập trung quanh ga Lào Cai, phường Phố Mới và thị trấn Sapa",
+    "Bảng giá thuê xe máy du lịch tại Lào Cai niêm yết Vision, Airblade ở mức 200.000 VNĐ/ngày — cao hơn mặt bằng xe số (Wave, Jupiter 100.000 VNĐ/ngày)",
+    "Giá xe ga các cơ sở ghi nhận dao động 180.000đ – 250.000đ/ngày, phần lớn đồng mức 200.000đ/ngày"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-lao-cai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá thuê xe máy du lịch tại Lào Cai tham khảo: Honda Wave 100.000 VNĐ/ngày; Yamaha Jupiter 100.000 VNĐ/ngày; Nouve 2+3, Altila 100.000 VNĐ/ngày; Nouvo LX 150.000 VNĐ/ngày; Vision, Airblade 200.000 VNĐ/ngày; Vespa 200.000 VNĐ/ngày; Exciter 135 và Exciter 150 220.000 VNĐ/ngày; Winner 150 220.000 VNĐ/ngày"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": ["/lab/", "/lab/thue-xe-may/", "/lab/thue-xe-may/thue-xe-may-lao-cai/", "/lab/thue-xe-may/thue-honda-vision-ha-noi/", "/lab/thue-xe-may/gia-thue-vision-hai-phong/", "/lab/thue-xe-may/gia-thue-vision-lai-chau/"],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-lao-cai theo matrix; từ khóa \"giá thuê Vision Lào Cai\" chưa có bài nào dùng. Bài geo hub Lào Cai đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Lào Cai: mức 200.000 VNĐ/ngày trong bảng giá du lịch theo dòng xe — cao hơn hẳn mặt bằng xe số 100.000 VNĐ/ngày, đối chiếu biên độ xe ga 180.000đ – 250.000đ/ngày của 9 cơ sở ghi nhận quanh ga Lào Cai, Phố Mới và Sapa, kèm thủ tục làm tin bằng giấy tờ tùy thân đặc thù vùng du lịch.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Vision được niêm yết riêng trong bảng giá du lịch (cùng Airblade) — dữ liệu hiếm thấy ở tỉnh miền núi. Không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy du lịch tại Lào Cai (tham khảo) ghi nhận Vision, Airblade ở mức 200.000 VNĐ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lao-cai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá thuê xe máy du lịch tại Lào Cai tham khảo: Dòng xe Giá thuê xe Honda Wave 100.000 VNĐ/ngày Yamaha Jupiter 100.000 VNĐ/ngày Nouve 2+3, Altila 100.000 VNĐ/ngày Nouvo LX 150.000 VNĐ/ngày Vision, Airblade 200.000 VNĐ/ngày Vespa 200.000 VNĐ/ngày Exciter 135 220.000 VNĐ/ngày Exciter 150 220.000 VNĐ/ngày Winner 150 220.000 VNĐ/ngày"
+    },
+    {
+      "claim": "Flamingo Laocai Motorbike Tours and Rentals (52 Phan Đình Phùng, Phố Mới, thị xã Lào Cai) ghi nhận xe số 100.000đ/ngày, xe ga 200.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lao-cai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Flamingo Laocai Motorbike Tours and Rentals Điện thoại: 0866 680 454 Địa chỉ: 52 Phan Đình Phùng, Phố Mới, thị xã Lào Cai, Lào Cai. Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 200.000đ/ngày 4.8/5"
+    },
+    {
+      "claim": "Thuê xe máy ga Lào Cai (ga Lào Cai, thành phố Lào Cai) ghi nhận xe số 100.000đ – 150.000đ/ngày, xe ga 200.000đ/ngày; Diệp Hằng (15 Hoàng Diệu, thị trấn Sapa) ghi nhận xe số 100.000đ – 150.000đ/ngày, xe ga 200.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lao-cai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thuê xe máy ga Lào Cai Điện thoại: 0912 999 912 Địa chỉ: Ga Lào Cai, thành phố Lào Cai, Lào Cai Giá thuê xe số: 100.000đ – 150.000đ/ngày Giá thuê xe ga: 200.000đ/ngày … Diệp Hằng Điện thoại: 0912 435 006 Địa chỉ: Số 15, đường Hoàng Diệu, thị trấn Sapa, thành phố Lào Cai Giá thuê xe số: 100.000đ – 150.000đ/ngày Giá thuê xe ga: 200.000đ/ngày"
+    },
+    {
+      "claim": "Việt Lào Cai (346 đường Nguyễn Huệ, phường Phố Mới, thành phố Lào Cai) và Dịch vụ thuê xe máy ở Lào Cai (13 Kim Thành, Kim Tân) đều ghi nhận xe số 100.000đ/ngày, xe ga 200.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lao-cai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Việt Lào Cai Điện thoại: 0962 906 393 Địa chỉ: Số 346 đường Nguyễn Huệ, phường Phố Mới, Tp. Lào Cai Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 200.000đ/ngày 5.0/5 … Dịch vụ thuê xe máy ở Lào Cai Điện thoại: 091 921 79 71 Địa chỉ: 13 Kim Thành, Kim Tân, thành phố Lào Cai, Lào Cai Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 200.000đ/ngày 5/5"
+    },
+    {
+      "claim": "Đỗ Khắc Long (343 Quảng Trường Ga, phường Phố Mới, thành phố Lào Cai) ghi nhận xe số 100.000đ/ngày, xe ga 180.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lao-cai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Đỗ Khắc Long Điện thoại: 0962 906 393 Địa chỉ: Số 343, Quảng Trường Ga, phường Phố Mới, Tp. Lào Cai Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 180.000đ/ngày"
+    },
+    {
+      "claim": "366 – Rent Motorbike in Lao Cai (366 Khánh Yên, Phố Mới, thành phố Lào Cai) ghi nhận xe số 120.000đ/ngày, xe ga 250.000đ/ngày, xe côn tay 350.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lao-cai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "366 – Rent Motorbike in Lao Cai Điện thoại: 0888 360 999 Địa chỉ: Số 366 Khánh Yên, Phố Mới, Tp. Lào Cai, tỉnh Lào Cai. Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 250.000đ/ngày Giá thuê xe côn tay: 350.000đ/ngày 4.6/5"
+    },
+    {
+      "claim": "Thủ tục thuê xe máy tại Lào Cai: dùng CMND, căn cước công dân, hộ chiếu, bằng lái xe để làm tin; khách sạn giữ giấy tờ thì cung cấp số phòng, tên khách sạn, địa chỉ",
+      "source_url": "https://motogo.vn/thue-xe-may-lao-cai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thủ tục cho thuê xe máy ở các địa điểm tại Lào Cai cũng khá nhanh gọn và không rườm rà. Các thủ tục thường có: Chứng minh thư nhân dân, căn cước công dân, hộ chiếu, bằng lái xe để làm tin. Trường hợp khách sạn giữ chứng minh thư hoặc thẻ căn cước, thì bạn có thể cung cấp số phòng, tên khách sạn, địa chỉ"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

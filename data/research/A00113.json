@@ -1,0 +1,94 @@
+{
+  "article_id": "A00113",
+  "primary_keyword": "giá thuê Vision Hưng Yên",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết giá thuê Honda Vision tại Hưng Yên theo bảng giá tham khảo công khai (Vision 120.000 vnd/ngày), đối chiếu các cơ sở ghi nhận ở Văn Lâm, Yên Mỹ, Phố Nối và thủ tục thuê xe",
+  "research_date": "2026-10-02",
+  "geo_entities": ["Hưng Yên", "huyện Văn Lâm", "huyện Yên Mỹ", "quốc lộ 5", "Phố Nối", "xã Liêu Xá", "phố Hảo", "chùa Chuông", "phố Hiến"],
+  "vehicle_entities": ["xe ga", "xe số", "xe tay ga", "xe cào cào"],
+  "brand_entities": ["Honda", "Yamaha", "SYM"],
+  "model_entities": ["Vision", "Airblade", "Lead", "Wave S", "Wave RS", "Wave RSX", "Sirius", "Jupiter", "Nouvo", "Attila"],
+  "questions_found": [
+    "Thuê Honda Vision ở Hưng Yên giá bao nhiêu một ngày?",
+    "Xe ga ở Hưng Yên có đắt hơn xe số không?",
+    "Thuê xe máy ở Hưng Yên cần thủ tục gì?",
+    "Ở Hưng Yên có bao nhiêu cơ sở cho thuê xe máy?",
+    "Vision có phù hợp đi từ Phố Nối về Hà Nội không?"
+  ],
+  "related_queries": ["gia thue vision hung yen", "cho thue xe may hung yen", "thue xe ga hung yen gia", "thue xe may o hung yen bao nhieu", "cho thue xe may pho noi"],
+  "serp_patterns": [
+    "Trang tổng hợp motogo.vn cho Hưng Yên ghi nhận thị trường cho thuê xe tại đây chưa phát triển mạnh, chỉ một vài địa chỉ chủ yếu là nhà nghỉ, khách sạn kết hợp cho thuê",
+    "Bảng giá tham khảo theo dòng xe niêm yết Honda Vision 120.000 vnd/ngày — ngang Lead, Airblade 2012 và Nouvo SX fi",
+    "Thủ tục: giấy tờ tùy thân có ảnh và tiền cọc khoảng 1 đến 3 triệu cho mỗi xe"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-hung-yen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá thuê xe máy Hưng Yên (tham khảo): Xe tay ga Honda Vision 120.000 vnd; Honda Lead 120.000 vnd; Airblade 2012 120.000 vnd, 2013-2015 140.000 vnd, 2016-2018 160.000 vnd; xe số 80.000 – 90.000 vnd; xe cào cào 600.000 vnd"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": ["/lab/", "/lab/thue-xe-may/", "/lab/thue-xe-may/thue-xe-may-hung-yen/", "/lab/thue-xe-may/thue-honda-vision-ha-noi/", "/lab/thue-xe-may/gia-thue-vision-hai-phong/", "/lab/thue-xe-may/thue-xe-may-bac-ninh/"],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-hung-yen theo matrix; từ khóa \"giá thuê Vision Hưng Yên\" chưa có bài nào dùng. Bài geo hub Hưng Yên đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá của riêng Honda Vision tại Hưng Yên — thị trường mỏng với ít cơ sở: mức 120.000 vnd/ngày trong bảng giá tham khảo, đối chiếu số ít cơ sở ghi nhận ở Văn Lâm, Yên Mỹ, Phố Nối, kèm lưu ý gọi trước vì lượng xe tại các cơ sở tỉnh nhỏ không dày như thành phố lớn.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Vision được niêm yết riêng trong bảng giá tham khảo. Một cơ sở trong danh sách nguồn (Gia Hưng) ghi địa chỉ tại Đà Nẵng — không dùng địa chỉ này vào bài. Không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Hưng Yên (tham khảo) ghi nhận Xe tay ga Honda Vision 120.000 vnd/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-hung-yen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Xe tay ga Honda Airblade 2012 | 120.000 vnd | Xe tay ga Honda Airblade 2013-2015 | 140.000 vnd | Xe tay ga Honda Airblade 2016- 2017 – 2018 | 160.000 vnd | Xe tay ga Honda Lead | 120.000 vnd | Xe tay ga Honda Vision | 120.000 vnd | Xe số Wave S | 80.000 vnd | Xe số Wave RS | 80.000 vnd | Xe số Wave RSX – fi | 90.000 vnd | Xe số Yamaha Sirius 2015 – 2018 FI | 90.000 vnd | Xe số Yamaha Jupiter gravita | 80.000 vnd | Xe tay ga Yamaha Nouvo LX | 100.000 vnd | Xe tay ga Yamaha Nouvo SX fi | 120.000 vnd | Xe tay ga attilla Victoria , Elizabeth | 100.000 vnd | Xe cào cào | 600.000 vnd | Bảng giá thuê xe máy Hưng Yên (tham khảo)"
+    },
+    {
+      "claim": "Nhà nghỉ Nhất Long (quốc lộ 5, Trưng Trắc, huyện Văn Lâm) ghi nhận xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-hung-yen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Nhà nghỉ Nhất Long Điện thoại: 02213997282 Địa chỉ: Quốc lộ 5, Trưng Trắc, huyện Văn Lâm, tỉnh Hưng Yên Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "Thanh Hà Hotel (số 89 phố Hảo, xã Liêu Xá, huyện Yên Mỹ) ghi nhận xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-hung-yen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thanh Hà Hotel Điện thoại: 0232 1471 489 Địa chỉ: Số 89 Phố Hảo, xã Liêu Xá, huyện Yên Mỹ, tỉnh Hưng Yên Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày"
+    },
+    {
+      "claim": "Khách sạn Minh Ngọc (Phố Nối, thị xã Mỹ Hòa) ghi nhận xe số 100.000đ/ngày, xe ga 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-hung-yen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khách sạn Minh Ngọc Điện thoại: 0904 439 119 Địa chỉ: Phố Nối, thị xã Mỹ Hòa, tỉnh Hưng Yên Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày"
+    },
+    {
+      "claim": "Thị trường thuê xe máy Hưng Yên chưa phát triển mạnh, gặp khó khăn khi tìm địa chỉ thuê xe",
+      "source_url": "https://motogo.vn/thue-xe-may-hung-yen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Hiện nay thị trường thuê xe máy Hưng Yên không thật sự phát triển. Vì thế bạn sẽ gặp nhiều khó khăn khi tìm 1 địa chỉ để thuê xe tại đây"
+    },
+    {
+      "claim": "Thủ tục thuê xe máy Hưng Yên: đặt lại giấy tờ cá nhân (CMND, căn cước, hộ chiếu) và tiền cọc, thông thường khoảng 1 đến 3 triệu tiền cọc cho mỗi xe",
+      "source_url": "https://motogo.vn/thue-xe-may-hung-yen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thủ tục thuê xe máy Hưng Yên khá đơn giản. Các cửa hàng chỉ yêu cầu khách đặt lại giấy tờ cá nhân và tiền cọc để làm tin … Loại giấy tờ: Các loại giấy tờ tùy thân có ảnh đều được chấp nhận. Bạn nên mang sẵn nhiều loại như CMND, căn cước hay hộ chiếu … Thông thường bạn nên chuẩn bị khoảng 1 đến 3 triệu tiền cọc cho mỗi xe"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

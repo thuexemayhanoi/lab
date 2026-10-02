@@ -1,0 +1,94 @@
+{
+  "article_id": "A00114",
+  "primary_keyword": "giá thuê Vision Ninh Bình",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết khung giá thuê Honda Vision tại Ninh Bình theo cơ sở ghi nhận công khai (xe ga 120.000đ – 200.000đ/ngày), điểm nhận xe quanh Tam Cốc, Bái Đính và thủ tục thuê xe du lịch",
+  "research_date": "2026-10-02",
+  "geo_entities": ["Ninh Bình", "thành phố Ninh Bình", "Tam Cốc", "xã Ninh Hải", "huyện Hoa Lư", "đường 27/7", "đường Trần Hưng Đạo", "đường Lê Thái Tổ", "ga Ninh Bình", "Bái Đính"],
+  "vehicle_entities": ["xe ga", "xe số", "xe tay ga"],
+  "brand_entities": ["Honda"],
+  "model_entities": ["Vision", "Airblade", "Lead", "Wave", "Sirius"],
+  "questions_found": [
+    "Thuê Honda Vision ở Ninh Bình giá bao nhiêu một ngày?",
+    "Ở Ninh Bình có chỗ nào giao xe tận nơi không?",
+    "Thuê xe máy ở Ninh Bình cần thủ tục gì?",
+    "Xe ga ở Ninh Bình có đắt hơn xe số không?",
+    "Thuê xe ở khu Tam Cốc có dễ không?"
+  ],
+  "related_queries": ["gia thue vision ninh binh", "cho thue xe may ninh binh", "thue xe ga tam coc gia", "thue xe may o ninh binh bao nhieu", "cho thue xe may bai dinh"],
+  "serp_patterns": [
+    "Trang tổng hợp motogo.vn xếp cao cho truy vấn thuê xe máy Ninh Bình với 9 địa điểm ghi nhận, nhiều cơ sở hỗ trợ giao xe tận nơi phục vụ du lịch",
+    "Giá xe ga các cơ sở ghi nhận dao động 120.000đ – 200.000đ/ngày, xe số từ 70.000đ – 130.000đ/ngày",
+    "Điểm nhận xe tập trung quanh đường 27/7 (ga Ninh Bình) và trục Lê Thái Tổ — Trần Hưng Đạo gần Tam Cốc"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-ninh-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Các cơ sở ghi nhận tại Ninh Bình: MOTOGO (42 đường 27/7 Nam Bình) xe số 70.000đ – 120.000đ/ngày, xe ga 120.000đ -200.000đ/ngày; TamCoc Motorbike Rental 93 xe ga 150.000đ/ngày -180.000đ/ngày; các cơ sở khác xe ga 100.000đ – 150.000đ/ngày"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": ["/lab/", "/lab/thue-xe-may/", "/lab/thue-xe-may/thue-xe-may-ninh-binh/", "/lab/thue-xe-may/thue-honda-vision-ha-noi/", "/lab/thue-xe-may/gia-thue-vision-hai-phong/", "/lab/thue-xe-may/thue-xe-may-thanh-hoa/"],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-ninh-binh theo matrix; từ khóa \"giá thuê Vision Ninh Bình\" chưa có bài nào dùng. Bài geo hub Ninh Bình đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá của Honda Vision tại Ninh Bình — tỉnh du lịch có thị trường cho thuê xe phát triển: biên độ xe ga 120.000đ – 200.000đ/ngày giữa các cơ sở, hai vùng nhận xe chính (ga Ninh Bình và khu Tam Cốc — Hoa Lư), kèm thủ tục đặc thù du lịch: nhiều nơi chỉ giữ giấy tờ tùy thân không yêu cầu cọc với khách du lịch.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không cơ sở nào niêm yết giá riêng cho Vision trong nguồn đã mở; khung nhóm xe ga là dữ liệu công khai. Không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "MOTOGO (42 đường 27/7 Nam Bình, thành phố Ninh Bình) ghi nhận xe số 70.000đ – 120.000đ/ngày, xe ga 120.000đ -200.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ninh-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "MOTOGO Điện thoại: 0338 02 3344 Địa chỉ: 42 đường 27/7 Nam Bình, T.P Ninh Bình Giá thuê xe số: 70.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -200.000đ/ngày 4.8/5"
+    },
+    {
+      "claim": "TamCoc Motorbike Rental 93 (Đội 1 thôn Văn Lâm, xã Ninh Hải, huyện Hoa Lư) ghi nhận xe số 80.000đ/ngày – 130.000đ/ngày, xe ga 150.000đ/ngày -180.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ninh-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "TamCoc Motorbike Rental 93 Điện thoại: 0903 183 883 Địa chỉ: Đội 1 thôn văn lâm, xã ninh hải , huyện hoa lư, Ninh Bình Giá thuê xe số: 80.000đ/ngày – 130.000đ/ngày Giá thuê xe ga: 150.000đ/ngày -180.000đ/ngày"
+    },
+    {
+      "claim": "Phương Tiến (48 ngõ 104 Lê Thái Tổ, Tân Thành) ghi nhận xe số 80.000đ/ngày, xe ga 120.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ninh-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Phương Tiến Điện thoại: 094 286 20 99 – 0946 905 942 Địa chỉ: Số 48 Ngõ 104, Lê Thái Tổ, Tân Thành, Ninh Bình. Giá thuê xe số: 80.000đ/ngày Giá thuê xe ga: 120.000đ/ngày 5/5"
+    },
+    {
+      "claim": "Việt Dũng (64 đường 27/7, phường Nam Bình, đối diện ga Ninh Bình) và Dung Mạnh (800A Trần Hưng Đạo, Tân Thành) đều ghi nhận xe số 80.000đ – 100.000đ/ngày, xe ga 100.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ninh-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Việt Dũng Điện thoại: 0943 551 799 Địa chỉ: 64 đường 27/7, phường Nam Bình, Ninh Bình (đối diện ga Ninh Bình) Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 100.000đ – 150.000đ/ngày 5.0/5 … Dung Mạnh Điện thoại: 0852 050 015 Địa chỉ: 800A Trần Hưng Đạo, Tân Thành, Ninh Bình Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 100.000đ – 150.000đ/ngày 5.0/5"
+    },
+    {
+      "claim": "Đức Thắng (102/6 Lê Thái Tổ, phường Ninh Khánh) và Khánh Chi (80 Lương Văn Tụy, Lê Thái Tổ kéo dài) đều ghi nhận xe số 80.000đ – 100.000đ/ngày, xe ga 120.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ninh-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Đức Thắng Địa chỉ: 102/6 Lê Thái Tổ, P. Ninh Khánh, TP. Ninh Bình, Ninh Bình Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 120.000đ – 150.000đ/ngày … Khánh Chi Địa chỉ: 80 Lương Văn Tụy, Lê Thái Tổ kéo dài, Ninh Bình Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 120.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "Lys Tam Coc Rental Scooters: khách du lịch đến Ninh Bình cần để lại giấy tờ tùy thân, không yêu cầu cọc xe; khách bản địa nhận cọc từ 1.000.000đ – 1.500.000đ",
+      "source_url": "https://motogo.vn/thue-xe-may-ninh-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thủ tục thuê xe tại Lys Tam Coc Rental Scooters khá đơn giản. Đối với khách du lịch đến Ninh Bình cần để lại giấy tờ tùy thân, không yêu cầu cọc xe. Với khách bản địa sinh sống tại Ninh Bình, Lys Tam Coc Rental Scooters có nhận cọc từ 1.000.000đ – 1.500.000đ"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

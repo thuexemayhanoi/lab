@@ -1,0 +1,101 @@
+{
+  "article_id": "A00116",
+  "primary_keyword": "giá thuê Vision Thanh Hóa",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết mặt bằng giá thuê Honda Vision tại Thanh Hóa theo cơ sở ghi nhận công khai: xe ga 300.000đ/ngày ở các điểm thành phố và Sầm Sơn, mức từ 150.000đ/ngày tại một số khách sạn, kèm thủ tục cọc 1.000.000đ – 5.000.000đ",
+  "research_date": "2026-10-02",
+  "geo_entities": ["Thanh Hóa", "thành phố Thanh Hóa", "Sầm Sơn", "phường Đông Hương", "phường Đông Vệ", "phường Điện Biên", "đường Lê Lợi", "đường Lê Lai", "bãi tắm C Sầm Sơn"],
+  "vehicle_entities": ["xe ga", "xe số", "xe tay ga"],
+  "brand_entities": ["Honda"],
+  "model_entities": ["Vision", "Airblade", "Lead", "Wave", "Sirius"],
+  "questions_found": [
+    "Thuê Honda Vision ở Thanh Hóa giá bao nhiêu một ngày?",
+    "Xe ga ở Thanh Hóa có đắt hơn các tỉnh khác không?",
+    "Thuê xe máy ở Thanh Hóa cần thủ tục gì?",
+    "Thuê xe ở Sầm Sơn giá bao nhiêu?",
+    "Tiền cọc thuê xe máy ở Thanh Hóa là bao nhiêu?"
+  ],
+  "related_queries": ["gia thue vision thanh hoa", "cho thue xe may thanh hoa", "thue xe ga sam son gia", "thue xe may o thanh hoa bao nhieu", "cho thue xe may tp thanh hoa"],
+  "serp_patterns": [
+    "Trang tổng hợp motogo.vn cho thành phố Thanh Hóa ghi nhận giá thuê cao hơn mặt bằng tỉnh lẻ: xe số 200.000đ/ngày, xe ga 300.000đ/ngày tại các điểm ở Sầm Sơn và trung tâm",
+    "Một số khách sạn ghi nhận mức cho thuê từ 150.000đ/ngày",
+    "Tiền đặt cọc phổ biến tại Thanh Hóa từ 1.000.000đ – 5.000.000đ tùy loại xe"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Các cơ sở ghi nhận tại thành phố Thanh Hóa và Sầm Sơn: Khách sạn Hoàng Gia (từ 150.000đ/ngày); Thuê xe máy ở Sầm Sơn, Khách sạn Mường Thanh, Thuê xe máy ở thành phố Thanh Hóa đều ghi nhận xe số 200.000đ/ngày, xe ga 300.000đ/ngày; Long Hà (từ 150.000đ/ngày)"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": ["/lab/", "/lab/thue-xe-may/", "/lab/thue-xe-may/thue-xe-may-thanh-hoa/", "/lab/thue-xe-may/thue-honda-vision-ha-noi/", "/lab/thue-xe-may/gia-thue-vision-hai-phong/", "/lab/thue-xe-may/thue-xe-may-ha-tinh/"],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-thanh-hoa theo matrix; từ khóa \"giá thuê Vision Thanh Hóa\" chưa có bài nào dùng. Bài geo hub Thanh Hóa đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá của Honda Vision tại Thanh Hóa — thị trường có mặt bằng cao bất thường so với tỉnh lẻ: các điểm ghi nhận xe ga 300.000đ/ngày tại Sầm Sơn và trung tâm thành phố, trong khi một số khách sạn cho thuê từ 150.000đ/ngày; kèm thủ tục cọc 1.000.000đ – 5.000.000đ và phân tích vì sao giá khu du lịch biển cao hơn.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không cơ sở nào niêm yết giá riêng cho Vision trong nguồn đã mở; giá nhóm xe ga và mức từ 150.000đ/ngày là dữ liệu công khai. Không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Thuê xe máy ở Sầm Sơn (Võ Thị Sáu, cạnh đường Bà Triệu, bãi tắm C – Sầm Sơn) ghi nhận xe số 200.000đ/ngày, xe ga 300.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thuê xe máy ở Sầm Sơn Điện thoại: 0947 099 858 Địa chỉ: Võ Thị Sáu, Cạnh đường Bà Triệu, Bãi tắm C – Sầm Sơn Giá thuê xe số: 200.000đ/ngày Giá thuê xe ga: 300.000đ/ngày"
+    },
+    {
+      "claim": "Khách sạn Mường Thanh (Ngã Ba Voi, phường Đông Vệ, thành phố Thanh Hóa) ghi nhận xe số 200.000đ/ngày, xe ga 300.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khách sạn Mường Thanh Điện thoại: 028 719 9998 Địa chỉ: Ngã Ba Voi, Phường Đông Vệ, thành phố Thanh Hóa Giá thuê xe số: 200.000đ/ngày Giá thuê xe ga: 300.000đ/ngày 5/5"
+    },
+    {
+      "claim": "Thuê xe máy ở thành phố Thanh Hóa (416 Lê Lai, Đông Sơn, thành phố Thanh Hóa) ghi nhận xe số 200.000đ/ngày, xe ga 300.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thuê xe máy ở thành phố Thanh Hóa Điện thoại: 098 295 92 12 Địa chỉ: 416 Lê Lai, Đông Sơn, Thành phố Thanh Hóa, Thanh Hoá Giá thuê xe số: 200.000đ/ngày Giá thuê xe ga: 300.000đ/ngày 5.0/5"
+    },
+    {
+      "claim": "Khách sạn Hoàng Gia (Lô A1 khu 4, bắc ĐL. Lê Lợi, phường Đông Hương, TP Thanh Hóa) ghi nhận giá thuê xe từ 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khách sạn Hoàng Gia Điện thoại: 0247 109 9999 Địa chỉ: Lô A1 khu 4, bắc ĐL. Lê Lợi, Phường Đông Hương, TP. Thanh Hóa Giá thuê xe: từ 150.000đ/ngày"
+    },
+    {
+      "claim": "Long Hà (256 Nguyễn Trái, phường Điện Biên, thành phố Thanh Hóa) ghi nhận giá thuê xe từ 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Long Hà Địa chỉ: 256 Nguyễn Trái, phường Điện Biên, thành phố Thanh Hóa Giá thuê xe: từ 150.000đ/ngày"
+    },
+    {
+      "claim": "Tiền đặt cọc thuê xe máy tại Thanh Hóa phổ biến từ 1.000.000đ – 5.000.000đ tùy loại xe và chất lượng xe",
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Tùy theo loại xe và chất lượng xe bạn thuê mà mức tiền đặt cọc rất khác nhau. Tại Thanh Hóa thì mức đặt cọc phổ biến từ 1.000.000đ – 5.000.000đ"
+    },
+    {
+      "claim": "Thủ tục thuê xe tại Thanh Hóa: đặt lại giấy tờ tùy thân bản gốc có ảnh như CMND, CCCD, hộ chiếu",
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Tất cả các cửa hàng cho thuê xe máy đều yêu cầu khách đặt lại giấy tờ tùy thân bản gốc. Những loại giấy tờ này cần có ảnh chân dung và thông tin rõ ràng. Theo đó bạn có thể đặt lại CMND/CCCD/Hộ chiếu"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}

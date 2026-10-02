@@ -1,0 +1,87 @@
+{
+  "article_id": "A00111",
+  "primary_keyword": "giá thuê Vision Phú Thọ",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần biết khung giá thuê Honda Vision tại Phú Thọ (Việt Trì) theo nguồn công khai: bảng tham khảo nhóm xe ga 100.000đ – 180.000đ/ngày, các cơ sở ghi nhận và thủ tục thuê xe đi đền Hùng",
+  "research_date": "2026-10-02",
+  "geo_entities": ["Phú Thọ", "thành phố Việt Trì", "đại lộ Hùng Vương", "đường Nguyễn Du", "đường Trần Nguyên Hãn", "phường Thanh Miếu", "phường Nông Trang", "đền Hùng", "quốc lộ 32"],
+  "vehicle_entities": ["xe ga", "xe số", "xe tay ga"],
+  "brand_entities": ["Honda", "Yamaha"],
+  "model_entities": ["Vision", "Lead", "Air Blade", "Wave", "Sirius", "Jupiter"],
+  "questions_found": [
+    "Thuê Honda Vision ở Phú Thọ giá bao nhiêu một ngày?",
+    "Xe ga ở Việt Trì có đắt hơn xe số không?",
+    "Thuê xe máy ở Việt Trì cần thủ tục gì?",
+    "Vision có chạy từ Việt Trì lên đền Hùng được không?",
+    "Ở Việt Trì có chỗ nào cho thuê xe ga giao tận nơi không?"
+  ],
+  "related_queries": ["gia thue vision phu tho", "cho thue xe may viet tri", "thue xe ga phu tho gia", "thue xe may o viet tri bao nhieu", "cho thue xe may den hung"],
+  "serp_patterns": [
+    "Trang tổng hợp motogo.vn cho khu vực Việt Trì xếp cao với 5 cơ sở ghi nhận, xe ga dao động 120.000đ – 160.000đ/ngày",
+    "Bảng giá tham khảo ghi nhóm xe ga gồm Vison, Lead, Air Blade ở khung 100.000đ – 180.000đ/ngày; xe số Wave, Sirius, Jupiter 80.000đ – 150.000đ/ngày",
+    "Thủ tục nhẹ: giấy tờ tùy thân và tiền cọc"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-viet-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá thuê xe máy Việt Trì (tham khảo): Xe số: Wave, Sirius, Jupiter 80.000đ – 150.000đ; Xe ga: Vison, Lead, Air Blade 100.000đ – 180.000đ"
+    },
+    {
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Honda Vision có khối lượng bản thân 97 kg, bánh xe trước kích thước lớn 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, dung tích bình xăng 4,8 lít"
+    }
+  ],
+  "existing_internal_pages": ["/lab/", "/lab/thue-xe-may/", "/lab/thue-xe-may/thue-xe-may-phu-tho/", "/lab/thue-xe-may/thue-honda-vision-ha-noi/", "/lab/thue-xe-may/gia-thue-vision-hai-phong/", "/lab/thue-xe-may/thue-xe-may-thai-nguyen/"],
+  "potential_cannibalization": "Hàng CG-rental-price-vision-phu-tho theo matrix; từ khóa \"giá thuê Vision Phú Thọ\" chưa có bài nào dùng. Bài geo hub Phú Thọ đã publish với intent tổng quát, được dẫn chéo thay vì tranh từ khóa.",
+  "unique_angle": "Bài đi sâu góc giá nhóm xe ga (nơi Vision thuộc nhóm phổ thông) tại Việt Trì — trung tâm kinh tế của Phú Thọ: khung 100.000đ – 180.000đ/ngày trong bảng tham khảo, đối chiếu 5 cơ sở ghi nhận quanh trung tâm thành phố, kèm đánh giá Vision cho cung đường từ Việt Trì lên đền Hùng trong mùa lễ hội.",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không cơ sở nào niêm yết giá riêng cho Vision trong nguồn đã mở; bảng nguồn ghi tên dòng là \"Vison, Lead, Air Blade\" (cách ghi trên trang gốc). Không bịa địa chỉ hay số điện thoại.",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Việt Trì (tham khảo) ghi nhận xe số: Wave, Sirius, Jupiter 80.000đ – 150.000đ và xe ga: Vison, Lead, Air Blade 100.000đ – 180.000đ",
+      "source_url": "https://motogo.vn/thue-xe-may-viet-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Loại xe | Giá/ngày | Xe số: Wave, Sirius, Jupiter,… | 80.000đ – 150.000đ | Xe ga: Vison, Lead, Air Blade,… | 100.000đ – 180.000đ"
+    },
+    {
+      "claim": "Trường Thảo (Tổ 50, khu Liên Phương, TP Việt Trì) ghi nhận xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-viet-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Trường Thảo Địa chỉ: Tổ 50, khu Liên Phương, TP Việt Trì, Phú Thọ Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày"
+    },
+    {
+      "claim": "Thuê xe tiện lợi (Trần Nguyên Hãn, phường Thanh Miếu) và Đại An (36 đường Nguyễn Du, phường Nông Trang) đều ghi nhận xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-viet-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thuê xe tiện lợi Địa chỉ: Trần Nguyên Hãn, Phường Thanh Miếu, Tp Việt Trì, Phú Thọ Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày … Đại An Địa chỉ: 36 đường Nguyễn Du, phường Nông Trang, Tp Việt Trì, Phú Thọ Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày"
+    },
+    {
+      "claim": "Sao Việt (117, Tổ 26A, Vân Phú, thành phố Việt Trì) ghi nhận xe số 80.000đ – 120.000đ/ngày, xe ga 120.000đ -160.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-viet-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Sao Việt Địa chỉ: 117, Tổ 26A, Vân Phú, Thành phố Việt Trì, Phú Thọ Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày"
+    },
+    {
+      "claim": "Thủy Hùng (44 Đại Lộ Hùng Vương, phường Thanh Miếu, TP Việt Trì) ghi nhận xe số 100.000đ/ngày, xe ga 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-viet-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Thủy Hùng Địa chỉ: 44 Đại Lộ Hùng Vương, Phường Thanh Miếu, Tp Việt Trì, Phú Thọ Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày"
+    },
+    {
+      "claim": "Honda Vision có khối lượng bản thân 97 kg, bánh trước 16 inch, động cơ 110cc, 4 kỳ, xy-lanh đơn, bình xăng 4,8 lít",
+      "source_url": "https://www.honda.com.vn/xe-may/san-pham/vision",
+      "source_domain": "www.honda.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khối lượng bản thân 97 kg … Bánh xe trước có kích thước lớn 16 inch … 110cc, 4 kỳ, xy-lanh đơn … Dung tích bình xăng 4,8"
+    }
+  ]
+}
