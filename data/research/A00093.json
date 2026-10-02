@@ -1,0 +1,235 @@
+{
+  "article_id": "A00093",
+  "primary_keyword": "thuê xe máy Côn Đảo",
+  "secondary_keywords": [],
+  "search_intent": "informational — du khách cần mặt bằng giá thuê xe máy tại Côn Đảo theo điểm nhận xe, thủ tục giấy tờ, quy tắc tính ngày thuê, phạm vi chạy xe cho phép và phí tham quan các điểm trên đảo",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Côn Đảo",
+    "huyện Côn Đảo",
+    "Bà Rịa – Vũng Tàu",
+    "Vũng Tàu",
+    "cảng Bến Đầm",
+    "cảng Cầu Đá",
+    "cảng Cát Lở",
+    "sân bay Côn Đảo",
+    "Cỏ Óc",
+    "đường Lê Văn Việt",
+    "Bãi Đầm Trầu",
+    "Cầu Ma Thiên Lãnh",
+    "Dinh Chúa Đảo",
+    "nhà tù Côn Đảo",
+    "Miếu Bà Phi Yến",
+    "Cầu tàu 914",
+    "Chùa Núi Một",
+    "VQG Côn Đảo"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe ga",
+    "xe ga 110cc"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Suzuki",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Wave",
+    "Axelo",
+    "Exciter",
+    "Air Blade",
+    "Nouvo",
+    "Vision"
+  ],
+  "questions_found": [
+    "Thuê xe máy ở Côn Đảo giá bao nhiêu một ngày?",
+    "Thuê xe ở Côn Đảo cần giấy tờ gì?",
+    "Có nhận giao xe tại sân bay hoặc cảng Bến Đầm không?",
+    "Đi tàu cao tốc từ Vũng Tàu sang Côn Đảo mất bao lâu?",
+    "Có được chạy xe ra ngoài huyện Côn Đảo không?"
+  ],
+  "related_queries": [
+    "thue xe may con dao",
+    "gia thue xe may con dao",
+    "thue xe may san bay con dao",
+    "thue xe may ca ben dam",
+    "di tau cao toc vung tau con dao bao lau"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp giá các điểm cho thuê địa phương (motogo) kèm bảng giá theo khu vực nhận xe",
+    "Listing nền tảng đặt xe có quy tắc tính ngày, phạm vi sử dụng rõ ràng (vexere)",
+    "Trang cập nhật giá vé tham quan Côn Đảo (saomaifly)",
+    "Blog cẩm nang tàu cao tốc Vũng Tàu – Côn Đảo (vexere) — đa số SERP tập trung bảng giá và thủ tục, ít bài nói về phạm vi chạy xe"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-con-dao/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá các điểm cho thuê tại Côn Đảo theo khu vực nhận xe, thủ tục giấy tờ, chính sách cọc và giao xe tận nơi"
+    },
+    {
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-con-dao.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Listing xe ga 110cc từ 140.000đ không cần cọc, giờ nhận/trả xe, quy tắc tính 24 giờ và phạm vi sử dụng xe trong Huyện Côn Đảo"
+    },
+    {
+      "source_url": "https://vetau.saomaifly.com/tin-du-lich/cap-nhat-gia-ve-tham-quan-con-dao-2025-334.html",
+      "source_domain": "vetau.saomaifly.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Giá vé tham quan nhà tù, cầu Ma Thiên Lãnh, VQG Côn Đảo, thả rùa và các điểm miễn phí"
+    },
+    {
+      "source_url": "https://blog.vexere.com/tau-cao-toc-vung-tau-con-dao/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Lịch trình và thời gian di chuyển các hãng tàu cao tốc Vũng Tàu – Côn Đảo, giá tàu CQ-03 và khoảng cách từ cảng Bến Đầm đến các điểm"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/",
+    "/lab/thue-xe-may/",
+    "/lab/kinh-nghiem/",
+    "/lab/thue-xe-may/thue-xe-may-dao-phu-quoc/",
+    "/lab/thue-xe-may/thue-xe-may-cu-lao-cham/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/"
+  ],
+  "potential_cannibalization": "Nhóm CG-rental-poi-con-dao theo matrix; chưa có bài nào trên site dùng từ khóa chính; các bài đảo đã publish (Phú Quốc, Cù Lao Chàm) thuộc POI khác nên không tranh từ khóa",
+  "unique_angle": "Ngoài bảng giá theo điểm nhận xe (sân bay, cảng Bến Đầm, khách sạn), bài nhấn mạnh hai chi tiết ít trang nói tới: quy tắc tính 24 giờ/ngày thuê với mức phạt nửa ngày, và giới hạn phạm vi sử dụng xe trong Huyện Côn Đảo mà nhà xe có quyền từ chối giao xe nếu vi phạm",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Lịch trình tàu có thể thay đổi theo mùa và thời tiết; giá vé tham quan theo bảng cập nhật 2025 của nguồn, có thể thay đổi theo niêm yết mới của Ban quản lý.",
+  "claim_evidence": [
+    {
+      "claim": "Giá thuê xe tại Côn Đảo từ 120.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-con-dao/",
+      "claim_supported": "Dịch vụ thuê xe máy tại Côn Đảo, Đường Lê Văn Việt, huyện Côn Đảo, Bà Rịa – Vũng Tàu. Giá thuê xe: từ 120.000đ/ngày"
+    },
+    {
+      "claim": "Mức giá dao động khoảng từ 130k",
+      "source_url": "https://motogo.vn/thue-xe-may-con-dao/",
+      "claim_supported": "mức giá thuê xe máy ở các địa điểm ở Côn Đảo dao động khoảng từ 130k"
+    },
+    {
+      "claim": "Tân Châu cảng Bến Đầm: xe số 120.000đ/ngày, xe ga 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-con-dao/",
+      "claim_supported": "Tân Châu, Khu 10, cảng Bến Đầm… xe số: 120.000đ/ngày, xe ga: 150.000đ/ngày"
+    },
+    {
+      "claim": "Linh Xuân cảng Bến Đầm: xe ga 120.000đ -160.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-con-dao/",
+      "claim_supported": "Linh Xuân Côn Đảo, Khu 10 cảng Bến Đầm… xe ga: 120.000đ -160.000đ/ngày"
+    },
+    {
+      "claim": "Điểm gần sân bay: xe số 90.000đ – 120.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-con-dao/",
+      "claim_supported": "Thuê xe máy gần sân bay Côn Đảo… xe số: 90.000đ – 120.000đ/ngày"
+    },
+    {
+      "claim": "Bảng giá cảng Bến Đầm và khách sạn theo dòng xe",
+      "source_url": "https://motogo.vn/thue-xe-may-con-dao/",
+      "claim_supported": "Bảng giá tại cảng Bến Đầm: Wave/Suzuki/Axelo 130.000đ/ngày, Exciter/Air Blade/Nouvo/Vision 150.000đ/ngày; bảng giá qua khách sạn: Wave/Suzuki/Axelo 100.000đ/ngày, Exciter/Air Blade/Nouvo/Vision 120.000đ/ngày"
+    },
+    {
+      "claim": "Thủ tục giấy tờ khi thuê xe",
+      "source_url": "https://motogo.vn/thue-xe-may-con-dao/",
+      "claim_supported": "căn cước công dân, hộ chiếu hoặc bằng lái xe"
+    },
+    {
+      "claim": "Nếu giữ giấy tờ hoặc tiền phải ghi rõ biên nhận",
+      "source_url": "https://motogo.vn/thue-xe-may-con-dao/",
+      "claim_supported": "Nếu cửa hàng giữ lại các giấy tờ hoặc tiền, thì trong biên nhận xe phải ghi rõ"
+    },
+    {
+      "claim": "Có nhà xe không yêu cầu đặt cọc",
+      "source_url": "https://motogo.vn/thue-xe-may-con-dao/",
+      "claim_supported": "thủ tục thuê xe không yêu cầu đặt cọc… chỉ cần xuất trình giấy tờ tùy thân cá nhân"
+    },
+    {
+      "claim": "Giao xe tận nơi tại thị trấn, sân bay và bến tàu",
+      "source_url": "https://motogo.vn/thue-xe-may-con-dao/",
+      "claim_supported": "dịch vụ giao xe tận nơi… trong thị trấn mà còn đối với sân bay và bến Tàu nữa"
+    },
+    {
+      "claim": "Listing xe ga 110cc Honda Vision từ 140.000đ, không cần cọc",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-con-dao.vi",
+      "claim_supported": "Xe tay ga 110cc Quỳnh Mai, Honda Vision, Đời xe: từ 2020, Mũ bảo hiểm, Giao xe tận nơi, Không cần cọc trước từ 140.000đ"
+    },
+    {
+      "claim": "Nhận/trả xe 05:30–22:00, ngày thuê tính 24 giờ, tối thiểu 1 ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-con-dao.vi",
+      "claim_supported": "Thời gian nhận xe và trả xe hằng ngày từ 05:30 đến 22:00. Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe. Thuê tối thiểu từ 1 ngày"
+    },
+    {
+      "claim": "Trả quá 24 giờ tính thêm 1 ngày; chưa quá 6 giờ tính 1/2 ngày",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-con-dao.vi",
+      "claim_supported": "Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 6 giờ → chỉ tính thêm 1/2 ngày"
+    },
+    {
+      "claim": "Giấy tờ cần chuẩn bị bản gốc",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-con-dao.vi",
+      "claim_supported": "Giấy tờ cần chuẩn bị: CCCD/Passport & GPLX (bản gốc) – Chụp hình GPLX"
+    },
+    {
+      "claim": "Phạm vi sử dụng xe trong Huyện Côn Đảo",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-con-dao.vi",
+      "claim_supported": "Vui lòng chỉ sử dụng xe trong phạm vi Huyện Côn Đảo. Nhà xe có quyền từ chối giao xe nếu khách hàng di chuyển ngoài phạm vi trên"
+    },
+    {
+      "claim": "Các điểm giao xe",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-con-dao.vi",
+      "claim_supported": "giao xe tại Bảo Tàng Côn Đảo, Cảng Côn Đảo, Sân bay Côn Đảo, Cửa hàng Quỳnh Mai"
+    },
+    {
+      "claim": "Vé tham quan nhà tù 20.000 VNĐ/người",
+      "source_url": "https://vetau.saomaifly.com/tin-du-lich/cap-nhat-gia-ve-tham-quan-con-dao-2025-334.html",
+      "claim_supported": "Tham quan nhà tù (các di tích, nghĩa trang, trại giam…): 20.000VNĐ/người"
+    },
+    {
+      "claim": "Cầu Ma Thiên Lãnh ban ngày 20.000, ban tối 40.000",
+      "source_url": "https://vetau.saomaifly.com/tin-du-lich/cap-nhat-gia-ve-tham-quan-con-dao-2025-334.html",
+      "claim_supported": "Cầu Ma Thiên Lãnh… Buổi ngày: 20.000VNĐ/người. Buổi tối: 40.000VNĐ/người"
+    },
+    {
+      "claim": "Vé VQG Côn Đảo theo đối tượng",
+      "source_url": "https://vetau.saomaifly.com/tin-du-lich/cap-nhat-gia-ve-tham-quan-con-dao-2025-334.html",
+      "claim_supported": "Vé vào cổng: Người lớn: 60.000 VND/người, Sinh viên: 20.000 VND/người, Học sinh/trẻ em: 10.000 VND/người"
+    },
+    {
+      "claim": "Hướng dẫn viên thả rùa 50.000 VND/người, HDV sinh thái 600.000 VND/ngày",
+      "source_url": "https://vetau.saomaifly.com/tin-du-lich/cap-nhat-gia-ve-tham-quan-con-dao-2025-334.html",
+      "claim_supported": "Hướng dẫn viên thả rùa con về biển: 50.000 VND/người. Hướng dẫn viên tham quan sinh thái: Tiếng Việt: 600.000 VND/ngày"
+    },
+    {
+      "claim": "Các điểm miễn phí: Đầm Trầu, Bà Phi Yến, Cầu tàu 914, Chùa Núi Một",
+      "source_url": "https://vetau.saomaifly.com/tin-du-lich/cap-nhat-gia-ve-tham-quan-con-dao-2025-334.html",
+      "claim_supported": "Miễn phí: Bãi Đầm Trầu, Miếu Bà Phi Yến (An Sơn Miếu), Cầu tàu 914, Chùa Núi Một (Vân Sơn Tự)"
+    },
+    {
+      "claim": "VQG Côn Đảo diện tích gần 20.000 ha; cầu xây từ năm 1930",
+      "source_url": "https://vetau.saomaifly.com/tin-du-lich/cap-nhat-gia-ve-tham-quan-con-dao-2025-334.html",
+      "claim_supported": "diện tích gần 20.000 ha… cầu Ma Thiên Lãnh xây dựng từ năm 1930"
+    },
+    {
+      "claim": "Côn Đảo Express khoảng 3 giờ 30 phút, 35 hải lý/giờ",
+      "source_url": "https://blog.vexere.com/tau-cao-toc-vung-tau-con-dao/",
+      "claim_supported": "Với sức chứa gần 600 hành khách và tốc độ di chuyển lên đến 35 hải lý/giờ, tàu chỉ mất khoảng 3 giờ 30 phút để đến Côn Đảo"
+    },
+    {
+      "claim": "Lịch trình các hãng tàu Vũng Tàu – Côn Đảo",
+      "source_url": "https://blog.vexere.com/tau-cao-toc-vung-tau-con-dao/",
+      "claim_supported": "Côn Đảo Express 36 | Thứ 3, 5, 7 | 08:00 | 11:00 | ~3 giờ | Cảng Cầu Đá, 9 Hạ Long, TP. Vũng Tàu; Thăng Long Express | Thứ 2, 4, 6 | 07:30 | 11:30 | ~4 giờ; Tàu CQ-03 | Thứ 3, 6 | 08:00 | 16:00 | ~8 giờ | Cảng Cát Lở"
+    },
+    {
+      "claim": "Tàu CQ-03 giá từ 390.000 – 559.000 đồng",
+      "source_url": "https://blog.vexere.com/tau-cao-toc-vung-tau-con-dao/",
+      "claim_supported": "chỉ từ khoảng 390.000 – 559.000 đồng, nhưng đổi lại thời gian di chuyển khá dài"
+    },
+    {
+      "claim": "Từ cảng Bến Đầm đến các điểm 15-30 phút",
+      "source_url": "https://blog.vexere.com/tau-cao-toc-vung-tau-con-dao/",
+      "claim_supported": "Từ cảng Bến Đầm, du khách có thể dễ dàng tiếp cận các điểm du lịch nổi tiếng của Côn Đảo như Bãi Đầm Trầu, Dinh Chúa Đảo, Nhà tù Côn Đảo, và các bãi biển tuyệt đẹp khác chỉ trong vòng 15-30 phút di chuyển"
+    }
+  ]
+}

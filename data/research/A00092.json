@@ -1,0 +1,228 @@
+{
+  "article_id": "A00092",
+  "primary_keyword": "thuê xe máy Cần Giờ",
+  "secondary_keywords": [],
+  "search_intent": "informational — du khách muốn tự lái xe máy từ Sài Gòn xuống huyện Cần Giờ: lộ trình qua phà Bình Khánh, giá vé phà, mặt bằng giá thuê xe tại Sài Gòn và các điểm tham quan trong huyện",
+  "research_date": "2026-10-02",
+  "geo_entities": [
+    "Cần Giờ",
+    "huyện Cần Giờ",
+    "TP.HCM",
+    "Sài Gòn",
+    "phà Bình Khánh",
+    "sông Soài Rạp",
+    "xã Long Hòa",
+    "xã Lý Nhơn",
+    "bãi biển 30/4",
+    "Đảo Khỉ",
+    "Vàm Sát",
+    "Nhà Bè",
+    "Quận 7",
+    "bến Bạch Đằng",
+    "chợ Hàng Dương",
+    "Huỳnh Tấn Phát"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe ga"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Sirius",
+    "Blade",
+    "Wave",
+    "Lead",
+    "Airblade",
+    "Vision"
+  ],
+  "questions_found": [
+    "Từ Sài Gòn chạy xe máy xuống Cần Giờ mất bao lâu?",
+    "Vé phà Bình Khánh cho xe máy bao nhiêu?",
+    "Ở Cần Giờ có thuê được xe máy tại chỗ không?",
+    "Đi Vàm Sát và bãi biển 30/4 mất bao nhiêu chi phí tham quan?"
+  ],
+  "related_queries": [
+    "pha binh khanh gia ve",
+    "du lich can gio tu sai gon",
+    "thue xe may sai gon gia re",
+    "bai bien 30/4 can gio"
+  ],
+  "serp_patterns": [
+    "Cẩm nang địa phương của khu du lịch Cần Giờ (cangiotourist)",
+    "Cẩm nang giá phà 2026 (mia.vn)",
+    "Blog nền tảng vận chuyển về bãi biển Cần Giờ (vexere)",
+    "Blog du lịch tổng hợp vé Vàm Sát (bestprice)",
+    "Trang tổng hợp cửa hàng cho thuê Sài Gòn (motogo) — không có trang nào tổng hợp điểm thuê tại Cần Giờ"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://cangiotourist.com.vn/",
+      "source_domain": "cangiotourist.com.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khoảng cách 50km, thời gian chạy xe dưới 2 tiếng, lộ trình qua Quận 7 – Huỳnh Tấn Phát và vé phà xe máy 6.000 VNĐ"
+    },
+    {
+      "source_url": "https://mia.vn/cam-nang-du-lich/kinh-nghiem-di-pha-binh-khanh-17555",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá vé phà Bình Khánh theo loại phương tiện và chiều dài tuyến phà 1,2 km qua sông Soài Rạp"
+    },
+    {
+      "source_url": "https://mangrovevn.com/",
+      "source_domain": "mangrovevn.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Khoảng cách 50 – 60km, buýt tuyến 75 từ Bến xe buýt Sài Gòn đến Cần Giờ"
+    },
+    {
+      "source_url": "https://blog.vexere.com/bai-bien-can-gio/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bãi biển 30/4 tại xã Long Hòa, bờ biển 23km, phí gửi xe và tắm nước ngọt, tàu cao tốc Bạch Đằng, Đảo Khỉ hơn 1.000 con khỉ"
+    },
+    {
+      "source_url": "https://bestprice.vn/blog/diem-den-8/khu-du-lich-sinh-thai-vam-sat-765.html",
+      "source_domain": "bestprice.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Vé Vàm Sát 35.000/người, tháp tang bồng 26 mét, mùa chim tháng 4 – tháng 10, rừng trồng năm 1979"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-tai-sai-gon/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Bảng giá thuê xe máy tại Sài Gòn theo cửa hàng, mặt bằng chung và chính sách giấy tờ, đặt cọc"
+    },
+    {
+      "source_url": "https://vamsat.vn/",
+      "source_domain": "vamsat.vn",
+      "date_accessed": "2026-10-02",
+      "claim_supported": "Cấu trúc điểm tham quan Vàm Sát Ecopark: đầm lầy cá sấu, tràm chim, tháp tang bồng, cắm trại, đạp xe địa hình"
+    }
+  ],
+  "existing_internal_pages": [
+    "/lab/",
+    "/lab/thue-xe-may/",
+    "/lab/kinh-nghiem/",
+    "/lab/thue-xe-may/thue-xe-may-mui-ne/",
+    "/lab/thue-xe-may/thue-xe-may-dao-phu-quoc/",
+    "/lab/thue-xe-may/thue-xe-may-ha-noi/"
+  ],
+  "potential_cannibalization": "Nhóm CG-rental-poi-can-gio theo matrix; chưa có bài nào trên site dùng từ khóa chính; các bài địa phương đã publish thuộc POI khác (Mũi Né, Phú Quốc, Cù Lao Chàm, Bà Nà Hills…) nên không tranh từ khóa",
+  "unique_angle": "Góc nhìn thực tế: Cần Giờ hầu như không có cửa hàng cho thuê tại chỗ, nên bài gói vấn đề \"thuê xe ở Sài Gòn rồi tự chạy khoảng 50km qua phà Bình Khánh\", kèm bảng giá phà, bảng giá cửa hàng Sài Gòn và POI thật (bãi biển 30/4, Vàm Sát, Đảo Khỉ, chợ Hàng Dương)",
+  "notes": "Hàng informational_only: không dùng \"chúng tôi\", không chào dịch vụ. Không dùng mức \"phí phà 10.000–30.000 VNĐ\" của blog vexere do mâu thuẫn với bảng giá mia.vn và cangiotourist; chọn bộ giá nhất quán. Giá vé phà và các khoản phí có thể thay đổi theo niêm yết mới.",
+  "claim_evidence": [
+    {
+      "claim": "Cần Giờ cách trung tâm TP.HCM khoảng 50km, xe máy chưa tới 2 tiếng",
+      "source_url": "https://cangiotourist.com.vn/",
+      "claim_supported": "Cần Giờ chỉ cách trung tâm TP.HCM khoảng 50km, nếu chạy xe máy với tốc độ an toàn thì chưa tới 2 tiếng đồng hồ"
+    },
+    {
+      "claim": "Đường xuống Cần Giờ qua Quận 7 và Huỳnh Tấn Phát",
+      "source_url": "https://cangiotourist.com.vn/",
+      "claim_supported": "Muốn đi được đến Cần Giờ thì bạn cần phải di chuyển qua phà Bình Khánh. Từ trung tâm thành phố, bạn đi hướng đường qua Quận 7 và chạy theo đường Huỳnh Tấn Phát"
+    },
+    {
+      "claim": "Vé phà xe máy kèm 2 người 6.000 VNĐ",
+      "source_url": "https://cangiotourist.com.vn/",
+      "claim_supported": "Giá vé cho xe máy có kèm 2 người là 6.000 VNĐ"
+    },
+    {
+      "claim": "Tuyến phà dài 1,2 km qua sông Soài Rạp",
+      "source_url": "https://mia.vn/cam-nang-du-lich/kinh-nghiem-di-pha-binh-khanh-17555",
+      "claim_supported": "Phà Bình Khánh có chiều dài tuyến là 1,2 km qua sông Soài Rạp"
+    },
+    {
+      "claim": "Vé phà người đi bộ, xe đạp, xe ba bánh, ô tô",
+      "source_url": "https://mia.vn/cam-nang-du-lich/kinh-nghiem-di-pha-binh-khanh-17555",
+      "claim_supported": "Bảng giá phà Bình Khánh: Người đi bộ 2.000 VND/xe; Xe đạp 2.000 VND/xe; xe ba bánh 14.000; ô tô dưới 7 chỗ 40.000"
+    },
+    {
+      "claim": "Khoảng cách 50 – 60km tùy nguồn",
+      "source_url": "https://mangrovevn.com/",
+      "claim_supported": "Cần Giờ cách trung tâm TPHCM chỉ khoảng 50 – 60km"
+    },
+    {
+      "claim": "Buýt tuyến 75 từ Bến xe buýt Sài Gòn đến Cần Giờ",
+      "source_url": "https://mangrovevn.com/",
+      "claim_supported": "tuyến 75 từ Bến xe buýt Sài Gòn đến thẳng buýt Cần Giờ"
+    },
+    {
+      "claim": "Tàu cao tốc từ bến Bạch Đằng khoảng 30 phút, vé 100.000-150.000 VNĐ/người",
+      "source_url": "https://blog.vexere.com/bai-bien-can-gio/",
+      "claim_supported": "tàu cao tốc từ bến Bạch Đằng… khoảng 30 phút, giá vé khoảng 100.000-150.000 VNĐ/người"
+    },
+    {
+      "claim": "Bãi biển Cần Giờ thuộc xã Long Hòa, bờ biển gần 23km",
+      "source_url": "https://blog.vexere.com/bai-bien-can-gio/",
+      "claim_supported": "Bãi biển Cần Giờ thuộc xã Long Hòa, huyện Cần Giờ… cách trung tâm khoảng 50km. Với bờ biển dài gần 23km giáp biển Đông"
+    },
+    {
+      "claim": "Bãi biển miễn phí, phí nhỏ 5.000 đến 30.000 VNĐ",
+      "source_url": "https://blog.vexere.com/bai-bien-can-gio/",
+      "claim_supported": "Bãi biển Cần Giờ mở cửa miễn phí… Chi phí không cao, dao động từ 5.000 đến 30.000 VNĐ"
+    },
+    {
+      "claim": "Tắm nước ngọt 10.000 – 20.000 VNĐ/lượt",
+      "source_url": "https://blog.vexere.com/bai-bien-can-gio/",
+      "claim_supported": "tắm nước ngọt… 10.000 – 20.000 VNĐ/lượt"
+    },
+    {
+      "claim": "Đảo Khỉ hơn 1.000 con khỉ đuôi dài; chợ Hàng Dương gần bãi biển 30/4",
+      "source_url": "https://blog.vexere.com/bai-bien-can-gio/",
+      "claim_supported": "Đảo Khỉ… hơn 1.000 con khỉ đuôi dài. Chợ Hàng Dương… gần bãi biển 30/4, thuộc xã Long Hòa"
+    },
+    {
+      "claim": "Sau phà khoảng 30km tới xã Long Hòa",
+      "source_url": "https://blog.vexere.com/bai-bien-can-gio/",
+      "claim_supported": "qua phà, tiếp tục đi khoảng 30km là tới xã Long Hòa"
+    },
+    {
+      "claim": "Vàm Sát tại xã Lý Nhơn; vé 35.000/người, các điểm 35.000 - 40.000/người",
+      "source_url": "https://bestprice.vn/blog/diem-den-8/khu-du-lich-sinh-thai-vam-sat-765.html",
+      "claim_supported": "Địa chỉ: xã Lý Nhơn, huyện Cần Giờ, thành phố Hồ Chí Minh. Giá vé vào cửa: 35.000/người, tham quan các địa điểm khác: 35.000 - 40.000/người"
+    },
+    {
+      "claim": "Từ quận 1, quận 3 đến Vàm Sát 1 đến 1.5 giờ",
+      "source_url": "https://bestprice.vn/blog/diem-den-8/khu-du-lich-sinh-thai-vam-sat-765.html",
+      "claim_supported": "từ các quận 1, quận 3… chỉ còn từ 1 đến 1.5 giờ"
+    },
+    {
+      "claim": "Tháp tang bồng cao 26 mét",
+      "source_url": "https://bestprice.vn/blog/diem-den-8/khu-du-lich-sinh-thai-vam-sat-765.html",
+      "claim_supported": "tháp tang bồng xây bằng thép cao 26 mét"
+    },
+    {
+      "claim": "Chim về làm tổ từ tháng 4 đến tháng 10",
+      "source_url": "https://bestprice.vn/blog/diem-den-8/khu-du-lich-sinh-thai-vam-sat-765.html",
+      "claim_supported": "chim về làm tổ (từ tháng 4 đến tháng 10)"
+    },
+    {
+      "claim": "Rừng trồng năm 1979",
+      "source_url": "https://bestprice.vn/blog/diem-den-8/khu-du-lich-sinh-thai-vam-sat-765.html",
+      "claim_supported": "rừng trồng năm 1979"
+    },
+    {
+      "claim": "Giá thuê xe Sài Gòn 80.000đ - 150.000đ tùy loại xe",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-sai-gon/",
+      "claim_supported": "Giá thuê xe dao động từ 80.000đ -150.000đ tùy vào từng loại xe"
+    },
+    {
+      "claim": "Bảng giá cửa hàng Sài Gòn",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-sai-gon/",
+      "claim_supported": "Bike Saigon – Thuê xe sân bay Tân Sơn Nhất: 50.000đ -150.000đ; Thuê xe máy Thanh Lam: 100.000đ -180.000đ; Tigit Motorbikes: 140.000đ -200.000đ; Đường Bùi Thị Xuân: 140.000đ -200.000đ; Đường Hòa Hưng: 80.000đ – 200.000đ; Thạnh Phát: 50.000đ – 200.000đ"
+    },
+    {
+      "claim": "Mặt bằng chung 100.000đ – 250.000đ/xe/ng; thuê 5 ngày còn khoảng 90k/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-sai-gon/",
+      "claim_supported": "Phí thuê xe mặt bằng chung giao động 100.000đ – 250.000đ/xe/ ngày với các dòng xe số và tay ga, tay côn thông thường. Bạn thuê từ 5 ngày trở lên giá thuê xe rất rẻ chỉ khoảng 90k/ngày"
+    },
+    {
+      "claim": "Thủ tục: một số nơi giữ CMND kèm đặt cọc",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-sai-gon/",
+      "claim_supported": "Một số địa điểm thì họ sẽ giữ cả CMND + đặt cọc tiền"
+    }
+  ]
+}
