@@ -471,7 +471,13 @@ function cmdSelftest() {
   const r = spawnSync(process.execPath, ['--expose-gc', '--max-old-space-size=400', '--test', 'tests/pipeline-suite.js'], {
     cwd: ROOT, env: Object.assign({}, process.env, { PIPELINE_ALLOW_MOCK: '1' }),
     stdio: 'inherit' });
-  process.exitCode = r.status == null ? 1 : r.status;
+  let rc = r.status == null ? 1 : r.status;
+  if (rc !== 0) { console.error('SELFTEST FAIL: pipeline-suite — bỏ qua agent-suite'); process.exitCode = rc; return; }
+  console.log('AGENTS SELFTEST: node --test tests/agent-suite.js (Agent #4/#5/#6 — không overlap, không bypass lock, không duplicate cycle)');
+  const r2 = spawnSync(process.execPath, ['--expose-gc', '--max-old-space-size=400', '--test', 'tests/agent-suite.js'], {
+    cwd: ROOT, env: Object.assign({}, process.env), stdio: 'inherit' });
+  const rc2 = r2.status == null ? 1 : r2.status;
+  process.exitCode = rc2;
 }
 
 async function main(argv) {
