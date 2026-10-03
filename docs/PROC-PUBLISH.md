@@ -188,20 +188,22 @@ change is PASS. Never claim production-safe from unit tests alone.
   (`scripts/factory/liveness-watchdog.js`, READ-ONLY).
 
 Engine/workflow/recovery changes REQUIRE Tier 4 — and CI ENFORCES it:
-`.github/workflows/factory-soak.yml` runs the soak suite on both
-`pull_request` and `push` to `main` (path-filtered to reliability-relevant
-files: engine, site builder, soak suite, static regression suite, all
-reliability workflows, static engine-contract configs, docs contract files).
+`.github/workflows/factory-soak.yml` runs the Tier 4 battery (agent-suite +
+pipeline-suite + multi-chunk soak) on both `pull_request` and `push` to
+`main` — the `tier4` job fires when `tier4-gate` detects a
+reliability-relevant change at JOB level (engine, site builder, test
+suites, workflows, engine-contract configs; NO paths filter, which would
+make GitHub record a 0-job FAILURE placeholder for non-matching pushes).
 A direct push of engine/workflow/recovery changes to main therefore cannot
 land without Tier 4. Normal content runtime state updates (matrix shards,
 `data/state/**`, published archives, qa evidence, runtime
 `config/content-factory.json` grounding ids) are production DATA, not engine
 changes — they do NOT trigger the soak. A prose-only article change does NOT
-trigger the soak; its push runs exactly ONE lightweight content validation
-(`ci-validate.yml`: scoped consistency + grounding of the changed ids +
-deterministic build + draft-leak guard). The deep batteries
-(`factory-validate.yml`, `factory-capacity-validate.yml`) are path-filtered
-to the same reliability contract and never run on a content-only push.
+trigger the soak; its content validation runs INSIDE the `publish` job of
+`factory-production.yml` on the draft push (scoped QA + grounding of the
+changed ids + staged verify + draft-leak guard — there is NO separate
+content-validation workflow). The Tier 4 battery never runs on a
+content-only push (`tier4-gate` exits green without executing the suites).
 
 CI/invariants can be green while the factory is stalled (unfinished work
 standing, command hanging, expired lock, over-age transaction) — Tier 4 +

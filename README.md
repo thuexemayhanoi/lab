@@ -50,13 +50,14 @@ do not create one; the current architecture is the working truth.
 outputs (hubs, articles, sitemaps, search/chatbot indexes) to the repository
 root; a normal commit + push to `main` is the deployment.
 
-The workflows in `.github/workflows/`: `ci-validate.yml` and
-`factory-validate.yml` run status/consistency/tests/deterministic-build on
-every push to `main` (validation-only, never commit);
-`factory-capacity-validate.yml` audits the 10K capacity model + state
-invariants; `factory-production.yml` is the push-driven production loop
-(writer pushes `_drafts/` pairs → EXACT-id claim/QA/publish) with final-tree
-verify + safe push.
+The workflows in `.github/workflows/`: `factory-production.yml` is the
+push-driven production loop (writer pushes `_drafts/` pairs → EXACT-id
+claim/QA/publish) with final-tree verify + safe push; every push to `main`
+also runs a no-op `push-gate` job so the run stays green, and its cron
+entries drive the pipeline coordinator and the production watchdog.
+`factory-soak.yml` is the Tier 4 battery (agent-suite + pipeline-suite +
+multi-chunk soak): it starts on every push/PR but the heavy suites only
+fire for reliability-relevant changes (engine/workflow/tests/config).
 
 ## Experiment rules (short version)
 

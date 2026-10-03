@@ -1,0 +1,101 @@
+name: Factory soak (Tier 4)
+
+# TIER 4 CI BATTERY — long-run / failure recovery / liveness.
+# Theo hợp đồng AGENTS.md ("Tier 4 is ENFORCED on CI"): mọi thay đổi
+# reliability-relevant (scripts/factory/**, config/**, tests/**, workflow)
+# đẩy thẳng vào main hay qua pull_request đều PHẢI qua bộ Tier 4:
+# agent-suite + pipeline-suite + multi-chunk soak (fault injection).
+#
+# KHÔNG dùng paths filter trên on.push/on.pull_request: paths filter làm
+# GitHub tạo run record 0-job (conclusion FAILURE) cho push bị loại →
+# commit bị gắn check đỏ vô nghĩa (cùng nguyên nhân đã fix ở
+# factory-production.yml). Gate reliability-relevant nằm ở JOB level
+# (tier4-gate đọc payload commits / diff PR, không nới, không 0-job đỏ).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: factory-soak
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  # ------------------------------------------------------------------
+  # tier4-gate: luôn chạy (no-op xanh khi push KHÔNG đụng file
+  # reliability-relevant) → run không bao giờ đỏ 0-job. Khi push/PR
+  # đụng scripts/factory/**, config/**, tests/**, .github/workflows/**
+  # → outputs.engine=true → job tier4 bên dưới chạy đủ bộ Tier 4.
+  # ------------------------------------------------------------------
+  tier4-gate:
+    if: github.repository == 'thuexemayhanoi/lab'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions: {}
+    outputs:
+      engine: ${{ steps.scope.outputs.engine }}
+    steps:
+      - name: 'PR: checkout để diff three-dot'
+        if: github.event_name == 'pull_request'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 'Phát hiện thay đổi reliability-relevant (engine/workflow/tests/config)'
+        id: scope
+        env:
+          COMMITS: ${{ toJSON(github.event.commits) }}
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          set -eu
+          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
+            echo "engine=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
+            FILES=$(git diff --name-only "origin/${BASE_REF}...HEAD")
+          else
+            FILES=$(printf '%s' "$COMMITS" | jq -r '.[]? | (.modified // [])[], (.added // [])[], (.removed // [])[]')
+          fi
+          if printf '%s' "$FILES" | grep -Eq '^(scripts/factory/|config/|tests/|\.github/workflows/)'; then
+            echo "engine=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "engine=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  # ------------------------------------------------------------------
+  # tier4: bộ Tier 4 đầy đủ — chỉ chạy khi tier4-gate xác nhận thay đổi
+  # reliability-relevant (hoặc workflow_dispatch thủ công).
+  # ------------------------------------------------------------------
+  tier4:
+    needs: tier4-gate
+    if: >-
+      github.repository == 'thuexemayhanoi/lab' &&
+      needs.tier4-gate.outputs.engine == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 'Tier 1 — agent-suite (watchdog / supervisor / durable pause contracts)'
+        run: node --test tests/agent-suite.js
+
+      - name: 'Tier 4 — pipeline-suite (coordinator contracts: refill, grants, exactly-once, crash/resume)'
+        env:
+          PIPELINE_ALLOW_MOCK: '1'
+        run: node --test tests/pipeline-suite.js
+
+      - name: 'Tier 4 — multi-chunk soak + fault injection (6 chu kỳ × 10 articles, sandbox tmpdir)'
+        env:
+          PIPELINE_ALLOW_MOCK: '1'
+        run: node --max-old-space-size=2048 --test tests/soak/factory-soak.js

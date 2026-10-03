@@ -41,9 +41,10 @@ COMMIT/PUSH (verified tree) → CI/PAGES → NEXT QUEUE
   invariants.
 - Tier 4 (soak + watchdog) is for engine/workflow/recovery changes or
   scheduled maintenance — never per pair.
-- Normal content pushes use ONE lightweight content validation path
-  (`ci-validate.yml`); full engine validation runs only when engine files
-  change.
+- Normal content pushes are validated INSIDE the `publish` job of
+  `factory-production.yml` (scoped QA, grounding, staged verify); the Tier 4
+  battery (`factory-soak.yml`) runs only when engine/workflow/tests/config
+  files change (job-level gate, no paths filter).
 
 ## Matrix contract
 

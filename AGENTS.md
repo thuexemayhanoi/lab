@@ -239,8 +239,11 @@ change is PASS. Never claim production-safe from unit tests alone.
 Rules:
 - Engine/workflow/recovery changes REQUIRE Tier 4 (soak + watchdog), not
   just Tier 1. Tier 4 is ENFORCED on CI: `factory-soak.yml` runs on both
-  `pull_request` and `push` to `main` (path-filtered to reliability-relevant
-  files) — a direct push of engine/workflow/recovery changes to main cannot
+  `pull_request` and `push` to `main` — the `tier4` job fires whenever the
+  change touches reliability-relevant files (engine/workflow/tests/config,
+  detected at JOB level by `tier4-gate`; NO paths filter, which would make
+  GitHub record a 0-job FAILURE placeholder for non-matching pushes) —
+  a direct push of engine/workflow/recovery changes to main cannot
   land without Tier 4. CI green is NOT liveness green if Tier 4 has not run
   for the change.
 - Tier 4 exists because CI/invariants can be green while the factory is
@@ -253,35 +256,40 @@ Rules:
 - Failing a tier means: do NOT merge, do NOT lower thresholds or delete
   tests, do NOT mutate production truth to make tests green; fix the root
   cause and re-run the affected tier AND every tier above it.
-- Reading Actions in the push-driven model: every push runs the LIGHT
-  battery (`ci-validate.yml`); the deep batteries (factory-validate,
-  capacity, soak) are PATH-FILTERED to engine/workflow/doc files, so a
-  draft push only runs `factory-production.yml`. Two red-looking results
-  are BY DESIGN, not engine failures: (a) a REFUSED draft push —
-  `push-selection.js` exits 3 and the production job goes RED while
-  NOTHING is mutated (fix the draft contract on the writer side, push
-  again); (b) a pure-delete/retire commit (D-only diff, e.g. removing a
-  retired workflow) matches no path filter, so the deep batteries stay
-  pinned to the PREVIOUS commit — when the head tree itself must be
-  demonstrated green, re-dispatch the affected battery manually (all
-  three accept `workflow_dispatch`). (c) the `pipeline` job of
-  `factory-production.yml` runs ONLY on the `*/30 * * * *` schedule or
-  `workflow_dispatch` action `pipeline|selftest` (the `publish` job is
-  disabled for those events) and is serialized with the publish loop by
-  the same global concurrency group — infrastructure edits can never
-  accidentally start a production cycle except through that schedule.
+- Reading Actions in the push-driven model: the ONLY workflows in this repo
+  are `factory-production.yml` (production loop + agents) and
+  `factory-soak.yml` (Tier 4 battery). Every push to `main` runs
+  `factory-production.yml`: the `push-gate` no-op job keeps the run GREEN
+  (GitHub records a 0-job FAILURE placeholder for path-filtered pushes, so
+  NO paths filter is used on `on.push`), and `publish` runs ONLY when the
+  push actually touches `_drafts/**` (detected by `push-gate` from the push
+  payload, no checkout) or on maintenance dispatch
+  (status|recover|diagnostics); the `*/30` cron drives `pipeline`, the
+  `10 * * * *` cron drives `agent-watchdog`; a FAILED Factory production
+  run triggers `agent-repair` → `agent-supervisor` (workflow_run + needs
+  handoff over the committed incident). A REFUSED draft push is red
+  BY DESIGN, not an engine failure: `push-selection.js` exits 3 and the
+  production job goes RED while NOTHING is mutated (fix the draft
+  contract on the writer side, push again). The Tier 4 battery in
+  `factory-soak.yml` starts on every push to `main` and every
+  pull_request, but the heavy suites (agent-suite + pipeline-suite +
+  soak) only execute when `tier4-gate` detects a reliability-relevant
+  change (scripts/factory/**, config/**, tests/**, .github/workflows/**)
+  — a content-only push gets a green gate run and never burns Tier 4
+  minutes; `workflow_dispatch` re-runs the full battery on demand.
 
 ## Scope → gates (Simple Production Mode)
 
 - **Content-only change (the normal 2-article pair)** → FAST only: scoped QA
   per article (PASS ≥ 75, no critical), publish gate (QA evidence + grounding
-  + atomic transaction), scoped consistency, ONE lightweight content
-  validation workflow (`ci-validate.yml`) on push. NO full-site audit, NO
+  + atomic transaction), scoped consistency — validated INSIDE the
+  `publish` job of `factory-production.yml` on the draft push (there is NO
+  separate content-validation workflow). NO full-site audit, NO
   soak, NO test-suite per pair.
 - **Engine/workflow/recovery/config-contract change** → full gates BEFORE
   merge: Tier 1 (`node --test tests/test-suite.js`) + Tier 2 + Tier 3 +
-  Tier 4 (soak + watchdog), plus the path-filtered deep CI batteries
-  (`factory-validate.yml`, `factory-capacity-validate.yml`, `factory-soak.yml`).
+  Tier 4 (soak + watchdog), plus the Tier 4 CI battery
+  (`factory-soak.yml` — `tier4` job, reliability-gated at job level).
 - **Normal content runtime state updates** (matrix shards, `data/state/**`,
   published archives, qa evidence, `config/content-factory.json` grounding
   ids) are PRODUCTION DATA, not engine changes — they do NOT trigger Tier 4

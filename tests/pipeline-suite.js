@@ -383,6 +383,34 @@ test('push-gate guard job: fix đỏ 0-job, KHÔNG nới gate publish', () => {
     pub.includes("inputs.action == 'diagnostics'"), 'publish if vẫn giữ allowlist dispatch maintenance');
 });
 
+test('factory-soak.yml: Tier 4 battery THẬT tồn tại trên CI (không còn docs ghi ENFORCED cho workflow không tồn tại)', () => {
+  const yml = fs.readFileSync(path.join(ROOT, '.github', 'workflows', 'factory-soak.yml'), 'utf8');
+  // trigger: push main + pull_request + dispatch, KHÔNG paths filter (tránh đỏ 0-job)
+  assert.match(yml, /name: Factory soak \(Tier 4\)/);
+  assert.ok(/on:\n  push:\n    branches: \[main\]/.test(yml) && !/paths:/.test(yml),
+    'push main KHÔNG dùng paths filter (GitHub ghi record FAILURE 0-job cho push bị filter loại)');
+  assert.match(yml, /pull_request:\n    branches: \[main\]/, 'Tier 4 chạy trên pull_request (theo hợp đồng AGENTS.md)');
+  assert.match(yml, /workflow_dispatch:/, 'Tier 4 re-dispatch thủ công được');
+  // gate ở JOB level: reliability-relevant files → engine=true
+  const gate = yml.slice(yml.indexOf('  tier4-gate:'), yml.indexOf('  tier4:'));
+  assert.ok(gate.length > 100, 'job tier4-gate phải tồn tại, trước tier4');
+  assert.match(gate, /outputs:\n      engine: \$\{\{ steps\.scope\.outputs\.engine \}\}/);
+  assert.match(gate, /scripts\/factory\/\|config\/\|tests\/\|\\\.github\/workflows\//,
+    'gate detect files reliability-relevant');
+  // tier4 job: chỉ chạy khi gate xác nhận engine=true (gate KHÔNG nới)
+  const tier4 = yml.slice(yml.indexOf('  tier4:'));
+  assert.match(tier4, /needs: tier4-gate/);
+  assert.match(tier4, /needs\.tier4-gate\.outputs\.engine == 'true'/,
+    'tier4 chỉ chạy khi thay đổi reliability-relevant');
+  // bộ Tier 4 đầy đủ: agent-suite + pipeline-suite + soak
+  assert.match(tier4, /node --test tests\/agent-suite\.js/);
+  assert.match(tier4, /node --test tests\/pipeline-suite\.js/);
+  assert.match(tier4, /node --max-old-space-size=2048 --test tests\/soak\/factory-soak\.js/);
+  // an toàn: read-only repo, không force push
+  assert.match(yml, /permissions:\n  contents: read/, 'workflow chỉ đọc (contents: read)');
+  assert.ok(!/--force\b|-f /.test(yml), 'KHÔNG force push');
+});
+
 // =====================================================================
 // BEHAVIOR — refill (queue tự nạp ~300 topic hợp lệ)
 // =====================================================================
