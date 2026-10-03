@@ -40,6 +40,13 @@
  *     clean stop BEFORE claiming; repair of open work still proceeds)
  *   - no drafts in the push -> mode=skip (exit 0) — e.g. the publish commit
  *     removes drafts (D-only diff) so it must never re-trigger the loop
+ *   - STALE pushes: a push containing ONLY drafts of already-PUBLISHED rows
+ *     is hygiene, not production. Every wrapped _drafts/A#####.html must be
+ *     BYTE-IDENTICAL to data/published/A#####.html -> mode=stale, proceed
+ *     false, exit 0 (the workflow hygiene step deletes the stale drafts);
+ *     a DIVERGED draft of a PUBLISHED row -> REFUSED (never overwrite a
+ *     published article; resolve per docs/PROC-RECOVERY.md); a push mixing
+ *     stale + new/repair ids -> REFUSED.
  */
 'use strict';
 const fs = require('fs'), path = require('path');
@@ -97,7 +104,7 @@ function pairUp(ids) { // deterministic sequential pairs of PAIR_SIZE, in given 
 
 function select(added, modified) {
   const control = loadControl();
-  const out = { proceed: false, mode: 'skip', claim_ids: [], qa_ids: [], pairs: [], refuse: null,
+  const out = { proceed: false, mode: 'skip', claim_ids: [], qa_ids: [], pairs: [], stale_ids: [], refuse: null,
                 control_enabled: control.enabled, chunk_size: control.chunk_size,
                 queue_min: control.queue_min, queue_max: control.queue_max };
   const refuse = (msg) => { out.refuse = msg; return out; };
@@ -112,11 +119,11 @@ function select(added, modified) {
   }
   if (!seen.size) return out; // no drafts in the push -> skip
   const ids = Array.from(seen.keys());
-  const newIds = [], repairIds = [];
+  const newIds = [], repairIds = [], staleIds = [];
   for (const id of ids) {
     const row = byId[id];
     if (!row) return refuse(id + ' not in matrix — refusing to claim an unknown id');
-    if (row.status === 'PUBLISHED') return refuse(id + ' is PUBLISHED — never overwrite a published article');
+    if (row.status === 'PUBLISHED') { staleIds.push(id); continue; } // hygiene path (below)
     if (row.status === 'BLOCKED') return refuse(id + ' is BLOCKED — protected row, no push-driven handling');
     if (row.status === 'PLANNED') newIds.push(id);
     else if (REPAIRABLE.includes(row.status)) repairIds.push(id);
@@ -124,6 +131,23 @@ function select(added, modified) {
   }
   if (newIds.length && repairIds.length)
     return refuse('push mixes new (' + newIds.join(',') + ') and repair (' + repairIds.join(',') + ') — finish the open chunk (qa/publish the repair) before claiming new');
+  // ---- STALE push: chỉ draft của row PUBLISHED (hygiene, không production) ----
+  if (staleIds.length) {
+    if (newIds.length || repairIds.length)
+      return refuse('push mixes stale (PUBLISHED: ' + staleIds.join(',') + ') with ' + (newIds.length ? 'new (' + newIds.join(',') + ')' : 'repair (' + repairIds.join(',') + ')') + ' — stale drafts are hygiene-only; push them alone or resolve per docs/PROC-RECOVERY.md');
+    const sorted = staleIds.slice().sort((a, b) => matrixOrder[a] - matrixOrder[b]);
+    for (const id of sorted) {
+      const draft = path.join(ROOT, '_drafts', id + '.html');
+      const arch = path.join(DATA, 'published', id + '.html');
+      if (!fs.existsSync(draft)) return refuse(id + ' has no wrapped draft _drafts/' + id + '.html (stale push needs the exact draft to compare)');
+      if (!fs.existsSync(arch)) return refuse(id + ' has no archive data/published/' + id + '.html — cannot verify a stale draft without the published truth');
+      const db = fs.readFileSync(draft), ab = fs.readFileSync(arch);
+      if (!db.equals(ab))
+        return refuse(id + ' is PUBLISHED and the pushed draft DIVERGED from data/published/' + id + '.html — never overwrite a published article; diverged drafts are NOT auto-deleted (resolve per docs/PROC-RECOVERY.md, e.g. qa-repair)');
+    }
+    out.mode = 'stale'; out.stale_ids = sorted; out.proceed = false;
+    return out; // exit 0 — the workflow hygiene step deletes the byte-identical stale drafts
+  }
   if (newIds.length) {
     // ---- TURBO write-ahead queue (new/PLANNED ids) ----
     const queue = newIds.slice().sort((a, b) => matrixOrder[a] - matrixOrder[b]); // repository/matrix order

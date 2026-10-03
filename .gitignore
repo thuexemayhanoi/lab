@@ -14,3 +14,8 @@ site/
 node_modules/
 .DS_Store
 *.log
+
+# Pipeline coordinator run-local state: per-writer workspaces + lock file.
+# Machine-local, transient, NEVER committed (checkpoint/queue truth lives in
+# the committed data/state/pipeline-state.json).
+pipeline/

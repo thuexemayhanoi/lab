@@ -266,6 +266,29 @@ function opQa(cmd){
   runVerify(cmd.scope||'fast', ids);
 }
 
+// STAGED internal-link gate (fail-closed): every /lab/ href in the staged
+// archived pages must resolve to a real file/dir in the built public root
+// (branch Pages: the repository root IS the deployable tree). Mirrors the
+// test-suite contract "published: internal links resolve to real files"
+// (existence ONLY — link-count/depth thresholds stay with QA, not here).
+function stagedLinkCheck(ids){
+  const problems=[];
+  const exists = href => {
+    if (href.startsWith('/lab/assets/')) return fs.existsSync(path.join(ROOT, href.replace(/^\/lab\//, '')));
+    const p = href.replace(/^\/lab\//, '').replace(/\/$/, '');
+    if (!p) return fs.existsSync(path.join(ROOT, 'index.html'));
+    if (/\.(xml|txt|md|json)$/i.test(p)) return fs.existsSync(path.join(ROOT, p));
+    return fs.existsSync(path.join(ROOT, p, 'index.html'));
+  };
+  for (const id of ids){
+    const f = path.join(ROOT, 'data', 'published', id + '.html');
+    if (!fs.existsSync(f)) { problems.push(id + ' NO_ARCHIVE (staged archive page missing)'); continue; }
+    const html = fs.readFileSync(f, 'utf8');
+    const hrefs = [...html.matchAll(/href="(\/lab\/[^"#]+)"/g)].map(m => m[1]);
+    for (const h of hrefs) if (!exists(h)) problems.push(id + ' broken internal link ' + h);
+  }
+  return problems;
+}
 function opPublish(cmd){
   const {rows}=preflight();
   const byId={}; rows.forEach(r=>byId[r.article_id]=r);
@@ -292,6 +315,8 @@ function opPublish(cmd){
   if(!staged.noop){
     step('build-site', run(['node','scripts/site/build-site.js']));
     if(!failed) step('reports', run(['node','scripts/factory/factory.js','reports']));
+    // staged internal-link gate (dead link => rollback, never publish)
+    if(!failed){ const lp=stagedLinkCheck(staged.ids); if(lp.length) failed='stagedLinkCheck ('+lp.join('; ')+')'; }
     // STAGED-AWARE VERIFY (was the success-path deadlock): the verification
     // runs against the staged contract — exactly THIS transaction + journal —
     // never a blanket bypass of the tx/lock invariants.

@@ -112,7 +112,16 @@ XE MÁY ĐIỆN (electric) · PHỤ TÙNG (parts).
   The standard production pair is 2 (`prepare-next --count 2`).
 - Phase lifecycle: `PILOT` → `PRODUCTION` via `node scripts/factory/factory.js promote-production`
   (canonical transition; bootstrap cap only binds in PILOT). See `docs/CONTENT-FACTORY.md`.
-- No autonomous AI writer in GitHub Actions; no API keys in Actions.
+- Autonomous pipeline (the ONLY sanctioned AI-writer path in Actions):
+  job `pipeline` in `factory-production.yml` runs
+  `scripts/factory/pipeline.js cycle` on the `*/30 * * * *` schedule. It only
+  writes when the writer runtime is explicitly configured:
+  `WRITER_RUNTIME=http` + `WRITER_ENDPOINT` (GitHub Variables) and optional
+  `WRITER_API_KEY` (GitHub Secret). Default `WRITER_RUNTIME=off` =
+  IDLE-STOP BEFORE claiming (queue still refills; nothing written,
+  nothing published). `WRITER_RUNTIME=mock` requires PIPELINE_ALLOW_MOCK=1
+  and is test-only. Secrets live in GitHub Secrets — NEVER committed.
+  No other autonomous AI writer, no API keys in the repo tree.
 - No backlink campaigns. Do not create external links to manipulate rankings.
 
 ## Data contracts
@@ -223,7 +232,9 @@ change is PASS. Never claim production-safe from unit tests alone.
   sitemap ↔ archive ↔ public tree; exactly-once ledger; contiguous prefix).
 - **Tier 4 — Long-run / Failure recovery / Liveness**: multi-chunk soak
   (`node --test tests/soak/factory-soak.js`) + fault injection + recover +
-  liveness watchdog (`scripts/factory/liveness-watchdog.js`).
+  liveness watchdog (`scripts/factory/liveness-watchdog.js`) + pipeline
+  suite (`node --test tests/pipeline-suite.js` — coordinator contracts:
+  refill, grants, exactly-once publish, crash/resume, stale hygiene).
 
 Rules:
 - Engine/workflow/recovery changes REQUIRE Tier 4 (soak + watchdog), not
@@ -253,7 +264,12 @@ Rules:
   retired workflow) matches no path filter, so the deep batteries stay
   pinned to the PREVIOUS commit — when the head tree itself must be
   demonstrated green, re-dispatch the affected battery manually (all
-  three accept `workflow_dispatch`).
+  three accept `workflow_dispatch`). (c) the `pipeline` job of
+  `factory-production.yml` runs ONLY on the `*/30 * * * *` schedule or
+  `workflow_dispatch` action `pipeline|selftest` (the `publish` job is
+  disabled for those events) and is serialized with the publish loop by
+  the same global concurrency group — infrastructure edits can never
+  accidentally start a production cycle except through that schedule.
 
 ## Scope → gates (Simple Production Mode)
 
@@ -289,5 +305,14 @@ marker; see `docs/PROC-RECOVERY.md`).
 
 - **External AI writer** (you, typically): research → write draft body →
   wrap → commit + PUSH (the factory runs QA/publish itself).
+- **Pipeline coordinator** (`scripts/factory/pipeline.js`, job `pipeline`,
+  cron `*/30 * * * *`): the ONLY autonomous writer orchestration — owns
+  queue refill (~300 PLANNED, no duplicates/published/in-flight), grants
+  12–18 articles/cycle split evenly across 3 parallel writers, QA/repair
+  loops, chunked atomic publish, checkpoint/resume exactly-once, and
+  lock TTL `pipeline/lock.json` against double coordinators. Writers run
+  in isolated gitignored workspaces (`pipeline/writer-<n>/`) and never
+  touch global state, merge, push or publish (docs/PIPELINE.md).
 - **GitHub Actions**: tests, validation, deterministic generation, publish
-  promotion, site build, deployment. Never writes articles.
+  promotion, site build, deployment. The `pipeline` job coordinates the
+  autonomous loop; it never bypasses QA or the publish gates.
