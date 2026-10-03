@@ -598,3 +598,20 @@ test('crash/resume mid-publish: chết giữa các publish chunk => resume publi
     assert.equal(coordLock(SB).locked, false);
   } finally { rmSB(SB); }
 });
+
+test('workflow handoff #4→#5 QUA COMMIT: head_sha output + commit incident if:always() + supervisor checkout đúng SHA #4 + verify nằm trên main', () => {
+  const yml = fs.readFileSync(path.join(ROOT, '.github', 'workflows', 'factory-production.yml'), 'utf8');
+  // (a) job agent-repair export head_sha sau khi commit incident
+  assert.match(yml, /head_sha: \$\{\{ steps\.a4commit\.outputs\.head_sha \}\}/, 'agent-repair outputs head_sha');
+  // (b) commit step #4 có id a4commit + if: always() (incident audit được push kể cả khi step #4 fail)
+  const ai = yml.indexOf('id: a4commit');
+  assert.ok(ai > 0, 'commit step #4 phải có id a4commit');
+  assert.match(yml.slice(ai - 300, ai + 300), /if: always\(\)/, 'commit incident #4 phải if: always()');
+  // (c) head_sha = SHA cuối cùng sau push (KHÔNG phải SHA cũ của event)
+  assert.match(yml, /echo "head_sha=\$\(git rev-parse HEAD\)" >> "\$GITHUB_OUTPUT"/);
+  // (d) supervisor checkout ĐÚNG commit #4 (fallback github.sha), KHÔNG mặc định SHA event
+  assert.match(yml, /ref: \$\{\{ needs\.agent-repair\.outputs\.head_sha \|\| github\.sha \}\}/, 'supervisor checkout head_sha của #4');
+  // (e) trước khi chạy #5: verify commit #4 nằm trên origin/main (fail-closed, không chạy trên SHA lạ)
+  assert.match(yml, /git merge-base --is-ancestor.*origin\/main/, 'supervisor phải verify head_sha nằm trên origin/main');
+  assert.ok(yml.includes('Handoff verify: commit #4 PHẢI nằm trên origin/main'), 'step verify handoff phải có tên rõ ràng');
+});

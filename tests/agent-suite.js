@@ -904,3 +904,67 @@ test('#4: state corrupt => rebuild CÙNG durable pause thuộc incident — prod
     assert.equal(A5(sb, ['conclude', '--incident', incId]).rc, 0);
   } finally { rmSB(sb); }
 });
+
+// =====================================================================
+// TRUTHFUL RESUME (#5) — KHÔNG báo resume thành công giả
+// =====================================================================
+
+test('resumeOutcome (unit): rc≠0/null => RESUME_FAILED; PAUSED => RESUME_PAUSED; IDLE/SKIP => VERIFIED_RESUMED đúng trạng thái', () => {
+  const sup = require(path.join(ROOT, 'scripts', 'factory', 'agent-supervisor.js'));
+  assert.equal(sup.resumeOutcome({ rc: 1, log: 'PIPELINE STOPPED: ...' }).status, 'RESUME_FAILED');
+  assert.equal(sup.resumeOutcome({ rc: 1, log: '' }).ok, false);
+  assert.equal(sup.resumeOutcome({ rc: null, log: '' }).status, 'RESUME_FAILED'); // signal/killed
+  const rp = sup.resumeOutcome({ rc: 0, log: 'PIPELINE PAUSED (durable): incident INC-X giữ pause' });
+  assert.equal(rp.status, 'RESUME_PAUSED');
+  assert.equal(rp.ok, false);
+  const ri = sup.resumeOutcome({ rc: 0, log: 'PIPELINE IDLE — KHÔNG claim, KHÔNG viết, KHÔNG publish bài nào.' });
+  assert.equal(ri.status, 'VERIFIED_RESUMED');
+  assert.equal(ri.idle, true);
+  const rs = sup.resumeOutcome({ rc: 0, log: 'PIPELINE SKIP: coordinator lock đang được giữ bởi process khác' });
+  assert.equal(rs.status, 'VERIFIED_RESUMED');
+  assert.equal(rs.skip, true);
+  const rr = sup.resumeOutcome({ rc: 0, log: 'PIPELINE CYCLE hoàn tất ...' });
+  assert.equal(rr.status, 'VERIFIED_RESUMED');
+  assert.equal(rr.ok, true);
+});
+
+test('#5 truthful resume: cycle FAIL (WRITER_RUNTIME không hỗ trợ => cycle STOPPED rc 1) => KHÔNG VERIFIED_RESUMED; FAILED_PAUSED + checkpoint; conclude ĐỎ', () => {
+  const sb = mkSB();
+  try {
+    resetCore(sb); clearMaint(sb);
+    setTxn(sb, 'TX-RF', 'prepare-next');
+    const r4 = A4(sb, ['repair', '--source', 'workflow_run', '--run-id', 'run-940']);
+    const incId = grab(r4.out, 'AGENT4_INCIDENT_ID');
+    assert.equal(grab(r4.out, 'AGENT4_RESULT'), 'SUCCESS');
+    // verify PASS nhưng resume cycle REFUSED (runtime không hỗ trợ => STOPPED rc 1)
+    const r5 = A5(sb, ['run', '--incident', incId], { WRITER_RUNTIME: 'bogus-runtime' });
+    assert.ok(r5.out.includes('AGENT5_RESULT=FAILED_PAUSED'), r5.out.slice(-500));
+    assert.ok(!r5.out.includes('VERIFIED_RESUMED'), 'KHÔNG được báo VERIFIED_RESUMED khi cycle fail: ' + r5.out.slice(-500));
+    const inc = readJSON(incPath(sb, incId));
+    assert.equal(inc.final.status, 'FAILED_PAUSED');
+    assert.ok(inc.actions.some(a => a.action === 'resume-failed'));
+    // checkpoint/state: durable pause của CHÍNH incident giữ production (không tự chạy lại)
+    const st = readJSON(statePath(sb));
+    assert.equal(st.pause && st.pause.incident_id, incId);
+    // incident + checkpoint đã lưu trước khi workflow kết thúc => conclude ĐỎ
+    assert.equal(A5(sb, ['conclude', '--incident', incId]).rc, 1);
+  } finally { rmSB(sb); }
+});
+
+test('#5 truthful resume: WRITER_RUNTIME=off => VERIFIED_RESUMED + summary IDLE-STOP trung thực — KHÔNG tuyên bố đã viết bài', () => {
+  const sb = mkSB();
+  try {
+    resetCore(sb); clearMaint(sb);
+    setTxn(sb, 'TX-IDLE', 'prepare-next');
+    const r4 = A4(sb, ['repair', '--source', 'workflow_run', '--run-id', 'run-941']);
+    const incId = grab(r4.out, 'AGENT4_INCIDENT_ID');
+    const r5 = A5(sb, ['run', '--incident', incId], { WRITER_RUNTIME: 'off' });
+    assert.ok(r5.out.includes('AGENT5_RESULT=VERIFIED_RESUMED'), r5.out.slice(-500));
+    const inc = readJSON(incPath(sb, incId));
+    assert.ok(/IDLE-STOP/.test(inc.final.summary), inc.final.summary);
+    assert.ok(/KHÔNG bài nào được viết/.test(inc.final.summary), inc.final.summary);
+    // KHÔNG có hành động nào tuyên bố đã viết/publish bài
+    assert.ok(!inc.actions.some(a => /published|đã viết/.test(a.action)), JSON.stringify(inc.actions.map(a => a.action)));
+    assert.equal(A5(sb, ['conclude', '--incident', incId]).rc, 0);
+  } finally { rmSB(sb); }
+});

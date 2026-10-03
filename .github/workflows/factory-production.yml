@@ -468,6 +468,9 @@ jobs:
     outputs:
       incident_id: ${{ steps.a4.outputs.incident_id }}
       result: ${{ steps.a4.outputs.result }}
+      # SHA của commit incident #4 vừa push (handoff #4→#5 QUA COMMIT, không
+      # phải SHA cũ của event — #5 checkout đúng commit #4 để đọc incident).
+      head_sha: ${{ steps.a4commit.outputs.head_sha }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -497,24 +500,31 @@ jobs:
           echo "result=$(grep -o 'AGENT4_RESULT=.*' /tmp/a4.log | tail -1 | cut -d= -f2 || echo none)" >> "$GITHUB_OUTPUT"
 
       - name: 'Commit incident report (audit: reports/incidents/) — 1 commit, KHÔNG force push'
+        id: a4commit
+        # always(): incident audit (bằng chứng để run sau nhận biết #4 gián đoạn)
+        # được push KỂ CẢ khi step #4 fail — KHÔNG để incident rơi khỏi main.
+        if: always()
         run: |
           set -eu
           git add -A
           if git diff --cached --quiet; then
             echo "agent #4: không có gì để commit"
-            exit 0
+          else
+            git commit -m "agent-incident: ${{ steps.a4.outputs.incident_id }} — Agent #4 audit trail (repair ${{ steps.a4.outputs.result }})"
+            A4_PUSH=0
+            until git push; do
+              A4_PUSH=$((A4_PUSH+1))
+              if [ "$A4_PUSH" -ge 3 ]; then
+                echo "::error::agent #4 push FAIL sau $A4_PUSH lần — STOP, không force push (audit nằm sẵn trên runner)"
+                exit 1
+              fi
+              git fetch origin main
+              git rebase origin/main
+            done
           fi
-          git commit -m "agent-incident: ${{ steps.a4.outputs.incident_id }} — Agent #4 audit trail (repair ${{ steps.a4.outputs.result }})"
-          A4_PUSH=0
-          until git push; do
-            A4_PUSH=$((A4_PUSH+1))
-            if [ "$A4_PUSH" -ge 3 ]; then
-              echo "::error::agent #4 push FAIL sau $A4_PUSH lần — STOP, không force push (audit nằm sẵn trên runner)"
-              exit 1
-            fi
-            git fetch origin main
-            git rebase origin/main
-          done
+          # handoff #4→#5: SHA cuối cùng sau khi commit incident (hoặc SHA checkout
+          # nếu không có gì để commit) — #5 checkout ĐÚNG SHA này.
+          echo "head_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
   agent-supervisor:
     # AGENT #5 — verify độc lập kết quả #4, HOẶC đúng MỘT lần sửa second-line.
@@ -524,9 +534,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
+      # HANDOFF #4→#5 QUA COMMIT: checkout ĐÚNG commit #4 vừa push (head_sha) —
+      # KHÔNG mặc định checkout SHA cũ của event; incident persist trên main.
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ needs.agent-repair.outputs.head_sha || github.sha }}
 
       - uses: actions/setup-node@v4
         with:
@@ -536,6 +549,17 @@ jobs:
         run: |
           git config user.name "factory-operator-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: 'Handoff verify: commit #4 PHẢI nằm trên origin/main (fail-closed)'
+        run: |
+          set -eu
+          git fetch origin main
+          if [ -n "${{ needs.agent-repair.outputs.head_sha }}" ]; then
+            if ! git merge-base --is-ancestor "${{ needs.agent-repair.outputs.head_sha }}" origin/main; then
+              echo "::error::commit #4 (${{ needs.agent-repair.outputs.head_sha }}) KHÔNG nằm trên origin/main — từ chối chạy #5 trên SHA lạ (fail-closed)"
+              exit 1
+            fi
+          fi
 
       - name: 'Agent #5 — verify độc lập / 1 lần second-line + resume MỘT entrypoint'
         env:

@@ -61,4 +61,9 @@ node scripts/factory/pipeline.js refill   # chỉ refill queue (không claim)
 node scripts/factory/pipeline.js cycle    # 1 cycle đầy đủ (cron chạy lệnh này)
 node scripts/factory/pipeline.js selftest # chạy tests/pipeline-suite.js (mock)
 
-State internal (gitignored, không commit): pipeline/ (lock, workspace writer). State commit được: data/state/pipeline-state.json (checkpoint, queue pointer).
+State internal (gitignored, không commit, **RUN-LOCAL — không đi theo runner mới**): pipeline/ (lock.json coordinator lock, maintenance.json maintenance lock #4/#5, workspace writer). Serialize giữa các workflow run: concurrency group `lab-factory-production`.
+
+State commit được: data/state/pipeline-state.json (checkpoint, queue pointer, **durable pause**). Ghi chú quan trọng:
+
+- **Durable pause**: khi state có `pause` (incident FAILED_PAUSED / #4 rebuild state), MỌI runner mới đều thấy `PIPELINE PAUSED (durable)` — KHÔNG claim/viết/publish; pause KHÔNG tự hết theo TTL (maintenance TTL chỉ là lock run-local). Chỉ #5 của đúng incident sở hữu pause được clear sau verify thành công.
+- **Load strict (fail-closed)**: pipeline-state.json có sẵn mà hỏng cú pháp ⇒ `PIPELINE REFUSED` exit 1, KHÔNG âm thầm dựng state rỗng để chạy production. Thiếu file = bình thường (chưa có cycle nào).

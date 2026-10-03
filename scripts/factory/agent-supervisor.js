@@ -79,6 +79,19 @@ function attemptSecondLine(p, inc) {
   return null; // không còn lớp an toàn nào để thử — hết ngân sách tự sửa
 }
 
+// Phân loại kết quả resume (pipeline cycle) — KHÔNG bao giờ báo resume thành
+// công giả. rc khác 0/null => thất bại thật; exit 0 nhưng PAUSED/IDLE-STOP =>
+// production KHÔNG chạy => báo đúng trạng thái; VERIFIED_RESUMED chỉ khi có
+// bằng chứng từ kết quả coordinator (cycle chạy / SKIP vì coordinator khác).
+function resumeOutcome(cyc) {
+  const log = String(cyc && cyc.log || '');
+  if (!(cyc && cyc.rc === 0)) return { status: 'RESUME_FAILED', ok: false };
+  if (log.includes('PIPELINE PAUSED')) return { status: 'RESUME_PAUSED', ok: false };
+  if (log.includes('PIPELINE IDLE')) return { status: 'VERIFIED_RESUMED', ok: true, idle: true };
+  if (log.includes('PIPELINE SKIP')) return { status: 'VERIFIED_RESUMED', ok: true, skip: true };
+  return { status: 'VERIFIED_RESUMED', ok: true };
+}
+
 // ------------------------------ pause & report --------------------------------
 function keepPaused(inc, why) {
   // (a) maintenance lock giữ TTL pause (RUN-LOCAL: chết theo runner — KHÔNG
@@ -179,11 +192,30 @@ function cmdRun(a) {
       core.releaseMaintenance(incId);
       core.act(inc, 'agent-5', 'release-maintenance-lock', 'Verify PASS — production được phép chạy lại.');
       const cyc = pipelineCycle(pipelineEnv());
+      const ro = resumeOutcome(cyc);
       core.act(inc, 'agent-5', 'resume-production', 'Entrypoint: pipeline.js cycle (một entrypoint duy nhất — tự phân bổ + fan-out 3 writer).',
-        { ok: cyc.rc === 0, rc: cyc.rc, log: cyc.log });
-      core.setFinal(inc, 'VERIFIED_RESUMED', 'Verify độc lập PASS (txn/locks/state/verify-fast/pipeline-status). Đã release lock và resume production qua đúng một entrypoint pipeline.js cycle.');
+        { ok: ro.ok, rc: cyc.rc, outcome: ro.status, log: cyc.log });
+      if (ro.status === 'RESUME_FAILED') {
+        core.act(inc, 'agent-5', 'resume-failed', 'Resume cycle rc=' + (cyc.rc == null ? 'signal' : cyc.rc) + ' — KHÔNG VERIFIED_RESUMED; giữ checkpoint để điều tra. Log:\n' + cyc.log, { ok: false, rc: cyc.rc });
+        keepPaused(inc, 'Resume cycle thất bại (rc=' + (cyc.rc == null ? 'signal' : cyc.rc) + '); giữ checkpoint để điều tra — KHÔNG báo VERIFIED_RESUMED');
+        console.error('AGENT5_RESULT=FAILED_PAUSED');
+        return 0; // workflow vẫn commit incident; conclude PHẢI trả nonzero cho trạng thái lỗi này
+      }
+      if (ro.status === 'RESUME_PAUSED') {
+        core.act(inc, 'agent-5', 'resume-paused', 'Cycle bị PAUSED sau verify — production KHÔNG chạy; giữ checkpoint để điều tra. Log:\n' + cyc.log, { ok: false });
+        keepPaused(inc, 'Resume cycle bị PAUSED — production KHÔNG chạy; giữ checkpoint để điều tra');
+        console.error('AGENT5_RESULT=FAILED_PAUSED');
+        return 0; // workflow vẫn commit incident; conclude PHẢI trả nonzero cho trạng thái lỗi này
+      }
+      // VERIFIED_RESUMED — summary TRUNG THỰC theo outcome thực tế của cycle
+      const sum3a = ro.idle
+        ? 'Verify độc lập PASS (txn/locks/state/verify-fast/pipeline-status). Resume entrypoint đã chạy: cycle IDLE-STOP — writer runtime chưa cấu hình, KHÔNG bài nào được viết (queue đã sẵn sàng).'
+        : ro.skip
+          ? 'Verify độc lập PASS. Resume entrypoint đã chạy: cycle SKIP — coordinator khác đang giữ lock (production cycle đã có người chạy, không chạy trùng).'
+          : 'Verify độc lập PASS (txn/locks/state/verify-fast/pipeline-status). Đã release lock và resume production qua đúng một entrypoint pipeline.js cycle — production đã thực sự chạy.';
+      core.setFinal(inc, 'VERIFIED_RESUMED', sum3a);
       console.log('AGENT5_RESULT=VERIFIED_RESUMED');
-      return cyc.rc === 0 ? 0 : 0; // resume đã chạy; lỗi cycle là việc của coordinator/incident kế tiếp
+      return 0
     }
 
     // (3b) KHÔNG khoẻ => đúng MỘT lần sửa second-line (tổng ngân sách: 1 (#4) + 1 (#5))
@@ -224,8 +256,27 @@ function cmdRun(a) {
     core.releaseMaintenance(incId);
     core.act(inc, 'agent-5', 'release-maintenance-lock', 'Second-line repair PASS + regression PASS — resume production.');
     const cyc = pipelineCycle(pipelineEnv());
-    core.act(inc, 'agent-5', 'resume-production', 'Entrypoint: pipeline.js cycle (một entrypoint duy nhất).', { ok: cyc.rc === 0, rc: cyc.rc });
-    core.setFinal(inc, 'VERIFIED_RESUMED', 'Second-line repair ' + att.kind + ' thành công + regression PASS. Đã release lock và resume production.');
+    const ro = resumeOutcome(cyc);
+    core.act(inc, 'agent-5', 'resume-production', 'Entrypoint: pipeline.js cycle (một entrypoint duy nhất).',
+      { ok: ro.ok, rc: cyc.rc, outcome: ro.status, log: cyc.log });
+    if (ro.status === 'RESUME_FAILED') {
+      core.act(inc, 'agent-5', 'resume-failed', 'Resume cycle rc=' + (cyc.rc == null ? 'signal' : cyc.rc) + ' — KHÔNG VERIFIED_RESUMED; giữ checkpoint để điều tra. Log:\n' + cyc.log, { ok: false, rc: cyc.rc });
+      keepPaused(inc, 'Resume cycle thất bại sau second-line repair (rc=' + (cyc.rc == null ? 'signal' : cyc.rc) + '); giữ checkpoint để điều tra');
+      console.error('AGENT5_RESULT=FAILED_PAUSED');
+      return 0; // workflow vẫn commit incident; conclude PHẢI trả nonzero
+    }
+    if (ro.status === 'RESUME_PAUSED') {
+      core.act(inc, 'agent-5', 'resume-paused', 'Cycle bị PAUSED sau second-line repair — production KHÔNG chạy; giữ checkpoint. Log:\n' + cyc.log, { ok: false });
+      keepPaused(inc, 'Resume cycle bị PAUSED sau second-line repair — production KHÔNG chạy; giữ checkpoint để điều tra');
+      console.error('AGENT5_RESULT=FAILED_PAUSED');
+      return 0;
+    }
+    const sum2l = ro.idle
+      ? 'Second-line repair ' + att.kind + ' thành công + regression PASS. Resume entrypoint đã chạy: cycle IDLE-STOP — writer runtime chưa cấu hình, KHÔNG bài nào được viết (queue đã sẵn sàng).'
+      : ro.skip
+        ? 'Second-line repair ' + att.kind + ' thành công + regression PASS. Resume entrypoint đã chạy: cycle SKIP — coordinator khác đang giữ lock (không chạy trùng).'
+        : 'Second-line repair ' + att.kind + ' thành công + regression PASS. Đã release lock và resume production — production đã thực sự chạy.';
+    core.setFinal(inc, 'VERIFIED_RESUMED', sum2l);
     console.log('AGENT5_RESULT=VERIFIED_RESUMED');
     return 0;
   } catch (e) {
@@ -249,7 +300,7 @@ function cmdConclude(a) {
   if (!inc) { console.error('AGENT5 CONCLUDE: không tìm thấy incident ' + a.incident); return 1; }
   const s = inc.final && inc.final.status;
   console.log('AGENT5_CONCLUDE: incident ' + inc.id + ' final=' + s);
-  if (s === 'VERIFIED_RESUMED') { console.log('AGENT5: production đã được verify + resume — SUCCESS.'); return 0; }
+  if (s === 'VERIFIED_RESUMED') { console.log('AGENT5: production đã được verify + resume — SUCCESS. ' + (inc.final && inc.final.summary || '')); return 0; }
   console.error('AGENT5: KHÔNG sửa được tự động — production PAUSED chờ human. Báo cáo: reports/incidents/' + inc.id + '.md');
   return 1; // job đỏ: tín hiệu dừng rõ ràng, KHÔNG escalate tiếp
 }
@@ -275,4 +326,4 @@ function main(argv) {
   return 1;
 }
 if (require.main === module) process.exit(main(process.argv.slice(2)));
-module.exports = { verifyBattery, attemptSecondLine, keepPaused, pipelineEnv };
+module.exports = { verifyBattery, attemptSecondLine, keepPaused, pipelineEnv, resumeOutcome };
