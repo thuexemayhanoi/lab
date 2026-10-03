@@ -738,3 +738,180 @@ test('workflow handoff #4→#5 QUA COMMIT: head_sha output + commit incident if:
   assert.match(yml, /git merge-base --is-ancestor.*origin\/main/, 'supervisor phải verify head_sha nằm trên origin/main');
   assert.ok(yml.includes('Handoff verify: commit #4 PHẢI nằm trên origin/main'), 'step verify handoff phải có tên rõ ràng');
 });
+
+// ============================================================================
+// PHẦN AUDIT #2 — push Agent #5 sau handoff (detached HEAD phải ghi refspec)
+// Sandbox không có binary git → mô hình mini-git THUẦN NODE mô tả đúng các
+// tính chất mà workflow dựa vào: DAG ancestry, refs, detached HEAD, push
+// fast-forward theo refspec, fetch/rebase. Đây là MÔ HÌNH, không phải git thật
+// (binaries bị cấm trong sandbox); contract push thật được pin bằng YAML test
+// ngay sau khối này.
+// ============================================================================
+function miniRemote(initialFiles) {
+  const commits = new Map();
+  let seq = 0;
+  const mk = (parents, own, msg) => {
+    const sha = 'c' + String(++seq).padStart(4, '0');
+    const base = parents.length ? Object.assign({}, ...parents.map(p => commits.get(p).files)) : {};
+    commits.set(sha, { parents: parents.slice(), own: Object.assign({}, own), files: Object.assign(base, own), msg });
+    return sha;
+  };
+  const root = mk([], initialFiles || {}, 'root');
+  const remote = { main: root, pushes: 0 };
+  const isAncestor = (a, b) => {
+    if (a === b) return true;
+    const stack = [b], seen = new Set([b]);
+    while (stack.length) {
+      const c = commits.get(stack.pop());
+      if (!c) return false;
+      if (c.parents.includes(a)) return true;
+      for (const p of c.parents) if (!seen.has(p)) { seen.add(p); stack.push(p); }
+    }
+    return false;
+  };
+  // actions/checkout@v4 để runner ở DETACHED HEAD trên SHA của event/handoff
+  const checkout = sha => ({ head: sha, branch: null, remoteMain: remote.main });
+  // push PHẢI ghi refspec; không refspec → git từ chối ("not on a branch")
+  const push = (wt, refspec) => {
+    if (refspec !== 'HEAD:refs/heads/main') throw new Error('fatal: you are not on a branch (detached HEAD — git push không refspec bị từ chối)');
+    remote.pushes++;
+    if (!isAncestor(remote.main, wt.head)) return { ok: false, reason: 'non-fast-forward (remote đã tiến)' };
+    remote.main = wt.head;
+    return { ok: true };
+  };
+  const commit = (wt, files, msg) => { wt.head = mk([wt.head], files, msg); return wt.head; };
+  const fetch = wt => { wt.remoteMain = remote.main; };
+  const rebase = (wt, onto) => {
+    const local = commits.get(wt.head);
+    wt.head = mk([onto], local.own, local.msg + ' (rebase)');
+    return wt.head;
+  };
+  return { commits, remote, isAncestor, checkout, push, commit, fetch, rebase, filesOf: sha => commits.get(sha).files };
+}
+
+test('mini-git #4→#5 happy: push incident bằng refspec từ detached HEAD, #5 checkout đúng SHA, commit + push main', () => {
+  const R = miniRemote({ 'README.md': 'base' });
+  // ---- Agent #4: checkout detached tại origin/main, ghi incident, push refspec
+  const a4 = R.checkout(R.remote.main);
+  assert.equal(a4.branch, null, 'checkout@v4 phải ở detached HEAD');
+  const incidentSha = R.commit(a4, { 'reports/incidents/inc-42.json': '{"id":"inc-42"}' }, 'agent-incident: inc-42 (#4)');
+  const p4 = R.push(a4, 'HEAD:refs/heads/main');
+  assert.equal(p4.ok, true, '#4 push refspec phải fast-forward được');
+  assert.equal(R.remote.main, incidentSha, 'origin/main phải trỏ commit incident #4');
+  const headSha = a4.head; // handoff output
+  // ---- Agent #5: checkout ĐÚNG head_sha (detached), đọc incident, commit kết quả
+  const a5 = R.checkout(headSha);
+  assert.ok('reports/incidents/inc-42.json' in R.filesOf(a5.head), '#5 phải đọc được incident #4 từ handoff SHA');
+  R.commit(a5, { 'reports/incidents/inc-42.result.json': '{"verified":true}' }, 'agent-incident: inc-42 (#5 final)');
+  const p5 = R.push(a5, 'HEAD:refs/heads/main');
+  assert.equal(p5.ok, true, '#5 push refspec phải được');
+  assert.ok(R.filesOf(R.remote.main)['reports/incidents/inc-42.result.json'], 'kết quả #5 phải nằm trên main');
+  assert.ok(R.filesOf(R.remote.main)['reports/incidents/inc-42.json'], 'incident #4 vẫn bảo toàn trên main');
+  assert.ok(R.isAncestor(incidentSha, R.remote.main), 'chuỗi handoff #4→#5 phải tuyến tính trên main');
+});
+
+test('mini-git reconcile: remote có commit mới → push non-FF fail → fetch+rebase → verify origin/main & head_sha là ancestor → push OK, thay đổi mới bảo toàn', () => {
+  const R = miniRemote({ 'README.md': 'base' });
+  const a4 = R.checkout(R.remote.main);
+  const incidentSha = R.commit(a4, { 'reports/incidents/inc-7.json': '{}' }, 'agent-incident: inc-7 (#4)');
+  assert.equal(R.push(a4, 'HEAD:refs/heads/main').ok, true);
+  const headSha = a4.head;
+  // ---- #5 checkout handoff SHA, commit kết quả
+  const a5 = R.checkout(headSha);
+  R.commit(a5, { 'reports/incidents/inc-7.result.json': '{"ok":1}' }, '#5 final');
+  // ---- commit X ĐỘC LẬP được push lên main giữa chừng (parent = incident #4)
+  const x = R.remote.main; // hiện = incidentSha
+  const xSha = (() => { const wt = R.checkout(x); R.commit(wt, { 'docs/NEW.md': 'x' }, 'x: commit mới từ người khác'); return wt.head; })();
+  R.remote.main = xSha; // X đã lên origin/main
+  // ---- push #5: non-FF fail
+  const p1 = R.push(a5, 'HEAD:refs/heads/main');
+  assert.equal(p1.ok, false, 'push phải fail non-FF khi remote đã tiến');
+  assert.match(p1.reason, /non-fast-forward/);
+  // ---- fetch + rebase AN TOÀN + verify trước khi retry
+  R.fetch(a5);
+  assert.equal(a5.remoteMain, xSha, 'fetch cập nhật remote-tracking ref');
+  R.rebase(a5, a5.remoteMain);
+  assert.ok(R.isAncestor(a5.remoteMain, a5.head), 'origin/main PHẢI là tổ tiên của HEAD sau rebase (không push mù)');
+  assert.ok(R.isAncestor(headSha, a5.head), 'commit handoff #4 PHẢI vẫn là tổ tiên của HEAD sau rebase');
+  const p2 = R.push(a5, 'HEAD:refs/heads/main');
+  assert.equal(p2.ok, true, 'sau rebase push phải được');
+  assert.equal(R.filesOf(R.remote.main)['docs/NEW.md'], 'x', 'thay đổi X PHẢI được bảo toàn (không ghi đè)');
+  assert.ok(R.filesOf(R.remote.main)['reports/incidents/inc-7.result.json'], 'kết quả #5 vẫn nằm trên main');
+  assert.ok(R.isAncestor(xSha, R.remote.main) && R.isAncestor(incidentSha, R.remote.main), 'lịch sử tuyến tính: #4 → X → #5');
+});
+
+test('mini-git fail-closed: handoff SHA KHÔNG nằm trên main → từ chối chạy #5, KHÔNG push, KHÔNG kết luận resume', () => {
+  const R = miniRemote({ 'README.md': 'base' });
+  // #4 commit incident nhưng push THẤT BẠI (chưa từng lên main)
+  const a4 = R.checkout(R.remote.main);
+  const lostSha = R.commit(a4, { 'reports/incidents/inc-9.json': '{}' }, '#4 chưa push được');
+  assert.notEqual(R.remote.main, lostSha, 'giả lập: push #4 fail → SHA handoff KHÔNG trên main');
+  // remote có lịch sử riêng (force từ ngoài? — anyway handoff không thuộc main)
+  const mainBefore = R.remote.main;
+  // ---- step "Handoff verify" của #5: head_sha phải là ancestor của origin/main
+  const handoffOnMain = R.isAncestor(lostSha, R.remote.main);
+  let concluded = false, pushed = 0;
+  if (!handoffOnMain) {
+    // exit 1 TRƯỚC khi chạy #5 → không commit, không push, không conclude
+  } else {
+    pushed++; concluded = true; // (nhánh không xảy ra)
+  }
+  assert.equal(handoffOnMain, false, 'head_sha không trên main phải bị phát hiện');
+  assert.equal(pushed, 0, 'KHÔNG được push gì');
+  assert.equal(concluded, false, 'KHÔNG được báo VERIFIED_RESUMED / persist thành công');
+  assert.equal(R.remote.main, mainBefore, 'remote phải nguyên vẹn');
+});
+
+test('mini-git #4 retry-exhaust: push fail 3 lần (remote liên tục tiến) → exit 1, incident KHÔNG lên main', () => {
+  const R = miniRemote({ 'README.md': 'base' });
+  const a4 = R.checkout(R.remote.main);
+  R.commit(a4, { 'reports/incidents/inc-3.json': '{}' }, '#4 incident');
+  // remote ĐUA: mỗi lần #4 fetch+rebase xong thì main lại tiến (truth di chuyển liên tục)
+  const raceRemote = () => { const racer = R.checkout(R.remote.main); R.remote.main = R.commit(racer, { ['docs/race-' + R.remote.pushes + '.md']: 'r' }, 'racing commit'); };
+  raceRemote(); // remote đã tiến TRƯỚC lần push đầu
+  let attempts = 0, lastErr = null;
+  while (attempts < 5) {
+    attempts++;
+    if (R.push(a4, 'HEAD:refs/heads/main').ok) break;
+    if (attempts >= 3) { lastErr = 'push FAIL sau ' + attempts + ' lần — STOP, không force push'; break; }
+    R.fetch(a4);
+    R.rebase(a4, a4.remoteMain); // reconcile an toàn
+    if (!R.isAncestor(a4.remoteMain, a4.head)) { lastErr = 'reconcile FAIL'; break; }
+    raceRemote(); // remote lại tiến trước lần push kế tiếp
+  }
+  assert.ok(lastErr && /push FAIL sau 3 lần/.test(lastErr), 'phải STOP sau 3 lần thử: ' + lastErr);
+  assert.ok(R.filesOf(R.remote.main)['reports/incidents/inc-3.json'] === undefined, 'fail-closed: incident KHÔNG được lên main qua force/đường mù (audit nằm trên runner)');
+});
+
+test('workflow pin: MỌI git push trong 3 workflow đều ghi refspec origin HEAD:refs/heads/main (detached-HEAD safe), KHÔNG force', () => {
+  for (const wf of ['factory-production.yml', 'factory-repair.yml', 'factory-soak.yml']) {
+    const yml = fs.readFileSync(path.join(ROOT, '.github', 'workflows', wf), 'utf8');
+    yml.split('\n').forEach((ln, i) => {
+      const m = ln.match(/^\s*(?:until\s+|!\s*)?git push\b(.*)$/);
+      if (!m) return; // không phải dòng lệnh push thật (comment/echo không match)
+      const rest = m[1].trim();
+      assert.ok(rest.includes('HEAD:refs/heads/main'),
+        wf + ':' + (i + 1) + ' push phải ghi rõ refspec đích (detached HEAD): ' + ln.trim());
+      assert.ok(!/(^|\s)(--force|-f)(\s|$)/.test(rest), wf + ':' + (i + 1) + ' KHÔNG force push');
+    });
+  }
+});
+
+test('workflow pin #5: commit step agent-supervisor push refspec + verify ancestor (origin/main & head_sha) sau rebase; Kết luận bị skip khi push fail', () => {
+  const yml = fs.readFileSync(path.join(ROOT, '.github', 'workflows', 'factory-repair.yml'), 'utf8');
+  const s5 = yml.indexOf('Commit incident final + cycle outputs');
+  assert.ok(s5 > 0, 'phải có commit step của #5');
+  const seg5 = yml.slice(s5, yml.indexOf('Kết luận incident'));
+  // (a) push ghi refspec rõ ràng
+  assert.match(seg5, /git push origin HEAD:refs\/heads\/main/, '#5 push phải refspec (detached HEAD)');
+  // (b) sau rebase: verify origin/main là tổ tiên của HEAD (không push mù)
+  assert.match(seg5, /git merge-base --is-ancestor origin\/main HEAD/, 'phải verify origin/main là ancestor của HEAD sau rebase');
+  // (c) sau rebase: verify commit handoff #4 vẫn là tổ tiên của HEAD (fail-closed)
+  assert.match(seg5, /git merge-base --is-ancestor "\$\{\{ needs\.agent-repair\.outputs\.head_sha \}\}" HEAD/, 'phải verify head_sha #4 là ancestor của HEAD sau rebase');
+  // (d) stop sau 3 lần thử, không force
+  assert.match(seg5, /"\$A5_PUSH" -ge 3/, 'giới hạn 3 lần thử');
+  // (e) step "Kết luận incident" KHÔNG if: always()/failure() → bị skip mặc định khi push fail
+  const k = yml.indexOf('Kết luận incident');
+  const kseg = yml.slice(k, k + 500);
+  assert.ok(!/if:\s*(always|failure)\(\)/.test(kseg), 'Kết luận phải bị skip khi push fail (không có VERIFIED_RESUMED giả)');
+});

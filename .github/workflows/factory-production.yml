@@ -347,7 +347,7 @@ jobs:
           echo "OPERATOR_VERIFIED_TREE=$OPERATOR_VERIFIED_TREE"
           git commit -m "factory-production: ${COMMIT_LABEL:-$ACTION} (deterministic outputs of canonical tooling only)"
           PUSH_ATTEMPT=0
-          until git push; do
+          until git push origin HEAD:refs/heads/main; do
             PUSH_ATTEMPT=$((PUSH_ATTEMPT+1))
             if [ "$PUSH_ATTEMPT" -ge 3 ]; then
               echo "::error::push FAIL sau $PUSH_ATTEMPT lần thử (truth liên tục di chuyển) — STOP, không force push; run sau sẽ commit lại từ truth mới"
@@ -385,7 +385,7 @@ jobs:
           fi
           git commit -m "factory-hygiene: remove stale drafts byte-identical with published archive ($STALE_IDS) — D-only diff, không re-trigger production"
           HYGIENE_PUSH_ATTEMPT=0
-          until git push; do
+          until git push origin HEAD:refs/heads/main; do
             HYGIENE_PUSH_ATTEMPT=$((HYGIENE_PUSH_ATTEMPT+1))
             if [ "$HYGIENE_PUSH_ATTEMPT" -ge 3 ]; then
               echo "::error::hygiene push FAIL sau $HYGIENE_PUSH_ATTEMPT lần thử — STOP, không force push"
@@ -472,7 +472,7 @@ jobs:
           fi
           git commit -m "pipeline-cycle: refill + write + qa + publish (deterministic outputs of canonical tooling only)"
           PIPELINE_PUSH_ATTEMPT=0
-          until git push; do
+          until git push origin HEAD:refs/heads/main; do
             PIPELINE_PUSH_ATTEMPT=$((PIPELINE_PUSH_ATTEMPT+1))
             if [ "$PIPELINE_PUSH_ATTEMPT" -ge 3 ]; then
               echo "::error::pipeline push FAIL sau $PIPELINE_PUSH_ATTEMPT lần thử — STOP, không force push; cycle sau resume từ checkpoint"

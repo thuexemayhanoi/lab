@@ -88,15 +88,25 @@ jobs:
             echo "agent #4: không có gì để commit"
           else
             git commit -m "agent-incident: ${{ steps.a4.outputs.incident_id }} — Agent #4 audit trail (repair ${{ steps.a4.outputs.result }})"
+            # checkout@v4 để runner ở DETACHED HEAD → push PHẢI ghi rõ refspec
+            # đích (origin HEAD:refs/heads/main); `git push` không refspec sẽ fail
+            # trên detached HEAD ("You are not currently on a branch").
             A4_PUSH=0
-            until git push; do
+            until git push origin HEAD:refs/heads/main; do
               A4_PUSH=$((A4_PUSH+1))
               if [ "$A4_PUSH" -ge 3 ]; then
                 echo "::error::agent #4 push FAIL sau $A4_PUSH lần — STOP, không force push (audit nằm sẵn trên runner)"
                 exit 1
               fi
+              # remote đã tiến: fetch + rebase AN TOÀN rồi VERIFY lại trước khi retry
               git fetch origin main
               git rebase origin/main
+              # verify KHÔNG push mù: origin/main phải là tổ tiên của HEAD
+              # (fast-forward — bảo toàn mọi thay đổi mới trên main, không ghi đè)
+              if ! git merge-base --is-ancestor origin/main HEAD; then
+                echo "::error::agent #4 reconcile FAIL: origin/main KHÔNG phải tổ tiên của HEAD — từ chối push (không force)"
+                exit 1
+              fi
             done
           fi
           # handoff #4→#5: SHA cuối cùng sau khi commit incident (hoặc SHA checkout
@@ -155,15 +165,31 @@ jobs:
             exit 0
           fi
           git commit -m "agent-incident: ${{ needs.agent-repair.outputs.incident_id }} — Agent #5 final + resume"
+          # checkout@v4 (ref head_sha) để runner ở DETACHED HEAD → push PHẢI ghi rõ
+          # refspec đích (origin HEAD:refs/heads/main); `git push` không refspec fail.
           A5_PUSH=0
-          until git push; do
+          until git push origin HEAD:refs/heads/main; do
             A5_PUSH=$((A5_PUSH+1))
             if [ "$A5_PUSH" -ge 3 ]; then
-              echo "::error::agent #5 push FAIL sau $A5_PUSH lần — STOP, không force push"
+              echo "::error::agent #5 push FAIL sau $A5_PUSH lần — STOP, không force push (kết quả nằm sẵn trên runner)"
               exit 1
             fi
+            # remote đã tiến: fetch + rebase AN TOÀN rồi VERIFY lại trước khi retry
             git fetch origin main
             git rebase origin/main
+            # verify KHÔNG push mù: origin/main PHẢI là tổ tiên của HEAD sau rebase
+            if ! git merge-base --is-ancestor origin/main HEAD; then
+              echo "::error::agent #5 reconcile FAIL: origin/main KHÔNG phải tổ tiên của HEAD — từ chối push (không force)"
+              exit 1
+            fi
+            # verify handoff: commit #4 (head_sha) vẫn phải nằm trên lịch sử của
+            # HEAD sau rebase — kết quả #5 KHÔNG được rời khỏi handoff #4 đã verify
+            if [ -n "${{ needs.agent-repair.outputs.head_sha }}" ]; then
+              if ! git merge-base --is-ancestor "${{ needs.agent-repair.outputs.head_sha }}" HEAD; then
+                echo "::error::agent #5 reconcile FAIL: commit #4 (${{ needs.agent-repair.outputs.head_sha }}) KHÔNG còn là tổ tiên của HEAD — từ chối push (fail-closed)"
+                exit 1
+              fi
+            fi
           done
 
       - name: 'Kết luận incident (VERIFIED_RESUMED => xanh; FAILED_PAUSED => đỏ + STOP, chờ human)'
