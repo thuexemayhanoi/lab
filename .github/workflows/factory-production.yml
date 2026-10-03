@@ -425,7 +425,9 @@ jobs:
     # AUTONOMOUS PIPELINE (docs/PIPELINE.md): coordinator duy nhất
     # (scripts/factory/pipeline.js) — refill queue ~300 PLANNED, cấp 12–18
     # bài/cycle, chia 3 writer song song (workspace riêng, gitignored), QA,
-    # publish chunk atomic, checkpoint/resume exactly-once. Chỉ chạy trên
+    # publish MỘT batch atomic cho cả cycle (--cycle-batch, audit #3), xác
+    # nhận Pages deployment trước khi hoàn tất cycle (audit #4), checkpoint/
+    # resume exactly-once. Chỉ chạy trên
     # schedule + dispatch pipeline|selftest; serialized với job publish qua
     # CÙNG concurrency group lab-factory-production (một coordinator tại
     # một thời điểm) + pipeline/lock.json TTL. WRITER_RUNTIME=off (mặc
@@ -434,6 +436,9 @@ jobs:
     if: github.repository == 'thuexemayhanoi/lab' && ((github.event_name == 'schedule' && github.event.schedule == '*/30 * * * *') || (github.event_name == 'workflow_dispatch' && (inputs.action == 'pipeline' || inputs.action == 'selftest')))
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    permissions:
+      contents: write   # commit + push publication commit của cycle
+      pages: read        # đọc Pages build truth (audit #4)
     steps:
       - uses: actions/checkout@v4
         with:
@@ -452,7 +457,30 @@ jobs:
         if: github.event_name == 'workflow_dispatch' && inputs.action == 'selftest'
         run: node scripts/factory/pipeline.js selftest
 
-      - name: 'Pipeline cycle (coordinator: refill → claim 12–18 → 3 writer song song → QA → publish atomic)'
+      - name: 'Pages deployment truth (audit #4: đọc SHA + status của Pages build cuối — cycle chỉ hoàn tất khi deploy đúng SHA)'
+        if: github.event_name == 'schedule' || inputs.action == 'pipeline'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -eu
+          # Pages build cuối của repo (branch Pages deploy từ main). FAIL/thiếu
+          # truth => env RỖNG => pipeline giữ deployment.pending (fail-closed:
+          # KHÔNG finalize mù, KHÔNG build/push lại bài).
+          PAGES_BUILD_COMMIT=""
+          PAGES_BUILD_STATUS=""
+          PAGES_JSON="$(curl -sS --max-time 20 \
+            -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/builds/latest" || true)"
+          if [ -n "${PAGES_JSON}" ]; then
+            PAGES_BUILD_COMMIT="$(printf '%s' "${PAGES_JSON}" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{const j=JSON.parse(s);process.stdout.write(String(j.commit||""))}catch(e){process.stdout.write("")}})')"
+            PAGES_BUILD_STATUS="$(printf '%s' "${PAGES_JSON}" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{const j=JSON.parse(s);process.stdout.write(String(j.status||""))}catch(e){process.stdout.write("")}})')"
+          fi
+          echo "PAGES_BUILD_COMMIT=${PAGES_BUILD_COMMIT}" >> "$GITHUB_ENV"
+          echo "PAGES_BUILD_STATUS=${PAGES_BUILD_STATUS}" >> "$GITHUB_ENV"
+          echo "Pages deployment truth: commit=${PAGES_BUILD_COMMIT:-<none>} status=${PAGES_BUILD_STATUS:-<none>}"
+
+      - name: 'Pipeline cycle (audit #3+#4: refill → claim 12–18 → 3 writer song song → QA → publish MỘT batch atomic → pending deployment → xác nhận Pages truth trước finalize)'
         if: github.event_name == 'schedule' || inputs.action == 'pipeline'
         env:
           WRITER_RUNTIME: ${{ vars.WRITER_RUNTIME || 'off' }}

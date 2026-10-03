@@ -110,6 +110,11 @@ XE MÁY ĐIỆN (electric) · PHỤ TÙNG (parts).
 - Max publication per operation: `CHUNK` = 10 articles — the engine refuses
   more than 10 ids and never sweeps the whole PASS backlog in one publish.
   The standard production pair is 2 (`prepare-next --count 2`).
+  AUDIT #3 exception: `publish --cycle-batch` (operator CLI, pipeline
+  coordinator only) publishes the EXACT eligible batch of ONE pipeline cycle
+  in a SINGLE transaction — cap `PUBLISH_BATCH_MAX` (20), validated against
+  the active batch in `data/state/pipeline-state.json` BEFORE the lock
+  (foreign id / filtered subset => REFUSE). No other path may exceed CHUNK.
 - Phase lifecycle: `PILOT` → `PRODUCTION` via `node scripts/factory/factory.js promote-production`
   (canonical transition; bootstrap cap only binds in PILOT). See `docs/CONTENT-FACTORY.md`.
 - Autonomous pipeline (the ONLY sanctioned AI-writer path in Actions):

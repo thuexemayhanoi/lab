@@ -164,6 +164,11 @@ factory.js reports            # regenerate reports/factory/*.json
 - In `PRODUCTION`, the bootstrap cap no longer binds; the normal chunk size remains
   `CHUNK` (10) — enforced by the canonical engine: `publish` refuses more than
   `CHUNK` ids and, without ids, takes at most the current chunk of PASS rows.
+  AUDIT #3 exception: `publish --cycle-batch` (pipeline coordinator path via
+  operator.js) promotes the WHOLE eligible PASS batch of one cycle in a single
+  atomic transaction — its own cap `PUBLISH_BATCH_MAX` (20), engine-validated
+  against the active batch in `data/state/pipeline-state.json` before the lock.
+  This is not a global publish-cap raise: every other publish path stays at CHUNK.
   The external AI writer remains the only prose writer; GitHub Actions
   stays deterministic (no API keys, no autonomous writing).
 

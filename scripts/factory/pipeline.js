@@ -19,8 +19,10 @@
  * (resume / adopt mồ côi / claim mới ≤18 bài) → chia đều 3 writer →
  * research + write song song (theo writer) → ingest + wrap → QA (engine,
  * ngưỡng 75/70 KHÔNG đổi) → vòng revise theo feedback QA (≤ max_repair) →
- * publish CHỈ hàng PASS theo chunk ≤ CHUNK (atomic, build+verify trong op)
- * → finalize state. Commit/push 1 lần/cycle do workflow đảm nhiệm.
+ * publish TOÀN BỘ batch PASS trong MỘT transaction/cycle (--cycle-batch,
+ * cap PUBLISH_BATCH_MAX của engine — audit #3: KHÔNG còn chia chunk) →
+ * PUBLISHED (pending deployment) → run kế xác nhận Pages deploy đúng SHA
+ * mới finalize (audit #4). Commit/push 1 lần/cycle do workflow đảm nhiệm.
  *
  * Đúng-một-lần (exactly-once): publish gate của engine chỉ nhận PASS rows
  * với QA evidence hash-bound; PUBLISHED rows không bao giờ được claim/publish
@@ -47,7 +49,7 @@ const agentsCore = require(path.join(__dirname, 'agents-core.js')); // chỉ đ�
 const PCFG = (() => {
   const c = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'pipeline.json'), 'utf8'));
   const need = ['queue_refill_target', 'queue_refill_min', 'cycle_batch_min', 'cycle_batch_max',
-    'writers', 'writer_retries', 'lock_ttl_minutes', 'publish_chunk'];
+    'writers', 'writer_retries', 'lock_ttl_minutes'];
   const missing = need.filter(k => !(k in c));
   if (missing.length) { console.error('PIPELINE REFUSED: config/pipeline.json thiếu trường: ' + missing.join(',')); process.exit(1); }
   return c;
@@ -242,6 +244,80 @@ function blockIds(ids, reason) {
   factory.syncCheckpoint(rows);
 }
 
+// ---------------- AUDIT #4: deployment truth (push OK ≠ deploy OK) ----------
+// Pure decision: cycle chỉ hoàn tất khi Pages build cuối THÀNH CÔNG và cây
+// nó build (buildCommit) CHỨA publication commit (pubSha). Thiếu truth /
+// sai SHA / build lỗi => KHÔNG confirmed (giữ trạng thái recoverable).
+function deploymentDecision(pubSha, buildCommit, buildStatus, containsSha) {
+  if (!pubSha) return { confirmed: false, reason: 'NO_PUBLICATION_SHA (chưa xác định được publication commit của cycle)' };
+  if (!buildCommit || !buildStatus) return { confirmed: false, reason: 'NO_PAGES_TRUTH (chưa có PAGES_BUILD_COMMIT/PAGES_BUILD_STATUS — Pages chưa build hoặc API fail)' };
+  if (buildStatus !== 'success') return { confirmed: false, reason: 'PAGES_BUILD_STATUS=' + buildStatus };
+  let contains = containsSha;
+  if (contains == null) contains = pubSha === buildCommit; // không có git (sandbox) => chỉ khớp trực tiếp
+  if (!contains) return { confirmed: false, reason: 'WRONG_SHA (pages build ' + buildCommit + ' KHÔNG chứa publication commit ' + pubSha + ')' };
+  return { confirmed: true, deployed_sha: buildCommit };
+}
+// Publication commit = commit cuối cùng chạm archive của bài đầu batch
+// (workflow đã commit cả cycle; SHA này phải là tổ tiên của Pages build).
+function gitPublicationSha(ids) {
+  const first = (ids && ids[0]) || '';
+  if (!first) return '';
+  const r = spawnSync('git', ['log', '-1', '--format=%H', '--', 'data/published/' + first + '.html'], { cwd: ROOT, encoding: 'utf8' });
+  return r.status === 0 ? String(r.stdout || '').trim() : '';
+}
+function gitContains(pubSha, buildCommit) {
+  if (!pubSha || !buildCommit) return null;
+  const r = spawnSync('git', ['merge-base', '--is-ancestor', pubSha, buildCommit], { cwd: ROOT, encoding: 'utf8' });
+  if (r.status === 0) return true;
+  if (r.status === 1) return false;
+  return null; // git error (sandbox không có binary / cây sạch) => thiếu truth, fail-closed
+}
+// Env truth: PAGES_BUILD_COMMIT/PAGES_BUILD_STATUS do step 'Pages deployment
+// truth' của workflow export (từ GitHub API pages/builds/latest). Test-only:
+// PIPELINE_PUB_SHA (override publication SHA), PIPELINE_MOCK_GIT_ANCESTOR=1|0
+// (mock kết quả merge-base khi sandbox không có git binary).
+function resolveDeployment(active) {
+  const dep = (active && active.deployment) || {};
+  const ids = (dep.ids && dep.ids.length ? dep.ids : (active && active.batch) || []);
+  const pubSha = process.env.PIPELINE_PUB_SHA || gitPublicationSha(ids);
+  const buildCommit = process.env.PAGES_BUILD_COMMIT || '';
+  const buildStatus = process.env.PAGES_BUILD_STATUS || '';
+  let containsSha = null;
+  const mock = process.env.PIPELINE_MOCK_GIT_ANCESTOR;
+  if (mock === '1' || mock === '0') containsSha = mock === '1';
+  else if (pubSha && buildCommit) containsSha = gitContains(pubSha, buildCommit);
+  return Object.assign(deploymentDecision(pubSha, buildCommit, buildStatus, containsSha), { publication_sha: pubSha });
+}
+// AUDIT #4: finalize là chỗ DUY NHẤT đặt last_cycle_summary + publication
+// truth + refill + clear active — chỉ chạy SAU deployment confirm (hoặc khi
+// cycle KHÔNG publish gì: blocked/claim-fail path vẫn phải kết thúc được).
+function finalizeCycle(state, active, runtimeMode, failedPublish) {
+  const finRows = loadRows();
+  const publishedNow = active.batch.filter(id => { const r = finRows.find(x => x.article_id === id); return r && r.status === 'PUBLISHED'; });
+  const blockedNow = active.batch.filter(id => { const r = finRows.find(x => x.article_id === id); return r && r.status === 'BLOCKED'; });
+  state.cycle = active.cycle;
+  state.last_cycle_summary = { cycle: active.cycle, adopted: !!active.adopted,
+    started_at: active.started_at, finished_at: new Date().toISOString(),
+    elapsed_ms: active.started_at ? Date.now() - new Date(active.started_at).getTime() : 0,
+    batch: active.batch, published: publishedNow, blocked: blockedNow,
+    failed_publish: failedPublish, writer_runtime: runtimeMode,
+    publication: active.deployment && active.deployment.confirmed
+      ? { publication_sha: active.deployment.publication_sha || null,
+          deployed_sha: active.deployment.deployed_sha || null,
+          confirmed_at: active.deployment.confirmed_at || null }
+      : null };
+  state.active = null;
+  state.stopped_reason = null;
+  state.last_stop = null;
+  refill(state, finRows);
+  saveState(state);
+  console.log('PIPELINE CYCLE COMPLETE: cycle=' + state.last_cycle_summary.cycle +
+    ' published=' + (publishedNow.length ? publishedNow.join(',') : 'none') +
+    ' blocked=' + (blockedNow.length ? blockedNow.join(',') : 'none') +
+    (failedPublish.length ? ' failed_publish=' + failedPublish.join(',') : '') +
+    ' — queue còn ' + state.pending.length + ' topic.');
+}
+
 // ------------------------------- cycle ------------------------------------
 async function cycle() {
   const t0 = Date.now();
@@ -314,6 +390,29 @@ async function cycle() {
   let runtime;
   try { runtime = adapter.resolveRuntime(); }
   catch (e) { state.stopped_reason = e.message; saveState(state); console.error('PIPELINE STOPPED: ' + e.message); return finish(1); }
+  // ---- AUDIT #4: deployment-confirmation gate (TRƯỚC idle-stop/claim) ----
+  // Cycle trước đã publish nhưng còn pending deployment: run này KHÔNG claim
+  // bài mới. Chỉ finalize khi Pages build cuối thành công VÀ chứa publication
+  // SHA; thiếu truth/sai SHA => giữ nguyên trạng thái recoverable và thoát
+  // sạch (KHÔNG mutate, KHÔNG build lại/push lại bài — resume kiểm tra lại
+  // deployment cũ ở run sau; không đợi deployment trong run này).
+  if (state.active && state.active.deployment && state.active.deployment.pending) {
+    const dep = resolveDeployment(state.active);
+    if (!dep.confirmed) {
+      console.log('PIPELINE DEPLOYMENT-PENDING: cycle ' + state.active.cycle + ' đã publish ' +
+        (state.active.deployment.ids || []).length + ' bài, đang chờ Pages deployment được xác nhận' +
+        (dep.reason ? ' — ' + dep.reason : '') +
+        ' — KHÔNG finalize, KHÔNG claim cycle mới (fail-closed; state giữ nguyên để resume).');
+      return finish(0);
+    }
+    state.active.deployment.confirmed = true;
+    state.active.deployment.confirmed_at = new Date().toISOString();
+    state.active.deployment.publication_sha = dep.publication_sha || null;
+    state.active.deployment.deployed_sha = dep.deployed_sha || null;
+    finalizeCycle(state, state.active, runtime.mode, []);
+    if (process.env.PIPELINE_SINGLE_CYCLE === '1') return finish(0); // test-only: dừng sau confirm
+    console.log('PIPELINE DEPLOYMENT CONFIRMED (pages build ' + dep.deployed_sha + ' chứa publication ' + dep.publication_sha + ') — cycle ' + state.cycle + ' hoàn tất; tiếp tục batch mới trên run này.');
+  }
   if (runtime.mode === 'off') {
     state.stopped_reason = null;
     state.last_stop = { kind: 'idle', reason: runtime.reason, at: new Date().toISOString(),
@@ -332,7 +431,7 @@ async function cycle() {
     if (unfinishedIds.length) {
       // adopt mồ côi: matrix có row đang mở nhưng state.active mất (run trước
       // crash trước khi commit state) — nhận lại theo matrix truth, KHÔNG claim lại.
-      active = { cycle: state.cycle + 1, started_at: new Date().toISOString(), adopted: true,
+      active = { cycle: state.cycle + 1, started_at: new Date().toISOString(), adopted: true, runtime_mode: runtime.mode,
         batch: unfinishedIds.slice(0, 20), grants: null, qa_rounds: {}, published: [], blocked: [] };
       active.grants = grantsOf(active.batch, PCFG.writers);
       console.log('pipeline: ADOPT orphan batch từ matrix truth: ' + active.batch.join(', ') + ' (không claim lại — engine đã giữ trạng thái mở)');
@@ -345,7 +444,7 @@ async function cycle() {
       }
       const rc = opSafe(['prepare-next', '--ids', ids.join(',')]);
       if (rc !== 0) { state.stopped_reason = 'prepare-next claim FAIL (rc=' + rc + ') — KHÔNG có gì được claim (fail-closed)'; saveState(state); return finish(1); }
-      active = { cycle: state.cycle + 1, started_at: new Date().toISOString(), adopted: false,
+      active = { cycle: state.cycle + 1, started_at: new Date().toISOString(), adopted: false, runtime_mode: runtime.mode,
         batch: ids, grants: grantsOf(ids, PCFG.writers), qa_rounds: {}, published: [], blocked: [] };
       console.log('pipeline: CLAIM batch ' + active.cycle + ' — ' + ids.length + ' bài chia đều ' + PCFG.writers + ' writer: ' + ids.join(', '));
     }
@@ -438,36 +537,47 @@ async function cycle() {
     if (stuck.length) { blockIds(stuck, 'hết ' + maxRounds + ' lượt sửa, QA vẫn chưa PASS'); active.blocked.push(...stuck); saveState(state); }
   }
 
-  // ---- phase: publish CHỈ hàng PASS, chunk ≤ CHUNK, atomic từng chunk ----
+  // ---- AUDIT #3: phase publish — MỘT transaction cho cả cycle ----
+  // Toàn bộ tập PASS eligible của batch được publish trong MỘT op atomic qua
+  // operator.js (publish --ids <tất cả> --scope fast --cycle-batch): engine tự
+  // validate ids ĐÚNG BẰNG eligible-set của active batch (pipeline-state)
+  // TRƯỚC lock và cap PUBLISH_BATCH_MAX. Op FAIL => fail-closed finish(1):
+  // KHÔNG publish từng phần, KHÔNG bỏ qua âm thầm — rows giữ PASS, active
+  // batch giữ nguyên để cycle sau/qa-repair resume (rollback deterministic
+  // đã chạy trong op).
   rows = loadRows();
   const passIds = active.batch.filter(id => { const r = rows.find(x => x.article_id === id);
       return r && r.status === 'PASS' && fs.existsSync(draftPath(id)); });
   const failedPublish = [];
-  for (const part of chunk(passIds, Math.min(PCFG.publish_chunk, Number(factory.cfg.CHUNK) || 10))) {
-    const rc = opSafe(['publish', '--ids', part.join(','), '--scope', 'fast']);
-    if (rc === 0) { active.published.push(...part); saveState(state); crashPoint('after-publish-chunk'); }
-    else { console.error('pipeline: publish chunk FAIL (đã rollback deterministic) — giữ PASS để cycle sau/repair: ' + part.join(', ')); failedPublish.push(...part); }
+  if (passIds.length) {
+    const rc = opSafe(['publish', '--ids', passIds.join(','), '--scope', 'fast', '--cycle-batch']);
+    if (rc !== 0) {
+      state.stopped_reason = 'publish batch FAIL (op đã rollback deterministic) — KHÔNG publish từng phần; giữ PASS để cycle sau/qa-repair: ' + passIds.join(', ');
+      saveState(state);
+      console.error('PIPELINE STOPPED: ' + state.stopped_reason);
+      return finish(1);
+    }
+    active.published.push(...passIds);
+    // AUDIT #4: push/commit thành công ≠ deploy thành công — cycle KHÔNG hoàn
+    // tất ở đây. Lưu trạng thái pending deployment (ids + thời điểm + runtime
+    // mode); run kế đọc Pages build truth (step 'Pages deployment truth' export
+    // PAGES_BUILD_COMMIT/PAGES_BUILD_STATUS) và chỉ finalize khi deploy THÀNH
+    // CÔNG VÀ chứa publication SHA. KHÔNG đợi deployment trong run này (Pages
+    // build cần run kết thúc trước — tránh tự chặn dependency deploy), KHÔNG
+    // commit riêng chỉ-để-đánh-dấu (state pending được commit cùng cycle).
+    active.deployment = { pending: true, ids: passIds.slice(),
+      published_at: new Date().toISOString(), runtime_mode: runtime.mode };
+    saveState(state);
+    crashPoint('after-publish-batch');
+    console.log('PIPELINE PUBLISHED (pending deployment): cycle=' + active.cycle + ' — ' + passIds.length + ' bài (' + passIds.join(', ') +
+      ') đã publish trong MỘT transaction; chờ xác nhận Pages deploy đúng SHA (audit #4) trước khi hoàn tất cycle. KHÔNG chạy cycle mới trên run này.');
+    return finish(0);
   }
 
-  // ---- finalize ----
-  const finRows = loadRows();
-  const publishedNow = active.batch.filter(id => { const r = finRows.find(x => x.article_id === id); return r && r.status === 'PUBLISHED'; });
-  const blockedNow = active.batch.filter(id => { const r = finRows.find(x => x.article_id === id); return r && r.status === 'BLOCKED'; });
-  state.cycle = active.cycle;
-  state.last_cycle_summary = { cycle: active.cycle, adopted: !!active.adopted,
-    started_at: active.started_at, finished_at: new Date().toISOString(), elapsed_ms: Date.now() - t0,
-    batch: active.batch, published: publishedNow, blocked: blockedNow,
-    failed_publish: failedPublish, writer_runtime: runtime.mode };
-  state.active = null;
-  state.stopped_reason = null;
-  state.last_stop = null;
-  refill(state, finRows);
-  saveState(state);
-  console.log('PIPELINE CYCLE COMPLETE: cycle=' + state.last_cycle_summary.cycle +
-    ' published=' + (publishedNow.length ? publishedNow.join(',') : 'none') +
-    ' blocked=' + (blockedNow.length ? blockedNow.join(',') : 'none') +
-    (failedPublish.length ? ' failed_publish=' + failedPublish.join(',') : '') +
-    ' — queue còn ' + state.pending.length + ' topic.');
+  // ---- finalize (AUDIT #4: chỉ chạy khi cycle KHÔNG publish gì — blocked/
+  //      claim-fail path; cycle đã publish thì finalize sau deployment confirm
+  //      ở run kế) ----
+  finalizeCycle(state, active, runtime.mode, failedPublish);
   return finish(0);
 }
 
@@ -531,4 +641,4 @@ if (require.main === module) main(process.argv.slice(2)).catch(e => {
   try { releaseLock(); } catch (_) {}
   process.exit(1);
 });
-module.exports = { loadState, loadStateStrict, saveState, grantsOf, refill, staleDraftSweep, chunk };
+module.exports = { loadState, loadStateStrict, saveState, grantsOf, refill, staleDraftSweep, chunk, deploymentDecision, resolveDeployment };

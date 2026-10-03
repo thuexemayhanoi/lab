@@ -122,7 +122,9 @@ function validateCommand(cmd){
   if (cmd.op==='research' && (!cmd.ids||!cmd.ids.length)) fail('research requires ids');
   if (cmd.op==='prepare-next' && cmd.ids && cmd.ids.length && cmd.count!==undefined) fail('prepare-next: --ids and --count are mutually exclusive (exact push-driven claim vs legacy count claim)');
   if (cmd.op==='qa' && cmd.ids===undefined) cmd.ids=null; // null => all actionable rows
-  for (const k of Object.keys(cmd)) if (!['op','ids','count','scope','command_id','coordinator'].includes(k)) fail('unknown command field: '+k);
+  // AUDIT #3: cycle_batch chỉ hợp lệ là boolean true và chỉ dành cho op publish
+  if (cmd.cycle_batch!==undefined && (cmd.cycle_batch!==true || cmd.op!=='publish')) fail('cycle_batch must be boolean true and only valid for op publish (one transaction per cycle)');
+  for (const k of Object.keys(cmd)) if (!['op','ids','count','scope','command_id','coordinator','cycle_batch'].includes(k)) fail('unknown command field: '+k);
   return Object.assign({}, cmd, {scope:resolveScope(cmd)});
 }
 
@@ -324,7 +326,7 @@ function opPublish(cmd){
   // are deep/full gates — they NEVER block a normal FAST publish). Any
   // failure => deterministic publishRollback (matrix/checkpoint/public
   // restored to pre-publish truth) and NO success report.
-  const staged=factory.publishStage(cmd.ids); // exits non-zero on gate refusal
+  const staged=factory.publishStage(cmd.ids,{cycleBatch:!!cmd.cycle_batch}); // exits non-zero on gate refusal (cycle-batch: AUDIT #3 một transaction cho cả cycle)
   let failed=null;
   const step=(name,rc)=>{ if(rc!==0&&!failed) failed=name+' (rc='+rc+')'; };
   if(!staged.noop){
@@ -371,7 +373,8 @@ function execute(cmd){
 
 function usage(){
   console.error('Usage:');
-  console.error('  operator.js <op> [--ids A00001,A00002] [--count N] [--scope fast|deep|full] [--command-id ID] [--coordinator NAME]');
+  console.error('  operator.js <op> [--ids A00001,A00002] [--count N] [--scope fast|deep|full] [--cycle-batch] [--command-id ID] [--coordinator NAME]');
+  console.error('    publish --cycle-batch — AUDIT #3: publish TOÀN BỘ batch PASS của cycle trong MỘT transaction (cap PUBLISH_BATCH_MAX của engine, validate active batch trong pipeline-state TRƯỚC lock)');
   console.error('    prepare-next --ids A00015,A00016 — push-driven EXACT claim (ids from push-selection.js); --ids and --count are mutually exclusive');
   console.error('  Ops whitelist: status, prepare-next, research, qa, publish, recover, consistency, reports, verify');
   console.error('  Production loop: .github/workflows/factory-production.yml on _drafts/ pushes (push-selection.js derives the EXACT ids).');
@@ -393,6 +396,7 @@ function main(argv){
     else if (flags[i]==='--scope') cmd.scope=flags[++i];
     else if (flags[i]==='--command-id') cmd.command_id=flags[++i];
     else if (flags[i]==='--coordinator') cmd.coordinator=flags[++i];
+    else if (flags[i]==='--cycle-batch') cmd.cycle_batch=true; // AUDIT #3: một transaction publish cho cả cycle (chỉ op publish)
     else usage();
   }
   const validated=validateCommand(cmd);

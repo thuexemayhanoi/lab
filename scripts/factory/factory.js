@@ -46,6 +46,12 @@
  *   shop's price list may ground "nguồn X công khai mức ..." phrasing only;
  *   market-wide range claims need sources that actually aggregate vendors.
  * - publish appends a real event to data/state/throughput-ledger.json (no backfill).
+ * - AUDIT #3 (one transaction per cycle): publishStage accepts opts.cycleBatch
+ *   (operator op `publish --cycle-batch`) — the ONLY path allowed past CHUNK,
+ *   capped at PUBLISH_BATCH_MAX (config, 20) and validated BEFORE the lock is
+ *   acquired against data/state/pipeline-state.json: the ids must be EXACTLY
+ *   the eligible set (active batch ∩ PASS ∩ draft). CHUNK=10 stays the hard
+ *   cap for every other publish path.
  * - recover resolves an active transaction from repository truth or STOPS safely
  *   (never force-clears an ambiguous transaction, never force-unlocks a live lock).
  * - reports regenerates reports/factory/status-report.json + throughput.json from
@@ -374,16 +380,53 @@ function qa(args){
 // staged publish is deterministically rolled back from the journal. Drafts
 // are removed ONLY at commit (publish state already safe); the transaction
 // marker clears ONLY after the staged state is fully restored or committed.
-function publishStage(args){
+function publishStage(args,opts){
+  opts=opts||{};
   const CHUNK=cfg.CHUNK||10;
   // Hard chunk invariant (canonical engine, not just the operator):
   // a publish operation promotes AT MOST CHUNK articles. Explicit >CHUNK ids
   // => REFUSE up front (never silently publish a prefix and drop the rest).
   // Checked BEFORE acquiring the lock so a refusal leaves no held lock behind
   // (process.exit does not run finally blocks).
-  if(args.length>CHUNK){
+  //
+  // AUDIT #3 (một build + một publication commit cho cả cycle): opts.cycleBatch
+  // là đường DUY NHẤT vượt CHUNK — cap khi đó là PUBLISH_BATCH_MAX (config,
+  // 20), KHÔNG phải nới CHUNK cho mọi path khác. Cycle-batch publish bắt buộc
+  // validate TRƯỚC acquireLock với data/state/pipeline-state.json: state phải
+  // có active batch thật, mọi id phải THUỘC batch (foreign => REFUSE), và ids
+  // phải ĐÚNG BẰNG eligible-set (batch ∩ PASS ∩ draft) — không cho phép lọc
+  // bớt hay đẩy thừa bài trong "một transaction cho cả cycle".
+  const cap=opts.cycleBatch?(cfg.PUBLISH_BATCH_MAX||20):CHUNK;
+  if(!opts.cycleBatch&&args.length>CHUNK){
     console.error('REFUSED: publish received '+args.length+' ids > CHUNK='+CHUNK+' (at most '+CHUNK+' articles per publish operation). Split the ids into chunks of <= '+CHUNK+' and publish each chunk separately.');
     process.exit(1);
+  }
+  if(opts.cycleBatch){
+    if(args.length>cap){
+      console.error('REFUSED: cycle-batch publish received '+args.length+' ids > PUBLISH_BATCH_MAX='+cap+' (at most '+cap+' articles per cycle-batch publish operation; CHUNK='+CHUNK+' không đổi cho mọi path khác).');
+      process.exit(1);
+    }
+    let pstate=null;
+    try{ pstate=JSON.parse(fs.readFileSync(path.join(STATE,'pipeline-state.json'),'utf8')); }
+    catch(e){ pstate=null; }
+    if(!pstate||!pstate.active||!Array.isArray(pstate.active.batch)||!pstate.active.batch.length){
+      console.error('REFUSED: cycle-batch publish yêu cầu data/state/pipeline-state.json có active batch thật của pipeline (thiếu/hỏng state => KHÔNG publish mù — fail-closed).');
+      process.exit(1);
+    }
+    const batch=pstate.active.batch;
+    const foreign=args.filter(id=>!batch.includes(id));
+    if(foreign.length){
+      console.error('REFUSED: cycle-batch publish chỉ nhận id thuộc active batch của pipeline — id ngoài batch: '+foreign.join(', ')+' (batch: '+batch.join(', ')+').');
+      process.exit(1);
+    }
+    const preRows=loadMatrix();
+    const eligible=batch.filter(id=>{ const r=preRows.find(x=>x.article_id===id);
+      return r&&r.status==='PASS'&&fs.existsSync(path.join(ROOT,'_drafts',id+'.html')); }).sort();
+    const asked=args.slice().sort();
+    if(JSON.stringify(asked)!==JSON.stringify(eligible)){
+      console.error('REFUSED: cycle-batch publish phải nhận ĐÚNG BẰNG eligible-set của cycle (batch ∩ PASS ∩ draft) — asked '+asked.length+' ('+asked.join(',')+') nhưng eligible '+eligible.length+' ('+eligible.join(',')+'). KHÔNG lọc bớt, KHÔNG đẩy thừa.');
+      process.exit(1);
+    }
   }
   acquireLock('publish');
   const started=Date.now();
@@ -396,8 +439,8 @@ function publishStage(args){
   const ground=groundingCheck(effIds);
   if(!ground.ok){ releaseLock(); console.error('REFUSED: grounding gate:\n'+ground.problems.join('\n')); process.exit(1); }
   const published=rows.filter(r=>r.status==='PUBLISHED').length;
-  const room=phase()==='PILOT'?Math.min(cfg.max_publication_in_bootstrap-published,CHUNK):CHUNK;
-  if(effIds.length>room){ releaseLock(); console.error('REFUSED: publish would exceed the '+(phase()==='PILOT'?'bootstrap publication cap':'chunk limit')+' (room='+room+', asked='+effIds.length+')'); process.exit(1); }
+  const room=phase()==='PILOT'?Math.min(cfg.max_publication_in_bootstrap-published,cap):cap;
+  if(effIds.length>room){ releaseLock(); console.error('REFUSED: publish would exceed the '+(phase()==='PILOT'?'bootstrap publication cap':(opts.cycleBatch?'PUBLISH_BATCH_MAX limit':'chunk limit'))+' (room='+room+', asked='+effIds.length+')'); process.exit(1); }
   // pre-state journal BEFORE any mutation (rollback truth)
   const journal={rows_before:{},checkpoint_before:fs.readFileSync(path.join(STATE,'checkpoint.json'),'utf8'),
     files:[],drafts:effIds.slice(),ids:effIds.slice()};
@@ -427,6 +470,12 @@ function publishStage(args){
   // persist the completed journal into the STAGED transaction marker
   const tx=Object.assign({},readTx(),{journal});
   write('data/state/transaction.json',tx);
+  // test-only fault injection (never set in production): chết ngay sau khi
+  // journal STAGED được persist — recover phải rollback deterministic từ journal.
+  if(process.env.FACTORY_CRASH_AT==='publish-staged'){
+    console.error('FACTORY CRASH INJECTION tại "publish-staged" — staged transaction + writer lock còn sống, mô phỏng operator chết giữa stage và commit.');
+    process.exit(75);
+  }
   console.log('STAGED '+stagedIds.length+': '+stagedIds.join(', ')+' (tx '+tx.id+' — drafts intact, ledger untouched; run build+verify, then publishCommit)');
   return { ids:stagedIds, started, tx };
 }
@@ -491,7 +540,11 @@ function publishRollback(reason){
   return { ok:true };
 }
 function publish(args){ // quick path (sandbox/tests): stage + commit immediately
-  const staged=publishStage(args);
+  // AUDIT #3: '--cycle-batch' là FLAG (ids là argv riêng) — lọc token ra khỏi
+  // ids trước khi rơi vào gate; flag chỉ có nghĩa khi pipeline-state có active
+  // batch hợp lệ (validate trong publishStage, TRƯỚC acquireLock).
+  const opts={cycleBatch:args.includes('--cycle-batch')};
+  const staged=publishStage(args.filter(a=>a!=='--cycle-batch'),opts);
   publishCommit(staged);
 }
 // Sync derived progress pointers in checkpoint from matrix truth —

@@ -84,7 +84,7 @@ const PIPE = (sb, args, env) => spawnSync(process.execPath,
     // OOM-guard: giới hạn heap của pipeline + mọi process con (operator,
     // build-site) trên môi trường ~1GB — GC chủ động thay vì rss phình to.
     env: Object.assign({}, process.env,
-      { NODE_OPTIONS: ((process.env.NODE_OPTIONS || '') + ' --max-old-space-size=448').trim() }, env || {}) });
+      { NODE_OPTIONS: ((process.env.NODE_OPTIONS || '') + ' --max-old-space-size=384').trim() }, env || {}) });
 const readJSON = p => JSON.parse(fs.readFileSync(p, 'utf8'));
 const stateOf = sb => readJSON(path.join(sb, 'data', 'state', 'pipeline-state.json'));
 const ckptOf = sb => readJSON(path.join(sb, 'data', 'state', 'checkpoint.json'));
@@ -101,6 +101,18 @@ function expireCoordLock(sb) { // mô phỏng TTL 30' trôi qua sau runner chế
   fs.writeFileSync(p, JSON.stringify(l, null, 2));
 }
 const MOCK_ENV = { WRITER_RUNTIME: 'mock', PIPELINE_ALLOW_MOCK: '1' };
+// AUDIT #4 test fixtures: pipeline xác nhận deployment từ env truth của step
+// 'Pages deployment truth' (PAGES_BUILD_COMMIT/PAGES_BUILD_STATUS) + publication
+// SHA. Sandbox KHÔNG có git binary nên merge-base được mock bằng
+// PIPELINE_MOCK_GIT_ANCESTOR (chỉ test; production dùng git merge-base thật).
+const PUB_SHA = 'e51f0a1bcyclepublication00000000000000000000';
+const DEPLOY_OK = { PIPELINE_PUB_SHA: PUB_SHA, PAGES_BUILD_COMMIT: PUB_SHA, PAGES_BUILD_STATUS: 'success', PIPELINE_MOCK_GIT_ANCESTOR: '1', PIPELINE_SINGLE_CYCLE: '1' };
+const DEPLOY_ERRORED = { PIPELINE_PUB_SHA: PUB_SHA, PAGES_BUILD_COMMIT: PUB_SHA, PAGES_BUILD_STATUS: 'errored', PIPELINE_MOCK_GIT_ANCESTOR: '1', PIPELINE_SINGLE_CYCLE: '1' };
+const DEPLOY_WRONG_SHA = { PIPELINE_PUB_SHA: PUB_SHA, PAGES_BUILD_COMMIT: 'f00d' + PUB_SHA.slice(4), PAGES_BUILD_STATUS: 'success', PIPELINE_MOCK_GIT_ANCESTOR: '0', PIPELINE_SINGLE_CYCLE: '1' };
+// delta-safe ledger counting (sandbox copy KẾ THỪA events baseline của repo —
+// KHÔNG BAO GIỜ đếm tuyệt đối; luôn chụp độ dài trước rồi lấy phần mới)
+const ledgerLen = sb => ledgerOf(sb).events.length;
+const newPublishEvents = (sb, beforeLen) => ledgerOf(sb).events.slice(beforeLen).filter(e => e.op === 'publish');
 
 // =====================================================================
 // UNIT — writer-adapter.js
@@ -183,7 +195,10 @@ test('pipeline config: pipeline.json hợp lệ và nằm trong giới hạn eng
   assert.ok(c.cycle_batch_min >= 12 && c.cycle_batch_max <= 18, 'mỗi cycle cấp 12..18 bài');
   const eng = readJSON(path.join(ROOT, 'config', 'content-factory.json'));
   assert.ok(c.cycle_batch_max <= (eng.QUEUE_MAX || 20), 'batch phải nằm trong QUEUE_MAX của engine');
-  assert.ok(c.publish_chunk <= (eng.CHUNK || 10), 'publish chunk phải nằm trong CHUNK của engine');
+  // AUDIT #3: publish_chunk đã bị XOÁ — MỘT transaction publish cho cả cycle
+  assert.ok(!('publish_chunk' in c), 'publish_chunk phải bị XOÁ khỏi pipeline.json (audit #3: một batch/cycle, không còn chia chunk)');
+  assert.ok((eng.PUBLISH_BATCH_MAX || 20) >= c.cycle_batch_max, 'PUBLISH_BATCH_MAX của engine phải đủ chứa cả cycle batch (18)');
+  assert.ok((eng.PUBLISH_BATCH_MAX || 20) > (eng.CHUNK || 10), 'PUBLISH_BATCH_MAX là cap RIÊNG của cycle-batch — CHUNK vẫn là cap mặc định của mọi path khác');
   assert.ok(c.writer_retries >= 1 && c.writer_retries <= 3);
   assert.ok(c.lock_ttl_minutes > 0);
 });
@@ -203,6 +218,11 @@ test('workflow: factory-production.yml kích hoạt pipeline đúng (cron 30 ph�
   assert.match(job, /node scripts\/factory\/pipeline\.js cycle/);
   assert.match(job, /github\.event_name == 'schedule'/);
   assert.match(job, /inputs\.action == 'pipeline'/);
+  // AUDIT #4: pipeline job đọc Pages deployment truth (SHA + status của Pages
+  // build cuối) + permissions tối thiểu (contents: write commit cycle, pages: read)
+  assert.match(yml, /Pages deployment truth/, 'workflow phải có step đọc Pages build cuối (audit #4)');
+  assert.match(job, /PAGES_BUILD_COMMIT/, 'step Pages truth phải export PAGES_BUILD_COMMIT cho cycle step');
+  assert.match(job, /pages: read/, 'pipeline job cần pages: read (đọc deployment truth)');
   assert.ok(!/push -f|--force\b/.test(yml), 'KHÔNG force push');
   // push job (writer _drafts) KHÔNG chạy trên schedule — pipeline là job duy nhất của cron
   const pm = /  publish:\n([\s\S]*?)(\n  \w+:|\s*$)/.exec(yml);
@@ -586,18 +606,26 @@ test('hygiene fail-closed: stale draft DIVERGED của row PUBLISHED => STOP, KH�
 // =====================================================================
 // E2E — 1 cycle mock đầy đủ (claim → 3 writer song song → QA sửa bài → publish đúng một lần)
 // =====================================================================
-test('e2e mock cycle: 6 bài, 3 writer, QA chưa-PASS→revise→PASS, publish đúng một lần, state/lock sạch', () => {
+test('e2e mock cycle audit #3+#4: 6 bài publish MỘT transaction (pending deployment) → thiếu Pages truth KHÔNG finalize → deploy đúng SHA → COMPLETE, KHÔNG build lại', () => {
   const SB = mkSB({ cycle_batch_min: 6, cycle_batch_max: 6 });
   try {
     const ckBefore = ckptOf(SB).published_count;
-    const r = PIPE(SB, ['cycle'], MOCK_ENV);
-    assert.equal(r.status, 0, r.stdout + r.stderr);
-    assert.match(r.stdout, /PIPELINE CYCLE COMPLETE/);
-    const st = stateOf(SB);
-    const batch = st.last_cycle_summary.batch;
+    const ledBefore = ledgerLen(SB);
+    // run 1: full cycle — publish xong phải dừng ở PENDING DEPLOYMENT (audit #4:
+    // push/commit thành công KHÔNG được coi là deploy thành công)
+    const r1 = PIPE(SB, ['cycle'], MOCK_ENV);
+    assert.equal(r1.status, 0, r1.stdout + r1.stderr);
+    assert.match(r1.stdout, /PIPELINE PUBLISHED \(pending deployment\)/);
+    assert.doesNotMatch(r1.stdout, /PIPELINE CYCLE COMPLETE/, 'chưa có deployment truth — KHÔNG được finalize');
+    const st1 = stateOf(SB);
+    assert.ok(st1.active && st1.active.deployment && st1.active.deployment.pending === true, 'state phải lưu pending deployment (ids + published_at — audit #4)');
+    const batch = st1.active.batch;
     assert.equal(batch.length, 6);
     assert.equal(new Set(batch).size, 6);
-    // mọi bài batch -> PUBLISHED, publish đúng MỘT lần mỗi id (ledger)
+    // MỘT publish transaction chứa đủ cả batch (audit #3 — không chia chunk)
+    const evs1 = newPublishEvents(SB, ledBefore);
+    assert.equal(evs1.length, 1, 'publish đúng MỘT transaction cho cả cycle');
+    assert.deepEqual(evs1[0].ids.slice().sort(), batch.slice().sort());
     for (const id of batch) {
       assert.equal(statusOf(SB, id), 'PUBLISHED', id);
       assert.equal(publishCountFor(SB, id), 1, id + ' phải publish đúng 1 lần');
@@ -608,17 +636,37 @@ test('e2e mock cycle: 6 bài, 3 writer, QA chưa-PASS→revise→PASS, publish �
       assert.equal(ev.result, 'PASS');
       assert.ok(Number(ev.score) >= 75, 'QA evidence phải >= pass_min (75), được ' + ev.score);
     }
-    assert.deepEqual(st.last_cycle_summary.published.slice().sort(), batch.slice().sort());
-    assert.deepEqual(st.last_cycle_summary.blocked, []);
-    assert.deepEqual(st.last_cycle_summary.failed_publish, []);
-    assert.equal(st.active, null, 'state.active phải sạch sau cycle');
-    assert.equal(st.cycle, 1);
-    assert.equal(st.stopped_reason, null);
-    // đúng một lần — state trong repo khớp engine truth
     assert.equal(ckptOf(SB).published_count, ckBefore + 6);
     assert.equal(txnActive(SB), false, 'transaction phải inactive');
     assert.equal(writerLockHeld(SB), false, 'writer lock phải free');
     assert.equal(coordLock(SB).locked, false, 'coordinator lock phải free');
+    // run 2: thiếu Pages truth => DEPLOYMENT-PENDING, KHÔNG mutate gì
+    const before2 = { matrix: matrixBytes(SB), led: ledgerLen(SB) };
+    const r2 = PIPE(SB, ['cycle'], MOCK_ENV);
+    assert.equal(r2.status, 0, r2.stdout + r2.stderr);
+    assert.match(r2.stdout, /PIPELINE DEPLOYMENT-PENDING/);
+    assert.doesNotMatch(r2.stdout, /PIPELINE CYCLE COMPLETE/);
+    assert.deepEqual(matrixBytes(SB), before2.matrix, 'pending KHÔNG được mutate matrix');
+    assert.equal(ledgerLen(SB), before2.led, 'pending KHÔNG được publish thêm gì');
+    assert.equal(stateOf(SB).active.deployment.pending, true, 'vẫn pending (trạng thái recoverable)');
+    // run 3: Pages build THÀNH CÔNG + chứa publication SHA => COMPLETE
+    const r3 = PIPE(SB, ['cycle'], Object.assign({}, MOCK_ENV, DEPLOY_OK));
+    assert.equal(r3.status, 0, r3.stdout + r3.stderr);
+    assert.match(r3.stdout, /PIPELINE CYCLE COMPLETE/);
+    const st3 = stateOf(SB);
+    assert.equal(st3.active, null, 'state.active phải sạch sau confirm');
+    assert.equal(st3.cycle, 1);
+    assert.equal(st3.stopped_reason, null);
+    const sum = st3.last_cycle_summary;
+    assert.deepEqual(sum.published.slice().sort(), batch.slice().sort());
+    assert.deepEqual(sum.blocked, []);
+    assert.deepEqual(sum.failed_publish, []);
+    assert.ok(sum.publication && sum.publication.deployed_sha === PUB_SHA, 'summary phải lưu deployed_sha đã xác nhận (audit #4)');
+    assert.equal(ledgerLen(SB), before2.led, 'confirm KHÔNG publish lại (exactly-once, KHÔNG build lại)');
+    assert.equal(ckptOf(SB).published_count, ckBefore + 6, 'published_count không đổi sau confirm');
+    assert.equal(txnActive(SB), false);
+    assert.equal(writerLockHeld(SB), false);
+    assert.equal(coordLock(SB).locked, false);
     // 3 writer workspace riêng — mỗi writer xử lý tuần tự 2 bài, artifact chỉ nằm dưới pipeline/writers/
     const wsRoot = path.join(SB, 'pipeline', 'writers');
     const ws = fs.readdirSync(wsRoot).sort();
@@ -628,7 +676,7 @@ test('e2e mock cycle: 6 bài, 3 writer, QA chưa-PASS→revise→PASS, publish �
       assert.equal(files.length, 4, w + ' xử lý 2 bài × (packet + body)');
       for (const f of files) assert.match(f, /^A\d{5}\.(packet\.json|body\.html)$/, 'artifact chỉ được ghi trong workspace writer');
     }
-    // queue tự refill sau cycle cho cycle kế tiếp
+    // queue tự refill sau finalize cho cycle kế tiếp
     assert.ok(stateOf(SB).pending.length >= 100);
   } finally { rmSB(SB); }
 });
@@ -681,44 +729,245 @@ test('crash/resume: chết sau QA vòng 1 => SKIP do lock TTL còn sống => h�
     assert.equal(r2.status, 0);
     assert.match(r2.stdout, /PIPELINE SKIP/);
     assert.deepEqual(matrixBytes(SB), before, 'SKIP không được mutate gì');
-    // TTL trôi qua => resume từ checkpoint: repair -> PASS -> publish, mỗi id đúng 1 lần
+    // TTL trôi qua => resume từ checkpoint: repair -> PASS -> publish MỘT batch
+    // (audit #3), dừng ở pending deployment (audit #4); confirm xong mới COMPLETE
     expireCoordLock(SB);
     const r3 = PIPE(SB, ['cycle'], MOCK_ENV);
     assert.equal(r3.status, 0, r3.stdout + r3.stderr);
-    assert.match(r3.stdout, /PIPELINE CYCLE COMPLETE/);
+    assert.match(r3.stdout, /PIPELINE PUBLISHED \(pending deployment\)/);
     for (const id of batch) {
       assert.equal(statusOf(SB, id), 'PUBLISHED', id);
       assert.equal(publishCountFor(SB, id), 1, id + ' publish ĐÚNG MỘT LẦN qua crash+resume');
     }
     const st3 = stateOf(SB);
-    assert.equal(st3.active, null);
-    assert.equal(st3.cycle, st1.active.cycle, 'cycle resumed phải giữ số cycle, không claim batch mới');
+    assert.equal(st3.active.cycle, st1.active.cycle, 'cycle resumed phải giữ số cycle, không claim batch mới');
+    assert.equal(st3.active.deployment.pending, true, 'resume publish xong phải ở pending deployment');
+    // xác nhận deployment (audit #4) => finalize, KHÔNG publish lại
+    const r4 = PIPE(SB, ['cycle'], Object.assign({}, MOCK_ENV, DEPLOY_OK));
+    assert.equal(r4.status, 0, r4.stdout + r4.stderr);
+    assert.match(r4.stdout, /PIPELINE CYCLE COMPLETE/);
+    const st4 = stateOf(SB);
+    assert.equal(st4.active, null);
+    assert.equal(st4.cycle, st1.active.cycle);
+    for (const id of batch) assert.equal(publishCountFor(SB, id), 1, id + ' confirm KHÔNG publish lại');
     assert.equal(txnActive(SB), false);
     assert.equal(writerLockHeld(SB), false);
     assert.equal(coordLock(SB).locked, false);
   } finally { rmSB(SB); }
 });
 
-test('crash/resume mid-publish: chết giữa các publish chunk => resume publish phần còn lại, KHÔNG double-publish', () => {
-  const SB = mkSB({ cycle_batch_min: 3, cycle_batch_max: 3, publish_chunk: 2 });
+test('crash/resume mid-publish (audit #3): chết NGAY SAU batch publish op => pending deployment đã persist, KHÔNG double-publish', () => {
+  const SB = mkSB({ cycle_batch_min: 3, cycle_batch_max: 3 });
   try {
-    const r1 = PIPE(SB, ['cycle'], Object.assign({}, MOCK_ENV, { PIPELINE_CRASH_AT: 'after-publish-chunk' }));
+    const ledBefore = ledgerLen(SB);
+    // run 1: crash SAU khi pending deployment được saveState (truth persist TRƯỚC khi thoát)
+    const r1 = PIPE(SB, ['cycle'], Object.assign({}, MOCK_ENV, { PIPELINE_CRASH_AT: 'after-publish-batch' }));
     assert.equal(r1.status, 75, 'crash injection phải exit 75 (error=' + (r1.error && r1.error.message) + ' signal=' + r1.signal + ')');
-    const batch = stateOf(SB).active.batch;
-    const publishedAtCrash = batch.filter(id => statusOf(SB, id) === 'PUBLISHED');
-    assert.equal(publishedAtCrash.length, 2, 'chunk đầu (2 bài) đã publish trước khi chết');
+    const st1 = stateOf(SB);
+    const batch = st1.active.batch;
+    assert.ok(st1.active.deployment && st1.active.deployment.pending === true, 'crash SAU saveState: pending deployment phải đã được persist (audit #4)');
+    for (const id of batch) assert.equal(statusOf(SB, id), 'PUBLISHED', id);
+    const evs = newPublishEvents(SB, ledBefore);
+    assert.equal(evs.length, 1, 'publish đúng MỘT transaction (audit #3 — không chia chunk)');
+    assert.deepEqual(evs[0].ids.slice().sort(), batch.slice().sort(), 'MỘT event chứa đủ cả batch');
+    // runner chết => coordinator lock TTL còn sống => run kế SKIP sạch
+    const r2 = PIPE(SB, ['cycle'], MOCK_ENV);
+    assert.equal(r2.status, 0);
+    assert.match(r2.stdout, /PIPELINE SKIP/);
+    expireCoordLock(SB);
+    // resume: KHÔNG có deployment truth => DEPLOYMENT-PENDING, KHÔNG double-publish
+    const r3 = PIPE(SB, ['cycle'], MOCK_ENV);
+    assert.equal(r3.status, 0, r3.stdout + r3.stderr);
+    assert.match(r3.stdout, /PIPELINE DEPLOYMENT-PENDING/);
+    for (const id of batch) assert.equal(publishCountFor(SB, id), 1, id + ' không bao giờ publish 2 lần (ledger là truth)');
+    // xác nhận deployment => finalize đúng batch, KHÔNG build lại
+    const r4 = PIPE(SB, ['cycle'], Object.assign({}, MOCK_ENV, DEPLOY_OK));
+    assert.equal(r4.status, 0, r4.stdout + r4.stderr);
+    assert.match(r4.stdout, /PIPELINE CYCLE COMPLETE/);
+    const st4 = stateOf(SB);
+    assert.equal(st4.active, null);
+    assert.deepEqual(st4.last_cycle_summary.published.slice().sort(), batch.slice().sort());
+    assert.equal(newPublishEvents(SB, ledBefore).length, 1, 'toàn bộ crash/resume/confirm chỉ có MỘT publish event (research/qa events không tính)');
+    assert.equal(txnActive(SB), false);
+    assert.equal(coordLock(SB).locked, false);
+  } finally { rmSB(SB); }
+});
+
+test('crash/resume mid-transaction (audit #3): FACTORY_CRASH_AT=publish-staged => staged tx + live lock, cycle fail-closed exit 1; engine REFUSED trước lock; resume publish đúng 1 lần', () => {
+  const SB = mkSB({ cycle_batch_min: 3, cycle_batch_max: 3 });
+  try {
+    const ledBefore = ledgerLen(SB);
+    // run 1: operator chết NGAY SAU journal STAGED được persist (giữa stage và commit)
+    const r1 = PIPE(SB, ['cycle'], Object.assign({}, MOCK_ENV, { FACTORY_CRASH_AT: 'publish-staged' }));
+    assert.equal(r1.status, 1, 'publish batch FAIL phải fail-closed exit 1 (KHÔNG publish từng phần)');
+    assert.match(r1.stdout + r1.stderr, /publish batch FAIL/);
+    const st1 = stateOf(SB);
+    assert.ok(st1.active, 'active batch phải được GIỮ NGUYÊN để resume (KHÔNG finalize mù)');
+    assert.ok(st1.stopped_reason && /publish batch FAIL/.test(st1.stopped_reason), 'stopped_reason phải ghi rõ fail-closed');
+    const batch = st1.active.batch;
+    // staged: matrix đã ghi PUBLISHED NHƯNG transaction CHƯA commit (drafts
+    // intact, ledger trống) — half-PUBLISHED window, KHÔNG được coi là publish
+    for (const id of batch) assert.equal(statusOf(SB, id), 'PUBLISHED', id + ' staged (chưa commit)');
+    assert.equal(newPublishEvents(SB, ledBefore).length, 0, 'chưa có ledger publish event nào (chưa commit; research/qa events là hoạt động bình thường của cycle)');
+    assert.equal(txnActive(SB), true, 'staged transaction còn active');
+    assert.equal(writerLockHeld(SB), true, 'writer-lock còn LIVE (TTL chưa hết — ownership unclear, KHÔNG force-unlock)');
+    assert.equal(coordLock(SB).locked, false, 'coordinator lock được release bởi finish(1)');
+    // probe engine refusal TRƯỚC khi hết hạn lock (audit #3): mọi REFUSED phải
+    // xảy ra TRƯỚC acquireLock — không mở transaction, không đổi trạng thái lock
+    const FACT = (args) => spawnSync(process.execPath,
+      [path.join(SB, 'scripts', 'factory', 'factory.js'), ...args],
+      { cwd: SB, encoding: 'utf8', env: Object.assign({}, process.env) });
+    const rf1 = FACT(['publish', 'X00000', '--cycle-batch']);
+    assert.notEqual(rf1.status, 0);
+    assert.match(rf1.stderr + rf1.stdout, /REFUSED: cycle-batch publish chỉ nhận id thuộc active batch/);
+    assert.equal(writerLockHeld(SB), true, 'REFUSED trước lock: KHÔNG đụng lock đang sống');
+    assert.equal(txnActive(SB), true, 'REFUSED trước lock: KHÔNG mở transaction mới');
+    const rf2 = FACT(['publish', batch[0], '--cycle-batch']);
+    assert.notEqual(rf2.status, 0);
+    assert.match(rf2.stderr + rf2.stdout, /REFUSED: cycle-batch publish phải nhận ĐÚNG BẰNG eligible-set/);
+    assert.equal(writerLockHeld(SB), true);
+    // TTL trôi qua (cả 2 lock) => resume: recover rollback staged tx từ journal
+    // => rows về PASS => publish lại MỘT batch đúng 1 lần
+    const wl = path.join(SB, 'data', 'state', 'writer-lock.json');
+    const wlj = readJSON(wl); wlj.expires_at = new Date(Date.now() - 60000).toISOString();
+    fs.writeFileSync(wl, JSON.stringify(wlj, null, 2));
     expireCoordLock(SB);
     const r2 = PIPE(SB, ['cycle'], MOCK_ENV);
     assert.equal(r2.status, 0, r2.stdout + r2.stderr);
+    assert.match(r2.stdout, /PIPELINE PUBLISHED \(pending deployment\)/);
     for (const id of batch) {
       assert.equal(statusOf(SB, id), 'PUBLISHED', id);
-      assert.equal(publishCountFor(SB, id), 1, id + ' không bao giờ publish 2 lần (ledger là truth)');
+      assert.equal(publishCountFor(SB, id), 1, id + ' staged chết giữa chừng KHÔNG được tính là publish');
     }
-    const st = stateOf(SB);
-    assert.equal(st.active, null);
-    assert.deepEqual(st.last_cycle_summary.published.slice().sort(), batch.slice().sort());
-    assert.equal(txnActive(SB), false);
-    assert.equal(coordLock(SB).locked, false);
+    const evs = newPublishEvents(SB, ledBefore);
+    assert.equal(evs.length, 1, 'MỘT publish event cho cả mid-transaction crash/resume');
+    const r3 = PIPE(SB, ['cycle'], Object.assign({}, MOCK_ENV, DEPLOY_OK));
+    assert.equal(r3.status, 0, r3.stdout + r3.stderr);
+    assert.match(r3.stdout, /PIPELINE CYCLE COMPLETE/);
+    assert.equal(stateOf(SB).active, null);
+    assert.equal(newPublishEvents(SB, ledBefore).length, 1, 'ledger vẫn chỉ có MỘT publish event sau confirm');
+  } finally { rmSB(SB); }
+});
+
+test('e2e audit #3: cycle 18 bài — MỘT build site, MỘT publication commit (1 publish event đủ 18 ID), confirm KHÔNG build lại', () => {
+  const SB = mkSB({ cycle_batch_min: 18, cycle_batch_max: 18 });
+  try {
+    const ledBefore = ledgerLen(SB);
+    const r1 = PIPE(SB, ['cycle'], MOCK_ENV);
+    assert.equal(r1.status, 0, r1.stdout + r1.stderr);
+    assert.match(r1.stdout, /PIPELINE PUBLISHED \(pending deployment\)/);
+    const builds1 = (r1.stdout.match(/BUILD MANIFEST:/g) || []).length;
+    assert.equal(builds1, 1, 'cả cycle 18 bài phải build site đúng MỘT lần (audit #3)');
+    const st1 = stateOf(SB);
+    const batch = st1.active.batch;
+    assert.equal(batch.length, 18);
+    for (const id of batch) assert.equal(statusOf(SB, id), 'PUBLISHED', id);
+    const evs = newPublishEvents(SB, ledBefore);
+    assert.equal(evs.length, 1, 'MỘT publication commit cho cả cycle — KHÔNG chia chunk 10+8');
+    assert.equal(evs[0].ids.length, 18);
+    assert.deepEqual(evs[0].ids.slice().sort(), batch.slice().sort());
+    const r2 = PIPE(SB, ['cycle'], Object.assign({}, MOCK_ENV, DEPLOY_OK));
+    assert.equal(r2.status, 0, r2.stdout + r2.stderr);
+    assert.match(r2.stdout, /PIPELINE CYCLE COMPLETE/);
+    const builds2 = (r2.stdout.match(/BUILD MANIFEST:/g) || []).length;
+    assert.equal(builds2, 0, 'confirm deployment KHÔNG build lại bài');
+    assert.equal(newPublishEvents(SB, ledBefore).length, 1, 'confirm KHÔNG publish lại');
+    const st2 = stateOf(SB);
+    assert.equal(st2.active, null);
+    assert.equal(st2.last_cycle_summary.published.length, 18);
+  } finally { rmSB(SB); }
+});
+
+test('engine refusal (audit #3): --cycle-batch validate cap + pipeline-state TRƯỚC lock — mọi REFUSED không để lại lock/tx', () => {
+  const SB = mkSB({ cycle_batch_min: 3, cycle_batch_max: 3 });
+  try {
+    const FACT = (args) => spawnSync(process.execPath,
+      [path.join(SB, 'scripts', 'factory', 'factory.js'), ...args],
+      { cwd: SB, encoding: 'utf8', env: Object.assign({}, process.env) });
+    const ids21 = Array.from({ length: 21 }, (_, i) => 'A' + String(10001 + i)); // A10001..A10021
+    // (a) 21 ids với flag => REFUSED PUBLISH_BATCH_MAX=20 (TRƯỚC state/lock)
+    const ra = FACT(['publish'].concat(ids21, ['--cycle-batch']));
+    assert.notEqual(ra.status, 0);
+    assert.match(ra.stderr + ra.stdout, /REFUSED: cycle-batch publish received 21 ids > PUBLISH_BATCH_MAX=20/);
+    assert.equal(writerLockHeld(SB), false, 'REFUSED trước acquireLock — không giữ lock');
+    assert.equal(txnActive(SB), false, 'KHÔNG mở transaction');
+    // (b) 11 ids KHÔNG flag => REFUSED CHUNK=10 (cap thường KHÔNG bị nới)
+    const rb = FACT(['publish'].concat(ids21.slice(0, 11)));
+    assert.notEqual(rb.status, 0);
+    assert.match(rb.stderr + rb.stdout, /REFUSED: publish received 11 ids > CHUNK=10/);
+    assert.equal(writerLockHeld(SB), false);
+    // (c) sandbox tươi KHÔNG có pipeline-state active batch => REFUSED (fail-closed)
+    const rc1 = FACT(['publish', 'A10001', '--cycle-batch']);
+    assert.notEqual(rc1.status, 0);
+    assert.match(rc1.stderr + rc1.stdout, /REFUSED: cycle-batch publish yêu cầu data\/state\/pipeline-state\.json/);
+    assert.equal(writerLockHeld(SB), false);
+    // (d) có active batch nhưng id NGOÀI batch => REFUSED foreign
+    const stPath = path.join(SB, 'data', 'state', 'pipeline-state.json');
+    fs.mkdirSync(path.dirname(stPath), { recursive: true });
+    fs.writeFileSync(stPath, JSON.stringify({ version: 1, cycle: 1, pending: [],
+      active: { cycle: 1, started_at: new Date().toISOString(), batch: ['A10001', 'A10002', 'A10003'],
+        grants: {}, qa_rounds: {}, published: [], blocked: [] } }, null, 2));
+    const rd = FACT(['publish', 'A10001', 'X00000', '--cycle-batch']);
+    assert.notEqual(rd.status, 0);
+    assert.match(rd.stderr + rd.stdout, /REFUSED: cycle-batch publish chỉ nhận id thuộc active batch/);
+    assert.equal(writerLockHeld(SB), false);
+    // (e) id trong batch nhưng KHÔNG đúng eligible-set (không row PASS+draft) => REFUSED
+    const re_ = FACT(['publish', 'A10001', '--cycle-batch']);
+    assert.notEqual(re_.status, 0);
+    assert.match(re_.stderr + re_.stdout, /REFUSED: cycle-batch publish phải nhận ĐÚNG BẰNG eligible-set/);
+    assert.equal(writerLockHeld(SB), false, 'mọi path REFUSED đều xảy ra TRƯỚC acquireLock');
+    assert.equal(txnActive(SB), false, 'không sót transaction nào');
+  } finally { rmSB(SB); }
+});
+
+test('pipeline unit (audit #4): deploymentDecision — chỉ confirmed khi Pages build success VÀ chứa publication SHA', () => {
+  const dd = pipelineMod.deploymentDecision;
+  const sha = 'a'.repeat(40), build = 'b'.repeat(40);
+  // (1) thiếu publication SHA => KHÔNG confirmed
+  assert.equal(dd('', build, 'success', true).confirmed, false);
+  // (2) thiếu Pages truth (commit/status rỗng) => KHÔNG confirmed
+  assert.equal(dd(sha, '', '', null).confirmed, false);
+  // (3) Pages build KHÔNG success (errored) => KHÔNG confirmed
+  assert.equal(dd(sha, build, 'errored', true).confirmed, false);
+  // (4) build KHÔNG chứa publication SHA => KHÔNG confirmed (recoverable)
+  const d4 = dd(sha, build, 'success', false);
+  assert.equal(d4.confirmed, false);
+  assert.match(d4.reason, /WRONG_SHA/);
+  // (5) build success VÀ chứa SHA => confirmed, deployed_sha = Pages build commit
+  const d5 = dd(sha, build, 'success', true);
+  assert.equal(d5.confirmed, true);
+  assert.equal(d5.deployed_sha, build);
+  // (6) không có git (containsSha null) => chỉ khớp trực tiếp pubSha === buildCommit
+  assert.equal(dd(sha, sha, 'success', null).confirmed, true);
+  assert.equal(dd(sha, build, 'success', null).confirmed, false);
+});
+
+test('e2e audit #4 sai-SHA/errored: Pages deploy KHÔNG chứa publication SHA => giữ recoverable, KHÔNG finalize; sau đó đúng SHA => hoàn tất', () => {
+  const SB = mkSB({ cycle_batch_min: 3, cycle_batch_max: 3 });
+  try {
+    const r1 = PIPE(SB, ['cycle'], MOCK_ENV);
+    assert.equal(r1.status, 0, r1.stdout + r1.stderr);
+    assert.match(r1.stdout, /PIPELINE PUBLISHED \(pending deployment\)/);
+    const batch = stateOf(SB).active.batch;
+    // sai SHA: Pages build OK nhưng KHÔNG chứa publication commit => KHÔNG finalize
+    const r2 = PIPE(SB, ['cycle'], Object.assign({}, MOCK_ENV, DEPLOY_WRONG_SHA));
+    assert.equal(r2.status, 0, r2.stdout + r2.stderr);
+    assert.match(r2.stdout, /PIPELINE DEPLOYMENT-PENDING/);
+    assert.match(r2.stdout, /WRONG_SHA/);
+    assert.equal(stateOf(SB).active.deployment.pending, true, 'giữ trạng thái recoverable (KHÔNG build/push lại bài)');
+    // Pages build lỗi (errored) => vẫn recoverable, KHÔNG finalize mù
+    const r3 = PIPE(SB, ['cycle'], Object.assign({}, MOCK_ENV, DEPLOY_ERRORED));
+    assert.equal(r3.status, 0, r3.stdout + r3.stderr);
+    assert.match(r3.stdout, /PIPELINE DEPLOYMENT-PENDING/);
+    assert.match(r3.stdout, /PAGES_BUILD_STATUS=errored/);
+    assert.equal(stateOf(SB).active.deployment.pending, true);
+    // deployment sau đó đúng SHA (Pages đã build lại từ commit thật) => hoàn tất
+    const r4 = PIPE(SB, ['cycle'], Object.assign({}, MOCK_ENV, DEPLOY_OK));
+    assert.equal(r4.status, 0, r4.stdout + r4.stderr);
+    assert.match(r4.stdout, /PIPELINE CYCLE COMPLETE/);
+    const st4 = stateOf(SB);
+    assert.equal(st4.active, null);
+    assert.deepEqual(st4.last_cycle_summary.published.slice().sort(), batch.slice().sort());
   } finally { rmSB(SB); }
 });
 

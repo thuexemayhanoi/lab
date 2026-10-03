@@ -10,7 +10,7 @@ Tài liệu này mô tả pipeline chạy nền viết bài tự động của r
 
 ## Luồng một cycle
 
-queue PLANNED < refill_min (100) → refill lên refill_target (~300 topic từ data/content-matrix.csv shards, bỏ qua topic đã published / đang xử lý / trùng) → claim batch 12–18 bài (prepare-next, transaction fail-closed) → chia đều cho 3 writer (round-robin) → mỗi writer: research → write → (QA → repair → re-QA) trong workspace riêng → coordinator ingest packet + body về repo (_drafts/) → wrap-drafts → QA từng bài (pass_min 75, review_min 70) → bài PASS gom thành chunk ≤ publish_chunk (10) → publish qua operator.js publish --scope fast (build/verify fail-closed) → xác nhận commit/deploy → đánh dấu PUBLISHED trong ledger → checkpoint tiến trình, giải phóng transaction + writer lock → sang cycle tiếp (max_cycles_per_run = 1 mỗi lần chạy workflow).
+queue PLANNED < refill_min (100) → refill lên refill_target (~300 topic từ data/content-matrix.csv shards, bỏ qua topic đã published / đang xử lý / trùng) → claim batch 12–18 bài (prepare-next, transaction fail-closed) → chia đều cho 3 writer (round-robin) → mỗi writer: research → write → (QA → repair → re-QA) trong workspace riêng → coordinator ingest packet + body về repo (_drafts/) → wrap-drafts → QA từng bài (pass_min 75, review_min 70) → toàn bộ bài PASS của batch được publish trong MỘT transaction của cycle (operator.js publish --scope fast --cycle-batch, cap PUBLISH_BATCH_MAX=20 của engine — audit #3, không còn chia chunk) → trạng thái pending deployment (lưu ids + published_at vào state) → run kế xác nhận Pages build cuối thành công VÀ chứa publication SHA rồi mới finalize (audit #4) → đánh dấu PUBLISHED trong ledger → checkpoint tiến trình, giải phóng transaction + writer lock → sang cycle tiếp.
 
 Cron */30 * * * * chạy job pipeline trong factory-production.yml; mỗi lần chạy đúng 1 cycle, tự tiếp tục ở lần chạy sau (state nằm tại data/state/pipeline-state.json).
 
@@ -42,7 +42,8 @@ Kiểm thử an toàn: workflow_dispatch với action=selftest chạy node scrip
 
 - **Checkpoint**: mỗi bài sau khi publish được ghi ledger event 1 dòng; resume đọc checkpoint + ledger, không cấp lại bài đã publish.
 - **Crash giữa cycle**: lock TTL 30 phút; chạy sau đọc state active, adopt các bài chưa publish, bỏ bài đã publish (theo ledger), không trùng.
-- **Crash giữa publish**: chunk được đánh dấu trước khi push; resume publish phần còn lại, chunk đã confirm bỏ qua.
+- **Crash giữa publish (audit #3 — một transaction/commit cho cả cycle)**: stage chết giữa chừng ⇒ recover rollback deterministic từ journal (không có trạng thái half-PUBLISHED); op batch FAIL ⇒ fail-closed exit 1, rows giữ PASS để cycle sau resume — KHÔNG publish từng phần, và khi thành công đúng MỘT build + MỘT publication commit cho cả cycle.
+- **Xác nhận deployment trước khi hoàn tất cycle (audit #4)**: push thành công ≠ deploy thành công. Sau publish, cycle ở trạng thái `deployment.pending`; run kế đọc Pages build cuối (PAGES_BUILD_COMMIT/PAGES_BUILD_STATUS do step "Pages deployment truth" export) và chỉ finalize khi build thành công VÀ chứa publication SHA (git merge-base). Sai SHA/build lỗi/thiếu truth ⇒ giữ trạng thái recoverable (không viết lại, không build lại, không push lại bài); pipeline không đợi deployment trong chính run vừa commit.
 - **Đếm**: published_count chỉ tăng khi ledger ghi PUBLISHED; mỗi ID tối đa 1 lần trong toàn bộ lịch sử.
 
 ## Hygiene / stale drafts

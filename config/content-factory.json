@@ -2,6 +2,8 @@
   "BATCH": 50,
   "CHUNK": 10,
   "QUEUE_MAX": 20,
+  "PUBLISH_BATCH_MAX": 20,
+  "publish_batch_note": "AUDIT #3: PUBLISH_BATCH_MAX là cap RIÊNG của publish --cycle-batch (MỘT transaction cho cả cycle pipeline; ids phải ĐÚNG bằng eligible-set của active batch trong data/state/pipeline-state.json, validate TRƯỚC lock). CHUNK (10) vẫn là hard cap cho mọi đường publish khác — KHÔNG phải nâng cap publish toàn hệ thống.",
   "total_target_articles": 10000,
   "max_publication_in_bootstrap": 10,
   "status_lifecycle": [
@@ -151,7 +153,7 @@
       "A00127",
       "A00128"
     ],
-    "note": "Audited grounding scope: mọi claim định lượng (VND, %, phút/giờ) trong các bài này phải có claim_evidence khớp trong data/research/<ID>.json (source_url thật, source_domain khớp hostname, date_accessed YYYY-MM-DD). Mỗi chunk publish mới được append vào required_ids tại publishCommit. Claim từ MỘT cửa hàng phải viết theo dạng 'nguồn X công khai mức…'; kết luận mặt bằng thị trường cần nguồn tổng hợp nhiều nhà cung cấp."
+    "note": "Audited grounding scope: mọi claim định lượng (VND, %, phút/giờ) trong các bài này phải có claim_evidence khớp trong data/research/<ID>.json (source_url thật, source_domain khớp hostname, date_accessed YYYY-MM-DD). Mỗi batch publish mới được append vào required_ids tại publishCommit. Claim từ MỘT cửa hàng phải viết theo dạng 'nguồn X công khai mức…'; kết luận mặt bằng thị trường cần nguồn tổng hợp nhiều nhà cung cấp."
   },
   "notes_promote_production": "Canonical transition: node scripts/factory/factory.js promote-production (verifies pilot complete, promotes phase to PRODUCTION; bootstrap cap then no longer binds)."
 }
