@@ -34,8 +34,13 @@ name: Factory production
 
 on:
   push:
+    # KHÔNG dùng paths filter: với workflow đa-trigger, GitHub vẫn tạo run
+    # record 0-job (conclusion FAILURE) cho push bị paths filter loại →
+    # commit bị gắn check đỏ vô nghĩa dù KHÔNG job nào chạy sai.
+    # Giờ MỌI push vào main đều chạy workflow thật: job push-gate (no-op
+    # xanh, không checkout/token) giữ run SUCCESS; publish chỉ chạy khi
+    # push-gate xác nhận push có đụng _drafts/** (outputs.drafts).
     branches: [main]
-    paths: ['_drafts/**']
   schedule:
     - cron: '*/30 * * * *'   # pipeline coordinator (production entrypoint)
     - cron: '10 * * * *'     # Agent #6 production watchdog (nhẹ, mỗi giờ)
@@ -59,17 +64,54 @@ permissions:
   contents: write
 
 jobs:
+  # ------------------------------------------------------------------
+  # push-gate (GUARD JOB): mọi push vào main đều chạy job no-op này →
+  # run luôn có ít nhất 1 job xanh (SUCCESS) thay vì record đỏ 0-job
+  # của push bị paths filter loại. Job này KHÔNG checkout, KHÔNG token
+  # (permissions: {}), không đụng production. Ngoài ra nó detect push có
+  # đụng _drafts/** (đọc payload commits của push event, không checkout)
+  # và xuất outputs.drafts — publish dựa vào đó thay paths filter đã bỏ.
+  # ------------------------------------------------------------------
+  push-gate:
+    if: github.event_name == 'push' && github.repository == 'thuexemayhanoi/lab'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions: {}
+    outputs:
+      drafts: ${{ steps.drafts.outputs.drafts }}
+    steps:
+      - name: 'Phát hiện push đụng _drafts/** (không checkout, không token)'
+        id: drafts
+        env:
+          COMMITS: ${{ toJSON(github.event.commits) }}
+        run: |
+          if printf '%s' "$COMMITS" \
+            | jq -r '.[]? | (.modified // [])[], (.added // [])[]' \
+            | grep -q '^_drafts/'; then
+            echo "drafts=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "drafts=false" >> "$GITHUB_OUTPUT"
+          fi
+
   publish:
+    needs: push-gate
     # ROUTING ALLOWLIST (không phải denylist): publish CHỈ chạy trên
-    # (a) push _drafts/** hoặc (b) dispatch status|recover|diagnostics.
+    # (a) push CÓ đụng _drafts/** (push-gate outputs.drafts == 'true') hoặc
+    # (b) dispatch status|recover|diagnostics.
+    # always() để không bị needs-skip khi push-gate không chạy (dispatch);
+    # push không đụng draft → drafts != 'true' → publish KHÔNG chạy.
     # Mọi event khác (schedule, workflow_run, dispatch pipeline|selftest|
     # repair|watchdog) KHÔNG bao giờ rơi vào job này — mỗi event chỉ đến
     # đúng job của nó (pipeline / agent-repair / agent-supervisor /
     # agent-watchdog).
     if: >-
+      always() &&
       github.repository == 'thuexemayhanoi/lab' &&
       (
-        github.event_name == 'push' ||
+        (
+          github.event_name == 'push' &&
+          needs.push-gate.outputs.drafts == 'true'
+        ) ||
         (
           github.event_name == 'workflow_dispatch' &&
           (

@@ -212,7 +212,11 @@ test('workflow: factory-production.yml kích hoạt pipeline đúng (cron 30 ph�
   assert.match(pm[1], /inputs\.action == 'recover'/, 'publish job nhận maintenance dispatch recover');
   assert.match(pm[1], /inputs\.action == 'diagnostics'/, 'publish job nhận maintenance dispatch diagnostics');
   assert.doesNotMatch(pm[1], /github\.event_name != /, 'KHÔNG còn denylist — routing phải là allowlist rõ ràng');
-  assert.match(yml, /paths: \['_drafts\/\*\*'\]/, 'push trigger chỉ _drafts');
+  // push trigger KHÔNG dùng paths filter: GitHub tạo record đỏ 0-job
+  // (conclusion failure) cho push bị filter loại → gate _drafts phải nằm
+  // ở job push-gate + publish needs.push-gate.outputs.drafts.
+  assert.doesNotMatch(yml, /paths: /, 'push trigger KHÔNG dùng paths filter (fix run đỏ 0-job)');
+  assert.match(yml, /needs\.push-gate\.outputs\.drafts == 'true'/, 'publish chỉ chạy push có draft (gate qua push-gate outputs)');
 });
 
 // =====================================================================
@@ -266,6 +270,12 @@ function evalGhExpr(expr, ctx) { // subset: == != && || ! ( ) 'string' a.b.c
     if (t === '(') { const v = or(); const c = eat(); if (c !== ')') throw new Error('thiếu )'); return v; }
     if (t === '!') return !truthy(primary());
     if (/^'/.test(t)) return t.slice(1, -1);
+    if (peek() === '(' && /^[A-Za-z][A-Za-z0-9_]*$/.test(t)) { // hàm 0 đối số: always()
+      const open = eat(); const close = eat();
+      if (open !== '(' || close !== ')') throw new Error('hàm ' + t + ' parse không được');
+      if (t === 'always') return true; // publish dùng always() để không bị needs-skip trên dispatch
+      throw new Error('hàm chưa hỗ trợ trong evaluator: ' + t + '()');
+    }
     return resolve(t);
   }
   const truthy = v => v !== null && v !== false && v !== '' && v !== 0;
@@ -296,15 +306,22 @@ function routeAll(ctx) {
   for (const [job, expr] of Object.entries(jobs)) out[job] = evalGhExpr(expr, gh);
   return out;
 }
-test('workflow routing: mỗi event đến ĐÚNG job (evaluate if thật của cả 5 job)', () => {
+test('workflow routing: mỗi event đến ĐÚNG job (evaluate if thật của cả 6 job)', () => {
   const only = (o, jobs) => { // đúng các job trong `jobs` chạy, còn lại KHÔNG
     const run = Object.keys(o).filter(k => o[k]);
     assert.deepStrictEqual(run.sort(), [...jobs].sort(),
       'event ' + JSON.stringify(ctxOf) + ' phải chạy đúng ' + JSON.stringify(jobs) + ' (got: ' + run.join(',') + ')');
   };
   let ctxOf;
-  // push draft → publish
-  ctxOf = { event_name: 'push' }; only(routeAll(ctxOf), ['publish']);
+  // push KHÔNG đụng _drafts/** → CHỈ push-gate (no-op xanh → run SUCCESS,
+  // không còn record đỏ 0-job của push bị paths filter loại)
+  ctxOf = { event_name: 'push' }; only(routeAll(ctxOf), ['push-gate']);
+  // push CÓ đụng _drafts/** (push-gate outputs.drafts == 'true') → push-gate + publish
+  const gateDrafts = { 'push-gate': { outputs: { drafts: 'true' } } };
+  ctxOf = { event_name: 'push', needs: gateDrafts }; only(routeAll(ctxOf), ['push-gate', 'publish']);
+  const gateNoDrafts = { 'push-gate': { outputs: { drafts: 'false' } } };
+  assert.equal(routeAll({ event_name: 'push', needs: gateNoDrafts })['publish'], false,
+    'push không đụng draft → publish KHÔNG chạy (gate không bị nới)');
   // dispatch maintenance → publish (job bảo trì)
   for (const a of ['status', 'recover', 'diagnostics']) {
     ctxOf = { event_name: 'workflow_dispatch', action: a }; only(routeAll(ctxOf), ['publish']);
@@ -336,6 +353,34 @@ test('workflow routing: mỗi event đến ĐÚNG job (evaluate if thật của 
   // repo khác → KHÔNG job nào chạy
   const off = routeAll({ event_name: 'push', github: { repository: 'someone/else' } });
   assert.ok(Object.values(off).every(v => v === false), 'repo khác phải không chạy job nào');
+});
+
+test('push-gate guard job: fix đỏ 0-job, KHÔNG nới gate publish', () => {
+  const yml = fs.readFileSync(path.join(ROOT, '.github', 'workflows', 'factory-production.yml'), 'utf8');
+  // Nguyên nhân đỏ 0-job: paths filter tạo record failure cho push bị loại → phải bỏ
+  assert.ok(!yml.includes("paths: ['_drafts/**']"),
+    'on.push KHÔNG còn paths filter (nguyên nhân run record đỏ 0-job)');
+  assert.ok(/on:\n  push:\n(    #[^\n]*\n)*    branches: \[main\]/.test(yml),
+    'on.push vẫn giữ branches: [main] (không nới scope branch)');
+  // push-gate là job đầu, trước publish
+  const gate = yml.slice(yml.indexOf('  push-gate:'), yml.indexOf('  publish:'));
+  assert.ok(gate.length > 100, 'job push-gate phải tồn tại, đặt trước publish');
+  assert.ok(gate.includes("if: github.event_name == 'push' && github.repository == 'thuexemayhanoi/lab'"),
+    'push-gate if: chỉ push trên repo này');
+  assert.ok(gate.includes('permissions: {}'), 'push-gate KHÔNG có permission nào');
+  assert.ok(!gate.includes('uses:'), 'push-gate KHÔNG dùng action nào (không checkout — chỉ đọc payload commits)');
+  assert.ok(gate.includes('outputs:') && gate.includes('drafts: ${{ steps.drafts.outputs.drafts }}'),
+    'push-gate xuất outputs.drafts cho publish dùng');
+  assert.ok(gate.includes('toJSON(github.event.commits)'), 'push-gate đọc payload commits (không checkout)');
+  // publish: cần push-gate, chỉ chạy push có draft; always() chống needs-skip trên dispatch
+  const pub = yml.slice(yml.indexOf('  publish:'), yml.indexOf('\n  pipeline:\n'));
+  assert.ok(pub.includes('needs: push-gate'), 'publish cần push-gate');
+  assert.ok(pub.includes("needs.push-gate.outputs.drafts == 'true'"),
+    'publish CHỈ chạy push khi push-gate xác nhận đụng _drafts/** (gate không nới)');
+  assert.ok(pub.includes('always() &&'), 'publish luôn() để không bị needs-skip khi push-gate không chạy (dispatch)');
+  assert.ok(pub.includes("github.event_name == 'push'"), 'publish if vẫn allowlist event push');
+  assert.ok(pub.includes("inputs.action == 'status'") && pub.includes("inputs.action == 'recover'") &&
+    pub.includes("inputs.action == 'diagnostics'"), 'publish if vẫn giữ allowlist dispatch maintenance');
 });
 
 // =====================================================================
