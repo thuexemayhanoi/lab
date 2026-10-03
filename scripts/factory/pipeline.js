@@ -42,6 +42,7 @@ const PIPE_DIR = path.join(ROOT, 'pipeline');          // gitignored (workspaces
 const LOCK_FILE = path.join(PIPE_DIR, 'lock.json');
 const factory = require(path.join(__dirname, 'factory.js'));
 const adapter = require(path.join(__dirname, 'writer-adapter.js'));
+const agentsCore = require(path.join(__dirname, 'agents-core.js')); // chỉ đọc maintenance lock (side-effect free)
 
 const PCFG = (() => {
   const c = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'pipeline.json'), 'utf8'));
@@ -238,6 +239,16 @@ async function cycle() {
   }
   let held = true;
   const finish = (code) => { if (held) { releaseLock(); held = false; } process.exitCode = code; return code; };
+
+  // ---- AGENTS #4/#5 (docs/AGENTS-OPS.md): maintenance lock => PAUSED ----
+  // Khi Agent #4 (repair) hoặc #5 (supervisor) đang sửa hạ tầng, coordinator
+  // KHÔNG mutate (không claim/viết/QA/publish) — thoát sạch exit 0.
+  // Đây là cơ chế "pause production mutations while repairing".
+  if (agentsCore.maintHeld()) {
+    const m = agentsCore.maintRaw();
+    console.log("PIPELINE PAUSED: maintenance lock đang được giữ (incident " + (m && m.incident_id) + ", holder " + (m && m.holder) + ") — Agent #4/#5 đang sửa hạ tầng; KHÔNG claim, KHÔNG viết, KHÔNG publish (exit 0).");
+    return finish(0);
+  }
 
   const state = loadState();
   if (state.stopped_reason) console.error('PIPELINE STOPPED (lần trước): ' + state.stopped_reason);
