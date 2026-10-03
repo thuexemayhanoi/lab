@@ -6,7 +6,7 @@ content strategy.** Writers (w1–w3) vẫn content-only như cũ.
 
 | Agent | File | CLI | Trigger | Trách nhiệm |
 |---|---|---|---|---|
-| **#4 repair** | `scripts/factory/agent-repair.js` | `repair --source … \| status` | `workflow_run` (Factory production FAIL trên main) hoặc dispatch `action=repair` | First-line infra repair — MỘT pass, không poll |
+| **#4 repair** | `scripts/factory/agent-repair.js` | `repair --source … \| status` | `workflow_run` (Factory production FAIL trên main, workflow `factory-repair.yml`) hoặc dispatch `action=repair` | First-line infra repair — MỘT pass, không poll |
 | **#5 supervisor** | `scripts/factory/agent-supervisor.js` | `run --incident <id> \| conclude --incident <id> \| status` | Chỉ sau khi #4 trả `SUCCESS` hoặc `ESCALATE` (job `agent-supervisor`, `needs: agent-repair`) | Verify độc lập HOẶC đúng MỘT lần sửa second-line; fail ⇒ pause + report + STOP |
 | **#6 watchdog** | `scripts/factory/agent-watchdog.js` | `check [--trigger-cmd CMD] [--dry-run] \| status` | Cron `10 * * * *` (job `agent-watchdog`, dispatch `action=watchdog`) | Đánh thức factory nếu không có progress hợp lệ ≥ 2 giờ |
 
@@ -63,9 +63,11 @@ store + probes). Cấu hình: `config/agents.json`.
 
 ## Luồng sự cố điển hình
 
-1. Job publish/pipeline FAIL trên main ⇒ `workflow_run` ⇒ job `agent-repair` ⇒
-   #4 tạo `incident_id`, giữ maintenance lock (production PAUSED), inspect
-   txn/writer-lock/coordinator-lock/pipeline-state.
+1. Job publish/pipeline FAIL trên main ⇒ `workflow_run` (`factory-repair.yml`
+   lắng nghe run Factory production — KHÔNG nằm trong chính workflow đó:
+   GitHub cấm workflow tự tham chiếu, fail to parse cả file) ⇒ job
+   `agent-repair` ⇒ #4 tạo `incident_id`, giữ maintenance lock (production
+   PAUSED), inspect txn/writer-lock/coordinator-lock/pipeline-state.
 2. Lớp an toàn đã hiểu ⇒ sửa nhỏ nhất: `txn-stuck`/`writer-lock-stale` ⇒
    `operator.js recover` (deterministic); `coord-lock-stale` ⇒ giải TTL lock;
    `pipeline-state-corrupt` ⇒ backup + dựng lại default (matrix là truth).

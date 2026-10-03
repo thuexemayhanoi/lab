@@ -37,13 +37,12 @@ jobs:
     if: github.repository == 'thuexemayhanoi/lab'
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    permissions: {}
+    permissions:
+      contents: read
     outputs:
       engine: ${{ steps.scope.outputs.engine }}
     steps:
-      - name: 'PR: checkout để diff three-dot'
-        if: github.event_name == 'pull_request'
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -59,9 +58,11 @@ jobs:
             exit 0
           fi
           if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
-            FILES=$(git diff --name-only "origin/${BASE_REF}...HEAD")
+            FILES=$(git diff --name-only "origin/${BASE_REF}...HEAD" || true)
           else
-            FILES=$(printf '%s' "$COMMITS" | jq -r '.[]? | (.modified // [])[], (.added // [])[], (.removed // [])[]')
+            # push: git diff cuối commit + payload commits (API push có thể rỗng payload)
+            FILES=$( (git diff --name-only HEAD~1 HEAD || true;
+              printf '%s' "$COMMITS" | jq -r '.[]? | (.modified // [])[], (.added // [])[], (.removed // [])[]' || true) | sort -u )
           fi
           if printf '%s' "$FILES" | grep -Eq '^(scripts/factory/|config/|tests/|\.github/workflows/)'; then
             echo "engine=true" >> "$GITHUB_OUTPUT"

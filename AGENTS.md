@@ -257,26 +257,31 @@ Rules:
   tests, do NOT mutate production truth to make tests green; fix the root
   cause and re-run the affected tier AND every tier above it.
 - Reading Actions in the push-driven model: the ONLY workflows in this repo
-  are `factory-production.yml` (production loop + agents) and
-  `factory-soak.yml` (Tier 4 battery). Every push to `main` runs
-  `factory-production.yml`: the `push-gate` no-op job keeps the run GREEN
-  (GitHub records a 0-job FAILURE placeholder for path-filtered pushes, so
-  NO paths filter is used on `on.push`), and `publish` runs ONLY when the
-  push actually touches `_drafts/**` (detected by `push-gate` from the push
-  payload, no checkout) or on maintenance dispatch
-  (status|recover|diagnostics); the `*/30` cron drives `pipeline`, the
-  `10 * * * *` cron drives `agent-watchdog`; a FAILED Factory production
-  run triggers `agent-repair` → `agent-supervisor` (workflow_run + needs
-  handoff over the committed incident). A REFUSED draft push is red
-  BY DESIGN, not an engine failure: `push-selection.js` exits 3 and the
-  production job goes RED while NOTHING is mutated (fix the draft
-  contract on the writer side, push again). The Tier 4 battery in
-  `factory-soak.yml` starts on every push to `main` and every
-  pull_request, but the heavy suites (agent-suite + pipeline-suite +
-  soak) only execute when `tier4-gate` detects a reliability-relevant
-  change (scripts/factory/**, config/**, tests/**, .github/workflows/**)
-  — a content-only push gets a green gate run and never burns Tier 4
-  minutes; `workflow_dispatch` re-runs the full battery on demand.
+  are `factory-production.yml` (production loop + watchdog), `factory-repair.yml`
+  (#4/#5 — listens to Factory production runs) and `factory-soak.yml`
+  (Tier 4 battery). Every push to `main` runs `factory-production.yml`: the
+  `push-gate` no-op job keeps the run GREEN (GitHub records a 0-job FAILURE
+  placeholder for path-filtered pushes, so NO paths filter is used on
+  `on.push`), and `publish` runs ONLY when the push actually touches
+  `_drafts/**` (detected by `push-gate` via git diff + push payload) or on
+  maintenance dispatch (status|recover|diagnostics); the `*/30` cron drives
+  `pipeline`, the `10 * * * *` cron drives `agent-watchdog`. A FAILED
+  Factory production run triggers `agent-repair` → `agent-supervisor` in
+  `factory-repair.yml` (workflow_run + needs handoff over the committed
+  incident). CRITICAL: the workflow_run trigger MUST live in
+  `factory-repair.yml`, never in `factory-production.yml` — GitHub refuses
+  a workflow listening to itself ("cannot listen to itself"), which makes
+  the whole file unparseable (every run a 0-job failure, schedules dead).
+  A REFUSED draft push is red BY DESIGN, not an engine failure:
+  `push-selection.js` exits 3 and the production job goes RED while
+  NOTHING is mutated (fix the draft contract on the writer side, push
+  again). The Tier 4 battery in `factory-soak.yml` starts on every push
+  to `main` and every pull_request, but the heavy suites (agent-suite +
+  pipeline-suite + soak) only execute when `tier4-gate` detects a
+  reliability-relevant change (scripts/factory/**, config/**, tests/**,
+  .github/workflows/**) — a content-only push gets a green gate run and
+  never burns Tier 4 minutes; `workflow_dispatch` re-runs the full
+  battery on demand.
 
 ## Scope → gates (Simple Production Mode)
 
@@ -330,9 +335,10 @@ marker; see `docs/PROC-RECOVERY.md`).
 Three INFRASTRUCTURE-ONLY agents (docs/AGENTS-OPS.md). They NEVER write
 articles and never touch queue/matrix/taxonomy/content strategy.
 
-- **#4 repair** (`scripts/factory/agent-repair.js`, job `agent-repair`):
-  first-line repair, triggered by `workflow_run` when a production job
-  fails on main (or dispatch `action=repair`). Creates a unique
+- **#4 repair** (`scripts/factory/agent-repair.js`, job `agent-repair` in
+  `factory-repair.yml`): first-line repair, triggered by `workflow_run`
+  when a production job fails on main (or dispatch `action=repair` on
+  `factory-repair.yml`). Creates a unique
   `incident_id`, acquires the GLOBAL maintenance lock
   (`pipeline/maintenance.json` — production mutations pause while held),
   inspects only the failing state, applies the smallest safe repair, runs

@@ -55,6 +55,8 @@ push-driven production loop (writer pushes `_drafts/` pairs → EXACT-id
 claim/QA/publish) with final-tree verify + safe push; every push to `main`
 also runs a no-op `push-gate` job so the run stays green, and its cron
 entries drive the pipeline coordinator and the production watchdog.
+`factory-repair.yml` holds repair agents #4/#5, listening to failed
+Factory production runs (workflow_run must not self-reference).
 `factory-soak.yml` is the Tier 4 battery (agent-suite + pipeline-suite +
 multi-chunk soak): it starts on every push/PR but the heavy suites only
 fire for reliability-relevant changes (engine/workflow/tests/config).

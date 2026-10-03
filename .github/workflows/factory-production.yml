@@ -47,14 +47,16 @@ on:
   workflow_dispatch:
     inputs:
       action:
-        description: 'status | recover | diagnostics | pipeline | selftest | repair | watchdog'
+        description: 'status | recover | diagnostics | pipeline | selftest | watchdog'
         required: true
         type: string
-  workflow_run:
-    # Agent #4 trigger event-driven: MỌI run của Factory production fail
-    # (xử lý logic + dedup/circuit-breaker nằm trong agent-repair.js).
-    workflows: ['Factory production']
-    types: [completed]
+  # KHÔNG có trigger workflow_run trong workflow này: GitHub TỪ CHỐI
+  # workflow_run tự tham chiếu ("Workflow 'Factory production' cannot
+  # listen to itself") — cả workflow fail to parse ⇒ MỌI run 0-job
+  # failure, cron không chạy, agent #4 không bao giờ được trigger.
+  # Agent #4/#5 (agent-repair + agent-supervisor) đã tách sang
+  # .github/workflows/factory-repair.yml — workflow KHÁC lắng nghe
+  # run của 'Factory production' (hợp lệ).
 
 concurrency:
   group: lab-factory-production
@@ -76,18 +78,24 @@ jobs:
     if: github.event_name == 'push' && github.repository == 'thuexemayhanoi/lab'
     runs-on: ubuntu-latest
     timeout-minutes: 3
-    permissions: {}
+    permissions:
+      contents: read
     outputs:
       drafts: ${{ steps.drafts.outputs.drafts }}
     steps:
-      - name: 'Phát hiện push đụng _drafts/** (không checkout, không token)'
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: 'Phát hiện push đụng _drafts/** (git diff + payload commits)'
         id: drafts
         env:
           COMMITS: ${{ toJSON(github.event.commits) }}
         run: |
-          if printf '%s' "$COMMITS" \
-            | jq -r '.[]? | (.modified // [])[], (.added // [])[]' \
-            | grep -q '^_drafts/'; then
+          set -eu
+          FILES=$( (git diff --name-only --diff-filter=ACMR HEAD~1 HEAD || true;
+            printf '%s' "$COMMITS" | jq -r '.[]? | (.modified // [])[], (.added // [])[], (.removed // [])[]' || true) | sort -u )
+          if printf '%s' "$FILES" | grep -q '^_drafts/'; then
             echo "drafts=true" >> "$GITHUB_OUTPUT"
           else
             echo "drafts=false" >> "$GITHUB_OUTPUT"
@@ -100,10 +108,9 @@ jobs:
     # (b) dispatch status|recover|diagnostics.
     # always() để không bị needs-skip khi push-gate không chạy (dispatch);
     # push không đụng draft → drafts != 'true' → publish KHÔNG chạy.
-    # Mọi event khác (schedule, workflow_run, dispatch pipeline|selftest|
-    # repair|watchdog) KHÔNG bao giờ rơi vào job này — mỗi event chỉ đến
-    # đúng job của nó (pipeline / agent-repair / agent-supervisor /
-    # agent-watchdog).
+    # Mọi event khác (schedule, dispatch pipeline|selftest|watchdog)
+    # KHÔNG bao giờ rơi vào job này — mỗi event chỉ đến đúng job của nó
+    # (pipeline / agent-watchdog); #4/#5 nằm ở factory-repair.yml.
     if: >-
       always() &&
       github.repository == 'thuexemayhanoi/lab' &&
@@ -493,146 +500,6 @@ jobs:
           if(l.locked){console.error("writer lock còn held:",l.holder);process.exit(1);}
           console.log("FACTORY CLEAN: txn inactive, lock free");'
           node scripts/factory/pipeline.js status
-
-  # ===========================================================================
-  # AGENTS VẬN HÀNH (docs/AGENTS-OPS.md) — #4 repair, #5 supervisor, #6
-  # watchdog. KHÔNG BAO GIỜ viết bài. Serialized với publish/pipeline qua
-  # CÙNG concurrency group lab-factory-production (workflow-level) — chỉ một
-  # incident mutate hạ tầng tại một thời điểm; maintenance lock
-  # pipeline/maintenance.json + incident audit reports/incidents/.
-  # ===========================================================================
-  agent-repair:
-    # AGENT #4 — first-line infrastructure repair. Trigger: workflow_run
-    # (Factory production FAIL trên main) hoặc dispatch action=repair.
-    if: github.repository == 'thuexemayhanoi/lab' && ((github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.name == 'Factory production' && github.event.workflow_run.head_branch == 'main') || (github.event_name == 'workflow_dispatch' && inputs.action == 'repair'))
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    outputs:
-      incident_id: ${{ steps.a4.outputs.incident_id }}
-      result: ${{ steps.a4.outputs.result }}
-      # SHA của commit incident #4 vừa push (handoff #4→#5 QUA COMMIT, không
-      # phải SHA cũ của event — #5 checkout đúng commit #4 để đọc incident).
-      head_sha: ${{ steps.a4commit.outputs.head_sha }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: Cấu hình git identity
-        run: |
-          git config user.name "factory-operator-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: 'Agent #4 — first-line repair (incident_id + maintenance lock; KHÔNG viết bài)'
-        id: a4
-        env:
-          A4_SOURCE: ${{ github.event_name == 'workflow_run' && 'workflow_run' || 'manual' }}
-          A4_RUN_ID: ${{ github.event.workflow_run.id || github.run_id }}
-          A4_RUN_URL: ${{ github.event.workflow_run.html_url || '' }}
-          A4_JOB: ${{ github.event.workflow_run.name || 'Factory production' }}
-          A4_CONCLUSION: ${{ github.event.workflow_run.conclusion || 'manual-dispatch' }}
-        run: |
-          set -eu
-          node scripts/factory/agent-repair.js repair             --source "$A4_SOURCE"             --run-id "$A4_RUN_ID"             --run-url "$A4_RUN_URL"             --job "$A4_JOB"             --reason "Factory production run fail (conclusion=$A4_CONCLUSION)" 2>&1 | tee /tmp/a4.log
-          echo "incident_id=$(grep -o 'AGENT4_INCIDENT_ID=.*' /tmp/a4.log | tail -1 | cut -d= -f2 || echo none)" >> "$GITHUB_OUTPUT"
-          echo "result=$(grep -o 'AGENT4_RESULT=.*' /tmp/a4.log | tail -1 | cut -d= -f2 || echo none)" >> "$GITHUB_OUTPUT"
-
-      - name: 'Commit incident report (audit: reports/incidents/) — 1 commit, KHÔNG force push'
-        id: a4commit
-        # always(): incident audit (bằng chứng để run sau nhận biết #4 gián đoạn)
-        # được push KỂ CẢ khi step #4 fail — KHÔNG để incident rơi khỏi main.
-        if: always()
-        run: |
-          set -eu
-          git add -A
-          if git diff --cached --quiet; then
-            echo "agent #4: không có gì để commit"
-          else
-            git commit -m "agent-incident: ${{ steps.a4.outputs.incident_id }} — Agent #4 audit trail (repair ${{ steps.a4.outputs.result }})"
-            A4_PUSH=0
-            until git push; do
-              A4_PUSH=$((A4_PUSH+1))
-              if [ "$A4_PUSH" -ge 3 ]; then
-                echo "::error::agent #4 push FAIL sau $A4_PUSH lần — STOP, không force push (audit nằm sẵn trên runner)"
-                exit 1
-              fi
-              git fetch origin main
-              git rebase origin/main
-            done
-          fi
-          # handoff #4→#5: SHA cuối cùng sau khi commit incident (hoặc SHA checkout
-          # nếu không có gì để commit) — #5 checkout ĐÚNG SHA này.
-          echo "head_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-
-  agent-supervisor:
-    # AGENT #5 — verify độc lập kết quả #4, HOẶC đúng MỘT lần sửa second-line.
-    # Chạy sau #4 (SUCCESS|ESCALATE). KHÔNG sửa đồng thời (lock takeover).
-    needs: [agent-repair]
-    if: github.repository == 'thuexemayhanoi/lab' && needs.agent-repair.result == 'success' && (needs.agent-repair.outputs.result == 'SUCCESS' || needs.agent-repair.outputs.result == 'ESCALATE')
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    steps:
-      # HANDOFF #4→#5 QUA COMMIT: checkout ĐÚNG commit #4 vừa push (head_sha) —
-      # KHÔNG mặc định checkout SHA cũ của event; incident persist trên main.
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          ref: ${{ needs.agent-repair.outputs.head_sha || github.sha }}
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: Cấu hình git identity
-        run: |
-          git config user.name "factory-operator-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: 'Handoff verify: commit #4 PHẢI nằm trên origin/main (fail-closed)'
-        run: |
-          set -eu
-          git fetch origin main
-          if [ -n "${{ needs.agent-repair.outputs.head_sha }}" ]; then
-            if ! git merge-base --is-ancestor "${{ needs.agent-repair.outputs.head_sha }}" origin/main; then
-              echo "::error::commit #4 (${{ needs.agent-repair.outputs.head_sha }}) KHÔNG nằm trên origin/main — từ chối chạy #5 trên SHA lạ (fail-closed)"
-              exit 1
-            fi
-          fi
-
-      - name: 'Agent #5 — verify độc lập / 1 lần second-line + resume MỘT entrypoint'
-        env:
-          WRITER_RUNTIME: ${{ vars.WRITER_RUNTIME || 'off' }}
-          WRITER_ENDPOINT: ${{ vars.WRITER_ENDPOINT || '' }}
-          WRITER_API_KEY: ${{ secrets.WRITER_API_KEY || '' }}
-          WRITER_TIMEOUT_MS: ${{ vars.WRITER_TIMEOUT_MS || '300000' }}
-        run: node scripts/factory/agent-supervisor.js run --incident "${{ needs.agent-repair.outputs.incident_id }}"
-
-      - name: 'Commit incident final + cycle outputs — 1 commit, KHÔNG force push'
-        run: |
-          set -eu
-          git add -A
-          if git diff --cached --quiet; then
-            echo "agent #5: không có gì để commit"
-            exit 0
-          fi
-          git commit -m "agent-incident: ${{ needs.agent-repair.outputs.incident_id }} — Agent #5 final + resume"
-          A5_PUSH=0
-          until git push; do
-            A5_PUSH=$((A5_PUSH+1))
-            if [ "$A5_PUSH" -ge 3 ]; then
-              echo "::error::agent #5 push FAIL sau $A5_PUSH lần — STOP, không force push"
-              exit 1
-            fi
-            git fetch origin main
-            git rebase origin/main
-          done
-
-      - name: 'Kết luận incident (VERIFIED_RESUMED => xanh; FAILED_PAUSED => đỏ + STOP, chờ human)'
-        run: node scripts/factory/agent-supervisor.js conclude --incident "${{ needs.agent-repair.outputs.incident_id }}"
 
   agent-watchdog:
     # AGENT #6 — production watchdog, MỘT trách nhiệm: nếu KHÔNG có progress

@@ -221,12 +221,13 @@ test('workflow: factory-production.yml kích hoạt pipeline đúng (cron 30 ph�
 
 // =====================================================================
 // WORKFLOW ROUTING — evaluate điều kiện `if` THẬT của từng job cho mọi
-// event (KHÔNG chỉ grep): push draft, dispatch status/recover/diagnostics/
-// pipeline/selftest/repair/watchdog, workflow_run failure, 2 cron — mỗi
-// event chỉ đến đúng job của nó.
+// event (KHÔNG chỉ grep): push (không draft / có draft), dispatch
+// status/recover/diagnostics/pipeline/selftest/watchdog, 2 cron, và
+// factory-repair.yml (workflow_run Factory production FAIL + dispatch
+// repair) — mỗi event chỉ đến đúng job của nó.
 // =====================================================================
-function wfJobsIf() { // trích {job: if-expression} từ factory-production.yml
-  const lines = fs.readFileSync(path.join(ROOT, '.github', 'workflows', 'factory-production.yml'), 'utf8').split('\n');
+function wfJobsIf(wf = 'factory-production.yml') { // trích {job: if-expression} từ workflow yml
+  const lines = fs.readFileSync(path.join(ROOT, '.github', 'workflows', wf), 'utf8').split('\n');
   const jobs = {}; let inJobs = false, cur = null, fold = null;
   for (const line of lines) {
     if (/^jobs:\s*$/.test(line)) { inJobs = true; continue; }
@@ -299,14 +300,14 @@ function routeCtx(ctx) { // ctx = {event_name, schedule?, action?, workflow_run?
       event: ctx.schedule ? { schedule: ctx.schedule } : ctx.workflow_run || {} }, ctx.github || {}),
     inputs: { action: ctx.action || null }, needs: ctx.needs || {} };
 }
-function routeAll(ctx) {
-  const jobs = wfJobsIf();
+function routeAll(ctx, wf = 'factory-production.yml') {
+  const jobs = wfJobsIf(wf);
   const gh = routeCtx(ctx);
   const out = {};
   for (const [job, expr] of Object.entries(jobs)) out[job] = evalGhExpr(expr, gh);
   return out;
 }
-test('workflow routing: mỗi event đến ĐÚNG job (evaluate if thật của cả 6 job)', () => {
+test('workflow routing: mỗi event đến ĐÚNG job (evaluate if thật của cả 4 job factory-production.yml)', () => {
   const only = (o, jobs) => { // đúng các job trong `jobs` chạy, còn lại KHÔNG
     const run = Object.keys(o).filter(k => o[k]);
     assert.deepStrictEqual(run.sort(), [...jobs].sort(),
@@ -332,20 +333,15 @@ test('workflow routing: mỗi event đến ĐÚNG job (evaluate if thật của 
   }
   // dispatch watchdog → agent-watchdog
   ctxOf = { event_name: 'workflow_dispatch', action: 'watchdog' }; only(routeAll(ctxOf), ['agent-watchdog']);
-  // dispatch repair → agent-repair (#5 theo KẾT QUẢ outputs của #4, không phải event)
-  ctxOf = { event_name: 'workflow_dispatch', action: 'repair' }; only(routeAll(ctxOf), ['agent-repair']);
-  //   ... #4 SUCCESS|ESCALATE + job xanh => #5 chạy
-  const needsOk = { 'agent-repair': { result: 'success', outputs: { result: 'SUCCESS', incident_id: 'INC-1' } } };
-  const withSup = routeAll({ event_name: 'workflow_dispatch', action: 'repair', needs: needsOk });
-  assert.equal(withSup['agent-supervisor'], true);
-  const needsRefused = { 'agent-repair': { result: 'success', outputs: { result: 'REFUSED_DEDUP', incident_id: 'none' } } };
-  assert.equal(routeAll({ event_name: 'workflow_dispatch', action: 'repair', needs: needsRefused })['agent-supervisor'], false);
-  // workflow_run failure của Factory production trên main → CHỈ agent-repair, publish KHÔNG chạy
-  ctxOf = { event_name: 'workflow_run', workflow_run: { workflow_run: { conclusion: 'failure', name: 'Factory production', head_branch: 'main' } } };
-  only(routeAll(ctxOf), ['agent-repair']);
-  //   ... run KHÔNG fail / branch khác → không agent nào chạy
-  assert.equal(routeAll({ event_name: 'workflow_run', workflow_run: { workflow_run: { conclusion: 'success', name: 'Factory production', head_branch: 'main' } } })['agent-repair'], false);
-  assert.equal(routeAll({ event_name: 'workflow_run', workflow_run: { workflow_run: { conclusion: 'failure', name: 'Factory production', head_branch: 'dev' } } })['agent-repair'], false);
+  // dispatch repair → đã TÁCH sang factory-repair.yml (workflow_run tự tham
+  // chiếu bị GitHub từ chối parse) ⇒ KHÔNG job nào của production chạy
+  ctxOf = { event_name: 'workflow_dispatch', action: 'repair' };
+  assert.ok(Object.values(routeAll(ctxOf)).every(v => v === false),
+    'dispatch repair KHÔNG chạy job nào trong factory-production.yml');
+  // workflow_run event → factory-production.yml KHÔNG còn trigger này (self-listen bị cấm)
+  const wrAll = routeAll({ event_name: 'workflow_run', workflow_run: { workflow_run: { conclusion: 'failure', name: 'Factory production', head_branch: 'main' } } });
+  assert.ok(Object.values(wrAll).every(v => v === false),
+    'workflow_run KHÔNG trigger job nào trong factory-production.yml (self-listen bị GitHub cấm)');
   // cron */30 → CHỈ pipeline (publish KHÔNG chạy trên schedule)
   ctxOf = { event_name: 'schedule', schedule: '*/30 * * * *' }; only(routeAll(ctxOf), ['pipeline']);
   // cron 10 * * * * → CHỈ agent-watchdog
@@ -353,6 +349,27 @@ test('workflow routing: mỗi event đến ĐÚNG job (evaluate if thật của 
   // repo khác → KHÔNG job nào chạy
   const off = routeAll({ event_name: 'push', github: { repository: 'someone/else' } });
   assert.ok(Object.values(off).every(v => v === false), 'repo khác phải không chạy job nào');
+});
+
+test('workflow routing factory-repair.yml: #4/#5 lắng nghe run Factory production (KHÔNG self-listen)', () => {
+  const only = (o, jobs) => {
+    const run = Object.keys(o).filter(k => o[k]);
+    assert.deepStrictEqual(run.sort(), [...jobs].sort(),
+      'phải chạy đúng ' + JSON.stringify(jobs) + ' (got: ' + run.join(',') + ')');
+  };
+  // workflow_run Factory production FAIL trên main → agent-repair
+  only(routeAll({ event_name: 'workflow_run', workflow_run: { workflow_run: { conclusion: 'failure', name: 'Factory production', head_branch: 'main' } } }, 'factory-repair.yml'), ['agent-repair']);
+  // workflow_run KHÔNG fail / branch khác → KHÔNG agent nào chạy
+  const ok = routeAll({ event_name: 'workflow_run', workflow_run: { workflow_run: { conclusion: 'success', name: 'Factory production', head_branch: 'main' } } }, 'factory-repair.yml');
+  assert.ok(Object.values(ok).every(v => v === false), 'run success → không agent nào chạy');
+  const dev = routeAll({ event_name: 'workflow_run', workflow_run: { workflow_run: { conclusion: 'failure', name: 'Factory production', head_branch: 'dev' } } }, 'factory-repair.yml');
+  assert.ok(Object.values(dev).every(v => v === false), 'branch khác main → không agent nào chạy');
+  // dispatch repair → agent-repair; #5 theo KẾT QUẢ outputs của #4 (không phải event)
+  only(routeAll({ event_name: 'workflow_dispatch', action: 'repair' }, 'factory-repair.yml'), ['agent-repair']);
+  const needsOk = { 'agent-repair': { result: 'success', outputs: { result: 'SUCCESS', incident_id: 'INC-1' } } };
+  assert.equal(routeAll({ event_name: 'workflow_dispatch', action: 'repair', needs: needsOk }, 'factory-repair.yml')['agent-supervisor'], true);
+  const needsRefused = { 'agent-repair': { result: 'success', outputs: { result: 'REFUSED_DEDUP', incident_id: 'none' } } };
+  assert.equal(routeAll({ event_name: 'workflow_dispatch', action: 'repair', needs: needsRefused }, 'factory-repair.yml')['agent-supervisor'], false);
 });
 
 test('push-gate guard job: fix đỏ 0-job, KHÔNG nới gate publish', () => {
@@ -367,11 +384,13 @@ test('push-gate guard job: fix đỏ 0-job, KHÔNG nới gate publish', () => {
   assert.ok(gate.length > 100, 'job push-gate phải tồn tại, đặt trước publish');
   assert.ok(gate.includes("if: github.event_name == 'push' && github.repository == 'thuexemayhanoi/lab'"),
     'push-gate if: chỉ push trên repo này');
-  assert.ok(gate.includes('permissions: {}'), 'push-gate KHÔNG có permission nào');
-  assert.ok(!gate.includes('uses:'), 'push-gate KHÔNG dùng action nào (không checkout — chỉ đọc payload commits)');
+  assert.ok(gate.includes('contents: read'), 'push-gate chỉ cần contents: read (checkout fetch-depth 2)');
+  assert.ok(!/uses: (?!actions\/checkout@v4)/.test(gate), 'push-gate KHÔNG dùng action nào ngoài checkout');
+  assert.ok(!gate.includes('persist-credentials: true'), 'push-gate KHÔNG giữ credentials');
   assert.ok(gate.includes('outputs:') && gate.includes('drafts: ${{ steps.drafts.outputs.drafts }}'),
     'push-gate xuất outputs.drafts cho publish dùng');
-  assert.ok(gate.includes('toJSON(github.event.commits)'), 'push-gate đọc payload commits (không checkout)');
+  assert.ok(gate.includes('git diff --name-only') && gate.includes('toJSON(github.event.commits)'),
+    'push-gate detect draft bằng git diff + payload commits (API push có thể rỗng payload)');
   // publish: cần push-gate, chỉ chạy push có draft; always() chống needs-skip trên dispatch
   const pub = yml.slice(yml.indexOf('  publish:'), yml.indexOf('\n  pipeline:\n'));
   assert.ok(pub.includes('needs: push-gate'), 'publish cần push-gate');
@@ -381,6 +400,37 @@ test('push-gate guard job: fix đỏ 0-job, KHÔNG nới gate publish', () => {
   assert.ok(pub.includes("github.event_name == 'push'"), 'publish if vẫn allowlist event push');
   assert.ok(pub.includes("inputs.action == 'status'") && pub.includes("inputs.action == 'recover'") &&
     pub.includes("inputs.action == 'diagnostics'"), 'publish if vẫn giữ allowlist dispatch maintenance');
+});
+
+test('factory-repair.yml: #4/#5 tách riêng — KHÔNG self-listen workflow_run (root cause đỏ 0-job)', () => {
+  // factory-production.yml KHÔNG còn trigger workflow_run: GitHub từ chối
+  // workflow lắng nghe chính nó ("cannot listen to itself") — cả workflow
+  // fail to parse ⇒ mọi run 0-job failure, cron không chạy.
+  const prod = fs.readFileSync(path.join(ROOT, '.github', 'workflows', 'factory-production.yml'), 'utf8');
+  assert.ok(!/workflow_run:/.test(prod),
+    'factory-production.yml KHÔNG được chứa trigger workflow_run (self-listen bị GitHub cấm parse)');
+  assert.ok(!/jobs:\n  agent-repair:/.test(prod), 'agent-repair đã tách sang factory-repair.yml');
+  assert.ok(!/jobs:\n  agent-supervisor:/.test(prod), 'agent-supervisor đã tách sang factory-repair.yml');
+
+  const yml = fs.readFileSync(path.join(ROOT, '.github', 'workflows', 'factory-repair.yml'), 'utf8');
+  assert.match(yml, /name: Factory repair/);
+  // lắng nghe run của Factory production — workflow KHÁC (hợp lệ), không tự tham chiếu
+  assert.match(yml, /workflow_run:\n    workflows: \['Factory production'\]/,
+    'factory-repair.yml lắng nghe run Factory production');
+  assert.ok(!/workflows: \['Factory repair'\]/.test(yml), 'KHÔNG tự tham chiếu (self-listen bị cấm)');
+  assert.match(yml, /types: \[completed\]/);
+  assert.match(yml, /workflow_dispatch:/, 'vẫn dispatch action=repair được');
+  // serialized với production: CÙNG concurrency group
+  assert.match(yml, /group: lab-factory-production/, 'cùng concurrency group với production');
+  assert.match(yml, /cancel-in-progress: false/, 'không cancel production đang chạy');
+  assert.match(yml, /permissions:\n  contents: write/, 'cần contents: write để commit incident');
+  // đủ 2 job: #4 + #5, handoff head_sha nguyên vẹn
+  assert.match(yml, /jobs:\n(  #[^\n]*\n)*  agent-repair:\n/, 'jobs: (cho phép comment block) rồi agent-repair');
+  assert.match(yml, /  agent-supervisor:\n    #[\s\S]*?needs: \[agent-repair\]/);
+  assert.match(yml, /head_sha: \$\{\{ steps\.a4commit\.outputs\.head_sha \}\}/, 'agent-repair outputs head_sha');
+  assert.match(yml, /ref: \$\{\{ needs\.agent-repair\.outputs\.head_sha \|\| github\.sha \}\}/,
+    'supervisor checkout đúng SHA #4');
+  assert.ok(!/--force\b/.test(yml), 'KHÔNG force push');
 });
 
 test('factory-soak.yml: Tier 4 battery THẬT tồn tại trên CI (không còn docs ghi ENFORCED cho workflow không tồn tại)', () => {
@@ -673,7 +723,7 @@ test('crash/resume mid-publish: chết giữa các publish chunk => resume publi
 });
 
 test('workflow handoff #4→#5 QUA COMMIT: head_sha output + commit incident if:always() + supervisor checkout đúng SHA #4 + verify nằm trên main', () => {
-  const yml = fs.readFileSync(path.join(ROOT, '.github', 'workflows', 'factory-production.yml'), 'utf8');
+  const yml = fs.readFileSync(path.join(ROOT, '.github', 'workflows', 'factory-repair.yml'), 'utf8');
   // (a) job agent-repair export head_sha sau khi commit incident
   assert.match(yml, /head_sha: \$\{\{ steps\.a4commit\.outputs\.head_sha \}\}/, 'agent-repair outputs head_sha');
   // (b) commit step #4 có id a4commit + if: always() (incident audit được push kể cả khi step #4 fail)
