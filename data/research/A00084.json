@@ -136,7 +136,7 @@
     {
       "claim": "Từ trung tâm thành phố Huế, di chuyển bằng xe máy tới lăng Minh Mạng chạy theo QL49, đi dọc sông Hương đến cầu Tuần, đi thêm một đoạn là đến lăng.",
       "source_url": "https://www.bestprice.vn/blog/diem-den-8/lang-minh-mang-164.html",
-      "source_domain": "bestprice.vn",
+      "source_domain": "www.bestprice.vn",
       "date_accessed": "2026-10-01",
       "claim_supported": "\"Từ trung tâm, bạn chạy chạy theo QL49, đi dọc sông Hương đến Cầu Tuần, đi thêm một đoạn là đến Lăng Minh Mạng.\""
     },
@@ -160,6 +160,27 @@
       "source_domain": "vexere.com",
       "date_accessed": "2026-10-01",
       "claim_supported": "\"Xe số phổ thông Hà Thịnh Honda Wave Alpha Mũ bảo hiểm, Xăng (1 lít) Giao xe tận nơi Không cần cọc trước từ 90.000đ\"; \"Xe tay ga phổ thông Hà Thịnh Honda Airblade hoặc dòng xe tương tự Honda Airblade, Honda Lead, Honda Vision, Honda Vario (giao ngẫu nhiên tùy tình trạng xe thực tế)\"; \"Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe.\"; \"Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 7 giờ → chỉ tính thêm 1/2 ngày.\"; \"Thời gian nhận xe và trả xe hằng ngày từ 06:00 đến 23:00.\"; \"CCCD và GPLX bản gốc (hoặc VNeID)\"; \"Vui lòng chỉ sử dụng xe trong phạm vi Thành phố Huế.\"; \"Nhà xe có quyền từ chối giao xe nếu khách hàng di chuyển ngoài phạm vi trên.\""
+    },
+    {
+      "claim": "Bảng giá vé tham quan Huế cho khách Việt Nam (trẻ em 7-12 tuổi): Đại Nội Huế người lớn 200.000đ, trẻ em 40.000đ; lăng Minh Mạng 150.000đ/30.000đ; lăng Tự Đức 150.000đ/30.000đ; lăng Khải Định 150.000đ/30.000đ. Combo vé theo bên phân phối: combo 3 điểm (Đại Nội + Lăng Minh Mạng + Lăng Khải Định) 420.000đ người lớn, 80.000đ trẻ em, hạn 2 ngày; combo 3 điểm (Đại Nội + Lăng Minh Mạng + Lăng Tự Đức) 420.000đ/80.000đ; combo 4 điểm (Đại Nội + ba lăng) 530.000đ/100.000đ; vé lẻ Đại Nội + 3 lăng chính tổng 650.000đ nên combo 4 điểm tiết kiệm 120.000đ/người; trẻ dưới 7 tuổi miễn phí.",
+      "source_url": "https://daivietourist.vn/gia-ve-tham-quan-hue/",
+      "source_domain": "daivietourist.vn",
+      "date_accessed": "2026-10-03",
+      "claim_supported": "\"Hoàng Cung Huế (Đại Nội) | 200.000đ | 40.000đ\" ; \"Lăng Minh Mạng | 150.000đ | 30.000đ\" ; \"Lăng Tự Đức | 150.000đ | 30.000đ\" ; \"Lăng Khải Định | 150.000đ | 30.000đ\" ; \"3 điểm | Đại Nội + Lăng Minh Mạng + Lăng Khải Định | 420.000đ | 80.000đ | 2 ngày\" ; \"3 điểm | Đại Nội + Lăng Minh Mạng + Lăng Tự Đức | 420.000đ | 80.000đ | 2 ngày\" ; \"4 điểm | Đại Nội + Lăng Minh Mạng + Lăng Tự Đức + Lăng Khải Định | 530.000đ | 100.000đ | 2 ngày\" ; \"nếu mua vé lẻ Đại Nội + 3 lăng chính (Minh Mạng, Tự Đức, Khải Định), tổng chi phí là 650.000đ.\""
+    },
+    {
+      "claim": "Bảng giá thuê xe máy Huế theo Motogo: Nam Thanh (48 Lê Lợi) giá thuê xe từ 120.000đ/ngày; Chị Chi (16 Hùng Vương) giá thuê xe từ 120.000đ/ngày; Hidibike (11 Lý Thường Kiệt, Phú Nhuận) xe số 120.000đ/ngày, xe ga 120.000đ/ngày; Cường Huế (6/3 kiệt 128 Nguyễn Chí Thanh, Phú Hiệp) xe số 120.000đ/ngày, xe ga 200.000đ – 500.000đ/ngày; Hue Motorbike Rental (29C Chu Văn An, Phú Hội) giá thuê xe từ 120.000đ/ngày; thủ tục thuê xe nhanh gọn, chỉ mất khoảng 10-15 phút.",
+      "source_url": "https://motogo.vn/thue-xe-may-tai-hue/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-03",
+      "claim_supported": "\"Nam Thanh ... Địa chỉ: 48 Lê Lợi, thành phố Huế ... Giá thuê xe: từ 120.000đ/ngày\" ; \"Chị Chi ... Địa chỉ: 16 Hùng Vương ... Giá thuê xe: từ 120.000đ/ngày\" ; \"Hidibike ... Địa chỉ: 11 Đường Lý Thường Kiệt, Phú Nhuận ... Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 120.000đ/ngày\" ; \"Cường Huế ... Địa chỉ: 6/3 kiet 128 Nguyễn Chí Thanh, Phú Hiệp ... Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 200.000đ – 500.000đ/ngày\" ; \"Hue Motorbike Rental ... Địa chỉ: 29C Chu Văn An, Phú Hội ... Giá thuê xe: từ 120.000đ/ngày\" ; \"Thủ tục thuê xe cũng rất nhanh chóng và đơn giản, chỉ mất khoảng 10-15 phút để thuê xe.\""
+    },
+    {
+      "claim": "Camay Motorbike tại Huế hoạt động từ 6h đến 19h hàng ngày; xe số phổ thông (Sirius, Wave Alpha) có giá thuê khoảng 100.000đ/xe/ngày; các dòng xe tay ga như Vision, Lead, AirBlade có giá 130.000đ/xe/ngày; thời gian thuê tính trọn gói 24 tiếng kể từ lúc nhận xe.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-03",
+      "claim_supported": "\"Đơn vị hoạt động từ 6h đến 19h hàng ngày\" ; \"xe số phổ thông (Sirius, Wave Alpha) có giá thuê khoảng 100.000đ/xe/ngày; các dòng xe tay ga như Vision, Lead, AirBlade có giá 130.000đ/xe/ngày\" ; \"Thời gian thuê được tính trọn gói 24 tiếng kể từ lúc nhận xe\""
     }
   ]
 }
