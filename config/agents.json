@@ -1,0 +1,9 @@
+{
+  "maintenance_ttl_minutes": 60,
+  "pause_ttl_minutes": 120,
+  "watchdog_stall_minutes": 120,
+  "watchdog_cron": "10 * * * *",
+  "max_recent_unrepaired": 2,
+  "unrepaired_window_minutes": 120,
+  "note": "Agents vận hành (docs/AGENTS-OPS.md): #4 agent-repair (first-line repair, KHÔNG bao giờ viết bài), #5 agent-supervisor (verify độc lập HOẶC đúng MỘT lần sửa second-line), #6 agent-watchdog (chỉ đánh thức factory khi production thật sự dừng >= watchdog_stall_minutes). maintenance lock: pipeline/maintenance.json (run-local, gitignored) — CHỈ MỘT incident được mutate infrastructure tại một thời điểm; #4 -> #5 là đường escalation duy nhất; tối đa 1 lần sửa mỗi agent mỗi incident. production pause = maintenance lock còn hiệu lực (pipeline.js cycle thoát PAUSED, KHÔNG mutate)."
+}
