@@ -1,0 +1,13 @@
+{
+  "queue_refill_target": 300,
+  "queue_refill_min": 100,
+  "cycle_batch_min": 12,
+  "cycle_batch_max": 18,
+  "writers": 3,
+  "writer_retries": 2,
+  "lock_ttl_minutes": 30,
+  "publish_chunk": 10,
+  "writer_timeout_ms": 300000,
+  "max_cycles_per_run": 1,
+  "note": "Pipeline coordinator (scripts/factory/pipeline.js): queue PLANNED <100 -> refill window ~300 topic dau theo matrix order; moi cycle cap 12..18 bai chia deu cho 3 writer (workspace pipeline/writers/w1..w3, gitignored); QA sua bai theo feedback (<= max_repair_attempts); publish CHI hang PASS theo chunk <= CHUNK (10) qua operator.js (atomic, build+verify). Writer runtime la dich vu ben ngoai: WRITER_RUNTIME=off -> idle-stop TRUOC KHI claim (khong bao gio publish khi thieu writer); =http -> WRITER_ENDPOINT (+ optional WRITER_API_KEY) lay tu GitHub Variables/Secrets, KHONG BAO GIO commit secret; =mock -> chi kiem thu (PIPELINE_ALLOW_MOCK=1). Coordinator doc than: .github/workflows/factory-production.yml (cron 30 phut, concurrency lab-factory-production)."
+}

@@ -1,0 +1,481 @@
+#!/usr/bin/env node
+/**
+ * pipeline.js — AUTONOMOUS PIPELINE COORDINATOR cho /lab (docs/PIPELINE.md).
+ *
+ * Mô hình (3 nguyên tắc bất biến):
+ *   1. WRITER (external runtime — xem writer-adapter.js) chỉ research/write/
+ *      revise trong workspace riêng (pipeline/writers/w<i>/ — gitignored).
+ *      Writer KHÔNG bao giờ chạm state global, KHÔNG merge/push/publish.
+ *   2. COORDINATOR (file này) là NGƯỜI DUY NHẤT quản lý queue, cấp bài,
+ *      state, ingest artifact, merge và publish (qua whitelist operator CLI).
+ *   3. Lỗi nhỏ: retry có giới hạn; checkpoint sau mỗi phase; resume từ
+ *      repository truth (matrix + artifact thật), không xử lý trùng bài.
+ *      Chỉ dừng khi: hết topic hợp lệ, writer runtime chưa cấu hình (idle),
+ *      hoặc lỗi lớn không recover được (fail-closed).
+ *
+ * Luồng 1 cycle: preflight (txn/lock/stale-drafts) → refill queue (window
+ * ~300 PLANNED đầu theo matrix order) → resolve runtime (off ⇒ IDLE-STOP
+ * TRƯỚC KHI claim — không bao giờ publish khi thiếu writer) → đảm bảo batch
+ * (resume / adopt mồ côi / claim mới ≤18 bài) → chia đều 3 writer →
+ * research + write song song (theo writer) → ingest + wrap → QA (engine,
+ * ngưỡng 75/70 KHÔNG đổi) → vòng revise theo feedback QA (≤ max_repair) →
+ * publish CHỈ hàng PASS theo chunk ≤ CHUNK (atomic, build+verify trong op)
+ * → finalize state. Commit/push 1 lần/cycle do workflow đảm nhiệm.
+ *
+ * Đúng-một-lần (exactly-once): publish gate của engine chỉ nhận PASS rows
+ * với QA evidence hash-bound; PUBLISHED rows không bao giờ được claim/publish
+ * lại (prepare-next refuse, publish gate refuse). Resume re-validate batch
+ * với matrix truth: id đã PUBLISHED ⇒ bỏ, id hở ⇒ tự xử tiếp.
+ *
+ * Chống 2 coordinator: pipeline/lock.json TTL (mặc định 30 phút) + GitHub
+ * Actions concurrency group 'lab-factory-production' (workflow-level).
+ *
+ * CLI: node scripts/factory/pipeline.js <status|refill|cycle|selftest>
+ */
+'use strict';
+const fs = require('fs'), path = require('path');
+const { spawnSync } = require('child_process');
+const ROOT = path.join(__dirname, '..', '..');
+const DATA = path.join(ROOT, 'data');
+const STATE_FILE = path.join(DATA, 'state', 'pipeline-state.json');
+const PIPE_DIR = path.join(ROOT, 'pipeline');          // gitignored (workspaces + lock)
+const LOCK_FILE = path.join(PIPE_DIR, 'lock.json');
+const factory = require(path.join(__dirname, 'factory.js'));
+const adapter = require(path.join(__dirname, 'writer-adapter.js'));
+
+const PCFG = (() => {
+  const c = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'pipeline.json'), 'utf8'));
+  const need = ['queue_refill_target', 'queue_refill_min', 'cycle_batch_min', 'cycle_batch_max',
+    'writers', 'writer_retries', 'lock_ttl_minutes', 'publish_chunk'];
+  const missing = need.filter(k => !(k in c));
+  if (missing.length) { console.error('PIPELINE REFUSED: config/pipeline.json thiếu trường: ' + missing.join(',')); process.exit(1); }
+  return c;
+})();
+const ID_RE = /^A\d{5}$/;
+
+// ---------------- matrix loader (single-slot, mtime-cache) -----------------
+// Pipeline gọi loadMatrix nhiều lần mỗi cycle (preflight/refill/claim/QA/
+// publish/finalize); mỗi parse 10k dòng tốn ~86MB heap. Cache 1 slot theo
+// mtime của shards (+ assembled csv nếu có) — parse lại CHỈ khi truth đổi
+// (operator con vừa rewrite shards). Giới hạn bộ nhớ live ~1 parse, không
+// tích luỹ giữa các phase.
+const _rowsSlot = { mtime: null, rows: null };
+function loadRows() {
+  let mtime = '';
+  try {
+    for (const f of fs.readdirSync(DATA).filter(x => /^content-matrix\.csv\.part/.test(x)).sort())
+      mtime += f + ':' + fs.statSync(path.join(DATA, f)).mtimeMs + ';';
+  } catch (e) { mtime = 'err:' + e.message; }
+  try { mtime += 'csv:' + fs.statSync(path.join(DATA, 'content-matrix.csv')).mtimeMs; } catch (e) { mtime += 'csv:none'; }
+  if (_rowsSlot.rows && _rowsSlot.mtime === mtime) return _rowsSlot.rows;
+  const rows = factory.loadMatrix();
+  _rowsSlot.mtime = mtime; _rowsSlot.rows = rows;
+  return rows;
+}
+
+// ------------------------------ state -------------------------------------
+function defaultState() {
+  return { version: 1, updated_at: null, cycle: 0, pending: [], planned_total: null,
+    active: null, last_cycle_summary: null, last_stop: null, stopped_reason: null };
+}
+function loadState() {
+  try {
+    const s = JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
+    return Object.assign(defaultState(), s);
+  } catch (e) { return defaultState(); }
+}
+function saveState(s) {
+  s.updated_at = new Date().toISOString();
+  fs.mkdirSync(path.dirname(STATE_FILE), { recursive: true });
+  fs.writeFileSync(STATE_FILE, JSON.stringify(s, null, 2));
+}
+
+// --------------------------- coordinator lock ------------------------------
+function lockRaw() {
+  try { return JSON.parse(fs.readFileSync(LOCK_FILE, 'utf8')); } catch (e) { return null; }
+}
+function lockHeld() {
+  const l = lockRaw();
+  return !!(l && l.locked && l.expires_at && new Date(l.expires_at) > new Date());
+}
+function acquireLock() {
+  if (lockHeld()) return false;
+  fs.mkdirSync(PIPE_DIR, { recursive: true });
+  const holder = 'pipeline-' + process.pid + '-' + new Date().toISOString();
+  fs.writeFileSync(LOCK_FILE, JSON.stringify({ locked: true, holder,
+    acquired_at: new Date().toISOString(),
+    expires_at: new Date(Date.now() + PCFG.lock_ttl_minutes * 60000).toISOString() }, null, 2));
+  return true;
+}
+function releaseLock() {
+  fs.mkdirSync(PIPE_DIR, { recursive: true });
+  fs.writeFileSync(LOCK_FILE, JSON.stringify({ locked: false, holder: null, acquired_at: null, expires_at: null }, null, 2));
+}
+
+// ------------------------------ helpers -----------------------------------
+function crashPoint(name) { // test-only fault injection (never set in production)
+  if (process.env.PIPELINE_CRASH_AT === name) {
+    console.error('PIPELINE CRASH INJECTION tại "' + name + '" — thoát đột ngột (mô phỏng runner chết giữa cycle).');
+    process.exit(75);
+  }
+}
+function run(cmdArr) {
+  const r = spawnSync(cmdArr[0], cmdArr.slice(1), { cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
+  if (r.stdout) process.stdout.write(r.stdout);
+  if (r.stderr) process.stderr.write(r.stderr);
+  return r.status == null ? 1 : r.status;
+}
+// operator op với retry + recover có giới hạn (nguyên tắc 3: lỗi nhỏ tự retry)
+function opSafe(args, tries) {
+  tries = tries == null ? 2 : tries;
+  let rc = 1;
+  for (let t = 0; t < tries; t++) {
+    rc = run([process.execPath, path.join('scripts', 'factory', 'operator.js'), ...args]);
+    if (rc === 0) return 0;
+    console.error('pipeline: op ' + args.join(' ') + ' FAIL (rc=' + rc + ', lần ' + (t + 1) + '/' + tries + ') — recover và retry.');
+    run([process.execPath, path.join('scripts', 'factory', 'operator.js'), 'recover']);
+  }
+  return rc;
+}
+const draftPath = id => path.join(ROOT, '_drafts', id + '.html');
+const bodyPath = id => path.join(ROOT, '_drafts', id + '.body.html');
+const packetPath = id => path.join(DATA, 'research', id + '.json');
+const qaPath = id => path.join(DATA, 'qa', id + '.json');
+function chunk(a, n) { const out = []; for (let i = 0; i < a.length; i += n) out.push(a.slice(i, i + n)); return out; }
+function grantsOf(batch, writers) { // map id -> writer (chia đều, round-robin)
+  const g = {};
+  batch.forEach((id, i) => g[id] = 'w' + (1 + (i % writers)));
+  return g;
+}
+function workspaceOf(w) { return path.join(PIPE_DIR, 'writers', w); }
+
+// ------------------------- stale-draft hygiene -----------------------------
+// Draft của row PUBLISHED: byte-identical với archive ⇒ auto-clean (xóa bản
+// lint); diverged ⇒ REFUSE (fail-closed — không bao giờ đè bài đã publish).
+function staleDraftSweep(rows) {
+  const byId = {}; rows.forEach(r => byId[r.article_id] = r);
+  const removed = [], refused = [];
+  const draftDir = path.join(ROOT, '_drafts');
+  for (const f of fs.existsSync(draftDir) ? fs.readdirSync(draftDir) : []) {
+    const m = /^(A\d{5})(\.body)?\.html$/.exec(f);
+    if (!m) continue;
+    const id = m[1], r = byId[id];
+    if (!r || r.status !== 'PUBLISHED') continue;
+    const archive = path.join(DATA, 'published', id + '.html');
+    const dp = path.join(draftDir, f);
+    let identical = false;
+    if (fs.existsSync(archive)) identical = fs.readFileSync(dp, 'utf8') === fs.readFileSync(archive, 'utf8');
+    if (identical) { if (!removed.includes(id)) removed.push(id); }
+    else if (!refused.includes(id)) refused.push(id);
+  }
+  for (const id of removed) {
+    for (const p of [draftPath(id), bodyPath(id)]) if (fs.existsSync(p)) fs.rmSync(p);
+  }
+  return { removed: [...new Set(removed)].sort(), refused: [...new Set(refused)].sort() };
+}
+
+// ------------------------------ refill ------------------------------------
+function plannedIds(rows) { return rows.filter(r => r.status === 'PLANNED').map(r => r.article_id); }
+function refill(state, rows) {
+  const planned = plannedIds(rows);
+  state.planned_total = planned.length;
+  if (state.pending.length < PCFG.queue_refill_min) {
+    state.pending = planned.slice(0, PCFG.queue_refill_target);
+    return true;
+  }
+  return false;
+}
+
+// --------------------------- writer phase ---------------------------------
+// Chạy song song THEO WRITER: mỗi writer xử lý tuần tự các bài được cấp,
+// các writer chạy đồng thời với nhau. Writer chỉ ghi vào workspace riêng;
+// coordinator ingest artifact vào cây repo (nguyên tắc 1 + 2).
+async function writerTasks(runtime, tasks) {
+  const byWriter = {};
+  tasks.forEach(t => { (byWriter[t.writer] = byWriter[t.writer] || []).push(t); });
+  const results = {}; // id -> {ok, error}
+  await Promise.all(Object.entries(byWriter).map(async ([w, list]) => {
+    const outDir = workspaceOf(w);
+    for (const t of list) {
+      let ok = false, error = null;
+      for (let attempt = 1; attempt <= PCFG.writer_retries && !ok; attempt++) {
+        try {
+          const res = await adapter.runTask({ task: t.task, row: t.row, packet: t.packet,
+            feedback: t.feedback, outDir, runtime });
+          const dest = t.task === 'research' ? packetPath(t.row.article_id) : bodyPath(t.row.article_id);
+          fs.mkdirSync(path.dirname(dest), { recursive: true }); // ingest target dir có thể chưa tồn tại (checkout sạch)
+          fs.copyFileSync(res.path, dest);
+          ok = true;
+        } catch (e) { error = e; console.error('pipeline: writer ' + w + ' ' + t.task + ' ' + t.row.article_id + ' FAIL (lần ' + attempt + '/' + PCFG.writer_retries + '): ' + e.message); }
+      }
+      results[t.row.article_id] = ok ? { ok: true } : { ok: false, error: error ? error.message : 'unknown' };
+    }
+  }));
+  return results;
+}
+function qaFeedback(id) {
+  try { return JSON.parse(fs.readFileSync(qaPath(id), 'utf8')); } catch (e) { return null; }
+}
+// Đưa row REVIEW/REPAIR (không terminal, chưa PASS) về BLOCKED — đúng lifecycle
+// "QA → REPAIR → QA (max 3) → BLOCKED": hết lượt sửa ⇒ BLOCKED, chunk kết thúc.
+function blockIds(ids, reason) {
+  if (!ids.length) return;
+  const rows = loadRows();
+  for (const id of ids) {
+    const r = rows.find(x => x.article_id === id);
+    if (r && !factory.TERMINAL.has(r.status)) { r.status = 'BLOCKED'; console.log('pipeline: ' + id + ' BLOCKED (' + reason + ')'); }
+  }
+  factory.saveMatrix(rows);
+  factory.syncCheckpoint(rows);
+}
+
+// ------------------------------- cycle ------------------------------------
+async function cycle() {
+  const t0 = Date.now();
+  if (!acquireLock()) {
+    console.log('PIPELINE SKIP: coordinator lock đang được giữ bởi process khác — một coordinator duy nhất, thoát sạch (exit 0).');
+    return 0;
+  }
+  let held = true;
+  const finish = (code) => { if (held) { releaseLock(); held = false; } process.exitCode = code; return code; };
+
+  const state = loadState();
+  if (state.stopped_reason) console.error('PIPELINE STOPPED (lần trước): ' + state.stopped_reason);
+
+  // ---- preflight: txn + writer lock (fail-closed, recover trước khi mutate) ----
+  let tx = factory.readTx();
+  if (tx.active) {
+    run([process.execPath, path.join('scripts', 'factory', 'operator.js'), 'recover']);
+    tx = factory.readTx();
+    if (tx.active) { state.stopped_reason = 'transaction ' + tx.id + ' (op=' + tx.operation + ') active — recover KHÔNG giải được (fail-closed, dừng coordinator; xử lý thủ công theo docs/PROC-RECOVERY.md)'; saveState(state); return finish(1); }
+  }
+  let wl = factory.lockState();
+  if (wl.held) {
+    run([process.execPath, path.join('scripts', 'factory', 'operator.js'), 'recover']);
+    wl = factory.lockState();
+    if (wl.held) { state.stopped_reason = 'writer lock held bởi ' + wl.raw.holder + ' (chưa hết hạn) — không rõ ownership, STOP (fail-closed)'; saveState(state); return finish(1); }
+  }
+
+  // ---- stale-draft hygiene: auto-clean bản identical, refuse bản diverged ----
+  let rows = loadRows();
+  const sweep = staleDraftSweep(rows);
+  if (sweep.refused.length) {
+    state.stopped_reason = 'stale draft DIVERGED của row PUBLISHED: ' + sweep.refused.join(', ') + ' — không đè bài đã publish (fail-closed); xử lý theo docs/PROC-RECOVERY.md (qa-repair)';
+    saveState(state);
+    console.error('PIPELINE STOPPED: ' + state.stopped_reason);
+    return finish(1);
+  }
+  if (sweep.removed.length) console.log('pipeline hygiene: đã dọn stale draft byte-identical của row PUBLISHED: ' + sweep.removed.join(', '));
+
+  // ---- refill queue (window ~300 PLANNED đầu theo matrix order) ----
+  rows = loadRows();
+  refill(state, rows);
+
+  // ---- resolve writer runtime — OFF ⇒ IDLE-STOP TRƯỚC KHI CLAIM ----
+  let runtime;
+  try { runtime = adapter.resolveRuntime(); }
+  catch (e) { state.stopped_reason = e.message; saveState(state); console.error('PIPELINE STOPPED: ' + e.message); return finish(1); }
+  if (runtime.mode === 'off') {
+    state.stopped_reason = null;
+    state.last_stop = { kind: 'idle', reason: runtime.reason, at: new Date().toISOString(),
+      pending: state.pending.length, planned_total: state.planned_total };
+    saveState(state);
+    console.log('PIPELINE IDLE — pipeline ĐÃ KÍCH HOẠT nhưng writer runtime chưa cấu hình: ' + runtime.reason);
+    console.log('PIPELINE IDLE — KHÔNG claim, KHÔNG viết, KHÔNG publish bài nào. Queue sẵn sàng: ' + state.pending.length + ' topic (tổng PLANNED: ' + state.planned_total + ').');
+    return finish(0);
+  }
+
+  // ---- đảm bảo batch: resume active / adopt mồ côi / claim mới ----
+  const UNFINISHED = factory.UNFINISHED;
+  let active = state.active;
+  const unfinishedIds = rows.filter(r => UNFINISHED.includes(r.status)).map(r => r.article_id);
+  if (!active) {
+    if (unfinishedIds.length) {
+      // adopt mồ côi: matrix có row đang mở nhưng state.active mất (run trước
+      // crash trước khi commit state) — nhận lại theo matrix truth, KHÔNG claim lại.
+      active = { cycle: state.cycle + 1, started_at: new Date().toISOString(), adopted: true,
+        batch: unfinishedIds.slice(0, 20), grants: null, qa_rounds: {}, published: [], blocked: [] };
+      active.grants = grantsOf(active.batch, PCFG.writers);
+      console.log('pipeline: ADOPT orphan batch từ matrix truth: ' + active.batch.join(', ') + ' (không claim lại — engine đã giữ trạng thái mở)');
+    } else {
+      // batch mới từ pending head: 12..18 bài/cycle (ít hơn nếu topic sắp hết)
+      const ids = state.pending.slice(0, PCFG.cycle_batch_max).filter(id => ID_RE.test(id));
+      if (!ids.length) {
+        state.stopped_reason = 'NO_PLANNED_TOPICS — không còn topic hợp lệ (queue rỗng, matrix không còn PLANNED).';
+        saveState(state); console.log('PIPELINE STOPPED: ' + state.stopped_reason); return finish(0);
+      }
+      const rc = opSafe(['prepare-next', '--ids', ids.join(',')]);
+      if (rc !== 0) { state.stopped_reason = 'prepare-next claim FAIL (rc=' + rc + ') — KHÔNG có gì được claim (fail-closed)'; saveState(state); return finish(1); }
+      active = { cycle: state.cycle + 1, started_at: new Date().toISOString(), adopted: false,
+        batch: ids, grants: grantsOf(ids, PCFG.writers), qa_rounds: {}, published: [], blocked: [] };
+      console.log('pipeline: CLAIM batch ' + active.cycle + ' — ' + ids.length + ' bài chia đều ' + PCFG.writers + ' writer: ' + ids.join(', '));
+    }
+    state.active = active; saveState(state);
+  } else {
+    console.log('pipeline: RESUME active cycle ' + active.cycle + ' từ checkpoint (batch: ' + active.batch.join(', ') + ')');
+  }
+
+  // ---- phase: research (writer song song; coordinator ingest) ----
+  rows = loadRows();
+  const byId = {}; rows.forEach(r => byId[r.article_id] = r);
+  const openIds = active.batch.filter(id => UNFINISHED.includes((byId[id] || {}).status));
+  const needResearch = openIds.filter(id => (byId[id] || {}).status === 'RESEARCH' && !fs.existsSync(packetPath(id)));
+  if (needResearch.length) {
+    const tasks = needResearch.map(id => ({ task: 'research', writer: active.grants[id] || 'w1', row: byId[id] }));
+    const res = await writerTasks(runtime, tasks);
+    const failed = needResearch.filter(id => !res[id] || !res[id].ok);
+    if (failed.length) { blockIds(failed, 'writer research fail sau ' + PCFG.writer_retries + ' lần retry'); active.blocked.push(...failed); saveState(state); }
+  }
+  rows = loadRows();
+  const readyResearch = active.batch.filter(id => {
+    const r = rows.find(x => x.article_id === id);
+    return r && r.status === 'RESEARCH' && fs.existsSync(packetPath(id));
+  });
+  if (readyResearch.length) {
+    let rc = 1;
+    for (const part of chunk(readyResearch, 20)) { rc = opSafe(['research', '--ids', part.join(',')]); if (rc !== 0) break; }
+    if (rc !== 0) { state.stopped_reason = 'research op FAIL sau retry — dừng cycle (fail-closed; batch giữ nguyên để resume)'; saveState(state); return finish(1); }
+  }
+  crashPoint('after-research');
+  saveState(state);
+
+  // ---- phase: write body (writer song song; coordinator ingest) ----
+  rows = loadRows();
+  const safePacket = id => { try { return JSON.parse(fs.readFileSync(packetPath(id), 'utf8')); } catch (e) { return null; } };
+  const writeTargets = active.batch.filter(id => { const r = rows.find(x => x.article_id === id);
+      return r && r.status === 'WRITING' && !fs.existsSync(bodyPath(id)) && !!safePacket(id); });
+  const writeTasks = writeTargets.map(id => ({ task: 'write', writer: active.grants[id] || 'w1',
+    row: rows.find(x => x.article_id === id), packet: safePacket(id) }));
+  if (writeTasks.length) {
+    const res = await writerTasks(runtime, writeTasks);
+    const failed = writeTargets.filter(id => !res[id] || !res[id].ok);
+    if (failed.length) { blockIds(failed, 'writer write fail sau ' + PCFG.writer_retries + ' lần retry'); active.blocked.push(...failed); }
+    saveState(state);
+  }
+  crashPoint('after-write');
+
+  // ---- phase: wrap + QA vòng đầu ----
+  const qaInitial = (() => {
+    const rs = loadRows();
+    return active.batch.filter(id => { const r = rs.find(x => x.article_id === id);
+      return r && !factory.TERMINAL.has(r.status) && r.status !== 'PASS' && fs.existsSync(bodyPath(id)); });
+  })();
+  if (qaInitial.length) {
+    run([process.execPath, path.join('scripts', 'factory', 'wrap-drafts.js')]);
+    let rc = 1;
+    for (const part of chunk(qaInitial, 20)) { rc = opSafe(['qa', '--ids', part.join(',')]); if (rc !== 0) break; }
+    if (rc !== 0) { state.stopped_reason = 'qa op FAIL sau retry — dừng cycle (fail-closed; batch giữ nguyên để resume)'; saveState(state); return finish(1); }
+  }
+  crashPoint('after-qa');
+  saveState(state);
+
+  // ---- phase: repair rounds (feedback QA → writer revise → re-QA; bounded) ----
+  const maxRounds = Number(factory.rubric.max_repair_attempts) || 3;
+  for (let round = 1; round <= maxRounds; round++) {
+    const rs = loadRows();
+    const open = active.batch.filter(id => { const r = rs.find(x => x.article_id === id);
+      return r && (r.status === 'REVIEW' || r.status === 'REPAIR'); });
+    if (!open.length) break;
+    console.log('pipeline: repair round ' + round + '/' + maxRounds + ' — ' + open.join(', '));
+    const tasks = open.map(id => ({ task: 'revise', writer: active.grants[id] || 'w1',
+      row: rs.find(x => x.article_id === id), feedback: qaFeedback(id) }));
+    const res = await writerTasks(runtime, tasks);
+    const revised = open.filter(id => res[id] && res[id].ok);
+    if (revised.length) {
+      run([process.execPath, path.join('scripts', 'factory', 'wrap-drafts.js')]);
+      for (const part of chunk(revised, 20)) opSafe(['qa', '--ids', part.join(',')]);
+    }
+    for (const id of open) active.qa_rounds[id] = (active.qa_rounds[id] || 0) + 1;
+    const failed = open.filter(id => !(res[id] && res[id].ok));
+    if (failed.length) { blockIds(failed, 'writer revise fail sau retry'); active.blocked.push(...failed); }
+    saveState(state);
+    crashPoint('after-repair-' + round);
+  }
+  // hết lượt sửa: REVIEW/REPAIR/WRITING còn lại ⇒ BLOCKED (chunk kết thúc được)
+  {
+    const rs = loadRows();
+    const stuck = active.batch.filter(id => { const r = rs.find(x => x.article_id === id);
+      return r && !factory.TERMINAL.has(r.status) && r.status !== 'PASS'; });
+    if (stuck.length) { blockIds(stuck, 'hết ' + maxRounds + ' lượt sửa, QA vẫn chưa PASS'); active.blocked.push(...stuck); saveState(state); }
+  }
+
+  // ---- phase: publish CHỈ hàng PASS, chunk ≤ CHUNK, atomic từng chunk ----
+  rows = loadRows();
+  const passIds = active.batch.filter(id => { const r = rows.find(x => x.article_id === id);
+      return r && r.status === 'PASS' && fs.existsSync(draftPath(id)); });
+  const failedPublish = [];
+  for (const part of chunk(passIds, Math.min(PCFG.publish_chunk, Number(factory.cfg.CHUNK) || 10))) {
+    const rc = opSafe(['publish', '--ids', part.join(','), '--scope', 'fast']);
+    if (rc === 0) { active.published.push(...part); saveState(state); crashPoint('after-publish-chunk'); }
+    else { console.error('pipeline: publish chunk FAIL (đã rollback deterministic) — giữ PASS để cycle sau/repair: ' + part.join(', ')); failedPublish.push(...part); }
+  }
+
+  // ---- finalize ----
+  const finRows = loadRows();
+  const publishedNow = active.batch.filter(id => { const r = finRows.find(x => x.article_id === id); return r && r.status === 'PUBLISHED'; });
+  const blockedNow = active.batch.filter(id => { const r = finRows.find(x => x.article_id === id); return r && r.status === 'BLOCKED'; });
+  state.cycle = active.cycle;
+  state.last_cycle_summary = { cycle: active.cycle, adopted: !!active.adopted,
+    started_at: active.started_at, finished_at: new Date().toISOString(), elapsed_ms: Date.now() - t0,
+    batch: active.batch, published: publishedNow, blocked: blockedNow,
+    failed_publish: failedPublish, writer_runtime: runtime.mode };
+  state.active = null;
+  state.stopped_reason = null;
+  state.last_stop = null;
+  refill(state, finRows);
+  saveState(state);
+  console.log('PIPELINE CYCLE COMPLETE: cycle=' + state.last_cycle_summary.cycle +
+    ' published=' + (publishedNow.length ? publishedNow.join(',') : 'none') +
+    ' blocked=' + (blockedNow.length ? blockedNow.join(',') : 'none') +
+    (failedPublish.length ? ' failed_publish=' + failedPublish.join(',') : '') +
+    ' — queue còn ' + state.pending.length + ' topic.');
+  return finish(0);
+}
+
+// ------------------------------ commands -----------------------------------
+function cmdStatus() {
+  const state = loadState();
+  const rows = loadRows();
+  const by = {}; rows.forEach(r => by[r.status] = (by[r.status] || 0) + 1);
+  let runtime = null;
+  try { runtime = adapter.resolveRuntime(); } catch (e) { runtime = { mode: 'invalid', reason: e.message }; }
+  const s = { updated_at: state.updated_at, cycle: state.cycle,
+    pending_queue: state.pending.length, planned_total: state.planned_total || (by.PLANNED || 0),
+    active: state.active ? { cycle: state.active.cycle, batch: state.active.batch, adopted: !!state.active.adopted } : null,
+    last_cycle_summary: state.last_cycle_summary, stopped_reason: state.stopped_reason,
+    writer_runtime: runtime.mode === 'off' ? 'off (idle — ' + runtime.reason + ')' : runtime.mode,
+    matrix_by_status: by, coordinator_lock: lockHeld() ? 'HELD' : 'free' };
+  console.log(JSON.stringify(s, null, 2));
+}
+function cmdRefill() {
+  const state = loadState();
+  const rows = loadRows();
+  const changed = refill(state, rows);
+  saveState(state);
+  console.log('PIPELINE REFILL ' + (changed ? '(đã nạp lại)' : '(đủ — không đổi)') + ': queue=' + state.pending.length + ' topic, tổng PLANNED=' + state.planned_total + ', đầu queue: ' + state.pending.slice(0, 5).join(', ') + (state.pending.length > 5 ? ', ...' : ''));
+}
+function cmdSelftest() {
+  console.log('PIPELINE SELFTEST: node --test tests/pipeline-suite.js (PIPELINE_ALLOW_MOCK=1, sandbox os.tmpdir — KHÔNG đụng production tree)');
+  // --max-old-space-size: OOM-guard cho môi trường ~1GB (Actions 7GB không bị ảnh hưởng)
+  const r = spawnSync(process.execPath, ['--expose-gc', '--max-old-space-size=400', '--test', 'tests/pipeline-suite.js'], {
+    cwd: ROOT, env: Object.assign({}, process.env, { PIPELINE_ALLOW_MOCK: '1' }),
+    stdio: 'inherit' });
+  process.exitCode = r.status == null ? 1 : r.status;
+}
+
+async function main(argv) {
+  const [cmd] = argv;
+  if (cmd === 'status') return cmdStatus();
+  if (cmd === 'refill') return cmdRefill();
+  if (cmd === 'cycle') return cycle();
+  if (cmd === 'selftest') return cmdSelftest();
+  console.error('Usage: pipeline.js <status|refill|cycle|selftest>');
+  process.exit(1);
+}
+
+if (require.main === module) main(process.argv.slice(2)).catch(e => {
+  console.error('PIPELINE FATAL: ' + (e && e.stack || e));
+  try { releaseLock(); } catch (_) {}
+  process.exit(1);
+});
+module.exports = { loadState, saveState, grantsOf, refill, staleDraftSweep, chunk };
