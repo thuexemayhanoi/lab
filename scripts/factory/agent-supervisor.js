@@ -59,9 +59,9 @@ function verifyBattery() {
 }
 
 // tập hành động second-line — chỉ lớp an toàn đã hiểu (giống #4, whitelisted)
-function attemptSecondLine(p) {
+function attemptSecondLine(p, inc) {
   if (!p.pipeline_state_ok) {
-    const r = require(path.join(__dirname, 'agent-repair.js')).repairStateCorrupt();
+    const r = require(path.join(__dirname, 'agent-repair.js')).repairStateCorrupt(inc && inc.id);
     return { kind: 'pipeline-state-corrupt', ...r };
   }
   if (p.txn_active && !p.writer_lock_held) {
@@ -81,25 +81,30 @@ function attemptSecondLine(p) {
 
 // ------------------------------ pause & report --------------------------------
 function keepPaused(inc, why) {
-  // (a) maintenance lock giữ TTL pause — pipeline cycle => PAUSED, KHÔNG mutate
+  // (a) maintenance lock giữ TTL pause (RUN-LOCAL: chết theo runner — KHÔNG
+  //     phải khóa bền vững; serialize giữa run là workflow concurrency group)
   core.pauseMaintenance(inc.id, 'agent-5', ACFG.pause_ttl_minutes,
     'production PAUSED — incident ' + inc.id + ' không sửa được tự động, chờ human (docs/PROC-RECOVERY.md)');
-  // (b) durable pause flag trong pipeline-state (committed truth cho #6)
+  // (b) durable pause flag trong pipeline-state (COMMITTED truth — bền vững
+  //     qua runner mới và qua hết TTL; #6 cũng thấy). MỖI incident CHỈ set
+  //     pause của chính nó — KHÔNG bao giờ đè pause của incident khác.
   try {
     const stPath = core.STATE_FILE;
-    let st = {};
-    try { st = JSON.parse(fs.readFileSync(stPath, 'utf8')); } catch (e) { st = {}; }
-    st.updated_at = new Date().toISOString();
-    st.stopped_reason = 'incident ' + inc.id + ' FAILED_PAUSED — Agent #4+#5 không sửa được tự động; production pause chờ human (xem reports/incidents/' + inc.id + '.md)';
-    st.pause = { by: 'agent-5', incident_id: inc.id, at: new Date().toISOString() };
-    fs.mkdirSync(path.dirname(stPath), { recursive: true });
-    fs.writeFileSync(stPath, JSON.stringify(st, null, 2));
-  } catch (e) { /* state đang hỏng — maintenance lock pause vẫn đủ */ }
+    const st = core.loadStateFileStrict() || {};
+    if (!(st.pause && st.pause.incident_id && st.pause.incident_id !== inc.id)) {
+      st.pause = { by: 'agent-5', incident_id: inc.id, at: new Date().toISOString(),
+        reason: 'incident ' + inc.id + ' FAILED_PAUSED — production pause chờ human (reports/incidents/' + inc.id + '.md)' };
+      st.stopped_reason = 'incident ' + inc.id + ' FAILED_PAUSED — Agent #4+#5 không sửa được tự động; production pause chờ human (xem reports/incidents/' + inc.id + '.md)';
+      st.updated_at = new Date().toISOString();
+      fs.mkdirSync(path.dirname(stPath), { recursive: true });
+      fs.writeFileSync(stPath, JSON.stringify(st, null, 2));
+    } // pause của incident khác còn giữ => KHÔNG đè (pause đó vẫn chặn production)
+  } catch (e) { /* state hỏng cú pháp: cycle đã fail-closed ở loadStateStrict — production KHÔNG tự chạy */ }
   // (c) incident report human-readable (committed, auditable)
   const md = [];
   md.push('# Incident ' + inc.id + ' — KHÔNG sửa được tự động (FAILED_PAUSED)');
   md.push('');
-  md.push('- **Trạng thái:** production ĐANG PAUSE chờ xử lý của người vận hành (TTL ' + ACFG.pause_ttl_minutes + ' phút, sau đó tự tiếp tục).');
+  md.push('- **Trạng thái:** production ĐANG PAUSE chờ xử lý của người vận hành (durable pause trong pipeline-state.json — KHÔNG tự tiếp tục sau TTL; chỉ clear sau khi incident này được verify thành công hoặc human xử lý).');
   md.push('- **Nguồn:** ' + JSON.stringify(inc.source));
   md.push('- **Tổng kết:** ' + (inc.final ? inc.final.summary : ''));
   md.push('- **Audit trail:**');
@@ -109,6 +114,23 @@ function keepPaused(inc, why) {
   fs.mkdirSync(core.INCIDENTS_DIR, { recursive: true });
   fs.writeFileSync(path.join(core.INCIDENTS_DIR, inc.id + '.md'), md.join('\n'));
   core.setFinal(inc, 'FAILED_PAUSED', inc.final ? inc.final.summary : '', { reason_detail: why, paused_until_lock: 'maintenance TTL ' + ACFG.pause_ttl_minutes + ' phút' });
+}
+
+// Durable pause resolution: CHỈ clear pause SAU verify thành công VÀ CHỈ đúng
+// incident sở hữu pause. Pause của incident khác => KHÔNG clear, KHÔNG resume
+// (fail-closed — incident này khoẻ nhưng production vẫn bị pause bởi chủ sở
+// hữu pause; chờ incident đó được xử lý xong).
+function pauseResolvedForResume(inc) {
+  let pause = null;
+  try { pause = core.durablePause(); }
+  catch (e) { return { ok: false, reason: 'pipeline-state.json hỏng cú pháp — KHÔNG resume mù: ' + e.message }; }
+  if (!pause) return { ok: true };
+  if (pause.incident_id !== inc.id)
+    return { ok: false, reason: 'durable pause thuộc incident ' + pause.incident_id + ' (không phải ' + inc.id + ') — KHÔNG clear pause của incident khác' };
+  const r = core.clearPause(inc.id);
+  if (!r.cleared) return { ok: false, reason: r.reason };
+  core.act(inc, 'agent-5', 'clear-durable-pause', 'Verify thành công — clear pause của đúng incident ' + inc.id + ' (pause do incident này đặt).');
+  return { ok: true };
 }
 
 // ------------------------------ main flow ------------------------------------
@@ -145,7 +167,15 @@ function cmdRun(a) {
       { ok: v.healthy, verify_fast_rc: v.verify_fast.rc, pipeline_status_rc: v.pipeline_status.rc });
 
     if (v.healthy) {
-      // (3a) khoẻ mạnh => release lock + resume bằng MỘT entrypoint sẵn có
+      // (3a) khoẻ mạnh => clear pause (đúng incident) + release lock + resume
+      //      bằng MỘT entrypoint sẵn có
+      const pr = pauseResolvedForResume(inc);
+      if (!pr.ok) {
+        core.act(inc, 'agent-5', 'resume-blocked-pause', 'KHÔNG resume: ' + pr.reason, { ok: false });
+        keepPaused(inc, 'verify PASS nhưng KHÔNG resume được: ' + pr.reason);
+        console.error('AGENT5_RESULT=FAILED_PAUSED');
+        return 0;
+      }
       core.releaseMaintenance(incId);
       core.act(inc, 'agent-5', 'release-maintenance-lock', 'Verify PASS — production được phép chạy lại.');
       const cyc = pipelineCycle(pipelineEnv());
@@ -164,7 +194,7 @@ function cmdRun(a) {
       return 0;
     }
     const p = core.probes();
-    const att = attemptSecondLine(p);
+    const att = attemptSecondLine(p, inc);
     if (!att) {
       keepPaused(inc, 'không còn lớp sửa an toàn nào (ownership/content-sensitive/ambiguous — fail-closed)');
       console.error('AGENT5_RESULT=FAILED_PAUSED');
@@ -183,7 +213,14 @@ function cmdRun(a) {
       console.error('AGENT5_RESULT=FAILED_PAUSED');
       return 0;
     }
-    // sửa xong khoẻ => release + resume
+    // sửa xong khoẻ => clear pause (đúng incident) + release + resume
+    const pr2 = pauseResolvedForResume(inc);
+    if (!pr2.ok) {
+      core.act(inc, 'agent-5', 'resume-blocked-pause', 'KHÔNG resume sau second-line repair: ' + pr2.reason, { ok: false });
+      keepPaused(inc, 'second-line repair PASS nhưng KHÔNG resume được: ' + pr2.reason);
+      console.error('AGENT5_RESULT=FAILED_PAUSED');
+      return 0;
+    }
     core.releaseMaintenance(incId);
     core.act(inc, 'agent-5', 'release-maintenance-lock', 'Second-line repair PASS + regression PASS — resume production.');
     const cyc = pipelineCycle(pipelineEnv());

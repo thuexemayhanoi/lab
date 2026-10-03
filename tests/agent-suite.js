@@ -195,6 +195,43 @@ test('agents-core: incident store — act audit, findBySourceRun dedup, recentUn
   } finally { rmSB(sb); }
 });
 
+test('agents-core: durable pause — set/clear CHỈ đúng incident; state hỏng cú pháp => fail-closed throw', () => {
+  const sb = mkSB();
+  try {
+    const core = require(path.join(sb, 'scripts', 'factory', 'agents-core.js'));
+    assert.equal(core.durablePause(), null); // chưa có state file => bình thường (thiếu file ≠ hỏng)
+    assert.equal(core.setDurablePause('INC-A', 'agent-5', 't'), true);
+    assert.equal(core.durablePause().incident_id, 'INC-A');
+    // incident khác KHÔNG đè pause của incident khác (fail-closed ownership)
+    assert.equal(core.setDurablePause('INC-B', 'agent-5', 't'), false);
+    assert.equal(core.durablePause().incident_id, 'INC-A');
+    // incident khác KHÔNG clear được pause
+    assert.equal(core.clearPause('INC-B').cleared, false);
+    assert.equal(core.durablePause().incident_id, 'INC-A');
+    // đúng incident clear OK
+    assert.equal(core.clearPause('INC-A').cleared, true);
+    assert.equal(core.durablePause(), null);
+    // state CÓ SẴN mà hỏng cú pháp => THROW (không âm thầm dùng state rỗng)
+    fs.writeFileSync(statePath(sb), '{corrupt');
+    assert.throws(() => core.loadStateFileStrict());
+    assert.throws(() => core.durablePause());
+  } finally { rmSB(sb); }
+});
+
+test('agents-core: openIncidents — incident committed chưa final còn mới => run mới nhận biết #4 gián đoạn', () => {
+  const sb = mkSB();
+  try {
+    const core = require(path.join(sb, 'scripts', 'factory', 'agents-core.js'));
+    assert.deepEqual(core.openIncidents(), []); // không có incident nào
+    mkIncident(sb, 'INC-OPEN-A', 'run-1', null); // committed, chưa final, mới
+    mkIncident(sb, 'INC-OPEN-B', 'run-2', 'SUCCESS'); // đã có final => không phải open
+    mkIncident(sb, 'INC-OPEN-C', 'run-3', null, { created_at: new Date(Date.now() - 48 * 3600e3).toISOString() }); // quá cửa sổ
+    const open = core.openIncidents();
+    assert.equal(open.length, 1);
+    assert.equal(open[0].id, 'INC-OPEN-A');
+  } finally { rmSB(sb); }
+});
+
 test('agents-core: probes — state thiếu=OK, state hỏng=corrupt, txn/writer-lock/coord-lock đọc đúng', () => {
   const sb = mkSB();
   try {
@@ -689,5 +726,181 @@ test('không cycle trùng: coordinator lock còn hiệu lực => pipeline SKIP �
     const j6 = JSON.parse(r6.out.slice(r6.out.indexOf('{'), r6.out.lastIndexOf('}') + 1));
     assert.equal(j6.action, 'DO_NOTHING'); // #6 không đạp vào cycle đang chạy
     assert.ok(j6.blockers.some(b => b.includes('coordinator lock')));
+  } finally { rmSB(sb); }
+});
+
+// =====================================================================
+// DURABLE PAUSE + HANDOFF QUA RUNNER (state.pause committed truth)
+// =====================================================================
+
+test('durable pause: state.pause committed => runner MỚI (không có maintenance.json run-local) vẫn bị chặn', () => {
+  const sb = mkSB();
+  try {
+    resetCore(sb); // txn + writer-lock sạch; KHÔNG tạo maintenance.json (runner mới)
+    setState(sb, { cycle: 0, pause: { by: 'agent-5', incident_id: 'INC-PAUSE-D1',
+      at: new Date().toISOString(), reason: 'fixture FAILED_PAUSED' } });
+    assert.equal(fs.existsSync(maintPath(sb)), false); // lock run-local KHÔNG đi theo runner
+    const r = PIPE(sb, ['cycle']);
+    assert.equal(r.rc, 0);
+    assert.ok(r.out.includes('PIPELINE PAUSED (durable)'), r.out.slice(-400));
+    assert.ok(r.out.includes('INC-PAUSE-D1'));
+    const st = readJSON(statePath(sb));
+    assert.equal(st.cycle, 0); // KHÔNG claim, KHÔNG mutate
+    assert.equal(st.pause.incident_id, 'INC-PAUSE-D1'); // pause nguyên vẹn
+  } finally { rmSB(sb); }
+});
+
+test('durable pause: maintenance TTL hết + pause đặt từ lâu => production VẪN bị chặn (KHÔNG self-heal)', () => {
+  const sb = mkSB();
+  try {
+    resetCore(sb);
+    setMaint(sb, 'agent-5', 'INC-PAUSE-TTL', -30); // maintenance lock TTL ĐÃ HẾT
+    setState(sb, { cycle: 0, pause: { by: 'agent-5', incident_id: 'INC-PAUSE-TTL',
+      at: new Date(Date.now() - 48 * 3600e3).toISOString(), reason: 'fixture FAILED_PAUSED' } });
+    const r = PIPE(sb, ['cycle']);
+    assert.equal(r.rc, 0);
+    assert.ok(r.out.includes('PIPELINE PAUSED (durable)'), r.out.slice(-400)); // pause durable KHÔNG hết hạn theo TTL lock
+    const st = readJSON(statePath(sb));
+    assert.equal(st.cycle, 0);
+    assert.equal(st.pause.incident_id, 'INC-PAUSE-TTL');
+  } finally { rmSB(sb); }
+});
+
+test('open incident: #4 gián đoạn SAU khi commit incident (chưa final) => run mới KHÔNG tiếp tục production', () => {
+  const sb = mkSB();
+  try {
+    resetCore(sb); clearMaint(sb);
+    setState(sb, { cycle: 0 });
+    mkIncident(sb, 'INC-OPEN-1', 'run-900', null); // committed, chưa có kết luận
+    const r = PIPE(sb, ['cycle']);
+    assert.equal(r.rc, 0);
+    assert.ok(r.out.includes('PIPELINE PAUSED'), r.out.slice(-400));
+    assert.ok(r.out.includes('INC-OPEN-1'));
+    assert.ok(r.out.includes('chưa hoàn tất'));
+    assert.equal(readJSON(statePath(sb)).cycle, 0); // KHÔNG claim
+    // incident có final => production được phép chạy tiếp (IDLE với writer off)
+    const inc = readJSON(incPath(sb, 'INC-OPEN-1'));
+    inc.final = { status: 'SUCCESS', summary: 'fixture', at: new Date().toISOString() };
+    fs.writeFileSync(incPath(sb, 'INC-OPEN-1'), JSON.stringify(inc, null, 2));
+    const r2 = PIPE(sb, ['cycle'], { WRITER_RUNTIME: 'off' });
+    assert.ok(r2.out.includes('PIPELINE IDLE') || r2.out.includes('PIPELINE CYCLE'), r2.out.slice(-400));
+  } finally { rmSB(sb); }
+});
+
+test('state hỏng cú pháp => cycle REFUSED exit 1 (fail-closed — KHÔNG âm thầm dựng state rỗng để chạy)', () => {
+  const sb = mkSB();
+  try {
+    resetCore(sb); clearMaint(sb);
+    fs.mkdirSync(path.dirname(statePath(sb)), { recursive: true });
+    fs.writeFileSync(statePath(sb), '{corrupt json!!!');
+    const r = PIPE(sb, ['cycle']);
+    assert.equal(r.rc, 1);
+    assert.ok(r.out.includes('PIPELINE REFUSED'), r.out.slice(-400));
+    assert.equal(readJSON(txPath(sb)).active, false); // KHÔNG claim gì cả
+  } finally { rmSB(sb); }
+});
+
+test('operator pauseGate: durable pause chặn op MUTATING — status/verify vẫn chạy; maintenance cùng incident mở gate, incident khác KHÔNG', () => {
+  const sb = mkSB();
+  try {
+    resetCore(sb); clearMaint(sb);
+    setState(sb, { cycle: 0, pause: { by: 'agent-5', incident_id: 'INC-PG',
+      at: new Date().toISOString(), reason: 'fixture FAILED_PAUSED' } });
+    const OP = (args, env) => SP(sb, 'operator.js', args, env);
+    // (a) entrypoint publish cũ (operator MUTATING) KHÔNG bypass pause
+    const r1 = OP(['prepare-next', '--ids', 'A99999']);
+    assert.equal(r1.rc, 1);
+    assert.ok(r1.out.includes('production PAUSED (durable)'), r1.out.slice(-400));
+    assert.equal(readJSON(txPath(sb)).active, false); // KHÔNG claim
+    // (b) op read-only vẫn chạy khi pause
+    assert.equal(OP(['status']).rc, 0);
+    // (c) verify KHÔNG bị pause chặn (#5 cần nó để verify đúng incident)
+    assert.equal(OP(['verify', '--scope', 'fast']).rc, 0);
+    // (d) maintenance lock CÙNG incident sở hữu pause => gate mở cho agent #4/#5
+    setMaint(sb, 'agent-5', 'INC-PG', 30);
+    const r4 = OP(['prepare-next', '--ids', 'A99999']);
+    assert.ok(!r4.out.includes('production PAUSED (durable)'), r4.out.slice(-400)); // không bị pause chặn (fail khác là OK)
+    // (e) maintenance lock thuộc incident KHÁC => VẪN bị pause chặn
+    setMaint(sb, 'agent-5', 'INC-OTHER-LOCK', 30);
+    const r5 = OP(['prepare-next', '--ids', 'A99999']);
+    assert.equal(r5.rc, 1);
+    assert.ok(r5.out.includes('production PAUSED (durable)'), r5.out.slice(-400));
+  } finally { rmSB(sb); }
+});
+
+test('#5: durable pause thuộc incident KHÁC => KHÔNG clear, FAILED_PAUSED — pause của incident khác nguyên vẹn', () => {
+  const sb = mkSB();
+  try {
+    resetCore(sb); clearMaint(sb);
+    setTxn(sb, 'TX-PG1', 'prepare-next');
+    const r4 = A4(sb, ['repair', '--source', 'workflow_run', '--run-id', 'run-910']);
+    const incId = grab(r4.out, 'AGENT4_INCIDENT_ID');
+    assert.equal(grab(r4.out, 'AGENT4_RESULT'), 'SUCCESS');
+    // handoff #4 -> #5: runner mới thấy pause thuộc incident KHÁC trong state committed
+    let st; try { st = readJSON(statePath(sb)); } catch (e) { st = { cycle: 0, pending: [] }; }
+    st.pause = { by: 'agent-5', incident_id: 'INC-OTHER-OWNER',
+      at: new Date().toISOString(), reason: 'fixture FAILED_PAUSED của incident khác' };
+    fs.mkdirSync(path.dirname(statePath(sb)), { recursive: true });
+    fs.writeFileSync(statePath(sb), JSON.stringify(st, null, 2));
+    const r5 = A5(sb, ['run', '--incident', incId], { WRITER_RUNTIME: 'off' });
+    assert.ok(r5.out.includes('AGENT5_RESULT=FAILED_PAUSED'), r5.out.slice(-500));
+    const inc = readJSON(incPath(sb, incId));
+    assert.equal(inc.final.status, 'FAILED_PAUSED');
+    assert.ok(inc.actions.some(a => a.action === 'resume-blocked-pause'));
+    // pause của incident khác KHÔNG bị clear/đè bởi keepPaused của incident này
+    const st2 = readJSON(statePath(sb));
+    assert.equal(st2.pause.incident_id, 'INC-OTHER-OWNER');
+    // conclude ĐỎ: KHÔNG báo resume thành công
+    assert.equal(A5(sb, ['conclude', '--incident', incId]).rc, 1);
+  } finally { rmSB(sb); }
+});
+
+test('#5: verify thành công + pause thuộc CHÍNH incident => clear pause đúng incident => VERIFIED_RESUMED + conclude XANH', () => {
+  const sb = mkSB();
+  try {
+    resetCore(sb); clearMaint(sb);
+    setTxn(sb, 'TX-PG2', 'prepare-next');
+    const r4 = A4(sb, ['repair', '--source', 'workflow_run', '--run-id', 'run-911']);
+    const incId = grab(r4.out, 'AGENT4_INCIDENT_ID');
+    assert.equal(grab(r4.out, 'AGENT4_RESULT'), 'SUCCESS');
+    let st; try { st = readJSON(statePath(sb)); } catch (e) { st = { cycle: 0, pending: [] }; }
+    st.pause = { by: 'agent-4', incident_id: incId,
+      at: new Date().toISOString(), reason: 'fixture pause của chính incident này' };
+    fs.mkdirSync(path.dirname(statePath(sb)), { recursive: true });
+    fs.writeFileSync(statePath(sb), JSON.stringify(st, null, 2));
+    // trước #5: production vẫn bị pause của incident này chặn
+    const rC = PIPE(sb, ['cycle']);
+    assert.ok(rC.out.includes('PIPELINE PAUSED (durable)') && rC.out.includes(incId), rC.out.slice(-400));
+    const r5 = A5(sb, ['run', '--incident', incId], { WRITER_RUNTIME: 'off' });
+    assert.ok(r5.out.includes('AGENT5_RESULT=VERIFIED_RESUMED'), r5.out.slice(-500));
+    const inc = readJSON(incPath(sb, incId));
+    assert.ok(inc.actions.some(a => a.action === 'clear-durable-pause'));
+    assert.equal(readJSON(statePath(sb)).pause, undefined); // pause được clear SAU verify thành công
+    assert.equal(A5(sb, ['conclude', '--incident', incId]).rc, 0);
+  } finally { rmSB(sb); }
+});
+
+test('#4: state corrupt => rebuild CÙNG durable pause thuộc incident — production KHÔNG tự chạy trên state vừa dựng; #5 verify xong mới clear', () => {
+  const sb = mkSB();
+  try {
+    resetCore(sb); clearMaint(sb);
+    fs.mkdirSync(path.dirname(statePath(sb)), { recursive: true });
+    fs.writeFileSync(statePath(sb), '{corrupt json!!!');
+    const r4 = A4(sb, ['repair', '--source', 'workflow_run', '--run-id', 'run-920']);
+    const incId = grab(r4.out, 'AGENT4_INCIDENT_ID');
+    assert.equal(grab(r4.out, 'AGENT4_RESULT'), 'SUCCESS');
+    const st = readJSON(statePath(sb));
+    assert.equal(st.pause && st.pause.incident_id, incId); // rebuild đặt pause durable
+    assert.equal(st.pause.by, 'agent-4');
+    // production KHÔNG tự chạy tiếp chỉ vì state mới dựng xong
+    const rC = PIPE(sb, ['cycle']);
+    assert.equal(rC.rc, 0);
+    assert.ok(rC.out.includes('PIPELINE PAUSED (durable)') && rC.out.includes(incId), rC.out.slice(-400));
+    assert.equal(readJSON(statePath(sb)).pause.incident_id, incId); // pause nguyên vẹn
+    // #5 CÙNG incident verify thành công => clear đúng pause => resume
+    const r5 = A5(sb, ['run', '--incident', incId], { WRITER_RUNTIME: 'off' });
+    assert.ok(r5.out.includes('AGENT5_RESULT=VERIFIED_RESUMED'), r5.out.slice(-500));
+    assert.equal(readJSON(statePath(sb)).pause, undefined);
+    assert.equal(A5(sb, ['conclude', '--incident', incId]).rc, 0);
   } finally { rmSB(sb); }
 });

@@ -68,11 +68,26 @@ const MUTATING = new Set(['prepare-next','research','qa','publish']);
 const ID_RE = /^A\d{5}$/;
 const COUNT_MIN = 1, COUNT_MAX = 10;
 const factory = require(path.join(__dirname, 'factory.js'));
+const agentsCore = require(path.join(__dirname, 'agents-core.js'));
 
 // TURBO write-ahead queue: explicit --ids lists may carry up to QUEUE_MAX
 // (default 20) ids — one writer push, one deterministic claim. The legacy
 // --count path keeps the small CHUNK cap (COUNT_MAX).
 const IDS_MAX = Math.max(COUNT_MAX, Number(factory.cfg && factory.cfg.QUEUE_MAX) || 20);
+
+// Durable pause gate: op MUTATING bị từ chối khi state.pause đang giữ production
+// (committed truth — bền qua runner). Ngoại lệ duy nhất: agent #4/#5 đang sửa
+// CHÍNH incident sở hữu pause (maintenance lock cùng incident_id trên workspace).
+function pauseGate(op){
+  if (!MUTATING.has(op)) return;
+  let pause = null;
+  try { pause = agentsCore.durablePause(); }
+  catch (e) { fail('pipeline-state.json hỏng cú pháp — KHÔNG chạy op mutating khi state không đọc được (fail-closed): ' + e.message); }
+  if (!pause) return;
+  const m = agentsCore.maintHeld() ? agentsCore.maintRaw() : null;
+  if (m && m.incident_id === pause.incident_id) return;
+  fail('production PAUSED (durable): incident ' + pause.incident_id + ' giữ pause — op "' + op + '" bị từ chối. KHÔNG bypass maintenance/pause (giải quyết incident trước, docs/AGENTS-OPS.md).');
+}
 
 function fail(msg){ console.error('OPERATOR REFUSED: ' + msg); process.exit(1); }
 function resolveScope(cmd){ return cmd.scope || (PRODUCTION_OPS.includes(cmd.op) ? 'fast' : (cmd.op==='verify'?'full':'')); }
@@ -340,6 +355,7 @@ function opReports(){ factory.reports(); }
 function opVerify(cmd){ runVerify(cmd.scope||'full'); }
 
 function execute(cmd){
+  pauseGate(cmd.op); // durable pause gate TRƯỚC khi execute op mutating — entrypoint cũ KHÔNG bypass pause
   switch(cmd.op){
     case 'status': return opStatus();
     case 'prepare-next': return opPrepareNext(cmd);

@@ -22,9 +22,9 @@
 const fs = require('fs'), path = require('path');
 
 const ROOT = path.join(__dirname, '..', '..');
-const PIPE_DIR = path.join(ROOT, 'pipeline');                     // gitignored
-const MAINT_FILE = path.join(PIPE_DIR, 'maintenance.json');        // gitignored
-const COORD_LOCK_FILE = path.join(PIPE_DIR, 'lock.json');          // gitignored (coordinator)
+const PIPE_DIR = path.join(ROOT, 'pipeline');                     // gitignored — RUN-LOCAL: không đi theo runner mới
+const MAINT_FILE = path.join(PIPE_DIR, 'maintenance.json');        // gitignored — RUN-LOCAL; khóa bền vững duy nhất là state.pause (committed)
+const COORD_LOCK_FILE = path.join(PIPE_DIR, 'lock.json');          // gitignored (coordinator, run-local)
 const STATE_FILE = path.join(ROOT, 'data', 'state', 'pipeline-state.json'); // committed truth
 const INCIDENTS_DIR = path.join(ROOT, 'reports', 'incidents');     // committed audit
 
@@ -86,8 +86,9 @@ function releaseMaintenance(incidentId) {
     acquired_at: null, expires_at: null, released_at: new Date().toISOString() });
   return true;
 }
-// Pause-keep: đường fail của #5 — GIỮ production pause (TTL pause_ttl_minutes),
-// sau đó tự hồi phục (cron cycle chạy lại bình thường).
+// Pause-keep: đường fail của #5 — GIỮ production pause (TTL pause_ttl_minutes).
+// Lock này RUN-LOCAL (chết theo runner): tính bền vững nằm ở state.pause
+// (committed) — setDurablePause/keepPaused đặt kèm; KHÔNG self-heal sau TTL.
 function pauseMaintenance(incidentId, holder, ttlMinutes, reason) {
   const m = maintRaw();
   if (m && m.active && m.incident_id !== incidentId) return false;
@@ -148,6 +149,64 @@ function findBySourceRun(runId) {
   return null;
 }
 
+// --------------- durable pause (committed truth, sống qua runner) ------------
+// Load state strict: THIẾU file = hợp lệ (chưa có cycle — trả null để caller dựng
+// default); file CÓ SẴN mà hỏng cú pháp => THROW (fail-closed — không âm thầm
+// dùng state rỗng để chạy production).
+function loadStateFileStrict() {
+  let raw;
+  try { raw = fs.readFileSync(STATE_FILE, 'utf8'); }
+  catch (e) {
+    if (e && e.code === 'ENOENT') return null; // thiếu file = bình thường
+    throw e;                                  // lỗi I/O khác: fail-closed
+  }
+  try { return JSON.parse(raw); }
+  catch (e) { throw new Error('pipeline-state.json hỏng cú pháp (fail-closed): ' + e.message); }
+}
+// Pause durable hiện tại (state.pause) — null nếu không có. File hỏng => ném.
+function durablePause() {
+  const st = loadStateFileStrict();
+  return (st && st.pause && st.pause.incident_id) ? st.pause : null;
+}
+// Set pause durable: MỘT incident CHỈ set pause của chính nó; KHÔNG bao giờ
+// đè pause của incident khác (keepPaused của incident mới không clobber pause
+// cũ). Trả false khi pause hiện tại thuộc incident khác.
+function setDurablePause(incidentId, by, reason) {
+  const st = loadStateFileStrict() || {};
+  if (st.pause && st.pause.incident_id !== incidentId) return false;
+  st.pause = { by, incident_id: incidentId, at: new Date().toISOString(), reason: reason || null };
+  st.updated_at = new Date().toISOString();
+  fs.mkdirSync(path.dirname(STATE_FILE), { recursive: true });
+  fs.writeFileSync(STATE_FILE, JSON.stringify(st, null, 2));
+  return true;
+}
+// Clear pause durable: CHỈ SAU verify thành công VÀ CHỈ đúng incident sở hữu
+// pause. Incident khác KHÔNG clear được pause của người khác (fail-closed).
+function clearPause(incidentId) {
+  const st = loadStateFileStrict();
+  if (!st || !st.pause) return { cleared: false, reason: 'no-pause' };
+  if (st.pause.incident_id !== incidentId)
+    return { cleared: false, reason: 'pause thuộc incident ' + st.pause.incident_id + ' — KHÔNG đụng pause của incident khác' };
+  delete st.pause;
+  st.updated_at = new Date().toISOString();
+  st.stopped_reason = 'pause ' + incidentId + ' đã clear sau verify thành công (đúng incident sở hữu pause)';
+  fs.mkdirSync(path.dirname(STATE_FILE), { recursive: true });
+  fs.writeFileSync(STATE_FILE, JSON.stringify(st, null, 2));
+  return { cleared: true };
+}
+// Incident chưa hoàn tất (committed, chưa có final, còn mới): dấu hiệu #4 bị
+// gián đoạn SAU KHI lưu incident (runner chết giữa chừng). Run mới (runner
+// mới, không có maintenance.json run-local) PHẢI nhận biết qua incident store
+// committed này và KHÔNG tiếp tục production cho đến khi incident có kết luận.
+function openIncidents(opts) {
+  const c = cfg();
+  const windowMs = ((opts && Number(opts.window_minutes)) || c.unrepaired_window_minutes) * 60000;
+  const cutoff = Date.now() - windowMs;
+  return listIncidents().map(f => loadIncident(f.replace(/\.json$/, '')))
+    .filter(Boolean)
+    .filter(i => !i.final && new Date(i.created_at || 0).getTime() > cutoff);
+}
+
 // ------------------------------ probes (read-only) ---------------------------
 function probes() {
   const factory = require(path.join(__dirname, 'factory.js'));
@@ -206,4 +265,5 @@ function validProgressAt(stateOnly) {
 module.exports = { ROOT, PIPE_DIR, MAINT_FILE, COORD_LOCK_FILE, STATE_FILE, INCIDENTS_DIR,
   cfg, maintRaw, maintHeld, acquireMaintenance, takeoverMaintenance, releaseMaintenance,
   pauseMaintenance, newIncidentId, incidentPath, listIncidents, loadIncident, saveIncident,
-  act, setFinal, recentUnrepaired, findBySourceRun, probes, validProgressAt, UNREPAIRED };
+  act, setFinal, recentUnrepaired, findBySourceRun, probes, validProgressAt, UNREPAIRED,
+  loadStateFileStrict, durablePause, setDurablePause, clearPause, openIncidents };
