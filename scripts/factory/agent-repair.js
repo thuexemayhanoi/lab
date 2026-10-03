@@ -52,11 +52,11 @@ function out(line) { console.log(line); }
 
 // ------------------------------ diagnose -------------------------------------
 // Chỉ trả về lớp repair ĐÃ HIỂU: {kind, detail, fix()} hoặc null (không rõ => ESCALATE)
-function diagnose(p) {
+function diagnose(p, inc) {
   if (!p.pipeline_state_ok) {
     return { kind: 'pipeline-state-corrupt',
       detail: 'pipeline-state.json không parse được: ' + String(p.pipeline_state_error).slice(0, 200),
-      fix: () => repairStateCorrupt() };
+      fix: () => repairStateCorrupt(inc && inc.id) };
   }
   if (p.txn_active && !p.writer_lock_held) {
     return { kind: 'txn-stuck',
@@ -91,17 +91,24 @@ function repairCoordLockStale() {
     acquired_at: null, expires_at: null }, null, 2));
   return { ok: true, log: 'coordinator lock stale — đã giải (artifact TTL, KHÔNG đụng state chung).' };
 }
-function repairStateCorrupt() {
+function repairStateCorrupt(incidentId) {
   const stPath = core.STATE_FILE;
   fs.mkdirSync(core.PIPE_DIR, { recursive: true });
   const bak = path.join(core.PIPE_DIR, 'backup', 'pipeline-state.' + Date.now() + '.json');
   fs.mkdirSync(path.dirname(bak), { recursive: true });
   try { fs.copyFileSync(stPath, bak); } catch (e) {} // state hỏng vẫn được giữ làm bằng chứng
   fs.mkdirSync(path.dirname(stPath), { recursive: true });
+  // Rebuild là DERIVED state (matrix là truth) — nhưng production KHÔNG được
+  // tự chạy tiếp chỉ vì state mới dựng: đặt DURABLE PAUSE thuộc chính incident
+  // này (fail-closed). #5 của cùng incident verify thành công => clear đúng
+  // pause => resume. KHÔNG bao giờ dựng state "sạch" để production chạy ngay.
   fs.writeFileSync(stPath, JSON.stringify({ version: 1, updated_at: new Date().toISOString(),
     cycle: 0, pending: [], planned_total: null, active: null, last_cycle_summary: null,
-    last_stop: null, stopped_reason: 'pipeline-state được Agent #4 dựng lại từ default (file cũ backup ở pipeline/backup — matrix là truth; queue/active sẽ được refill/adopt từ repository truth ở cycle kế tiếp)' }, null, 2));
-  return { ok: true, log: 'pipeline-state.json corrupt — backup ' + path.basename(bak) + ', dựng lại default (derived state; KHÔNG đụng matrix/checkpoint).' };
+    last_stop: null,
+    stopped_reason: 'pipeline-state được Agent #4 dựng lại từ default (file cũ backup ở pipeline/backup — matrix là truth; queue/active sẽ được refill/adopt từ repository truth ở cycle kế tiếp SAU khi incident được verify)',
+    pause: incidentId ? { by: 'agent-4', incident_id: incidentId, at: new Date().toISOString(),
+      reason: 'pipeline-state rebuilt sau corruption — production giữ pause cho đến khi Agent #5 verify thành công (đúng incident sở hữu pause)' } : null }, null, 2));
+  return { ok: true, log: 'pipeline-state.json corrupt — backup ' + path.basename(bak) + ', dựng lại default + durable pause' + (incidentId ? ' (incident ' + incidentId + ')' : '') + ' (derived state; KHÔNG đụng matrix/checkpoint).' };
 }
 function tail(r) { return ((r.stdout || '') + (r.stderr || '')).trim().split('\n').slice(-6).join('\n'); }
 
@@ -159,7 +166,7 @@ function cmdRepair(a) {
       + ' stopped_reason=' + (p.pipeline_state && p.pipeline_state.stopped_reason ? String(p.pipeline_state.stopped_reason).slice(0, 160) : 'null'));
 
     // (5) chẩn đoán + auto-repair lớp an toàn
-    const d = diagnose(p);
+    const d = diagnose(p, inc);
     if (!d) {
       core.setFinal(inc, 'ESCALATE', 'Không xác định được lớp hỏng an toàn nào từ probes (hoặc không có hỏng infra nào) — giao Agent #5 re-diagnose độc lập. Probes: ' + JSON.stringify({ txn_active: p.txn_active, writer_lock_held: p.writer_lock_held, coord_lock_held: p.coord_lock_held, state_ok: p.pipeline_state_ok }));
       out('AGENT4_RESULT=ESCALATE');

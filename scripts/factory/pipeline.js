@@ -85,6 +85,18 @@ function loadState() {
     return Object.assign(defaultState(), s);
   } catch (e) { return defaultState(); }
 }
+// Load STRICT: THIẾU file = default state (hợp lệ — chưa có cycle nào); file có
+// sẵn mà hỏng cú pháp => THROW. KHÔNG bao giờ âm thầm dùng state rỗng để chạy
+// production; state.pause là khóa bền vững duy nhất QUA RUNNER (committed truth).
+function loadStateStrict() {
+  let raw;
+  try { raw = fs.readFileSync(STATE_FILE, 'utf8'); }
+  catch (e) { if (e && e.code === 'ENOENT') return defaultState(); throw e; }
+  let s;
+  try { s = JSON.parse(raw); }
+  catch (e) { throw new Error('pipeline-state.json hỏng cú pháp: ' + e.message); }
+  return Object.assign(defaultState(), s);
+}
 function saveState(s) {
   s.updated_at = new Date().toISOString();
   fs.mkdirSync(path.dirname(STATE_FILE), { recursive: true });
@@ -240,17 +252,33 @@ async function cycle() {
   let held = true;
   const finish = (code) => { if (held) { releaseLock(); held = false; } process.exitCode = code; return code; };
 
-  // ---- AGENTS #4/#5 (docs/AGENTS-OPS.md): maintenance lock => PAUSED ----
-  // Khi Agent #4 (repair) hoặc #5 (supervisor) đang sửa hạ tầng, coordinator
-  // KHÔNG mutate (không claim/viết/QA/publish) — thoát sạch exit 0.
-  // Đây là cơ chế "pause production mutations while repairing".
+  // ---- AGENTS #4/#5 (docs/AGENTS-OPS.md): durable pause + maintenance + open
+  //      incident => PAUSED. TẤT CẢ check chặn chạy TRƯỚC preflight/recover/
+  //      refill/claim — coordinator KHÔNG mutate gì cho đến khi sạch hết.
+  // state.pause (committed truth) là khóa bền vững duy nhất QUA RUNNER:
+  // maintenance.json / lock.json là RUN-LOCAL (gitignored, chết theo runner).
+  let state;
+  try { state = loadStateStrict(); }
+  catch (e) {
+    console.error('PIPELINE REFUSED: ' + (e && e.message) + ' — KHÔNG âm thầm dựng state rỗng để chạy production (fail-closed; xử lý theo docs/PROC-RECOVERY.md).');
+    return finish(1);
+  }
+  if (state.pause) {
+    console.log('PIPELINE PAUSED (durable): incident ' + state.pause.incident_id + ' giữ pause production (by ' + state.pause.by + ' lúc ' + state.pause.at + ') — KHÔNG claim, KHÔNG viết, KHÔNG publish. Chỉ clear sau khi incident này được verify thành công (agent #5).');
+    return finish(0);
+  }
   if (agentsCore.maintHeld()) {
     const m = agentsCore.maintRaw();
     console.log("PIPELINE PAUSED: maintenance lock đang được giữ (incident " + (m && m.incident_id) + ", holder " + (m && m.holder) + ") — Agent #4/#5 đang sửa hạ tầng; KHÔNG claim, KHÔNG viết, KHÔNG publish (exit 0).");
     return finish(0);
   }
-
-  const state = loadState();
+  // #4 gián đoạn SAU khi commit incident nhưng TRƯỚC khi có final => run mới
+  // (runner mới, KHÔNG có maintenance.json) vẫn nhận biết qua incident store.
+  const openInc = agentsCore.openIncidents();
+  if (openInc.length) {
+    console.log('PIPELINE PAUSED: incident chưa hoàn tất (committed, chưa có kết luận): ' + openInc.map(i => i.id).join(', ') + ' — Agent #4 có thể đã bị gián đoạn; KHÔNG claim, KHÔNG viết, KHÔNG publish cho đến khi incident có final (docs/AGENTS-OPS.md).');
+    return finish(0);
+  }
   if (state.stopped_reason) console.error('PIPELINE STOPPED (lần trước): ' + state.stopped_reason);
 
   // ---- preflight: txn + writer lock (fail-closed, recover trước khi mutate) ----
@@ -454,12 +482,20 @@ function cmdStatus() {
     pending_queue: state.pending.length, planned_total: state.planned_total || (by.PLANNED || 0),
     active: state.active ? { cycle: state.active.cycle, batch: state.active.batch, adopted: !!state.active.adopted } : null,
     last_cycle_summary: state.last_cycle_summary, stopped_reason: state.stopped_reason,
+    pause: state.pause || null, maintenance_held: agentsCore.maintHeld(),
+    open_incidents: agentsCore.openIncidents().map(i => i.id),
     writer_runtime: runtime.mode === 'off' ? 'off (idle — ' + runtime.reason + ')' : runtime.mode,
     matrix_by_status: by, coordinator_lock: lockHeld() ? 'HELD' : 'free' };
   console.log(JSON.stringify(s, null, 2));
 }
 function cmdRefill() {
-  const state = loadState();
+  let state;
+  try { state = loadStateStrict(); }
+  catch (e) { console.error('PIPELINE REFILL REFUSED: ' + (e && e.message) + ' (fail-closed)'); process.exitCode = 1; return; }
+  if (state.pause) {
+    console.log('PIPELINE REFILL SKIPPED: durable pause của incident ' + state.pause.incident_id + ' — KHÔNG đụng state khi production pause.');
+    return;
+  }
   const rows = loadRows();
   const changed = refill(state, rows);
   saveState(state);
@@ -495,4 +531,4 @@ if (require.main === module) main(process.argv.slice(2)).catch(e => {
   try { releaseLock(); } catch (_) {}
   process.exit(1);
 });
-module.exports = { loadState, saveState, grantsOf, refill, staleDraftSweep, chunk };
+module.exports = { loadState, loadStateStrict, saveState, grantsOf, refill, staleDraftSweep, chunk };
