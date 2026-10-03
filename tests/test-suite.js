@@ -597,6 +597,70 @@ test('design: shared stylesheet carries the responsive editorial system (not per
   assert.ok(w.includes('shell.headerHtml()'), 'wrap-drafts must emit the shared header');
   assert.ok(b.includes('shell.decorateArticle('), 'build-site must decorate every published page');
 });
+// ---------- 44px INTERACTION CONTRACT (issue #5) ----------
+// Editorial interactive links must provide a >=44px effective hit area
+// (docs/EDITORIAL-SYSTEM.md: "touch targets >= 44px"). Static label chips
+// (.hub-label, .meta-chip, search-result <span class="article-chip">) and
+// inline prose/citation links are intentionally out of scope.
+test('design: interactive editorial links meet the 44px touch-target contract (issue #5)', () => {
+  const css = fs.readFileSync(path.join(ROOT, 'scripts', 'site', 'style.css'), 'utf8');
+  // minimal rule parser that understands @media nesting (no external deps)
+  const rules = [];
+  (function parse(rawText, media) {
+    const text = rawText.replace(/\/\*[\s\S]*?\*\//g, ''); // strip comments out of selectors
+    let idx = 0;
+    while (idx < text.length) {
+      const open = text.indexOf('{', idx);
+      if (open === -1) break;
+      const sel = text.slice(idx, open).trim();
+      let depth = 1, j = open + 1;
+      while (j < text.length && depth > 0) { const c = text[j]; if (c === '{') depth++; else if (c === '}') depth--; j++; }
+      const body = text.slice(open + 1, j - 1);
+      if (sel.startsWith('@media')) parse(body, sel);
+      else if (sel) rules.push({ sel, body, media });
+      idx = j;
+    }
+  })(css, null);
+  assert.ok(rules.length > 100, 'CSS rule parser found too few rules — parser broken? got ' + rules.length);
+  const declValue = (rule, prop) => {
+    const m = rule.body.match(new RegExp('(?:^|;)\\s*' + prop + '\\s*:\\s*([^;}]+)', 'i'));
+    return m ? m[1].trim() : null;
+  };
+  const pxOf = v => (v && /^[\d.]+px$/.test(v) ? parseFloat(v) : null);
+  // [selector, required min-height, requires flex vertical centering]
+  const CONTRACT = [
+    ['a.category-chip', 44, true],   // article hero category link
+    ['a.article-chip', 44, true],    // card/hub chip links (span chips stay compact)
+    ['.card-title', 44, false],      // primary card link
+    ['.card .read-more', 44, true],   // "Đọc bài →" link
+    ['.toc-list a', 44, true],        // TOC navigation
+    ['.breadcrumb a', 44, true],      // breadcrumb navigation
+    ['#search-results .sr-title', 44, true], // dynamic search results
+    ['.nap-row a', 44, true]         // contact NAP card links
+  ];
+  CONTRACT.forEach(([sel, minH, wantFlex]) => {
+    const hits = rules.filter(r => r.sel.split(',').map(s => s.trim()).includes(sel));
+    assert.ok(hits.length, 'no CSS rule for interactive target ' + sel);
+    const globalRule = hits.find(r => !r.media);
+    assert.ok(globalRule, sel + ' must have a global (non-media-scoped) rule');
+    const gotMinH = pxOf(declValue(globalRule, 'min-height'));
+    assert.ok(gotMinH !== null && gotMinH >= minH,
+      sel + ' must declare min-height >= ' + minH + 'px, got ' + gotMinH);
+    if (wantFlex) {
+      const disp = declValue(globalRule, 'display') || '';
+      assert.ok(/flex/.test(disp), sel + ' must vertically center via flex display, got display:' + disp);
+    }
+    // no narrower/later override may shrink the hit area below the contract
+    hits.forEach(r => {
+      const v = pxOf(declValue(r, 'min-height'));
+      if (v !== null) assert.ok(v >= minH, sel + ' override shrinks min-height to ' + v + 'px in [' + r.sel + ']');
+    });
+  });
+  // the promoted public asset must be the verbatim promotion of the canonical source
+  const promoted = fs.readFileSync(path.join(SITE, 'assets', 'style.css'), 'utf8');
+  assert.strictEqual(promoted, css,
+    'assets/style.css must be the verbatim promotion of scripts/site/style.css — run node scripts/site/build-site.js');
+});
 test('design: published articles render the shared editorial chrome, no one-off styling', () => {
   published.forEach(r => {
     const p = path.join(ROOT, r.output_path.replace(/\/$/, ''), 'index.html');
