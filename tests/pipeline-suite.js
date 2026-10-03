@@ -207,8 +207,135 @@ test('workflow: factory-production.yml kích hoạt pipeline đúng (cron 30 ph�
   // push job (writer _drafts) KHÔNG chạy trên schedule — pipeline là job duy nhất của cron
   const pm = /  publish:\n([\s\S]*?)(\n  \w+:|\s*$)/.exec(yml);
   assert.ok(pm, 'workflow phải có job publish');
-  assert.match(pm[1], /github\.event_name != 'schedule'/, 'publish job phải tắt trên schedule (chống kích hoạt ngoài ý muốn)');
+  assert.match(pm[1], /github\.event_name == 'push'/, 'publish job phải là ALLOWLIST: chỉ push draft');
+  assert.match(pm[1], /inputs\.action == 'status'/, 'publish job nhận maintenance dispatch status');
+  assert.match(pm[1], /inputs\.action == 'recover'/, 'publish job nhận maintenance dispatch recover');
+  assert.match(pm[1], /inputs\.action == 'diagnostics'/, 'publish job nhận maintenance dispatch diagnostics');
+  assert.doesNotMatch(pm[1], /github\.event_name != /, 'KHÔNG còn denylist — routing phải là allowlist rõ ràng');
   assert.match(yml, /paths: \['_drafts\/\*\*'\]/, 'push trigger chỉ _drafts');
+});
+
+// =====================================================================
+// WORKFLOW ROUTING — evaluate điều kiện `if` THẬT của từng job cho mọi
+// event (KHÔNG chỉ grep): push draft, dispatch status/recover/diagnostics/
+// pipeline/selftest/repair/watchdog, workflow_run failure, 2 cron — mỗi
+// event chỉ đến đúng job của nó.
+// =====================================================================
+function wfJobsIf() { // trích {job: if-expression} từ factory-production.yml
+  const lines = fs.readFileSync(path.join(ROOT, '.github', 'workflows', 'factory-production.yml'), 'utf8').split('\n');
+  const jobs = {}; let inJobs = false, cur = null, fold = null;
+  for (const line of lines) {
+    if (/^jobs:\s*$/.test(line)) { inJobs = true; continue; }
+    if (!inJobs) continue;
+    const jm = /^  ([A-Za-z0-9_-]+):\s*$/.exec(line);
+    if (jm) { cur = jm[1]; jobs[cur] = null; fold = null; continue; }
+    if (!cur) continue;
+    const ifInline = /^    if: (.+)$/.exec(line);
+    if (ifInline && jobs[cur] === null && !/^    if: >-\s*$/.test(line)) { jobs[cur] = ifInline[1].trim(); fold = null; continue; }
+    if (/^    if: >-\s*$/.test(line) && jobs[cur] === null) { fold = []; continue; }
+    if (fold !== null) {
+      const fm = /^      (.+)$/.exec(line);
+      if (fm) { fold.push(fm[1].trim()); continue; }
+      jobs[cur] = fold.join(' '); fold = null; continue; // hết folded scalar
+    }
+  }
+  if (fold !== null && cur) jobs[cur] = fold.join(' ');
+  for (const [k, v] of Object.entries(jobs))
+    assert.ok(typeof v === 'string' && v.length > 0, 'job ' + k + ' phải có điều kiện if parse được (got: ' + v + ')');
+  return jobs;
+}
+function evalGhExpr(expr, ctx) { // subset: == != && || ! ( ) 'string' a.b.c
+  const toks = []; let rest = expr;
+  const TOK = /^(\s*)('(?:[^']*)'|&&|\|\||==|!=|[()]|!|[A-Za-z_][A-Za-z0-9_.-]*)/;
+  while (rest.length) {
+    const m = TOK.exec(rest);
+    if (!m || m[0].trim() === '') throw new Error('token không parse được: ' + JSON.stringify(rest.slice(0, 30)));
+    if (m[0].trim()) toks.push(m[0].trim());
+    rest = rest.slice(m[0].length);
+  }
+  let p = 0;
+  const peek = () => toks[p], eat = () => toks[p++];
+  const resolve = name => {
+    if (name === 'null' || name === 'true' || name === 'false') return JSON.parse(name);
+    let v = ctx;
+    for (const part of name.split('.')) v = (v == null) ? null : v[part];
+    return v === undefined ? null : v;
+  };
+  function primary() {
+    const t = eat();
+    if (t === '(') { const v = or(); const c = eat(); if (c !== ')') throw new Error('thiếu )'); return v; }
+    if (t === '!') return !truthy(primary());
+    if (/^'/.test(t)) return t.slice(1, -1);
+    return resolve(t);
+  }
+  const truthy = v => v !== null && v !== false && v !== '' && v !== 0;
+  function cmp() {
+    let l = primary();
+    while (peek() === '==' || peek() === '!=') {
+      const op = eat(); const r = primary();
+      l = op === '==' ? String(l) === String(r) : String(l) !== String(r);
+    }
+    return l;
+  }
+  function and() { let l = cmp(); while (peek() === '&&') { eat(); const r = cmp(); l = truthy(l) && truthy(r); } return l; }
+  function or() { let l = and(); while (peek() === '||') { eat(); const r = and(); l = truthy(l) || truthy(r); } return l; }
+  const val = or();
+  if (p !== toks.length) throw new Error('token dư ở ' + p + ': ' + toks.slice(p).join(' '));
+  return truthy(val);
+}
+const GH_REPO = 'thuexemayhanoi/lab';
+function routeCtx(ctx) { // ctx = {event_name, schedule?, action?, workflow_run?, needs?}
+  return { github: Object.assign({ repository: GH_REPO, event_name: ctx.event_name,
+      event: ctx.schedule ? { schedule: ctx.schedule } : ctx.workflow_run || {} }, ctx.github || {}),
+    inputs: { action: ctx.action || null }, needs: ctx.needs || {} };
+}
+function routeAll(ctx) {
+  const jobs = wfJobsIf();
+  const gh = routeCtx(ctx);
+  const out = {};
+  for (const [job, expr] of Object.entries(jobs)) out[job] = evalGhExpr(expr, gh);
+  return out;
+}
+test('workflow routing: mỗi event đến ĐÚNG job (evaluate if thật của cả 5 job)', () => {
+  const only = (o, jobs) => { // đúng các job trong `jobs` chạy, còn lại KHÔNG
+    const run = Object.keys(o).filter(k => o[k]);
+    assert.deepStrictEqual(run.sort(), [...jobs].sort(),
+      'event ' + JSON.stringify(ctxOf) + ' phải chạy đúng ' + JSON.stringify(jobs) + ' (got: ' + run.join(',') + ')');
+  };
+  let ctxOf;
+  // push draft → publish
+  ctxOf = { event_name: 'push' }; only(routeAll(ctxOf), ['publish']);
+  // dispatch maintenance → publish (job bảo trì)
+  for (const a of ['status', 'recover', 'diagnostics']) {
+    ctxOf = { event_name: 'workflow_dispatch', action: a }; only(routeAll(ctxOf), ['publish']);
+  }
+  // dispatch pipeline | selftest → pipeline
+  for (const a of ['pipeline', 'selftest']) {
+    ctxOf = { event_name: 'workflow_dispatch', action: a }; only(routeAll(ctxOf), ['pipeline']);
+  }
+  // dispatch watchdog → agent-watchdog
+  ctxOf = { event_name: 'workflow_dispatch', action: 'watchdog' }; only(routeAll(ctxOf), ['agent-watchdog']);
+  // dispatch repair → agent-repair (#5 theo KẾT QUẢ outputs của #4, không phải event)
+  ctxOf = { event_name: 'workflow_dispatch', action: 'repair' }; only(routeAll(ctxOf), ['agent-repair']);
+  //   ... #4 SUCCESS|ESCALATE + job xanh => #5 chạy
+  const needsOk = { 'agent-repair': { result: 'success', outputs: { result: 'SUCCESS', incident_id: 'INC-1' } } };
+  const withSup = routeAll({ event_name: 'workflow_dispatch', action: 'repair', needs: needsOk });
+  assert.equal(withSup['agent-supervisor'], true);
+  const needsRefused = { 'agent-repair': { result: 'success', outputs: { result: 'REFUSED_DEDUP', incident_id: 'none' } } };
+  assert.equal(routeAll({ event_name: 'workflow_dispatch', action: 'repair', needs: needsRefused })['agent-supervisor'], false);
+  // workflow_run failure của Factory production trên main → CHỈ agent-repair, publish KHÔNG chạy
+  ctxOf = { event_name: 'workflow_run', workflow_run: { workflow_run: { conclusion: 'failure', name: 'Factory production', head_branch: 'main' } } };
+  only(routeAll(ctxOf), ['agent-repair']);
+  //   ... run KHÔNG fail / branch khác → không agent nào chạy
+  assert.equal(routeAll({ event_name: 'workflow_run', workflow_run: { workflow_run: { conclusion: 'success', name: 'Factory production', head_branch: 'main' } } })['agent-repair'], false);
+  assert.equal(routeAll({ event_name: 'workflow_run', workflow_run: { workflow_run: { conclusion: 'failure', name: 'Factory production', head_branch: 'dev' } } })['agent-repair'], false);
+  // cron */30 → CHỈ pipeline (publish KHÔNG chạy trên schedule)
+  ctxOf = { event_name: 'schedule', schedule: '*/30 * * * *' }; only(routeAll(ctxOf), ['pipeline']);
+  // cron 10 * * * * → CHỈ agent-watchdog
+  ctxOf = { event_name: 'schedule', schedule: '10 * * * *' }; only(routeAll(ctxOf), ['agent-watchdog']);
+  // repo khác → KHÔNG job nào chạy
+  const off = routeAll({ event_name: 'push', github: { repository: 'someone/else' } });
+  assert.ok(Object.values(off).every(v => v === false), 'repo khác phải không chạy job nào');
 });
 
 // =====================================================================

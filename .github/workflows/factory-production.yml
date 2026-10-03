@@ -60,7 +60,25 @@ permissions:
 
 jobs:
   publish:
-    if: github.repository == 'thuexemayhanoi/lab' && github.event_name != 'schedule' && !(github.event_name == 'workflow_dispatch' && (inputs.action == 'pipeline' || inputs.action == 'selftest'))
+    # ROUTING ALLOWLIST (không phải denylist): publish CHỈ chạy trên
+    # (a) push _drafts/** hoặc (b) dispatch status|recover|diagnostics.
+    # Mọi event khác (schedule, workflow_run, dispatch pipeline|selftest|
+    # repair|watchdog) KHÔNG bao giờ rơi vào job này — mỗi event chỉ đến
+    # đúng job của nó (pipeline / agent-repair / agent-supervisor /
+    # agent-watchdog).
+    if: >-
+      github.repository == 'thuexemayhanoi/lab' &&
+      (
+        github.event_name == 'push' ||
+        (
+          github.event_name == 'workflow_dispatch' &&
+          (
+            inputs.action == 'status' ||
+            inputs.action == 'recover' ||
+            inputs.action == 'diagnostics'
+          )
+        )
+      )
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
