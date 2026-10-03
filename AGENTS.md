@@ -316,3 +316,37 @@ marker; see `docs/PROC-RECOVERY.md`).
 - **GitHub Actions**: tests, validation, deterministic generation, publish
   promotion, site build, deployment. The `pipeline` job coordinates the
   autonomous loop; it never bypasses QA or the publish gates.
+
+## Operational agents (#4 repair, #5 supervisor, #6 watchdog)
+
+Three INFRASTRUCTURE-ONLY agents (docs/AGENTS-OPS.md). They NEVER write
+articles and never touch queue/matrix/taxonomy/content strategy.
+
+- **#4 repair** (`scripts/factory/agent-repair.js`, job `agent-repair`):
+  first-line repair, triggered by `workflow_run` when a production job
+  fails on main (or dispatch `action=repair`). Creates a unique
+  `incident_id`, acquires the GLOBAL maintenance lock
+  (`pipeline/maintenance.json` — production mutations pause while held),
+  inspects only the failing state, applies the smallest safe repair, runs
+  `operator.js verify --scope fast`, then hands over to #5 (SUCCESS or
+  ESCALATE). Never loops; dedup per failed run; circuit breaker stops
+  repair loops.
+- **#5 supervisor** (`scripts/factory/agent-supervisor.js`, job
+  `agent-supervisor`): same incident_id + maintenance lock (never
+  simultaneous with #4). Independently verifies repo/workflow/writer
+  staging/publisher/queue/checkpoint/CI; on health releases the lock and
+  resumes production via exactly ONE existing entrypoint
+  (`pipeline.js cycle`). Exactly ONE second-line repair attempt
+  (regression-tested); if it cannot repair safely: keep production
+  paused, preserve checkpoints/writer commits, write a human-readable
+  incident report (`reports/incidents/<id>.md`), STOP. No further
+  repair escalation exists.
+- **#6 watchdog** (`scripts/factory/agent-watchdog.js`, job
+  `agent-watchdog`, cron `10 * * * *`): ONE responsibility — if no
+  VALID production progress (real staging/publish/cycle output — logs,
+  heartbeats and status checks do NOT count) for 2 continuous hours AND
+  everything is idle (no maintenance lock, no intentional pause, no
+  active writer cycle, no publisher/build/deploy activity, no in-progress
+  Actions run), trigger exactly ONE normal production entrypoint. Never
+  starts writers individually, never repairs, never edits anything, never
+  cancels active runs or duplicates cycles.
