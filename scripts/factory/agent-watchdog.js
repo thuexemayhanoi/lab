@@ -49,22 +49,42 @@ function record(check) { // audit local (gitignored) — KHÔNG commit, KHÔNG m
   } catch (e) { /* audit best-effort */ }
 }
 
-// GitHub Actions runs đang chạy (MỘT lệnh API duy nhất — KHÔNG poll).
-// Trả về: true = có run in_progress của Factory production; false = idle;
-// null = không kiểm tra được (không trong Actions / không có gh) => bỏ qua
-// nhánh này ở local, nhưng trong Actions thì fail-closed (DO NOTHING).
+// GitHub Actions runs chưa hoàn tất (MỘT lệnh API cho mỗi status — KHÔNG poll).
+// Trạng thái filter hợp lệ theo GitHub API (list workflow runs): queued |
+// in_progress | waiting | pending | requested | action_requested — kiểm tra
+// TẤT CẢ để không dispatch trùng khi production đã xếp hàng chờ chạy.
+// Run HIỆN TẠI (chính watchdog, GITHUB_RUN_ID) bị LOẠI — không tự chặn mình.
+// Trả về: true = có run chưa hoàn tất của Factory production khác run hiện tại;
+// false = idle; null = không kiểm tra được => fail-closed (DO NOTHING).
+const GH_ACTIVE_STATUSES = ['queued', 'in_progress', 'waiting', 'pending', 'requested', 'action_requested'];
+const GH_PER_PAGE = 100;
+const GH_MAX_PAGES = 10; // 1000 run/status — đủ xa mọi thực tế, chống vòng lặp vô hạn
 function ghProductionActive() {
   const repo = process.env.GITHUB_REPOSITORY;
   const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
   const apiUrl = process.env.GITHUB_API_URL || 'https://api.github.com';
   if (!repo || !token) return null; // local/test: không có API context
+  const host = apiUrl.replace(/^https?:\/\//, '');
+  const currentRunId = String(process.env.GITHUB_RUN_ID || '');
   try {
-    const out = execFileSync('gh', ['api', '--hostname', apiUrl.replace(/^https:\/\//, ''),
-      'repos/' + repo + '/actions/runs?status=in_progress&per_page=20'], { encoding: 'utf8' });
-    const j = JSON.parse(out);
-    const active = (j.workflow_runs || []).filter(r => r.name === 'Factory production');
-    return active.length > 0;
-  } catch (e) { return null; }
+    for (const status of GH_ACTIVE_STATUSES) {
+      let seen = 0;
+      for (let page = 1; page <= GH_MAX_PAGES; page++) {
+        const out = execFileSync('gh', ['api', '--hostname', host,
+          'repos/' + repo + '/actions/runs?status=' + status + '&per_page=' + GH_PER_PAGE + '&page=' + page],
+          { encoding: 'utf8' });
+        const j = JSON.parse(out);
+        const runs = Array.isArray(j.workflow_runs) ? j.workflow_runs : [];
+        const other = runs.filter(r => r.name === 'Factory production' && String(r.id) !== currentRunId);
+        if (other.length) return true; // production khác đang chạy hoặc đang chờ — KHÔNG dispatch trùng
+        seen += runs.length;
+        const total = Number(j.total_count);
+        if (runs.length < GH_PER_PAGE) break;                 // hết trang
+        if (Number.isFinite(total) && seen >= total) break;   // hết tổng số run của status
+      }
+    }
+    return false;
+  } catch (e) { return null; } // API lỗi (mạng/422/gh thiếu) => fail-closed
 }
 
 function check(a) {
@@ -88,7 +108,7 @@ function check(a) {
   if (p.txn_active) blockers.push('transaction ' + (p.txn && p.txn.id) + ' active — publisher/integration đang chạy');
   if (p.writer_lock_held) blockers.push('writer-lock còn hiệu lực (holder=' + (p.writer_lock.raw && p.writer_lock.raw.holder) + ')');
   const ghActive = ghProductionActive();
-  if (ghActive === true) blockers.push('GitHub Actions: có run in_progress của Factory production');
+  if (ghActive === true) blockers.push('GitHub Actions: có run chưa hoàn tất (queued/in_progress/waiting/pending) của Factory production — khác run watchdog hiện tại');
   if (ghActive === null && process.env.GITHUB_REPOSITORY && (process.env.GITHUB_TOKEN || process.env.GH_TOKEN))
     blockers.push('GitHub Actions: KHÔNG kiểm tra được trạng thái run (fail-closed — giả định có run đang chạy)');
 

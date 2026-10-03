@@ -352,6 +352,146 @@ test('#6: đủ idle + trigger-cmd thật => chạy đúng MỘT lần, KHÔNG m
   } finally { rmSB(sb); }
 });
 
+// ---------- fake `gh` cho ghProductionActive (GITHUB API contract) ----------
+function mkFakeGh() {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'lab-fake-gh-'));
+  const gh = path.join(dir, 'gh');
+  fs.writeFileSync(gh, [
+    '#!/usr/bin/env node',
+    "'use strict';",
+    'const fs = require("fs");',
+    'const args = process.argv.slice(2);',
+    'if (process.env.FAKE_GH_FAIL === "1") { process.stderr.write("gh: HTTP 500\\n"); process.exit(1); }',
+    'const url = args.filter(a => a.includes("actions/runs")).pop() || "";',
+    'const st = (/[?&]status=([^&]+)/.exec(url) || [])[1] || "";',
+    'const pg = Number((/[?&]page=(\\d+)/.exec(url) || [])[1] || 1);',
+    'const data = JSON.parse(fs.readFileSync(process.env.FAKE_GH_DATA, "utf8"));',
+    'const spec = data[st] || { runs: [] };',
+    'const runs = spec.runs.slice((pg - 1) * 100, pg * 100);',
+    'process.stdout.write(JSON.stringify({ total_count: spec.runs.length, workflow_runs: runs }));',
+    ''
+  ].join('\n'));
+  fs.chmodSync(gh, 0o755);
+  return dir;
+}
+const ghRun = (id, name, status) => ({ id, name: name || 'Factory production', status: status || 'in_progress' });
+function ghEnv(ghDir, data, extra) {
+  const dataFile = path.join(ghDir, 'data.json');
+  fs.writeFileSync(dataFile, JSON.stringify(data || {}));
+  return Object.assign({ GITHUB_REPOSITORY: 'thuexemayhanoi/lab', GITHUB_TOKEN: 'test-token',
+    FAKE_GH_DATA: dataFile, PATH: ghDir + path.delimiter + process.env.PATH }, extra || {});
+}
+const rmGh = ghDir => fs.rmSync(ghDir, { recursive: true, force: true });
+
+test('#6 ghProductionActive (unit): chỉ có run watchdog HIỆN TẠI => false — không tự chặn mình', () => {
+  const ghDir = mkFakeGh(); const sb = mkSB();
+  try {
+    resetCore(sb);
+    const wd = require(path.join(sb, 'scripts', 'factory', 'agent-watchdog.js'));
+    const stashes = { repo: process.env.GITHUB_REPOSITORY, tok: process.env.GITHUB_TOKEN, run: process.env.GITHUB_RUN_ID };
+    Object.assign(process.env, ghEnv(ghDir, { in_progress: { runs: [ghRun(555)] } }, { GITHUB_RUN_ID: '555' }));
+    assert.equal(wd.ghProductionActive(), false); // run hiện tại bị loại qua GITHUB_RUN_ID
+    Object.assign(process.env, { GITHUB_RUN_ID: '999' });
+    assert.equal(wd.ghProductionActive(), true);  // cùng run đó nhưng từ run khác => active
+    Object.assign(process.env, stashes); // phục hồi env
+  } finally { rmSB(sb); rmGh(ghDir); }
+});
+
+test('#6 ghProductionActive (unit): run khác queued/waiting/pending => true; không có run nào => false; API lỗi => null (fail-closed)', () => {
+  const ghDir = mkFakeGh(); const sb = mkSB();
+  try {
+    resetCore(sb);
+    const wd = require(path.join(sb, 'scripts', 'factory', 'agent-watchdog.js'));
+    const stashes = { repo: process.env.GITHUB_REPOSITORY, tok: process.env.GITHUB_TOKEN, run: process.env.GITHUB_RUN_ID, fail: process.env.FAKE_GH_FAIL };
+    Object.assign(process.env, ghEnv(ghDir, { queued: { runs: [ghRun(777, 'Factory production', 'queued')] } }, { GITHUB_RUN_ID: '999' }));
+    assert.equal(wd.ghProductionActive(), true); // đã XẾP HÀNG => không dispatch trùng
+    Object.assign(process.env, ghEnv(ghDir, { waiting: { runs: [ghRun(778, 'Factory production', 'waiting')] } }, { GITHUB_RUN_ID: '999' }));
+    assert.equal(wd.ghProductionActive(), true);
+    Object.assign(process.env, ghEnv(ghDir, { in_progress: { runs: [{ id: 556, name: 'Other workflow', status: 'in_progress' }] } }, { GITHUB_RUN_ID: '999' }));
+    assert.equal(wd.ghProductionActive(), false); // workflow khác không liên quan
+    Object.assign(process.env, ghEnv(ghDir, { in_progress: { runs: [ghRun(555)] } }, { GITHUB_RUN_ID: '555' }));
+    assert.equal(wd.ghProductionActive(), false); // trống (sau khi loại run hiện tại)
+    Object.assign(process.env, { FAKE_GH_FAIL: '1' });
+    assert.equal(wd.ghProductionActive(), null); // API lỗi => fail-closed
+    Object.assign(process.env, stashes);
+    delete process.env.FAKE_GH_FAIL;
+  } finally { rmSB(sb); rmGh(ghDir); }
+});
+
+test('#6 ghProductionActive (unit): pagination — run active ở trang 2 vẫn được thấy', () => {
+  const ghDir = mkFakeGh(); const sb = mkSB();
+  try {
+    resetCore(sb);
+    const wd = require(path.join(sb, 'scripts', 'factory', 'agent-watchdog.js'));
+    const stashes = { repo: process.env.GITHUB_REPOSITORY, tok: process.env.GITHUB_TOKEN, run: process.env.GITHUB_RUN_ID };
+    // 101 run in_progress: 100 run khác tên (trang 1) + Factory production ở trang 2
+    const runs = [];
+    for (let i = 1; i <= 100; i++) runs.push({ id: 1000 + i, name: 'CI', status: 'in_progress' });
+    runs.push(ghRun(555));
+    Object.assign(process.env, ghEnv(ghDir, { in_progress: { runs } }, { GITHUB_RUN_ID: '999' }));
+    assert.equal(wd.ghProductionActive(), true); // không bị bỏ sót do pagination
+    Object.assign(process.env, stashes);
+  } finally { rmSB(sb); rmGh(ghDir); }
+});
+
+test('#6 check (gh context): run hiện tại duy nhất + đủ idle/stalled => vẫn TRIGGER (không self-block)', () => {
+  const ghDir = mkFakeGh(); const sb = mkSB();
+  try {
+    resetCore(sb);
+    setState(sb, { last_cycle_summary: { published: ['A00001'], blocked: [],
+      finished_at: new Date(Date.now() - 130 * 60000).toISOString() } });
+    const r = A6(sb, ['check', '--skip-git', '--dry-run', '--trigger-cmd', 'gh workflow run x'],
+      ghEnv(ghDir, { in_progress: { runs: [ghRun(555)] } }, { GITHUB_RUN_ID: '555' }));
+    const j = JSON.parse(r.out.slice(r.out.indexOf('{'), r.out.lastIndexOf('}') + 1));
+    assert.equal(j.stalled, true);
+    assert.equal(j.action, 'TRIGGER_ONE_ENTRYPOINT'); // run watchdog hiện tại KHÔNG chặn
+    assert.ok(!j.blockers.some(b => b.includes('GitHub Actions')), j.blockers.join(' | '));
+    assert.equal(j.triggered, false); // dry-run — đúng MỘT lần khi chạy thật
+  } finally { rmSB(sb); rmGh(ghDir); }
+});
+
+test('#6 check (gh context): production KHÁC đang chạy => DO_NOTHING (không trigger)', () => {
+  const ghDir = mkFakeGh(); const sb = mkSB();
+  try {
+    resetCore(sb);
+    setState(sb, { last_cycle_summary: { published: ['A00001'], blocked: [],
+      finished_at: new Date(Date.now() - 130 * 60000).toISOString() } });
+    const r = A6(sb, ['check', '--skip-git', '--dry-run'],
+      ghEnv(ghDir, { in_progress: { runs: [ghRun(555)] } }, { GITHUB_RUN_ID: '999' }));
+    const j = JSON.parse(r.out.slice(r.out.indexOf('{'), r.out.lastIndexOf('}') + 1));
+    assert.equal(j.action, 'DO_NOTHING');
+    assert.ok(j.blockers.some(b => b.includes('chưa hoàn tất')));
+  } finally { rmSB(sb); rmGh(ghDir); }
+});
+
+test('#6 check (gh context): production đã XẾP HÀNG (queued) => KHÔNG dispatch trùng', () => {
+  const ghDir = mkFakeGh(); const sb = mkSB();
+  try {
+    resetCore(sb);
+    setState(sb, { last_cycle_summary: { published: ['A00001'], blocked: [],
+      finished_at: new Date(Date.now() - 130 * 60000).toISOString() } });
+    const r = A6(sb, ['check', '--skip-git', '--dry-run'],
+      ghEnv(ghDir, { queued: { runs: [ghRun(777, 'Factory production', 'queued')] } }, { GITHUB_RUN_ID: '999' }));
+    const j = JSON.parse(r.out.slice(r.out.indexOf('{'), r.out.lastIndexOf('}') + 1));
+    assert.equal(j.action, 'DO_NOTHING');
+    assert.ok(j.blockers.some(b => b.includes('chưa hoàn tất')));
+  } finally { rmSB(sb); rmGh(ghDir); }
+});
+
+test('#6 check (gh context): API lỗi => fail-closed, KHÔNG trigger', () => {
+  const ghDir = mkFakeGh(); const sb = mkSB();
+  try {
+    resetCore(sb);
+    setState(sb, { last_cycle_summary: { published: ['A00001'], blocked: [],
+      finished_at: new Date(Date.now() - 130 * 60000).toISOString() } });
+    const r = A6(sb, ['check', '--skip-git', '--dry-run'],
+      ghEnv(ghDir, {}, { FAKE_GH_FAIL: '1', GITHUB_RUN_ID: '999' }));
+    const j = JSON.parse(r.out.slice(r.out.indexOf('{'), r.out.lastIndexOf('}') + 1));
+    assert.equal(j.action, 'DO_NOTHING');
+    assert.ok(j.blockers.some(b => b.includes('fail-closed')));
+  } finally { rmSB(sb); rmGh(ghDir); }
+});
+
 // =====================================================================
 // INTEGRATION — #4 repair + #5 supervisor (sandbox CLI), pipeline PAUSED
 // =====================================================================
