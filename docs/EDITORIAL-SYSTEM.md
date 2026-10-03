@@ -74,3 +74,9 @@ belongs to the same site. On mobile it renders as a bottom sheet with
 keyboard-safe composer (`100dvh` + `visualViewport` handling in `chatbot.js`).
 Behavior contracts (retrieval-first, opt-in local AI, no inference API) are
 defined in `docs/PROC-QA.md`/privacy page and enforced by tests.
+Dialog modality contract: while the panel is open it is a **modal** dialog
+(`role="dialog"` + `aria-modal="true"` in the canonical shell markup). The
+behavior matches the declaration: Tab is trapped inside the panel, ESC closes
+it, focus returns to the launcher (or the pre-open focus target), and body
+scrolling is locked on mobile while the bottom sheet is open. Never declare
+the panel non-modal while keeping the focus trap.
