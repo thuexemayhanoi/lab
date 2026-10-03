@@ -36,10 +36,12 @@ on:
   push:
     branches: [main]
     paths: ['_drafts/**']
+  schedule:
+    - cron: '*/30 * * * *'
   workflow_dispatch:
     inputs:
       action:
-        description: 'status | recover | diagnostics'
+        description: 'status | recover | diagnostics | pipeline | selftest'
         required: true
         type: string
 
@@ -52,7 +54,7 @@ permissions:
 
 jobs:
   publish:
-    if: github.repository == 'thuexemayhanoi/lab'
+    if: github.repository == 'thuexemayhanoi/lab' && github.event_name != 'schedule' && !(github.event_name == 'workflow_dispatch' && (inputs.action == 'pipeline' || inputs.action == 'selftest'))
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
@@ -96,7 +98,8 @@ jobs:
             'mode=' + sel.mode + '\n' +
             'claim_ids=' + sel.claim_ids.join(',') + '\n' +
             'qa_ids=' + sel.qa_ids.join(',') + '\n' +
-            'pairs=' + (sel.pairs || []).map(p => p.join(',')).join(';') + '\n');
+            'pairs=' + (sel.pairs || []).map(p => p.join(',')).join(';') + '\n' +
+            'stale_ids=' + (sel.stale_ids || []).join(',') + '\n');
           const label = sel.mode === 'skip' ? 'skip-noop'
             : 'push-' + sel.mode + '-' + (sel.claim_ids.concat(sel.qa_ids).join(',') || 'none');
           fs.appendFileSync(process.env.GITHUB_ENV, 'COMMIT_LABEL=' + label + '\n');
@@ -256,6 +259,12 @@ jobs:
           set -eu
           git config user.name "factory-operator-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          node -e 'const fs=require("fs");
+          const t=JSON.parse(fs.readFileSync("data/state/transaction.json","utf8"));
+          const l=JSON.parse(fs.readFileSync("data/state/writer-lock.json","utf8"));
+          if(t.active){console.error("txn còn active:",t.id,t.operation);process.exit(1);}
+          if(l.locked){console.error("writer lock còn held:",l.holder);process.exit(1);}
+          console.log("txn/lock sạch trước commit");'
           git add -A
           if git diff --cached --quiet; then
             echo "không có gì để commit"
@@ -264,9 +273,15 @@ jobs:
           OPERATOR_VERIFIED_TREE=$(git write-tree)
           echo "OPERATOR_VERIFIED_TREE=$OPERATOR_VERIFIED_TREE"
           git commit -m "factory-production: ${COMMIT_LABEL:-$ACTION} (deterministic outputs of canonical tooling only)"
-          git fetch origin main
-          if [ "$(git rev-parse origin/main)" != "$OPERATOR_BASE_SHA" ]; then
-            echo "repository truth di chuyển ($OPERATOR_BASE_SHA -> $(git rev-parse origin/main)) — rebase, KHÔNG force push"
+          PUSH_ATTEMPT=0
+          until git push; do
+            PUSH_ATTEMPT=$((PUSH_ATTEMPT+1))
+            if [ "$PUSH_ATTEMPT" -ge 3 ]; then
+              echo "::error::push FAIL sau $PUSH_ATTEMPT lần thử (truth liên tục di chuyển) — STOP, không force push; run sau sẽ commit lại từ truth mới"
+              exit 1
+            fi
+            echo "repository truth di chuyển — fetch + rebase + verify lại (lần $PUSH_ATTEMPT), KHÔNG force push"
+            git fetch origin main
             git rebase origin/main
             echo "OPERATOR_LOCAL_VERIFY_HEAD_POST_REBASE=$(git rev-parse HEAD)"
             node scripts/factory/operator.js verify --scope fast
@@ -274,12 +289,40 @@ jobs:
               echo "::error::cây commit khác cây đã verified (sau rebase) — STOP, không push"
               exit 1
             fi
-            if [ "$(git rev-parse HEAD^{tree})" != "$OPERATOR_VERIFIED_TREE" ]; then
+            if [ "$(git write-tree)" != "$OPERATOR_VERIFIED_TREE" ]; then
               echo "::error::cây commit khác cây đã verified (tree drift sau rebase) — STOP, không push"
               exit 1
             fi
+          done
+
+      - name: 'Hygiene stale drafts (mode=stale: xoá draft byte-identical với archive)'
+        if: github.event_name == 'push' && steps.select.outputs.mode == 'stale'
+        run: |
+          set -eu
+          STALE_IDS="${{ steps.select.outputs.stale_ids }}"
+          echo "stale hygiene: xoá draft byte-identical của row PUBLISHED: $STALE_IDS"
+          git config user.name "factory-operator-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for ID in $(echo "$STALE_IDS" | tr ',' ' '); do
+            git rm -q --ignore-unmatch "_drafts/$ID.html" "_drafts/$ID.body.html"
+          done
+          if git diff --cached --quiet; then
+            echo "không có gì để commit (drafts đã sạch)"
+            exit 0
           fi
-          git push
+          git commit -m "factory-hygiene: remove stale drafts byte-identical with published archive ($STALE_IDS) — D-only diff, không re-trigger production"
+          HYGIENE_PUSH_ATTEMPT=0
+          until git push; do
+            HYGIENE_PUSH_ATTEMPT=$((HYGIENE_PUSH_ATTEMPT+1))
+            if [ "$HYGIENE_PUSH_ATTEMPT" -ge 3 ]; then
+              echo "::error::hygiene push FAIL sau $HYGIENE_PUSH_ATTEMPT lần thử — STOP, không force push"
+              exit 1
+            fi
+            git fetch origin main
+            git rebase origin/main
+            node scripts/factory/operator.js recover
+          done
+          echo "hygiene: stale drafts đã xoá khỏi main (mode=skip lần sau — không vòng lặp)"
 
       - name: Xác nhận trạng thái sạch (txn inactive, lock free) + báo pair lỗi
         if: github.event_name == 'push' && steps.select.outputs.proceed == 'true'
@@ -304,3 +347,83 @@ jobs:
             exit 1
           fi
           echo "FACTORY QUEUE COMPLETE: published=[${PUBLISHED_IDS:-none}] recoverable=[${RECOVERABLE_PAIRS:-none}]"
+
+  pipeline:
+    # AUTONOMOUS PIPELINE (docs/PIPELINE.md): coordinator duy nhất
+    # (scripts/factory/pipeline.js) — refill queue ~300 PLANNED, cấp 12–18
+    # bài/cycle, chia 3 writer song song (workspace riêng, gitignored), QA,
+    # publish chunk atomic, checkpoint/resume exactly-once. Chỉ chạy trên
+    # schedule + dispatch pipeline|selftest; serialized với job publish qua
+    # CÙNG concurrency group lab-factory-production (một coordinator tại
+    # một thời điểm) + pipeline/lock.json TTL. WRITER_RUNTIME=off (mặc
+    # định) ⇒ IDLE-STOP trước khi claim — KHÔNG bao giờ viết/publish khi
+    # thiếu writer runtime.
+    if: github.repository == 'thuexemayhanoi/lab' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'pipeline' || inputs.action == 'selftest')))
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Cấu hình git identity
+        run: |
+          git config user.name "factory-operator-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: 'Pipeline selftest (dispatch action=selftest: chỉ mock + test, KHÔNG publish)'
+        if: github.event_name == 'workflow_dispatch' && inputs.action == 'selftest'
+        run: node scripts/factory/pipeline.js selftest
+
+      - name: 'Pipeline cycle (coordinator: refill → claim 12–18 → 3 writer song song → QA → publish atomic)'
+        if: github.event_name == 'schedule' || inputs.action == 'pipeline'
+        env:
+          WRITER_RUNTIME: ${{ vars.WRITER_RUNTIME || 'off' }}
+          WRITER_ENDPOINT: ${{ vars.WRITER_ENDPOINT || '' }}
+          WRITER_API_KEY: ${{ secrets.WRITER_API_KEY || '' }}
+          WRITER_TIMEOUT_MS: ${{ vars.WRITER_TIMEOUT_MS || '300000' }}
+        run: node scripts/factory/pipeline.js cycle
+
+      - name: Commit + push cycle (1 commit, KHÔNG force push; fetch+rebase+verify khi truth di chuyển)
+        if: github.event_name == 'schedule' || inputs.action == 'pipeline'
+        run: |
+          set -eu
+          git add -A
+          if git diff --cached --quiet; then
+            echo "pipeline cycle: không có gì để commit"
+            exit 0
+          fi
+          git commit -m "pipeline-cycle: refill + write + qa + publish (deterministic outputs of canonical tooling only)"
+          PIPELINE_PUSH_ATTEMPT=0
+          until git push; do
+            PIPELINE_PUSH_ATTEMPT=$((PIPELINE_PUSH_ATTEMPT+1))
+            if [ "$PIPELINE_PUSH_ATTEMPT" -ge 3 ]; then
+              echo "::error::pipeline push FAIL sau $PIPELINE_PUSH_ATTEMPT lần thử — STOP, không force push; cycle sau resume từ checkpoint"
+              exit 1
+            fi
+            echo "repository truth di chuyển — fetch + rebase + verify lại (lần $PIPELINE_PUSH_ATTEMPT), KHÔNG force push"
+            git fetch origin main
+            git rebase origin/main
+            node scripts/factory/operator.js recover
+            node scripts/factory/operator.js verify --scope fast
+            if ! git diff --quiet; then
+              echo "::error::cây commit khác cây đã verified (pipeline rebase) — STOP, không push"
+              exit 1
+            fi
+          done
+
+      - name: Xác nhận trạng thái sạch sau cycle (txn inactive, lock free, pipeline status)
+        if: github.event_name == 'schedule' || inputs.action == 'pipeline'
+        run: |
+          set -eu
+          node -e 'const fs=require("fs");
+          const t=JSON.parse(fs.readFileSync("data/state/transaction.json","utf8"));
+          const l=JSON.parse(fs.readFileSync("data/state/writer-lock.json","utf8"));
+          if(t.active){console.error("txn còn active:",t.id,t.operation);process.exit(1);}
+          if(l.locked){console.error("writer lock còn held:",l.holder);process.exit(1);}
+          console.log("FACTORY CLEAN: txn inactive, lock free");'
+          node scripts/factory/pipeline.js status
