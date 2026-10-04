@@ -1031,7 +1031,11 @@ test('operator: single coordinator — concurrency group serializes, never cance
   const y = wfText('factory-production.yml');
   assert.match(y, /group:\s*lab-factory-production/, 'must pin one production coordinator group');
   assert.match(y, /cancel-in-progress:\s*false/, 'must never cancel an in-flight production run');
-  assert.match(y, /paths:\s*\['_drafts\/\*\*'\]/, 'trigger must be draft pushes only');
+  // Paths filter đã bỏ (workflow đa-trigger + paths filter sinh run 0-job đỏ);
+  // an toàn giữ nguyên: push-gate phát hiện push đụng _drafts/** (outputs.drafts).
+  assert.doesNotMatch(y, /paths:\s*\['_drafts/, 'no paths filter — multi-trigger workflow must not produce 0-job failure runs');
+  assert.match(y, /push-gate/, 'push-gate guard job must exist');
+  assert.match(y, /outputs\.drafts/, 'push-gate must export the drafts signal');
 });
 test('operator: verified-tree invariant — commit must equal the verified tree', () => {
   const y = wfText('factory-production.yml');
@@ -1102,7 +1106,8 @@ test('draft safety: _drafts is committed (not gitignored) and Pages never publis
   assert.ok(!/(^|\n)_drafts\//.test(gi), '_drafts/ must NOT be gitignored — the push-driven factory loop commits drafts');
   assert.ok(!fs.existsSync(path.join(ROOT, '.nojekyll')), '.nojekyll must be ABSENT so Jekyll never publishes _drafts/');
   const y = wfText('factory-production.yml');
-  assert.match(y, /paths:\s*\['_drafts\/\*\*'\]/, 'the production loop is driven by committed draft pushes');
+  assert.doesNotMatch(y, /paths:\s*\['_drafts/, 'no paths filter — it creates 0-job failure runs on multi-trigger workflows');
+  assert.match(y, /push-gate[\s\S]*?outputs:\s*\n\s*drafts:/, 'push-gate must detect committed _drafts pushes and export outputs.drafts');
   assert.match(y, /push-selection\.js/, 'draft ids are derived deterministically from the push');
 });
 // =====================================================================
@@ -1928,7 +1933,13 @@ const wd = require(path.join(ROOT, 'scripts', 'factory', 'liveness-watchdog.js')
 
 test('F1 push-driven workflow contract: factory-production.yml is the single production loop', () => {
   const y = wfText('factory-production.yml');
-  assert.match(y, /paths:\s*\['_drafts\/\*\*'\]/, 'push loop phải trigger đúng trên draft pushes');
+  // Paths filter đã bỏ: workflow đa-trigger + paths filter sinh run 0-job
+  // FAILURE gắn check đỏ vô nghĩa lên mọi push không đụng _drafts. Hợp đồng
+  // an toàn được giữ bởi push-gate: publish chỉ chạy khi push thật sự đụng
+  // _drafts/** (outputs.drafts).
+  assert.doesNotMatch(y, /paths:\s*\['_drafts/, 'không dùng paths filter (run 0-job FAILURE)');
+  assert.match(y, /push-gate/, 'phải có push-gate guard job cho mọi push main');
+  assert.match(y, /outputs\.drafts/, 'push-gate phải xuất tín hiệu drafts');
   assert.match(y, /group:\s*lab-factory-production/, 'phải giữ group serialization GLOBAL');
   assert.match(y, /cancel-in-progress:\s*false/, 'không bao giờ cancel production run đang chạy');
   assert.match(y, /push-selection\.js/, 'phải chọn EXACT IDs qua push-selection.js');
@@ -1948,16 +1959,24 @@ test('F1 channel retirement: operator.js is CLI-only', () => {
   assert.doesNotMatch(src, /--channel/, 'không còn channel flag');
   assert.match(src, /push-selection\.js/, 'header phải document hợp đồng push-selection');
 });
-test('F2 concurrency contract: production stays globally serialized (single-workflow architecture)', () => {
-  // the retired per-ref validation workflows are gone — the ONLY workflow is
-  // factory-production.yml and its mutation group must stay GLOBAL.
+test('F2 concurrency contract: exactly three canonical workflows — production serialized, repair chained, soak Tier 4', () => {
+  // Kiến trúc 3 workflow: factory-production.yml (vòng production),
+  // factory-repair.yml (Agent #4/#5 lắng nghe run của 'Factory production' qua
+  // workflow_run — GitHub TỪ CHỐI workflow_run tự tham chiếu), factory-soak.yml
+  // (Tier 4). Toàn bộ mutation production vẫn serialize qua MỘT group GLOBAL.
   const wfDir = path.join(ROOT, '.github', 'workflows');
   const files = fs.readdirSync(wfDir).filter(f => f.endsWith('.yml') || f.endsWith('.yaml'));
-  assert.deepStrictEqual(files, ['factory-production.yml'], 'exactly ONE workflow may exist (single production loop)');
+  assert.deepStrictEqual(files, ['factory-production.yml', 'factory-repair.yml', 'factory-soak.yml'],
+    'exactly the three canonical workflows may exist');
   const op = wfText('factory-production.yml');
   assert.match(op, /group:\s*lab-factory-production/, 'production loop must keep the GLOBAL serialization group');
   assert.match(op, /cancel-in-progress:\s*false/, 'production loop must never cancel in-flight runs');
   assert.ok(!/lab-factory-production-\$\{\{/.test(op), 'production group must NOT be per-ref');
+  const rp = wfText('factory-repair.yml');
+  assert.match(rp, /workflows:\s*\['Factory production'\]/, 'repair must be triggered by Factory production failures');
+  assert.ok(!/workflows:\s*\['Factory repair'\]/.test(rp), 'repair must never self-reference (self workflow_run fails to parse)');
+  assert.match(rp, /group:\s*lab-factory-production/, 'repair must serialize with production (same GLOBAL group)');
+  assert.match(rp, /cancel-in-progress:\s*false/, 'repair must never cancel an in-flight production run');
 });
 test('F3 watchdog unit: HEALTHY IDLE -> PASS (user resting is never a failure)', () => {
   const r = wd.evaluate({ nowIso: '2026-09-30T00:00:00Z', activeChunk: [], activeChunkUnfinished: 0,
@@ -2025,10 +2044,16 @@ test('F3 watchdog contract: wired into the production smoke; read-only source, n
   assert.ok(!/git push|git commit/.test(wd), 'watchdog script must never commit or push');
   assert.ok(!/child_process|spawnSync|execSync/.test(wd), 'watchdog must be pure evaluation, no shell');
 });
-test('F4 soak contract: the long-run suite exists but is NEVER in the production hot loop', () => {
-  // the dedicated soak workflow was retired — the soak suite stays available
-  // as a local/CI-optional long-run battery and must not run in the hot loop.
+test('F4 soak contract: dedicated Tier 4 workflow (tier4-gate) — never in the production hot loop', () => {
+  // factory-soak.yml là workflow Tier 4 RIÊNG: mọi push vào main / PR đều qua
+  // tier4-gate (no-op xanh khi diff không đụng engine/workflow/tests; chạy đủ
+  // bộ Tier 4 khi có thay đổi thật — không dùng paths filter, không 0-job đỏ).
+  // Hot loop production vẫn KHÔNG BAO GIỜ chạy soak.
   assert.ok(fs.existsSync(path.join(ROOT, 'tests', 'soak', 'factory-soak.js')), 'soak suite must exist');
+  const sw = wfText('factory-soak.yml');
+  assert.match(sw, /tier4-gate/, 'soak workflow must gate Tier 4 on real diff detection');
+  assert.match(sw, /group:\s*factory-soak/, 'soak must have its own concurrency group');
+  assert.match(sw, /on:\s*\n\s*push:\s*\n\s*branches:\s*\[main\]/, 'soak Tier 4 runs on pushes to main');
   const y = wfText('factory-production.yml');
   assert.doesNotMatch(y, /factory-soak/, 'the production hot loop must never run the soak suite');
   assert.doesNotMatch(y, /node --test/, 'the production hot loop must never run the full test-suite');
