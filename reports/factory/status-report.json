@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-04T06:04:39.393Z",
+  "generated_at": "2026-10-04T06:17:32.260Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 145,
-    "PLANNED": 9855
+    "PUBLISHED": 149,
+    "PLANNED": 9851
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 139,
-      "PLANNED": 4861
+      "PUBLISHED": 143,
+      "PLANNED": 4857
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00138",
-  "next_claimable_id": "A00139",
+  "last_completed_id": "A00142",
+  "next_claimable_id": "A00143",
   "blocked": [],
   "published": [
     {
@@ -868,6 +868,30 @@
       "pk": "giá thuê Air Blade Điện Biên",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-air-blade-dien-bien/"
+    },
+    {
+      "id": "A00139",
+      "pk": "giá thuê Air Blade Sơn La",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-air-blade-son-la/"
+    },
+    {
+      "id": "A00140",
+      "pk": "giá thuê Air Blade Lạng Sơn",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-air-blade-lang-son/"
+    },
+    {
+      "id": "A00141",
+      "pk": "giá thuê Air Blade Cao Bằng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-air-blade-cao-bang/"
+    },
+    {
+      "id": "A00142",
+      "pk": "giá thuê Air Blade Tuyên Quang",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-air-blade-tuyen-quang/"
     },
     {
       "id": "A00465",
