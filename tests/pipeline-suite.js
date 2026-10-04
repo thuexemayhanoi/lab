@@ -487,6 +487,12 @@ test('factory-soak.yml: Tier 4 battery THẬT tồn tại trên CI (không còn 
 test('refill: nạp window 300 topic PLANNED đầu theo matrix order, không trùng, idempotent, KHÔNG đổi matrix', () => {
   const SB = mkSB();
   try {
+    // fixture: drain queue dưới queue_refill_min để refill THẬT SỰ có việc.
+    // State production trên main có thể đã có queue đầy (scheduler refill
+    // sẵn sau mỗi cycle) — khi đó lần gọi đầu là no-op và test không còn
+    // đo được hành vi refill. KHÔNG đổi matrix; chỉ drain pending của SB.
+    const stF = path.join(SB, 'data', 'state', 'pipeline-state.json');
+    fs.writeFileSync(stF, JSON.stringify(Object.assign(stateOf(SB), { pending: [] }), null, 2));
     const before = matrixBytes(SB);
     const r1 = PIPE(SB, ['refill']);
     assert.equal(r1.status, 0, r1.stdout + r1.stderr);
