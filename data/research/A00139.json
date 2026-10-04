@@ -1,0 +1,82 @@
+{
+ "article_id": "A00139",
+ "primary_keyword": "giá thuê Air Blade Sơn La",
+ "secondary_keywords": ["thue xe may Son La", "cho thue xe may Moc Chau", "gia thue xe ga Son La"],
+ "search_intent": "informational — khách cần biết giá thuê Honda Air Blade tại Sơn La (bảng giá theo dòng xe ghi Honda Aiblade 110cc Fi ở mức 150k/ngày), các cơ sở cho thuê trải từ Mộc Châu, thành phố Sơn La đến Bắc Yên (Tà Xùa), và lưu ý về phân khối xe vùng núi Tây Bắc",
+ "research_date": "2026-10-04",
+ "geo_entities": ["Sơn La","thành phố Sơn La","Mộc Châu","Phiêng Luông","Bắc Yên","Tà Xùa","quốc lộ 6","đường Nguyễn Lương Bằng","phường Quyết Thắng","phường Chiềng Lề","khu đô thị Lam Sơn"],
+ "vehicle_entities": ["xe tay ga","xe ga","xe số","xe côn","xe phân khối lớn","xe cào cào"],
+ "brand_entities": ["Honda","Yamaha","Suzuki"],
+ "model_entities": ["Air Blade","Vision","Wave","Wave RSX","Sirius","Future","Dream","Exciter","Winner","Nouvo","Viva","Smart"],
+ "questions_found": [
+  "Thuê Honda Air Blade ở Sơn La giá bao nhiêu một ngày?",
+  "Ở Mộc Châu có chỗ nào cho thuê xe máy gần vườn chè không?",
+  "Thuê xe máy ở Sơn La có bảng giá theo dòng xe không?",
+  "Đi Tà Xùa nên thuê xe gì?",
+  "Thuê xe máy tại thành phố Sơn La ở đâu?"
+ ],
+ "related_queries": [
+  "gia thue air blade son la",
+  "cho thue xe may moc chau",
+  "thue xe may ta xua",
+  "thue xe may thanh pho son la"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp MOTOGO (cập nhật 08/09/2026) gần như là nguồn duy nhất xếp cao cho thuê xe máy Sơn La: 7 cơ sở trải từ Mộc Châu, thành phố Sơn La đến Bắc Yên kèm địa chỉ, giá theo ngày và bảng giá tham khảo theo dòng xe",
+  "Bảng giá theo dòng xe ghi Honda Aiblade 110cc Fi ở mức 150k/ngày — cao hơn hẳn nhóm xe số phổ thông 100k – 125k; các cơ sở ghi nhận 120.000đ – 200.000đ/ngày tùy khu vực và loại xe"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "note": "Tổng hợp của MOTOGO về thuê xe máy Sơn La (cập nhật 08/09/2026): 7 cơ sở gồm Nhà sàn 88 (QL6, Phiêng Luông, Mộc Châu) 120.000đ – 150.000đ/ngày, chủ yếu xe phân khối lớn; Xuân Cường (thị trấn Mộc Châu) 200.000đ/ngày, đầu tiên có dịch vụ giao xe tại Mộc Châu; Dũng Nga (Ngã ba, Bắc Yên) xe số 150.000đ/ngày, xe cào cào 500.000đ/ngày; Thành Đồng (94H Nguyễn Lương Bằng, phường Quyết Thắng, TP Sơn La) xe số 120.000đ/ngày, giao xe bằng ô tô cho nhóm lớn; Thành Mỹ (TT Bắc Yên) xe số 120.000đ – 150.000đ/ngày; Thuê xe máy Mộc Châu (Phiêng Luông) 200.000đ/ngày; Khách sạn Lam Sơn (khu đô thị Lam Sơn, phường Chiềng Lề) xe số 120.000đ/ngày, xe cào cào 500.000đ/ngày. Bảng giá theo dòng xe: Honda Wave, Suzuki Smart 100k; nhóm Sirius Fi, cub 50cc 120k; Wave RSX Fi 125k; Honda Vision 130k; Honda Aiblade 110cc Fi và dream 150k; Winner 300k; xe cào cào 500k."
+  }
+ ],
+ "unique_angle": "Bài tập trung riêng Honda Air Blade tại Sơn La — hiếm hoi trong nhóm các tỉnh miền núi, bảng giá tham khảo của motogo.vn niêm yết AirBlade (110cc Fi) thành dòng riêng ở mức 150k/ngày, cho phép trả lời trực diện câu hỏi giá thay vì suy diễn từ nhóm xe ga. Bài ghép thông tin này với đặc thù địa hình Sơn La: Mộc Châu cách các điểm vườn chè, rừng mận, thác khá xa nên xe khỏe là chính đáng; Tà Xùa (Bắc Yên) là cung phượt mây nổi tiếng; quốc lộ 6 là trục huyết mạch. Móc cơ sở theo vùng: Mộc Châu (Nhà sàn 88, Xuân Cường), thành phố Sơn La (Thành Đồng, Khách sạn Lam Sơn), Bắc Yên (Dũng Nga, Thành Mỹ).",
+ "claim_evidence": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Bảng giá cho thuê xe máy Sơn La theo dòng xe (tham khảo): Honda Wave, Suzuki Smart 100.000đ/ngày; nhóm Sirius Fi, Honda cub 50cc 120.000đ/ngày; Honda Wave RSX Fi 125.000đ/ngày; Honda Vision 130.000đ/ngày; Honda Aiblade 110cc Fi (cùng nhóm Honda dream) 150.000đ/ngày; xe cào cào 500.000đ/ngày.",
+   "claim_supported": "Giá cho thuê xe máy theo dòng xe Loại xe Giá/ngày Honda Wave, Suzuki Smart 100k Suzuki Viva Fi, Honda Future 2, Yamaha Sirius Fi, Yamaha nouvo 3, Honda cub 50cc 120k Honda Wave RSX Fi 125k Honda Future Fi mới, Honda Vision 130k Yamaha Extciter tự động, Honda Aiblade 110cc Fi, Honda dream 150k Yamaha exciter, Honda Winner 300k Xe cào cào 500k"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Nhà sàn 88 (QL6, Phiêng Luông, Mộc Châu) cho thuê xe ở mức 120.000đ – 150.000đ/ngày, chủ yếu các loại xe phân khối lớn, nằm ngay cạnh quốc lộ 6.",
+   "claim_supported": "Nhà sàn 88 Điện thoại: 084 3769 499 Địa chỉ: QL6, Phiêng Luông, Mộc Châu, Sơn La Giá thuê xe: 120.000đ – 150.000đ/ngày ... Nhà sàn 88 có vị trí hết sức thuận lợi, nằm ngay cạnh quốc lộ 6. Đây là tuyến đường huyết mạch kết nối Sơn La và các địa phương khác ... nhà sàn 88 chủ yếu cho thuê các loại xe phân khối lớn."
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Xuân Cường (thị trấn Mộc Châu) ghi nhận giá thuê 200.000đ/ngày và là cửa hàng thuê xe máy Mộc Châu đầu tiên có dịch vụ giao xe; cơ sở Thuê xe máy Mộc Châu (Phiêng Luông) cũng ghi nhận 200.000đ/ngày.",
+   "claim_supported": "Xuân Cường Điện thoại: 0212 3766 997 Địa chỉ: Thị trấn Mộc Châu, Sơn La Giá thuê xe: 200.000đ/ngày ... Xuân Cường là cửa hàng thuê xe máy Mộc Châu Sơn La đầu tiên có dịch vụ giao xe. Thuê xe máy Mộc Châu Điện thoại: 098 804 62 69 Địa chỉ: Phiêng Luông, Mộc Châu, Sơn La Giá thuê xe: 200.000đ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Thành Đồng (94H Nguyễn Lương Bằng, phường Quyết Thắng, thành phố Sơn La) ghi nhận xe số 120.000đ/ngày và có ô tô giao xe nên có thể đặt xe số lượng lớn; Khách sạn Lam Sơn (khu đô thị Lam Sơn, phường Chiềng Lề) ghi nhận xe số 120.000đ/ngày và xe cào cào 500.000đ/ngày.",
+   "claim_supported": "Thành Đồng Điện thoại: 090 486 29 99 Địa chỉ: 94H Nguyễn Lương Bằng, P. Quyết Thăng, Sơn La Giá thuê xe số: 120.000đ/ngày ... Một điểm cộng nữa tại Thành Đồng là cửa hàng có ô tô giao xe. Nhờ vậy bạn có thể đặt xe với số lượng lớn được. Khách sạn Lam Sơn Điện thoại: 02123 858 848 Địa chỉ: Đối diện Điện máy Xanh, Khu đô thị Lam Sơn, Tổ 12, Phường Chiềng Lề Giá thuê xe số: 120.000đ/ngày Giá thuê xe cào cào: 500.000đ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Tại Bắc Yên (Sơn La), Dũng Nga (Ngã ba, Bắc Yên) ghi nhận xe số 150.000đ/ngày và xe cào cào 500.000đ/ngày; Thành Mỹ (thị trấn Bắc Yên) ghi nhận xe số 120.000đ – 150.000đ/ngày.",
+   "claim_supported": "Dũng Nga Điện thoại: 096 665 25 67 Địa chỉ: Ngã ba, Bắc Yên, Sơn La Giá thuê xe số: 150.000đ/ngày Giá thuê xe cào cào: 500.000đ/ngày Thành Mỹ Điện thoại: 097 290 89 99 Địa chỉ: TT. Bắc Yên, Bắc Yên, Sơn La Giá thuê xe số: 120.000đ – 150.000đ/ngày Giá thuê xe cào cào: 500.000đ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Sơn La cách Hà Nội hơn 300km; các địa điểm du lịch tại Sơn La có quy mô lớn và cách xa nhau nên khách thường tới bằng xe khách rồi thuê xe máy; Mộc Châu có các điểm vườn chè, rừng mận, thác cách nhau khá xa.",
+   "claim_supported": "Với khoảng cách hơn 300km đến Hà Nội, nhiều khách du lịch lựa chọn tới Sơn La bằng xe khách. Tuy nhiên các địa điểm du lịch tại Sơn La lại có quy mô khá lớn, cách xa nhau. Tại Mộc Châu các địa điểm như vườn chè, rừng mận hay thác đều cách nhau khá xa. Nên nếu không thuê xe máy"
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "article_id": "A00142",
+ "primary_keyword": "giá thuê Air Blade Tuyên Quang",
+ "secondary_keywords": ["thue xe may Tuyen Quang", "cho thue xe may tp Tuyen Quang", "gia thue xe ga Tuyen Quang"],
+ "search_intent": "informational — khách cần biết giá thuê Honda Air Blade tại Tuyên Quang (bảng giá tham khảo xe ga 120.000đ – 180.000đ/ngày; Lô Giang ghi nhận xe ga 120.000đ – 150.000đ/ngày và Air Blade là dòng được ưa chuộng nhất), các cơ sở tại thành phố Tuyên Quang (phường Minh Xuân, Nông Tiến) và lưu ý địa hình núi dốc",
+ "research_date": "2026-10-04",
+ "geo_entities": ["Tuyên Quang","thành phố Tuyên Quang","phường Minh Xuân","phường Nông Tiến","đường 17/8","phố Bình Ca","đường Hưng Thạnh","đường Nguyễn Trãi"],
+ "vehicle_entities": ["xe tay ga","xe ga","xe số","xe côn","xe cào cào"],
+ "brand_entities": ["Honda","Yamaha"],
+ "model_entities": ["Air Blade","Sirius","Wave"],
+ "questions_found": [
+  "Thuê Honda Air Blade ở Tuyên Quang giá bao nhiêu một ngày?",
+  "Ở Tuyên Quang cho thuê xe ga ở đâu?",
+  "Thuê xe máy Tuyên Quang cần đặt cọc bao nhiêu?",
+  "Nên thuê xe ga hay xe số khi đi Tuyên Quang?",
+  "Thuê xe máy ở Tuyên Quang có kèm mũ bảo hiểm không?"
+ ],
+ "related_queries": [
+  "gia thue air blade tuyen quang",
+  "cho thue xe may tuyen quang",
+  "thue xe ga tuyen quang",
+  "thue xe may khach san tuyen quang"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp MOTOGO (cập nhật 08/09/2026) gần như là nguồn duy nhất xếp cao cho thuê xe máy Tuyên Quang: 5 cơ sở tại thành phố Tuyên Quang kèm địa chỉ, giá xe số và xe ga theo ngày",
+  "Bảng giá tham khảo ghi xe số 90.000đ – 150.000đ/ngày, xe ga 120.000đ – 180.000đ/ngày; Air Blade được nêu đích danh là dòng xe được khách hàng ưa chuộng nhất tại Lô Giang (phường Minh Xuân); tiền cọc dao động từ 1 đến 5 triệu"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tuyen-quang/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "note": "Tổng hợp của MOTOGO về thuê xe máy Tuyên Quang (cập nhật 08/09/2026): 5 cơ sở gồm Minh Thanh Guest House (Tổ 10, phố Bình Ca, phường Nông Tiến) xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày; Lô Giang (2, đường 17/8, phường Minh Xuân) xe số 90.000đ – 120.000đ/ngày, xe ga 120.000đ – 150.000đ/ngày, dòng ưa chuộng nhất là Sirius và Air Blade, tặng kèm 2 mũ bảo hiểm miễn phí; cơ sở Thuê xe máy tại Tuyên Quang (55 Hưng Thạnh) xe số 100.000đ/ngày, xe ga 150.000đ/ngày, cung cấp đầy đủ giấy tờ; Mai Sơn (04 Nguyễn Trãi) xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 150.000đ/ngày; Tân Trang Hotel. Bảng giá tham khảo: xe số 90.000đ – 150.000đ, xe ga 120.000đ – 180.000đ; tiền cọc dao động từ 1 đến 5 triệu, xe cao cấp cọc cao hơn."
+  }
+ ],
+ "unique_angle": "Bài tập trung riêng Honda Air Blade tại Tuyên Quang — Lô Giang (phường Minh Xuân) nêu đích danh Air Blade là dòng xe ga được khách hàng ưa chuộng nhất, kèm mức xe ga 120.000đ – 150.000đ/ngày; bảng giá tham khảo toàn tỉnh cho xe ga 120.000đ – 180.000đ/ngày. Điểm thú vị để bài có góc riêng: chính nguồn khảo sát lại lưu ý địa hình Tuyên Quang chủ yếu núi dốc, khuyên ưu tiên xe số — bài xử lý trung thực mâu thuẫn này (khi nào Air Blade vẫn hợp lý: đi trong thành phố Tuyên Quang, chặng đường tỉnh lộ ít dốc, ưu tiên thoải mái), thay vì nói một chiều. Kèm đặc thù thủ tục: cọc từ 1 đến 5 triệu, cơ sở cung cấp đầy đủ giấy tờ xe, tặng 2 mũ bảo hiểm.",
+ "claim_evidence": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tuyen-quang/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Bảng giá thuê xe máy Tuyên Quang (tham khảo): xe số 90.000đ – 150.000đ/ngày; xe ga 120.000đ – 180.000đ/ngày.",
+   "claim_supported": "Loại xe Giá/ngày Xe số 90.000đ – 150.000đ Xe ga 120.000đ – 180.000đ Bảng giá thuê xe máy Tuyên Quang (tham khảo)"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tuyen-quang/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Lô Giang (2, đường 17/8, phường Minh Xuân, thành phố Tuyên Quang) ghi nhận xe số 90.000đ – 120.000đ/ngày và xe ga 120.000đ – 150.000đ/ngày; Sirius và Air Blade là hai dòng xe được khách hàng ưa chuộng nhất tại đây — nhỏ gọn, linh hoạt, chạy khỏe; khách nhận xe kèm 2 mũ bảo hiểm miễn phí.",
+   "claim_supported": "Lô Giang Điện thoại: 027 382 145 Địa chỉ: 2, Đường 17/8, Phường Minh Xuân, TP. Tuyên Quang, Tuyên Quang. Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -150.000đ/ngày ... Tại đây có rất nhiều loại xe, từ xe số đến xe ga đều đủ cả. Những dòng xe được khách hàng ưa chuộng nhất chính là Sirius và Air Blade. Chúng đều là loại xe nhỏ gọn, linh hoạt chạy khỏe. ... Khi nhận xe bạn sẽ được nhận kèm 2 mũ bảo hiểm hoàn toàn miễn phí."
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tuyen-quang/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Minh Thanh Guest House (Tổ 10, phố Bình Ca, phường Nông Tiến, thành phố Tuyên Quang) ghi nhận xe số 80.000đ – 100.000đ/ngày và xe ga 130.000đ – 140.000đ/ngày.",
+   "claim_supported": "Minh Thanh Guest House Điện thoại: 0915 868 489 Địa chỉ: Tổ 10, Phố Bình Ca , Phường Nông Tiến, Thành phố Tuyên Quang Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tuyen-quang/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Cơ sở Thuê xe máy tại Tuyên Quang (55 Hưng Thạnh, thành phố Tuyên Quang) ghi nhận xe số 100.000đ/ngày và xe ga 150.000đ/ngày, là địa chỉ hiếm hoi cung cấp đầy đủ các loại giấy tờ xe; thủ tục đặt xe nhanh — chỉ cần để lại giấy tờ tùy thân và tiền cọc.",
+   "claim_supported": "Thuê xe máy tại Tuyên Quang Điện thoại: 027 3813 836 Địa chỉ: Số 55 Hưng Thạnh, TP. Tuyên Quang, Tuyên Quang Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày ... Nơi đây là địa chỉ hiếm hoi cung cấp đầy đủ các loại giấy tờ cần thiết khi cho thuê xe máy. ... thủ tục đặt xe tại nơi này cũng diễn ra hết sức nhanh chóng. Bạn chỉ cần để lại giấy tờ tùy thân và tiền cọc là xong."
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tuyen-quang/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Mai Sơn (04 Nguyễn Trãi, thành phố Tuyên Quang) ghi nhận xe số 90.000đ – 120.000đ/ngày và xe ga 140.000đ – 150.000đ/ngày.",
+   "claim_supported": "Mai Sơn Điện thoại: 027 3810 555 Địa chỉ: 04 Nguyễn Trãi, TP. Tuyên Quang, Tuyên Quang Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tuyen-quang/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Tiền đặt cọc thuê xe tại Tuyên Quang dao động từ 1 đến 5 triệu, các dòng xe cao cấp hơn thì cọc tăng; thủ tục chỉ cần giấy tờ tùy thân có ảnh như CMND, căn cước, hộ chiếu và tiền cọc.",
+   "claim_supported": "Giấy tờ cá nhân: Các loại giấy tờ tùy thân có ảnh như CMND, căn cước, hộ chiếu,… Tiền đặt cọc: Tiền đặt cọc thuê xe tại Tuyên Quang dao động từ 1 đến 5 triệu. Đối với các dòng xe cao cấp hơn thì tiền đặt cọc cũng tăng. Bạn nên hỏi cửa hàng nếu muốn thuê các loại xe như vậy."
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-tuyen-quang/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Địa hình Tuyên Quang chủ yếu là núi dốc, các địa điểm tham quan khá xa trung tâm; nguồn khảo sát khuyên ưu tiên xe số, xe tay côn hay xe cào cào sẽ thích hợp hơn xe ga cho các cung đường này.",
+   "claim_supported": "Tuy nhiên địa hình Tuyên Quang chủ yếu là núi dốc, các địa điểm tham quan đều khá xa trung tâm. Vì vậy chúng tôi khuyên bạn không nên chọn xe ga. Thay vào đó các loại xe số, xe tay côn hay xe cào cào sẽ thích hợp hơn."
+  }
+ ]
+}

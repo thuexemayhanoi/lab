@@ -1,0 +1,75 @@
+{
+ "article_id": "A00140",
+ "primary_keyword": "giá thuê Air Blade Lạng Sơn",
+ "secondary_keywords": ["thue xe may Lang Son", "cho thue xe may tp Lang Son", "gia thue xe ga Lang Son"],
+ "search_intent": "informational — khách cần biết giá thuê Honda Air Blade tại Lạng Sơn (nhóm xe ga ghi nhận 120.000đ – 200.000đ/ngày tại 5 cơ sở; Hoang Trường ghi riêng 150.000đ/ngày), các cơ sở quanh thành phố Lạng Sơn (phường Tam Thanh, Vĩnh Trại, Hoàng Văn Thụ) và điểm đặc biệt: có cơ sở cho thuê không cần đặt cọc, giao xe tận nơi",
+ "research_date": "2026-10-04",
+ "geo_entities": ["Lạng Sơn","thành phố Lạng Sơn","phường Tam Thanh","phường Vĩnh Trại","phường Hoàng Văn Thụ","đường Trần Đăng Ninh","đường Ngô Quyền","quốc lộ 4B","Ngã Tư Mỹ Sơn","đường Minh Khai"],
+ "vehicle_entities": ["xe tay ga","xe ga","xe số","xe phân khối lớn"],
+ "brand_entities": ["Honda","Yamaha"],
+ "model_entities": ["Air Blade","Vision","Lead","Wave"],
+ "questions_found": [
+  "Thuê Honda Air Blade ở Lạng Sơn giá bao nhiêu một ngày?",
+  "Ở Lạng Sơn có cơ sở cho thuê xe máy không cần cọc không?",
+  "Cho thuê xe ga tại thành phố Lạng Sơn giá thế nào?",
+  "Thuê xe máy Lạng Sơn có được giao tận nơi không?",
+  "Nên thuê xe số hay xe ga khi đến Lạng Sơn?"
+ ],
+ "related_queries": [
+  "gia thue air blade lang son",
+  "cho thue xe may lang son",
+  "thue xe may khong coc lang son",
+  "thue xe ga tp lang son"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp MOTOGO (cập nhật 08/09/2026) gần như là nguồn duy nhất xếp cao cho thuê xe máy Lạng Sơn: 6 cơ sở tại thành phố Lạng Sơn kèm địa chỉ, giá xe số và xe ga theo ngày",
+  "Mặt bằng giá khá đồng bộ: xe số 120.000đ/ngày (riêng Hoang Trường 100.000đ/ngày), xe ga 120.000đ – 200.000đ/ngày; hai cơ sở (Hoang Trường, khách sạn Kim Sơn) cho thuê không cần đặt cọc, chỉ để lại giấy tờ"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-lang-son/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "note": "Tổng hợp của MOTOGO về thuê xe máy Lạng Sơn (cập nhật 08/09/2026): 6 cơ sở gồm khách sạn Vạn Xuân (147 Trần Đăng Ninh, phường Tam Thanh) xe số 120.000đ/ngày, xe ga 120.000đ – 200.000đ/ngày, giao xe tận nơi kể cả ga tàu hay bến xe; Mường Thanh (68 Ngô Quyền, phường Vĩnh Trại) xe số 120.000đ/ngày, xe ga 120.000đ – 200.000đ/ngày, kho xe từ Wave, Lead đến phân khối lớn; Hoang Trường (219 QL4B, Vĩnh Trại) xe số 100.000đ/ngày, xe ga 150.000đ/ngày, thuê không cần đặt cọc; Trần Lục (90 Ngô Quyền, Ngã Tư Mỹ Sơn) xe số 120.000đ/ngày, xe ga 120.000đ – 200.000đ/ngày; Anh Tuấn (248 Trần Đăng Ninh, Hoàng Văn Thụ) xe số 120.000đ/ngày, xe ga 120.000đ – 200.000đ/ngày; khách sạn Kim Sơn (3 Minh Khai, phường Hoàng Văn Thụ) xe số 120.000đ/ngày, xe ga 120.000đ – 200.000đ/ngày, không cần đặt cọc khi thuê."
+  }
+ ],
+ "unique_angle": "Bài tập trung riêng Honda Air Blade tại Lạng Sơn — nguồn chỉ ghi giá theo nhóm xe ga (Air Blade nằm trong nhóm này) ở mức 120.000đ – 200.000đ/ngày, nên bài nói rõ điều đó thay vì bịa giá riêng từng dòng. Điểm khác biệt của thị trường Lạng Sơn: (1) giá các cơ sở rất đồng bộ, khác Hà Nội hay các tỉnh khác; (2) có tới hai cơ sở cho thuê không cần đặt cọc (Hoang Trường, Kim Sơn); (3) khách sạn Vạn Xuân giao xe tận nơi kể cả ga tàu hay bến xe — Lạng Sơn là tỉnh có cả ga đường sắt. Bài ghép với đặc thù địa phương: trung tâm thương mại biên giới, ẩm thực xứ Lạng, các phường trung tâm Tam Thanh – Vĩnh Trại – Hoàng Văn Thụ.",
+ "claim_evidence": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-lang-son/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Tại thành phố Lạng Sơn, 5 cơ sở ghi nhận giá thuê xe ga (nhóm gồm các dòng như Air Blade, Lead) ở mức 120.000đ – 200.000đ/ngày: khách sạn Vạn Xuân (phường Tam Thanh), Mường Thanh (phường Vĩnh Trại), Trần Lục (Ngã Tư Mỹ Sơn), Anh Tuấn và khách sạn Kim Sơn (phường Hoàng Văn Thụ).",
+   "claim_supported": "Khách sạn Vạn Xuân ... Giá thuê xe ga: 120.000đ – 200.000đ/ngày Mường Thanh Điện thoại: 025 3866 668 Địa chỉ: Số 68 Ngô Quyền, phường Vĩnh Trại, Tp Lạng Sơn ... Giá thuê xe ga: 120.000đ – 200.000đ/ngày Trần Lục Điện thoại: 0336 268 883 Địa chỉ: Số 90 Ngô Quyền, Ngã Tư Mỹ Sơn, Tp Lạng Sơn ... Giá thuê xe ga: 120.000đ – 200.000đ/ngày Anh Tuấn Điện thoại: 091 729 20 39 Địa chỉ: Số 248 Trần Đăng Ninh, Hoàng Văn Thụ ... Giá thuê xe ga: 120.000đ – 200.000đ/ngày Khách sạn Kim Sơn Điện thoại: 025 3876 542 Địa chỉ: Số 3 Minh Khai, phường Hoàng Văn Thụ ... Giá thuê xe ga: 120.000đ – 200.000đ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-lang-son/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Hoang Trường (219 QL4B, Vĩnh Trại, thành phố Lạng Sơn) ghi nhận xe ga 150.000đ/ngày và xe số 100.000đ/ngày; cơ sở cho thuê không cần đặt cọc tiền, thủ tục duy nhất là để lại giấy tờ cá nhân.",
+   "claim_supported": "Hoang Trường Điện thoại: 097 245 0113 Địa chỉ: Số 219 QL4B, Vĩnh Trại, Tp Lạng Sơn, Lạng Sơn Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày ... bạn sẽ được hưởng ưu đãi cực đỉnh khi chọn đến đây thuê xe. Đó chính là thuê xe mà không cần đặt cọc tiền. Như vậy thủ tục thuê xe duy nhất bạn cần làm chỉ là để lại giấy tờ cá nhân mà thôi."
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-lang-son/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Khách sạn Kim Sơn (3 Minh Khai, phường Hoàng Văn Thụ, thành phố Lạng Sơn) cũng cho thuê không cần đặt cọc, chỉ cần để lại giấy tờ tùy thân; xe tại đây đa dạng các thương hiệu Honda, Yamaha và thường xuyên được bảo dưỡng.",
+   "claim_supported": "Tuy không có quá nhiều xe nhưng Kim Sơn vẫn sở hữu các dòng xe đa dạng. Chúng đều đến từ các thương hiệu nổi tiếng như Honda, Yamaha,… nên rất bền. Bên cạnh đó nơi này còn thường xuyên thực hiện công tác bảo dưỡng xe. ... Thêm vào đó bạn còn không cần đặt cọc khi thuê xe. Chỉ cần để lại giấy tờ tùy thân bạn sẽ thuê ngay được chiếc xe ưng ý."
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-lang-son/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Khách sạn Vạn Xuân (147 Trần Đăng Ninh, phường Tam Thanh) ghi nhận mức thuê khoảng 120.000đ/ngày cho một chiếc xe tốt, có dịch vụ giao xe tận nơi kể cả ga tàu hay bến xe, thủ tục đơn giản do nhân viên hỗ trợ.",
+   "claim_supported": "Chỉ với kinh phí khoảng 120.000đ/ngày, bạn đã thuê ngay được một chiếc xe cực ngon. Đây là mức giá tốt không phải cơ sở nào cũng có được. Không những thế bạn còn được hưởng dịch vụ giao xe tận nơi nữa. Kể cả bạn ở ga tàu hay bến xe thì đều có thể nhận xe được."
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-lang-son/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Dịch vụ thuê xe máy Mường Thanh (68 Ngô Quyền, phường Vĩnh Trại) có kho xe khá lớn, từ các dòng phổ thông như Wave, Lead đến xe phân khối lớn, xe được kiểm tra thường xuyên.",
+   "claim_supported": "Mường Thanh Lạng Sơn sở hữu kho xe khá lớn và phong phú. Nơi đây có đủ các loại xe từ phổ thông như Wave, Lead đến các dòng xe phân khối lớn cực chất. Bởi thế nên có thể đáp ứng được mọi nhu cầu của bạn. Hơn thế nữa khách sạn còn thực hiện kiểm tra xe thường xuyên nên chất lượng xe luôn được duy trì."
+  }
+ ]
+}
