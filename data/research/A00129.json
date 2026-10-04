@@ -1,0 +1,116 @@
+{
+ "article_id": "A00129",
+ "primary_keyword": "giá thuê Vision An Giang",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mức giá thuê Honda Vision tại An Giang (Long Xuyên, Châu Đốc) theo các nguồn ghi nhận công khai, đối chiếu mặt bằng xe ga 150.000đ – 170.000đ/ngày và đặc thù tỉnh miền Tây có hai trung tâm Long Xuyên – Châu Đốc",
+ "research_date": "2026-10-04",
+ "geo_entities": [
+  "An Giang",
+  "Long Xuyên",
+  "Châu Đốc",
+  "Núi Sam",
+  "rừng tràm Trà Sư",
+  "Nhà thờ Chánh Tòa Long Xuyên",
+  "khu du lịch Núi Sập",
+  "Chợ Mới"
+ ],
+ "vehicle_entities": [
+  "xe tay ga",
+  "xe ga",
+  "xe số"
+ ],
+ "brand_entities": [
+  "Honda",
+  "Yamaha"
+ ],
+ "model_entities": [
+  "Vision",
+  "Air Blade",
+  "Lead",
+  "Wave Alpha",
+  "Sirius",
+  "Jupiter"
+ ],
+ "questions_found": [
+  "Thuê Honda Vision ở An Giang, Long Xuyên giá bao nhiêu một ngày?",
+  "Ở Châu Đốc có nơi nào cho thuê xe ga Vision không?",
+  "Thuê xe máy ở An Giang cần thủ tục gì?",
+  "Giá thuê xe ga ở An Giang cao hơn xe số bao nhiêu?",
+  "Thuê xe An Giang có được giao tận nơi không?"
+ ],
+ "related_queries": [
+  "gia thue vision an giang",
+  "cho thue xe may long xuyen",
+  "thue xe may chau doc",
+  "thue xe may an giang"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp vexere.com ghi nhận tại Long Xuyên: xe ga (Vision, Air Blade, Lead) 150.000đ – 170.000đ/ngày, xe số 120.000đ – 150.000đ/ngày",
+  "Trang tổng hợp giahuy.org và atdanang.com ghi nhận các cửa hàng Long Xuyên/Châu Đốc có giá từ 100k/ngày trở lên, dòng xe gồm Air Blade 125cc, Lead, Vision, Wave, Sirius"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-long-xuyen.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "note": "Bảng giá thuê xe máy Long Xuyên: xe số 120.000đ – 150.000đ/ngày; xe tay ga (Vision, Airblade, Lead, Nouvo, Janus) 150.000đ – 170.000đ/ngày; gợi ý hành trình Nhà thờ Chánh Tòa, Hồ Nguyễn Du, Núi Sập, Chợ Mới, Châu Đốc."
+  },
+  {
+   "source_url": "https://giahuy.org/thue-xe-may-an-giang/",
+   "source_domain": "giahuy.org",
+   "date_accessed": "2026-10-04",
+   "note": "Danh sách điểm cho thuê xe máy An Giang; cửa hàng 205 Trần Hưng Đạo Long Xuyên cung cấp Air Blade 125cc, Lead mới, Vision, Wave; giá từ 100k/ngày trở lên."
+  },
+  {
+   "source_url": "https://atdanang.com/thue-xe-may-an-giang/",
+   "source_domain": "atdanang.com",
+   "date_accessed": "2026-10-04",
+   "note": "Danh sách điểm thuê xe máy Châu Đốc An Giang; các dòng xe Air Blade 125cc, Lead mới, Vision, Wave, Sirius, Jupiter; giá từ 100k/ngày trở lên."
+  },
+  {
+   "source_url": "https://royalenfieldvietnam.com/cua-hang-xe-may-long-xuyen/",
+   "source_domain": "royalenfieldvietnam.com",
+   "date_accessed": "2026-10-04",
+   "note": "Tổng hợp 10 địa chỉ thuê xe Long Xuyên/Châu Đốc: mặt bằng chung 100.000 – 300.000 VNĐ/ngày tùy dòng xe; gợi ý điểm đến Núi Sam, Chợ Châu Đốc, rừng tràm Trà Sư."
+  }
+ ],
+ "unique_angle": "Bài tập trung riêng mặt giá của Honda Vision tại An Giang: xe ga được ghi nhận 150.000đ – 170.000đ/ngày ở Long Xuyên (vexere.com), đối chiếu với các cửa hàng ghi nhận từ 100k/ngày trở lên ở Long Xuyên và Châu Đốc; tách bạch hai trung tâm Long Xuyên – Châu Đốc, gợi ý hành trình Núi Sam – rừng tràm Trà Sư phù hợp xe ga nhỏ gọn.",
+ "claim_evidence": [
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-long-xuyen.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Tại Long Xuyên, dòng xe tay ga phổ biến gồm Honda Vision, Honda Airblade, Honda Lead, Yamaha Nouvo, Yamaha Janus có giá thuê 150.000đ – 170.000đ/ngày.",
+   "claim_supported": "Xe tay ga là lựa chọn được ưa chuộng hơn cả, đặc biệt với khách du lịch nội ô. Các dòng xe phổ biến như Honda Vision, Honda Airblade, Honda Lead, Yamaha Nouvo, Yamaha Janus thường có giá thuê từ 150.000đ – 170.000đ/ngày."
+  },
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-long-xuyen.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Xe số phổ thông tại Long Xuyên (Wave Alpha, Sirius, Jupiter, Future) có giá thuê 120.000đ – 150.000đ/ngày.",
+   "claim_supported": "Các dòng xe phổ biến như Honda Wave Alpha, Yamaha Sirius, Yamaha Jupiter, Honda Future,… thường có giá thuê từ 120.000đ – 150.000đ/ngày."
+  },
+  {
+   "source_url": "https://giahuy.org/thue-xe-may-an-giang/",
+   "source_domain": "giahuy.org",
+   "date_accessed": "2026-10-04",
+   "claim": "Cửa hàng tại 205 Trần Hưng Đạo, Long Xuyên cung cấp Air Blade 125cc, Lead mới, Vision và các dòng xe số; giá thuê từ 100.000đ/ngày trở lên, được đánh giá rẻ trong khu vực.",
+   "claim_supported": "Địa chỉ: 205 Trần Hưng Đạo Long Xuyên – An Giang. Các dòng xe đơn vị cung cấp như Air Blade 125cc, Lead mới, Vision, Honda: Wave S, Rs, RSX, Yamaha: Sirius, Jupiter, Tarus… Giá cửa hàng cho Thuê xe máy An Giang này từ 100k ngày trở lên, giá rất rẻ trong khu vực địa phương."
+  },
+  {
+   "source_url": "https://atdanang.com/thue-xe-may-an-giang/",
+   "source_domain": "atdanang.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Các điểm cho thuê tại Châu Đốc (An Giang) cung cấp Air Blade 125cc, Lead mới, Vision cùng các dòng xe số, giá từ 100.000đ/ngày trở lên.",
+   "claim_supported": "Air Blade 125cc, Lead mới, Vision, Honda: Wave S, Rs, RSX, Yamaha: Sirius, Jupiter, Tarus… nhiều dòng xe tiện lợi, tiết kiệm nhiên liệu cao. Phù hợp nhiều địa hình ở An Giang. Giá cửa hàng cho thuê từ 100k ngày trở lên."
+  },
+  {
+   "source_url": "https://royalenfieldvietnam.com/cua-hang-xe-may-long-xuyen/",
+   "source_domain": "royalenfieldvietnam.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Mặt bằng giá thuê xe máy tại Long Xuyên dao động 100.000 – 300.000 VNĐ/ngày tùy dòng xe, phục vụ khách nội địa và quốc tế, phủ Long Xuyên và khu vực lân cận như Châu Đốc, An Phú.",
+   "claim_supported": "Thuê xe máy tại Long Xuyên An Giang là lựa chọn thông minh cho du khách muốn khám phá vùng đất Thất Sơn một cách linh hoạt, tiết kiệm chi phí so với thuê taxi hoặc tour cố định. Với mức giá chỉ từ 100.000 – 300.000 VNĐ/ngày, bạn có thể tự do di chuyển đến các điểm du lịch nổi tiếng như Núi Sam, Chợ Châu Đốc, Rừng tràm Trà Sư."
+  }
+ ]
+}

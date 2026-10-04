@@ -1,0 +1,108 @@
+{
+ "article_id": "A00132",
+ "primary_keyword": "giá thuê Air Blade Hải Phòng",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mức giá thuê Honda Air Blade tại Hải Phòng theo các nguồn ghi nhận công khai, đối chiếu mặt bằng xe ga 130.000đ – 160.000đ/ngày và các cơ sở chuyên Air Blade, kèm phụ phí ra ngoài trung tâm",
+ "research_date": "2026-10-04",
+ "geo_entities": [
+  "Hải Phòng",
+  "ga Hải Phòng",
+  "Đồ Sơn",
+  "Cát Bà",
+  "cầu Bính",
+  "bến xe Niệm Nghĩa"
+ ],
+ "vehicle_entities": [
+  "xe tay ga",
+  "xe ga",
+  "xe số"
+ ],
+ "brand_entities": [
+  "Honda",
+  "Yamaha",
+  "SYM"
+ ],
+ "model_entities": [
+  "Air Blade",
+  "Vision",
+  "Click",
+  "Nouvo",
+  "Wave Alpha",
+  "Sirius"
+ ],
+ "questions_found": [
+  "Thuê Honda Air Blade ở Hải Phòng giá bao nhiêu một ngày?",
+  "Ở Hải Phòng có cơ sở nào chuyên cho thuê Air Blade không?",
+  "Thuê xe Hải Phòng có phụ phí khi ra Đồ Sơn, Cát Bà không?",
+  "Thuê xe ga Hải Phòng có kèm cứu hộ khi xe hỏng không?",
+  "Giá thuê xe ga ở Hải Phòng chênh xe số bao nhiêu?"
+ ],
+ "related_queries": [
+  "gia thue air blade hai phong",
+  "cho thue xe may hai phong",
+  "thue xe tay ga hai phong",
+  "thue xe may do son"
+ ],
+ "serp_patterns": [
+  "vexere.com ghi nhận xe ga Hải Phòng trung bình 130.000 – 160.000 đồng/ngày với các dòng Airblade, Lead, Vision, Click; các bài tổng hợp ghi cửa hàng quanh bến xe Niệm Nghĩa có xe ga 80.000 – 150.000 đồng/chiếc",
+  "Thuê Xe Máy Hải Phòng LV công bố chuyên Air Blade; bảng giá có phụ thu 30.000 vnđ/ngày khi đi ra ngoài trung tâm thành phố/đảo; cứu hộ xe trong vòng 15km tính từ ga Hải Phòng"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hai-phong.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "note": "Bảng giá thuê xe máy Hải Phòng: xe ga trung bình từ 130.000 đến 160.000 đồng một ngày (Airblade, Lead, Vision, Click); gợi ý hành trình Đồ Sơn, Cát Bà, cầu Bính, food tour trung tâm."
+  },
+  {
+   "source_url": "https://giahuyorg.gitbook.io/thue-xe-may-1/thue-xe-may-hai-phong",
+   "source_domain": "giahuyorg.gitbook.io",
+   "date_accessed": "2026-10-04",
+   "note": "9 địa điểm thuê xe Hải Phòng không cần cọc, giao tận nơi; Anh Việt (bến xe Niệm Nghĩa) dịch vụ 24/24 và thuê qua đêm từ 80.000 – 120.000 đồng/chiếc; xe ga thông thường 80.000 – 150.000 đồng/chiếc gồm Vision, Airblade."
+  },
+  {
+   "source_url": "https://thuexemayhaiphong.com/xe-thue/honda-air-blade/",
+   "source_domain": "thuexemayhaiphong.com",
+   "date_accessed": "2026-10-04",
+   "note": "Thuê Xe Máy Hải Phòng LV chuyên Honda Air Blade: sẵn nhiều xe cho nhóm, giá phụ thuộc năm sản xuất/thời hạn thuê/khoảng cách di chuyển; có khuyến mãi khi thuê nhiều xe."
+  },
+  {
+   "source_url": "https://thuexemayhaiphong.com/bang-gia/",
+   "source_domain": "thuexemayhaiphong.com",
+   "date_accessed": "2026-10-04",
+   "note": "Bảng giá Thuê Xe Hải Phòng LV: phụ thu 30.000 vnđ/ngày khi đi ra ngoài trung tâm thành phố/đảo; cứu hộ xe trong vòng 15km tính từ ga Hải Phòng; giao kèm photo đăng ký xe, bảo hiểm dân sự."
+  }
+ ],
+ "unique_angle": "Bài tập trung riêng Honda Air Blade tại Hải Phòng — dòng xe ga cà vo hợp với hành trình phố Cảng và các cung ven biển Đồ Sơn — với hai lớp giá rõ rệt: mặt bằng xe ga chung 130.000đ – 160.000đ/ngày (vexere.com) và dịch vụ chuyên Air Blade như Thuê Xe Máy Hải Phòng LV có phụ phí 30.000đ/ngày khi ra khỏi trung tâm; nhấn mạnh điều khoản cứu hộ 15km từ ga — một điểm rất thực tế khi chạy xa ở Hải Phòng.",
+ "claim_evidence": [
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hai-phong.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Giá thuê xe ga ở Hải Phòng trung bình từ 130.000đ đến 160.000đ/ngày; các dòng xe tay ga được ưa chuộng gồm Honda Airblade, Honda Lead, Honda Vision, Honda Click.",
+   "claim_supported": "Giá thuê xe ga Hải Phòng không cao hơn nhiều so với xe số, với mức trung bình từ 130.000 đến 160.000 đồng một ngày. Honda Airblade, Honda Lead, Honda Vision, hay Honda Click là những dòng xe tay ga được ưa chuộng."
+  },
+  {
+   "source_url": "https://giahuyorg.gitbook.io/thue-xe-may-1/thue-xe-may-hai-phong",
+   "source_domain": "giahuyorg.gitbook.io",
+   "date_accessed": "2026-10-04",
+   "claim": "Cửa hàng Anh Việt tại bến xe Niệm Nghĩa, Hải Phòng cho thuê xe ga (gồm Suzuki Hayate, Honda Nouvo, Click, Vision, Airblade) giá 80.000đ – 150.000đ/chiếc; dịch vụ 24/24 và thuê qua đêm giá từ 80.000đ – 120.000đ/chiếc.",
+   "claim_supported": "Cửa hàng Anh Việt có dịch vụ thuê xe máy 24/24 và dịch vụ thuê xe máy qua đêm với giá từ 80.000 đồng đến 120.000 đồng/chiếc. Các dòng xe tay ga thông thường như: Suzuki Hayate, Honda Nouvo, Honda Click, Honda Vision, SYM Alizabeth, Honda Airblade,… Giá 80.000 đồng đến 150.000 đồng/chiếc."
+  },
+  {
+   "source_url": "https://thuexemayhaiphong.com/bang-gia/",
+   "source_domain": "thuexemayhaiphong.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Thuê Xe Hải Phòng LV quy định phụ thu 30.000đ/ngày khi đi xe ra ngoài trung tâm thành phố hoặc ra đảo; cứu hộ xe trong vòng 15km tính từ ga Hải Phòng; kèm bản photo đăng ký xe và bảo hiểm trách nhiệm dân sự.",
+   "claim_supported": "Cung cấp các giấy tờ sau cho người thuê xe: Bản photo giấy đăng ký xe, Bảo hiểm trách nhiệm dân sự xe. Cứu hộ xe trong vòng 15km tính từ ga Hải Phòng. Khi đi xe ra ngoài trung tâm thành phố/đảo phát sinh 30.000 vnđ/ngày."
+  },
+  {
+   "source_url": "https://thuexemayhaiphong.com/xe-thue/honda-air-blade/",
+   "source_domain": "thuexemayhaiphong.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Thuê Xe Máy Hải Phòng LV là một trong những địa chỉ chuyên cho thuê Honda Air Blade tại Hải Phòng, luôn sẵn nhiều xe cho cả nhóm; giá thuê phụ thuộc năm sản xuất, thời hạn thuê và khoảng cách di chuyển.",
+   "claim_supported": "Với dịch vụ chuyên nghiệp và chất lượng xe đảm bảo, Thuê Xe Máy Hải Phòng LV xứng đáng là một trong những địa chỉ thuê xe Honda Air Blade hàng đầu tại Hải Phòng. Luôn sẵn xe: Cung cấp rất nhiều xe Honda Air Blade, cho cả nhóm bạn mà không sợ hết xe."
+  }
+ ]
+}

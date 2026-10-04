@@ -1,0 +1,118 @@
+{
+ "article_id": "A00130",
+ "primary_keyword": "giá thuê Vision Cà Mau",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mức giá thuê Honda Vision tại Cà Mau theo các nguồn ghi nhận công khai, đối chiếu mặt bằng xe ga từ 120.000đ – 170.000đ/ngày giữa thành phố Cà Mau và các huyện như Năm Căn",
+ "research_date": "2026-10-04",
+ "geo_entities": [
+  "Cà Mau",
+  "thành phố Cà Mau",
+  "Năm Căn",
+  "đất mũi Cà Mau",
+  "rừng U Minh",
+  "đảo Hòn Khoai"
+ ],
+ "vehicle_entities": [
+  "xe tay ga",
+  "xe ga",
+  "xe số",
+  "xe côn"
+ ],
+ "brand_entities": [
+  "Honda",
+  "Yamaha"
+ ],
+ "model_entities": [
+  "Vision",
+  "Air Blade",
+  "Sirius"
+ ],
+ "questions_found": [
+  "Thuê Honda Vision ở Cà Mau giá bao nhiêu một ngày?",
+  "Những nơi nào cho thuê xe máy uy tín ở thành phố Cà Mau?",
+  "Thuê xe máy ở Cà Mau có được chạy liên tỉnh không?",
+  "Giá thuê xe ga ở Cà Mau chênh xe số bao nhiêu?",
+  "Thuê xe Cà Mau cần để lại giấy tờ gì?"
+ ],
+ "related_queries": [
+  "gia thue vision ca mau",
+  "cho thue xe may ca mau",
+  "thue xe may o ca mau",
+  "dia chi thue xe may ca mau"
+ ],
+ "serp_patterns": [
+  "motogo.vn ghi nhận tại Cà Mau: xe số từ 100k/ngày, xe ga từ 120k/ngày; một số cửa hàng ở Năm Căn có giá chênh hơn nội thành",
+  "mytour.vn ghi nhận giá thuê xe máy Cà Mau dao động 80.000 – 160.000 VNĐ/ngày, xe ga từ 130.000 – 160.000 VNĐ/ngày; các địa chỉ uy tín gồm Trọng Nguyễn, Triển Lê, Anh Cường, Khách sạn Anh Nguyệt"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "note": "7 địa điểm thuê xe máy Cà Mau; giá xe số từ 100k/ngày, xe ga từ 120k/ngày; có cửa hàng tại TT. Năm Căn."
+  },
+  {
+   "source_url": "https://mytour.vn/vi/blog/bai-viet/danh-sach-dia-chi-thue-xe-may-o-ca-mau-dam-bao-gia-tot-dich-vu-chuyen-nghiep.html",
+   "source_domain": "mytour.vn",
+   "date_accessed": "2026-10-04",
+   "note": "Danh sách địa chỉ thuê xe máy Cà Mau; giá dao động 80.000 – 160.000 VNĐ/ngày; xe số từ 80.000 VNĐ, xe ga từ 130.000 – 160.000 VNĐ/ngày; Triển Lê 90.000 – 150.000 VNĐ cho nhiều dòng xe."
+  },
+  {
+   "source_url": "https://giahuy.org/thue-xe-may-ca-mau/",
+   "source_domain": "giahuy.org",
+   "date_accessed": "2026-10-04",
+   "note": "Top 7 địa chỉ thuê xe máy Cà Mau (Triển Lê, Trọng Nguyễn, Anh Khôi, Quý Cọp); một cửa hàng ghi nhận 130k xe số và 170k xe ga; lưu ý chỉ được di chuyển trong tỉnh Cà Mau, không chạy liên tỉnh."
+  },
+  {
+   "source_url": "https://2trip.vn/toplist/thue-xe-may-ca-mau",
+   "source_domain": "2trip.vn",
+   "date_accessed": "2026-10-04",
+   "note": "7 địa chỉ thuê xe Cà Mau từ 100.000đ; Quý Cọp có nhiều mức giá khuyến mại; cửa hàng Air Blade Cà Mau chuyên xe tay ga chính chủ."
+  },
+  {
+   "source_url": "https://mia.vn/cam-nang-du-lich/dia-chi-thue-xe-may-o-ca-mau-dam-bao-gia-tot-dich-vu-chuyen-nghiep-9666",
+   "source_domain": "mia.vn",
+   "date_accessed": "2026-10-04",
+   "note": "Triển Lê tại trung tâm thành phố Cà Mau: giá chung từ 90.000 VNĐ đến 150.000 VNĐ cho xe số, tay ga, côn; hỗ trợ giao xe tận điểm lưu trú, bến xe, sân bay qua điện thoại."
+  }
+ ],
+ "unique_angle": "Bài tập trung mặt giá của riêng Honda Vision tại Cà Mau: đối chiếu mức xe ga từ 120k/ngày (motogo.vn) với dải 130.000đ – 160.000đ/ngày (mytour.vn) và cửa hàng ghi nhận 170k/ngày cho xe ga (giahuy.org); nhấn mạnh lưu ý thực tế của vùng cực Nam — quy định không chạy liên tỉnh ở một số cửa hàng, mùa mưa và đường đê, cùng việc đặt xe trước vì số lượng cửa hàng ít hơn các tỉnh lớn.",
+ "claim_evidence": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Giá thuê xe máy ở Cà Mau: xe số từ 100k/ngày, xe ga (bao gồm dòng Vision) từ 120.000đ/ngày.",
+   "claim_supported": "Giá thuê xe số từ 100k/ngày, xe ga từ 120k/ngày. Một số cửa hàng sẽ có giá chênh lệch một chút so với bảng dưới đây."
+  },
+  {
+   "source_url": "https://mytour.vn/vi/blog/bai-viet/danh-sach-dia-chi-thue-xe-may-o-ca-mau-dam-bao-gia-tot-dich-vu-chuyen-nghiep.html",
+   "source_domain": "mytour.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Giá thuê xe máy ở Cà Mau dao động 80.000 – 160.000 VNĐ/ngày tùy loại xe; xe số thường từ 80.000 VNĐ, xe ga từ 130.000đ – 160.000đ/ngày.",
+   "claim_supported": "Giá thuê xe máy ở Cà Mau dao động từ 80.000 VNĐ đến 160.000 VNĐ/ngày tùy loại xe. Xe số thường có giá từ 80.000 VNĐ, xe ga từ 130.000 VNĐ đến 160.000 VNĐ/ngày."
+  },
+  {
+   "source_url": "https://mia.vn/cam-nang-du-lich/dia-chi-thue-xe-may-o-ca-mau-dam-bao-gia-tot-dich-vu-chuyen-nghiep-9666",
+   "source_domain": "mia.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Triển Lê (trung tâm thành phố Cà Mau) có giá thuê chung từ 90.000 VNĐ đến 150.000 VNĐ cho đa dạng dòng xe số, tay ga, xe côn; hỗ trợ đặt xe giao tận nơi qua điện thoại.",
+   "claim_supported": "Với mức giá chung từ 90.000 VNĐ đến 150.000 VNĐ cho đa dạng dòng xe số, tay ga, xe côn, thuê xe ở Triển Lê chắc chắn sẽ mang tới cho bạn nhiều sự lựa chọn phù hợp với nhu cầu và sở thích. Bạn muốn đặt xe giao tận điểm lưu trú hay bến xe, sân bay qua điện thoại cũng cực kỳ thuận tiện."
+  },
+  {
+   "source_url": "https://giahuy.org/thue-xe-may-ca-mau/",
+   "source_domain": "giahuy.org",
+   "date_accessed": "2026-10-04",
+   "claim": "Một cửa hàng tại Cà Mau ghi nhận giá 130.000đ/ngày cho xe số và 170.000đ/ngày cho xe ga; lưu ý chỉ được di chuyển trong tỉnh Cà Mau, không chạy liên tỉnh.",
+   "claim_supported": "Giá thuê xe cũng khá hợp lý, với 130k cho xe số và 170k cho xe ga. Tuy nhiên, lưu ý rằng chỉ được phép di chuyển trong tỉnh Cà Mau, không được chạy liên tỉnh."
+  },
+  {
+   "source_url": "https://2trip.vn/toplist/thue-xe-may-ca-mau",
+   "source_domain": "2trip.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Quý Cọp là cửa hàng cho thuê xe máy tại Cà Mau có các mức giá khuyến mại, thuê từ 100.000đ/ngày; cửa hàng Air Blade Cà Mau chuyên cho thuê các loại xe tay ga chính chủ.",
+   "claim_supported": "Du khách đi du lịch Cà Mau với ngân sách hạn chế có thể tham khảo đơn vị cho thuê xe Quý Cọp. Cửa hàng luôn có những mức giá cho thuê khuyến mại và thu hút phần đông du khách có túi tiền vừa phải. Chỉ từ 100.000đ là bạn đã có thể \"gói\" về cho mình một chiếc xe máy chất lượng. Cơ sở cho thuê xe máy Air Blade Cà Mau là một đơn vị khá đặc biệt. Tất cả các loại xe máy cho thuê tại Air Blade Cà Mau đều là xe tay ga và có nguồn gốc minh bạch, rõ ràng, chính chủ."
+  }
+ ]
+}

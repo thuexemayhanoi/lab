@@ -1,0 +1,110 @@
+{
+ "article_id": "A00131",
+ "primary_keyword": "thuê Honda Air Blade Hà Nội",
+ "secondary_keywords": [],
+ "search_intent": "transactional/informational — khách ở Hà Nội cần thuê Honda Air Blade: mức giá của dịch vụ cho thuê xe máy tại Long Biên (chủ trang web) so với mặt bằng chung ở Hà Nội, thủ tục, cọc và kinh nghiệm nhận xe",
+ "research_date": "2026-10-04",
+ "geo_entities": [
+  "Hà Nội",
+  "Long Biên",
+  "Bồ Đề",
+  "Nguyễn Văn Cừ",
+  "Hoàn Kiếm",
+  "phố cổ Hà Nội"
+ ],
+ "vehicle_entities": [
+  "xe tay ga",
+  "xe ga"
+ ],
+ "brand_entities": [
+  "Honda"
+ ],
+ "model_entities": [
+  "Air Blade",
+  "Vision",
+  "Lead",
+  "Click"
+ ],
+ "questions_found": [
+  "Thuê Honda Air Blade ở Hà Nội giá bao nhiêu một ngày?",
+  "Dịch vụ cho thuê Air Blade tại Long Biên có giao xe tận nơi không?",
+  "Thuê Air Blade cần cọc bao nhiêu?",
+  "Air Blade phù hợp chạy ngoại tỉnh từ Hà Nội không?",
+  "So với Vision thì thuê Air Blade đắt hơn bao nhiêu?"
+ ],
+ "related_queries": [
+  "thue honda air blade ha noi",
+  "thue xe may air blade long bien",
+  "gia thue air blade ha noi",
+  "thue xe tay ga ha noi"
+ ],
+ "serp_patterns": [
+  "Các nhà xe Hà Nội công bố: Thuê Xe Máy Sao Hà Nội ghi Air Blade 220.000đ – 250.000đ/ngày (nội thành 220.000đ, ngoại tỉnh 250.000đ); motogo.vn ghi Air Blade 125cc 200.000đ/ngày cho thuê 1-5 ngày, giảm dần khi thuê hơn 5 ngày",
+  "Dịch vụ của chủ trang web (thuexemaynguyentu.com) niêm yết Air Blade 200.000đ/ngày, 1.000.000đ/tuần, 1.500.000đ/tháng; cọc tham khảo 3 triệu"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://thuexemaynguyentu.com/",
+   "source_domain": "thuexemaynguyentu.com",
+   "date_accessed": "2026-10-04",
+   "note": "Dịch vụ của chủ trang web tại Long Biên (Bồ Đề, đường Nguyễn Văn Cừ): Honda Air Blade 200.000đ/ngày, 1.000.000đ/tuần, 1.500.000đ/tháng; cọc tham khảo 3 triệu; giao tận nơi Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình; giờ 09:00 – 21:00."
+  },
+  {
+   "source_url": "https://thuexemaysaohanoi.com/product/honda-airblade/",
+   "source_domain": "thuexemaysaohanoi.com",
+   "date_accessed": "2026-10-04",
+   "note": "Thuê Xe Máy Sao Hà Nội công bố giá Air Blade 220.000 – 250.000đ/ngày: nội thành Hà Nội 220.000đ/ngày, đi ngoại tỉnh 250.000đ/ngày."
+  },
+  {
+   "source_url": "https://motogo.vn/ha-noi/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "note": "MOTOGO (Cầu Giấy): Honda Air Blade 125cc giá 200.000đ/ngày cho khách thuê từ ngày 1 đến ngày 5, giảm dần khi thuê nhiều hơn 5 ngày; Honda Vision 180.000 VND/ngày."
+  },
+  {
+   "source_url": "https://mytour.vn/vi/blog/bai-viet/15-dich-vu-cho-thue-xe-may-tot-nhat-va-gia-re-tai-ha-noi.html",
+   "source_domain": "mytour.vn",
+   "date_accessed": "2026-10-04",
+   "note": "Bài tổng hợp 15 dịch vụ thuê xe máy Hà Nội ghi nhận Motogo có giá xe ga (Honda Air Blade 125cc) 120.000 VNĐ/ngày — mức ghi nhận thấp hơn so với giá công bố trực tiếp trên trang của nhà xe."
+  }
+ ],
+ "unique_angle": "Bài là phần nói riêng về Honda Air Blade tại Hà Nội — dòng xe ga cà vo được ưa chuộng cho cả đi phố lẫn chạy ngoại tỉnh — với phần dịch vụ của chủ trang web (Long Biên) nêu rõ giá niêm yết Air Blade 200.000đ/ngày, kèm đối chiếu mặt bằng chung 200.000đ – 250.000đ/ngày giữa các nhà xe công khai, và hướng dẫn khi nào Air Blade đáng thuê hơn Vision.",
+ "claim_evidence": [
+  {
+   "source_url": "https://thuexemaynguyentu.com/",
+   "source_domain": "thuexemaynguyentu.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Dịch vụ của chủ trang web niêm yết Honda Air Blade 200.000đ/ngày; giá tuần 1.000.000đ; giá tháng 1.500.000đ.",
+   "claim_supported": "Honda Air Blade – xe ga: 200.000đ/ngày; 1.000.000đ/tuần; 1.500.000đ/tháng."
+  },
+  {
+   "source_url": "https://thuexemaynguyentu.com/",
+   "source_domain": "thuexemaynguyentu.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Tiền đặt cọc tham khảo với Honda Air Blade tại dịch vụ của chủ trang web là 3 triệu; mức cọc theo dòng xe: Honda Wave 2–3 triệu, Honda Click/Yamaha Mio 2 triệu, Honda Vision 4–5 triệu.",
+   "claim_supported": "Tiền đặt cọc tham khảo theo từng dòng xe: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu."
+  },
+  {
+   "source_url": "https://thuexemaynguyentu.com/",
+   "source_domain": "thuexemaynguyentu.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Dịch vụ giao xe tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành; giờ làm việc 09:00 – 21:00, không giao xe ngoài khung giờ này.",
+   "claim_supported": "Chúng tôi giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành, giúp bạn khám phá Hà Nội an toàn và tiết kiệm. — Điện thoại: 0942 467 674 · 09:00 – 21:00 · Không giao xe máy ngoài giờ."
+  },
+  {
+   "source_url": "https://thuexemaysaohanoi.com/product/honda-airblade/",
+   "source_domain": "thuexemaysaohanoi.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Thuê Xe Máy Sao Hà Nội công bố giá thuê Honda Airblade 220.000đ – 250.000đ/ngày: đi trong nội thành Hà Nội 220.000đ/ngày, đi ngoại tỉnh 250.000đ/ngày.",
+   "claim_supported": "220.000 – 250.000đ/NGÀY – Xe đi trong nội thành Hà Nội giá 220.000đ/ngày, đi ngoại tỉnh 250.000đ/ngày."
+  },
+  {
+   "source_url": "https://motogo.vn/ha-noi/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "MOTOGO ghi nhận Honda Air Blade 125cc giá 200.000đ/ngày cho khách thuê từ ngày 1 đến ngày 5; mức giá giảm dần khi thuê nhiều hơn 5 ngày; Honda Vision tại đây 180.000 VND/ngày.",
+   "claim_supported": "Xe tay ga Air Blade 125cc giá thuê xe 200.000vnd/ngày/xe cho khách thuê xe từ ngày 1- ngày 5. Mức giá sẽ giảm dần khi khách thuê nhiều hơn 5 ngày. Ngoài ra, dòng xe Honda Vision của MOTOGO có mức giá rẻ nhất thị trường. Chỉ 180.000 VND/ngày."
+  }
+ ]
+}
