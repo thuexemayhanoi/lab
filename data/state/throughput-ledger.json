@@ -2131,6 +2131,74 @@
       ],
       "published": 2,
       "phase": "PRODUCTION"
+    },
+    {
+      "op": "research",
+      "started_at": "2026-10-04T05:30:38.269Z",
+      "finished_at": "2026-10-04T05:30:38.814Z",
+      "elapsed_ms": 545,
+      "ids": [
+        "A00129",
+        "A00130"
+      ],
+      "count": 2
+    },
+    {
+      "op": "qa",
+      "started_at": "2026-10-04T05:30:39.678Z",
+      "finished_at": "2026-10-04T05:30:40.198Z",
+      "elapsed_ms": 520,
+      "ids": [
+        "A00129",
+        "A00130"
+      ],
+      "count": 2
+    },
+    {
+      "op": "publish",
+      "started_at": "2026-10-04T05:30:41.024Z",
+      "finished_at": "2026-10-04T05:30:42.670Z",
+      "elapsed_ms": 1646,
+      "ids": [
+        "A00129",
+        "A00130"
+      ],
+      "published": 2,
+      "phase": "PRODUCTION"
+    },
+    {
+      "op": "research",
+      "started_at": "2026-10-04T05:30:43.413Z",
+      "finished_at": "2026-10-04T05:30:43.864Z",
+      "elapsed_ms": 451,
+      "ids": [
+        "A00131",
+        "A00132"
+      ],
+      "count": 2
+    },
+    {
+      "op": "qa",
+      "started_at": "2026-10-04T05:30:44.590Z",
+      "finished_at": "2026-10-04T05:30:45.058Z",
+      "elapsed_ms": 468,
+      "ids": [
+        "A00131",
+        "A00132"
+      ],
+      "count": 2
+    },
+    {
+      "op": "publish",
+      "started_at": "2026-10-04T05:30:45.868Z",
+      "finished_at": "2026-10-04T05:30:47.654Z",
+      "elapsed_ms": 1786,
+      "ids": [
+        "A00131",
+        "A00132"
+      ],
+      "published": 2,
+      "phase": "PRODUCTION"
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-02T07:41:46.550Z",
+  "generated_at": "2026-10-04T05:30:47.860Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 135,
-    "PLANNED": 9865
+    "PUBLISHED": 139,
+    "PLANNED": 9861
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 129,
-      "PLANNED": 4871
+      "PUBLISHED": 133,
+      "PLANNED": 4867
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00128",
-  "next_claimable_id": "A00129",
+  "last_completed_id": "A00132",
+  "next_claimable_id": "A00133",
   "blocked": [],
   "published": [
     {
@@ -808,6 +808,30 @@
       "pk": "giá thuê Vision Đồng Tháp",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-vision-dong-thap/"
+    },
+    {
+      "id": "A00129",
+      "pk": "giá thuê Vision An Giang",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-vision-an-giang/"
+    },
+    {
+      "id": "A00130",
+      "pk": "giá thuê Vision Cà Mau",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-vision-ca-mau/"
+    },
+    {
+      "id": "A00131",
+      "pk": "thuê Honda Air Blade Hà Nội",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-honda-air-blade-ha-noi/"
+    },
+    {
+      "id": "A00132",
+      "pk": "giá thuê Air Blade Hải Phòng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-air-blade-hai-phong/"
     },
     {
       "id": "A00465",
