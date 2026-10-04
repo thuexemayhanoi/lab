@@ -1,0 +1,172 @@
+{
+  "article_id": "A00153",
+  "primary_keyword": "giá thuê Air Blade Quảng Bình",
+  "secondary_keywords": [
+    "thue xe may Dong Hoi",
+    "cho thue xe may Quang Binh",
+    "thue xe may Phong Nha"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Air Blade tại Quảng Bình; bảng giá niêm yết chi tiết theo đời xe: Airblade 2012 120.000 vnd, 2013-2015 140.000 vnd, 2016-2018 160.000 vnd; 11 cơ sở ghi nhận tập trung tại Đồng Hới và Phong Nha, trong đó Anh Lộc không yêu cầu cọc với khách du lịch kèm giao xe miễn phí trong thành phố, Beach House hơn 50 xe đời 2018 trở lên giao xe trong 10 phút, Phong Nha Motorbike có xe côn XR150 và phục vụ được khách nước ngoài",
+  "research_date": "2026-10-04",
+  "geo_entities": [
+    "Quảng Bình",
+    "Đồng Hới",
+    "Phong Nha",
+    "Sơn Trạch",
+    "Bắc Lý",
+    "Nam Lý",
+    "Đồng Mỹ",
+    "Hải Thành",
+    "Bảo Ninh",
+    "Hải Thịnh",
+    "Quang Phú",
+    "đường Trương Pháp",
+    "đường Hoàng Diệu",
+    "ga tàu Đồng Hới"
+  ],
+  "vehicle_entities": [
+    "xe tay ga",
+    "xe ga",
+    "xe số",
+    "xe tay côn"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "SYM"
+  ],
+  "model_entities": [
+    "Air Blade",
+    "Lead",
+    "Vision",
+    "Wave",
+    "Sirius",
+    "Jupiter",
+    "Nouvo",
+    "Attila",
+    "Victoria",
+    "Elizabeth",
+    "XR150"
+  ],
+  "questions_found": [
+    "Thuê Honda Air Blade ở Quảng Bình, Đồng Hới giá bao nhiêu một ngày?",
+    "Bảng giá thuê xe máy Quảng Bình niêm yết theo đời xe như thế nào?",
+    "Ở Quảng Bình có nơi nào thuê xe không cần cọc không?",
+    "Thuê xe ở Phong Nha – Sơn Trạch có gì khác Đồng Hới?",
+    "Đi Quảng Bình nên thuê Air Blade hay xe côn XR150?"
+  ],
+  "related_queries": [
+    "gia thue air blade quang binh",
+    "thue xe may dong hoi",
+    "cho thue xe may phong nha",
+    "thue xe may quang binh khong can coc"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp MOTOGO về thuê xe máy Đồng Hới Quảng Bình là nguồn chi tiết nhất cho tỉnh: 11 đơn vị kèm bảng giá theo ngày, tập trung tại thành phố Đồng Hới và khu Phong Nha – Sơn Trạch; bảng giá niêm yết chi tiết theo từng dòng và đời xe với Honda Airblade 2012 120.000 vnd, 2013-2015 140.000 vnd, 2016-2017-2018 160.000 vnd",
+    "Thị trường Quảng Bình có nhiều cơ sở gắn với cơ sở lưu trú kiêm cho thuê (chị Thu, Beach House, QB Travel) và các đơn vị chuyên thuê xe giao tận nơi (Anh Lộc, Tung Motorbike); tiền cọc phổ biến 1 đến 3 triệu nhưng Anh Lộc công khai không yêu cầu cọc với khách du lịch"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+      "source_domain": "motogo.vn",
+      "source_type": "aggregator — tổng hợp 11 đơn vị cho thuê xe máy Đồng Hới Quảng Bình kèm bảng giá",
+      "date_accessed": "2026-10-04",
+      "reliability_note": "bảng giá theo nhóm xe số/xe ga cho từng cơ sở, kèm bảng giá niêm yết chi tiết theo từng dòng và đời xe"
+    }
+  ],
+  "unique_angle": "Quảng Bình là tỉnh thứ hai trong chuỗi có bảng giá Airblade niêm yết chi tiết theo đời xe (2012 — 120.000 vnd, 2013-2015 — 140.000 vnd, 2016-2018 — 160.000 vnd) trùng khớp Hà Tĩnh kề bên; điểm khác biệt là thị trường sôi động hơn hẳn với 11 cơ sở ghi nhận, trong đó Anh Lộc không cọc với khách du lịch kèm giao xe miễn phí trong thành phố, Beach House giữ hơn 50 xe đời 2018 trở lên giao xe trong 10 phút, còn khu Phong Nha – Sơn Trạch có xe côn XR150 và đơn vị phục vụ được cả khách nước ngoài",
+  "claim_evidence": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Bảng giá 1 ngày niêm yết theo dòng và đời xe tại Quảng Bình: xe tay ga Honda Airblade 2012 120.000 vnd; Honda Airblade 2013-2015 140.000 vnd; Honda Airblade 2016-2017-2018 160.000 vnd; Honda Lead 120.000 vnd; Honda Vision 120.000 vnd. Xe số: Wave S 80.000 vnd; Wave RS 80.000 vnd; Wave RSX-fi 90.000 vnd; Yamaha Sirius 2015-2018 FI 90.000 vnd; Yamaha Jupiter gravita 80.000 vnd. Xe ga khác: Yamaha Nouvo LX 100.000 vnd; Yamaha Nouvo SX fi 120.000 vnd; Attila Victoria, Elizabeth 100.000 vnd.",
+      "claim_supported": "Xe tay ga Honda Airblade 2012 120.000 vnd — Xe tay ga Honda Airblade 2013-2015 140.000 vnd — Xe tay ga Honda Airblade 2016- 2017 – 2018 160.000 vnd — Xe tay ga Honda Lead 120.000 vnd — Xe tay ga Honda Vision 120.000 vnd — Xe số Wave S 80.000 vnd — Xe số Wave RS 80.000 vnd — Xe số Wave RSX – fi 90.000 vnd — Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd — Xe số Yamaha Jupiter gravita 80.000 vnd — Xe tay ga Yamaha Nouvo LX 100.000 vnd — Xe tay ga Yamaha Nouvo SX fi 120.000 vnd — Xe tay ga attilla Victoria , Elizabeth 100.000 vnd"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Anh Lộc Quảng Bình (điện thoại 0338 023 344) cho thuê giá rẻ 24h: mức giá niêm yết dao động 100.000đ – 150.000đ/ngày áp dụng trong khung 24 tiếng, chi tiết ghi giá thuê 100.000đ – 120.000đ; không yêu cầu cọc với khách du lịch — du khách chỉ cần để lại căn cước công dân, giấy tờ tùy thân là làm thủ tục nhanh chóng; có giao nhận xe miễn phí trong thành phố; kho xe từ tay ga đến côn tay và xe số, kèm phụ kiện mũ bảo hiểm 1/2, áo mưa mỏng; chi phí thuê chưa bao gồm bảo hiểm thuê xe, có gói bảo hiểm đăng ký thêm trong đó toàn bộ chi phí sửa chữa cửa hàng thanh toán 100%.",
+      "claim_supported": "Hiện nay mức giá niêm yết tại thuê xe máy anh Lộc dao động từ 100.000đ – 150.000đ/ngày. Giá thuê xe được áp dụng trong khung 24h ... Một trong những điểm đặc biệt tại Anh Lộc Quảng Bình là không yêu cầu cọc với khách du lịch. Du khách cần để lại căn cước công dân, giấy tờ tùy thân là có thể làm thủ tục thuê xe nhanh chóng dễ dàng. Đặc biệt anh Lộc có giao nhận xe miễn phí tại thành phố ... cung cấp nhiều loại xe khác nhau, từ tay ga đến côn tay và xe số. Xe bao gồm các loại phụ kiện như mũ bảo hiểm 1/2, áo mưa mỏng,… Chi phí thuê xe chưa bao gồm bảo hiểm thuê xe. Bạn có thể đăng ký gói bảo hiểm xe, toàn bộ các chi phí sửa chữa xe cửa hàng sẽ thanh toán 100% ... Giá thuê xe: 100.000đ – 120.000đ ... Số điện thoại: 0338 023 344"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Anh Mạnh (187 Trương Pháp, Bắc Lý, Đồng Hới; điện thoại 094 777 49 18) có vị trí cửa hàng nằm ngay sát biển, được đánh giá cao từ cả du khách lẫn người dân địa phương; kho xe đa dạng từ xe tay ga như Air Blade, Vision đến xe số như Sirius, Wave đều đầy đủ.",
+      "claim_supported": "Với vị trí cửa hàng nằm ngay sát biển ... Nơi đây nhận được đánh giá cao từ cả du khách lẫn người dân địa phương ... Những chiếc xe máy tại địa chỉ này có rất nhiều loại đa dạng. Từ xe tay ga như Air Blade, Vision đến xe số như Sirius, Wave,… đều đầy đủ cả ... Điện thoại: 094 777 49 18 Địa chỉ: 187 Trương Pháp, Bắc Lý, Đồng Hới, Quảng Bình"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Dịch vụ cho thuê xe máy 58 của anh Mạnh (58 Nguyễn Đức Cảnh, Đồng Mỹ, Đồng Hới; điện thoại 091 465 44 68) mở cửa từ 8h sáng đến 21h đêm; chủ yếu cung cấp xe ga đời mới nên giá thuê thường rơi vào khoảng 150.000đ/xe — mức giá rất hợp lý trong thị trường thuê xe máy Quảng Bình; xe đi kèm các loại đồ phụ kiện, phụ tùng tiện lợi.",
+      "claim_supported": "Nơi đây mở cửa từ 8h sáng đên 21h đêm ... Tại đây chủ yếu cung cấp các loại xe ga đời mới. Vì thế giá thuê thường rơi vào khoảng 150.000đ/xe. Đó là mức giá rất hợp lý trong thị trường thuê xe máy Quảng Bình. Xe có đi kèm thêm các loại đồ phụ kiện, phụ tùng tiện lợi, chất lượng ... Điện thoại: 091 465 44 68 Địa chỉ: 58 Nguyễn Đức Cảnh, Đồng Mỹ, Đồng Hới, Quảng Bình"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Công ty TNHH Đại Mộc (Đinh Công Tráng, Quang Phú, Đồng Hới; điện thoại 0911 377 268) vừa cho thuê xe máy vừa bán tour du lịch tại địa phương nên có thể xin tư vấn lịch trình; hỗ trợ giao nhận xe trong khu vực thành phố; trước khi nhận xe khách được nhận một bản hợp đồng chi tiết các điều khoản liên quan, mọi thứ rõ ràng minh bạch.",
+      "claim_supported": "Công ty Đại Mộc không chỉ cho thuê xe máy mà còn bán tour du lịch tại địa phương. Vì thế khi thuê xe máy tại đây bạn có thể xin tư vấn về lịch trình luôn nhé. Với dịch vụ chất lượng, hỗ trợ giao nhận xe trong khu vực thành phố Đồng Mới Quảng Bình ... Trước khi nhận xe bạn sẽ được nhận một bản hợp đồng chi tiết các điều khoản liên quan. Mọi thứ đều rất rõ ràng minh bạch ... Điện thoại: 091 137 72 68 Địa chỉ: Đinh Công Tráng, Quang Phú, Đồng Hới, Quảng Bình"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Chị Thu (42 Nguyễn Du, Đồng Mỹ, Đồng Hới; điện thoại 0915 960 481) là chủ cơ sở lưu trú kiêm cho thuê xe máy; sở hữu dàn xe mới đa dạng gồm cả xe số, xe ga thông thường và xe tay côn Honda XR; mức giá 130.000đ – 500.000đ; có đội giao nhận xe riêng, chính sách miễn phí đón tận nơi cho khách thuê lưu trú tại cơ sở.",
+      "claim_supported": "Chị Thu vốn là chủ homestay tại Quảng Bình nhưng cũng kinh doanh thêm dịch vụ cho thuê xe máy ... nơi này sở hữu dàn xe rất đa dạng. Không chỉ có những con xe số hay xe ga thông thường, tại đơn vị chị Thu còn có xe tay côn honda XR khá chất lượng. Mức giá phải chăng nằm trong khoảng 130 000đ – 500 000đ ... nơi này còn có đội giao nhận xe riêng ... nếu bạn gặp khó khăn trong việc book xe tại Quảng Bình hãy liên hệ để được ô tô đến đón tận nơi nhé. Chính sách này được áp dụng hoàn toàn miễn phí cho các khách thuê homestay tại đây ... Điện thoại: 0915 960 481 Địa chỉ: 42 Nguyễn Du, Đồng Mỹ, Đồng Hới, Quảng Bình"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Beach House (35 Trương Pháp, Bắc Lý, Đồng Hới; điện thoại 0911 079 136) là cơ sở lưu trú ven biển kiêm cho thuê xe máy quy mô lớn với hơn 50 xe các loại từ xe số đến xe ga; xe đều đời mới từ 2018 trở lại đây, được kiểm tra và bảo dưỡng định kỳ; giá 130.000đ cho xe số, 150.000đ cho xe ga và 480.000đ/ngày cho xe tay côn; giao xe siêu tốc trong vòng 10 phút.",
+      "claim_supported": "Beach House là homestay ven biển nổi tiếng tại Quảng Bình ... địa chỉ cho thuê xe máy có quy mô lớn được nhiều người biết đến. Với hơn 50 chiếc xe các loại, từ xe số đến xe ga ... Tất cả các xe đều là xe đời mới, đời xe từ 2018 trở lại đây ... cơ sở này còn thực hiện kiểm tra và bảo dưỡng xe định kì ... bạn cần chi 130.000đ cho xe số, 150.000đ cho xe ga và 480.000đ/ngày cho xe tay côn ... nơi này còn thực hiện giao xe siêu tốc trong vòng 10 phút ... Điện thoại: 091 107 91 36 Địa chỉ: 35 Trương Pháp, Bắc Lý, Đồng Hới, Quảng Bình"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Dong Hoi Motorbike Rental (15 Võ Thị Sáu, Nam Lý, Đồng Hới; điện thoại 0905 011 886) giao xe kèm giấy tờ chính chủ và bảo hiểm xe theo quy định; sau mỗi lần khách trả xe cơ sở đều kiểm tra lại kỹ càng và khắc phục lỗi kịp thời; thủ tục đơn giản — khách du lịch chỉ cần để lại giấy tờ tùy thân.",
+      "claim_supported": "Khi bạn nhận xe sẽ được kèm theo giấy tờ chính chủ và bảo hiểm xe đảm bảo xe có nguồn gốc rõ ràng, có đủ giấy tờ theo quy định ... Sau mỗi lần khách trả xe, cơ sở đều kiểm tra lại kỹ càng và khắc phục lỗi kịp thời ... thủ tục cho thuê xe tại đây cũng rất đơn giản. Khách du lịch đến Quảng Bình cần để lại giấy tờ tùy thân ... Điện thoại: 0905 011 886 Địa chỉ: Số 15 Võ Thị Sáu, Nam Lý, Đồng Hới, Quảng Bình"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Phong Nha Motorbike Rental & Tours (Phong Nha, thị trấn Sơn Trạch, Quảng Bình; điện thoại 0935 922 866) nổi bật với dàn xe côn XR150, cung cấp cả xe tay ga chủ yếu là Airblade còn rất mới; mức giá 130.000đ – 500.000đ/ngày tùy loại xe, giá đã bao gồm đồ dùng phụ kiện cần thiết; hỗ trợ giao nhận xe miễn phí trong thành phố; có kinh nghiệm phục vụ du khách nước ngoài nên không gặp trở ngại giao tiếp; thủ tục nhanh chóng, nhận xe trong 15 phút – 20 phút.",
+      "claim_supported": "Cơ sở này nổi bật với dàn xe cào cào XR150 cực chất. Ngoài ra tại đây còn cung cấp xe tay ga, chủ yếu là AB đều còn rất mới ... Mức giá thuê xe tại đơn vị này nằm trong mức 130 000đ – 500 000đ/ngày, tùy thuộc vào từng loại xe khác nhau. Giá thuê xe đã có bao gồm theo các đồ dùng, phụ kiện cần thiết ... còn hỗ trợ giao nhận xe miễn phí trong thành phố ... Phong Nha Motorbike Rental còn có nhiều kinh nghiệm trong phục vụ du khách nước ngoài ... thủ tục thuê xe nhanh chóng, nhận xe trong 15 phút – 20 phút ... Điện thoại: 0935 922 866 Địa chỉ: Phong Nha, thị trấn Sơn Trạch, Quảng Bình"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Cơ sở Thuê xe máy Đồng Hới Quảng Bình (159 đường Hai Bà Trưng, phường Hải Thịnh, Đồng Hới; điện thoại 090 299 68 07) có xe nhập từ các hãng uy tín Honda, Yamaha còn rất mới; giá xe số 130.000đ/ngày, xe ga và xe côn trong khoảng 180.000đ – 480.000đ.",
+      "claim_supported": "Hầu hết các xe của đơn vị này đều còn rất mới. Chúng đều được nhập từ các hãng xe máy uy tín như Honda, Yamaha,… ... Mức giá thuê xe hiện nay đơn vị này triển khai với dòng xe số là 130 000đ/ngày. Đối với xe ga và xe côn, mức giá nằm trong khoảng 180 000 đ – 480 000 đ ... Điện thoại: 090 299 68 07 Địa chỉ: 159 Đường Hai Bà Trưng, Phường Hải Thịnh, Đồng Hới, Quảng Bình"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "QB Travel (189B Trương Pháp, Bắc Lý, Đồng Hới; điện thoại 0911 079 136) mở cửa cả ngày; giá chia rõ theo loại: xe tay ga 150k/ngày, xe số 130k/ngày, xe côn tay 480k/ngày; trước khi giao xe nhân viên kiểm tra cẩn thận; đơn vị kèm cơ sở lưu trú view biển, dùng combo dịch vụ chi phí giảm đáng kể; cung cấp áo mưa miễn phí cho khách.",
+      "claim_supported": "Đơn vị QB Travel mở cửa cả ngày ... Cụ thể giá thuê xe tay ga là 150k/ngày, xe số là 130k/ngày và 480k/ngày với xe côn tay ... Trước khi giao xe cho bạn, nhân viên tại đây sẽ kiểm tra xe thật cẩn thận ... nơi này còn có homestay view biển cực xịn ... Khi sử dụng combo dịch vụ thì chi phí bạn phải trả sẽ giảm đáng kể ... Cửa hàng cung cấp áo mưa miễn phí cho khách phòng các tình huống thời tiết phát sinh ... Điện thoại: 091 107 91 36 Địa chỉ: 189B Trương Pháp, Bắc Lý, Đồng Hới, Quảng Bình"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Tung Motorbike là đơn vị cho thuê xe máy Đồng Hới Quảng Bình chất lượng, có nhiều hệ thống cửa hàng: địa chỉ 1 — 44 Hoàng Diệu, Nam Lý (sát ga tàu hỏa); địa chỉ 2 — 03 Trương Pháp, Hải Thành; địa chỉ 3 — ngõ 105 Nguyễn Thị Định, Bảo Ninh; địa chỉ 4 — 42 Nguyễn Du, Đồng Mỹ; điện thoại 0978 211 325; giá thuê từ 100.000đ/ngày — mức cạnh tranh nhất thị trường; kho xe đa dạng từ xe số, xe ga đến xe côn tay, luôn kiểm tra bảo dưỡng đầy đủ; mỗi xe kèm 2 nón bảo hiểm và áo mưa miễn phí; giao xe tận nơi nhanh chóng đúng giờ tại sân bay, ga tàu, khách sạn; có dịch vụ bảo hành và cứu hộ trong quá trình di chuyển.",
+      "claim_supported": "Tung Motorbike là đơn vị cho thuê xe máy Đồng Hới Quảng Bình chất lượng số 1 hiện nay ... dàn xe máy cực kỳ ưu việt, đa dạng mẫu mã từ xe số, xe ga và cả xe côn tay. Xe cho thuê luôn được kiểm tra và bảo dưỡng đầy đủ ... Tung Motorbike có nhiều hệ thống cửa hàng tại Đồng Hới, Quảng Bình ... nơi đây cũng cung cấp dịch vụ giao xe tận nơi nhanh chóng và đúng giờ. Bạn có thể nhận xe ở sân bay, ga tàu, khách sạn,… ... Chỉ từ 100.000đ/ngày, bạn đã có thể nhận được một chiếc xe cực tốt ... cửa hàng luôn chu đáo chuẩn bị 2 nón bảo hiểm kèm theo xe, áo mưa miễn phí. Ngoài ra còn có dịch vụ bảo hành và cứu hộ giải quyết mọi vấn đề trong quá trình di chuyển ... Địa chỉ 1 : 44 Hoàng Diệu, Nam Lý, Đồng Hới, Quảng Bình (sát ga tàu hỏa) ... Địa chỉ 2 : 03 Trương Pháp, Hải Thành, Đồng Hới ... Địa chỉ 3 : ngõ 105 Nguyễn Thị định, Bảo Ninh, Đồng Hới ... Địa chỉ 4 : 42 Nguyễn Du, Đồng Mỹ, Đồng Hới, Quảng Bình ... Điện thoại : 0978 211 325 – 0898 730 000 – 0915 960 481"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Cách tính ngày và thủ tục tại Quảng Bình: hầu hết các cửa hàng tính thời gian thuê xe 24 tiếng = 1 ngày, nên tránh cửa hàng tính đến 18h tối là hết một ngày vì cách tính này gây nhập nhằng; thủ tục khá đơn giản, hầu hết các cửa hàng chỉ yêu cầu chứng minh nhân dân; một số dòng xe yêu cầu đặt cọc khoảng 1 – 3 triệu, riêng xe phân khối lớn giá trị cao cần cọc khoản tiền khá lớn nên nên liên hệ trước.",
+      "claim_supported": "Hầu hết các cửa hàng đều tính thời gian thuê xe 24 tiếng = 1 ngày. Lời khuyên là các bạn nên tránh những cửa hàng với hình thức tính thuê xe đến 18h tối là 1 ngày; sau 18h họ sẽ làm tròn sang ngày thứ 2 ... Thủ tục thuê xe tại đây khá đơn giản. Hầu hết các cửa hàng chỉ yêu cầu chứng minh nhân dân; dù vậy thì vẫn có những dòng xe sẽ yêu cầu đặt cọc (khoảng 1 – 3 triệu). Cá biệt nếu bạn muốn thuê xe phân khối lớn có giá trị cao thì cần đặt cọc một khoản tiền khá lớn."
+    }
+  ]
+}

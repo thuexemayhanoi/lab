@@ -1,0 +1,139 @@
+{
+  "article_id": "A00154",
+  "primary_keyword": "giá thuê Air Blade Quảng Trị",
+  "secondary_keywords": [
+    "thue xe may Dong Ha",
+    "cho thue xe may Quang Tri",
+    "thue xe may Cua Tung"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Air Blade tại Quảng Trị; bảng giá niêm yết theo đời xe: Airblade 2012 120.000 vnd, 2013-2015 140.000 vnd, 2016-2018 160.000 vnd; 5 cơ sở ghi nhận tại Đông Hà, thị xã Quảng Trị và biển Cửa Tùng, trong đó Anh Quang và Phú Cường đều không yêu cầu cọc, Phú Cường cho thuê Airblade dưới 3 năm từ 80.000đ/ngày kèm giao xe toàn tỉnh",
+  "research_date": "2026-10-04",
+  "geo_entities": [
+    "Quảng Trị",
+    "Đông Hà",
+    "thị xã Quảng Trị",
+    "Cửa Tùng",
+    "Vĩnh Linh",
+    "phường 5 Đông Hà",
+    "phường 1 Đông Hà",
+    "đường Lê Văn Hưu",
+    "đường Đoàn Khuê",
+    "đường Tôn Thất Thuyết"
+  ],
+  "vehicle_entities": [
+    "xe tay ga",
+    "xe ga",
+    "xe số"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "SYM",
+    "Suzuki"
+  ],
+  "model_entities": [
+    "Air Blade",
+    "Lead",
+    "Vision",
+    "Wave",
+    "Sirius",
+    "Jupiter",
+    "Nouvo",
+    "Attila",
+    "Victoria",
+    "Elizabeth"
+  ],
+  "questions_found": [
+    "Thuê Honda Air Blade ở Quảng Trị giá bao nhiêu một ngày?",
+    "Ở Quảng Trị có nơi nào thuê xe không cần cọc không?",
+    "Thuê xe ở Đông Hà hay thị xã Quảng Trị tốt hơn?",
+    "Đi biển Cửa Tùng thuê xe ở đâu?",
+    "Thuê xe máy Quảng Trị cần giấy tờ gì?"
+  ],
+  "related_queries": [
+    "gia thue air blade quang tri",
+    "thue xe may dong ha",
+    "cho thue xe may cua tung",
+    "thue xe may quang tri khong can coc"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp MOTOGO về thuê xe máy Quảng Trị là nguồn chi tiết nhất cho tỉnh: 5 đơn vị kèm bảng giá theo ngày tại Đông Hà, thị xã Quảng Trị và biển Cửa Tùng; bảng giá niêm yết chi tiết theo từng dòng và đời xe với Honda Airblade 2012 120.000 vnd, 2013-2015 140.000 vnd, 2016-2017-2018 160.000 vnd",
+    "Quảng Trị là thị trường nhỏ: ba cơ sở trong năm đơn vị gắn với nhà nghỉ, khách sạn (Thụy Điển House, Phú Cường) hoặc kinh doanh lâu năm tại thị xã (Thu Phương); hai địa chỉ công khai không cần cọc là Anh Quang (Đông Hà) và Phú Cường (Cửa Tùng); tiền cọc phổ biến 1 đến 3 triệu"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "source_type": "aggregator — tổng hợp 5 đơn vị cho thuê xe máy Quảng Trị kèm bảng giá",
+      "reliability_note": "bảng giá theo nhóm xe số/xe ga cho từng cơ sở, kèm bảng giá niêm yết chi tiết theo từng dòng và đời xe"
+    }
+  ],
+  "unique_angle": "Quảng Trị là tỉnh thứ ba trong chuỗi có bảng giá Airblade niêm yết chi tiết theo đời xe (2012 — 120.000 vnd, 2013-2015 — 140.000 vnd, 2016-2018 — 160.000 vnd) trùng khớp Quảng Bình và Hà Tĩnh; điểm đặc biệt là tỉ lệ không cọc cao bất thường: cả Anh Quang (Đông Hà) lẫn Phú Cường (biển Cửa Tùng) đều chỉ cần chứng minh thư và giấy phép lái xe, còn Phú Cường cho thuê Honda Airblade, Yamaha Nouvo LX, Honda Lead, Wave RSX dưới 3 năm tuổi chỉ từ 80.000đ/ngày kèm giao xe toàn tỉnh",
+  "claim_evidence": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Bảng giá 1 ngày niêm yết theo dòng và đời xe tại Quảng Trị: xe tay ga Honda Airblade 2012 120.000 vnd; Honda Airblade 2013-2015 140.000 vnd; Honda Airblade 2016-2017-2018 160.000 vnd; Honda Lead 120.000 vnd; Honda Vision 120.000 vnd. Xe số: Wave S 80.000 vnd; Wave RS 80.000 vnd; Wave RSX-fi 90.000 vnd; Yamaha Sirius 2015-2018 FI 90.000 vnd; Yamaha Jupiter gravita 80.000 vnd. Xe ga khác: Yamaha Nouvo LX 100.000 vnd; Yamaha Nouvo SX fi 120.000 vnd; Attila Victoria, Elizabeth 100.000 vnd.",
+      "claim_supported": "Xe tay ga Honda Airblade 2012 120.000 vnd — Xe tay ga Honda Airblade 2013-2015 140.000 vnd — Xe tay ga Honda Airblade 2016- 2017 – 2018 160.000 vnd — Xe tay ga Honda Lead 120.000 vnd — Xe tay ga Honda Vision 120.000 vnd — Xe số Wave S 80.000 vnd — Xe số Wave RS 80.000 vnd — Xe số Wave RSX – fi 90.000 vnd — Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd — Xe số Yamaha Jupiter gravita 80.000 vnd — Xe tay ga Yamaha Nouvo LX 100.000 vnd — Xe tay ga Yamaha Nouvo SX fi 120.000 vnd — Xe tay ga attilla Victoria , Elizabeth 100.000 vnd"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Năm đơn vị ghi nhận tại Quảng Trị: Nhà nghỉ Thụy Điển (9 Lê Văn Hưu, phường 1, tp Đông Hà; 0233 3857 187) xe số 90.000đ – 120.000đ/ngày, xe ga 120.000đ/ngày; Thu Phương (thị xã Quảng Trị; 0932 562 263) xe số 90.000đ – 120.000đ/ngày, xe ga 120.000đ/ngày; Hoàn Hão (52 Đoàn Khuê, phường 5, Đông Hà; 091 715 84 44) từ 100.000đ/ngày; Anh Quang (94 Tôn Thất Thuyết, phường 5, Đông Hà; 091 818 92 31) từ 100.000đ/ngày; Phú Cường (biển Cửa Tùng, huyện Vĩnh Linh; 0233 3823 204) xe số 90.000đ – 120.000đ/ngày, xe ga 120.000đ/ngày.",
+      "claim_supported": "Nhà nghỉ Thụy Điển — Điện thoại: 0233 3857 187 — Địa chỉ: 9 Lê Văn Hưu, P1, Tp Đông Hà, Quảng Trị — Giá thuê xe số: 90.000đ – 120.000đ/ngày — Giá thuê xe ga: 120.000đ/ngày ... Thu Phương — Điện thoại: 0932 562 263 — Địa chỉ: Thị xã Quảng Trị, Quảng Trị — Giá thuê xe số: 90.000đ – 120.000đ/ngày — Giá thuê xe ga: 120.000đ/ngày ... Hoàn Hão — Điện thoại: 091 715 84 44 — Địa chỉ: 52 Đoàn Khuê, Phường 5, Đông Hà, Quảng Trị — Giá thuê xe: từ 100.000đ/ngày ... Anh Quang — Điện thoại: 091 818 92 31 — Địa chỉ: 94 Tôn Thất Thuyết, Phường 5, Đông Hà, Quảng Trị — Giá thuê xe: từ 100.000đ/ngày ... Phú Cường — Điện thoại: 0233 3823 204 — Địa chỉ: Biển Cửa Tùng, Huyện Vĩnh Linh — Giá thuê xe số: 90.000đ – 120.000đ/ngày — Giá thuê xe ga: 120.000đ/ngày"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Nhà nghỉ Thụy Điển (9 Lê Văn Hưu, phường 1, tp Đông Hà; điện thoại 0233 3857 187) là nhà nghỉ được nhiều khách du lịch Quảng Trị lựa chọn, mở thêm dịch vụ cho thuê xe máy hỗ trợ khách đi lại và khách công tác dài ngày; giá thuê khi ở đây so với xe ôm hay taxi thì rẻ hơn nhiều; kho xe được duy trì tình trạng tốt, chăm bảo dưỡng nên nhìn mới và động cơ bền bỉ; khách nghỉ lại tại Thụy Điển nhận mức giá ưu đãi hơn.",
+      "claim_supported": "Thụy Điểm vốn là nhà nghỉ được nhiều khách du lịch Quảng Trị lựa chọn. Nơi đây đã mở thêm dịch vụ cho thuê xe máy nhằm hỗ trợ khách hàng di chuyển tốt hơn. Dịch vụ này rất thuận tiện cho khách du lịch và những người đến công tác dài ngày. Giá cả khi thuê xe tại đây so với xe ôm hay taxi thì rẻ hơn nhiều ... Nơi đây có kho xe rất chất lượng ... Thụy Điển còn rất chăm thực hiện các công tác bảo dưỡng xe. Nhờ vậy mà vẻ ngoài của chúng trông luôn mới và động cơ rất bền bỉ ... nếu bạn lựa chọn nghỉ lại tại Thụy Điển thì sẽ nhận được mức giá ưu đã hơn"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Thu Phương (thị xã Quảng Trị; điện thoại 0932 562 263) là cửa hàng cho thuê xe máy lâu năm tại thị xã Quảng Trị; xe được chăm chút nên trông còn rất mới; hotline luôn thường trực 24/24 sẵn sàng phục vụ bất cứ lúc nào; khách băn khoăn chọn xe có thể xin tư vấn từ nhân viên.",
+      "claim_supported": "Thu Phương là cửa hàng cho thuê xe máy lâu năm tại thị xã Quảng Trị ... Dù hoạt động lâu năm nhưng cửa hàng rất chịu khó chăm chút cho xe. Vì thế trông chúng còn rất mới và chất lượng thì tuyệt vời. Nếu bạn băn khoăn không biết chọn xe nào giữa nhiều loại xe tại đây thì có thể xin tư vấn ... bạn còn có thể đặt thuê xe máy tại Thu Phương bất cứ lúc nào. Hotline cửa hàng luôn thường trực 24/24 sẵn sàng phục vụ bạn"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Hoàn Hão (52 Đoàn Khuê, phường 5, Đông Hà; điện thoại 091 715 84 44) cho thuê từ 100.000đ/ngày với giá cả hợp lý; xe không còn quá mới nhưng được giữ gìn cẩn thận, thường xuyên bảo dưỡng nên động cơ êm ái không gầm rú; anh chủ nhiệt tình chỉ dẫn các lưu ý khi đi xe tại Quảng Trị và mách cho khách những địa chỉ du lịch ít người biết.",
+      "claim_supported": "Hoàn Hão là địa chỉ cho thuê xe máy Quảng Trị uy tín. Nơi đây cung cấp cho khách thuê xe những dịch vụ tuyệt vời với giá cả vô cùng hợp lý ... Những chiếc xe cho thuê không còn quá mới nhưng được giữ gìn rất cẩn thận. Khi kiểm tra xe bạn sẽ cảm nhận được tiếng động cô vô cùng êm ái, không gầm rú. Điều này đạt được nhờ sự chăm sóc xe tỉ mỉ của cửa hàng, thường xuyên thực hiện bảo dưỡng xe ... anh chủ nơi này còn rất nhiệt tình. Với nụ cười trên môi, anh sẽ chỉ dẫn những lưu ý cần thiết khi đi xe tại Quảng Trị. Ngoài ra anh còn thường mách cho khách những địa chỉ du lịch ít người biết nữa"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Anh Quang (94 Tôn Thất Thuyết, phường 5, Đông Hà; điện thoại 091 818 92 31) là cửa hàng cho thuê xe máy Đông Hà nổi tiếng, quy mô khá lớn với nhiều loại xe: các loại xe số, xe tay ga phổ biến như Wave, Sirius, Jupiter, Vision, Lead đều có; các bộ phận quan trọng như động cơ, phanh, lốp được kiểm tra thường xuyên, hỏng hóc được thay thế nhanh bằng linh kiện chính hãng; thủ tục dễ dàng — chỉ cần CMT và GPLX là thuê được xe, hoàn toàn không cần cọc.",
+      "claim_supported": "Anh Quang là chủ cửa hàng thuê xe máy Đông Hà Quảng Trị nổi tiếng. Nơi này cung cấp rất nhiều loại xe cho khách thuê lựa chọn. Các loại xe số, xe tay ga phổ biến như Wave, Sirius, Jupiter, Vision, Lead,…đều có tại đây ... Từng bộ phận quan trọng như động cơ, phanh, lốp,.. đều được kiểm tra thường xuyên. Nếu phát hiện có hỏng hóc sẽ được thay thế nhanh chóng bằng linh kiện chính hãng ... thủ tục thuê xe tại đây còn vô cùng dễ dàng. Bạn chỉ cần CMT và GPLX đã có thể thuê được xe rồi. Hoàn toàn không cần cọc"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Phú Cường (biển Cửa Tùng, huyện Vĩnh Linh; điện thoại 0233 3823 204) là khách sạn có tiếng tại khu vực biển Cửa Tùng kiêm cho thuê xe máy, hiện là cơ sở cho thuê xe đông khách nhất khu vực; chi phí chỉ từ 80.000đ/ngày đã chọn được xe phù hợp với các dòng Honda Airblade, Yamaha Nouvo LX, Honda Lead, Wave RSX — tất cả đều có tuổi đời dưới 3 năm; có dịch vụ giao nhận xe toàn tỉnh Quảng Trị, giao cả tại sân bay, ga tàu hay các địa điểm du lịch; thủ tục cực đơn giản chỉ cần CMT và BLX, không yêu cầu cọc.",
+      "claim_supported": "Phú Cường là một khách sạn có tiếng tại khu vực biển Cửa Tùng, Quảng Trị ... Hiện tại đây là cơ sở cho thuê xe máy đông khách nhất tại khu vực này ... Chỉ cần bỏ ra chi phí từ 80.000đ/ngày, bạn đã có thể lựa chọn chiếc xe phù hợp với mình. Các dòng xe bạn có thể lựa chọn như: Honda Airblade, Yamaha Nouvo LX, Honda Lead, Wave RSX… Tất cả chúng đều có tuổi đưới dưới 3 năm ... địa chỉ này còn có dịch vụ giao nhận xe toàn tỉnh Quảng Trị nữa. Chỉ cần bạn có nhu cầu thì dù là sân bay, ga tàu hay địa điểm du lịch khác chúng tôi cũng sẵn sàng giao xe. Thủ tục thuê xe cũng cực đơn giản, chỉ cần CMT và BLX, không yêu cầu cọc"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Thủ tục thuê xe máy Quảng Trị: các cửa hàng có chính sách khá giống nhau, thường yêu cầu giấy tờ và tiền đặt cọc để làm tin; giấy tờ thường dùng là căn cước, CMND, hộ chiếu và bằng lái xe — nên mang nhiều loại giấy tờ đề phòng kiểm tra nhân thân khi đi du lịch; tiền cọc dao động phổ biến trong khoảng 1 đến 3 triệu, cần chú ý biên lai thu nhận tiền của cửa hàng để tránh bị quỵt.",
+      "claim_supported": "Nhìn chung các cửa hàng cho thuê xe máy tại Quảng Trị có chính sách khá giống nhau. Họ thường yêu cầu giấy tờ và tiền đặt cọc để làm tin ... Các loại giấy tờ thường được dùng là căn cước, CMND, hộ chiếu và bằng lái xe. Bạn nên mang nhiều loại giấy tờ đề phòng các trường hợp kiểm tra nhân thân khi đi du lịch nhé. Về tiền đặt cọc thì bạn nên chú ý đến biên lai thu nhận tiền của cửa hàng. Số tiền cọc dao động phổ biên strong khảng 1 đến 3 triệu. Tuy không quá lớn nhưng bạn vẫn cần cẩn thận để tránh bị quỵt tiền nhé"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-quang-tri/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Kinh nghiệm thuê xe tại Quảng Trị: chất lượng xe là yêu cầu quan trọng nhất, ưu tiên chọn xe mới với đầy đủ chức năng, kiểm tra các bộ phận quan trọng như phanh, lốp trước khi di chuyển; ưu tiên cửa hàng cung cấp hợp đồng rõ ràng để đảm bảo quyền lợi — các giao kèo bằng miệng có rủi ro rất lớn, không nên đặt niềm tin.",
+      "claim_supported": "Chất lượng xe là yêu cầu quan trọng nhất khi thuê xe máy ở Quảng Trị ... Bạn nên ưu tiên chọn thuê các loại xe mới với đầy đủ chức năng. Hãy nhớ kiểm tra các bộ phận quan trọng như phanh, lốp,… trước khi di chuyển ... Tốt nhất hãy thuê xe tại các cửa hàng cung cấp hợp đồng rõ ràng. Nó sẽ đảm bảo quyền lợi của bạn không bị vi phạm. Các giao kèo bằng miệng có rủi ro rất lớn. Do đó bạn không nên đặt niềm tin vào các địa chỉ như vậy"
+    }
+  ]
+}
