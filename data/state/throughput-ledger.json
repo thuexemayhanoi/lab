@@ -2369,6 +2369,40 @@
       ],
       "published": 2,
       "phase": "PRODUCTION"
+    },
+    {
+      "op": "research",
+      "started_at": "2026-10-04T06:45:24.713Z",
+      "finished_at": "2026-10-04T06:45:25.092Z",
+      "elapsed_ms": 379,
+      "ids": [
+        "A00143",
+        "A00144"
+      ],
+      "count": 2
+    },
+    {
+      "op": "qa",
+      "started_at": "2026-10-04T06:45:25.850Z",
+      "finished_at": "2026-10-04T06:45:26.220Z",
+      "elapsed_ms": 370,
+      "ids": [
+        "A00143",
+        "A00144"
+      ],
+      "count": 2
+    },
+    {
+      "op": "publish",
+      "started_at": "2026-10-04T06:45:27.006Z",
+      "finished_at": "2026-10-04T06:45:28.514Z",
+      "elapsed_ms": 1508,
+      "ids": [
+        "A00143",
+        "A00144"
+      ],
+      "published": 2,
+      "phase": "PRODUCTION"
     }
   ]
 }
