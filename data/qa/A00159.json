@@ -1,0 +1,11 @@
+{
+  "article_id": "A00159",
+  "scored_at": "2026-10-04T09:44:16.021Z",
+  "scorer": "factory-qa-deterministic-v1",
+  "score": 100,
+  "words": 2715,
+  "result": "PASS",
+  "fails": [],
+  "draft_sha256": "e7bfdd876931708f4dfef15a8761207267fc765c1b01db5ead0c56205a2a2ff9",
+  "matrix_status_after": "PASS"
+}
