@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-04T08:42:36.582Z",
+  "generated_at": "2026-10-04T09:01:29.894Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 159,
-    "PLANNED": 9841
+    "PUBLISHED": 161,
+    "PLANNED": 9839
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 153,
-      "PLANNED": 4847
+      "PUBLISHED": 155,
+      "PLANNED": 4845
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00152",
-  "next_claimable_id": "A00153",
+  "last_completed_id": "A00154",
+  "next_claimable_id": "A00155",
   "blocked": [],
   "published": [
     {
@@ -952,6 +952,18 @@
       "pk": "giá thuê Air Blade Hà Tĩnh",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-air-blade-ha-tinh/"
+    },
+    {
+      "id": "A00153",
+      "pk": "giá thuê Air Blade Quảng Bình",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-air-blade-quang-binh/"
+    },
+    {
+      "id": "A00154",
+      "pk": "giá thuê Air Blade Quảng Trị",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-air-blade-quang-tri/"
     },
     {
       "id": "A00465",
