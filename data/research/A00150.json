@@ -1,0 +1,135 @@
+{
+  "article_id": "A00150",
+  "primary_keyword": "giá thuê Air Blade Thanh Hóa",
+  "secondary_keywords": [
+    "thue xe may Thanh Hoa",
+    "cho thue xe may Sam Son",
+    "thue xe may ga Thanh Hoa"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Air Blade tại Thanh Hóa; bảng giá tham khảo ghi dòng xe tay ga Honda Lead, Vision, Ab (Air Blade) chung 300.000đ/1ngày và xe số Honda Wave Fi, Sirius fi 200.000đ/1ngày — mặt bằng cao hơn hẳn Ninh Bình kề bên; 5 cơ sở ghi nhận tại thành phố Thanh Hóa và Sầm Sơn, trong đó Long Hà cho thuê không cần cọc tiền chỉ giữ giấy tờ, Mường Thanh miễn giấy tờ cho khách lưu trú",
+  "research_date": "2026-10-04",
+  "geo_entities": [
+    "Thanh Hóa",
+    "thành phố Thanh Hóa",
+    "Sầm Sơn",
+    "phường Đông Hương",
+    "phường Đông Vệ",
+    "phường Điện Biên",
+    "Đông Sơn",
+    "đường Lê Lợi",
+    "đường Nguyễn Trái",
+    "Hà Nội",
+    "Ninh Bình"
+  ],
+  "vehicle_entities": [
+    "xe tay ga",
+    "xe ga",
+    "xe số",
+    "xe tay côn",
+    "xe đạp điện",
+    "xe 50cc"
+  ],
+  "brand_entities": [
+    "Honda"
+  ],
+  "model_entities": [
+    "Air Blade",
+    "Lead",
+    "Vision",
+    "Wave",
+    "Sirius"
+  ],
+  "questions_found": [
+    "Thuê Honda Air Blade ở Thanh Hóa giá bao nhiêu một ngày?",
+    "Ở Thanh Hóa có nơi nào cho thuê xe không cần đặt cọc không?",
+    "Thuê xe máy ở Sầm Sơn có thuận tiện không?",
+    "Tiền đặt cọc thuê xe máy ở Thanh Hóa là bao nhiêu?",
+    "Đi Sầm Sơn nên thuê Air Blade hay xe số?"
+  ],
+  "related_queries": [
+    "gia thue air blade thanh hoa",
+    "thue xe may thanh hoa",
+    "cho thue xe may sam son",
+    "thue xe may ga thanh hoa"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp MOTOGO về thuê xe máy Thanh Hóa là nguồn chi tiết nhất cho tỉnh: 5 địa điểm kèm bảng giá theo ngày, tập trung ở thành phố Thanh Hóa và bãi biển Sầm Sơn; bảng giá ghi dòng xe tay ga Honda Lead Vision Ab 300.000đ/1ngày và xe tay số Honda Wave Fi, Sirius fi 200.000đ/1ngày",
+    "Mặt bằng giá cao bất thường so với chuỗi tỉnh du lịch phía Bắc: ghi nhận trực tiếp 'khá cao so với các địa chỉ thuê xe máy Ninh Bình ngay lân cận' nhưng là 'mức giá chung tại Thanh Hóa' nên chênh lệch giữa các cửa hàng không đáng kể; lối thoát chi phí là Long Hà — cho thuê không cần cọc tiền, chỉ giữ giấy tờ"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "source_type": "aggregator — tổng hợp địa điểm cho thuê xe máy Thanh Hóa kèm bảng giá",
+      "date_accessed": "2026-10-04",
+      "reliability_note": "bảng giá theo nhóm xe số/xe ga, có trích dẫn nguyên văn mức niêm yết của từng cơ sở"
+    }
+  ],
+  "unique_angle": "Thanh Hóa là mặt bằng xe ga cao nhất trong chuỗi tỉnh đã khảo sát: 300.000đ/ngày cho nhóm Honda Lead, Vision, Air Blade — cao hơn hẳn Ninh Bình kề bên; hai đường tiết kiệm đáng chú ý là Long Hà (không cần cọc tiền, chỉ giữ giấy tờ CMT/CCCD/hộ chiếu) và Mường Thanh (khách lưu trú không cần giấy tờ, chỉ điền mẫu đăng ký)",
+  "claim_evidence": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Bảng giá tham khảo niêm yết tại Thanh Hóa: xe tay ga Honda Lead, Vision, Ab (viết tắt của Air Blade) 300.000đ/1ngày; xe tay số Honda Wave Fi, Sirius fi 200.000đ/1ngày.",
+      "claim_supported": "Xe tay ga Honda Lead Vision Ab : 300. 000đ/ 1ngày — Xe tay số Honda Wave Fi ,Sirius fi : 200. 000đ/ 1ngày"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Mức giá xe ga 300.000đ/ngày và xe số 200.000đ/ngày khá cao so với các địa chỉ thuê xe máy Ninh Bình ngay lân cận, nhưng đây là mức giá chung tại Thanh Hóa nên chênh lệch giữa các cửa hàng không đáng kể; nhìn chung giá cho thuê xe máy Thanh Hóa khá cao so với các địa phương khác.",
+      "claim_supported": "Mức giá này khá cao so với các địa chỉ thuê xe máy Ninh Bình ngay lân cận. Tuy nhiên vì đây là mức giá chung tại Thanh Hóa nên không có gì đáng phàn nàn về địa chỉ này cả. ... Nhìn chung giá cho thuê xe máy Thanh Hóa khá cao so với các địa phương khác. Tại các cửa hàng khác nhau sẽ có giá chênh lệch nhưng không đáng kể."
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Cửa hàng cho thuê xe máy ở Sầm Sơn (Võ Thị Sáu, cạnh đường Bà Triệu, bãi tắm C – Sầm Sơn; điện thoại 0947 099 858) là địa chỉ cho thuê xe máy duy nhất ở Sầm Sơn; giá xe số 200.000đ/ngày, xe ga 300.000đ/ngày; xe tuy không quá mới nhưng còn rất khỏe; cửa hàng rất đông khách vào mùa cao điểm du lịch; đường giao thông quanh Sầm Sơn tốt.",
+      "claim_supported": "Giá thuê xe số: 200.000đ/ngày — Giá thuê xe ga: 300.000đ/ngày ... tại đây chỉ cho duy nhất địa chỉ này là cửa hàng cho thuê xe máy Sầm Sơm Thanh Hóa chất lượng. Vậy nên cửa hàng luôn rất đông khách vào mùa cao điểm du lịch ... Những chiếc xe ở đây tuy không quá mới nhưng đều còn rất khỏe. Cộng thêm tình trạng đường giao thông quanh Sầm Sơn tốt"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Khách sạn Mường Thanh (Ngã Ba Voi, phường Đông Vệ, thành phố Thanh Hóa; điện thoại 028 719 9998) cho thuê xe số 200.000đ/ngày, xe ga 300.000đ/ngày; khách đang lưu trú tại khách sạn được thuê xe không cần giấy tờ, chỉ cần điền mẫu thông tin đăng ký xe của khách sạn; khách từ bên ngoài chỉ cần thêm giấy tờ có ảnh; giá thuê và mọi điều khoản được ghi rõ trong hợp đồng; xe mới, khỏe, kèm mũ và áo mưa.",
+      "claim_supported": "Giá thuê xe số: 200.000đ/ngày — Giá thuê xe ga: 300.000đ/ngày ... Đối với các vị khách đang lưu trú tại Mường Thanh thì sẽ thuê xe mà không cần giấy tờ. Lúc này bạn chỉ cần điền vào mẫu thông tin đăng kĩ xe của khách sạn là xong. Nếu là khách từ bên ngoài thì cần thêm giấy tờ có ảnh là được. Giá thuê xe và mọi điều khoản khác đều được ghi rõ trong hợp đồng ... các phụ kiện như mũ hay áo mưa được chuẩn bị kèm theo xe"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Cửa hàng 416 Lê Lai, Đông Sơn, thành phố Thanh Hóa (điện thoại 098 295 92 12) là cửa hàng cho thuê xe máy có quy mô lớn nhất tại Thanh Hóa, nhiều năm kinh nghiệm; xe đa dạng từ xe 50cc đến xe tay côn, kèm cho thuê xe đạp điện; giá khoảng 200.000đ/ngày cho xe số và 300.000đ cho xe tay ga; chú chủ làm nghề lâu năm, nhắc kỹ các điểm cần lưu ý trên lộ trình của khách.",
+      "claim_supported": "Nơi đây là cửa hàng cho thuê xe máy tại Thanh Hóa có quy mô lớn nhất. Tại đây có khá nhiều loại xe đa dạng. Từ xe 50cc đến xe tay côn đều có cả ... nơi đây còn cho thuê xe đạp điện nữa ... Giá thuê xe máy tại đây khoảng 200.000đ/ngày cho xe số và 300.000đ cho xe tay ga ... Nếu trên lộ trình của bạn có điểm nào cần lưu ý thì chú sẽ nhắc kỹ càng."
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Long Hà (256 Nguyễn Trái, phường Điện Biên, thành phố Thanh Hóa; điện thoại 0247 375 887) cho thuê xe từ 150.000đ/ngày với ưu điểm không cần đặt cọc tiền: khách chỉ cần để lại giấy tờ cá nhân như CMT/CCCD/hộ chiếu, được hoàn trả sau khi trả xe; thủ tục đơn giản, nhanh gọn, phù hợp khách muốn chuyến đi tiết kiệm.",
+      "claim_supported": "Giá thuê xe: từ 150.000đ/ngày ... Ưu điểm lớn nhất của cửa hàng là việc đặt xe không cần cọc tiền. Bạn chỉ cần để lại giấy tờ cá nhân có nhân như CMT/CCCD/Hộ chiếu là được. Tất nhiên chúng sẽ được hoàn trả cho bạn sau khi trả xe."
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Khách sạn Hoàng Gia (Lô A1 khu 4, bắc ĐL. Lê Lợi, phường Đông Hương, TP. Thanh Hóa; điện thoại 0247 109 9999) kiêm dịch vụ cho thuê xe với giá từ 150.000đ/ngày; vì chất lượng xe ảnh hưởng đến danh tiếng khách sạn nên sau mỗi lần nhận lại xe từ khách, nơi đây kiểm tra và sửa chữa ngay lập tức; nhân viên tư vấn điểm du lịch và ẩm thực cho khách.",
+      "claim_supported": "Giá thuê xe: từ 150.000đ/ngày ... Vì chất lượng xe máy có ảnh hưởng đến danh tiếng khách sạn nên chúng luôn được đầu tư tốt. Sau mỗi lần nhận lại xe từ khách, Hoàng Gia sẽ kiểm tra và sửa chữa ngay lập tức."
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Tại Thanh Hóa, tiền đặt cọc phổ biến từ 1.000.000đ - 5.000.000đ tùy loại xe và chất lượng xe; các cửa hàng đều yêu cầu giấy tờ tùy thân bản gốc có ảnh chân dung và thông tin rõ ràng (CMND/CCCD/hộ chiếu); nên chuẩn bị sẵn bản photo công chứng để ứng phó các tình huống bất ngờ; khi giao tiền đặt cọc cần yêu cầu biên lai thu tiền để tránh bị ăn chặn tiền sau khi trả xe.",
+      "claim_supported": "Tại Thanh Hóa thì mức đặt cọc phổ biến từ 1.000.000đ - 5.000.000đ ... Tất cả các cửa hàng cho thuê xe máy đều yêu cầu khách đặt lại giấy tờ tùy thân bản gốc. Những loại giấy tờ này cần có ảnh chân dung và thông tin rõ ràng. Theo đó bạn có thể đặt lại CMND/CCCD/Hộ chiếu ... bạn nên chuẩn bị trước các bản photo công chứng để ứng phó. Khi giao tiền đặt cọc nhớ yêu cầu biên lai thu tiền từ cửa hàng."
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-04",
+      "claim": "Nếu không muốn ngồi xe khách đến Thanh Hóa, du khách có thể thử dịch vụ cho thuê xe máy Hà Nội; quãng đường Hà Nội – Thanh Hóa khoảng 300km, trên đường có nhiều điều thú vị để khám phá; từ thành phố Thanh Hóa đến các điểm du lịch nổi tiếng như Sầm Sơn rất thuận tiện.",
+      "claim_supported": "Nếu bạn không muốn ngồi xe khách đến Thanh Hóa thì có thể thử các dịch vụ cho thuê xe máy Hà Nội. Trên quãng đường khoảng 300km bạn sẽ khám phá ra được nhiều điều thú vị nữa đó. ... Dù vậy nhưng từ Tp. Thanh Hóa đến các điểm du lịch nổi tiếng như Sầm Sơn cũng rất thuận tiện."
+    }
+  ]
+}
