@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-04T08:13:04.155Z",
+  "generated_at": "2026-10-04T08:42:36.582Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 157,
-    "PLANNED": 9843
+    "PUBLISHED": 159,
+    "PLANNED": 9841
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 151,
-      "PLANNED": 4849
+      "PUBLISHED": 153,
+      "PLANNED": 4847
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00150",
-  "next_claimable_id": "A00151",
+  "last_completed_id": "A00152",
+  "next_claimable_id": "A00153",
   "blocked": [],
   "published": [
     {
@@ -940,6 +940,18 @@
       "pk": "giá thuê Air Blade Thanh Hóa",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-air-blade-thanh-hoa/"
+    },
+    {
+      "id": "A00151",
+      "pk": "giá thuê Air Blade Nghệ An",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-air-blade-nghe-an/"
+    },
+    {
+      "id": "A00152",
+      "pk": "giá thuê Air Blade Hà Tĩnh",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-air-blade-ha-tinh/"
     },
     {
       "id": "A00465",
