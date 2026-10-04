@@ -1,0 +1,82 @@
+{
+ "article_id": "A00135",
+ "primary_keyword": "giá thuê Air Blade TP.HCM",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mặt bằng giá thuê Honda Air Blade tại TP.HCM theo nguồn công khai (ngày thường 80.000đ – 180.000đ, xe ga phổ thông 100.000đ – 150.000đ/ngày, phí giao nhận 20.000đ – 50.000đ/lượt), chênh giá theo khu vực Quận 1, Gò Vấp, Phú Nhuận và lưu ý thuê gần sân bay Tân Sơn Nhất",
+ "research_date": "2026-10-04",
+ "geo_entities": ["TP.HCM","Sài Gòn","Quận 1","Gò Vấp","Phú Nhuận","Tân Bình","sân bay quốc tế Tân Sơn Nhất","Ga Sài Gòn","Bến xe Miền Đông","Bến xe Miền Tây"],
+ "vehicle_entities": ["xe tay ga","xe ga","xe số","xe máy điện"],
+ "brand_entities": ["Honda","Yamaha"],
+ "model_entities": ["Air Blade","Vision","Lead","Janus","Grande","Freego","Wave Alpha","RSX","Sirius","SH"],
+ "questions_found": [
+  "Thuê Honda Air Blade ở TP.HCM giá bao nhiêu một ngày?",
+  "Giá thuê xe ga ở Quận 1 có đắt hơn các khu khác không?",
+  "Phí giao xe tận nơi ở Sài Gòn bao nhiêu?",
+  "Thuê xe gần sân bay Tân Sơn Nhất có Air Blade không?",
+  "Ngày thuê xe ở Sài Gòn được tính như thế nào?"
+ ],
+ "related_queries": [
+  "gia thue air blade sai gon",
+  "cho thue xe may quan 1",
+  "thue xe may go vap",
+  "thue xe may tan son nhat"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp Vexere xếp cao với bài giá thuê xe máy Sài Gòn: ngày thường dao động từ 80.000 đến 180.000 tùy loại xe; xe ga phổ thông 100.000đ đến 150.000đ/ngày gồm cả Air Blade; phí giao nhận tận nơi 20.000đ – 50.000đ/lượt nếu giao ở xa trung tâm; ngày thuê tính bằng 24 tiếng",
+  "Các bài theo khu vực (Quận 1, Gò Vấp, Phú Nhuận, gần Tân Sơn Nhất) cho thấy chênh giá theo khu vực: Quận 1 nhỉnh hơn đổi lại xe mới; Gò Vấp ghi giá rất đa dạng 80.000 – 200.000 đ/ngày; Phú Nhuận trung bình 100.000 – 180.000đ/ngày"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "note": "Bài giá thuê xe máy Sài Gòn của Vexere: ngày thường 80.000 đến 180.000 tùy loại xe; xe ga phổ thông 100.000đ – 150.000đ/ngày gồm Vision, Air Blade, Lead; phí giao nhận 20.000đ – 50.000đ/lượt nếu xa trung tâm; ngày thuê tính 24 tiếng; phân tích giá theo khu vực Quận 1, Gò Vấp (cửa hàng Dì Thanh, Thạnh Phát, Bike Saigon có Honda Air Blade, giá 80.000 – 200.000 đ/ngày), Phú Nhuận (100.000 – 180.000đ/ngày)."
+  }
+ ],
+ "unique_angle": "Bài tập trung riêng Honda Air Blade tại TP.HCM — dòng xe ga cà vo phổ biến nhất nhì trong các cửa hàng Sài Gòn, hợp cả đi phố lẫn chạy ngoại tỉnh — nhưng góc nhìn khác các bài khác: ở Sài Gòn giá niêm yết không phải biến số quan trọng nhất; điều quyết định chi phí thực là khu vực thuê (Quận 1 đắt hơn đổi lại xe mới, Gò Vấp – Phú Nhuận rẻ hơn khá nhiều) và phí giao nhận 20.000đ – 50.000đ/lượt khi giao xa trung tâm; nhấn mạnh mô hình 24 tiếng và lợi ích đặt trước để nhận xe ngay tại Tân Sơn Nhất.",
+ "claim_evidence": [
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Mức giá thuê xe máy ngày thường ở Sài Gòn dao động từ 80.000đ – 180.000đ tùy loại xe và thời điểm thuê.",
+   "claim_supported": "Giá thuê xe máy theo ngày ở Sài Gòn tương đối đa dạng tùy theo loại xe cũng như thời điểm thuê xe. Mức giá thuê ngày thường dao động từ 80.000 đến 180.000."
+  },
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Giá thuê xe tay ga phổ thông ở Sài Gòn dao động từ 100.000đ – 150.000đ/ngày tùy dòng xe và thời gian thuê, gồm cả Vision, Air Blade, Lead, Janus, Grande, Freego; mức giá này chưa bao gồm phí giao nhận xe tận nơi thường từ 20.000đ – 50.000đ/lượt nếu giao ở xa trung tâm.",
+   "claim_supported": "Giá thuê xe tay ga phổ thông ở Sài Gòn dao động từ 100.000đ đến 150.000đ/ngày, tùy vào dòng xe và thời gian thuê. Mức giá này chưa bao gồm phí giao nhận xe tận nơi, thường từ 20.000đ – 50.000đ/lượt nếu giao ở xa trung tâm. So với điểm du lịch như Đà Lạt, giá thuê ở Sài Gòn tương đương nhưng dòng xe đa dạng hơn, gồm cả Vision, Air Blade, Lead, Janus, Grande hay Freego…"
+  },
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Một ngày thuê xe ở Sài Gòn thường được tính bằng 24 tiếng.",
+   "claim_supported": "Một ngày thuê xe ở Sài Gòn thường được tính bằng 24 tiếng. Cách tính này tạo ra sự thuận lợi cho khách hàng trong việc lên kế hoạch thuê xe."
+  },
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Ở khu vực Gò Vấp, các cửa hàng như Dì Thanh, Thạnh Phát, Bike Saigon cho thuê từ xe số phổ thông đến xe tay ga đời mới như Honda Vision, Honda Air Blade và cả Honda SH; giá thuê đa dạng từ 80.000đ – 200.000đ/ngày tùy loại xe và thời gian thuê.",
+   "claim_supported": "Các cửa hàng như “Dì Thanh”, “Thạnh Phát” và “Bike Saigon” mang đến nhiều lựa chọn từ xe số phổ thông như Honda Wave, Yamaha Sirius đến xe tay ga đời mới như Honda Vision, Honda Air Blade, thậm chí là dòng Honda SH cao cấp. Giá thuê rất đa dạng từ 80.000 – 200.000 đ/ngày, tùy loại xe và thời gian thuê, nhiều nơi hỗ trợ giao xe tận nơi miễn phí quanh Gò Vấp."
+  },
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Giá thuê xe khu vực Phú Nhuận dao động trung bình từ 100.000đ – 180.000đ/ngày và thường có ưu đãi nếu thuê từ 3 ngày trở lên.",
+   "claim_supported": "Giá thuê xe khu vực này dao động trung bình từ 100.000 – 180.000đ/ngày, và thường có ưu đãi nếu thuê từ 3 ngày trở lên."
+  },
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ho-chi-minh.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Giá thuê ở Quận 1 thường nhỉnh hơn một chút so với các khu vực khác của Sài Gòn, đổi lại chất lượng xe thường mới hơn và thời gian giao xe nhanh chóng.",
+   "claim_supported": "Giá thuê ở Quận 1 thường nhỉnh hơn một chút so với các quận khác, nhưng đổi lại chất lượng xe thường mới hơn cùng thời gian giao xe nhanh chóng."
+  }
+ ]
+}

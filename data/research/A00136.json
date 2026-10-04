@@ -1,0 +1,81 @@
+{
+ "article_id": "A00136",
+ "primary_keyword": "giá thuê Air Blade Cần Thơ",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mặt bằng giá thuê Honda Air Blade tại Cần Thơ theo nguồn công khai (xe ga 150.000đ – 170.000đ/ngày, bảng niêm yết 150.000đ – 200.000đ, AirBlade tại các cửa hàng 150.000đ/ngày), các địa điểm quanh Bến Ninh Kiều, Vincom Hùng Vương và lưu ý cách tính ngày thuê 24 tiếng/24 giờ",
+ "research_date": "2026-10-04",
+ "geo_entities": ["Cần Thơ","Bến Ninh Kiều","chợ đêm Ninh Kiều","Vincom Plaza","Vincom Hùng Vương","khu Cái Khế","quận Ninh Kiều"],
+ "vehicle_entities": ["xe tay ga","xe ga","xe số","xe côn tay"],
+ "brand_entities": ["Honda","Yamaha","SYM","Vespa"],
+ "model_entities": ["Air Blade","Vision","Lead","Nouvo","Elizabeth","Wave Alpha","Sirius","Wave RSX","Exciter"],
+ "questions_found": [
+  "Thuê Honda Air Blade ở Cần Thơ giá bao nhiêu một ngày?",
+  "Ở Cần Thơ có cửa hàng nào cho thuê AirBlade gần Bến Ninh Kiều không?",
+  "Giá thuê xe ga Cần Thơ chênh xe số bao nhiêu?",
+  "Ngày thuê xe ở Cần Thơ được tính như thế nào?",
+  "Thuê xe ở Cần Thơ có cần đặt cọc hay đặt trước không?"
+ ],
+ "related_queries": [
+  "gia thue air blade can tho",
+  "cho thue xe may can tho",
+  "thue xe tay ga ninh kieu",
+  "thue xe may ben ninh kieu"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp Vexere xếp cao với bài giá thuê xe máy Cần Thơ: một ngày chi phí thuê xe ga rơi vào khoảng 150.000 đến 170.000 đồng/xe; bảng giá giao tận nơi 2025 ghi xe tay ga phổ thông (Airblade, Lead, Vision) 150.000 – 200.000; giới thiệu cửa hàng Siêu Tốc (AirBlade, Vision 150.000đ/ngày, giao 2km quanh Bến Ninh Kiều) và Anh Phong (Vespa, Airblade 150.000 – 200.000đ/ngày, đối diện Vincom Hùng Vương)",
+  "Trang tổng hợp MOTOGO có bảng giá Cần Thơ ghi riêng Honda Airblade 150.000VNĐ – 200.000VNĐ/ngày, Honda Vision 130.000VNĐ/ngày, và lưu ý không phải nơi nào cũng quy đổi ngày thuê theo 24 tiếng"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-can-tho.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "note": "Bài giá thuê xe máy Cần Thơ của Vexere: xe ga khoảng 150.000 đến 170.000 đồng/xe một ngày; bảng giá giao tận nơi ghi xe tay ga phổ thông (Honda Airblade, Lead, Vision) 150.000 – 200.000; cửa hàng Siêu Tốc (số 5 Bà Triệu, khu Ninh Kiều) AirBlade, Vision 150.000đ/ngày, giao 2km quanh Bến Ninh Kiều; Anh Phong (số 16 Cách Mạng Tháng Tám, Cái Khế, đối diện Vincom Hùng Vương) Vespa, Airblade 150.000 – 200.000đ/ngày."
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-can-tho/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "note": "Tổng hợp của MOTOGO về thuê xe máy Cần Thơ: bảng giá ghi Honda Airblade 150.000VNĐ – 200.000VNĐ/ngày, Honda Vision 130.000VNĐ/ngày, Honda Wave/Sirius 120.000 VNĐ/ngày; lưu ý các địa điểm thường có mức giá dao động từ 100k/ngày trở lên và cần thống nhất cách tính thời gian thuê."
+  }
+ ],
+ "unique_angle": "Bài tập trung riêng Honda Air Blade tại Cần Thơ — dòng xe ga hợp với các chuyến lòng vòng sông nước: từ Bến Ninh Kiều đi chợ đêm, chạy các tuyến đến khu Cái Khế hay các cồn ven sông — với điểm nhấn riêng của thị trường này: giá xe ga Cần Thơ cao hơn xe số nhưng không đáng kể, tuy nhiên mặt bằng chung 150.000đ – 170.000đ/xe một ngày lại nằm ở mức cao hơn hẳn các thành phố miền Trung; nhấn mạnh cách tính ngày 24 tiếng/24 giờ khác nhau giữa các cửa hàng (không phải nơi nào cũng quy đổi theo 24 tiếng) và quyền lợi giao xe 2km quanh Bến Ninh Kiều.",
+ "claim_evidence": [
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-can-tho.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Một ngày chi phí thuê xe ga ở Cần Thơ rơi vào khoảng 150.000đ – 170.000đ/xe; các dòng xe tay ga thường cho thuê ở Cần Thơ gồm Honda Airblade, Honda Lead, Honda Vision, Yamaha Nouvo, SYM Elizabeth.",
+   "claim_supported": "Như rất nhiều địa điểm khác, giá thuê xe tay ga ở Cần Thơ cao hơn giá xe số nhưng không đáng kể. Một ngày chi phí thuê xe ga rơi vào khoảng 150.000 đến 170.000 đồng/xe. Các dòng xe tay ga thường được cho thuê ở Cần Thơ rất phong phú như Honda Airblade, Honda Lead, Honda Vision, Yamaha Nouvo, SYM Elizabeth…"
+  },
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-can-tho.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Bảng giá thuê xe máy Cần Thơ giao tận nơi ghi nhận xe tay ga phổ thông (Honda Airblade, Honda Lead, Honda Vision) ở mức 150.000đ – 200.000đ/ngày; xe số phổ thông (Wave RSX, Wave Alpha, Sirius) 130.000đ – 150.000đ/ngày.",
+   "claim_supported": "Bảng giá thuê xe máy Cần Thơ giao tận nơi 2025 Loại xe Giá thuê Xe tay ga phổ thông (Honda Airblade, Honda Lead, Honda Vision) 150.000-200.000 Xe số phổ thông (Honda Wave RSX, Honda Wave Alpha, Yamaha Sirius) 130.000 – 150.000"
+  },
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-can-tho.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Tại cửa hàng Siêu Tốc (số 5 Bà Triệu, khu Ninh Kiều, TP. Cần Thơ), xe số khoảng 130.000đ/ngày; các dòng xe tay ga như AirBlade, Vision có giá 150.000đ/ngày; thời gian thuê 1 ngày tính trọn vẹn 24 tiếng kể từ giờ nhận xe; cửa hàng giao xe từ 7h30 đến 16h trong phạm vi 2km quanh Bến Ninh Kiều, Vincom Plaza và các khách sạn lớn lân cận.",
+   "claim_supported": "Mức giá thuê tại đây dao động tùy loại xe: xe số (Wave, Sirius) khoảng 130.000đ/ngày; các dòng xe tay ga như AirBlade, Vision có giá 150.000đ/ngày. Thời gian thuê 1 ngày được tính trọn vẹn 24 tiếng kể từ giờ nhận xe. Cửa hàng hỗ trợ giao xe tận nơi từ 7h30 đến 16h trong phạm vi 2km quanh Bến Ninh Kiều, Vincom Plaza và các khách sạn lớn lân cận."
+  },
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-can-tho.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Tại Anh Phong (số 16 Cách Mạng Tháng Tám, phường Cái Khế, TP. Cần Thơ, đối diện Vincom Hùng Vương), xe số 140.000đ/ngày; các dòng xe tay ga phổ thông như Vespa, Airblade có giá 150.000đ – 200.000đ/ngày tùy đời xe; cách tính ngày thuê theo khung 24 giờ, quá giờ có phụ thu.",
+   "claim_supported": "Bạn có thể thuê xe số (Wave Alpha, Sirius) với giá 140.000đ/ngày hoặc các dòng xe tay ga phổ thông như Vespa, Airblade với giá 150.000 – 200.000đ/ngày, tuỳ theo đời xe. Cách tính ngày thuê áp dụng theo khung 24 giờ, quá giờ sẽ có phụ thu theo quy định."
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-can-tho/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Bảng giá tổng hợp của MOTOGO tại Cần Thơ ghi Honda Airblade 150.000đ – 200.000đ/ngày; Honda Vision 130.000đ/ngày.",
+   "claim_supported": "Honda Vision 130.000VNĐ/ngày Honda Airblade 150.000VNĐ – 200.000VNĐ/ngày"
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "article_id": "A00133",
+ "primary_keyword": "giá thuê Air Blade Huế",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mặt bằng giá thuê Honda Air Blade tại Huế theo nguồn ghi nhận công khai (xe ga mới 130.000đ – 160.000đ/ngày, xe cũ rẻ hơn 20.000đ – 30.000đ), các cửa hàng niêm yết AirBlade 130.000đ/xe/ngày quanh Vincom Plaza Huế và Ga Huế, kèm lưu ý phụ thu khi giao xe tại sân bay Phú Bài và phạm vi đi phá Tam Giang, biển Thuận An",
+ "research_date": "2026-10-04",
+ "geo_entities": ["Huế","ga Huế","cầu Trường Tiền","Đại Nội (Hoàng Thành)","Vincom Plaza Huế","sân bay Phú Bài","phá Tam Giang","biển Thuận An","bến xe phía Nam Huế"],
+ "vehicle_entities": ["xe tay ga","xe ga","xe số"],
+ "brand_entities": ["Honda","Yamaha"],
+ "model_entities": ["Air Blade","Vision","Lead","Vario","Wave Alpha","Sirius","Janus"],
+ "questions_found": [
+  "Thuê Honda Air Blade ở Huế giá bao nhiêu một ngày?",
+  "Ở Huế có cửa hàng nào niêm yết riêng giá Air Blade không?",
+  "Thuê xe Huế có giao xe tại sân bay Phú Bài không, có phụ thu không?",
+  "Đi phá Tam Giang hoặc biển Thuận An bằng xe thuê có bị tính phụ phí không?",
+  "Ngày thuê xe ở Huế được tính như thế nào?"
+ ],
+ "related_queries": [
+  "gia thue air blade hue",
+  "cho thue xe may hue",
+  "thue xe tay ga hue",
+  "thue xe may san bay phu bai"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp đặt xe của Vexere xếp cao với bài phân tích giá thuê xe máy Huế theo loại xe: xe tay ga mới 130.000 đến 160.000, xe cũ rẻ hơn 20.000 đến 30.000 mỗi ngày; Airblade nằm trong nhóm xe ga được thuê nhiều nhất",
+  "Danh sách điểm thuê trên Vexere ghi nhận các cơ sở niêm yết Honda Airblade hoặc dòng xe tương tự, đời xe từ 2020, kèm mũ bảo hiểm, 1 lít xăng, giao xe tận nơi và không cần cọc trước"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "note": "Bài giá thuê xe máy Huế của Vexere: xe tay ga mới 130.000 đến 160.000 mỗi ngày, xe cũ rẻ hơn 20.000 đến 30.000; Airblade trong nhóm được thuê nhiều; giới thiệu Camay Motorbike (AirBlade 130.000đ/xe/ngày, giao 3km quanh Vincom Plaza Huế, hỗ trợ sân bay Phú Bài có phụ thu) và Phúc Linh (AirBlade 130.000đ/ngày, giao 4km quanh Đại Nội)."
+  }
+ ],
+ "unique_angle": "Bài tập trung riêng Honda Air Blade tại Huế — dòng xe ga cà vo hợp với hành trình kết hợp phố cổ và các cung ven biển phá Tam Giang, biển Thuận An — với hai lớp thông tin: mặt bằng xe ga mới 130.000đ – 160.000đ/ngày của vexere.com và mức niêm yết cụ thể 130.000đ/xe/ngày tại Camay, Phúc Linh quanh trung tâm; nhấn mạnh chi tiết thực tế riêng Huế: giao xe tại sân bay Phú Bài có phụ thu, và các cửa hàng mở cửa từ rất sớm (5h sáng) phục vụ khách đón bình minh ở phá Tam Giang.",
+ "claim_evidence": [
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Giá thuê xe tay ga tại Huế cho dòng xe mới vào khoảng 130.000đ – 160.000đ/ngày; các dòng xe cũ rẻ hơn khoảng 20.000đ – 30.000đ mỗi ngày; nhóm xe ga được thuê nhiều ở Huế gồm Honda Airblade, Honda Vision, Honda Lead, Yamaha Janus.",
+   "claim_supported": "Giá thuê xe tay ga tại Huế cho những dòng xe mới vào khoảng 130.000 đến 160.000, trong khi các dòng xe cũ thì có thể rẻ hơn từ 20.000 đến 30.000 mỗi ngày. Các dòng xe tay ga được thuê nhiều ở Huế bao gồm Honda Airblade, Honda Vision, Honda Lead hay Yamaha Janus."
+  },
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Tại Camay Motorbike (Huế), xe số phổ thông có giá thuê khoảng 100.000đ/xe/ngày; các dòng xe tay ga như Vision, Lead, AirBlade có giá 130.000đ/xe/ngày; thời gian thuê tính trọn gói 24 tiếng kể từ lúc nhận xe.",
+   "claim_supported": "Tại đây có nhiều sự lựa chọn: xe số phổ thông (Sirius, Wave Alpha) có giá thuê khoảng 100.000đ/xe/ngày; các dòng xe tay ga như Vision, Lead, AirBlade có giá 130.000đ/xe/ngày. Thời gian thuê được tính trọn gói 24 tiếng kể từ lúc nhận xe, rất có lợi cho khách du lịch."
+  },
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Camay Motorbike hỗ trợ giao xe tận nơi trong bán kính 3km từ Vincom Plaza Huế (gồm bến xe phía Nam, ga Huế, cầu Trường Tiền) và giao tại sân bay Phú Bài kèm phụ thu.",
+   "claim_supported": "Cửa hàng hỗ trợ giao xe tận nơi trong bán kính 3km từ Vincom Plaza Huế, bao gồm các điểm như Bến xe phía Nam, Ga Huế, Cầu Trường Tiền và có hỗ trợ giao tại sân bay Phú Bài (có phụ thu)."
+  },
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Phúc Linh (Huế) cho thuê xe số 100.000đ/ngày; các dòng xe ga đời mới gồm Vision, Lead, AirBlade có giá 130.000đ/ngày; một ngày thuê tính là 24 tiếng kể từ giờ nhận xe.",
+   "claim_supported": "Giá thuê xe số (Yamaha Sirius, Wave Alpha) là 100.000đ/ngày, trong khi các dòng xe ga đời mới (Vision, Lead, AirBlade) có giá 130.000đ/ngày. Quy định tính 1 ngày thuê là 24 tiếng kể từ giờ nhận xe."
+  },
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Trên danh sách điểm thuê của Vexere tại Huế có các cơ sở niêm yết Honda Airblade (hoặc dòng xe tương tự) đời từ 2020, kèm mũ bảo hiểm, 1 lít xăng, giao xe tận nơi và không cần cọc trước.",
+   "claim_supported": "Honda Airblade hoặc dòng xe tương tự Honda Airblade, Honda Lead, Honda Vision, Honda Vario (giao ngẫu nhiên tùy tình trạng xe thực tế) Đời xe: từ 2020 Mũ bảo hiểm, Xăng (1 lít) Giao xe tận nơi Không cần cọc trước"
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "article_id": "A00137",
+ "primary_keyword": "giá thuê Air Blade Lai Châu",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết giá thuê Honda Air Blade tại Lai Châu theo đời xe (Airblade 2012 là 130.000 vnd/ngày, 2013-2015 là 150.000 vnd/ngày, 2016-2018 là 160.000 vnd/ngày), các cơ sở cho thuê ở thành phố Lai Châu quanh bến xe (Phúc An, Dịch vụ thuê xe máy Lai Châu, Anh Kiên) và lưu ý đặt cọc 1.000.000đ – 3.000.000đ",
+ "research_date": "2026-10-04",
+ "geo_entities": ["Lai Châu","thành phố Lai Châu","bến xe Lai Châu","đèo Ô Quy Hồ","Tam Đường","Tân Phong","phường Đoàn Kết","đường Hoàng Minh Giám","đường Trần Hưng Đạo"],
+ "vehicle_entities": ["xe tay ga","xe ga","xe số"],
+ "brand_entities": ["Honda","Yamaha","Suzuki"],
+ "model_entities": ["Air Blade","Vision","Lead","Wave S","Wave RS","Wave RSX","Sirius","Jupiter","Nouvo","Attila","Elizabeth"],
+ "questions_found": [
+  "Thuê Honda Air Blade ở Lai Châu giá bao nhiêu một ngày?",
+  "Giá thuê Airblade ở Lai Châu có phụ thuộc đời xe không?",
+  "Ở Lai Châu có cơ sở nào cho thuê xe ga gần bến xe không?",
+  "Thuê xe máy Lai Châu cần đặt cọc bao nhiêu?",
+  "Thuê Air Blade chạy đèo Ô Quy Hồ nên lưu ý gì?"
+ ],
+ "related_queries": [
+  "gia thue air blade lai chau",
+  "cho thue xe may lai chau",
+  "thue xe may ben xe lai chau",
+  "thue xe deo o quy ho"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp MOTOGO (cập nhật 08/09/2026) gần như là nguồn duy nhất xếp cao cho thuê xe máy Lai Châu: 5 cơ sở kèm địa chỉ và giá theo ngày, cùng bảng giá tham khảo theo dòng xe trong đó Honda Airblade được niêm yết riêng theo đời 2012 / 2013-2015 / 2016-2018",
+  "Bảng giá ghi nhận nhóm xe ga tại các cơ sở dao động quanh 120.000đ – 160.000đ/ngày, xe số 80.000đ – 120.000đ/ngày; tiền cọc tham khảo 1.000.000đ – 3.000.000đ tùy loại xe"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "note": "Tổng hợp của MOTOGO về thuê xe máy Lai Châu (cập nhật 08/09/2026): 5 cơ sở gồm Phúc An (đối diện bến xe Lai Châu, Hoàng Minh Giám) xe ga 140.000đ – 150.000đ/ngày; Dịch vụ thuê xe máy Lai Châu (51 Trần Hưng Đạo, phường Đoàn Kết) xe ga 130.000đ – 140.000đ/ngày; Anh Kiên (2 Tháng 8, Tân Phong) xe ga 130.000đ – 160.000đ/ngày; Anh Hùng (Hoàng Minh Giám, Tam Đường) xe ga 120.000đ - 150.000đ/ngày; Nhà nghỉ Hoa Sữa (179 Lê Duẩn, Tân Phong) cho thuê kèm dịch vụ lưu trú. Bảng giá theo dòng xe: Airblade 2012 là 130.000 vnd, Airblade 2013-2015 là 150.000 vnd, Airblade 2016-2018 là 160.000 vnd; đặt cọc 1.000.000đ – 3.000.000đ."
+  }
+ ],
+ "unique_angle": "Bài tập trung riêng Honda Air Blade tại Lai Châu — thị trường nhỏ nhưng có điểm rất riêng: Airblade là dòng hiếm hoi được niêm yết giá THEO ĐỜI XE rõ ràng (2012 là 130.000 vnd/ngày, 2013-2015 là 150.000 vnd/ngày, 2016-2018 là 160.000 vnd/ngày trong bảng giá tham khảo) — khác với các thành phố lớn thường ghép chung nhóm xe ga; bài ghép thông tin này với trải nghiệm thực tế của cung đường Lai Châu: đèo Ô Quy Hồ, khí hậu mát lạnh quanh năm, và lưu ý đặt cọc bằng tiền mặt ở tỉnh vùng cao (1.000.000đ – 3.000.000đ) — nên chuẩn bị sẵn tiền lẻ thay vì chỉ mang chuyển khoản.",
+ "claim_evidence": [
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Bảng giá thuê xe máy Lai Châu (tham khảo) ghi nhận: xe tay ga Honda Airblade 2012 là 130.000 vnd/ngày; Airblade 2013-2015 là 150.000 vnd/ngày; Airblade 2016-2018 là 160.000 vnd/ngày.",
+   "claim_supported": "Xe tay ga Honda Airblade 2012 130.000 vnd Xe tay ga Honda Airblade 2013-2015 150.000 vnd Xe tay ga Honda Airblade 2016- 2017 – 2018 160.000 vnd"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Phúc An (đối diện bến xe Lai Châu, đường Hoàng Minh Giám, thành phố Lai Châu) cho thuê xe số 90.000đ – 120.000đ/ngày; xe ga 140.000đ – 150.000đ/ngày.",
+   "claim_supported": "Phúc An Địa chỉ: Đối diện bến xe Lai Châu, Hoàng Minh Giám, Tp Lai Châu, Lai Châu Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Dịch vụ thuê xe máy Lai Châu (51 Trần Hưng Đạo, phường Đoàn Kết, thành phố Lai Châu) cho thuê xe số 80.000đ – 100.000đ/ngày; xe ga 130.000đ – 140.000đ/ngày.",
+   "claim_supported": "Thuê xe máy Lai Châu Địa chỉ: 51 Trần Hưng Đạo, Phường Đoàn Kết, Tp Lai Châu, Lai Châu Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Anh Kiên (đường 2 Tháng 8, Tân Phong, thành phố Lai Châu) cho thuê xe số 80.000đ – 100.000đ/ngày; xe ga 130.000đ – 160.000đ/ngày.",
+   "claim_supported": "Anh Kiên Địa chỉ: 2 Tháng 8, Tân Phong, Thị xã Lai Châu, Lai Châu Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 160.000đ/ngày"
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Tiền đặt cọc xe máy tại Lai Châu rơi vào khoảng 1.000.000đ – 3.000.000đ tùy loại xe.",
+   "claim_supported": "Còn về phần tiền đặt cọc xe máy tại Lai Châu sẽ rơi vào khoảng 1.000.000đ – 3.000.000đ tùy loại xe."
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Anh Hùng (Hoàng Minh Giám, Tam Đường, thành phố Lai Châu) cho thuê xe số 90.000đ – 120.000đ/ngày; xe ga 120.000đ - 150.000đ/ngày.",
+   "claim_supported": "Anh Hùng Địa chỉ: Hoàng Minh Giám, Tam Đường, Thị xã Lai Châu, Lai Châu Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -150.000đ/ngày"
+  }
+ ]
+}

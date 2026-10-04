@@ -1,0 +1,81 @@
+{
+ "article_id": "A00134",
+ "primary_keyword": "giá thuê Air Blade Đà Nẵng",
+ "secondary_keywords": [],
+ "search_intent": "informational — khách cần biết mặt bằng giá thuê Honda Air Blade tại Đà Nẵng theo nguồn công khai (xe ga 110.000đ – 140.000đ/ngày, bảng niêm yết 120.000đ – 150.000đ, AirBlade 2024 ở mức 140.000đ/ngày), các cửa hàng quanh Mỹ Khê, Cầu Rồng, Chợ Cồn và bến xe trung tâm, kèm lưu ý giao xe 5km và chạy đèo Hải Vân",
+ "research_date": "2026-10-04",
+ "geo_entities": ["Đà Nẵng","bãi biển Mỹ Khê","Cầu Rồng","Chợ Cồn","Bến xe Trung tâm Đà Nẵng","Vincom Plaza","Bà Nà Hills","Đèo Hải Vân","sân bay quốc tế Đà Nẵng"],
+ "vehicle_entities": ["xe tay ga","xe ga","xe số","xe côn tay"],
+ "brand_entities": ["Honda","Yamaha"],
+ "model_entities": ["Air Blade","Vision","Lead","Janus","Wave Alpha","Sirius","Exciter","Winner"],
+ "questions_found": [
+  "Thuê Honda Air Blade ở Đà Nẵng giá bao nhiêu một ngày?",
+  "AirBlade 2024 ở Đà Nẵng thuê giá bao nhiêu?",
+  "Ở Đà Nẵng có cửa hàng nào cho thuê Air Blade giao tận nơi quanh Mỹ Khê không?",
+  "Thuê xe ga Đà Nẵng và Cần Thơ, Huế chênh nhau bao nhiêu?",
+  "Thuê xe ở Đà Nẵng có chạy đèo Hải Vân được không?"
+ ],
+ "related_queries": [
+  "gia thue air blade da nang",
+  "cho thue xe may da nang",
+  "thue xe tay ga my khe",
+  "thue xe may deo hai van"
+ ],
+ "serp_patterns": [
+  "Trang tổng hợp Vexere xếp cao với phân tích giá thuê xe máy Đà Nẵng theo loại xe: xe ga 110.000 – 140.000 VNĐ/ngày với Air Blade trong top được thuê nhiều; bảng niêm yết xe tay ga 120.000 – 150.000; các cửa hàng như An Nga (giao 5km quanh Mỹ Khê, Cầu Rồng, Chợ Cồn) và Bá Đức (AirBlade 2024 140.000đ/ngày, gần bến xe trung tâm)",
+  "Trang tổng hợp MOTOGO liệt kê các cửa hàng Đà Nẵng kèm bảng giá theo đơn vị: nhiều nơi ghi nhóm xe ga AirBlade, Vision ở mức 80.000đ – 130.000đ đến 80.000đ – 140.000đ tùy cửa hàng"
+ ],
+ "official_sources": [],
+ "supporting_sources": [
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "note": "Bài giá thuê xe máy Đà Nẵng của Vexere: xe tay ga 110.000 – 140.000 VNĐ/ngày; bảng niêm yết xe tay ga (Airblade, Lead, Vision) 120.000 – 150.000; An Nga (120.000đ – 150.000đ/ngày tùy đời xe, giao 5km quanh Mỹ Khê, Vincom Plaza, Cầu Rồng, Chợ Cồn); Bá Đức (AirBlade 2024 140.000đ/ngày, dàn xe đời 2022-2024, giao 5km quanh bến xe trung tâm)."
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-da-nang/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "note": "Tổng hợp 10 địa điểm thuê xe máy Đà Nẵng của MOTOGO kèm bảng giá theo đơn vị: Bình Minh, Sông Hàn, Hưng Thịnh ghi nhóm xe ga AirBlade, Vision 80.000đ – 130.000đ; Minh Long ghi 80.000đ – 140.000đ; Hồ Vỹ ghi nhóm có AirBlade 125cc 80.000đ – 180.000đ."
+  }
+ ],
+ "unique_angle": "Bài tập trung riêng Honda Air Blade tại Đà Nẵng — dòng xe ga cà vo hợp với hành trình vừa chạy phố biển Mỹ Khê vừa chinh phục các cung núp gió tới Bà Nà Hills hay đèo Hải Vân — với ba lớp giá rõ rệt: mặt bằng chung 110.000đ – 140.000đ/ngày của vexere.com, mức niêm yết riêng AirBlade 2024 là 140.000đ/ngày tại Bá Đức gần bến xe trung tâm, và nhóm cửa hàng trong bảng tổng hợp của motogo.vn ghi 80.000đ – 140.000đ; nhấn mạnh đặc thù Đà Nẵng: giao xe trong bán kính 5km phủ hầu hết khu phố biển nên khách lưu trú Mỹ Khê gần như không mất công di chuyển.",
+ "claim_evidence": [
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Giá thuê xe tay ga ở Đà Nẵng thường dao động từ 110.000đ – 140.000đ/ngày tùy loại xe và thời điểm; các mẫu phổ biến như Honda Vision, Air Blade, Lead nằm trong top được thuê nhiều.",
+   "claim_supported": "Giá thuê xe tay ga ở Đà Nẵng thường dao động từ 110.000 – 140.000 VNĐ/ngày, tùy loại xe và thời điểm. Các mẫu xe phổ biến như Honda Vision, Air Blade, Lead luôn nằm trong top được thuê nhiều nhờ độ bền và thiết kế tiện lợi."
+  },
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Bảng giá tham khảo của Vexere niêm yết xe tay ga (Honda Airblade, Honda Lead, Honda Vision) ở mức 120.000đ – 150.000đ/ngày.",
+   "claim_supported": "Xe tay ga (Honda Airblade, Honda Lead, Honda Vision) 120.000 – 150.000"
+  },
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Tại An Nga (Đà Nẵng), xe số phổ thông là 100.000đ/ngày; các dòng xe tay ga như Vision, AirBlade, Lead dao động 120.000đ – 150.000đ/ngày tùy đời xe; thời gian thuê 1 ngày tính trọn vẹn 24 tiếng; cửa hàng giao xe tận nơi từ 7h đến 20h trong bán kính 5km quanh bãi biển Mỹ Khê, Vincom Plaza, Cầu Rồng và Chợ Cồn.",
+   "claim_supported": "rất hợp lý: xe số phổ thông (Wave Alpha, Sirius) là 100.000đ/ngày; các dòng xe tay ga như Vision, AirBlade, Lead có giá dao động từ 120.000đ – 150.000đ/ngày tùy đời xe. Thời gian thuê 1 ngày được tính trọn vẹn 24 tiếng sử dụng. Cửa hàng hỗ trợ giao xe tận nơi từ 7h đến 20h trong bán kính 5km quanh bãi biển Mỹ Khê, Vincom Plaza, Cầu Rồng và Chợ Cồn."
+  },
+  {
+   "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+   "source_domain": "vexere.com",
+   "date_accessed": "2026-10-04",
+   "claim": "Tại Bá Đức (Đà Nẵng), Vision, Lead, Janus có giá 120.000đ/ngày và AirBlade 2024 là 140.000đ/ngày; quy định tính ngày là 24 giờ kể từ lúc nhận xe; nhà xe giao và lấy xe trong bán kính 5km từ Bến xe trung tâm Đà Nẵng, khung giờ 5h – 20h.",
+   "claim_supported": "Giá thuê xe số (Sirius, Wave Alpha) khoảng 110.000đ/ngày; các dòng xe ga đời mới như Vision, Lead, Janus có giá 120.000đ/ngày và AirBlade 2024 là 140.000đ/ngày. Quy định tính ngày là 24 giờ kể từ lúc nhận xe. Nhà xe hỗ trợ giao và lấy xe tận nơi trong bán kính 5km từ Bến xe trung tâm Đà Nẵng trong khung giờ 5h – 20h."
+  },
+  {
+   "source_url": "https://motogo.vn/thue-xe-may-da-nang/",
+   "source_domain": "motogo.vn",
+   "date_accessed": "2026-10-04",
+   "claim": "Trong bảng giá tổng hợp của MOTOGO tại Đà Nẵng, cửa hàng Bình Minh ghi nhóm xe ga AirBlade, Vision 80.000đ – 130.000đ; cửa hàng Minh Long ghi nhóm xe ga AirBlade, Vision, Lead, Nouvo 80.000đ – 140.000đ.",
+   "claim_supported": "Bình Minh Xe số: Wave, Sirius 110cc Xe ga: AirBlade, Vision 80.000đ – 130.000đ Minh Long Xe số: Yamaha, Honda Wave Xe ga: AirBlade, Vision, Lead, Nouvo 80.000đ – 140.000đ"
+  }
+ ]
+}
