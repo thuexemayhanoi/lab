@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-05T05:12:21.295Z",
+  "generated_at": "2026-10-05T05:25:03.234Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 171,
-    "PLANNED": 9829
+    "PUBLISHED": 173,
+    "PLANNED": 9827
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 165,
-      "PLANNED": 4835
+      "PUBLISHED": 167,
+      "PLANNED": 4833
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00164",
-  "next_claimable_id": "A00165",
+  "last_completed_id": "A00166",
+  "next_claimable_id": "A00167",
   "blocked": [],
   "published": [
     {
@@ -1024,6 +1024,18 @@
       "pk": "giá thuê Air Blade Cà Mau",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-air-blade-ca-mau/"
+    },
+    {
+      "id": "A00165",
+      "pk": "thuê Honda Wave Hà Nội",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-honda-wave-ha-noi/"
+    },
+    {
+      "id": "A00166",
+      "pk": "giá thuê Wave Hải Phòng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-hai-phong/"
     },
     {
       "id": "A00465",
