@@ -1,0 +1,169 @@
+{
+  "article_id": "A00169",
+  "primary_keyword": "giá thuê Wave TP.HCM",
+  "secondary_keywords": [
+    "thue xe Wave TP HCM",
+    "cho thue Honda Wave Sai Gon",
+    "thue xe so TP HCM"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave tại TP.HCM: thị trường có chênh lệch giá xe số lớn, từ 40.000đ – 50.000đ/ngày tại Thạnh Phát, Vinasat, Phạm Ngũ Lão, Thành Đạt tới 120.000đ/ngày tại Bike Saigon và Motorbike for rent; Hoàng Đăng (quận 1, quận 10) ghi rõ có sẵn Wave – Sirius – Blade với giá 120.000đ – 150.000đ/ngày, không yêu cầu cọc tiền; Kiều Trang có Honda Wave Alpha từ 80.000đ – 130.000đ/ngày, giao xe tận sân bay trong 15 đến 30 phút kèm 2 mũ bảo hiểm và 1 lít xăng",
+  "research_date": "2026-10-05",
+  "geo_entities": [
+    "TP.HCM",
+    "Sài Gòn",
+    "Bình Thạnh",
+    "Tân Bình",
+    "Phú Nhuận",
+    "Quận 1",
+    "Quận 3",
+    "Quận 5",
+    "Quận 10",
+    "Gò Vấp",
+    "Thủ Đức",
+    "sân bay Tân Sơn Nhất",
+    "Nguyễn Văn Trỗi",
+    "Lê Văn Sỹ",
+    "Trần Bình Trọng",
+    "Bùi Thị Xuân",
+    "Lê Hồng Phong",
+    "Lam Sơn",
+    "Phạm Cự Lượng",
+    "Nguyễn Thị Minh Khai",
+    "Phạm Ngũ Lão",
+    "Nguyễn Hữu Cảnh",
+    "Nguyễn Thái Sơn",
+    "Hoà Hưng",
+    "Mậu Thân"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe tay ga",
+    "xe côn tay",
+    "xe cub"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha",
+    "SYM",
+    "Vespa"
+  ],
+  "model_entities": [
+    "Wave",
+    "Wave Alpha",
+    "Blade",
+    "Air Blade",
+    "Vision",
+    "Sirius",
+    "Lead",
+    "SH",
+    "Vespa"
+  ],
+  "questions_found": [
+    "Thuê Honda Wave ở TP.HCM giá bao nhiêu một ngày?",
+    "Ở TP.HCM nơi nào có sẵn xe Wave cho thuê?",
+    "Thuê xe máy TP.HCM có cần đặt cọc không?",
+    "Thuê xe máy gần sân bay Tân Sơn Nhất ở đâu?",
+    "Có nơi nào cho thuê xe tháng giá rẻ ở TP.HCM không?"
+  ],
+  "related_queries": [
+    "gia thue wave tp hcm",
+    "thue xe so sai gon gia re",
+    "cho thue xe may quan 1",
+    "thue xe may thang tphcm"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp của MOTOGO về thuê xe máy tại Sài Gòn ghi nhận thị trường xe số trải rộng từ 40.000đ – 50.000đ/ngày (Thạnh Phát, Vinasat, Phạm Ngũ Lão, Thành Đạt) tới 120.000đ/ngày (Bike Saigon, Motorbike for rent, Kiều Trang bảng giá)",
+    "Hai cơ sở ghi rõ có sẵn Honda Wave: Hoàng Đăng (134 Bùi Thị Xuân quận 1, 16 Lê Hồng Phong quận 10) luôn có sẵn xe số Yamaha Sirius, Honda Blade, Wave với giá 120.000đ – 150.000đ/ngày, không yêu cầu cọc tiền; Kiều Trang có Honda Wave Alpha với giá từ 80.000đ – 130.000đ/ngày, giao xe tận nơi trong 15 đến 30 phút",
+    "Thủ tục và dịch vụ: Hoàng Đăng giữ giấy tờ tùy thân, chụp ảnh bằng lái, thủ tục 15 phút – 20 phút; Bike Saigon giao xe miễn phí trong phạm vi 10km kèm 2 mũ bảo hiểm và áo mưa; Motorbike for rent cho thuê theo tháng giá 40.000đ/ngày"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-sai-gon/",
+      "source_domain": "motogo.vn",
+      "source_type": "aggregator — tổng hợp 7 cơ sở cho thuê xe máy Sài Gòn khu vực Bình Thạnh kèm bảng giá, đánh giá và dịch vụ đi kèm",
+      "date_accessed": "2026-10-05",
+      "reliability_note": "bài đăng 18:13 - 02/10/2026, đánh giá 4.8/5, có bảng giá từng cơ sở theo dòng xe số và xe ga"
+    },
+    {
+      "source_url": "https://motogo.vn/cho-thue-xe-may-sai-gon-quan-1/",
+      "source_domain": "motogo.vn",
+      "source_type": "aggregator — tổng hợp 5 địa điểm cho thuê xe máy khu vực quận 10, quận 1, Phú Nhuận kèm bảng giá và thủ tục",
+      "date_accessed": "2026-10-05",
+      "reliability_note": "bài đăng 18:08 - 02/10/2026, đánh giá 4.7/5, ghi rõ chính sách cọc và thủ tục của Hoàng Đăng"
+    }
+  ],
+  "unique_angle": "Thị trường xe số TP.HCM có biên độ giá rộng nhất trong các thành phố lớn: cùng là xe số nhưng có cơ sở bán từ 40.000đ – 50.000đ/ngày (Thạnh Phát từ 40.000đ/ngày, Vinasat đồng giá 50.000đ/ngày, Phạm Ngũ Lão 50.000đ/ngày, Thành Đạt từ 50.000đ/ngày) trong khi Bike Saigon và Motorbike for rent niêm yết 120.000đ/ngày. Khách tìm Honda Wave có hai địa chỉ ghi rõ sẵn xe: Hoàng Đăng (quận 1, quận 10) có sẵn Wave – Sirius – Blade giá 120.000đ – 150.000đ/ngày, không yêu cầu cọc tiền, thủ tục 15 phút – 20 phút; Kiều Trang có Honda Wave Alpha từ 80.000đ – 130.000đ/ngày, giao xe tận sân bay Tân Sơn Nhất trong 15 đến 30 phút kèm 2 mũ bảo hiểm và 1 lít xăng. Riêng nhóm thuê dài hạn, Motorbike for rent tính giá tháng 40.000đ/ngày và Thạnh Phát ưu đãi thêm theo tuần, theo tháng",
+  "claim_evidence": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-sai-gon/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Kiều Trang (điện thoại 0914 922 836) có hệ thống 7 cơ sở ở Tân Bình (26 Lam Sơn gần cổng sân bay), quận 1 (134/28 Bùi Thị Xuân), Gò Vấp, Thủ Đức, quận 3, Bình Thạnh (59 Trần Bình Trọng), quận 5; xe số có Yamaha Sirius, Honda Wave Alpha; xe ga có Air Blade, Vision, Vespa; bảng giá ghi xe số 120.000đ/ngày, xe ga 200.000đ/ngày; mức giá trong bài từ 80.000đ – 130.000đ/ngày; giá đã gồm 2 mũ bảo hiểm và 1 lít xăng; dịch vụ 24/24, nhận xe tại sân bay, bến xe, khách sạn trong vòng 15 đến 30 phút; đánh giá 4.4/5.",
+      "claim_supported": "Đơn vị sở hữu hệ thống xe đa dạng, từ các dòng xe tay ga như Air Blade, Vision, Vespa cho đến xe số như Yamaha Sirius, Honda Wave Alpha — Mức giá thuê xe máy tại Kiều Trang từ 80.000đ – 130.000đ/ngày. Giá thuê xe đã có đi kèm 2 mũ bảo hiểm, 1 lít xăng cho du khách — Bạn có thể nhận xe tại sân bay, bến xe khách hoặc khách sạn theo yêu cầu chỉ trong vòng 15 đến 30 phút — Thuê xe máy Kiều Trang quận Bình Thạnh cung cấp các dòng xe mới chất lượng, dịch vụ 24/24 — Giá thuê xe số: 120.000đ/ngày — Giá thuê xe ga: 200.000đ/ngày — 4.4/5 — Điện thoại: 0914 922 836 — Cơ sở 1: Gần cổng sân bay tại 26 Lam Sơn, Phường 2, Tân Bình — Cơ sở 6: 59 Trần Bình Trọng, Bình Thạnh"
+    },
+    {
+      "source_url": "https://motogo.vn/cho-thue-xe-may-sai-gon-quan-1/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Hoàng Đăng (điện thoại 0914 922 836; địa chỉ 1: 134 Bùi Thị Xuân quận 1; địa chỉ 2: 16 Lê Hồng Phong quận 10; website alothuexemay.com) luôn có sẵn xe số Yamaha Sirius, Honda Blade, Wave cùng xe ga Lead, Vision, Airblade; mức giá cho thuê dao động 120.000đ – 150.000đ/ngày; bảng giá ghi xe số 50.000đ/ngày – 100.000đ/ngày, xe ga 150.000đ/ngày; cửa hàng làm việc 24/24, giao nhận xe miễn phí trong khu vực thành phố; không yêu cầu cọc tiền, giữ giấy tờ tùy thân và chụp ảnh bằng lái xe; kèm áo mưa mỏng, mũ bảo hiểm 1/2, bộ kit sửa xe máy khẩn cấp; thủ tục xử lý nhanh trong 15 phút – 20 phút; có chính sách giảm giá khách thân thiết và thuê dài ngày; đánh giá 4.9/5.",
+      "claim_supported": "Cửa hàng luôn có sẵn các loại xe số yamaha sirius, honada blade, Wave. Ngoài ra còn có dòng xe ga phổ biến như Lead, Vision, Airblade,… Mức giá cho thuê xe dao động từ 120.000đ – 150 .000đ/ngày — Dịch vụ cho thuê xe máy quận 10 tại Hoàng Đăng có hỗ trợ giao nhận xe miễn phí trong khu vực thành phố. Cửa hàng làm việc 24/24 — Thuê xe máy tại Hoàng Đăng không yêu cầu cọc tiền, tiện lợi đơn giản. Cửa hàng có kiểm tra kỹ chất lượng xe khi giao cho khách. Tại đây có đưa rõ thủ tục thuê xe áp dụng với khách du lịch như sau: Cửa hàng cần giữ lại giấy tờ tùy thân, chụp ảnh bằng lái xe — Thuê xe máy tại Hoàng Đăng được cung cấp sẵn áo mưa mỏng, mũ bảo hiểm 1/2, bộ kit sửa chữa xe máy khẩn cấp cho khách hàng — Thủ tục thuê xe máy cũng được xử lý nhanh trong 15 phút – 20 phút — Cửa hàng có áp dụng chính sách giảm giá cho khách hàng thân thiết và thuê dài ngày — Hoàng Đăng — Điện thoại: 0914 922 836 — Địa chỉ 1: 134 Bùi Thị Xuân, quận 1 — Địa chỉ 2: 16 lê hồng phong, quận 10 — Giá thuê xe số: 50.000đ/ngày – 100.000đ/ngày — Giá thuê xe ga: 150.000đ/ngày — 4.9/5"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-sai-gon/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Thành Đạt (số 21 Hẻm 115 Lê Văn Sỹ, Phường 13, Phú Nhuận; điện thoại 090 895 97 23) cho thuê nhiều loại xe của Honda, Yamaha, SYM, từ xe ga, xe số đến xe tay côn; giá xe số 50.000đ – 100.000đ/ngày, xe ga 110.000đ – 150.000đ/ngày; chỉ cần gọi điện là nhận xe trong vòng 5 phút — dịch vụ giao xe tốc độ nhất Sài Gòn; đánh giá 4.9/5.",
+      "claim_supported": "Cửa hàng thuê xe máy Thành Đạt cho thuê nhiều loại xe đến từ các thương hiệu uy tín như Honda, Yamaha, SYM — Chỉ cần nhấc máy gọi, trong vòng 5 phút bạn đã có thể nhận được xe. Điều này khẳng định Thành Đạt chính là đơn vị cung cấp xe thuê có dịch vụ giao xe tốc độ nhất Sài Gòn — Thành Đạt — Điện thoại: 090 895 97 23 — Giá thuê xe số: 50.000đ – 100.000đ/ngày — Giá thuê xe ga: 110.000đ – 150.000đ/ngày — 4.9/5"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-sai-gon/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Cửa hàng trên đường Nguyễn Văn Trỗi (38 Nguyễn Văn Trỗi, Phường 15, Phú Nhuận; điện thoại 090 863 00 65) là một trong những điểm thuê xe có thời gian hoạt động lâu nhất Sài Gòn, cung cấp từ xe số, xe ga đến phân khối lớn; bảng giá ghi xe số 100.000đ/ngày, xe ga 120.000đ/ngày; hầu hết các xe đều có giá thuê dưới 100.000đ/ngày; đánh giá 4.9/5.",
+      "claim_supported": "Đây là một trong những điểm thuê xe có thời gian hoạt động lâu nhất Sài Gòn — Ngoài ra tại đây còn cung cấp rất nhiều loại xe từ xe số đến xe ga hay phân khối lớn — Hầu hết các xe đều có giá thuê đều dưới 100k/ngày — Đường Nguyễn Văn Trỗi — Điện thoại: 090 863 00 65 — Địa chỉ: 38 Nguyễn Văn Trỗi, Phường 15, Phú Nhuận — Giá thuê xe số: 100.000đ/ngày — Giá thuê xe ga: 120.000đ/ngày — 4.9/5"
+    },
+    {
+      "source_url": "https://motogo.vn/cho-thue-xe-may-sai-gon-quan-1/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Motorbike for rent (25 Đường Hoà Hưng, Phường 12, Quận 10; điện thoại 098 800 82 31) có các dòng được ưa chuộng Sirius, Air Blade, SH và Lead; gần như tất cả các xe đều rất mới, thời gian sử dụng dưới hai năm; giá xe số 120.000đ/ngày, xe ga 200.000đ/ngày; thuê theo tháng giá chỉ 40.000đ/ngày — phù hợp người công tác dài ngày; gọi đặt trước xe được giao đúng giờ; đánh giá 4.9/5.",
+      "claim_supported": "Những loại xe được ưa chuộng nhất là Sirius, Air Blade, SH và Lead. Gần như tất cả các xe đều rất mới, thời gian sử dụng dưới hai năm — Khi thuê theo tháng giá xe chỉ ở mức 40k/ngày. Mức giá này đặc biệt phù hợp với ai tới đây công tác dài ngày — Chỉ cần gọi điện đặt trước, xe sẽ giao đến tay bạn đúng giờ — Motorbike for rent — Điện thoại: 098 800 82 31 — Địa chỉ: 25 Đường Hoà Hưng, Phường 12, Quận 10 — Giá thuê xe số: 120.000đ/ngày — Giá thuê xe ga: 200.000đ/ngày — 4.9/5"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-sai-gon/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Bike Saigon (điện thoại 0974 424 163) có 3 cơ sở: 14 Phạm Cự Lượng, Tân Bình (gần sân bay); 413 Lê Văn Sỹ, quận 3; 59 Trần Bình Trọng, Bình Thạnh; giá xe số 120.000đ/ngày, xe ga 200.000đ/ngày; mỗi xe đi kèm 2 mũ bảo hiểm đạt chuẩn, bảo hiểm và áo mưa; giao xe miễn phí trong phạm vi 10km; cam kết đổi xe theo yêu cầu nếu khách phản ánh xe cũ, hỏng; đánh giá 4.4/5.",
+      "claim_supported": "Mỗi chiếc xe sẽ đi kèm với 2 mũ bảo hiểm đạt chuẩn và bảo hiểm. Ngoài ra nhà xe còn tâm lý chuẩn bị áo mưa cho khách — Cửa hàng cam kết sẽ đổi xe theo yêu cầu khách hàng nếu nhận được phản ánh xe cũ, hỏng — dịch vụ giao xe miễn phí trong phạm vi 10km — Bike Saigon — Điện thoại: 0974 424 163 — Cơ sở 1: 14 Phạm Cự Lượng, Tân Sơn Hòa, Tân Bình (gần sân bay) — Cơ sở 2: 413 Lê Văn Sỹ, Nhiêu Lộc, Quận 3 — Cơ sở 3: 59 Trần Bình Trọng, Bình Thạnh — Giá thuê xe số: 120.000đ/ngày — Giá thuê xe ga: 200.000đ/ngày — 4.4/5"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-sai-gon/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Thạnh Phát (446 Nguyễn Thái Sơn, Phường 5, Gò Vấp; điện thoại 0909 924 925) có giá thuê 50.000đ – 250.000đ/ngày, các loại xe siêu tốt chỉ từ 40.000đ/ngày; thuê dài hạn theo tuần, theo tháng nhận ưu đãi lớn hơn; có dịch vụ giao xe tận nơi tại bất kỳ đâu trong quận Bình Thạnh; thủ tục chỉ cần giấy tờ cơ bản; đánh giá 5.0/5.",
+      "claim_supported": "Các loại xe tại đây có mức giá siêu tốt, chỉ từ 40k/ngày rất phù hợp với ngân sách đi lại của nhiều người. Nếu bạn thuê xe dài hạn theo tuần, theo tháng thì còn nhận được ưu đãi lớn hơn nữa — Thêm vào đó còn có dịch vụ giao xe tận nơi tại bất kì đâu trong quận Bình Thạnh nữa — Thạnh Phát — Điện thoại: 0909 924 925 — Địa chỉ: 446 Nguyễn Thái Sơn, Phường 5, Gò Vấp — Giá thuê xe: 50.000đ – 250.000đ/ngày — 5.0/5"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-sai-gon/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Vinasat (208 Nguyễn Hữu Cảnh, Vinhomes Tân Cảng, Bình Thạnh; điện thoại 0913 122 111) nằm sát khu Vinhomes, đồng giá 50.000đ/ngày với nhiều loại xe kể cả sinh viên; bảng giá ghi xe số 100.000đ/ngày, xe ga 150.000đ/ngày; có cho thuê cả xe cub cho người chưa có bằng lái; giao xe miễn phí tại bến tàu, sân bay; đánh giá 3.0/5.",
+      "claim_supported": "giá cả tại đây siêu mềm, đồng giá 50k/ngày với nhiều loại xe. Đây là mức giá phù hợp với nhiều đối tượng, kể cả sinh viên — Đặc biệt ở đây còn cho thuê cả xe cub cho các bạn chưa có bằng lái nữa đó — cửa hàng này còn có dịch vụ giao xe miễn phí tại bến tàu, sân bay — Vinasat — Điện thoại: 0913.122.111 — Địa chỉ: 208 Nguyễn Hữu Cảnh, Vinhomes Tân Cảng, Bình Thạnh — Giá thuê xe số: 100.000đ/ngày — Giá thuê xe ga: 150.000đ/ngày — 3.0/5"
+    },
+    {
+      "source_url": "https://motogo.vn/cho-thue-xe-may-sai-gon-quan-1/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Cửa hàng đường Phạm Ngũ Lão (353 2/5 Phạm Ngũ Lão, quận 1; điện thoại 093 882 08 13) gửi hợp đồng rõ ràng, minh bạch, thủ tục tinh giảm; phần lớn xe cho thuê là xe tay ga; giá xe số 50.000đ/ngày, xe ga 100.000đ – 400.000đ/ngày; đánh giá 4.8/5.",
+      "claim_supported": "Khi đặt thuê xe tại đây mọi người sẽ được gửi hợp đồng rất rõ ràng, minh bạch — Các thủ tục được tinh giảm hết cỡ, tạo điều kiện tối đa cho khách hàng — Điểm nổi bật tại đơn vị cho thuê xe máy quận 10 này là chất Sài thành. Phần lớn xe cho thuê tại đây là xe tay ga — Phường Phạm Ngũ Lão — Điện thoại: 093 882 08 13 — Giá thuê xe số: 50.000đ/ngày — Giá thuê xe ga: 100.000đ – 400.000đ/ngày — 4.8/5"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-sai-gon/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "An Đức Motorbike (18A/61 Nguyễn Thị Minh Khai, Đa Kao, quận 1; điện thoại 0903 162 408) có nhiều loại xe đa dạng đạt chuẩn chất lượng, có bảng giá niêm yết nhưng thỉnh thoảng có giá ưu đãi; trong cửa hàng có hoa quả gọt sẵn cho khách, chủ cửa hàng ưu tiên khách từ miền Bắc vào Nam du lịch; giá xe số 100.000đ/ngày, xe ga 150.000đ/ngày; đánh giá 4.0/5.",
+      "claim_supported": "Tất cả các loại xe đều đạt chuẩn chất lượng với đầy đủ phụ tùng — Mặc dù có bảng giá niêm yết nhưng đôi khi bạn sẽ được thuê xe với mức giá ưu đãi hơn đó — trong cửa hàng thường xuyên có hoa quả gọt sẵn cho khách đến thuê xe thưởng thức. Anh chủ cửa hàng còn hay ưu tiên cho khách từ miền Bắc vào Nam du lịch nữa — An Đức Motorbike — Điện thoại: 0903.162.408 — Địa chỉ: 18A/61 Nguyễn Thị Minh Khai, Đa Kao, Quận 1 — Giá thuê xe số: 100.000đ/ngày — Giá thuê xe ga: 150.000đ/ngày — 4.0/5"
+    }
+  ]
+}
