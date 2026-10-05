@@ -40,7 +40,8 @@ function mkSB() {
     return rel !== '_drafts' && !rel.startsWith('_drafts' + path.sep)
       && rel !== 'pipeline' && !rel.startsWith('pipeline' + path.sep)
       && !path.basename(s).startsWith('content-matrix.csv.part')
-      && rel !== 'tests' && !rel.startsWith('tests' + path.sep); // tests không cần trong sandbox
+      && rel !== 'reports' + path.sep + 'incidents' && !rel.startsWith('reports' + path.sep + 'incidents' + path.sep)
+      && rel !== 'tests' && !rel.startsWith('tests' + path.sep); // tests không cần trong sandbox; incidents production (audit committed) KHÔNG được vào sandbox — test đếm incident phải cô lập
   } });
   const parts = fs.readdirSync(DATA).filter(f => /^content-matrix\.csv\.part/.test(f)).sort();
   if (parts.length) fs.writeFileSync(path.join(SB, 'data', 'content-matrix.csv'),

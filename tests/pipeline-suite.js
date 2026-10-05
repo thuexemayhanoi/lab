@@ -515,7 +515,37 @@ test('refill: nạp window 300 topic PLANNED đầu theo matrix order, không tr
 });
 
 // =====================================================================
-// BEHAVIOR — runtime off => IDLE-STOP trước khi claim (fail-closed)
+// BEHAVIOR — refill stale hygiene (bug main 2026-10-05: pending còn
+// A00129..A00174 dù các row này đã PUBLISHED qua vòng writer push-driven)
+// =====================================================================
+test('refill: dọn ID đã rời PLANNED khỏi pending (stale hygiene), giữ matrix order, top-up đủ window', () => {
+  const SB = mkSB();
+  try {
+    const rows = rowsOf(SB);
+    const planned = rows.filter(r => r.status === 'PLANNED').map(r => r.article_id);
+    const firstPlanned = planned[0];
+    // fixture: pending chứa row PUBLISHED (stale) ở đầu + trùng lặp — mô phỏng
+    // state production bị lỗi trên main (queue đầy 300, không bao giờ được prune)
+    const staleId = rows.find(r => r.status === 'PUBLISHED').article_id;
+    const dirty = [staleId, staleId, firstPlanned, ...planned.slice(1, 10)];
+    const stF = path.join(SB, 'data', 'state', 'pipeline-state.json');
+    fs.writeFileSync(stF, JSON.stringify(Object.assign(stateOf(SB), { pending: dirty }), null, 2));
+    const before = matrixBytes(SB);
+    const r1 = PIPE(SB, ['refill']);
+    assert.equal(r1.status, 0, r1.stdout + r1.stderr);
+    const st = stateOf(SB);
+    assert.ok(!st.pending.includes(staleId), 'ID đã PUBLISHED phải bị dọn khỏi pending');
+    assert.equal(new Set(st.pending).size, st.pending.length, 'không trùng topic');
+    assert.equal(st.pending.length, 300, 'queue được top-up đủ window sau khi dọn stale');
+    assert.deepEqual(st.pending, planned.slice(0, 300), 'queue = 300 PLANNED đầu theo matrix order');
+    assert.equal(st.pending[0], firstPlanned, 'đầu queue = PLANNED đầu matrix (next claim đúng tiếp)');
+    assert.deepEqual(matrixBytes(SB), before, 'refill KHÔNG bao giờ sửa matrix');
+    // idempotent
+    const r2 = PIPE(SB, ['refill']);
+    assert.equal(r2.status, 0);
+    assert.deepEqual(stateOf(SB).pending, st.pending);
+  } finally { rmSB(SB); }
+});
 // =====================================================================
 test('idle: WRITER_RUNTIME chưa cấu hình => pipeline IDLE, KHÔNG claim/viết/publish, queue sẵn sàng', () => {
   const SB = mkSB();

@@ -193,12 +193,32 @@ function staleDraftSweep(rows) {
 function plannedIds(rows) { return rows.filter(r => r.status === 'PLANNED').map(r => r.article_id); }
 function refill(state, rows) {
   const planned = plannedIds(rows);
+  const plannedPos = new Map(planned.map((id, i) => [id, i]));
   state.planned_total = planned.length;
-  if (state.pending.length < PCFG.queue_refill_min) {
-    state.pending = planned.slice(0, PCFG.queue_refill_target);
-    return true;
+  // STALE HYGIENE: queue là write-ahead window, KHÔNG phải snapshot vĩnh viễn.
+  // Row đã rời PLANNED (PUBLISHED/BLOCKED/đang xử lý qua vòng writer push-driven
+  // hay cycle trước) PHẢI bị dọn khỏi pending — nếu không queue stale mãi mãi
+  // (lỗi đã xảy ra trên main: pending còn A00129..A00174 dù các row này đã
+  // PUBLISHED). Đồng thời: bỏ trùng, sắp lại theo matrix order.
+  const kept = [];
+  const seen = new Set();
+  for (const id of state.pending) {
+    if (plannedPos.has(id) && !seen.has(id)) { seen.add(id); kept.push(id); }
   }
-  return false;
+  if (kept.length) kept.sort((a, b) => plannedPos.get(a) - plannedPos.get(b));
+  // top-up window: sau khi dọn stale, nạp tiếp PLANNED đầu theo matrix order
+  // cho đủ queue_refill_target (giữ hành vi cũ khi queue rỗng/thiếu).
+  if (kept.length < PCFG.queue_refill_target) {
+    for (const id of planned) {
+      if (seen.has(id)) continue;
+      seen.add(id); kept.push(id);
+      if (kept.length >= PCFG.queue_refill_target) break;
+    }
+  }
+  const changed = kept.length !== state.pending.length ||
+    kept.some((id, i) => state.pending[i] !== id);
+  state.pending = kept;
+  return changed;
 }
 
 // --------------------------- writer phase ---------------------------------
