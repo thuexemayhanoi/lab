@@ -1,0 +1,120 @@
+{
+  "article_id": "A00172",
+  "primary_keyword": "giá thuê Wave Điện Biên",
+  "secondary_keywords": [
+    "thue xe Wave Dien Bien",
+    "cho thue Honda Wave Dien Bien",
+    "thue xe so Dien Bien Phu"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave tại Điện Biên: bảng giá tham khảo ghi xe số 80.000đ – 120.000đ/ngày, xe ga 120.000đ – 250.000đ/ngày; cả 5 cơ sở đều ghi rõ xe số Honda Wave 110cc trong danh mục; Đức Tài cho thuê không cần cọc — chỉ để lại CMND/CCCD/hộ chiếu; Anh Tuấn giao xe tận nơi; Phương Dung ở Mường Nhé kết hợp homestay",
+  "research_date": "2026-10-05",
+  "geo_entities": [
+    "Điện Biên",
+    "Điện Biên Phủ",
+    "Him Lam",
+    "Phường Thanh Bình",
+    "Mường Nhé",
+    "Võ Nguyên Giáp",
+    "sân bay Điện Biên"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe tay ga",
+    "xe côn tay",
+    "xe cào cào"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Wave",
+    "Sirius",
+    "Vision",
+    "Air Blade",
+    "Lead",
+    "Nouvo",
+    "Exciter",
+    "Winner"
+  ],
+  "questions_found": [
+    "Thuê Honda Wave ở Điện Biên giá bao nhiêu một ngày?",
+    "Ở Điện Biên nơi nào có sẵn xe Wave cho thuê?",
+    "Thuê xe máy Điện Biên có cần đặt cọc không?",
+    "Có nơi nào giao xe tận nơi ở Điện Biên không?",
+    "Thuê xe máy ở Mường Nhé ở đâu?"
+  ],
+  "related_queries": [
+    "gia thue wave dien bien",
+    "thue xe may dien bien phu",
+    "thue xe so dien bien gia re",
+    "cho thue xe may khong coc dien bien"
+  ],
+  "serp_patterns": [
+    "Trang tổng hợp về thuê xe máy Điện Biên ghi bảng giá tham khảo: xe số 80.000đ – 120.000đ/ngày, xe tay ga 120.000đ – 250.000đ/ngày, xe cào cào thỏa thuận thường trên 500.000đ",
+    "Cả 5 cơ sở đều ghi xe số Honda Wave trong danh mục: Phương Dung (Mường Nhé), Vương Khánh (Điện Biên Phủ), Đức Tài (Võ Nguyên Giáp, Him Lam — không cần cọc), Anh Tuấn (Thanh Bình — giao xe tận nơi), Anh Đức (Him Lam — cho mượn miễn phí gác ba ga, dây chằng)",
+    "Thủ tục: giữ bản gốc giấy tờ tùy thân, chuẩn bị bản photo công chứng; ưu tiên cơ sở làm hợp đồng rõ ràng, tránh giao kèo miệng; các cơ sở khác thường yêu cầu cọc tiền từ 500.000đ đến vài triệu"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-dien-bien/",
+      "source_domain": "motogo.vn",
+      "source_type": "aggregator — tổng hợp 5 địa chỉ cho thuê xe máy tại Điện Biên kèm loại xe, giá thuê, số điện thoại, thủ tục",
+      "date_accessed": "2026-10-05",
+      "reliability_note": "bài đăng 16:15 - 08/09/2026, đánh giá 4.8/5 (6 bình chọn), bảng giá theo nhóm xe số, xe ga, xe cào cào"
+    }
+  ],
+  "unique_angle": "Điện Biên là thị trường hiếm hoi mà cả 5 cơ sở ghi nhận đều liệt kê rõ Honda Wave 110cc trong danh mục xe số — Phương Dung, Vương Khánh, Đức Tài, Anh Tuấn, Anh Đức — với giá trải 80.000đ – 150.000đ/ngày, đúng khung bảng tham khảo xe số 80.000đ – 120.000đ/ngày. Điểm cần nhớ nhất: Đức Tài cho thuê không cần cọc tiền — chỉ để lại giấy tờ CMND/CCCD/hộ chiếu — trong khi các cơ sở khác thường yêu cầu cọc từ 500.000đ đến vài triệu; Anh Tuấn giao xe tận nơi theo yêu cầu cho khách mệt sau hành trình dài; Anh Đức cho mượn miễn phí gác ba ga, dây chằng cho khách phượt xa; Phương Dung là cơ sở hiếm hoi ở huyện cực tây Mường Nhé, kết hợp homestay, giảm giá mạnh khi thuê dài ngày và chị chủ nói được tiếng Lào",
+  "claim_evidence": [
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-dien-bien/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Bảng giá thuê xe máy Điện Biên tham khảo: xe số 80.000đ – 120.000đ/ngày; xe tay ga 120.000đ – 250.000đ/ngày; xe cào cào thỏa thuận, thường trên 500.000đ. Các cửa hàng trong thành phố Điện Biên có mức giá khá tương tự nhau; khu vực xa trung tâm giá sẽ tăng lên một chút.",
+      "claim_supported": "Loại xe — Giá/ngày — Xe số — 80.000đ – 120.000đ — Xe tay ga — 120.000đ – 250.000đ — Xe cào cào — Thỏa thuận, thường >500.000đ — Các cửa hàng trong thành phố Điện Biên có mức giá khá tương tự nhau. Tuy nhiên tại các khu vực xa trung tâm hơn thì giá sẽ tăng lên một chút"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-dien-bien/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Phương Dung (Tổ dân cư 2, Trung Tâm Huyện Mường Nhé, Điện Biên; điện thoại 02303 740 868 – 0915 819 950) là cửa hàng cho thuê xe máy uy tín hiếm hoi tại Mường Nhé — huyện cực tây; xe số có Wave, Sirius 110cc, xe ga có AirBlade, Vision; giá 80.000đ – 150.000đ/ngày; kinh doanh cả homestay lẫn thuê xe nên thuê gộp xe và phòng rẻ hơn, thuê dài ngày được giảm nhiều; chị chủ thân thiện và nói được cả tiếng Lào.",
+      "claim_supported": "Phương Dung — Xe số: Wave, Sirius 110cc — Xe ga: AirBlade, Vision — 80.000đ -150.000đ — 02303 740 868 – 0915 819 950 — Mường Nhé là huyện cực tây của Tổ Quốc, là địa danh không thể bỏ qua khi đến Điện Biên. Khu vực này có khá ít cửa hàng cho thuê xe máy vì quá xa khu trung tâm. Vì thế nên cửa hàng Phương Dung là cái tên hiếm hoi cho thuê xe máy tốt tại đây — Phương Dung kinh doanh cả homestay lẫn dịch vụ cho thuê xe máy Điện Biên. Nhờ đó bạn sẽ nhận được khá nhiều ưu đãi khi sử dụng cả hai dịch vụ tại đây. Giá thuê gộp cả xe và phòng sẽ rẻ hơn bạn thuê ở nơi khác. Đặc biệt khi thuê dài ngày thì mức giá sẽ được giảm rất nhiều — sự thân thiện của chị chủ cũng giúp khách thấy thoải mái hơn nhiều. Chị nói được cả tiếng Lào nên bạn có thể học lỏm một chút"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-dien-bien/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Vương Khánh (thành phố Điện Biên Phủ; điện thoại 0904 875 050) là cái tên quen thuộc của du khách, kinh doanh nhiều năm; xe số có Wave 110cc, Sirius; xe ga có AirBlade, Vision, Lead; giá 80.000đ – 140.000đ/ngày — chỉ từ 80.000đ/ngày đã có một chiếc xe chắc chắn; xe cũ nhưng được kiểm tra thường xuyên, khách được kiểm tra kỹ trước khi chốt đơn, xe không ổn được đổi chiếc khác.",
+      "claim_supported": "Vương Khánh — Xe số: Wave 110cc, Sirius — Xe ga: AirBlade, Vision, Lead — 80.000đ -140.000đ — 0904 875 050 — Với nhiều năm kinh nghiệm trong nghề, nơi đây luôn cung cấp cho khách những dịch vụ tốt nhất — Vì cửa hàng kinh doanh lâu nên không tránh khỏi có xe cũ. Tuy nhiên chúng luôn được kiểm tra thường xuyên để đảm bảo các yếu tố an toàn. Trước khi chốt đơn bạn sẽ được kiểm tra xe kỹ từ trong ra ngoài. Nếu xe có điểm nào không ổn, hãy báo để được đổi một chiếc xe khác — mức giá thuê xe còn cực kỳ hợp lý. Với từ 80.000/ngày bạn đã có thể sở hữu được một chiếc xe chắc chắn đi vi vu Điện Biên"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-dien-bien/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Đức Tài (đường Võ Nguyên Giáp, Phường Him Lam, thành phố Điện Biên Phủ; điện thoại 0332 272 727) cho thuê xe không cần cọc — chỉ cần để lại giấy tờ như CMND/CCCD/hộ chiếu, trong khi các cơ sở khác thường yêu cầu cọc tiền từ 500.000đ đến vài triệu; xe số có Wave, Sirius 110cc; xe ga có AirBlade, Vision, Nouvo; bảng tổng hợp ghi 80.000đ – 150.000đ/ngày; giá thuê xe số từ 80.000đ – 150.000đ/ngày, xe ga 120.000đ – 250.000đ/ngày; dịch vụ hoạt động 24/24, khách đi xe khách sáng sớm cũng lấy xe ngay; thủ tục cực nhanh gọn.",
+      "claim_supported": "Đức Tài — Xe số: Wave, Sirius 110cc — Xe ga: AirBlade, Vision, Nouvo — 80.000đ -150.000đ — 0332 272 727 — Một điểm cực nổi bật của cửa hàng xe máy Đức Tài là thuê xe không cần cọc. Bình thường các cơ sở khác sẽ yêu cầu cọc tiền từ 500k đến vài triệu. Chính vì thế khi thuê xe tại đây bạn đã tiết kiệm được một khoản tiền không nhỏ rồi. Tất cả những gì bạn cần làm là để lại giấy tờ như CMND/CCCD/Hộ chiếu — giá thuê xe số là từ 80 000 – 150 000/ngày, đối với xe ga là 120 000 – 250 000/ngày — dịch vụ hoạt động 24/24 tại nơi đây cũng giúp ích cho khách hàng khá nhiều. Nếu bạn đi xe khách lên Điện Biên vào sáng sơm thì cũng lấy xe ngay được, không cần chờ đợi. Chính sách này cộng với thủ tục cực nhanh gọn đã khiến địa điểm này thu hút được rất nhiều khách hàng quen đến thuê xe"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-dien-bien/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Anh Tuấn (114, Tổ 4, Phường Thanh Bình, Him Lam, thành phố Điện Biên Phủ; điện thoại 0215 386 6866) kinh doanh thuê xe từ lâu, uy tín; xe số có Yamaha, Honda Wave; xe ga có AirBlade, Vision, Lead, Nouvo; bảng tổng hợp ghi 80.000đ – 150.000đ/ngày; có dịch vụ giao xe máy tận nơi theo yêu cầu — chỉ cần một cuộc gọi, xe đến đúng địa chỉ; kèm dịch vụ mũ bảo hiểm, bản đồ; nhân viên tư vấn cả vấn đề xe thuê và du lịch.",
+      "claim_supported": "Anh Tuấn — Xe số: Yamaha, Honda Wave — Xe ga: AirBlade, Vision, Lead, Nouvo — 80.000đ -150.000đ — 0215 386 6866 — Cửa hàng cho thuê xe máy của Anh Tuấn là cái tên quen thuộc với du khách Điện Biên. Nơi đây đã kinh doanh thuê xe máy Điện Biên từ lâu nên rất uy tín — nơi đây còn có dịch vụ giao xe máy tận nơi theo yêu cầu. Nếu bạn thấy quá mệt mỏi sau chuyến hành trình dài lên Điên Biên thì nên sử dụng dịch vụ này. Chỉ cần một cuộc gọi vào số bên trên đặt xe là được. Ngay lập tức chiếc xe bạn mong muốn đã đến đúng địa chỉ của bạn — Họ sẵn sàng tư vấn tất cả vấn đề về xe thuê và du lịch. Ngoài ra những dịch vụ đi kèm như mũ bảo hiểm hay bản đồ cũng rất vừa ý khách hàng"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-dien-bien/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Anh Đức (Him Lam, thành phố Điện Biên Phủ; điện thoại 0968 734 734 – 0869 190 190) sở hữu lượng xe máy đồ sộ, đa dạng hãng xe và độ cũ mới; xe số có Wave, Sirius 110cc; xe ga có Lead, Vision, AirBlade; xe côn có Exciter, Winner 150cc; bảng tổng hợp ghi 100.000đ – 150.000đ/ngày; chỉ cần từ 80.000đ – 120.000đ/ngày đã thuê được một chiếc xe tốt; khách được mượn miễn phí vật phẩm như gác ba ga, dây chằng — hữu ích cho khách phượt xa, dài ngày.",
+      "claim_supported": "Anh Đức — Xe số: Wave, Sirius 110cc — Xe ga:Lead, Vision, AirBlade — Xe côn: Exciter, Winner 150cc — 100.000đ -150.000đ — 0968 734 734 – 0869 190 190 — Sở hữu lượng xe máy đồ sộ, khách đến đây có thể dễ dàng chọn lựa xe để thuê. Không chỉ đa dạng về hãng xe mà độ cũ mới của từng chiếc cũng khác nhau — giá thuê xe tại Anh Đức cũng khá dễ chịu. Chỉ cần bỏ ra từ 80.000 -120.000/ngày là bạn đã thuê được một chiếc xe tốt rồi đó. Đặc biệt đối với những bạn đi phượt xa, dài ngày thì nên chọn những chiếc xe thật trâu để đi sướng — bạn còn mượn được nhiều vật phẩm như gác ba ga hay dây chằng hoàn toàn miễn phí nữa đó"
+    },
+    {
+      "source_url": "https://motogo.vn/thue-xe-may-dien-bien/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Thủ tục thuê xe máy tại Điện Biên: chuẩn bị sẵn giấy tờ tùy thân cơ bản — yêu cầu bắt buộc của tất cả cửa hàng, thường giữ lại bản gốc nên cần chuẩn bị thêm bản photo công chứng hoặc giấy tờ có giá trị tương tự; chú ý hợp đồng thuê xe và tiền đặt cọc — các đơn vị uy tín thực hiện thủ tục qua hợp đồng và cam kết quy định trách nhiệm, quyền lợi; nơi nào chỉ giao kèo bằng miệng thì khả năng quyền lợi bị xâm phạm rất cao, nên ưu tiên cơ sở uy tín.",
+      "claim_supported": "Trước hết hãy luôn chuẩn bị sẵn những loại giấy tờ tùy thân cơ bản. Đây là yêu cầu bắt buộc của tất cả các cửa hàng. Vì các địa chỉ này thường yêu cầu giữ lại bản gốc nên bạn cần chuẩn bị thêm nhiều thứ đề dùng khi cần thiết. Có thể là một loại giấy tờ có giá trị tương tự hoặc bản photo công chứng nhé — hãy chú ý đến hợp đồng thuê xe và tiền đặt cọc. Các đơn vị cho thuê xe máy uy tín thường thực hiện thủ tục thông qua các bản hợp đồng và cam kết. Các điều khoản trong đó sẽ quy định trách nghiệm và quyền lợi của bạn. Nếu nơi nào chỉ thực hiện giao kèo bằng miệng thì khả năng quyền lợi của bạn bị xâm phạm sẽ rất cao"
+    }
+  ]
+}
