@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-05T05:34:59.514Z",
+  "generated_at": "2026-10-05T05:50:36.207Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 175,
-    "PLANNED": 9825
+    "PUBLISHED": 177,
+    "PLANNED": 9823
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 169,
-      "PLANNED": 4831
+      "PUBLISHED": 171,
+      "PLANNED": 4829
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00168",
-  "next_claimable_id": "A00169",
+  "last_completed_id": "A00170",
+  "next_claimable_id": "A00171",
   "blocked": [],
   "published": [
     {
@@ -1048,6 +1048,18 @@
       "pk": "giá thuê Wave Đà Nẵng",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-da-nang/"
+    },
+    {
+      "id": "A00169",
+      "pk": "giá thuê Wave TP.HCM",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-tp-hcm/"
+    },
+    {
+      "id": "A00170",
+      "pk": "giá thuê Wave Cần Thơ",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-can-tho/"
     },
     {
       "id": "A00465",
