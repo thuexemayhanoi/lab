@@ -1,10 +1,8 @@
 {
   "version": 1,
-  "updated_at": "2026-10-05T17:29:58.924Z",
+  "updated_at": "2026-10-05T19:45:25.601Z",
   "cycle": 0,
   "pending": [
-    "A00175",
-    "A00176",
     "A00177",
     "A00178",
     "A00179",
@@ -302,9 +300,11 @@
     "A00472",
     "A00473",
     "A00474",
-    "A00475"
+    "A00475",
+    "A00476",
+    "A00477"
   ],
-  "planned_total": 9819,
+  "planned_total": 9817,
   "active": null,
   "last_cycle_summary": null,
   "last_stop": {
