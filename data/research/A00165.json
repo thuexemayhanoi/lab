@@ -1,0 +1,151 @@
+{
+  "article_id": "A00165",
+  "primary_keyword": "thuê Honda Wave Hà Nội",
+  "secondary_keywords": [
+    "thue xe Wave Ha Noi",
+    "cho thue Honda Wave Ha Noi",
+    "gia thue Wave Ha Noi"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave tại Hà Nội theo ngày, tuần, tháng và tiền cọc; Nguyễn Tú (Long Biên) niêm yết Wave 150.000đ/ngày, 700.000đ/tuần, 900.000đ – 1.200.000đ/tháng, cọc 2 – 3 triệu; Sao Hà Nội ghi Wave Alpha, S, RSX 130.000đ – 160.000đ/ngày kèm cọc 500.000đ – 3.000.000đ; Phùng Motobike phố cổ bán Wave rẻ nhất 120.000 vnđ/ngày; Gia Hưng có Wave trong nhóm xe số 100.000 – 150.000 vnđ/ngày",
+  "research_date": "2026-10-05",
+  "geo_entities": [
+    "Hà Nội",
+    "Long Biên",
+    "Bồ Đề",
+    "Nguyễn Văn Cừ",
+    "Hoàn Kiếm",
+    "Phố Cổ",
+    "Ngõ Huyện",
+    "Hàng Trống",
+    "Ba Đình",
+    "Dịch Vọng Hậu",
+    "Cầu Giấy",
+    "Thanh Xuân",
+    "Mỹ Đình",
+    "Nam Từ Liêm",
+    "Tây Hồ"
+  ],
+  "vehicle_entities": [
+    "xe số",
+    "xe tay ga",
+    "xe điện",
+    "xe 50cc"
+  ],
+  "brand_entities": [
+    "Honda",
+    "Yamaha"
+  ],
+  "model_entities": [
+    "Wave",
+    "Wave Alpha",
+    "Wave S",
+    "Wave RSX",
+    "Sirius",
+    "Jupiter",
+    "Vision",
+    "Air Blade",
+    "Click",
+    "Mio"
+  ],
+  "questions_found": [
+    "Thuê Honda Wave Hà Nội giá bao nhiêu một ngày?",
+    "Thuê Wave Hà Nội theo tuần hoặc tháng giá thế nào?",
+    "Thuê Honda Wave ở Hà Nội cần đặt cọc bao nhiêu?",
+    "Ở phố cổ Hà Nội nơi nào cho thuê xe Wave giá rẻ?",
+    "Thuê Wave Hà Nội có được giao xe tận nơi không?"
+  ],
+  "related_queries": [
+    "thue wave ha noi",
+    "gia thue xe wave ha noi",
+    "cho thue wave ha noi",
+    "thue xe so ha noi gia re"
+  ],
+  "serp_patterns": [
+    "Trang chủ của cơ sở Nguyễn Tú (Long Biên) công bố bảng giá rõ ràng theo ngày, tuần, tháng: Honda Wave 150.000đ/ngày, 700.000đ/tuần, 900.000đ – 1.200.000đ/tháng",
+    "Thuê Xe Máy Sao Hà Nội công bố bảng giá 2022: Honda Wave Alpha, S, RSX 130.000đ – 160.000đ/ngày tùy nội thành hay ngoại thành, cọc 500.000đ – 3.000.000đ, thuê tháng xe số 1.500.000đ – 1.800.000đ",
+    "Blog tổng hợp của Mytour liệt kê Phùng Motobike (Ngõ Huyện, Hàng Trống) có Wave rẻ nhất 120.000 vnđ/ngày và Gia Hưng Motobike Retail có Wave trong nhóm xe số 100.000 – 150.000 vnđ/ngày"
+  ],
+  "official_sources": [],
+  "supporting_sources": [
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "source_type": "vendor — cơ sở cho thuê xe máy Hà Nội Nguyễn Tú, công bố bảng giá theo ngày/tuần/tháng kèm thủ tục và tiền cọc",
+      "date_accessed": "2026-10-05",
+      "reliability_note": "bảng giá niêm yết trực tiếp trên website cơ sở, kèm địa chỉ và hotline"
+    },
+    {
+      "source_url": "https://thuexemaysaohanoi.com/bang-gia/",
+      "source_domain": "thuexemaysaohanoi.com",
+      "source_type": "vendor — bảng giá cho thuê xe máy tại Hà Nội của Thuê Xe Máy Sao Hà Nội theo loại xe, kèm mức đặt cọc",
+      "date_accessed": "2026-10-05",
+      "reliability_note": "bảng giá công khai theo từng dòng xe, có cả giá thuê tháng"
+    },
+    {
+      "source_url": "https://mytour.vn/vi/blog/bai-viet/15-dich-vu-cho-thue-xe-may-tot-nhat-va-gia-re-tai-ha-noi.html",
+      "source_domain": "mytour.vn",
+      "source_type": "aggregator — tổng hợp 15 dịch vụ cho thuê xe máy tại Hà Nội kèm địa chỉ, điện thoại và mức giá tham khảo",
+      "date_accessed": "2026-10-05",
+      "reliability_note": "bài tổng hợp du lịch, nêu giá tham khảo từng cơ sở trong khu phố cổ"
+    }
+  ],
+  "unique_angle": "Honda Wave là dòng xe số phổ biến nhất bảng giá của các nhà xe Hà Nội và có mức chênh đáng kể giữa ba khu vực: phố cổ với Phùng Motobike bán Wave rẻ nhất 120.000 vnđ/ngày và Gia Hưng cho nhóm xe số 100.000 – 150.000 vnđ/ngày; Long Biên với Nguyễn Tú niêm yết đồng giá 150.000đ/ngày nhưng rẻ nhất khi thuê dài hạn — 700.000đ/tuần và 900.000đ – 1.200.000đ/tháng; khu Cầu Giấy với Sao Hà Nội ghi Wave Alpha, S, RSX 130.000đ – 160.000đ/ngày tùy nội thành hay ngoại thành kèm cọc 500.000đ – 3.000.000đ. Tiền cọc dòng Wave dao động từ 500.000đ ở mức thấp nhất tới 2 – 3 triệu tại Nguyễn Tú, thấp hơn nhiều so với cọc của các dòng xe ga như Vision hay Air Blade",
+  "claim_evidence": [
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-05",
+      "claim": "Bảng giá của Nguyễn Tú ghi: Honda Wave — xe số 150.000đ/ngày; giá thuê Honda Wave và Yamaha Sirius theo tuần 700.000đ/tuần; theo tháng 900.000đ – 1.200.000đ/tháng. Xe số dễ điều khiển, tiết kiệm xăng, phù hợp khách du lịch và người đi công tác.",
+      "claim_supported": "Honda Wave – xe số: 150.000đ/ngày. — Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 150.000đ/ngày. Giá tuần 700.000đ; giá tháng 900.000–1.200.000đ. — Giá thuê xe số theo tuần: Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 700.000đ/tuần. — Giá thuê xe số theo tháng: Giá thuê Honda Wave và Yamaha Sirius tại Nguyễn Tú: 900.000–1.200.000đ/tháng. — Dịch vụ cho thuê xe máy Honda Wave tại Hà Nội, phù hợp cho khách du lịch và người đi công tác. Xe số dễ điều khiển, tiết kiệm xăng"
+    },
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-05",
+      "claim": "Tiền đặt cọc tham khảo tại Nguyễn Tú: Honda Wave 2 – 3 triệu; Honda Vision 4 – 5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu. Thủ tục gồm điền hợp đồng thuê xe, ký hợp đồng dịch vụ ghi rõ giá thuê, thời gian, trách nhiệm hai bên, thanh toán tiền thuê cùng tiền cọc; tiền cọc và điều kiện hoàn cọc thực hiện theo hợp đồng.",
+      "claim_supported": "Tiền đặt cọc tham khảo: Honda Wave 2–3 triệu; Honda Vision 4–5 triệu; Honda Air Blade 3 triệu; Honda Click/Yamaha Mio 2 triệu. — Điền hợp đồng thuê xe: cung cấp thông tin cá nhân + giấy tờ. — Ký hợp đồng dịch vụ: ghi rõ giá thuê, thời gian, trách nhiệm 2 bên. — Thanh toán: tiền thuê + tiền cọc. Khi kết thúc thuê, tiền cọc và điều kiện hoàn cọc được thực hiện theo thỏa thuận/hợp đồng thuê xe"
+    },
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-05",
+      "claim": "Nguyễn Tú có địa điểm chính tại Long Biên (112 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội; điện thoại 0942 467 674; giờ 09:00 – 21:00, không giao xe máy ngoài giờ), hỗ trợ giao xe theo khu vực tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành; xe mới chạy êm, cọc nhẹ, thủ tục nhanh; đội mũ bảo hiểm chuẩn; khách được tư vấn loại xe theo thời gian thuê.",
+      "claim_supported": "Điểm khác biệt của Nguyễn Tú: địa điểm chính tại Long Biên, hỗ trợ giao xe theo khu vực và tư vấn loại xe theo thời gian thuê — Giao xe tận nơi tại Hà Nội theo khu vực; thời gian và chi phí giao nhận được xác nhận trước khi đặt xe — Chúng tôi giao tận nơi tại Long Biên, Hoàn Kiếm, Phố Cổ, Ba Đình và các quận nội thành — Địa chỉ chuẩn: 112 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội 100000 — Điện thoại: 0942 467 674 · 09:00 – 21:00 · Không giao xe máy ngoài giờ — Đội mũ bảo hiểm chuẩn (với xe máy/xe ga/xe 50cc) — cho thuê xe máy theo ngày, tuần hoặc tháng, xe mới chạy êm, cọc nhẹ, thủ tục nhanh chóng"
+    },
+    {
+      "source_url": "https://thuexemaysaohanoi.com/bang-gia/",
+      "source_domain": "thuexemaysaohanoi.com",
+      "date_accessed": "2026-10-05",
+      "claim": "Bảng giá của Thuê Xe Máy Sao Hà Nội ghi: Honda Wave Alpha, S, RSX 130.000đ – 160.000đ/ngày (nội thành – ngoại thành), tiền đặt cọc 500.000đ – 3.000.000đ. Theo cùng bảng, Honda Vision, Lead 2015 ở mức 200.000đ – 230.000đ/ngày và Honda Vision, Lead 2019 ở mức 220.000đ – 250.000đ/ngày với cọc 1.000.000đ – 10.000.000đ; Honda Airblade 2013 ở mức 180.000đ – 210.000đ/ngày và Honda Airblade 2017 ở mức 220.000đ – 250.000đ/ngày với cọc 2.000.000đ – 10.000.000đ. Cho thuê theo tháng đi trong Hà Nội: xe số 1.500.000đ – 1.800.000đ với cọc 3.000.000đ. Cơ sở đặt tại 56 ngách 66/18 Dịch Vọng Hậu, hotline 0836973056 mở 08:00 – 21:30; khu vực phố cổ, Thanh Xuân gọi 0832740990; khu vực Mỹ Đình, Nam Từ Liêm, Cầu Giấy, Tây Hồ gọi 0977128742.",
+      "claim_supported": "Honda Wave Alpha, S, RSX — 130.000 – 160.000 — 500.000 – 3.000.000 — Honda Vision, Lead 2015 — 200.000 – 230.000 — Honda Vision, Lead 2019 — 220.000 – 250.000 — 1.000.000 – 10.000.000 — Honda Airblade 2013 — 180.000 – 210.000 — Honda Airblade 2017 — 220.000 – 250.000 — 2.000.000 – 10.000.000 — Giá thuê xe máy tháng (đi trong Hà Nội) — Xe Số — 1.500.000 – 1.800.000 — 3.000.000 — Hotline (08.00 - 21.30) : 0836973056 — Khu vực phố cổ, Thanh Xuân 0832740990 — Khu vực Mỹ Đình, Nam Từ Liêm, Cầu Giấy, Tây Hồ 0977128742 — Địa chỉ: 56 ngách 66/18 Dịch Vọng Hậu"
+    },
+    {
+      "source_url": "https://thuexemaysaohanoi.com/bang-gia/",
+      "source_domain": "thuexemaysaohanoi.com",
+      "date_accessed": "2026-10-05",
+      "claim": "Sao Hà Nội ghi nhận thuê xe máy dài ngày có chênh lệch giá lớn; khách có nhu cầu đi lại trong Hà Nội phục vụ công tác dài ngày nên chọn hình thức thuê theo tháng để có chi phí hợp lý nhất; ngoài ra cơ sở có 4 cách đặt xe: đặt tại website, inbox fanpage, gửi email hoặc gọi hotline.",
+      "claim_supported": "Như các bạn thấy, thuê xe máy dài ngày sẽ có sự chênh lệch giá lớn, đặc biệt nếu các bạn có nhu cầu thuê xe dài hạn đi lại trong thành phố Hà Nội phục vụ cho các mục đích như công tác dài ngày thì nên lựa chọn hình thức thuê xe máy theo tháng để có chi phí hợp lý nhất — 4 cách thuê xe tại Vivumotor: Đặt tại website Thuê Xe Máy Sao Hà Nội – Vivumotor, Inbox Fanpage, Email đến thuexemay13535@gmail.com, Gọi hotline: 0836973056"
+    },
+    {
+      "source_url": "https://mytour.vn/vi/blog/bai-viet/15-dich-vu-cho-thue-xe-may-tot-nhat-va-gia-re-tai-ha-noi.html",
+      "source_domain": "mytour.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Phùng Motobike (13 Ngõ Huyện, Hàng Trống, Hoàn Kiếm, Hà Nội; điện thoại 965 93 6677) là địa chỉ yêu thích của du khách và người dân địa phương; ngoài cho thuê xe máy còn mua bán, kinh doanh xe máy và dịch vụ bảo dưỡng xe cho khách du lịch; thái độ phục vụ chuyên nghiệp, nhiệt tình; giá thuê thay đổi theo loại xe — xe rẻ nhất là xe Wave với mức giá chỉ 120.000 vnđ/ngày.",
+      "claim_supported": "Phùng Motobike là địa chỉ yêu thích của cả du khách và người dân địa phương. Không chỉ cho thuê xe máy, nơi đây còn mua bán và kinh doanh xe máy, cùng với dịch vụ bảo dưỡng xe dành cho khách du lịch — Giá thuê xe thay đổi tùy theo loại xe. Xe rẻ nhất là xe Wave với mức giá chỉ 120.000 vnđ/ngày. — Phùng Motobike — Địa chỉ: 13 Ngõ Huyện, Hàng Trống, Hoàn Kiếm, Hà Nội — Điện thoại: 965 93 6677"
+    },
+    {
+      "source_url": "https://mytour.vn/vi/blog/bai-viet/15-dich-vu-cho-thue-xe-may-tot-nhat-va-gia-re-tai-ha-noi.html",
+      "source_domain": "mytour.vn",
+      "date_accessed": "2026-10-05",
+      "claim": "Gia Hưng Motobike Retail (41 Ngõ Huyện, Hàng Trống, Hoàn Kiếm, Hà Nội; điện thoại 093 634 51 23) là địa chỉ uy tín cho thuê xe máy tại phố cổ Hà Nội trên đường Hàng Trống; giá thuê dao động từ 100.000 vnđ đến 150.000 vnđ/xe/ngày tùy loại xe, thương hiệu và độ mới; có nhiều loại xe lựa chọn gồm xe số (Wave, Jupiter…) và xe ga (Sym, Lead…).",
+      "claim_supported": "Gia Hưng Motobike Retail được biết đến là một địa chỉ uy tín và chất lượng để thuê xe máy, đặc biệt tại khu phố cổ Hà Nội trên đường Hàng Trống — Giá thuê xe tại Gia Hưng Motobike Retail dao động từ 100.000 vnđ đến 150.000 vnđ/xe/ngày. — Tại đây có nhiều loại xe để bạn lựa chọn, bao gồm xe số (Wave, Jupiter…) và xe ga (Sym, Lead,…). — Địa chỉ: 41 Ngõ Huyện, Hàng Trống, Hoàn Kiếm, Hà Nội — Điện thoại: 093 634 51 23"
+    },
+    {
+      "source_url": "https://thuexemaynguyentu.com/",
+      "source_domain": "thuexemaynguyentu.com",
+      "date_accessed": "2026-10-05",
+      "claim": "Lưu ý khi thuê xe tại Hà Nội theo hướng dẫn của Nguyễn Tú: kiểm tra tình trạng xe kỹ (phanh, đèn, còi, gương, lốp); ghi chú vào hợp đồng mọi vết trầy xước hoặc hỏng có sẵn; yêu cầu cửa hàng cung cấp giấy tờ xe và bảo hiểm nếu có; chuẩn bị thêm chi phí xăng, phí gửi xe, phí cầu đường; tuân thủ luật giao thông, không chở quá số người quy định, không sử dụng xe khi say rượu bia; giấy phép lái xe áp dụng theo loại phương tiện và quy định giao thông hiện hành.",
+      "claim_supported": "Kiểm tra tình trạng xe kỹ (phanh, đèn, còi, gương, pin, lốp) — Ghi chú vào hợp đồng mọi vết trầy/hỏng có sẵn — Yêu cầu cửa hàng cung cấp giấy tờ xe, bảo hiểm (nếu có) — Chuẩn bị thêm chi phí: xăng (xe máy), sạc pin (xe điện), gửi xe, phí cầu đường — Tuân thủ luật giao thông, không chở quá số người quy định. Không sử dụng xe khi say rượu bia — Giấy phép lái xe: áp dụng theo loại phương tiện và quy định giao thông hiện hành"
+    }
+  ]
+}
