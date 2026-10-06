@@ -23,9 +23,13 @@
 ## Internal linking
 
 - Every article links to: parent topic hub, relevant geo hub (if any),
-  relevant entity/model hub, 2–5 closely related articles.
+  relevant entity/model hub, 2–5 closely related **already-PUBLISHED** articles.
 - Editorial total: 4–8 internal links. No exact-match spam; no links purely
   for count. All links must resolve (tests enforce this).
+- **Never link to another article in the same write-ahead queue unless that
+  target is already PUBLISHED on fresh `main`.** A queued sibling is not a
+  valid internal-link target yet. This prevents staged-link repair cascades
+  when a later pair has not been published.
 
 ## Titles / meta
 
