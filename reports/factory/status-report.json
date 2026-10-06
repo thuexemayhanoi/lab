@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-06T13:11:51.522Z",
+  "generated_at": "2026-10-06T13:27:38.281Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 203,
-    "PLANNED": 9797
+    "PUBLISHED": 213,
+    "PLANNED": 9787
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 197,
-      "PLANNED": 4803
+      "PUBLISHED": 207,
+      "PLANNED": 4793
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00196",
-  "next_claimable_id": "A00197",
+  "last_completed_id": "A00206",
+  "next_claimable_id": "A00207",
   "blocked": [],
   "published": [
     {
@@ -1216,6 +1216,66 @@
       "pk": "giá thuê Wave Đồng Tháp",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-dong-thap/"
+    },
+    {
+      "id": "A00197",
+      "pk": "giá thuê Wave An Giang",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-an-giang/"
+    },
+    {
+      "id": "A00198",
+      "pk": "giá thuê Wave Cà Mau",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-ca-mau/"
+    },
+    {
+      "id": "A00199",
+      "pk": "thuê Honda Winner Hà Nội",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-honda-winner-ha-noi/"
+    },
+    {
+      "id": "A00200",
+      "pk": "giá thuê Winner Hải Phòng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-hai-phong/"
+    },
+    {
+      "id": "A00201",
+      "pk": "giá thuê Winner Huế",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-hue/"
+    },
+    {
+      "id": "A00202",
+      "pk": "giá thuê Winner Đà Nẵng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-da-nang/"
+    },
+    {
+      "id": "A00203",
+      "pk": "giá thuê Winner TP.HCM",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-tp-hcm/"
+    },
+    {
+      "id": "A00204",
+      "pk": "giá thuê Winner Cần Thơ",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-can-tho/"
+    },
+    {
+      "id": "A00205",
+      "pk": "giá thuê Winner Lai Châu",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-lai-chau/"
+    },
+    {
+      "id": "A00206",
+      "pk": "giá thuê Winner Điện Biên",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-dien-bien/"
     },
     {
       "id": "A00465",
