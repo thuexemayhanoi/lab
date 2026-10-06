@@ -57,6 +57,67 @@ function rowsOf(sb) { // cache theo mtime — tránh parse lại 10k dòng cho m
 function statusOf(sb, id) { const r = rowsOf(sb).find(x => x.article_id === id); return r && r.status; }
 
 // ------------------------------ sandbox ------------------------------------
+// Production may legitimately have an open PASS/REPAIR row while this suite
+// starts. Pipeline E2E fixtures must NOT inherit that live in-flight state,
+// otherwise unrelated tests adopt the real row as an orphan. Normalize only
+// the TEMP sandbox copy; production bytes are never touched.
+function normalizeSandboxProductionState(sb) {
+  const f = path.join(sb, 'data', 'content-matrix.csv');
+  const lines = fs.readFileSync(f, 'utf8').split('\n');
+  const H = parseLine(lines[0]);
+  const iId = H.indexOf('article_id'), iStatus = H.indexOf('status');
+  const iResearch = H.indexOf('research_status'), iQa = H.indexOf('qa_score');
+  const iRepair = H.indexOf('repair_attempts'), iPub = H.indexOf('published_date');
+  const open = new Set(['RESEARCH', 'WRITING', 'QA', 'REVIEW', 'REPAIR', 'PASS']);
+  const resetIds = [];
+  const quote = v => {
+    const s = String(v == null ? '' : v);
+    return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+  };
+  const out = [lines[0]];
+  for (const l of lines.slice(1)) {
+    if (!l.trim()) continue;
+    const row = parseLine(l);
+    if (open.has(row[iStatus])) {
+      resetIds.push(row[iId]);
+      row[iStatus] = 'PLANNED';
+      if (iResearch >= 0) row[iResearch] = 'NOT_STARTED';
+      if (iQa >= 0) row[iQa] = '';
+      if (iRepair >= 0) row[iRepair] = '0';
+      if (iPub >= 0) row[iPub] = '';
+    }
+    out.push(row.map(quote).join(','));
+  }
+  fs.writeFileSync(f, out.join('\n') + '\n');
+
+  for (const id of resetIds) {
+    for (const rel of [
+      path.join('data', 'research', id + '.json'),
+      path.join('data', 'qa', id + '.json'),
+      path.join('data', 'published', id + '.html')
+    ]) fs.rmSync(path.join(sb, rel), { force: true });
+  }
+
+  const rows = parseCSV(fs.readFileSync(f, 'utf8'));
+  const firstPlanned = rows.find(x => x.status === 'PLANNED');
+  const ckF = path.join(sb, 'data', 'state', 'checkpoint.json');
+  const ck = readJSON(ckF);
+  ck.active_chunk = [];
+  ck.next_claimable_id = firstPlanned ? firstPlanned.article_id : null;
+  ck.notes = 'pipeline-suite isolated sandbox baseline';
+  fs.writeFileSync(ckF, JSON.stringify(ck, null, 2) + '\n');
+
+  fs.writeFileSync(path.join(sb, 'data', 'state', 'writer-lock.json'),
+    JSON.stringify({ locked: false, holder: null, acquired_at: null, expires_at: null }, null, 2) + '\n');
+  fs.writeFileSync(path.join(sb, 'data', 'state', 'transaction.json'),
+    JSON.stringify({ active: false, id: null, started_at: null, operation: null, articles: [], notes: 'test sandbox baseline' }, null, 2) + '\n');
+
+  const plannedTotal = rows.filter(x => x.status === 'PLANNED').length;
+  fs.writeFileSync(path.join(sb, 'data', 'state', 'pipeline-state.json'),
+    JSON.stringify({ version: 1, updated_at: null, cycle: 0, pending: [], planned_total: plannedTotal,
+      active: null, last_cycle_summary: null, last_stop: null, stopped_reason: null }, null, 2) + '\n');
+}
+
 let sbSeq = 0;
 function mkSB(cfgOverrides) {
   const SB = path.join(os.tmpdir(), 'lab-pipeline-sb-' + process.pid + '-' + (++sbSeq));
@@ -70,6 +131,7 @@ function mkSB(cfgOverrides) {
   const parts = fs.readdirSync(DATA).filter(f => /^content-matrix\.csv\.part/.test(f)).sort();
   if (parts.length) fs.writeFileSync(path.join(SB, 'data', 'content-matrix.csv'),
     parts.map(p => fs.readFileSync(path.join(DATA, p), 'utf8')).join(''));
+  normalizeSandboxProductionState(SB);
   if (cfgOverrides) {
     const c = JSON.parse(fs.readFileSync(path.join(SB, 'config', 'pipeline.json'), 'utf8'));
     fs.writeFileSync(path.join(SB, 'config', 'pipeline.json'), JSON.stringify(Object.assign({}, c, cfgOverrides), null, 2));
