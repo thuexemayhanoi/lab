@@ -1,0 +1,60 @@
+{
+  "article_id": "A00240",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Sirius Điện Biên",
+  "secondary_keywords": [
+    "gia thue Sirius Dien Bien",
+    "cho thue Yamaha Sirius Dien Bien",
+    "thue xe so Dien Bien gia",
+    "gia thue xe may Dien Bien Phu"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Điện Biên: cửa hàng Anh Đức giá chỉ từ 80.000 – 120.000đ/ngày, giao nhận tận nơi ở sân bay Điện Biên giá 100k/ngày; khách sạn Hải Trang 80.000 – 150.000 đồng cho xe số, xe ga.",
+  "geo_id": "VN-A00240",
+  "geo_level": "province",
+  "province": "Điện Biên",
+  "locality": "",
+  "poi": "Đồi A1 – hầm Đờ Cát – bảo tàng Chiến thắng Điện Biên Phủ – Mường Phăng – sân bay Điện Biên",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê xe máy ở Điện Biên Phủ giá bao nhiêu?",
+    "Có cửa hàng nào giao xe tại sân bay Điện Biên không?",
+    "Thuê xe số Điện Biên rẻ nhất ở đâu?",
+    "Khách sạn nào ở Điện Biên có dịch vụ cho thuê xe?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Điện Biên — điểm đến lịch sử với đèo cao quanh co: mặt bằng thuê xe rẻ bậc cả nước (Anh Đức từ 80.000 – 120.000đ/ngày, giao tận sân bay 100k/ngày); Sirius là dòng xe số được ưa chuộng để chạy Mường Phăng, tum sinh thái trong khi giá côn tay cao vượt trội (120.000 – 250.000đ).",
+  "slug": "gia-thue-sirius-dien-bien",
+  "output_path": "thue-xe-may/gia-thue-sirius-dien-bien/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-dien-bien/",
+  "claim_evidence": [
+    {
+      "claim": "Cửa hàng Anh Đức tại Điện Biên có hơn 100 chiếc xe, giá thuê rẻ chỉ từ 80.000 – 120.000đ/ngày; có dịch vụ giao nhận tận nơi ở sân bay Điện Biên giá chỉ 100k/ngày.",
+      "claim_supported": "Cửa hàng thuê xe máy tại Điện Biên Anh Đức. Với số lượng xe hơn 100 chiếc đáp ứng tốt về nhu cầu đi lại và du lịch của khách hàng. Cùng Giá thuê xe rẻ chỉ từ 80.000 – 120.000/ ngày. Hơn nữa, địa chỉ cửa hàng có giao nhận tận nơi ở Sân bay Điện Biên giá chỉ 100k ngày khá rẻ.",
+      "source_url": "https://giahuy.org/thue-xe-may-dien-bien/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Khách sạn Hải Trang (gần trường Cao Đẳng Sư Phạm) cho thuê xe với mức giá 80.000 – 150.000 đồng cho xe số, xe ga và 120.000 – 250.000 đồng cho xe côn tay.",
+      "claim_supported": "Khách sạn cho thuê xe máy Hải Trang Khách sạn Hải Trang – địa chỉ nằm gần trường Cao Đẳng Sư Phạm. Mức giá thuê xe : 80.000 – 150.000 đồng cho xe số, xe ga; 120.000 – 250.000 đồng cho xe côn tay.",
+      "source_url": "https://giahuy.org/thue-xe-may-dien-bien/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Mặt bằng thuê xe số tại Điện Biên Phủ theo phân khối: xe số 50cc – 100cc giá thuê khoảng từ 150.000 VND – 200.000 VND/ngày; xe số 125cc – 150cc giá thuê khoảng từ 200.000 VND – 300.000 VND/ngày.",
+      "claim_supported": "Xe số 50cc – 100cc : Giá thuê khoảng từ 150.000 VND – 200.000 VND/ngày. Xe số 125cc – 150cc : Giá thuê khoảng từ 200.000 VND – 300.000 VND/ngày.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-dien-bien-phu.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn giahuy.org (Anh Đức hơn 100 chiếc, 80.000 – 120.000/ngày, giao sân bay 100k/ngày; khách sạn Hải Trang) và vexere.com (mặt bằng theo phân khối: xe số 50cc-100cc 150.000 – 200.000 VND/ngày)."
+}

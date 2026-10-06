@@ -1,0 +1,67 @@
+{
+  "article_id": "A00239",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Sirius Lai Châu",
+  "secondary_keywords": [
+    "gia thue Sirius Lai Chau",
+    "cho thue Yamaha Sirius Lai Chau",
+    "thue xe so Lai Chau gia",
+    "gia thue xe may Lai Chau"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Lai Châu: bảng giá MOTOGO ghi Yamaha Sirius 2015 – 2018 FI 100.000đ/ngày; Phúc An (đối diện bến xe) xe số 90.000đ – 120.000đ/ngày; nhà nghỉ Hoa Sữa cho thuê 150 -200k.",
+  "geo_id": "VN-A00239",
+  "geo_level": "province",
+  "province": "Lai Châu",
+  "locality": "",
+  "poi": "Đèo Ô Quy Hồ – Sìn Sẳng – Tam Đường – núi Fansipan (cửa ngõ) – bến xe Lai Châu",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Sirius ở Lai Châu giá bao nhiêu một ngày?",
+    "Cho thuê xe số Lai Châu ở đâu gần bến xe?",
+    "Đi đèo Ô Quy Hồ nên thuê xe gì?",
+    "Mức giá thuê xe ga tại Lai Châu thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Lai Châu — cực Tây Tây Bắc với đèo Ô Quy Hồ, Sìn Sẳng: Sirius là xe số leo đèo hợp lý nhất và được niêm yết thẳng trong bảng giá công khai (Sirius FI 2015–2018 100.000 vnd) — hiếm ở tỉnh vùng cao, nơi phần lớn cơ sở chỉ báo giá khi khách gọi.",
+  "slug": "gia-thue-sirius-lai-chau",
+  "output_path": "thue-xe-may/gia-thue-sirius-lai-chau/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-lai-chau/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe tham khảo tại Lai Châu ghi dòng xe số Yamaha Sirius 2015 – 2018 FI 100.000 vnd/ngày; cùng bảng ghi Wave S 100.000 vnd, Wave RS 100.000 vnd, Wave RSX – fi 110.000 vnd, Jupiter gravita 90.000 vnd.",
+      "claim_supported": "Xe số Wave S 100.000 vnd Xe số Wave RS 100.000 vnd Xe số Wave RSX – fi 110.000 vnd Xe số Yamaha Sirius 2015 – 2018 FI 100.000 vnd Xe số Yamaha Jupiter gravita 90.000 vnd",
+      "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Phúc An (đối diện bến xe Lai Châu, Hoàng Minh Giám, TP Lai Châu, điện thoại 0961 215 215) niêm yết giá thuê xe số 90.000đ – 120.000đ/ngày và xe ga 140.000đ – 150.000đ/ngày.",
+      "claim_supported": "Phúc An Điện thoại: 0961 215 215 Địa chỉ: Đối diện bến xe Lai Châu, Hoàng Minh Giám, Tp Lai Châu, Lai Châu Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cơ sở Thuê xe máy Lai Châu (51 Trần Hưng Đạo, phường Đoàn Kết, TP Lai Châu, điện thoại 0394 816 947) niêm yết giá thuê xe số 80.000đ – 100.000đ/ngày và xe ga 130.000đ – 140.000đ/ngày.",
+      "claim_supported": "Thuê xe máy Lai Châu Điện thoại: 0394 816 947 Địa chỉ: 51 Trần Hưng Đạo, Phường Đoàn Kết, Tp Lai Châu, Lai Châu Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Nhà nghỉ Hoa Sữa (179 Lê Duẩn, Tân Phong, Lai Châu) cho thuê xe máy thủ tục chỉ cần CCCD/CMND, mức giá cho thuê 150 -200k, nhiều loại xe từ Honda, Yamaha, Suzuki.",
+      "claim_supported": "Thủ tục ở nhà Nghỉ Hoa Sữa rất đơn giản chỉ cần có cccd, cmnd là có thể thuê. Với mức giá cho thuê 150 -200k, cùng nhiều loại xe từ chính hãng, Honda, Yamaha, suzuki.",
+      "source_url": "https://tripbike.net/thue-xe-may-lai-chau/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn motogo.vn (bảng giá 5 cửa hàng + bảng giá tham khảo có dòng Yamaha Sirius 2015-2018 FI 100.000 vnd) và tripbike.net (nhà nghỉ Hoa Sữa 150-200k)."
+}

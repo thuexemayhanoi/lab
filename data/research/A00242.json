@@ -1,0 +1,67 @@
+{
+  "article_id": "A00242",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Sirius Lạng Sơn",
+  "secondary_keywords": [
+    "gia thue Sirius Lang Son",
+    "cho thue Yamaha Sirius Lang Son",
+    "thue xe so Lang Son gia",
+    "gia thue xe may Lang Son"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Lạng Sơn: mặt bằng xe số dao động 130.000đ – 150.000đ/ngày; giá cho thuê phổ biến từ 100k – 180k; cửa hàng Trịnh Tuấn, Hoang Trường là địa chỉ tin cậy.",
+  "geo_id": "VN-A00242",
+  "geo_level": "province",
+  "province": "Lạng Sơn",
+  "locality": "",
+  "poi": "Đỉnh Mẫu Sơn – chợ Đông Kinh – cửa khẩu Hữu Nghị Quan – Bắc Sơn – bến xe Lạng Sơn",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê xe máy ở Lạng Sơn giá bao nhiêu?",
+    "Thuê Sirius đi Mẫu Sơn có phù hợp không?",
+    "Cho thuê xe Lạng Sơn ở đâu uy tín?",
+    "Giá thuê xe ga Lạng Sơn thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Lạng Sơn — Xứ Lặng với đỉnh Mẫu Sơn săn mây và chợ cửa khẩu: Sirius được các nhà xe Lạng Sơn đánh giá là mẫu xe bền bỉ leo dốc khỏe (cùng Wave Alpha, Wave RSX); mặt bằng xe số 130.000đ – 150.000đ/ngày là mốc tham chiếu cho hành trình săn mây Mẫu Sơn.",
+  "slug": "gia-thue-sirius-lang-son",
+  "output_path": "thue-xe-may/gia-thue-sirius-lang-son/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-lang-son/",
+  "claim_evidence": [
+    {
+      "claim": "Mức giá thuê xe số tại Lạng Sơn thường dao động trong khoảng 130.000đ – 150.000đ/ngày; dòng xe này phù hợp với sinh viên, người muốn tiết kiệm chi phí hoặc có kế hoạch đi phượt lên đỉnh Mẫu Sơn săn mây.",
+      "claim_supported": "Mức giá thuê xe số tại đây thường dao động trong khoảng 130.000đ – 150.000đ/ngày. Dòng xe này phù hợp nhất với các bạn sinh viên, người muốn tiết kiệm chi phí hoặc có kế hoạch đi phượt lên đỉnh Mẫu Sơn săn mây, ngắm tuyết.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-lang-son.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Các nhà xe Lạng Sơn cung cấp dòng xe số phổ thông với các mẫu xe bền bỉ như Honda Wave Alpha, Wave RSX hay Yamaha Sirius — ưu điểm leo dốc khỏe, đổ đèo an toàn nhờ phanh số; trên Vexere có nhà xe cho thuê xe số phổ thông không cần cọc trước từ 130.000 đ.",
+      "claim_supported": "phượt thủ khi đến Lạng Sơn, với các mẫu xe bền bỉ như Honda Wave Alpha, Wave RSX hay Yamaha Sirius. Ưu điểm tuyệt đối của dòng xe này là khả năng leo dốc khỏe, đổ đèo an toàn nhờ phanh số … Không cần cọc trước từ 130.000 đ",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-lang-son.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá cho thuê xe máy tại Lạng Sơn dao động từ 100k – 180k tùy loại xe.",
+      "claim_supported": "Giá cho thuê từ 100k – 180k bạn có thể kiếm được chiếc xe ưng ý, lại có thể lựa chọn chiếc xe phù hợp với lịch trình di chuyển của mình.",
+      "source_url": "https://tripbike.net/thue-xe-may-lang-son/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Hoang Trường cho thuê các mẫu xe đời cũ với giá 80-100k/ngày cho xe số, 120-150k/ngày cho xe tay ga và côn tay Exciter 200k/ngày.",
+      "claim_supported": "Hoang Trường là những mẫu xe đời cũ giá thuê 80-100k ngày cho xe số, 120-150k ngày cho các loại tay ga, và côn tay exciter 200k ngày.",
+      "source_url": "https://tripbike.net/thue-xe-may-lang-son/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn vexere.com (mặt bằng Lạng Sơn: xe số 130.000đ – 150.000đ/ngày, nhà xe xe số phổ thông từ 130.000 đ không cần cọc trước) và tripbike.net (giá cho thuê 100k – 180k; Hoang Trường 80-100k xe số)."
+}

@@ -1,0 +1,74 @@
+{
+  "article_id": "A00238",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Sirius Cần Thơ",
+  "secondary_keywords": [
+    "gia thue Sirius Can Tho",
+    "cho thue Yamaha Sirius Can Tho",
+    "thue xe so Can Tho gia",
+    "gia thue xe may Can Tho"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Cần Thơ: bảng giá giao tận nơi ghi nhóm xe số phổ thông (Wave RSX, Wave Alpha, Yamaha Sirius) 130.000 – 150.000đ; mức phổ biến xe số (Wave, Sirius) khoảng 130.000đ/ngày; nhà xe Siêu Tốc giao tận nơi từ 130.000đ.",
+  "geo_id": "VN-A00238",
+  "geo_level": "province",
+  "province": "Cần Thơ",
+  "locality": "",
+  "poi": "Bến Ninh Kiều – chợ nổi Cái Răng – nhà cổ Bình Thủy – cầu đi bộ Cần Thơ – bến xe Cần Thơ",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Sirius ở Cần Thơ giá bao nhiêu?",
+    "Có nhà xe nào giao tận nơi ở Cần Thơ không?",
+    "Thuê xe máy Cần Thơ cần cọc bao nhiêu?",
+    "Giá thuê xe ga ở Cần Thơ thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Cần Thơ — thủ phủ miền Tây với chợ nổi Cái Răng: Sirius xuất hiện trong bảng giá giao xe tận nơi của Vexere (nhóm xe số phổ thông 130.000 – 150.000đ) và được kênh tổng hợp ghi quanh 130.000đ/ngày — mức giá gần đỉnh mặt bằng xe số miền Tây vì xe phải chạy đê, đường dài.",
+  "slug": "gia-thue-sirius-can-tho",
+  "output_path": "thue-xe-may/gia-thue-sirius-can-tho/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-can-tho/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy giao xe tận nơi tại Cần Thơ ghi nhóm xe số phổ thông (Honda Wave RSX, Honda Wave Alpha, Yamaha Sirius) 130.000 – 150.000đ, xe số Honda Cub 50cc 180.000đ, nhóm xe ga phổ thông (Airblade, Lead, Vision) 150.000 – 200.000đ.",
+      "claim_supported": "Xe ga phổ thông (Honda Airblade, Honda Lead, Honda Vision) 150.000-200.000 Xe số phổ thông (Honda Wave RSX, Honda Wave Alpha, Yamaha Sirius) 130.000 – 150.000 Xe số Honda Cub 50cc 180.000 Bảng giá thuê xe máy giao xe tận nơi tại Cần Thơ",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-can-tho.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Mức giá thuê tại Cần Thơ dao động tùy loại xe: xe số (Wave, Sirius) khoảng 130.000đ/ngày; các dòng xe tay ga như AirBlade, Vision có giá 150.000đ/ngày.",
+      "claim_supported": "Mức giá thuê tại đây dao động tùy loại xe: xe số (Wave, Sirius) khoảng 130.000đ/ngày; các dòng xe tay ga như AirBlade, Vision có giá 150.000đ/ngày.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-can-tho.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Trên Vexere tại Cần Thơ, nhà xe Siêu Tốc (đánh giá 4.9, đời xe từ 2009) cho thuê xe số phổ thông kèm mũ bảo hiểm và 1 lít xăng, giao xe tận nơi, giá từ 130.000 đ; thanh toán cọc 100.000 đ/xe qua Vexere để xác nhận giữ xe.",
+      "claim_supported": "Xe số phổ thông Siêu Tốc 4.9 Đời xe: từ 2009 Mũ bảo hiểm, Xăng (1 lít) Giao xe tận nơi từ 130.000 đ … Thanh toán Cọc (100.000 đ/xe) qua Vexere để xác nhận giữ xe.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-can-tho.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Bảng giá thuê xe máy Cần Thơ 2026 của Thuê Xe Tây Đồ ghi xe số 120.000 – 150.000 VNĐ/ngày (phù hợp di chuyển xa, tiết kiệm xăng) và xe tay ga 150.000 – 200.000 VNĐ/ngày.",
+      "claim_supported": "Bảng Giá Thuê Xe Máy Cần Thơ 2026 Mới Nhất Xe Số 120.000 – 150.000 VNĐ/ngày Phù hợp di chuyển xa, tiết kiệm xăng Xe Tay Ga 150.000 – 200.000 VNĐ/ngày",
+      "source_url": "https://thuexetaydo.com/thue-xe-may-can-tho/",
+      "source_domain": "thuexetaydo.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "So với taxi (600.000 – 1.000.000 VNĐ/ngày), chi phí thuê xe máy Cần Thơ chỉ dao động 120.000 – 200.000 VNĐ/ngày.",
+      "claim_supported": "So với taxi (600.000 – 1.000.000 VNĐ/ngày), chi phí Thuê Xe Máy Cần Thơ chỉ dao động 120.000 – 200.000 VNĐ/ngày.",
+      "source_url": "https://thuexetaydo.com/thue-xe-may-can-tho/",
+      "source_domain": "thuexetaydo.com",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn vexere.com (bảng giá giao tận nơi Cần Thơ: xe số phổ thông 130.000 – 150.000đ, cọc 100.000đ/xe) và thuexetaydo.com (bảng giá 2026: xe số 120.000 – 150.000 VNĐ/ngày, xe ga 150.000 – 200.000 VNĐ/ngày)."
+}

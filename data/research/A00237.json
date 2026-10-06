@@ -1,0 +1,74 @@
+{
+  "article_id": "A00237",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Sirius TP.HCM",
+  "secondary_keywords": [
+    "gia thue Sirius TPHCM",
+    "cho thue Yamaha Sirius Sai Gon",
+    "thue xe so TPHCM gia",
+    "gia thue xe may quan 1"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại TP.HCM: bảng giá Gia Bảo ghi Sirius - Wave - Future 100.000đ trở lên/ngày (thuê tháng 50.000đ/tháng); trên Vexere nhà xe Hào cho thuê Yamaha Sirius đời từ 2016 từ 150.000đ không cần cọc trước.",
+  "geo_id": "VN-A00237",
+  "geo_level": "province",
+  "province": "TP. Hồ Chí Minh",
+  "locality": "",
+  "poi": "Quận 1 – phố đi bộ Nguyễn Huệ – chợ Bến Thành – Dinh Độc Lập – bến xe Miền Tây – Quận 7 – Thủ Đức",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Sirius ở TP.HCM giá bao nhiêu một ngày?",
+    "Thuê xe số Sài Gòn có cần cọc không?",
+    "Có nơi nào giao xe tận nơi tại quận 1 không?",
+    "Thuê Sirius theo tháng ở TPHCM giá thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "TP.HCM là thị trường thuê xe lớn nhất cả nước: Sirius được niêm yết trong bảng giá chung của các cửa hàng (100.000đ trở lên) và xuất hiện riêng trên nền tảng Vexere (Hào, Sirius đời 2016+, từ 150.000đ, kèm 1 lít xăng, không cọc trước) — mặt bằng dày nhất cho dòng xe số 110cc.",
+  "slug": "gia-thue-sirius-tp-hcm",
+  "output_path": "thue-xe-may/gia-thue-sirius-tp-hcm/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-tp-hcm/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng báo giá cho thuê xe máy Hồ Chí Minh của Gia Bảo ghi dòng Sirius - Wave - Future 100.000đ trở lên tính theo ngày và 50.000đ/Tháng (tùy đời xe).",
+      "claim_supported": "Bảng Báo Giá Cho Thuê Xe Máy HỒ CHÍ MINH Các Loại Xe Giá/ngày(24h) Sirius - wave - Future 100.000đ trở Lên & 50.000đ/ Tháng ( Tuỳ Đời )",
+      "source_url": "https://chothuexemaytphcm.com/",
+      "source_domain": "chothuexemaytphcm.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Trang sản phẩm của cửa hàng Gia Bảo niêm yết dòng xe số SIRIUS với giá 100.000 đ.",
+      "claim_supported": "XE SỐ SIRIUS Giá: 100.000 đ",
+      "source_url": "https://chothuexemaytphcm.com/sirius/",
+      "source_domain": "chothuexemaytphcm.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Theo Gia Bảo, các dòng xe số bình dân đời cũ như Wave, Sirius, Attila Victor, Novo 3 có giá cho thuê dao động từ 50 – 100k/xe.",
+      "claim_supported": "Đối với những dòng xe máy là xe số, xe bình dân, đời cũ như: Wave, Sirius, Attila Victor, Novo 3,… thì giá cho thuê dao động từ 50 – 100k/xe.",
+      "source_url": "https://chothuexemaytphcm.com/",
+      "source_domain": "chothuexemaytphcm.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Trên nền tảng Vexere tại Sài Gòn, nhà xe Hào (đánh giá 4.9) cho thuê Yamaha Sirius đời xe từ 2016, kèm mũ bảo hiểm và 1 lít xăng, không cần cọc trước, giá từ 150.000 đ.",
+      "claim_supported": "Xe số phổ thông Hào 4.9 Yamaha Sirius Đời xe: từ 2016 Mũ bảo hiểm, Xăng (1 lít) Không cần cọc trước từ 150.000 đ",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Dòng xe số phổ thông thường được thuê tại Sài Gòn là các mẫu 110cc như Honda Wave Alpha, Honda RSX, Yamaha Sirius.",
+      "claim_supported": "Xe số phổ thông thường được thuê tại Sài Gòn là dòng xe 110cc phổ biến như Honda Wave Alpha, Honda RSX, Yamaha Sirius",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sai-gon.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn chothuexemaytphcm.com (bảng giá Gia Bảo + trang sản phẩm SIRIUS) và vexere.com (điểm thuê Sài Gòn: nhà xe Hào với Yamaha Sirius đời từ 2016). Mặt bằng xe số cũ 50–100k, Sirius niêm yết 100.000đ trở lên."
+}

@@ -1,0 +1,74 @@
+{
+  "article_id": "A00245",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Sirius Lào Cai",
+  "secondary_keywords": [
+    "gia thue Sirius Lao Cai",
+    "cho thue Yamaha Sirius Lao Cai",
+    "thue xe so Lao Cai gia",
+    "gia thue xe may Lao Cai"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Lào Cai: cửa hàng 366 Rent Motorbike ghi tay số Wave, Sirius, Viva 100.000đ – 130.000đ; đơn giá chung từ 100k đến 150k; thuê lâu 4-5 ngày được giảm 10%.",
+  "geo_id": "VN-A00245",
+  "geo_level": "province",
+  "province": "Lào Cai",
+  "locality": "",
+  "poi": "Ga Lào Cai – cửa khẩu Quốc tế Lào Cai – Phố Mới – Sa Pa (cửa ngõ) – Y Tý – bến xe Lào Cai",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê xe máy ở Lào Cai giá bao nhiêu?",
+    "Thuê Sirius ở ga Lào Cai có chỗ nào không?",
+    "Thuê xe đi Sa Pa từ Lào Cai giá thế nào?",
+    "Có được giảm giá khi thuê dài ngày ở Lào Cai không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Lào Cai — cửa ngõ Sa Pa, Y Tý săn mây: Sirius nằm trong nhóm tay số được niêm yết thẳng (Wave, Sirius, Viva 100.000đ – 130.000đ); cửa hàng 366 Rent Motorbike (Phố Mới) giảm 10% cho thuê 4–5 ngày, gần ga và cửa khẩu — mô hình hợp khách đi tàu/xe khách lên rồi mới thuê xe.",
+  "slug": "gia-thue-sirius-lao-cai",
+  "output_path": "thue-xe-may/gia-thue-sirius-lao-cai/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-lao-cai/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá tại cửa hàng 366 Rent Motorbike (Lào Cai) ghi nhóm tay số Wave, Sirius, Viva giá 100.000đ – 130.000đ; nhóm Janus, Nouvo, Vision 140.000đ – 180.000đ; nhóm tay côn Winner, Exciter 150 giá 240.000đ – 280.000đ.",
+      "claim_supported": "Janus, Nouvo, Vision : 140.000đ – 180.000đ Tay Côn : Winner, Exciter 150 : 240.000đ – 280.000đ Tay số : Wave, Sirius, Viva : 100.000đ – 130.000đ",
+      "source_url": "https://tripbike.net/thue-xe-may-lao-cai/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cửa hàng Rent Motorbike in Lao Cai (366A Khánh Yên, Phố Mới, TX Lào Cai, điện thoại 0888 360 999) niêm yết thuê xe số 100k và xe ga 170k.",
+      "claim_supported": "Rent Motorbike in Lao Cai Thuê xe Số : 100k Thuê xe ga : 170k 0888 360 999 366A Khánh Yên, Phố Mới, TX.Lào Cai",
+      "source_url": "https://giahuy.org/thue-xe-may-lao-cai/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Thuê Xe Máy Việt Lào Cai (số nhà 1348, đường Trần Phú, phường Nam Cường) niêm yết thuê xe số 100k và xe ga 150k.",
+      "claim_supported": "Thuê Xe Máy Việt Lào Cai Thuê xe Số : 100k Thuê xe ga : 150k 0969 126 393 Số Nhà 1348 , Đường Trần Phú, Phường Nam Cường",
+      "source_url": "https://giahuy.org/thue-xe-may-lao-cai/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cửa hàng cho thuê xe Lào Cai hỗ trợ giao xe tận nơi miễn phí khi xe hư hỏng ngoài ý muốn; thuê lâu dài từ 4-5 ngày được giảm 10% giá, đơn giá cửa hàng cho thuê từ 100k đến 150k.",
+      "claim_supported": "Thuê xe đơn vị còn hỗ hư hỏng ngoài ý muốn giao xe tận nơi miễn phí. Khi thuê lâu dài từ 4 5 ngày bạn được giảm 10% giá, đơn giá cửa hàng cho thuê từ 100k đến 150k.",
+      "source_url": "https://giahuy.org/thue-xe-may-lao-cai/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cửa hàng 366 Rent Motorbike sở hữu dàn xe từ tay số Wave, Sirius đến côn tay Exciter, cào cào; mỗi mẫu mỗi giá từ 100k xe số, 200k xe ga, côn tay 250-300k.",
+      "claim_supported": "Sở hữu dàn xe chất lượng, từ tay số Wave, Siríu hay côn tay Exciter Cào Cào…ở 366 Rent Motorbike mẫu nào cũng có. Mỗi mẫu mỗi giá từ 100k xe số 200k xe ga, Côn tay 250- 300k.",
+      "source_url": "https://tripbike.net/thue-xe-may-lao-cai/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn tripbike.net (bảng giá Lào Cai: tay số Wave/Sirius/Viva 100.000đ – 130.000đ; Janus/Nouvo/Vision 140.000đ – 180.000đ) và giahuy.org (6 dịch vụ Lào Cai giá từ 100k; giảm 10% khi thuê 4-5 ngày)."
+}

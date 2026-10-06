@@ -1,0 +1,67 @@
+{
+  "article_id": "A00241",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Sirius Sơn La",
+  "secondary_keywords": [
+    "gia thue Sirius Son La",
+    "cho thue Yamaha Sirius Son La",
+    "thue xe so Moc Chau gia",
+    "gia thue xe may Son La"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Sơn La: Thành Đồng (TP Sơn La) xe số 120.000đ/ngày; Thành Mỹ (Bắc Yên) 120.000đ – 150.000đ/ngày; nhà sàn 88 (Mộc Châu) 120.000đ – 150.000đ/ngày.",
+  "geo_id": "VN-A00241",
+  "geo_level": "province",
+  "province": "Sơn La",
+  "locality": "",
+  "poi": "Mộc Châu – thác Dải Yếm – Mai Châu (cửa ngõ) – thành phố Sơn La – QL6 – Bắc Yên",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê xe máy ở Sơn La giá bao nhiêu?",
+    "Thuê xe số ở Mộc Châu chỗ nào uy tín?",
+    "Đi Bắc Yên, Mộc Châu nên thuê xe gì?",
+    "Giá thuê xe cào cào ở Sơn La thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Sơn La — miền Mộc Châu trà và sữa: mặt bằng thuê xe số ổn định 120.000đ – 150.000đ/ngày từ thành phố đến Mộc Châu và Bắc Yên; Sirius cùng Wave là dòng xe số chủ lực chạy QL6, trong khi cào cào phân khối lớn (500.000đ/ngày) phục vụ dân phượt đèo.",
+  "slug": "gia-thue-sirius-son-la",
+  "output_path": "thue-xe-may/gia-thue-sirius-son-la/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-son-la/",
+  "claim_evidence": [
+    {
+      "claim": "Nhà sàn 88 (QL6, Phiêng Luông, Mộc Châu, Sơn La, điện thoại 084 3769 499) niêm yết giá thuê xe 120.000đ – 150.000đ/ngày.",
+      "claim_supported": "Nhà sàn 88 Điện thoại: 084 3769 499 Địa chỉ: QL6, Phiêng Luông, Mộc Châu, Sơn La Giá thuê xe: 120.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Thành Đồng (94H Nguyễn Lương Bằng, phường Quyết Thắng, Sơn La, điện thoại 090 486 29 99) niêm yết giá thuê xe số 120.000đ/ngày.",
+      "claim_supported": "Thành Đồng Điện thoại: 090 486 29 99 Địa chỉ: 94H Nguyễn Lương Bằng, P. Quyết Thắng, Sơn La Giá thuê xe số: 120.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Thành Mỹ (thị trấn Bắc Yên, Sơn La, điện thoại 097 290 89 99) niêm yết giá thuê xe số 120.000đ – 150.000đ/ngày và xe cào cào 500.000đ/ngày.",
+      "claim_supported": "Thành Mỹ Điện thoại: 097 290 89 99 Địa chỉ: TT. Bắc Yên, Bắc Yên, Sơn La Giá thuê xe số: 120.000đ – 150.000đ/ngày Giá thuê xe cào cào: 500.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Xuân Cường (thị trấn Mộc Châu, Sơn La, điện thoại 0212 3766 997) là cửa hàng thuê xe máy Mộc Châu đầu tiên có dịch vụ giao nhận xe tận nơi, niêm yết giá thuê 200.000đ/ngày.",
+      "claim_supported": "Xuân Cường Điện thoại: 0212 3766 997 Địa chỉ: Thị trấn Mộc Châu, Sơn La Giá thuê xe: 200.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn motogo.vn (địa chỉ Sơn La với giá cụ thể: nhà sàn 88, Xuân Cường, Thành Đồng, Thành Mỹ). Không nguồn nào niêm yết riêng dòng Sirius — bài ghi mặt bằng xe số và tư vấn Sirius như lựa chọn chủ lực."
+}
