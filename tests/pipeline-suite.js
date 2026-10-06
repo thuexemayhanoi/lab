@@ -57,6 +57,67 @@ function rowsOf(sb) { // cache theo mtime — tránh parse lại 10k dòng cho m
 function statusOf(sb, id) { const r = rowsOf(sb).find(x => x.article_id === id); return r && r.status; }
 
 // ------------------------------ sandbox ------------------------------------
+// Production may legitimately have an open PASS/REPAIR row while this suite
+// starts. Pipeline E2E fixtures must NOT inherit that live in-flight state,
+// otherwise unrelated tests adopt the real row as an orphan. Normalize only
+// the TEMP sandbox copy; production bytes are never touched.
+function normalizeSandboxProductionState(sb) {
+  const f = path.join(sb, 'data', 'content-matrix.csv');
+  const lines = fs.readFileSync(f, 'utf8').split('\n');
+  const H = parseLine(lines[0]);
+  const iId = H.indexOf('article_id'), iStatus = H.indexOf('status');
+  const iResearch = H.indexOf('research_status'), iQa = H.indexOf('qa_score');
+  const iRepair = H.indexOf('repair_attempts'), iPub = H.indexOf('published_date');
+  const open = new Set(['RESEARCH', 'WRITING', 'QA', 'REVIEW', 'REPAIR', 'PASS']);
+  const resetIds = [];
+  const quote = v => {
+    const s = String(v == null ? '' : v);
+    return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+  };
+  const out = [lines[0]];
+  for (const l of lines.slice(1)) {
+    if (!l.trim()) continue;
+    const row = parseLine(l);
+    if (open.has(row[iStatus])) {
+      resetIds.push(row[iId]);
+      row[iStatus] = 'PLANNED';
+      if (iResearch >= 0) row[iResearch] = 'NOT_STARTED';
+      if (iQa >= 0) row[iQa] = '';
+      if (iRepair >= 0) row[iRepair] = '0';
+      if (iPub >= 0) row[iPub] = '';
+    }
+    out.push(row.map(quote).join(','));
+  }
+  fs.writeFileSync(f, out.join('\n') + '\n');
+
+  for (const id of resetIds) {
+    for (const rel of [
+      path.join('data', 'research', id + '.json'),
+      path.join('data', 'qa', id + '.json'),
+      path.join('data', 'published', id + '.html')
+    ]) fs.rmSync(path.join(sb, rel), { force: true });
+  }
+
+  const rows = parseCSV(fs.readFileSync(f, 'utf8'));
+  const firstPlanned = rows.find(x => x.status === 'PLANNED');
+  const ckF = path.join(sb, 'data', 'state', 'checkpoint.json');
+  const ck = readJSON(ckF);
+  ck.active_chunk = [];
+  ck.next_claimable_id = firstPlanned ? firstPlanned.article_id : null;
+  ck.notes = 'pipeline-suite isolated sandbox baseline';
+  fs.writeFileSync(ckF, JSON.stringify(ck, null, 2) + '\n');
+
+  fs.writeFileSync(path.join(sb, 'data', 'state', 'writer-lock.json'),
+    JSON.stringify({ locked: false, holder: null, acquired_at: null, expires_at: null }, null, 2) + '\n');
+  fs.writeFileSync(path.join(sb, 'data', 'state', 'transaction.json'),
+    JSON.stringify({ active: false, id: null, started_at: null, operation: null, articles: [], notes: 'test sandbox baseline' }, null, 2) + '\n');
+
+  const plannedTotal = rows.filter(x => x.status === 'PLANNED').length;
+  fs.writeFileSync(path.join(sb, 'data', 'state', 'pipeline-state.json'),
+    JSON.stringify({ version: 1, updated_at: null, cycle: 0, pending: [], planned_total: plannedTotal,
+      active: null, last_cycle_summary: null, last_stop: null, stopped_reason: null }, null, 2) + '\n');
+}
+
 let sbSeq = 0;
 function mkSB(cfgOverrides) {
   const SB = path.join(os.tmpdir(), 'lab-pipeline-sb-' + process.pid + '-' + (++sbSeq));
@@ -70,6 +131,7 @@ function mkSB(cfgOverrides) {
   const parts = fs.readdirSync(DATA).filter(f => /^content-matrix\.csv\.part/.test(f)).sort();
   if (parts.length) fs.writeFileSync(path.join(SB, 'data', 'content-matrix.csv'),
     parts.map(p => fs.readFileSync(path.join(DATA, p), 'utf8')).join(''));
+  normalizeSandboxProductionState(SB);
   if (cfgOverrides) {
     const c = JSON.parse(fs.readFileSync(path.join(SB, 'config', 'pipeline.json'), 'utf8'));
     fs.writeFileSync(path.join(SB, 'config', 'pipeline.json'), JSON.stringify(Object.assign({}, c, cfgOverrides), null, 2));
@@ -206,43 +268,32 @@ test('pipeline config: pipeline.json hợp lệ và nằm trong giới hạn eng
 // =====================================================================
 // WORKFLOW pin — kích hoạt & an toàn của coordinator trong CI
 // =====================================================================
-test('workflow: factory-production.yml kích hoạt pipeline đúng (cron 30 phút, job pipeline, an toàn)', () => {
+test('workflow: factory-production.yml chỉ còn push-driven production + maintenance', () => {
   const yml = fs.readFileSync(path.join(ROOT, '.github', 'workflows', 'factory-production.yml'), 'utf8');
-  assert.match(yml, /cron: '\*\/30 \* \* \* \*'/, 'schedule mỗi 30 phút');
   assert.match(yml, /concurrency:/);
   assert.match(yml, /lab-factory-production/);
   assert.match(yml, /cancel-in-progress: false/);
-  const m = /  pipeline:\n([\s\S]*)/.exec(yml);
-  assert.ok(m, 'workflow phải có job pipeline');
-  const job = m[1];
-  assert.match(job, /node scripts\/factory\/pipeline\.js cycle/);
-  assert.match(job, /github\.event_name == 'schedule'/);
-  assert.match(job, /inputs\.action == 'pipeline'/);
-  // AUDIT #4: pipeline job đọc Pages deployment truth (SHA + status của Pages
-  // build cuối) + permissions tối thiểu (contents: write commit cycle, pages: read)
-  assert.match(yml, /Pages deployment truth/, 'workflow phải có step đọc Pages build cuối (audit #4)');
-  assert.match(job, /PAGES_BUILD_COMMIT/, 'step Pages truth phải export PAGES_BUILD_COMMIT cho cycle step');
-  assert.match(job, /pages: read/, 'pipeline job cần pages: read (đọc deployment truth)');
+  assert.doesNotMatch(yml, /schedule:/, 'normal production không còn cron AI-writing/watchdog');
+  assert.doesNotMatch(yml, /^  pipeline:/m, 'không còn pipeline job trong normal production workflow');
+  assert.doesNotMatch(yml, /^  agent-watchdog:/m, 'không còn scheduled watchdog job');
+  assert.doesNotMatch(yml, /node scripts\/factory\/pipeline\.js cycle/, 'workflow production không tự chạy writer pipeline');
   assert.ok(!/push -f|--force\b/.test(yml), 'KHÔNG force push');
-  // push job (writer _drafts) KHÔNG chạy trên schedule — pipeline là job duy nhất của cron
-  const pm = /  publish:\n([\s\S]*?)(\n  \w+:|\s*$)/.exec(yml);
+  const pm = /  publish:\n([\s\S]*)$/.exec(yml);
   assert.ok(pm, 'workflow phải có job publish');
   assert.match(pm[1], /github\.event_name == 'push'/, 'publish job phải là ALLOWLIST: chỉ push draft');
   assert.match(pm[1], /inputs\.action == 'status'/, 'publish job nhận maintenance dispatch status');
   assert.match(pm[1], /inputs\.action == 'recover'/, 'publish job nhận maintenance dispatch recover');
   assert.match(pm[1], /inputs\.action == 'diagnostics'/, 'publish job nhận maintenance dispatch diagnostics');
-  assert.doesNotMatch(pm[1], /github\.event_name != /, 'KHÔNG còn denylist — routing phải là allowlist rõ ràng');
-  // push trigger KHÔNG dùng paths filter: GitHub tạo record đỏ 0-job
-  // (conclusion failure) cho push bị filter loại → gate _drafts phải nằm
-  // ở job push-gate + publish needs.push-gate.outputs.drafts.
+  assert.doesNotMatch(pm[1], /inputs\.action == 'pipeline'|inputs\.action == 'selftest'|inputs\.action == 'watchdog'/,
+    'dispatch normal production chỉ còn status|recover|diagnostics');
   assert.doesNotMatch(yml, /paths: /, 'push trigger KHÔNG dùng paths filter (fix run đỏ 0-job)');
-  assert.match(yml, /needs\.push-gate\.outputs\.drafts == 'true'/, 'publish chỉ chạy push có draft (gate qua push-gate outputs)');
+  assert.match(yml, /needs\.push-gate\.outputs\.drafts == 'true'/, 'publish chỉ chạy push có draft');
 });
 
 // =====================================================================
 // WORKFLOW ROUTING — evaluate điều kiện `if` THẬT của từng job cho mọi
 // event (KHÔNG chỉ grep): push (không draft / có draft), dispatch
-// status/recover/diagnostics/pipeline/selftest/watchdog, 2 cron, và
+// status/recover/diagnostics, và các event cũ phải không còn route vào production.
 // factory-repair.yml (workflow_run Factory production FAIL + dispatch
 // repair) — mỗi event chỉ đến đúng job của nó.
 // =====================================================================
@@ -327,46 +378,35 @@ function routeAll(ctx, wf = 'factory-production.yml') {
   for (const [job, expr] of Object.entries(jobs)) out[job] = evalGhExpr(expr, gh);
   return out;
 }
-test('workflow routing: mỗi event đến ĐÚNG job (evaluate if thật của cả 4 job factory-production.yml)', () => {
-  const only = (o, jobs) => { // đúng các job trong `jobs` chạy, còn lại KHÔNG
+test('workflow routing: factory-production.yml chỉ có push-gate + publish', () => {
+  const only = (o, jobs) => {
     const run = Object.keys(o).filter(k => o[k]);
     assert.deepStrictEqual(run.sort(), [...jobs].sort(),
       'event ' + JSON.stringify(ctxOf) + ' phải chạy đúng ' + JSON.stringify(jobs) + ' (got: ' + run.join(',') + ')');
   };
   let ctxOf;
-  // push KHÔNG đụng _drafts/** → CHỈ push-gate (no-op xanh → run SUCCESS,
-  // không còn record đỏ 0-job của push bị paths filter loại)
   ctxOf = { event_name: 'push' }; only(routeAll(ctxOf), ['push-gate']);
-  // push CÓ đụng _drafts/** (push-gate outputs.drafts == 'true') → push-gate + publish
   const gateDrafts = { 'push-gate': { outputs: { drafts: 'true' } } };
   ctxOf = { event_name: 'push', needs: gateDrafts }; only(routeAll(ctxOf), ['push-gate', 'publish']);
   const gateNoDrafts = { 'push-gate': { outputs: { drafts: 'false' } } };
   assert.equal(routeAll({ event_name: 'push', needs: gateNoDrafts })['publish'], false,
-    'push không đụng draft → publish KHÔNG chạy (gate không bị nới)');
-  // dispatch maintenance → publish (job bảo trì)
+    'push không đụng draft → publish KHÔNG chạy');
   for (const a of ['status', 'recover', 'diagnostics']) {
     ctxOf = { event_name: 'workflow_dispatch', action: a }; only(routeAll(ctxOf), ['publish']);
   }
-  // dispatch pipeline | selftest → pipeline
-  for (const a of ['pipeline', 'selftest']) {
-    ctxOf = { event_name: 'workflow_dispatch', action: a }; only(routeAll(ctxOf), ['pipeline']);
+  for (const a of ['pipeline', 'selftest', 'watchdog', 'repair']) {
+    ctxOf = { event_name: 'workflow_dispatch', action: a };
+    assert.ok(Object.values(routeAll(ctxOf)).every(v => v === false),
+      'dispatch ' + a + ' không thuộc normal production workflow');
   }
-  // dispatch watchdog → agent-watchdog
-  ctxOf = { event_name: 'workflow_dispatch', action: 'watchdog' }; only(routeAll(ctxOf), ['agent-watchdog']);
-  // dispatch repair → đã TÁCH sang factory-repair.yml (workflow_run tự tham
-  // chiếu bị GitHub từ chối parse) ⇒ KHÔNG job nào của production chạy
-  ctxOf = { event_name: 'workflow_dispatch', action: 'repair' };
-  assert.ok(Object.values(routeAll(ctxOf)).every(v => v === false),
-    'dispatch repair KHÔNG chạy job nào trong factory-production.yml');
-  // workflow_run event → factory-production.yml KHÔNG còn trigger này (self-listen bị cấm)
+  for (const sched of ['*/30 * * * *', '10 * * * *']) {
+    ctxOf = { event_name: 'schedule', schedule: sched };
+    assert.ok(Object.values(routeAll(ctxOf)).every(v => v === false),
+      'schedule không còn entrypoint normal production');
+  }
   const wrAll = routeAll({ event_name: 'workflow_run', workflow_run: { workflow_run: { conclusion: 'failure', name: 'Factory production', head_branch: 'main' } } });
   assert.ok(Object.values(wrAll).every(v => v === false),
-    'workflow_run KHÔNG trigger job nào trong factory-production.yml (self-listen bị GitHub cấm)');
-  // cron */30 → CHỈ pipeline (publish KHÔNG chạy trên schedule)
-  ctxOf = { event_name: 'schedule', schedule: '*/30 * * * *' }; only(routeAll(ctxOf), ['pipeline']);
-  // cron 10 * * * * → CHỈ agent-watchdog
-  ctxOf = { event_name: 'schedule', schedule: '10 * * * *' }; only(routeAll(ctxOf), ['agent-watchdog']);
-  // repo khác → KHÔNG job nào chạy
+    'workflow_run KHÔNG trigger job trong factory-production.yml');
   const off = routeAll({ event_name: 'push', github: { repository: 'someone/else' } });
   assert.ok(Object.values(off).every(v => v === false), 'repo khác phải không chạy job nào');
 });
@@ -412,7 +452,7 @@ test('push-gate guard job: fix đỏ 0-job, KHÔNG nới gate publish', () => {
   assert.ok(gate.includes('git diff --name-only') && gate.includes('toJSON(github.event.commits)'),
     'push-gate detect draft bằng git diff + payload commits (API push có thể rỗng payload)');
   // publish: cần push-gate, chỉ chạy push có draft; always() chống needs-skip trên dispatch
-  const pub = yml.slice(yml.indexOf('  publish:'), yml.indexOf('\n  pipeline:\n'));
+  const pub = yml.slice(yml.indexOf('  publish:'));
   assert.ok(pub.includes('needs: push-gate'), 'publish cần push-gate');
   assert.ok(pub.includes("needs.push-gate.outputs.drafts == 'true'"),
     'publish CHỈ chạy push khi push-gate xác nhận đụng _drafts/** (gate không nới)');

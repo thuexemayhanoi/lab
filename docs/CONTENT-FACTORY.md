@@ -8,7 +8,7 @@ and publishes articles from a fixed 10,000-row matrix.
 - BATCH = 50 articles
 - CHUNK = 10 articles (the ENGINE hard cap: `publish` refuses more than CHUNK ids)
 - QUEUE_MAX = 20 articles (the TURBO write-ahead queue cap: one writer push
-  may claim 2..20 consecutive PLANNED ids; consumed as sequential 2-article
+  may claim 2..10 consecutive PLANNED ids; consumed as sequential 2-article
   pairs inside ONE production run)
 - 10,000 articles = 200 batches × 50
 
@@ -17,7 +17,7 @@ and publishes articles from a fixed 10,000-row matrix.
 The NORMAL writer flow is a light TURBO queue loop — FAST by default:
 
 ```
-FETCH → RECOVER/RESUME → PICK QUEUE (2..20 consecutive PLANNED rows) →
+FETCH → RECOVER/RESUME → PICK QUEUE (2..10 consecutive PLANNED rows) →
 RESEARCH per row requirement → WRITE all queued bodies → WRAP →
 PUSH (one commit) → factory-production.yml runs itself: validate/sort/pair
 the queue → ONE claim → per PAIR: research → QA FAST (scoped) →
@@ -25,8 +25,8 @@ PUBLISH PASS only (atomic, FAST) → checkpoint → NEXT PAIR →
 COMMIT/PUSH (verified tree) → CI/PAGES → NEXT QUEUE
 ```
 
-- Standard queue = 2..20 consecutive PLANNED ids per push
-  (`data/state/production-control.json`: queue_min 2, queue_max 20; legacy
+- Standard queue = 2..10 consecutive PLANNED ids per push
+  (`data/state/production-control.json`: queue_min 2, queue_max 10; legacy
   `prepare-next --count 2` writer CLI unchanged); CHUNK=10 stays the engine
   hard cap per publish op (pairs are 2).
 - A failed pair stays recoverable (repair push) and never rolls back pairs

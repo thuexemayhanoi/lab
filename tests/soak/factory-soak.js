@@ -58,6 +58,61 @@ if (!fs.existsSync(sbCsv)) {
   fs.writeFileSync(sbCsv, shards.map((f) => fs.readFileSync(path.join(ROOT, 'data', f))).join(''));
 }
 
+// Tier-4 soak must be independent from legitimate live production work.
+// If main currently has PASS/REPAIR/etc. in-flight, reset ONLY those rows in
+// the TEMP sandbox back to PLANNED so the soak can claim its own deterministic
+// 6×10 sequence. Production bytes are never mutated.
+(function normalizeSoakSandbox() {
+  const parse = (l) => { const out = []; let cur = '', q = false;
+    for (let i = 0; i < l.length; i++) { const ch = l[i];
+      if (q) { if (ch === '"') { if (l[i + 1] === '"') { cur += '"'; i++; } else q = false; } else cur += ch; }
+      else { if (ch === '"') q = true; else if (ch === ',') { out.push(cur); cur = ''; } else cur += ch; } }
+    out.push(cur); return out; };
+  const quote = (v) => { const s = String(v == null ? '' : v); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+  const lines = fs.readFileSync(sbCsv, 'utf8').split('\n');
+  const H = parse(lines[0]);
+  const ix = (n) => H.indexOf(n);
+  const iId = ix('article_id'), iStatus = ix('status'), iResearch = ix('research_status'),
+    iQa = ix('qa_score'), iRepair = ix('repair_attempts'), iPub = ix('published_date'), iOut = ix('output_path');
+  const open = new Set(['RESEARCH', 'WRITING', 'QA', 'REVIEW', 'REPAIR', 'PASS']);
+  const reset = [];
+  const out = [lines[0]];
+  for (const l of lines.slice(1)) {
+    if (!l.trim()) continue;
+    const row = parse(l);
+    if (open.has(row[iStatus])) {
+      reset.push({ id: row[iId], output_path: row[iOut] });
+      row[iStatus] = 'PLANNED';
+      if (iResearch >= 0) row[iResearch] = 'NOT_STARTED';
+      if (iQa >= 0) row[iQa] = '';
+      if (iRepair >= 0) row[iRepair] = '0';
+      if (iPub >= 0) row[iPub] = '';
+    }
+    out.push(row.map(quote).join(','));
+  }
+  fs.writeFileSync(sbCsv, out.join('\n') + '\n');
+
+  for (const x of reset) {
+    fs.rmSync(path.join(SB, 'data', 'research', x.id + '.json'), { force: true });
+    fs.rmSync(path.join(SB, 'data', 'qa', x.id + '.json'), { force: true });
+    fs.rmSync(path.join(SB, 'data', 'published', x.id + '.html'), { force: true });
+    if (x.output_path) fs.rmSync(path.join(SB, x.output_path), { recursive: true, force: true });
+  }
+
+  const parsed = out.slice(1).map(parse);
+  const firstPlanned = parsed.find(row => row[iStatus] === 'PLANNED');
+  const ckF = path.join(SB, 'data', 'state', 'checkpoint.json');
+  const ck = JSON.parse(fs.readFileSync(ckF, 'utf8'));
+  ck.active_chunk = [];
+  ck.next_claimable_id = firstPlanned ? firstPlanned[iId] : null;
+  ck.notes = 'factory-soak isolated sandbox baseline';
+  fs.writeFileSync(ckF, JSON.stringify(ck, null, 2) + '\n');
+  fs.writeFileSync(path.join(SB, 'data', 'state', 'writer-lock.json'),
+    JSON.stringify({ locked: false, holder: null, acquired_at: null, expires_at: null }, null, 2) + '\n');
+  fs.writeFileSync(path.join(SB, 'data', 'state', 'transaction.json'),
+    JSON.stringify({ active: false, id: null, started_at: null, operation: null, articles: [], notes: 'soak sandbox baseline' }, null, 2) + '\n');
+})();
+
 const FACT = (args) => spawnSync(process.execPath, [path.join(SB, 'scripts', 'factory', 'factory.js'), ...args], { cwd: SB, encoding: 'utf8' });
 const OP = (args) => spawnSync(process.execPath, [path.join(SB, 'scripts', 'factory', 'operator.js'), ...args], { cwd: SB, encoding: 'utf8' });
 const NODE = (rel, args) => spawnSync(process.execPath, [path.join(SB, rel), ...(args || [])], { cwd: SB, encoding: 'utf8' });

@@ -10,15 +10,16 @@ writer does not stop after each 2-article pair or each queue.
 
 - Repository truth: `main` + content matrix shards + checkpoint/state files.
 - Factory QA/publish unit: **PAIR = 2 articles**.
-- Writer unit: **WRITE-AHEAD QUEUE = 2..20 consecutive claimable PLANNED IDs**.
+- Writer unit: **WRITE-AHEAD QUEUE = 2..10 consecutive claimable PLANNED IDs**.
 - Default queue target for a healthy run: **10 articles**. Use a smaller queue
   only when runtime is constrained, a repair is pending, or source quality
   requires it. Never exceed `queue_max` in `data/state/production-control.json`.
 - External writer writes prose/research and pushes drafts. GitHub Actions does
   deterministic recover → exact-id claim → research gate → QA → publish PASS →
   checkpoint → Pages.
-- `WRITER_RUNTIME=off` applies only to the optional **internal Actions pipeline**.
-  It does not disable this external push-driven production loop.
+- The **external push-driven writer is the only normal production path**.
+  The old internal pipeline code remains only as a recovery/manual test component;
+  it is no longer scheduled by `factory-production.yml`.
 - For NEW content, run only one external writer at a time unless a future repo
   contract adds an explicit lease registry. This avoids duplicate claims.
 
@@ -30,10 +31,12 @@ FETCH FRESH MAIN
 → RECOVER if transaction/lock requires it
 → RESUME first: repair/QA any open current IDs before new claims
 → READ checkpoint + matrix truth
-→ PICK next 2..20 consecutive PLANNED IDs starting at next_claimable_id
+→ PICK next 2..10 consecutive PLANNED IDs starting at next_claimable_id
    (default target = 10)
 → RESEARCH every ID; official/quantitative claims follow source policy
 → WRITE _drafts/<ID>.body.html for the full queue
+   (internal links may target only pages already PUBLISHED on fresh main;
+    never link to an unpublished sibling in the same queue)
 → WRAP with scripts/factory/wrap-drafts.js
 → LOCAL SCOPED FAST QA for only this queue
 → COMMIT + PUSH the whole queue once

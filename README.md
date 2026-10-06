@@ -53,8 +53,8 @@ root; a normal commit + push to `main` is the deployment.
 The workflows in `.github/workflows/`: `factory-production.yml` is the
 push-driven production loop (writer pushes `_drafts/` pairs → EXACT-id
 claim/QA/publish) with final-tree verify + safe push; every push to `main`
-also runs a no-op `push-gate` job so the run stays green, and its cron
-entries drive the pipeline coordinator and the production watchdog.
+also runs a no-op `push-gate` job so the run stays green. Normal production
+is **push-driven only**; there is no scheduled AI-writing cron in this workflow.
 `factory-repair.yml` holds repair agents #4/#5, listening to failed
 Factory production runs (workflow_run must not self-reference).
 `factory-soak.yml` is the Tier 4 battery (agent-suite + pipeline-suite +
@@ -66,14 +66,13 @@ fire for reliability-relevant changes (engine/workflow/tests/config).
 Normal production follows the same user-facing model as `/vanchinh`: **one user
 command starts a continuous external-writer loop**. The writer must follow
 [docs/CONTINUOUS-WRITER.md](docs/CONTINUOUS-WRITER.md): fetch fresh `main` → finish
-repair/resume work → write a 2..20 article queue (default target 10) → push → let
+repair/resume work → write a 2..10 article queue (default target 10) → push → let
 `factory-production.yml` QA/publish/verify automatically → fetch fresh `main` →
 repeat without asking the user after each pair/queue.
 
-The scheduled internal `pipeline` is a separate optional path. When
-`WRITER_RUNTIME=off`, its IDLE-STOP is intentional and **must not be treated as a
-blocker for the normal external writer**. Do not wait for that cron to create
-prose.
+The external writer is the only normal production path. The internal pipeline
+code remains available only for recovery/manual testing and is **not scheduled**
+by `factory-production.yml`; do not wait for Actions to create prose.
 
 ## Experiment rules (short version)
 
