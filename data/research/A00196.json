@@ -1,0 +1,73 @@
+{
+  "article_id": "A00196",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Đồng Tháp",
+  "secondary_keywords": [
+    "thue xe Wave Dong Thap",
+    "cho thue Honda Wave Dong Thap",
+    "thue xe so Sa Dec",
+    "thue xe may Cao Lanh"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Đồng Tháp (Cao Lãnh – Sa Đéc): xe số từ 80.000đ – 100.000đ/ngày, mặt bằng 100 – 130 nghìn đồng, xe ga khoảng 150 nghìn đồng.",
+  "geo_id": "VN-A00196",
+  "geo_level": "province",
+  "province": "Đồng Tháp",
+  "locality": "",
+  "poi": "Sa Đéc (làng hoa) – Cao Lãnh – sân chim Tràm Chim – Gò Tháp – sông Sa Đéc",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave ở Đồng Tháp giá bao nhiêu?",
+    "Nên thuê ở Cao Lãnh hay Sa Đéc?",
+    "Cần đặt xe trước không?",
+    "Đi Tràm Chim cần chuẩn bị gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Làng hoa Sa Đéc, sân chim Tràm Chim và giềng lư... giếng nước Sa Đéc — du lịch sinh thái miệt vườn",
+  "slug": "gia-thue-wave-dong-thap",
+  "output_path": "thue-xe-may/gia-thue-wave-dong-thap/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-dong-thap/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Cao Lãnh – Sa Đéc (Đồng Tháp), với xe số khách chỉ cần bỏ ra từ 80.000đ – 100.000đ/ngày (cơ sở Minh Chánh).",
+      "claim_supported": "Đối với xe số, bạn chỉ cần bỏ ra từ 80.000đ – 100.000đ/ngày để…",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-cao-lanh-sa-dec-dong-thap",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá thuê xe tại Đồng Tháp dao động từ 100 – 130 nghìn đồng đối với xe số và khoảng 150 nghìn đồng cho xe tay ga; xe tại một cửa hàng Sa Đéc gồm Wave Honda, Vision Honda, Nouvo LX Yamaha, chính hãng và bảo dưỡng định kỳ.",
+      "claim_supported": "Giá thuê xe dao động từ 100 – 130 nghìn đồng đối với xe số và khoảng 150 nghìn đồng cho xe tay ga. Xe tại đây đa dạng, từ Wave Honda, Vision Honda, đến Nouvo LX Yamaha và nhiều loại khác, tất cả đều chính hãng và được bảo dưỡng định kỳ.",
+      "source_url": "https://chothuexemayotaituyhoaphuyen.com/Tin-tuc/7-cua-hang-cho-thue-xe-may-cao-lanh-sa-dec-dong-thap-uy-tin-178.html",
+      "source_domain": "chothuexemayotaituyhoaphuyen.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một cơ sở tại Cao Lãnh (Mai Văn Khải) ghi nhận giá tiền 100.000 – 130.000, 150 000đ, giá thuê tương đối tốt so với giá thuê xe máy Cần Thơ.",
+      "claim_supported": "Giá tiền 100.000 – 130.000, 150 000đ giá thuê xe tương đối tốt so với giá thuê xe máy Cần Thơ, đơn giá hợp lý và xe chất lượng.",
+      "source_url": "https://giahuy.org/thue-xe-may-cao-lanh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một cửa hàng cho thuê xe máy tại Cao Lãnh có mức giá tham khảo dao động từ 100.000 VND – 200.000 VND/ngày.",
+      "claim_supported": "Mức giá tham khảo: dao động từ 100.000 VND – 200.000 VND/ ngày.",
+      "source_url": "https://limoutrip.com/thue-xe-may-cao-lanh/",
+      "source_domain": "limoutrip.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Lượng xe tại một số cơ sở Đồng Tháp không lớn nên khách sạn ưu tiên cho khách nội trú thuê trước; nên gọi trước theo số điện thoại để xác minh xem còn xe không.",
+      "claim_supported": "Lượng xe tại đây không lớn nên khách sạn sẽ ưu tiên cho khách nội trú thuê xe trước. Vì thế bạn nên gọi trước theo số điện thoại bên dưới để xác minh xem còn xe không nhé.",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

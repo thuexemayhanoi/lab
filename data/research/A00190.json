@@ -1,0 +1,66 @@
+{
+  "article_id": "A00190",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Gia Lai",
+  "secondary_keywords": [
+    "thue xe Wave Gia Lai",
+    "cho thue Honda Wave Gia Lai",
+    "thue xe so Pleiku",
+    "thue xe may Gia Lai"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Gia Lai: Wave/Sirius dao động từ 100.000 VNĐ, mặt bằng Pleiku 100.000 – 120.000 vnđ/ngày, tạm ứng 500.000 VNĐ – 3.000.000 VNĐ.",
+  "geo_id": "VN-A00190",
+  "geo_level": "province",
+  "province": "Gia Lai",
+  "locality": "",
+  "poi": "Pleiku – Biển Hồ Chè – đảo chè đá – đèo chè – Chư Sơ",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave ở Gia Lai giá bao nhiêu?",
+    "Tiền tạm ứng khoảng bao nhiêu?",
+    "Đi Biển Hồ Chè nên thuê xe gì?",
+    "Thủ tục cần giấy tờ gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Cao nguyên basalt đồi chè với Biển Hồ Chè và cung đèo quanh Pleiku",
+  "slug": "gia-thue-wave-gia-lai",
+  "output_path": "thue-xe-may/gia-thue-wave-gia-lai/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-gia-lai/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Gia Lai, các dòng xe số phổ thông như Honda Wave, Sirius thường có giá dao động từ 100.000 VNĐ.",
+      "claim_supported": "Xe số phổ thông: Các dòng xe như Honda Wave, Sirius thường có giá dao động từ 100.000 VNĐ.",
+      "source_url": "https://mygialai.com/thue-xe-may-gia-lai/",
+      "source_domain": "mygialai.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá cho thuê xe máy ở Pleiku (đơn vị 24h) chỉ dao động từ 100.000 vnđ – 120.000 vnđ cho 1 xe/ngày; tiền tạm ứng trước từ 500.000 VNĐ – 3.000.000 VNĐ tùy mẫu xe và chất lượng; cần giấy Căn cước Công Dân hoặc Hộ Chiếu.",
+      "claim_supported": "Giá cho thuê xe máy ở 24h chỉ giao động từ 100.000 vnđ – 120.000 vnđ cho 1 xe / ngày. Số tiền tạm ứng trước sẽ dao động từ 500.000 VNĐ – 3.000.000 VNĐ (tùy theo mẫu xe và chất lượng). Khi thuê xe máy Pleiku Gia Lai bạn nên chuẩn bị các giấy tờ như: Giấy Căn cước Công Dân hoặc Hộ Chiếu.",
+      "source_url": "https://touring.vn/thue-xe-may-gia-lai/",
+      "source_domain": "touring.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một đơn vị cho thuê tại Pleiku hoạt động hơn 10 năm, phục vụ hơn 10.000 khách du lịch; các dòng Honda Wave RSX, Yamaha Sirius đời mới giá chỉ từ 100.000đ – 200.000đ; giao nhận xe (5h30 – 21h00 hằng ngày); giữ CMND hoặc hộ chiếu.",
+      "claim_supported": "với hơn 10 năm hoạt động và cung cấp dịch vụ uy tín cho hơn 10.000 khách du lịch ! Các dòng xe Honda Ware RXS, Yamaha Sirius đời mới… Giá chỉ từ: 100.000đ – 200.000đ. Liên hệ để nhân viên đến nhận xe (5h30 – 21h00 hằng ngày). Trình chứng minh nhân dân và giấy phép lái xe. Sau đó chúng tôi sẽ giữ cmnd hoặc hộ chiếu.",
+      "source_url": "https://chothuexepleikugialai.com/",
+      "source_domain": "chothuexepleikugialai.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cửa hàng Hoàng (Pleiku, đường Cách Mạng Tháng Tám) cho thuê xe máy với mức giá chỉ từ 100.000 vnđ/xe/ngày.",
+      "claim_supported": "Về chi phí, Cửa hàng Hoàng cho thuê xe máy với mức giá chỉ từ 100.000 vnđ/xe/ngày.",
+      "source_url": "https://motortrip.vn/dich-vu/thue-xe-may-pleiku",
+      "source_domain": "motortrip.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

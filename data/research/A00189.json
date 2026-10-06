@@ -1,0 +1,73 @@
+{
+  "article_id": "A00189",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Quảng Ngãi",
+  "secondary_keywords": [
+    "thue xe Wave Quang Ngai",
+    "cho thue Honda Wave Quang Ngai",
+    "thue xe so Quang Ngai",
+    "thue xe may Ly Son"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Quảng Ngãi: Wave Alpha 100.000 – 125.000 VNĐ/ngày, thuê dài ngày giảm còn 110.000/100.000 VNĐ/ngày, mặt bằng 130k – 150k/ngày.",
+  "geo_id": "VN-A00189",
+  "geo_level": "province",
+  "province": "Quảng Ngãi",
+  "locality": "",
+  "poi": "Thành phố Quảng Ngãi – bến tàu Sa Kỳ (Lý Sơn) – biển Mỹ Khê – núi Ấn",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave ở Quảng Ngãi giá bao nhiêu?",
+    "Thuê dài ngày có giảm không?",
+    "Đi Lý Sơn thuê xe thế nào?",
+    "Thủ tục cần giấy tờ gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Cửa ngõ ra đảo Lý Sơn với chính sách giảm giá thuê dài ngày rõ ràng",
+  "slug": "gia-thue-wave-quang-ngai",
+  "output_path": "thue-xe-may/gia-thue-wave-quang-ngai/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-quang-ngai/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Quảng Ngãi, Honda Wave Alpha 2022 – 2023 có giá thuê 100.000 – 125.000 VNĐ/ngày; thuê từ 5 ngày 110.000 VNĐ/ngày; thuê từ 10 ngày trở lên 100.000 VNĐ/ngày; mặt bằng chung 130k – 150k/ngày tùy loại xe và thời gian thuê; thuê thêm 1h 20.000 VNĐ; khách thuê từ 5 đến 10 ngày giảm 10%.",
+      "claim_supported": "Honda Wave Alpha 2022 - 2023 | Giá thuê: 100.000 - 125.000 VNĐ/ngày. Thuê từ 5 ngày: 110.000 VNĐ/ngày Thuê từ 10 ngày trở lên: 100.000 VNĐ/ngày. Mức giá cho thuê xe ở Quảng Ngãi hợp lý, 130k - 150k/ngày(tùy loại xe và thời gian thuê). Thời gian thuê xe được tính 24 giờ / 1 ngày (Thuê thêm 1h 20.000…). Khách thuê từ 5 - > 10 ngày giảm 10%.",
+      "source_url": "https://chothuexemayquangngai.com/",
+      "source_domain": "chothuexemayquangngai.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá thuê xe số như Yamaha Sirius, Honda Wave tại Quảng Ngãi thường dao động trong khoảng 100.000 VNĐ đến 150.000 VNĐ mỗi ngày, tùy chất lượng xe và chính sách từng đơn vị.",
+      "claim_supported": "Giá thuê xe số như Yamaha Sirius, Honda Wave thường dao động trong khoảng 100.000 VNĐ đến 150.000 VNĐ mỗi ngày, tùy thuộc vào chất lượng xe và chính sách của từng đơn vị.",
+      "source_url": "https://xemayanthanhphat.com/thue-xe-may-quang-ngai.html",
+      "source_domain": "xemayanthanhphat.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cơ sở Hoa Muống Biển tại Quảng Ngãi chuyên xe số khỏe chạy đường dài, giá cho thuê xe Wave các loại là 120.000đ/xe/ngày.",
+      "claim_supported": "Xe ở cửa hàng Hoa Muống Biển chuyên để chạy đường dài bởi nó có sức bền và khả năng chống chịu những ổ voi, ổ gà cao. Giá cho thuê xe Wave các loại là 120.000đ/xe/ngày.",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-quang-ngai",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Lê Trần Motorbike tại La Hà (Tư Nghĩa, Quảng Ngãi) cung cấp Wave alpha, Honda Vision, Airblade và giao xe máy đến tận nơi trong vòng 10 phút nếu khách đang ở trung tâm.",
+      "claim_supported": "Cửa hàng cho thuê xe máy Quảng Ngãi Lê Trần cung cấp đa dạng dòng xe như: Wave alpha, Honda Vision, Honda Airblade… cửa hàng sẽ giao xe máy đến tận nơi quý khách trong vòng 10 phút nếu quý khách đang ở trung tâm.",
+      "source_url": "https://hoianit.com/thue-xe-may-quang-ngai/",
+      "source_domain": "hoianit.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Xe tay ga phổ thông 125cc tại Quảng Ngãi gồm Honda Airblade, Vision, Lead; giá thuê xe ga thường cao hơn xe số một chút, trung bình khoảng 150.000 – 180.000 đồng/ngày.",
+      "claim_supported": "Dòng xe tay ga cho thuê phổ biến ở Quảng Ngãi bao gồm Honda Airblade, Honda Vision, Honda Lead… Giá thuê xe ga thường sẽ cao hơn xe số một chút, trung khoảng 150.000-180.000 đồng/ngày.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-quang-ngai.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

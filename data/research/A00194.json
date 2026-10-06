@@ -1,0 +1,66 @@
+{
+  "article_id": "A00194",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Tây Ninh",
+  "secondary_keywords": [
+    "thue xe Wave Tay Ninh",
+    "cho thue Honda Wave Tay Ninh",
+    "thue xe so Tay Ninh",
+    "thue xe may Tay Ninh"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Tây Ninh: xe số 100.000 – 120.000 VND/ngày, xe ga 120.000 – 180.000đ/ngày, thế chân 1 triệu.",
+  "geo_id": "VN-A00194",
+  "geo_level": "province",
+  "province": "Tây Ninh",
+  "locality": "",
+  "poi": "Tây Ninh – núi Bà Đen – Tòa Thánh Cao Đài – hồ Dầu Tiếng",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave ở Tây Ninh giá bao nhiêu?",
+    "Tiền thế chân bao nhiêu?",
+    "Thời điểm nào nên đi?",
+    "Có rủi ro gì khi thuê xe?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Điểm đến tâm linh và hồ Dầu Tiếng cách TP.HCM chưa đầy 100 km",
+  "slug": "gia-thue-wave-tay-ninh",
+  "output_path": "thue-xe-may/gia-thue-wave-tay-ninh/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-tay-ninh/",
+  "claim_evidence": [
+    {
+      "claim": "Cửa hàng Hùng Vương (Tây Ninh) có các loại xe đa dạng; giá thuê xe số từ 100.000 đến 120.000 VND/ngày, xe tay ga khoảng từ 150.000 đến 200.000 VND/ngày; hỗ trợ giao xe tận nơi 24/7.",
+      "claim_supported": "Các loại xe tại đây rất đa dạng, từ nhãn hiệu cho đến đời xe. Giá thuê xe số từ 100.000 đến 120.000 VND/ngày, còn xe tay ga thì cao hơn, khoảng từ 150.000 đến 200.000 VND/ngày. Cửa hàng có hỗ trợ giao xe tận nơi 24/7.",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một địa chỉ cho thuê tại Tây Ninh ghi nhận xe ga khoảng 120.000 – 180.000đ/ngày; thủ tục gọn, đưa trước 1 triệu để thế chân và nhận lại khi trả xe.",
+      "claim_supported": "Với xe ga thì giá cao hơn chút, khoảng 120.000 – 180.000đ/ngày. Thủ tục cho thuê xe cũng gọn nhẹ, chỉ cần giấy tờ và tiền cọc là xong. Bạn sẽ đưa trước 1 triệu để thế chân, sau đó sẽ được nhận lại khi trả xe.",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Mùa khô từ tháng 12 đến tháng 4 năm sau là thời điểm thích hợp vi vu núi Bà Đen, hồ Dầu Tiếng, Tòa Thánh Tây Ninh; mùa mưa kéo dài từ tháng 5 đến tháng 11.",
+      "claim_supported": "Mùa khô từ tháng 12 đến tháng 4 năm sau là thời điểm thích hợp nhất để bạn tham quan nơi này, vi vu đến những địa điểm tham quan nổi tiếng như núi Bà Đen, hồ Dầu Tiếng, Tòa Thánh Tây Ninh. Còn mùa mưa ở Tây Ninh thì kéo dài từ tháng 5 đến tháng 11.",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Tây Ninh chưa có nhiều địa điểm cho thuê xe máy đạt chuẩn; một số cửa hàng hoạt động không thường xuyên hoặc không tồn tại khi đến địa chỉ — nên kiểm tra kỹ đánh giá, hỏi trước chính sách thuê và yêu cầu hình ảnh xe.",
+      "claim_supported": "Hiện tại, Tây Ninh vẫn chưa có quá nhiều địa điểm cho thuê xe máy đạt chuẩn. Một số cửa hàng hoạt động không thường xuyên, hoặc không tồn tại khi đến địa chỉ trên google map, fanpage hoặc chất lượng xe không đảm bảo như quảng cáo. Vì vậy, hãy kiểm tra kỹ đánh giá, hỏi trước về chính sách thuê và yêu cầu hình ảnh xe để tránh rủi ro.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-tay-ninh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

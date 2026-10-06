@@ -1,0 +1,66 @@
+{
+  "article_id": "A00191",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Khánh Hòa",
+  "secondary_keywords": [
+    "thue xe Wave Nha Trang",
+    "cho thue Honda Wave Khanh Hoa",
+    "thue xe so Nha Trang",
+    "thue xe may Khanh Hoa"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Khánh Hòa (Nha Trang): xe số từ 80.000đ/ngày, xe ga từ 100.000đ/ngày, mặt bằng 100.000 đến 120.000 đồng mỗi ngày.",
+  "geo_id": "VN-A00191",
+  "geo_level": "province",
+  "province": "Khánh Hòa",
+  "locality": "",
+  "poi": "Nha Trang – vịnh Nha Trang – Tháp Bà Ponagar – Đồi Cù Lẳng – đảo Bình Ba",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave ở Nha Trang giá bao nhiêu?",
+    "Thuê nhiều ngày có giảm không?",
+    "Có giao xe tận khách sạn không?",
+    "Đi đảo thì xử lý xe thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Thành phố biển Nha Trang với mặt bằng giá thấp nhất dải miền Trung",
+  "slug": "gia-thue-wave-khanh-hoa",
+  "output_path": "thue-xe-may/gia-thue-wave-khanh-hoa/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-khanh-hoa/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Nha Trang, giá thuê chỉ từ 80.000đ/ngày cho xe số Sirius, Wave, Blade và từ 100.000đ/ngày cho các dòng xe ga Vision, Air Blade, Lead; giá ổn định, không tăng trong các ngày nghỉ lễ.",
+      "claim_supported": "Giá thuê rất hợp lý: chỉ từ 80.000đ/ngày cho xe số Sirius, Wave, Blade và từ 100.000đ/ngày cho các dòng xe ga Vision, Air Blade, Lead. Điểm mạnh hàng đầu là giá thuê xe máy ổn định, không tăng giá cao trong các ngày nghỉ lễ.",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá thuê xe số ở Nha Trang thường dao động từ 100.000 đến 120.000 đồng mỗi ngày, phụ thuộc dòng xe, năm sản xuất và thời gian giữ xe; xe ga phổ thông khoảng 110.000đ – 140.000đ/ngày.",
+      "claim_supported": "Giá thuê xe số ở Nha Trang thường dao động từ 100.000 đến 120.000 đồng mỗi ngày, phụ thuộc vào dòng xe, năm sản xuất và cả thời gian giữ xe. Ngoài ra còn có xe ga với chi phí giá rẻ từ 110.000đ – 140.000đ/ngày.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-nha-trang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một số địa chỉ tại Nha Trang có giá chỉ 70.000đ cho xe số dùng từ sáng đến tối; hầu hết cửa hàng hỗ trợ 2 mũ bảo hiểm + áo mưa miễn phí; nhiều nơi giảm giá khi thuê từ 3 ngày trở lên hoặc theo tuần, theo tháng; một ngày chỉ cần từ 100.000 – 150.000đ là thoải mái di chuyển cả ngày.",
+      "claim_supported": "Chỉ với 70.000đ, bạn đã có thể thoải mái sử dụng một chiếc xe số từ sáng đến tối. Hầu hết cửa hàng đều hỗ trợ 2 mũ bảo hiểm + áo mưa miễn phí. Một số nơi có giảm giá khi thuê từ 3 ngày trở lên hoặc thuê theo tuần, theo tháng. Một ngày chỉ cần bỏ ra từ 100.000 – 150.000đ là bạn đã thoải mái di chuyển cả ngày.",
+      "source_url": "https://bazantravel.com/thue-xe-may-nha-trang/",
+      "source_domain": "bazantravel.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Anh Cường Honda (Nha Trang) có hơn 5 năm hoạt động trong lĩnh vực cho thuê xe, ngoài du khách nội địa thì khách quốc tế coi đây là lựa chọn hàng đầu.",
+      "claim_supported": "Thuê xe máy nha trang Anh Cường có hơn 5 năm hoạt động trong lĩnh vực cho thuê xe, ngoài du khách nội địa, thì khách quốc tế luôn coi chúng tôi là lựa chọn hàng đầu về dịch vụ cho thuê xe máy.",
+      "source_url": "https://anhcuonghonda.com/bang-gia-thue-xe",
+      "source_domain": "anhcuonghonda.com",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

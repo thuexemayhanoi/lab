@@ -1,0 +1,73 @@
+{
+  "article_id": "A00193",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Đồng Nai",
+  "secondary_keywords": [
+    "thue xe Wave Bien Hoa",
+    "cho thue Honda Wave Dong Nai",
+    "thue xe so Bien Hoa",
+    "thue xe may Dong Nai"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Đồng Nai (Biên Hòa): xe số từ 100.000 vnd, xe ga từ 120.000 vnd, mặt bằng 100.000 đến 300.000 đồng mỗi ngày, lễ tăng 20% đến 50%.",
+  "geo_id": "VN-A00193",
+  "geo_level": "province",
+  "province": "Đồng Nai",
+  "locality": "",
+  "poi": "Biên Hòa – Bửu Long – thác Giang Điền – Vườn Xoài – quốc lộ 51",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave ở Biên Hòa giá bao nhiêu?",
+    "Dịp lễ có tăng giá không?",
+    "Thuê dài ngày có ưu đãi không?",
+    "Có giao xe tận ga không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Thành phố công nghiệp vệ tinh TP.HCM với chuỗi điểm du lịch Bửu Long, Giang Điền",
+  "slug": "gia-thue-wave-dong-nai",
+  "output_path": "thue-xe-may/gia-thue-wave-dong-nai/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-dong-nai/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Biên Hòa Đồng Nai, các dòng xe số có giá thuê khoảng từ 100.000 vnd, xe ga từ 120.000 vnd; bảng giá công khai cùng nhiều ưu đãi (cơ sở Hưng Ngọc Phát).",
+      "claim_supported": "Các dòng xe số có giá thuê khoảng từ 100.000 vnd, xe ga từ 120.000 vnd. Đây là một mức giá tốt… Bảng giá công khai cùng với nhiều ưu đãi đã giúp Hưng Ngọc Phát phục vụ được đa dạng đối tượng khách hàng.",
+      "source_url": "https://motortrip.vn/dich-vu/thue-xe-may-bien-hoa-dong-nai",
+      "source_domain": "motortrip.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Chi phí thuê xe máy tại Biên Hòa thường dao động từ 100.000 đến 300.000 đồng mỗi ngày tùy loại và đời xe; trong các dịp lễ lớn như Tết Nguyên Đán, Lễ 30/4 và Quốc Khánh 2/9 giá thuê có thể tăng từ 20% đến 50%.",
+      "claim_supported": "Chi phí thuê xe máy tại Biên Hòa thường dao động từ 100.000 đến 300.000 đồng mỗi ngày, tùy thuộc vào loại và đời xe. Trong các dịp lễ lớn như Tết Nguyên Đán, Lễ 30/4, và Lễ Quốc Khánh 2/9, giá thuê có thể tăng từ 20% đến 50%.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-bien-hoa.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một đơn vị tại Biên Hòa niêm yết cho thuê xe máy giá từ 100-150k với các dòng xe phổ biến như Sirius, Wave, Taurus, AB, Nouvo.",
+      "claim_supported": "Xemaybienhoa.com – Chuyên cho thuê xe máy tại Biên Hòa Đồng Nai. Xe Tay Ga. Xe Số. Giá thuê từ 100-150k. Biên Hoà cho thuê các dòng xe phổ biến như Sirus, Wave, Taurus, AB, Nouvo.",
+      "source_url": "https://xemaybienhoa.com/",
+      "source_domain": "xemaybienhoa.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Hệ thống giao xe tại Biên Hòa nhận và trả xe tận nơi trong bán kính 3km quanh ga Biên Hoà, hoạt động 7h-22h.",
+      "claim_supported": "Giao xe, lấy xe tận nơi (7h-22h): – Ga Biên Hoà – Bán kính 3km từ 86 Huỳnh Văn Lũy, Phường Trấn Biên, tỉnh Đồng Nai.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-bien-hoa.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một cơ sở cho thuê xe máy tại Biên Hòa có chi phí thuê chỉ từ 100.000đ/ngày.",
+      "claim_supported": "Với chi phí thuê xe chỉ từ 100.000đ/ngày, bạn đã thuê ngay được một chiếc xe tại đây. So sánh với các địa chỉ khác trong khu vực thì đây là mức giá rất tốt.",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "article_id": "A00195",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Vĩnh Long",
+  "secondary_keywords": [
+    "thue xe Wave Vinh Long",
+    "cho thue Honda Wave Vinh Long",
+    "thue xe so Vinh Long",
+    "thue xe may Vinh Long"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Vĩnh Long: Wave Alpha/Sirius 100.000đ/ngày, Wave RSX/S 130.000đ/ngày, mặt bằng từ 80.000đ – 150.000đ.",
+  "geo_id": "VN-A00195",
+  "geo_level": "province",
+  "province": "Vĩnh Long",
+  "locality": "",
+  "poi": "TP Vĩnh Long – bến phà An Bình – cù lao An Bình – chợ nổi – vườn trái cây",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave ở Vĩnh Long giá bao nhiêu?",
+    "Homestay cù lao có cho thuê xe không?",
+    "Có giao xe ra huyện không?",
+    "Đi cù lao cần lưu ý gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Bến phà An Bình, chợ nổi và homestay vườn — thuê xe gắn với đi đò",
+  "slug": "gia-thue-wave-vinh-long",
+  "output_path": "thue-xe-may/gia-thue-wave-vinh-long/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-vinh-long/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Vĩnh Long, các loại xe số như Wave RSX, Wave S hoặc tương tự có giá thuê 130.000đ/ngày; các dòng tay ga mới hơn như Lead, Vision, Grande giá 180.000đ/ngày (cơ sở Anh Duy).",
+      "claim_supported": "Các loại xe số như Wave RSX, Wave S hay xe tương tự giá thuê là 130.000đ/ngày. Các dòng tay ga mới hơn như Lead, Vision hay Grande thì giá cao hơn chút, 180.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Xe số loại Honda Wave alpha – Yamaha Sirius tại Vĩnh Long 100.000đ/ngày; Honda future Fi, Yamaha Jupiter Fi, Suzuki viva Fi 135.000đ/ngày; thuê xe máy Vĩnh Long chỉ từ 150k/ngày cho phương tiện di chuyển cả ngày.",
+      "claim_supported": "Xe số loại Honda wave alpha - Yamaha sirius: 100.000đ/ ngày. Honda future Fi, Yamaha Jupiter Fi, Suzuki viva Fi: 135.000đ/ ngày. Thuê xe máy Vĩnh Long giá khá rẻ, chỉ từ 150k/ ngày bạn đã có thể có được một phương tiện để di chuyển suốt cả ngày.",
+      "source_url": "https://6050831f8079c.site123.me/blog/%C4%90i%E1%BB%83m-qua-5-%C4%90%E1%BB%8Ba-ch%E1%BB%89-thu%C3%AA-xe-m%C3%A1y-v%C4%A9nh-long-gi%C3%A1-r%E1%BA%BB-uy-t%C3%ADn",
+      "source_domain": "6050831f8079c.site123.me",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá thuê xe máy Vĩnh Long nói chung phải chăng, giao động trong khoảng từ 80.000đ – 150.000đ.",
+      "claim_supported": "Giá cả thuê xe máy Vĩnh Long cũng phải chăng, giao động trong khoảng từ 80.000đ – 150.000đ.",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-vinh-long",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một số địa chỉ tại Vĩnh Long ghi nhận xe số thường từ 80.000đ – 100.000đ/ngày, xe ga từ 120.000đ -160.000đ/ngày; homestay Nam Thanh trên đảo An Bình cho thuê Wave, Sirius, Lead, Air Blade, Exciter từ 130.000đ đến 250.000đ/ngày; cơ sở Công Tân giao xe đến các huyện Vũng Liêm, Tam Bình, Mang Thít, Long Hồ, Trà Ôn.",
+      "claim_supported": "Mức giá tham khảo cho xe số thường từ 80.000đ – 100.000đ/ngày, xe ga từ 120.000đ -160.000đ/ngày. Nam Thanh là homestay cung cấp dịch vụ cho thuê xe máy trên đảo An Bình, Vĩnh Long. Với các dòng xe… bao gồm Wave, Sirius, Lead, Air Blade, và Exciter với mức giá từ 130.000đ đến 250.000đ/ngày. Cơ sở cho thuê xe máy Công Tân có thể giao xe đến các huyện Vũng Liêm, huyện Tam Bình, huyện Mang Thít, huyện Long Hồ, huyện Tân Bình, huyện Trà Ôn.",
+      "source_url": "https://brixtonvietnam.com.vn/huong-dan-thue-xe-may-vinh-long-chi-tiet/",
+      "source_domain": "brixtonvietnam.com.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

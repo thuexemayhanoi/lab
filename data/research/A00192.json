@@ -1,0 +1,66 @@
+{
+  "article_id": "A00192",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Lâm Đồng",
+  "secondary_keywords": [
+    "thue xe Wave Da Lat",
+    "cho thue Honda Wave Lam Dong",
+    "thue xe so Da Lat",
+    "thue xe may Da Lat"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Lâm Đồng (Đà Lạt): Wave RSX/Alpha 110.000 VNĐ/ngày, mặt bằng xe số 100.000 VNĐ/ngày, cọc 50 – 100 nghìn đồng.",
+  "geo_id": "VN-A00192",
+  "geo_level": "province",
+  "province": "Lâm Đồng",
+  "locality": "",
+  "poi": "Đà Lạt – hồ Xuân Hương – đồi Robin – Thiền viện Trúc Lâm – đèo Tà Nung",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave ở Đà Lạt giá bao nhiêu?",
+    "Tiền cọc khoảng bao nhiêu?",
+    "Đi đèo đồi nên thuê xe gì?",
+    "Cần đặt xe trước không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Đồi thông, đèo và homestay — thị trường thuê xe lớn nhất Tây Nguyên",
+  "slug": "gia-thue-wave-lam-dong",
+  "output_path": "thue-xe-may/gia-thue-wave-lam-dong/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-lam-dong/",
+  "claim_evidence": [
+    {
+      "claim": "Thuê xe máy Đà Lạt có giá theo dòng: Wave RSX/Alpha 110.000 VNĐ/ngày, Jupiter 110.000 VNĐ/ngày, Air Blade 130.000 VNĐ/ngày, Vision 130.000 VNĐ/ngày.",
+      "claim_supported": "Thuê xe máy Đà Lạt có giá theo các dòng xe như sau: Wave RSX/Alpha 110.000 VNĐ/ngày, Jupiter 110.000 VNĐ/ngày, Air Blade 130.000 VNĐ/ngày, Vision 130.000 VNĐ/ngày.",
+      "source_url": "https://ohdidi.vn/blog/tip-du-lich/thue-xe-may-da-lat",
+      "source_domain": "ohdidi.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Mặt bằng thuê xe Đà Lạt ghi nhận: xe số 100.000 VNĐ/ngày, xe ga 120.000 – 150.000 VNĐ/ngày (cơ sở Hải, Đà Lạt, hơn 80 xe đời mới gồm SH Mode, Air Blade, Vision, Janus và xe số Wave, Sirius, Blade).",
+      "claim_supported": "Giá thuê tham khảo: Xe số 100.000 VND/ngày – Xe ga 120.000–150.000 VND/ngày. Cửa hàng có hơn 80 xe đời mới, gồm các dòng xe ga như SH Mode, Air Blade, Vision, Janus và xe số Wave, Sirius, Blade.",
+      "source_url": "https://mia.vn/cam-nang-du-lich/top-dia-diem-thue-xe-may-da-lat-19448",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Thuê xe tại Đà Lạt cần xuất trình CMND, căn cước, bằng lái xe hoặc hộ chiếu; đóng trước phần cọc tùy từng đơn vị, giao động từ 50 nghìn đồng – 100 nghìn đồng; nên đặt thuê xe máy trước ngày tới Đà Lạt từ 2 – 3 ngày.",
+      "claim_supported": "Bạn phải xuất trình được giấy chứng minh thư, căn cước hoặc bằng lái xe, hộ chiếu… Tiếp theo đó, bạn sẽ phải đóng trước một phần cọc, tùy theo từng đơn vị, con số này sẽ giao động từ 50 nghìn đồng - 100 nghìn đồng. Bạn nên đặt thuê xe máy trước ngày tới Đà Lạt từ 2-3 ngày.",
+      "source_url": "https://ohdidi.vn/blog/tip-du-lich/thue-xe-may-da-lat",
+      "source_domain": "ohdidi.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một cơ sở tại Đà Lạt ghi nhận giá thuê xe số 1 ngày 100.000đ từ 6h00 sáng đến 21h00; thuê xe >2 ngày có thể giữ xe qua đêm.",
+      "claim_supported": "Giá thuê xe số 1 ngày: 100.000đ từ 6h00 sáng đến 21h00. Nếu thuê xe >2 ngày có thể giữ xe qua đêm.",
+      "source_url": "https://www.dulichdalat.city/dich-vu/cho-thue-xe-may-tai-da-lat-gia-re.html",
+      "source_domain": "www.dulichdalat.city",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}
