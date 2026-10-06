@@ -1,6 +1,6 @@
 # Pipeline viết bài tự động (Autonomous Writing Pipeline)
 
-Tài liệu này mô tả pipeline chạy nền viết bài tự động của repo /lab: coordinator duy nhất, 3 writer song song, QA từng bài, build/deploy 1 lần/cycle, publish đúng một lần (exactly-once), checkpoint/resume không trùng bài.
+Tài liệu này mô tả **legacy/internal pipeline tooling** của repo /lab. Từ Simple Production Mode 2026-10-06, pipeline này KHÔNG còn được schedule trong `factory-production.yml`; normal production dùng external writer push-driven theo `docs/CONTINUOUS-WRITER.md`. Tooling này được giữ cho recovery/manual testing và regression coverage.
 
 ## Ba nguyên tắc
 
@@ -12,7 +12,7 @@ Tài liệu này mô tả pipeline chạy nền viết bài tự động của r
 
 queue PLANNED < refill_min (100) → refill lên refill_target (~300 topic từ data/content-matrix.csv shards, bỏ qua topic đã published / đang xử lý / trùng) → claim batch 12–18 bài (prepare-next, transaction fail-closed) → chia đều cho 3 writer (round-robin) → mỗi writer: research → write → (QA → repair → re-QA) trong workspace riêng → coordinator ingest packet + body về repo (_drafts/) → wrap-drafts → QA từng bài (pass_min 75, review_min 70) → toàn bộ bài PASS của batch được publish trong MỘT transaction của cycle (operator.js publish --scope fast --cycle-batch, cap PUBLISH_BATCH_MAX=20 của engine — audit #3, không còn chia chunk) → trạng thái pending deployment (lưu ids + published_at vào state) → run kế xác nhận Pages build cuối thành công VÀ chứa publication SHA rồi mới finalize (audit #4) → đánh dấu PUBLISHED trong ledger → checkpoint tiến trình, giải phóng transaction + writer lock → sang cycle tiếp.
 
-Cron */30 * * * * chạy job pipeline trong factory-production.yml; mỗi lần chạy đúng 1 cycle, tự tiếp tục ở lần chạy sau (state nằm tại data/state/pipeline-state.json).
+Không còn cron production cho pipeline. Nếu cần kiểm thử/recovery thủ công, chạy CLI trực tiếp trong môi trường được kiểm soát; state vẫn nằm tại `data/state/pipeline-state.json`.
 
 ## Cấu hình runtime writer
 
@@ -33,10 +33,10 @@ Writer HTTP nhận POST {task, article_id, row, packet, feedback} với task thu
 
 1. Deploy writer runtime thật ở một endpoint HTTP ổn định.
 2. Set GitHub Variables: WRITER_RUNTIME=http, WRITER_ENDPOINT=<url> (+ Secret WRITER_API_KEY nếu endpoint cần auth).
-3. Lịch factory-production.yml (cron */30 * * * *) hoặc trigger thủ công: workflow_dispatch với input action=pipeline để chạy 1 cycle ngay.
+3. Không dùng `factory-production.yml` để khởi động pipeline. Chỉ chạy CLI thủ công khi đang làm recovery/test có chủ đích.
 4. Theo dõi: node scripts/factory/pipeline.js status (số topic trong queue, trạng thái lock, cycle gần nhất).
 
-Kiểm thử an toàn: workflow_dispatch với action=selftest chạy node scripts/factory/pipeline.js selftest (chỉ mock + test, không publish).
+Kiểm thử an toàn: `node scripts/factory/pipeline.js selftest` (chỉ mock + test, không publish).
 
 ## Exactly-once và resume
 
@@ -59,7 +59,7 @@ push-selection.js mode stale và hygiene step trong workflow cũng dùng đúng 
 
 node scripts/factory/pipeline.js status    # trạng thái queue/lock/cycle
 node scripts/factory/pipeline.js refill   # chỉ refill queue (không claim)
-node scripts/factory/pipeline.js cycle    # 1 cycle đầy đủ (cron chạy lệnh này)
+node scripts/factory/pipeline.js cycle    # 1 cycle thủ công/recovery; KHÔNG có cron production
 node scripts/factory/pipeline.js selftest # chạy tests/pipeline-suite.js (mock)
 
 State internal (gitignored, không commit, **RUN-LOCAL — không đi theo runner mới**): pipeline/ (lock.json coordinator lock, maintenance.json maintenance lock #4/#5, workspace writer). Serialize giữa các workflow run: concurrency group `lab-factory-production`.
