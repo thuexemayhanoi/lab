@@ -24,7 +24,7 @@ Quy tắc mặc định:
 
 - Chạy theo [docs/CONTINUOUS-WRITER.md](docs/CONTINUOUS-WRITER.md).
 - Mỗi queue mới ưu tiên **10 bài liên tiếp** khi đủ runtime và tất cả gate xanh;
-  hard contract vẫn là **2..20 bài/push** theo `production-control.json`.
+  hard contract là **2..10 bài/push** theo `production-control.json`.
 - Sau mỗi queue: chờ Factory production + Pages của đúng SHA kết thúc, fetch fresh
   `main`, rồi **lập tức viết queue kế tiếp mà không hỏi người dùng xác nhận**.
 - Không dừng chỉ vì vừa publish 2 bài, vừa xong một queue, workflow vừa GREEN,
@@ -33,8 +33,8 @@ Quy tắc mặc định:
   QA; deep/full/Tier-4 chỉ dành cho engine/workflow/recovery changes.
 - Nếu queue RED: sửa đúng queue/ID đang lỗi → QA lại → push repair → verify GREEN
   rồi mới đi tiếp. Không nhảy ID, không bỏ dở repair để claim bài mới.
-- `WRITER_RUNTIME=off` chỉ nói **internal Actions writer** đang tắt; nó KHÔNG chặn
-  external writer/Vibe/Mistral đang chạy theo push-driven flow.
+- External writer/Vibe/Mistral là **đường production bình thường duy nhất**.
+  Không chờ cron/Actions tự viết prose.
 - Chỉ dừng khi: toàn bộ matrix terminal; runtime/session/tool buộc dừng tại safe
   checkpoint; hoặc blocker thật cần credential/quyền/người dùng.
 
@@ -43,7 +43,7 @@ publish / verify**, thay vì bắt người dùng ra lệnh lại sau từng pai
 
 ## NORMAL WRITER FLOW (push-driven — the ONLY loop a writer needs)
 
-Standard push = **a TURBO write-ahead queue of 2..20 articles**
+Standard push = **a TURBO write-ahead queue of 2..10 articles**
 (`queue_min`..`queue_max` in `data/state/production-control.json`; the legacy
 `chunk_size=2` still caps REPAIR pushes). The factory consumes the queue as
 sequential 2-article pairs inside ONE production run. Every writer run pushes
@@ -52,11 +52,13 @@ and does NOT stop after one:
 ```
 FETCH FRESH MAIN → RECOVER (if txn/lock pending) → RESUME (finish the open
 chunk first — repair pushes BEFORE pushing new queues)
-→ PICK QUEUE     2..20 CONSECUTIVE claimable PLANNED rows starting at
+→ PICK QUEUE     2..10 CONSECUTIVE claimable PLANNED rows starting at
                  next_claimable_id (repository/matrix order — no skips)
 → RESEARCH       write data/research/<ID>.json (light packet for evergreen
                  rows; OFFICIAL sources mandatory when requires_official_sources=1)
 → WRITE QUEUE    drafts in _drafts/<ID>.body.html (every queued id)
+                 internal links chỉ được trỏ tới page đã PUBLISHED trên fresh main;
+                 KHÔNG link sang sibling chưa publish trong cùng queue
 → WRAP           node scripts/factory/wrap-drafts.js
 → COMMIT + PUSH  _drafts/<ID>.html + <ID>.body.html + research packets
                  (the whole queue in ONE commit)
@@ -144,16 +146,11 @@ XE MÁY ĐIỆN (electric) · PHỤ TÙNG (parts).
   (foreign id / filtered subset => REFUSE). No other path may exceed CHUNK.
 - Phase lifecycle: `PILOT` → `PRODUCTION` via `node scripts/factory/factory.js promote-production`
   (canonical transition; bootstrap cap only binds in PILOT). See `docs/CONTENT-FACTORY.md`.
-- Autonomous pipeline (the ONLY sanctioned AI-writer path in Actions):
-  job `pipeline` in `factory-production.yml` runs
-  `scripts/factory/pipeline.js cycle` on the `*/30 * * * *` schedule. It only
-  writes when the writer runtime is explicitly configured:
-  `WRITER_RUNTIME=http` + `WRITER_ENDPOINT` (GitHub Variables) and optional
-  `WRITER_API_KEY` (GitHub Secret). Default `WRITER_RUNTIME=off` =
-  IDLE-STOP BEFORE claiming (queue still refills; nothing written,
-  nothing published). `WRITER_RUNTIME=mock` requires PIPELINE_ALLOW_MOCK=1
-  and is test-only. Secrets live in GitHub Secrets — NEVER committed.
-  No other autonomous AI writer, no API keys in the repo tree.
+- Normal production is **external-writer push-driven only**. `factory-production.yml`
+  has no scheduled AI-writing cron and no production watchdog that starts writers.
+  `scripts/factory/pipeline.js` remains in the repository only as a recovery/manual
+  test component used by reliability tooling; it is not a normal content entrypoint.
+  No API keys are committed in the repo tree.
 - No backlink campaigns. Do not create external links to manipulate rankings.
 
 ## Data contracts
@@ -203,11 +200,11 @@ ONE CLI — the old command-file channel is retired:
 - **Push-driven production** (`.github/workflows/factory-production.yml`,
   triggered by `_drafts/**` pushes): the writer commits a WRITE-AHEAD QUEUE
   (`_drafts/<ID>.html` + `<ID>.body.html` + `data/research/<ID>.json` for
-  2..20 consecutive PLANNED ids in ONE commit) and pushes.
+  2..10 consecutive PLANNED ids in ONE commit) and pushes.
   `scripts/factory/push-selection.js` derives the EXACT ids from the push,
   sorts them by repository/matrix order and splits them into 2-article PAIRS
   (REFUSES unknown/PUBLISHED/BLOCKED ids, mixed new+repair, < `queue_min` 2 or
-  > `queue_max` 20 ids, a skip against matrix order (the queue must start at
+  > `queue_max` 10 ids, a skip against matrix order (the queue must start at
   the first PLANNED row and leave no unclaimed PLANNED row inside its span),
   body-only, missing research packets — exit 3, nothing executed, nothing
   mutated). The workflow then runs recover-first, claims the whole queue with
@@ -289,31 +286,18 @@ Rules:
   tests, do NOT mutate production truth to make tests green; fix the root
   cause and re-run the affected tier AND every tier above it.
 - Reading Actions in the push-driven model: the ONLY workflows in this repo
-  are `factory-production.yml` (production loop + watchdog), `factory-repair.yml`
-  (#4/#5 — listens to Factory production runs) and `factory-soak.yml`
+  are `factory-production.yml` (push-driven publish loop), `factory-repair.yml`
+  (#4/#5 — listens to failed Factory production runs) and `factory-soak.yml`
   (Tier 4 battery). Every push to `main` runs `factory-production.yml`: the
-  `push-gate` no-op job keeps the run GREEN (GitHub records a 0-job FAILURE
-  placeholder for path-filtered pushes, so NO paths filter is used on
-  `on.push`), and `publish` runs ONLY when the push actually touches
-  `_drafts/**` (detected by `push-gate` via git diff + push payload) or on
-  maintenance dispatch (status|recover|diagnostics); the `*/30` cron drives
-  `pipeline`, the `10 * * * *` cron drives `agent-watchdog`. A FAILED
-  Factory production run triggers `agent-repair` → `agent-supervisor` in
-  `factory-repair.yml` (workflow_run + needs handoff over the committed
-  incident). CRITICAL: the workflow_run trigger MUST live in
-  `factory-repair.yml`, never in `factory-production.yml` — GitHub refuses
-  a workflow listening to itself ("cannot listen to itself"), which makes
-  the whole file unparseable (every run a 0-job failure, schedules dead).
+  `push-gate` no-op job keeps the run GREEN, and `publish` runs ONLY when
+  the push actually touches `_drafts/**` or on maintenance dispatch
+  (status|recover|diagnostics). There is **no scheduled AI-writing cron** in
+  Factory production. A FAILED Factory production run can still trigger
+  `agent-repair` → `agent-supervisor` in `factory-repair.yml`.
   A REFUSED draft push is red BY DESIGN, not an engine failure:
-  `push-selection.js` exits 3 and the production job goes RED while
-  NOTHING is mutated (fix the draft contract on the writer side, push
-  again). The Tier 4 battery in `factory-soak.yml` starts on every push
-  to `main` and every pull_request, but the heavy suites (agent-suite +
-  pipeline-suite + soak) only execute when `tier4-gate` detects a
-  reliability-relevant change (scripts/factory/**, config/**, tests/**,
-  .github/workflows/**) — a content-only push gets a green gate run and
-  never burns Tier 4 minutes; `workflow_dispatch` re-runs the full
-  battery on demand.
+  `push-selection.js` exits 3 and NOTHING is mutated. The Tier 4 battery in
+  `factory-soak.yml` starts on every push to `main` and every pull_request,
+  but heavy suites run only for reliability-relevant changes.
 
 ## Scope → gates (Simple Production Mode)
 
@@ -350,21 +334,15 @@ marker; see `docs/PROC-RECOVERY.md`).
 
 - **External AI writer** (you, typically): research → write draft body →
   wrap → commit + PUSH (the factory runs QA/publish itself).
-- **Pipeline coordinator** (`scripts/factory/pipeline.js`, job `pipeline`,
-  cron `*/30 * * * *`): the ONLY autonomous writer orchestration — owns
-  queue refill (~300 PLANNED, no duplicates/published/in-flight), grants
-  12–18 articles/cycle split evenly across 3 parallel writers, QA/repair
-  loops, chunked atomic publish, checkpoint/resume exactly-once, and
-  lock TTL `pipeline/lock.json` against double coordinators. Writers run
-  in isolated gitignored workspaces (`pipeline/writer-<n>/`) and never
-  touch global state, merge, push or publish (docs/PIPELINE.md).
-- **GitHub Actions**: tests, validation, deterministic generation, publish
-  promotion, site build, deployment. The `pipeline` job coordinates the
-  autonomous loop; it never bypasses QA or the publish gates.
+- **Legacy/internal pipeline tooling** (`scripts/factory/pipeline.js`) remains
+  available for recovery tests and incident tooling, but it is **not scheduled**
+  and is not the normal writer path.
+- **GitHub Actions**: deterministic QA/publish, repair, Tier-4 validation and
+  Pages deployment. Actions do not create normal article prose.
 
-## Operational agents (#4 repair, #5 supervisor, #6 watchdog)
+## Operational agents (#4 repair, #5 supervisor)
 
-Three INFRASTRUCTURE-ONLY agents (docs/AGENTS-OPS.md). They NEVER write
+Two active INFRASTRUCTURE-ONLY agents (docs/AGENTS-OPS.md). They NEVER write
 articles and never touch queue/matrix/taxonomy/content strategy.
 
 - **#4 repair** (`scripts/factory/agent-repair.js`, job `agent-repair` in
@@ -387,12 +365,6 @@ articles and never touch queue/matrix/taxonomy/content strategy.
   paused, preserve checkpoints/writer commits, write a human-readable
   incident report (`reports/incidents/<id>.md`), STOP. No further
   repair escalation exists.
-- **#6 watchdog** (`scripts/factory/agent-watchdog.js`, job
-  `agent-watchdog`, cron `10 * * * *`): ONE responsibility — if no
-  VALID production progress (real staging/publish/cycle output — logs,
-  heartbeats and status checks do NOT count) for 2 continuous hours AND
-  everything is idle (no maintenance lock, no intentional pause, no
-  active writer cycle, no publisher/build/deploy activity, no in-progress
-  Actions run), trigger exactly ONE normal production entrypoint. Never
-  starts writers individually, never repairs, never edits anything, never
-  cancels active runs or duplicates cycles.
+- `scripts/factory/agent-watchdog.js` remains as read-only/tested reliability
+  tooling, but there is no scheduled #6 job in normal production. External writer
+  continuity is governed by `docs/CONTINUOUS-WRITER.md`.
