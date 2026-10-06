@@ -1,17 +1,15 @@
 {
-  "last_run": "2026-10-06T11:20:20.557Z",
+  "last_run": "2026-10-06T11:30:52.524Z",
   "phase": "PRODUCTION",
   "matrix_rows": 10000,
-  "published_count": 189,
+  "published_count": 191,
   "last_batch": [
-    "A00181",
-    "A00182"
+    "A00183",
+    "A00184"
   ],
-  "last_completed_id": "A00182",
+  "last_completed_id": "A00184",
   "next_claimable_id": "A00187",
   "active_chunk": [
-    "A00183",
-    "A00184",
     "A00185",
     "A00186"
   ],
