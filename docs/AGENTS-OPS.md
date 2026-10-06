@@ -1,6 +1,6 @@
 # AGENTS-OPS.md — Operational Agents #4 / #5 / #6 (docs/PIPELINE.md tiếp theo)
 
-Ba agent vận hành BÊN CẠNH pipeline viết bài (không thay thế, không can thiệp
+Hai agent vận hành active (#4/#5) BÊN CẠNH push-driven factory; #6 được giữ làm tooling read-only/test (không thay thế, không can thiệp
 nội dung). **Tất cả KHÔNG BAO GIỜ viết bài, không đụng queue/matrix/taxonomy/
 content strategy.** Writers (w1–w3) vẫn content-only như cũ.
 
@@ -8,7 +8,7 @@ content strategy.** Writers (w1–w3) vẫn content-only như cũ.
 |---|---|---|---|---|
 | **#4 repair** | `scripts/factory/agent-repair.js` | `repair --source … \| status` | `workflow_run` (Factory production FAIL trên main, workflow `factory-repair.yml`) hoặc dispatch `action=repair` | First-line infra repair — MỘT pass, không poll |
 | **#5 supervisor** | `scripts/factory/agent-supervisor.js` | `run --incident <id> \| conclude --incident <id> \| status` | Chỉ sau khi #4 trả `SUCCESS` hoặc `ESCALATE` (job `agent-supervisor`, `needs: agent-repair`) | Verify độc lập HOẶC đúng MỘT lần sửa second-line; fail ⇒ pause + report + STOP |
-| **#6 watchdog** | `scripts/factory/agent-watchdog.js` | `check [--trigger-cmd CMD] [--dry-run] \| status` | Cron `10 * * * *` (job `agent-watchdog`, dispatch `action=watchdog`) | Đánh thức factory nếu không có progress hợp lệ ≥ 2 giờ |
+| **#6 watchdog (legacy/manual)** | `scripts/factory/agent-watchdog.js` | `check [--trigger-cmd CMD] [--dry-run] \| status` | Không schedule trong normal production | Read-only/test diagnostics; không tự đánh thức writer |
 
 Nền chung: `scripts/factory/agents-core.js` (maintenance lock + incident
 store + probes). Cấu hình: `config/agents.json`.
@@ -87,13 +87,13 @@ store + probes). Cấu hình: `config/agents.json`.
    loại như trên); không được ⇒ **FAILED_PAUSED**: durable pause + lock TTL,
    bảo toàn checkpoints/writer commits, viết `<INC-…>.md`, job đỏ (conclude
    exit 1), STOP — KHÔNG có Agent #7.
-4. #6 (cron 10 * * * *, read-only): đếm progress HỢP LỆ (commit đụng
+4. #6 không còn cron trong normal production. Nếu chạy manual/read-only thì vẫn đếm progress HỢP LỆ (commit đụng
    `_drafts/` hoặc matrix shards, hoặc cycle hoàn tất có published/blocked —
    KHÔNG phải log/heartbeat/status). < 2h ⇒ DO NOTHING. ≥ 2h NHƯNG còn
    maintenance lock / pause chủ ý / idle chưa có writer runtime /
    coordinator lock / txn / writer-lock / Actions run in_progress ⇒ DO
    NOTHING. Ngược lại ⇒ trigger ĐÚNG MỘT entrypoint
-   (`gh workflow run factory-production.yml -f action=pipeline`) — không
+   (không auto-trigger `factory-production.yml`; external writer mới là production entrypoint) — không
    start writer riêng lẻ, không cancel run, không tạo cycle trùng (concurrency
    group `lab-factory-production` + coordinator lock serialize mọi thứ).
 
