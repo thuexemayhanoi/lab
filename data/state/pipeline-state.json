@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-05T22:25:56.220Z",
+  "updated_at": "2026-10-06T02:26:59.241Z",
   "cycle": 0,
   "pending": [
     "A00177",
@@ -310,7 +310,7 @@
   "last_stop": {
     "kind": "idle",
     "reason": "WRITER_RUNTIME=off — chưa cấu hình writer runtime (set GitHub Variable WRITER_RUNTIME=http + WRITER_ENDPOINT, Secret WRITER_API_KEY nếu service cần key)",
-    "at": "2026-10-05T22:25:56.220Z",
+    "at": "2026-10-06T02:26:59.241Z",
     "pending": 300,
     "planned_total": 9817
   },
