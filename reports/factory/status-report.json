@@ -1,15 +1,13 @@
 {
-  "generated_at": "2026-10-06T11:37:28.845Z",
+  "generated_at": "2026-10-06T12:51:55.119Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 192,
-    "PASS": 1,
+    "PUBLISHED": 193,
     "PLANNED": 9807
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 186,
-      "PASS": 1,
+      "PUBLISHED": 187,
       "PLANNED": 4813
     },
     "RESCUE": {
@@ -38,10 +36,8 @@
     }
   },
   "phase": "PRODUCTION",
-  "active_chunk": [
-    "A00186"
-  ],
-  "last_completed_id": "A00185",
+  "active_chunk": [],
+  "last_completed_id": "A00186",
   "next_claimable_id": "A00187",
   "blocked": [],
   "published": [
@@ -1154,6 +1150,12 @@
       "pk": "giá thuê Wave Nghệ An",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-nghe-an/"
+    },
+    {
+      "id": "A00186",
+      "pk": "giá thuê Wave Hà Tĩnh",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-ha-tinh/"
     },
     {
       "id": "A00465",
