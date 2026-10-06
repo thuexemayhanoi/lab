@@ -1,0 +1,74 @@
+{
+  "article_id": "A00227",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Đồng Nai",
+  "secondary_keywords": [
+    "gia thue Winner Dong Nai",
+    "cho thue Honda Winner Bien Hoa",
+    "thue xe con tay Bien Hoa",
+    "gia thue xe may Bien Hoa"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê xe máy tại Biên Hòa/Đồng Nai: xe số phổ thông từ 100.000–130.000đ/ngày, xe ga từ 120.000đ; Winner/côn tay không niêm yết phổ biến, cần hỏi đặt trước.",
+  "geo_id": "VN-A00227",
+  "geo_level": "province",
+  "province": "Đồng Nai",
+  "locality": "",
+  "poi": "TP Biên Hòa – chùa Bửu Long – sông Đồng Nai – núi Chứa Chan – ga Biên Hòa – Long Khánh – Vũng Tàu",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Biên Hòa có sẵn không, giá bao nhiêu?",
+    "Mặt bằng thuê xe máy Biên Hòa như thế nào?",
+    "Thuê xe ở Đồng Nai cần cọc bao nhiêu?",
+    "Có cơ sở nào giao xe tận nơi tại Biên Hòa không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Biên Hòa — đô thị công nghiệp ven sông Đồng Nai, cửa ngõ đi Vũng Tàu: thị trường thuê xe phát triển quanh ga Biên Hòa với mô hình giao tận nơi; Winner/côn tay hầu như không niêm yết sẵn, khách cần đặt trước.",
+  "slug": "gia-thue-winner-dong-nai",
+  "output_path": "thue-xe-may/gia-thue-winner-dong-nai/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-dong-nai/",
+  "claim_evidence": [
+    {
+      "claim": "Trên nền tảng Vexere tại Biên Hòa, nhóm xe số phổ thông cho thuê Honda Wave Alpha hoặc Yamaha Sirius (giao ngẫu nhiên tùy tình trạng xe thực tế), đời xe từ 2014, không cần cọc trước, giá từ 130.000đ.",
+      "claim_supported": "Xe số phổ thông Hồng Thắm Honda Wave Alpha hoặc dòng xe tương tự Honda Wave Alpha, Yamaha Sirius (giao ngẫu nhiên tùy tình trạng xe thực tế) Đời xe: từ 2014 Không cần cọc trước từ 130.000đ",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-bien-hoa.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Nhà xe trên Vexere Biên Hòa yêu cầu giữ lại CCCD; nếu khách tại Đồng Nai cọc 1.000.000đ/xe; mỗi ngày thuê tính bằng 24 giờ, thuê tối thiểu 1 ngày, trả xe chưa quá 6 giờ chỉ tính thêm 1/2 ngày.",
+      "claim_supported": "– Giữ lại CCCD. Nếu khách tại Đồng Nai cọc 1.000.000đ/xe – Làm hợp đồng thuê xe … Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe. – Thuê tối thiểu từ 1 ngày. – Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 6 giờ → chỉ tính thêm 1/2 ngày.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-bien-hoa.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Hưng Ngọc Phát (24/4B Khu Phố 2, Đường Trương Quyền, phường Tân Mai, TP. Biên Hòa) cho thuê các dòng xe số giá khoảng từ 100.000 vnd, xe ga từ 120.000 vnd.",
+      "claim_supported": "Cửa hàng cũng cho thuê xe với mức giá phải chăng Các dòng xe số có giá thuê khoảng từ 100.000 vnd, xe ga từ 120.000 vnd. Đây là một mức giá tốt, hơn nữa chênh lệch không nhiều so với các địa phương lân cận.",
+      "source_url": "https://motortrip.vn/dich-vu/thue-xe-may-bien-hoa-dong-nai",
+      "source_domain": "motortrip.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Phan Thiên Kim (C18A, phường Bình Đa, TP. Biên Hòa, điện thoại 097 512 40 03) là một trong những địa điểm cho thuê xe máy uy tín lâu năm tại Biên Hòa, có đủ các dòng xe ga như Honda Vision, Lead, Airblade và các dòng xe số.",
+      "claim_supported": "Phan Thiên Kim là một trong những địa điểm uy tín nhất tại Biên Hòa Đồng Nai … Nơi đây có đủ các dòng xe, từ xe ga đến xe số. Có thể kể đến một số dòng xe ga được thuê rất chạy như Honda Vision, Lead, Airblade,…",
+      "source_url": "https://motortrip.vn/dich-vu/thue-xe-may-bien-hoa-dong-nai",
+      "source_domain": "motortrip.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Thắng Lê là cơ sở thuê xe máy không cần cọc tại Biên Hòa, xe 100% chính chủ, chính hãng, tập trung cho thuê các dòng xe ga.",
+      "claim_supported": "Điểm nổi bật nhất trong dịch vụ của Thắng Lê là cho thuê xe máy không cần cọc … Một điểm cộng nữa cho đơn vị này chính là xe 100% chính chủ, chính hãng.",
+      "source_url": "https://motortrip.vn/dich-vu/thue-xe-may-bien-hoa-dong-nai",
+      "source_domain": "motortrip.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn vexere.com (điểm thuê Biên Hòa) và motortrip.vn (7 địa điểm Biên Hòa Đồng Nai). Không nguồn nào niêm yết Honda Winner riêng tại Đồng Nai — bài ghi nhận mặt bằng xe số/xe ga đã kiểm chứng và tư vấn đặt trước."
+}

@@ -1,0 +1,67 @@
+{
+  "article_id": "A00236",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Sirius Đà Nẵng",
+  "secondary_keywords": [
+    "gia thue Sirius Da Nang",
+    "cho thue Yamaha Sirius Da Nang",
+    "thue xe so Da Nang gia",
+    "thue xe may Da Nang My Khe"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Đà Nẵng: nhà xe Bảo Tín cho thuê Sirius từ 100.000đ/ngày, đời từ 2017, không cần cọc; bảng giá tổng hợp ghi xe số 110cc 100.000 VNĐ/ngày.",
+  "geo_id": "VN-A00236",
+  "geo_level": "province",
+  "province": "Đà Nẵng",
+  "locality": "",
+  "poi": "Bãi biển Mỹ Khê – cầu Rồng – chợ Cồn – ga Đà Nẵng – sân bay Đà Nẵng – Hội An – Sơn Trà – Ngũ Hành Sơn",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Sirius ở Đà Nẵng giá bao nhiêu một ngày?",
+    "Thuê xe số Đà Nẵng có cần đặt cọc không?",
+    "Giao xe ở sân bay, ga Đà Nẵng có sẵn không?",
+    "Thuê Sirius đi Hội An có phát sinh phí không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Sirius giữa Đà Nẵng — đôi bãi biển: nhà xe liệt kê riêng Sirius từ 100.000đ/ngày không cần cọc, kèm mũ bảo hiểm và 1 lít xăng; điểm giao xe phủ ga, sân bay, chợ Cồn, cầu Rồng và bãi biển Mỹ Khê.",
+  "slug": "gia-thue-sirius-da-nang",
+  "output_path": "thue-xe-may/gia-thue-sirius-da-nang/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-da-nang/",
+  "claim_evidence": [
+    {
+      "claim": "Trên Vexere tại Đà Nẵng, nhà xe Bảo Tín cho thuê Yamaha Sirius đời xe từ 2017, kèm mũ bảo hiểm và 1 lít xăng, không cần cọc trước, giá từ 100.000đ.",
+      "claim_supported": "Bảo Tín4.9 Yamaha Sirius Đời xe: từ 2017 Mũ bảo hiểm, Xăng (1 lít) Không cần cọc trước từ 100.000đ",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Nhà xe Bảo Tín tại Đà Nẵng nhận và trả xe hằng ngày từ 07:30 đến 22:30, mỗi ngày thuê tính bằng 24 giờ, thuê tối thiểu 1 ngày, trả xe chưa quá 6 giờ chỉ tính thêm 1/2 ngày.",
+      "claim_supported": "Thời gian nhận xe và trả xe hằng ngày từ 07:30 đến 22:30. Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe. – Thuê tối thiểu từ 1 ngày. – Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 6 giờ → chỉ tính thêm 1/2 ngày.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Bảng giá thuê xe máy Đà Nẵng mới nhất trên Vexere ghi nhận nhóm xe số 110cc (Honda Wave Alpha, Yamaha Sirius) giá 100.000 VNĐ/ngày và nhóm xe tay ga 125cc (Honda Airblade, Honda Lead, Honda Vision) giá 120.000 VNĐ.",
+      "claim_supported": "Xe số 110cc Honda Wave Alpha, Yamaha Sirius 100.000 VNĐ … Xe tay ga 125cc Honda Airblade, Honda Lead, Honda Vision 120.000 VNĐ",
+      "source_url": "https://blog.vexere.com/thue-xe-may-da-nang/",
+      "source_domain": "blog.vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giấy tờ cần chuẩn bị khi thuê xe tại Đà Nẵng gồm CCCD/Passport & GPLX bản gốc, nhà xe giữ lại CCCD hoặc Passport và làm hợp đồng thuê xe.",
+      "claim_supported": "– Giấy tờ cần chuẩn bị: CCCD/Passport & GPLX (bản gốc) – Nhà xe giữ lại CCCD hoặc Passport – Làm hợp đồng thuê xe",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-da-nang.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn vexere.com (điểm thuê Đà Nẵng: Bảo Tín Sirius từ 100.000đ, đời từ 2017, không cần cọc) và blog.vexere.com (bảng giá xe số 110cc Wave Alpha/Sirius 100.000 VNĐ/ngày)."
+}

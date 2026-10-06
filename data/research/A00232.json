@@ -1,0 +1,74 @@
+{
+  "article_id": "A00232",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Cà Mau",
+  "secondary_keywords": [
+    "gia thue Winner Ca Mau",
+    "cho thue Honda Winner Ca Mau",
+    "thue xe con tay Ca Mau",
+    "gia thue xe may Ca Mau"
+  ],
+  "search_intent": "informational — khách cần giá thuê Winner/côn tay tại Cà Mau: thị trường nhỏ với cửa hàng gia đình; xe số 80.000–120.000đ/ngày, xe ga 120.000–160.000đ/ngày, các cơ sở niêm yết 80.000–160.000đ; Winner hầu như không có sẵn.",
+  "geo_id": "VN-A00232",
+  "geo_level": "province",
+  "province": "Cà Mau",
+  "locality": "",
+  "poi": "TP Cà Mau – vườn quốc gia Mũi Cà Mau – mũi Cà Mau – sông Ông Đốc – biển Khai Long – chợ đêm Cà Mau – bến xe Cà Mau",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Ở Cà Mau có chỗ nào cho thuê Winner không?",
+    "Giá thuê xe máy Cà Mau bao nhiêu một ngày?",
+    "Thuê xe đi mũi Cà Mau, vườn quốc gia nên chuẩn bị gì?",
+    "Mùa lễ Tết giá thuê xe Cà Mau có tăng không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Đất mũi Cà Mau — vườn quốc gia Mũi Cà Mau, sông Ông Đốc: thị trường thuê xe nhỏ, các cơ sở ghi giá 80.000–160.000đ/ngày; Winner không niêm yết công khai, bài hướng dẫn hỏi trước khi đi về vùng cực Nam.",
+  "slug": "gia-thue-winner-ca-mau",
+  "output_path": "thue-xe-may/gia-thue-winner-ca-mau/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-ca-mau/",
+  "claim_evidence": [
+    {
+      "claim": "Triển Lê (số 08 Bùi Thị Xuân, phường 4, TP. Cà Mau) cho thuê hơn 60 mẫu xe với giá 100 – 150.000 vnđ/ngày.",
+      "claim_supported": "Triển Lê Giá : 100 – 150.000 vnđ/Ngày Số 08 Bùi Thị Xuân, Phường 4 TP Cà Mau … Hơn 60 mẫu xe",
+      "source_url": "https://giahuy.org/thue-xe-may-ca-mau/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Anh Khôi (số 35 Nguyễn Hữu Lễ, phường 2, TP. Cà Mau) ghi giá 100 – 150.000đ/ngày; Trọng Nguyễn (số 26 Lương Thế Vinh) ghi 100 – 160.000 vnđ/ngày; Qúy Cọp (Trần Quang Diệu, phường 9) ghi 80 – 140.000đ/ngày.",
+      "claim_supported": "Anh Khôi Giá :100 – 150.000đ/Ngày Số 35 Nguyễn Hữu Lễ, Phường 2, Cà Mau … Trọng Nguyễn Giá : 100 – 160.000 vnđ/Ngày Số 26 Lương Thế Vinh, Vĩnh Bảo … Qúy Cọp Giá :80 – 140.000đ/Ngày Trần Quang Diệu, Phường 9, TP. Cà Mau",
+      "source_url": "https://giahuy.org/thue-xe-may-ca-mau/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Tại Cà Mau, xe số như Wave, Sirius có ưu điểm tiết kiệm xăng, dễ điều khiển; giá thuê xe số thường dao động từ 80.000đ đến 120.000đ mỗi ngày tùy đời xe và tình trạng.",
+      "claim_supported": "Xe số như Wave, Sirius thường có ưu điểm là tiết kiệm xăng, dễ điều khiển trên các địa hình đường đất hoặc đường nông thôn nhỏ hẹp … Giá thuê xe số thường dao động ở mức thấp hơn, từ 80.000đ đến 120.000đ mỗi ngày tùy thuộc vào đời xe và tình trạng.",
+      "source_url": "https://xethientri.com/cam-nang-thue-xe-may-ca-mau-gia-thu-tuc-kinh-nghiem/",
+      "source_domain": "xethientri.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá thuê xe tay ga tại Cà Mau thường nằm trong khoảng 120.000đ đến 160.000đ một ngày; vào các dịp lễ, Tết hoặc mùa cao điểm du lịch, giá thuê xe có thể tăng lên.",
+      "claim_supported": "Mức giá thuê xe tay ga tại Cà Mau thường nằm trong khoảng từ 120.000đ đến 160.000đ một ngày … đặc biệt là vào các dịp lễ, Tết hoặc mùa cao điểm du lịch, giá thuê xe có thể tăng lên.",
+      "source_url": "https://xethientri.com/cam-nang-thue-xe-may-ca-mau-gia-thu-tuc-kinh-nghiem/",
+      "source_domain": "xethientri.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Motorbike rental (số 238c Nguyễn Trãi, phường 4, TP. Cà Mau) ghi giá 90 – 150.000đ/ngày.",
+      "claim_supported": "Motorbike rental Giá :90 – 150.000đ/Ngày số 238c Nguyễn Trãi, Phường 4",
+      "source_url": "https://giahuy.org/thue-xe-may-ca-mau/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn giahuy.org (7 địa chỉ Cà Mau, bảng giá 80.000–160.000đ) và xethientri.com (cẩm nang Cà Mau: xe số 80.000–120.000đ/ngày, xe ga 120.000–160.000đ/ngày, giá tăng dịp lễ Tết). Không nguồn niêm yết Honda Winner."
+}

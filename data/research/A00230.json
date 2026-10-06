@@ -1,0 +1,74 @@
+{
+  "article_id": "A00230",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Đồng Tháp",
+  "secondary_keywords": [
+    "gia thue Winner Dong Thap",
+    "cho thue Honda Winner Cao Lanh",
+    "thue xe con tay Cao Lanh",
+    "gia thue xe may Dong Thap"
+  ],
+  "search_intent": "informational — khách cần giá thuê Winner/côn tay tại Đồng Tháp: thị trường tập trung ở Cao Lãnh và Sa Đéc; xe số 80.000–120.000đ/ngày, xe ga 120.000–150.000đ/ngày; Winner không niêm yết, cần hỏi trước.",
+  "geo_id": "VN-A00230",
+  "geo_level": "province",
+  "province": "Đồng Tháp",
+  "locality": "",
+  "poi": "TP Cao Lãnh – TP Sa Đéc – vườn sen Tháp Mười – Gò Tháp – nhà cổ Huỳnh Thủy Lê – vườn hồng Lai Vung – sông Tiền",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Cao Lãnh/Sa Đéc có sẵn không?",
+    "Giá thuê xe máy Đồng Tháp bao nhiêu một ngày?",
+    "Ở Sa Đéc có cơ sở cho thuê xe máy nào uy tín?",
+    "Đi vườn sen Tháp Mười nên khởi hành từ đâu?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Đồng Tháp — sen Tháp Mười, thành phố hoa Sa Đéc: hai trung tâm Cao Lãnh và Sa Đéc gánh toàn bộ thị trường thuê xe; Winner không xuất hiện trên bảng niêm yết, bài so sánh mặt bằng theo từng cơ sở và tư vấn đặt trước.",
+  "slug": "gia-thue-winner-dong-thap",
+  "output_path": "thue-xe-may/gia-thue-winner-dong-thap/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-dong-thap/",
+  "claim_evidence": [
+    {
+      "claim": "Đồng Tháp có hai thành phố Cao Lãnh và Sa Đéc là trung tâm du lịch của tỉnh; lượng khách du lịch lớn khiến nhu cầu thuê xe máy tăng, các địa chỉ cho thuê tập trung ở hai khu vực này.",
+      "claim_supported": "Đồng Tháp có hai thành phố Cao Lãnh và Sa Đéc là trung tâm du lịch của tỉnh. Lượng khách du lịch đến đây hàng năm lớn nên nhu cầu thuê xe máy cũng tăng. Vì thế các địa chỉ thuê xe máy Cao Lãnh Đồng Tháp uy tín chủ yếu tập trung ở khu vực này.",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Chị Lan (34/1 Nguyễn Văn Trỗi, phường 2, TP. Cao Lãnh) niêm yết giá thuê xe số 100.000đ – 120.000đ/ngày và xe ga 120.000đ -150.000đ/ngày; cửa hàng chủ yếu cho thuê xe Wave đời mới, thời gian sử dụng dưới 3 năm, thủ tục chỉ cần để lại CMND.",
+      "claim_supported": "Chị Lan Điện thoại: 091 875 00 16 Địa chỉ: 34/1 Nguyễn Văn Trỗi, Phường 2, TP. Cao Lãnh, Đồng Tháp Giá thuê xe số: 100.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -150.000đ/ngày … Cửa hàng không có quá nhiều loại xe mà chủ yếu là xe Wave. Những chiếc xe này đều khá mới, thời gian sử dụng dưới 3 năm … Bạn chỉ cần để lại CMND là được",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Lợi Thế (212 Phạm Hữu Lầu, phường Cao Lãnh, Đồng Tháp) niêm yết giá thuê xe số 100.000đ/ngày và xe ga 150.000đ/ngày.",
+      "claim_supported": "Lợi Thế Điện thoại: 0772.772.227 Địa chỉ: 212 Phạm Hữu Lầu, phường Cao Lãnh, tỉnh Đồng Tháp Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Minh Chánh (ấp Tân Lập, Sa Đéc, Đồng Tháp) niêm yết giá thuê xe số 80.000đ – 100.000đ/ngày và xe ga 130.000đ – 140.000đ/ngày.",
+      "claim_supported": "Minh Chánh Điện thoại: 0796 262 623 Địa chỉ: Ấp Tân Lập, Sa Đéc, Đồng Tháp Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Phương Nam Hotel (384A đường Nguyễn Sinh Dung nhan, TP. Sa Đéc) niêm yết giá thuê xe số 100.000đ – 120.000đ/ngày và xe ga 120.000đ -150.000đ/ngày.",
+      "claim_supported": "Phương Nam Hotel Điện thoại: 0227 3867 867 Địa chỉ: 384A, Đường Nguyễn Sinh Dung nhan, TP Sa Đéc, Đồng Tháp. Giá thuê xe số: 100.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn motogo.vn (5 địa chỉ Cao Lãnh – Sa Đéc). Không nguồn nào niêm yết Honda Winner tại Đồng Tháp — bài ghi nhận mặt bằng và tư vấn đặt trước."
+}

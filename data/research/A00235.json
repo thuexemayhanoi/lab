@@ -1,0 +1,74 @@
+{
+  "article_id": "A00235",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Sirius Huế",
+  "secondary_keywords": [
+    "gia thue Sirius Hue",
+    "cho thue Yamaha Sirius Hue",
+    "thue xe so Hue gia",
+    "thue xe may Hue dai noi"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Huế: nền tảng Vexere ghi xe số Wave Alpha/Sirius từ 100.000đ/ngày; một cơ sở chuyên liệt Sirius 150k/ngày kèm 2 mũ và 1 lít xăng.",
+  "geo_id": "VN-A00235",
+  "geo_level": "province",
+  "province": "Thừa Thiên Huế",
+  "locality": "",
+  "poi": "Đại Nội Huế – Phố Tây Huế (Phạm Ngũ Lão) – ga Huế – sông Hương – chùa Thiên Mụ – lăng Minh Mạng – Vincom Plaza Huế",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Sirius ở Huế giá bao nhiêu một ngày?",
+    "Ở Huế có cơ sở nào chuyên cho thuê Sirius không?",
+    "Thuê xe số ở Huế có kèm mũ bảo hiểm và xăng không?",
+    "Thuê xe quanh Đại Nội, Phố Tây ở đâu thuận tiện?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Sirius giữa cố đô — điểm thuê sát Đại Nội, Phố Tây và ga Huế; xe số Wave Alpha/Sirius giao ngẫu nhiên từ 100.000đ/ngày, cơ sở chuyên liệt Sirius ở mức 150k/ngày bao mũ bảo hiểm và 1 lít xăng.",
+  "slug": "gia-thue-sirius-hue",
+  "output_path": "thue-xe-may/gia-thue-sirius-hue/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-hue/",
+  "claim_evidence": [
+    {
+      "claim": "Trên Vexere tại Huế, nhà xe Đồng Xanh cho thuê xe số phổ thông Honda Wave Alpha hoặc Yamaha Sirius (giao ngẫu nhiên tùy tình trạng xe thực tế), đời xe từ 2020, kèm mũ bảo hiểm và 1 lít xăng, giao xe tận nơi, không cần cọc trước, giá từ 100.000đ.",
+      "claim_supported": "Đồng Xanh4.6 Honda Wave Alpha hoặc dòng xe tương tự Honda Wave Alpha, Yamaha Sirius (giao ngẫu nhiên tùy tình trạng xe thực tế) Đời xe: từ 2020 Mũ bảo hiểm, Xăng (1 lít) Giao xe tận nơi Không cần cọc trước từ 100.000đ",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Nhà xe Đồng Xanh tại Huế nhận và trả xe hằng ngày từ 07:00 đến 21:00, mỗi ngày thuê tính bằng 24 giờ, thuê tối thiểu 1 ngày, trả xe chưa quá 6 giờ chỉ tính thêm 1/2 ngày; giấy tờ cần chuẩn bị CCCD/Passport & GPLX bản gốc, nhà xe có chụp lại hình CCCD/Passport.",
+      "claim_supported": "Thời gian nhận xe và trả xe hằng ngày từ 07:00 đến 21:00. Mỗi ngày thuê được tính bằng 24 giờ kể từ thời điểm nhận xe. – Thuê tối thiểu từ 1 ngày. – Trả xe quá mỗi 24 giờ → tính thêm 1 ngày. Trả xe nếu chưa quá 6 giờ → chỉ tính thêm 1/2 ngày … – Giấy tờ cần chuẩn bị: CCCD/Passport & GPLX (bản gốc) – Nhà xe có chụp lại hình CCCD/Passport – Làm hợp đồng thuê xe",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-hue.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Hue Motorbike Tour liệt kê Yamaha Sirius trong các dòng xe cho thuê — xe số lợi xăng, dễ điều khiển — với mức 150k/ngày.",
+      "claim_supported": "Yamaha Sirius. xe số lợi xăng dễ điều khiển … 5- Yamaha Sirius: 150k/ ngày",
+      "source_url": "https://huemotorbiketour.com/thue-xe-may-hue-gia-re/",
+      "source_domain": "huemotorbiketour.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá thuê xe máy tại Huế của Hue Motorbike Tour bao gồm 2 mũ bảo hiểm và hỗ trợ 1 lít xăng xe.",
+      "claim_supported": "Gía thuê xe máy tại Huế bao gồm 2 mũ bảo hiểm và hỗ trợ 1 lít xăng xe.",
+      "source_url": "https://huemotorbiketour.com/thue-xe-may-hue-gia-re/",
+      "source_domain": "huemotorbiketour.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Dịch vụ cho thuê xe máy tại Huế của Hue Motorbike Tour bao gồm hỗ trợ khi xảy ra sự cố dọc đường để khách yên tâm.",
+      "claim_supported": "Dịch vụ thuê xe máy Huế giá rẻ bao gồm hỗ trợ khi xảy ra sự cố dọc đường để bạn yên tâm.",
+      "source_url": "https://huemotorbiketour.com/thue-xe-may-hue-gia-re/",
+      "source_domain": "huemotorbiketour.com",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn vexere.com (điểm thuê xe Huế: Đồng Xanh xe số từ 100.000đ, giao tận nơi, không cần cọc) và huemotorbiketour.com (Sirius 150k/ngày, kèm 2 mũ bảo hiểm và 1 lít xăng)."
+}

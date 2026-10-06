@@ -1,0 +1,74 @@
+{
+  "article_id": "A00229",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Vĩnh Long",
+  "secondary_keywords": [
+    "gia thue Winner Vinh Long",
+    "cho thue Honda Winner Vinh Long",
+    "thue xe con tay Vinh Long",
+    "gia thue xe may Vinh Long"
+  ],
+  "search_intent": "informational — khách cần giá thuê Winner/côn tay tại Vĩnh Long: thị trường chủ yếu là dịch vụ đi kèm homestay/khách sạn; xe số 80.000–130.000đ/ngày, xe ga 120.000–180.000đ/ngày; Exciter 250.000đ/ngày là mốc côn tay hiếm hoi.",
+  "geo_id": "VN-A00229",
+  "geo_level": "province",
+  "province": "Vĩnh Long",
+  "locality": "",
+  "poi": "TP Vĩnh Long – cù lao An Bình – chợ nổi Cái Bè – chợ nổi Trà Ôn – vườn trái cây Tam Bình – sông Tiền – sông Hậu",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Vĩnh Long có sẵn không?",
+    "Mặt bằng thuê xe máy Vĩnh Long bao nhiêu?",
+    "Exciter ở Vĩnh Long giá thuê bao nhiêu?",
+    "Đi cù lao An Bình, chợ nổi nên thuê xe ở đâu?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Miệt vườn Vĩnh Long — cù lao An Bình, chợ nổi: rất ít cửa hàng chuyên nghiệp, thuê xe mang tính dịch vụ đi kèm homestay/khách sạn; mốc tham chiếu côn tay hiếm hoi là Exciter 250.000đ/ngày tại Anh Duy, còn Winner cần hỏi trước.",
+  "slug": "gia-thue-winner-vinh-long",
+  "output_path": "thue-xe-may/gia-thue-winner-vinh-long/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-vinh-long/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Vĩnh Long không có nhiều địa chỉ thuê xe máy chuyên nghiệp; các địa chỉ cho thuê xe máy thường là dịch vụ đi kèm của homestay, khách sạn.",
+      "claim_supported": "Tại Vĩnh Long không có nhiều địa chỉ thuê xe máy chuyên nghiệp. Các địa chỉ dưới đây cho thuê xe máy Vĩnh Long như một dịch vụ đi kèm. Vì thế nếu đến đây lần đầu bạn sẽ rất khó khăn trong việc tìm kiếm thông tin.",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Anh Duy (130 đường 8-3, phường 5, TP. Vĩnh Long) áp dụng giá các loại xe số như Wave RSX, Wave S hay xe tương tự là 130.000đ/ngày; tay ga mới hơn như Lead, Vision hay Grande 180.000đ/ngày; Exciter có giá thuê cao nhất 250.000đ/ngày.",
+      "claim_supported": "Các loại xe số như Wave RSX, Wave S hay xe tương tự giá thuê là 130.000đ/ngày. Các dòng tay ga mới hơn như Lead, Vision hay Grande thì giá cao hơn chút, 180.000đ/ngày. Loại xe có giá thuê cao nhất tại đây là Exciter với chi phí 250.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Lộc Phúc (50 Đường Nguyễn Thị Út, phường 1, TP. Vĩnh Long) niêm yết giá thuê xe số 80.000đ – 100.000đ/ngày và xe ga 120.000đ -160.000đ/ngày.",
+      "claim_supported": "Lộc Phúc Điện thoại: 091 949 45 56 Địa chỉ: 50 Đường Nguyễn Thị Út, Phường 1, Vĩnh Long, Việt Nam Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Khách sạn Thiên Thanh (2G Hùng Vương, phường 1, TP. Vĩnh Long) niêm yết giá thuê xe số 100.000đ/ngày và xe ga 150.000đ/ngày.",
+      "claim_supported": "Khách sạn Thiên Thanh Điện thoại: 0270 3822 099 Địa chỉ: 2G Hùng Vương, Phường 1, Vĩnh Long, Việt Nam Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Ngọc Sang (95/8 ấp Bình Lương, xã An Bình, huyện Long Hồ) là homestay có dịch vụ cho thuê xe đi kèm, từ đây dễ dàng đi chợ nổi Cái Bè, lò cốm; giá thuê xe số 80.000đ – 100.000đ/ngày, xe ga 120.000đ -160.000đ/ngày.",
+      "claim_supported": "Ngọc Sang là homestay cung cấp các dịch vụ nghỉ dưỡng sinh thái tại huyện Long Hồ, Vĩnh Long. Tìm thuê xe máy tại khu vực này khá khó khăn nên nơi đây đã mở thêm dịch vụ cho thuê xe máy. Đi xe máy từ đây bạn có thể dễ dàng tới tham quan các địa điểm du lịch như chợ nổi Cái Bè, Lò cốm,… Ngọc Sang Điện thoại: 0270 385 8694 Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn motogo.vn (5 địa điểm Vĩnh Long). Không nguồn nào niêm yết Honda Winner tại Vĩnh Long; Anh Duy ghi Exciter 250.000đ/ngày làm mốc tham chiếu côn tay — bài tư vấn đặt trước."
+}

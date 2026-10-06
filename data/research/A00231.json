@@ -1,0 +1,74 @@
+{
+  "article_id": "A00231",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner An Giang",
+  "secondary_keywords": [
+    "gia thue Winner An Giang",
+    "cho thue Honda Winner Long Xuyen",
+    "thue xe con tay Long Xuyen",
+    "gia thue xe may Chau Doc"
+  ],
+  "search_intent": "informational — khách cần giá thuê Winner/côn tay tại An Giang: bảng giá tổng hợp ghi nhận xe côn tay Winner/Exciter/Raider 200.000 – 300.000 VNĐ/ngày; xe số 80.000 – 120.000, xe ga 130.000 – 180.000.",
+  "geo_id": "VN-A00231",
+  "geo_level": "province",
+  "province": "An Giang",
+  "locality": "",
+  "poi": "TP Long Xuyên – TP Châu Đốc – núi Sam – chợ nổi Long Xuyên – di tích Chủ tịch Tôn Đức Thắng – hồ Nguyễn Du – cù lao Ông Hổ",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở An Giang giá bao nhiêu một ngày?",
+    "Châu Đốc, núi Sam có cơ sở cho thuê xe máy nào?",
+    "Thuê xe dài ngày ở Long Xuyên có được giảm giá không?",
+    "Winner ở An Giang có sẵn hay phải đặt trước?"
+  ],
+  "official_sources": [],
+  "unique_angle": "An Giang — Long Xuyên, Châu Đốc, núi Sam: một trong ít tỉnh miền Tây có bảng giá nêu trực tiếp nhóm côn tay Winner/Exciter/Raider 200.000 – 300.000 VNĐ/ngày, kèm ưu đãi thuê dài ngày theo tuần/tháng.",
+  "slug": "gia-thue-winner-an-giang",
+  "output_path": "thue-xe-may/gia-thue-winner-an-giang/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-an-giang/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Long Xuyên (An Giang) ghi nhận nhóm xe côn tay Winner, Exciter, Raider có giá thuê 200.000 – 300.000 VNĐ/ngày.",
+      "claim_supported": "Xe côn tay (Winner, Exciter, Raider) 200.000 – 300.000",
+      "source_url": "https://bichlong.info/bang-gia-moi-nhat-thue-xe-may-long-xuyen-an-giang-bich-long/",
+      "source_domain": "bichlong.info",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cùng bảng giá ghi nhận xe số (Wave, Sirius, Jupiter, Future) 80.000 – 120.000 VNĐ/ngày và xe ga (Vision, AirBlade, Lead, Nouvo) 130.000 – 180.000 VNĐ/ngày.",
+      "claim_supported": "Xe số (Wave, Sirius, Jupiter, Future) 80.000 – 120.000 … Xe ga (Vision, AirBlade, Lead, Nouvo) 130.000 – 180.000",
+      "source_url": "https://bichlong.info/bang-gia-moi-nhat-thue-xe-may-long-xuyen-an-giang-bich-long/",
+      "source_domain": "bichlong.info",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Chính sách ưu đãi tại Long Xuyên: thuê từ 3 ngày giảm ngay 10.000 VNĐ/ngày; thuê từ 5 ngày trở lên giảm đến 20.000 VNĐ/ngày kèm miễn phí giao xe tận nơi; thuê theo tuần/tháng giá chỉ từ 1.500.000 VNĐ/tháng, tiết kiệm hơn 30% so với thuê ngắn ngày.",
+      "claim_supported": "Thuê từ 3 ngày: Giảm ngay 10.000 VNĐ/ngày … Thuê từ 5 ngày trở lên: Giảm đến 20.000 VNĐ/ngày + miễn phí giao xe tận nơi … Thuê theo tuần/tháng: Giá chỉ từ 1.500.000 VNĐ/tháng, tiết kiệm hơn 30% so với thuê ngắn ngày.",
+      "source_url": "https://bichlong.info/bang-gia-moi-nhat-thue-xe-may-long-xuyen-an-giang-bich-long/",
+      "source_domain": "bichlong.info",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Các điểm tham quan chính quanh Long Xuyên gồm chợ nổi Long Xuyên, khu di tích Chủ tịch Tôn Đức Thắng, hồ Nguyễn Du và cù lao Ông Hổ.",
+      "claim_supported": "Chợ nổi Long Xuyên – Khu di tích Chủ tịch Tôn Đức Thắng – Hồ Nguyễn Du – Cù Lao Ông Hổ",
+      "source_url": "https://bichlong.info/bang-gia-moi-nhat-thue-xe-may-long-xuyen-an-giang-bich-long/",
+      "source_domain": "bichlong.info",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cơ sở Thuê xe máy Núi Sam Chùa Bà (số 183 Châu Thị Tế, Núi Sam, TP. Châu Đốc) cho thuê xe số – xe ga với giá 120 – 150.000đ; Chị Loan (số 1 Tân Lộ Kiều Lương, Vĩnh Tây 3, TP. Châu Đốc) cho thuê xe ga, xe số 100 – 150.000đ.",
+      "claim_supported": "Thuê xe máy Núi Sam Chùa Bà Xe Số – Xe Ga : 120 – 150.000đ Số 183 Châu Thị Tế, Núi Sam, TP Châu Đốc … Chị Loan Giá xe ga, xe số: 100 – 150.000đ Số 1 Tân Lộ Kiều Lương, Vĩnh Tây 3, TP Châu Đốc",
+      "source_url": "https://giahuy.org/thue-xe-may-an-giang/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn bichlong.info (bảng giá Long Xuyên nêu trực tiếp nhóm côn tay Winner, Exciter, Raider 200.000 – 300.000 VNĐ/ngày và ưu đãi dài ngày) và giahuy.org (10 địa chỉ Long Xuyên – Châu Đốc)."
+}

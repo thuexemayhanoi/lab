@@ -1,0 +1,81 @@
+{
+  "article_id": "A00234",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Sirius Hải Phòng",
+  "secondary_keywords": [
+    "gia thue Sirius Hai Phong",
+    "cho thue Yamaha Sirius Hai Phong",
+    "thue xe so Hai Phong gia",
+    "thue xe may Hai Phong gan ga"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Hải Phòng: niêm yết 100.000đ/ngày thứ 2–thứ 6, 130.000đ ngày cuối tuần/lễ, thêm giờ 10.000đ/giờ; giao xe miễn phí tại ga trung tâm.",
+  "geo_id": "VN-A00234",
+  "geo_level": "province",
+  "province": "Hải Phòng",
+  "locality": "",
+  "poi": "HP ga Hải Phòng – phố cổ? – biển Đồ Sơn – Ngô Quyền – Lạch Tray – Cát Bài/đảo Cát Bà – Hồng Bàng",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Sirius ở Hải Phòng giá bao nhiêu?",
+    "Cuối tuần và ngày lễ thuê xe Hải Phòng có đắt hơn không?",
+    "Giao xe tận nơi tại Hải Phòng có mất phí không?",
+    "Thuê xe đi đảo Cát Bà, Đồ Sơn lưu ý gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Sirius tại phố Cảng — bảng giá công khai theo ngày trong tuần (100.000đ T2–T6, 130.000đ cuối tuần/lễ) kèm quy định làm tròn giờ rất chi tiết: mô hình cho thuê gắn với ga Hải Phòng và homestay, cứu hộ 15 km quanh ga.",
+  "slug": "gia-thue-sirius-hai-phong",
+  "output_path": "thue-xe-may/gia-thue-sirius-hai-phong/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-hai-phong/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá tại Hải Phòng ghi Yamaha Sirius: 100.000 VNĐ/24 giờ các ngày thứ 2 – thứ 6; 130.000 VNĐ các ngày thứ 7, CN, ngày lễ; thêm giờ 10.000 VNĐ/giờ.",
+      "claim_supported": "Yamaha Sirius Số 100.000 (Thứ 2 - Thứ 6) 130.000 (Thứ 7, CN, Ngày Lễ) 10.000 (Thêm Giờ VNĐ/Giờ)",
+      "source_url": "https://thuexemayhaiphong.com/bang-gia/",
+      "source_domain": "thuexemayhaiphong.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cửa hàng miễn phí vận chuyển giao xe/trả xe tại Ga trung tâm và Lều Vịt Homestay Hải Phòng; những nơi còn lại trong nội thành tính 15.000 - 40.000 vnđ/chiều phí giao tận nơi.",
+      "claim_supported": "Miễn phí vận chuyển giao xe/trả xe tại Ga trung tâm và Lều Vịt Homestay Hải Phòng. - Những nơi còn lại trong nội thành: 15.000 - 40.000 vnđ/chiều phí giao tận nơi.",
+      "source_url": "https://thuexemayhaiphong.com/bang-gia/",
+      "source_domain": "thuexemayhaiphong.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cứu hộ xe trong vòng 15 km tính từ ga Hải Phòng; khi đi xe ra ngoài trung tâm thành phố/đảo phát sinh 30.000 vnđ/ngày; áo mưa giấy trong xe 10.000 vnđ/cái.",
+      "claim_supported": "Cứu hộ xe trong vòng 15 km tính từ ga Hải Phòng. - Khi đi xe ra ngoài trung tâm thành phố/đảo phát sinh 30.000 vnđ/ngày … Sử dụng áo mưa giấy trong xe: 10.000 vnđ/cái.",
+      "source_url": "https://thuexemayhaiphong.com/bang-gia/",
+      "source_domain": "thuexemayhaiphong.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Quy định thời gian: đi quá 15 phút sẽ làm tròn thành 1 giờ phát sinh, 8 giờ phát sinh làm tròn thành 1 ngày; ngày đầu tiên thuê 1 vài giờ vẫn tính giá tiền tròn 1 ngày.",
+      "claim_supported": "Đi quá 15 phút sẽ làm tròn thành 1 giờ phát sinh, 8 giờ phát sinh làm tròn thành 1 ngày. - Trong ngày đầu tiên, bạn thuê 1 vài giờ vẫn tính giá tiền tròn 1 ngày.",
+      "source_url": "https://thuexemayhaiphong.com/bang-gia/",
+      "source_domain": "thuexemayhaiphong.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Thuê Xe Máy Hải Phòng LV (39 Phạm Ngũ Lão, Ngô Quyền, Hải Phòng, điện thoại 0934 555 247, website thuexemayhaiphong.com) là một trong những đơn vị hàng đầu tại Hải Phòng với 502 đánh giá 5 sao trên Google.",
+      "claim_supported": "Dịch vụ Thuê Xe Máy Hải Phòng LV Địa chỉ: 39 Phạm Ngũ Lão, Ngô Quyền, Hải Phòng Giờ hoạt động: Mở cả ngày Số điện thoại: 0934 555 247 Website: thuexemayhaiphong.com … với 502 đánh giá 5 sao trên Google",
+      "source_url": "https://giahuy.org/thue-xe-may-hai-phong/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cùng bảng giá tại Hải Phòng, Yamaha Jupiter ghi 100.000 VNĐ/24 giờ ngày thường và 150.000 VNĐ ngày lễ, thêm giờ 10.000 VNĐ/giờ; nhóm xe tay ga Honda AirBlade, Honda Lead, Honda Vision, Piaggio Vespa, Yamaha Nouvo niêm yết 120.000 VNĐ/24 giờ ngày thường, 150.000 VNĐ ngày lễ, thêm giờ 15.000 VNĐ/giờ.",
+      "claim_supported": "Yamaha Jupiter Số 100.000 150.000 10.000 Honda AirBlade Tay Ga 120.000 150.000 15.000 Honda Lead Tay Ga 120.000 150.000 15.000 Honda Vision Tay Ga 120.000 150.000 15.000",
+      "source_url": "https://thuexemayhaiphong.com/bang-gia/",
+      "source_domain": "thuexemayhaiphong.com",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn thuexemayhaiphong.com (bảng giá Sirius 100.000đ/130.000đ + chính sách giao xe, cứu hộ, làm tròn giờ) và giahuy.org (Hải Phòng LV tại 39 Phạm Ngũ Lão, website thuexemayhaiphong.com, 502 đánh giá 5 sao)."
+}
