@@ -1,0 +1,59 @@
+{
+  "article_id": "A00185",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Nghệ An",
+  "secondary_keywords": [
+    "thue xe Wave Nghe An",
+    "cho thue Honda Wave Vinh",
+    "thue xe so Vinh",
+    "thue xe may Cua Lo"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Nghệ An (Vinh, Cửa Lò): giá 80.000đ – 130.000đ/ngày, cơ sở gần đại học Vinh làm việc 24h, thủ tục CCCD.",
+  "geo_id": "VN-A00185",
+  "geo_level": "province",
+  "province": "Nghệ An",
+  "locality": "",
+  "poi": "Vinh – Cửa Lò – làng sen Kim Liên",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave ở Vinh giá bao nhiêu?",
+    "Cửa hàng nào ở Vinh mở 24h?",
+    "Thuê xe đi Cửa Lò được không?",
+    "Thủ tục thuê xe cần những gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Góc nhìn đô thị đại học: các cơ sở gần đại học Vinh mở 24h phục vụ sinh viên và khách du lịch, giá rẻ 80.000đ – 130.000đ, đi Cửa Lò trong một buổi.",
+  "slug": "gia-thue-wave-nghe-an",
+  "output_path": "thue-xe-may/gia-thue-wave-nghe-an/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-nghe-an/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Vinh có đủ xe ga, xe số độ bền cao với giá chỉ từ 80.000đ – 130.000đ/ngày tùy loại xe.",
+      "claim_supported": "Tại đây có đủ các loại xe từ xe số đến xe tay ga chất lượng cao, đảm bảo an toàn và dễ sử dụng chỉ từ 80.000 vnđ – 130.000vnđ tùy loại xe.",
+      "source_url": "https://dulichtoday.vn/kham-pha-nghe-an/dia-diem-nghe-an/dia-chi-thue-xe-may-vinh.html",
+      "source_domain": "dulichtoday.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Xe số phổ thông Wave, Sirius tại Vinh khởi điểm khoảng 80.000đ – 100.000đ/ngày.",
+      "claim_supported": "Các dòng xe số phổ thông như Wave, Sirius thường có mức giá khởi điểm khoảng 80.000 đến 100.000 VNĐ mỗi ngày.",
+      "source_url": "https://xemayanthanhphat.com/thue-xe-may-vinh.html",
+      "source_domain": "xemayanthanhphat.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một cơ sở cho thuê tại Vinh có địa chỉ 28 Phạm Kinh Vĩ, TP. Vinh, Nghệ An; nhiều chi nhánh, làm việc 24h.",
+      "claim_supported": "Địa chỉ: Số 28 Phạm Kinh Vĩ, Tp Vinh, Nghệ An. Các cửa hàng tại Vinh… nhiều chi nhánh, làm việc 24h.",
+      "source_url": "https://motogo.vn/thue-xe-may-o-vinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

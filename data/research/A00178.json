@@ -1,0 +1,59 @@
+{
+  "article_id": "A00178",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Thái Nguyên",
+  "secondary_keywords": [
+    "thue xe Wave Thai Nguyen",
+    "cho thue Honda Wave Thai Nguyen",
+    "thue xe so Thai Nguyen",
+    "thue xe may Thai Nguyen"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Thái Nguyên: mặt bằng 80.000đ – 160.000đ, cơ sở cho thuê, điểm đến hồ Núi Cốc, ATK Định Hóa.",
+  "geo_id": "VN-A00178",
+  "geo_level": "province",
+  "province": "Thái Nguyên",
+  "locality": "",
+  "poi": "Cuối tuần hồ Núi Cốc – Tân Cương từ thành phố Thái Nguyên",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Giá thuê Wave Thái Nguyên bao nhiêu?",
+    "Thái Nguyên có hỗ trợ giao xe tận ga không?",
+    "Đi hồ Núi Cốc nên thuê xe gì?",
+    "Thủ tục thuê xe cần gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Góc nhìn trung du cuối tuần từ Hà Nội: một giờ rưỡi là tới, chọn Wave cho cả nhóm công tác và nhóm bạn trẻ đi hồ Núi Cốc, đồi chè Tân Cương.",
+  "slug": "gia-thue-wave-thai-nguyen",
+  "output_path": "thue-xe-may/gia-thue-wave-thai-nguyen/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-thai-nguyen/",
+  "claim_evidence": [
+    {
+      "claim": "Tay số phổ thông tại Thái Nguyên giá trung bình 100.000đ – 150.000đ/ngày.",
+      "claim_supported": "Tay số bình thường có giá trung bình từ 100.000 – 150.000đ ngày.",
+      "source_url": "https://tripbike.net/thue-xe-may-thai-nguyen/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Mặt bằng thuê xe máy Thái Nguyên 80.000đ – 160.000đ/ngày tùy loại xe; xe số cơ bản như Wave, Sirius có giá thuê thấp hơn.",
+      "claim_supported": "Mức giá khá cạnh tranh, dao động trong khoảng 80.000 đến 160.000 VNĐ cho một ngày thuê, tùy loại xe. Xe số cơ bản như Wave hay Sirius thường có giá thuê thấp hơn.",
+      "source_url": "https://xemayanthanhphat.com/thue-xe-may-thai-nguyen.html",
+      "source_domain": "xemayanthanhphat.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Nhiều cơ sở Thái Nguyên hỗ trợ giao xe tận nơi và không cần đặt cọc.",
+      "claim_supported": "#10 Địa Chỉ Thuê Xe Máy Thái Nguyên Giá rẻ - Không Cần Đặt Cọc.",
+      "source_url": "https://giahuy.org/thue-xe-may-thai-nguyen/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "article_id": "A00184",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Thanh Hóa",
+  "secondary_keywords": [
+    "thue xe Wave Thanh Hoa",
+    "cho thue Honda Wave Thanh Hoa",
+    "thue xe so Sam Son",
+    "thue xe may Thanh Hoa"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Thanh Hóa: TP 200.000đ số/300.000đ ga, vùng Pù Luông 180.000đ – 250.000đ, đi Sầm Sơn, Thành Nhà Hồ.",
+  "geo_id": "VN-A00184",
+  "geo_level": "province",
+  "province": "Thanh Hóa",
+  "locality": "",
+  "poi": "TP. Thanh Hóa – Sầm Sơn – Pù Luông – Bến En",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave Thanh Hóa giá bao nhiêu?",
+    "Đi Pù Luông thuê xe ở đâu?",
+    "Vì sao giá Thanh Hóa cao hơn tỉnh khác?",
+    "Mùa Sầm Sơn có khó thuê xe không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Góc nhìn hai mặt bằng giá: nội thành Thanh Hóa đắt nhất mặt bằng chung (200.000đ xe số) nhưng vùng núi Pù Luông, Bến En lại có bậc giá riêng theo địa hình.",
+  "slug": "gia-thue-wave-thanh-hoa",
+  "output_path": "thue-xe-may/gia-thue-wave-thanh-hoa/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-thanh-hoa/",
+  "claim_evidence": [
+    {
+      "claim": "Tại TP. Thanh Hóa: xe tay số Honda Wave Fi, Sirius Fi 200.000đ/ngày; xe tay ga Honda Lead, Vision, AB 300.000đ/ngày.",
+      "claim_supported": "Xe tay ga Honda Lead Vision Ab : 300.000đ/1 ngày. Xe tay số Honda Wave Fi, Sirius Fi: 200.000đ.",
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Pù Luông và các điểm thiên nhiên (Thác Mây, Bến En, hồ Sông Mực) giá trung bình 180.000đ – 250.000đ/ngày; xe ga cao hơn xe số 20.000đ – 30.000đ.",
+      "claim_supported": "Pù Luông và các điểm đến thiên nhiên như Thác Mây, Bến En, Hồ Sông Mực có giá cao hơn đôi chút - trung bình 180.000 - 250.000 đồng/ngày; xe ga cao hơn xe số 20.000 - 30.000đ.",
+      "source_url": "https://sunworld.vn/vi/sam-son/di-chuyen/thue-xe-may-thanh-hoa-gia-dia-chi-uy-tin-va-meo-can-biet-12880",
+      "source_domain": "sunworld.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Mức giá cho thuê xe máy tại Thanh Hóa đồng nhất: xe tay số 200k/ngày gồm Wave, Sirius.",
+      "claim_supported": "Nhìn chung mức giá cho thuê xe máy tại Thanh Hóa rất đồng nhất. Nên chỉ có 2 mức giá để bạn tham khảo. Xe tay số: 200k/ngày gồm Wave, Sirius.",
+      "source_url": "https://tripbike.net/thue-xe-may-thanh-hoa/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

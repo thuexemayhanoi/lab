@@ -1,0 +1,59 @@
+{
+  "article_id": "A00181",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Hưng Yên",
+  "secondary_keywords": [
+    "thue xe Wave Hung Yen",
+    "cho thue Honda Wave Hung Yen",
+    "thue xe so Hung Yen",
+    "thue xe may Hung Yen"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Hưng Yên: cơ sở Quốc lộ 5 Văn Lâm xe số 90.000đ – 120.000đ, ga 140.000đ – 150.000đ, khách sạn Thanh Hà.",
+  "geo_id": "VN-A00181",
+  "geo_level": "province",
+  "province": "Hưng Yên",
+  "locality": "",
+  "poi": "Quốc lộ 5 Văn Lâm – phố Hiến – nhãn Khoái Châu",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave ở Hưng Yên giá bao nhiêu?",
+    "Cơ sở nào ở Hưng Yên cho thuê uy tín?",
+    "Có nơi nào không cần đặt cọc không?",
+    "Đi chùa Thái Bình, phố Hiến nên thuê xe gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Góc nhìn trục Quốc lộ 5: cửa hàng cho thuê nằm ngay QL5 Văn Lâm — đầu mối Hà Nội – Hải Phòng, kết hợp hành trình phố Hiến, chùa Thái Bình, vườn nhãn Khoái Châu.",
+  "slug": "gia-thue-wave-hung-yen",
+  "output_path": "thue-xe-may/gia-thue-wave-hung-yen/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-hung-yen/",
+  "claim_evidence": [
+    {
+      "claim": "Cơ sở trên Quốc lộ 5 (Trưng Trắc, Văn Lâm) ghi xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 150.000đ/ngày.",
+      "claim_supported": "Giá thuê xe số: 90.000 – 120.000 đ/ngày. Giá thuê xe ga: 140.000 – 150.000 đ/ngày. Địa chỉ: Quốc lộ 5, Trưng Trắc, huyện Văn Lâm, tỉnh Hưng Yên.",
+      "source_url": "https://thuexemayhaiphong.com/4-dia-diem-thue-xe-may-hung-yen-uy-tin-chat-luong/",
+      "source_domain": "thuexemayhaiphong.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Tại Hưng Yên có nguồn ghi Wave RSX 90.000đ/ngày, Yamaha Sirius 90.000đ/ngày, Nouvo LX 120.000đ/ngày; một số địa chỉ không cần đặt cọc.",
+      "claim_supported": "Bảng Giá Thuê Xe Máy Tại Hưng Yên: Honda Wave RSX 90.000đ/ngày, Yamaha Sirius 90.000đ/ngày, Nouvo LX 120.000đ/ngày; một số địa chỉ ghi không cần đặt cọc.",
+      "source_url": "https://giahuy.org/thue-xe-may-hung-yen/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Khách sạn Thanh Hà (số 89 Phố Hảo, xã Liêu Xá, Hưng Yên) cho thuê xe cho khách lưu trú.",
+      "claim_supported": "Địa chỉ cho thuê xe máy tại Khách sạn Thanh Hà, số 89 Phố Hảo, xã Liêu Xá, Hưng Yên.",
+      "source_url": "https://giahuy.org/thue-xe-may-hung-yen/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

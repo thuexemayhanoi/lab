@@ -1,0 +1,80 @@
+{
+  "article_id": "A00177",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Lào Cai",
+  "secondary_keywords": [
+    "thue xe Wave Lao Cai",
+    "cho thue Honda Wave Lao Cai",
+    "thue xe so Sa Pa",
+    "thue xe may Lao Cai"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Lào Cai (Sa Pa, Bắc Hà): dải giá xe số/ga/côn, cơ sở giao nhận, chính sách cọc thay giấy tờ, chọn xe cho đường đèo.",
+  "geo_id": "VN-A00177",
+  "geo_level": "province",
+  "province": "Lào Cai",
+  "locality": "",
+  "poi": "Sa Pa và giao xe tại thành phố Lào Cai",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Giá thuê Wave Lào Cai bao nhiêu một ngày?",
+    "Không muốn gửi giấy tờ thì thuê thế nào?",
+    "Đi Sa Pa nên thuê xe số hay xe ga?",
+    "Mùa nào khó thuê xe nhất?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Góc nhìn địa hình đèo Sa Pa – Bắc Hà: vì sao xe số phổ thông thắng xe ga ở vùng cao, kèm gói Wave tính cả ngày và đêm hiếm gặp.",
+  "slug": "gia-thue-wave-lao-cai",
+  "output_path": "thue-xe-may/gia-thue-wave-lao-cai/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-lao-cai/",
+  "claim_evidence": [
+    {
+      "claim": "Xe số (trong đó có Wave) tại Lào Cai khoảng 100.000đ/ngày; xe ga 200.000đ/ngày; xe côn 250.000đ/ngày.",
+      "claim_supported": "Chi phí thuê xe số là 100.000đ/ngày, xe ga là 200.000đ/ngày và xe côn là 250.000đ/ngày.",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-lao-cai",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Chapa Ecolodge (Sa Pa) ghi xe số Wave 150.000đ cho cả 1 ngày và đêm; xe ga đời mới 180.000đ; xe côn tay Winner, Exciter 250.000đ.",
+      "claim_supported": "Xe số wave 150.000đ. / 1 ngày và đêm. Tay ga đời mới 180.000đ. / 1 ngày và đêm. Xe côn tay Winner, Exciter 250.000đ.",
+      "source_url": "https://chapaecolodge.com/dich-vu/cho-thue-xe-may-gia-re/",
+      "source_domain": "chapaecolodge.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Thuê Xe 368 Lào Cai cho phép thế chấp cọc tiền mặt 1.000.000đ đến 3.000.000đ thay vì gửi giấy tờ.",
+      "claim_supported": "Quý khách có thể thế chấp đặt cọc một khoản tiền mặt từ 1,000,000đ đến 3,000,000đ tùy theo giá trị của dòng xe thuê.",
+      "source_url": "https://laocaimotorbike.com/",
+      "source_domain": "laocaimotorbike.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Xe số phổ thông tại Sa Pa (Wave, Blade, Sirius) trung bình 100.000đ – 120.000đ/ngày.",
+      "claim_supported": "Những dòng xe số được thuê phổ biến tại Sapa là Honda Blade, Honda Wave Alpha, hay Yamaha Sirius. Giá thuê xe số trung bình khoảng 100.000-120.000 VND/ngày.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sa-pa.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Tại Sa Pa: xe số phổ thông khoảng 100.000đ/ngày; xe tay ga 120.000đ – 150.000đ/ngày.",
+      "claim_supported": "Giá thuê xe tham khảo: Xe số phổ thông (Honda Wave, Honda Blade…): khoảng 100.000 VNĐ/ngày. Xe tay ga (Honda Air Blade, Yamaha Nouvo…): từ 120.000 – 150.000 VNND/ngày.",
+      "source_url": "https://visitsapa.com.vn/vi/thue-xe-may-o-sa-pa-can-nhung-gi-4969",
+      "source_domain": "visitsapa.com.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Thuê xe số tại Lào Cai khoảng 100.000đ/ngày; thuê 1 tuần chỉ 500.000đ.",
+      "claim_supported": "Ví dụ như xe số (Jupiter, Wave,…) là khoảng 100.000 vnđ/xe/ngày, nhưng nếu thuê 1 tuần chỉ 500.000 vnđ.",
+      "source_url": "https://motortrip.vn/dich-vu/thue-xe-may-lao-cai",
+      "source_domain": "motortrip.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

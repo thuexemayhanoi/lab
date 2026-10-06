@@ -1,0 +1,59 @@
+{
+  "article_id": "A00186",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Hà Tĩnh",
+  "secondary_keywords": [
+    "thue xe Wave Ha Tinh",
+    "cho thue Honda Wave Ha Tinh",
+    "thue xe so Ha Tinh",
+    "thue xe may Ha Tinh"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Hà Tĩnh: Wave/Sirius/Jupiter 100k/ngày, Lead/Vision/AB 150k/ngày, khách sạn Hoa Đô cọc 300.000đ – 500.000đ.",
+  "geo_id": "VN-A00186",
+  "geo_level": "province",
+  "province": "Hà Tĩnh",
+  "locality": "",
+  "poi": "Hà Tĩnh thành phố – Thiên Cầm – Hồng Lĩnh – Cầu Treo",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave ở Hà Tĩnh giá bao nhiêu?",
+    "Khách sạn Hoa Đô cho thuê xe thế nào?",
+    "Tiền đặt cọc khoảng bao nhiêu?",
+    "Đi Thiên Cầm, Hồng Lĩnh có thuê xe được không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Góc nhìn mô hình khách sạn kiêm cho thuê xe: Hoa Đô và các khách sạn nội thành vừa lưu trú vừa thuê xe với cọc thấp 300.000đ – 500.000đ, thuận tiện đi Thiên Cầm, Hồng Lĩnh.",
+  "slug": "gia-thue-wave-ha-tinh",
+  "output_path": "thue-xe-may/gia-thue-wave-ha-tinh/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-ha-tinh/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Hà Tĩnh: Sirius, Wave, Jupiter 100k/ngày; Lead, Vision, Ab 150k/ngày (một cơ sở cho thuê kèm khách sạn).",
+      "claim_supported": "Với mức giá cho thuê: Sirius, wave, Jupiter: 100k/ngày – Lead, Vision, Ab: 150k/ngày.",
+      "source_url": "https://tripbike.net/thue-xe-may-ha-tinh/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Khách sạn Hoa Đô (Hà Tĩnh) cho thuê xe 80.000đ – 150.000đ/ngày; tiền đặt cọc khoảng 300.000đ – 500.000đ/xe; thủ tục CMND/CCCD/hộ chiếu.",
+      "claim_supported": "Số tiền đặt cọc cũng chỉ tầm 300.000đ – 500.000đ/xe, không quá tốn. Nhìn chung Hoa Đô là địa chỉ thuê xe máy tiện lợi giá tốt. Giá thuê 80.000đ – 150.000đ/ngày, thủ tục CMND/CCCD/Passport.",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-tinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá thuê xe máy tại Hà Tĩnh từ 80.000đ – 150.000đ/ngày, tương đương mặt bằng các tỉnh lân cận.",
+      "claim_supported": "Giá thuê xe tại đây rất hợp lý, chỉ từ 80.000đ – 150.000đ/ngày, tương đương với giá thuê xe máy tại các địa điểm khác.",
+      "source_url": "https://giahuy.org/thue-xe-may-ha-tinh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

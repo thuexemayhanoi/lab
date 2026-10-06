@@ -1,0 +1,59 @@
+{
+  "article_id": "A00179",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Phú Thọ",
+  "secondary_keywords": [
+    "thue xe Wave Phu Tho",
+    "cho thue Honda Wave Viet Tri",
+    "thue xe so Viet Tri",
+    "thue xe may Phu Tho"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Phú Thọ (Việt Trì): dải giá xe số 90.000đ – 120.000đ, cơ sở cho thuê, đi đền Hùng, đồi chè Long Cốc.",
+  "geo_id": "VN-A00179",
+  "geo_level": "province",
+  "province": "Phú Thọ",
+  "locality": "",
+  "poi": "Việt Trì – đền Hùng – đồi chè Long Cốc",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave tại Việt Trì giá bao nhiêu?",
+    "Đi đền Hùng có cần xe ga không?",
+    "Mùa giỗ Tổ có khó thuê xe không?",
+    "Thuê Việt Trì chạy sang Tuyên Quang được không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Góc nhìn trung du: Việt Trì làm bàn đạp đi đền Hùng, Long Cốc, Xuân Sơn và liên tuyến Tuyên Quang với xe số giá rẻ nhất miền Bắc.",
+  "slug": "gia-thue-wave-phu-tho",
+  "output_path": "thue-xe-may/gia-thue-wave-phu-tho/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-phu-tho/",
+  "claim_evidence": [
+    {
+      "claim": "Xe số Việt Trì (Wave, Sirius…) khởi điểm 90.000đ – 120.000đ/ngày; xe ga 130.000đ – 180.000đ/ngày.",
+      "claim_supported": "Các mẫu xe cửa hàng cho thuê wave, sirius, Vision, Lead… Mỗi dòng xe có mỗi giá khởi điểm các dòng tay số 90.000đ – 120.000đ/ngày, các dòng tay ga 130.000đ – 180.000đ/ngày.",
+      "source_url": "https://tripbike.net/thue-xe-may-viet-tri/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Trường Thảo (Việt Trì) cho thuê từ 90.000đ/ngày trở lên tùy loại xe và đời xe.",
+      "claim_supported": "Mức giá cho thuê xe máy tại Trường Thảo rơi vào khoảng từ 90.000đ/ngày trở lên. Tùy vào từng loại xe và đời xe sẽ có giá cho thuê khác nhau.",
+      "source_url": "https://motogo.vn/thue-xe-may-viet-tri-phu-tho/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Thủy Hùng là cơ sở thuê xe máy lâu năm tại Phú Thọ.",
+      "claim_supported": "Thủy Hùng là địa chỉ thuê xe máy lâu năm tại Phú Thọ. Là một cơ sở giàu kinh nghiệm nên…",
+      "source_url": "https://motogo.vn/thue-xe-may-viet-tri-phu-tho/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "article_id": "A00180",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Bắc Ninh",
+  "secondary_keywords": [
+    "thue xe Wave Bac Ninh",
+    "cho thue Honda Wave Bac Ninh",
+    "thue xe so Bac Ninh",
+    "thue xe may Bac Ninh"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Bắc Ninh: xe số 100.000đ – 125.000đ/ngày, gói tuần 500.000đ – 800.000đ, cơ sở giao tận ga.",
+  "geo_id": "VN-A00180",
+  "geo_level": "province",
+  "province": "Bắc Ninh",
+  "locality": "",
+  "poi": "Bắc Ninh thành phố – chùa Dạm – đền Đô – phủ Dày",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave Bắc Ninh giá bao nhiêu một ngày?",
+    "Thuê tuần có rẻ hơn không?",
+    "Có cơ sở giao xe tận ga Bắc Ninh không?",
+    "Đi chùa Dạm, đền Đô cần xe ga không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Góc nhìn tỉnh công nghiệp: khách công tác khu công nghiệp thuê tuần, cấu trúc giá theo tuần 500.000đ – 800.000đ và giao xe tận ga hiếm gặp ở tỉnh du lịch.",
+  "slug": "gia-thue-wave-bac-ninh",
+  "output_path": "thue-xe-may/gia-thue-wave-bac-ninh/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-bac-ninh/",
+  "claim_evidence": [
+    {
+      "claim": "Giá thuê xe máy Bắc Ninh dao động 100.000đ – 350.000đ/ngày tùy dòng; xe số Wave, Future, Wave RSX Fi 100.000đ – 125.000đ/ngày; thuê tuần 500.000đ – 800.000đ; thuê ít hơn một ngày giá 150.000đ.",
+      "claim_supported": "Nếu bạn thuê ít hơn một ngày thì giá 150.000 VND/ngày. Bạn thuê theo tuần thì giá giao động từ 500.000 VND đến 800.000 VND/tuần. Xe số Wave, Future, Wave RSX Fi 100.000đ – 125.000đ/ngày; tổng thể dao động 100.000 – 350.000đ tùy dòng xe.",
+      "source_url": "https://dichvuthuexedanang.com/thue-xe-may-bac-ninh/",
+      "source_domain": "dichvuthuexedanang.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá thuê xe máy tại Bắc Ninh bình dân, dao động 100.000đ – 150.000đ tùy loại xe.",
+      "claim_supported": "Giá thuê xe máy tại Bắc Ninh khá bình dân, dao động từ 100.000 VND đến 150.000 VND tùy theo loại xe.",
+      "source_url": "https://giahuy.org/thue-xe-may-bac-ninh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một số cơ sở Bắc Ninh ghi xe số 100.000đ – 120.000đ/ngày kèm hỗ trợ giao xe tận ga Bắc Ninh, bến xe, khách sạn; thủ tục chỉ cần CCCD.",
+      "claim_supported": "Xe số 100.000đ – 120.000đ/ngày; hỗ trợ giao xe tận ga Bắc Ninh, bến xe, khách sạn; thủ tục nhanh gọn chỉ cần CMND/CCCD.",
+      "source_url": "https://chothuexemaybacninh.com/gia-thue-xe-may-tai-bac-ninh-moi-nhat-2026",
+      "source_domain": "chothuexemaybacninh.com",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "article_id": "A00182",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Ninh Bình",
+  "secondary_keywords": [
+    "thue xe Wave Ninh Binh",
+    "cho thue Honda Wave Ninh Binh",
+    "thue xe so Ninh Binh",
+    "thue xe may Trang An"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Ninh Bình: xe số 70.000đ – 120.000đ/ngày, cửa hàng Hương Dương giao tận nơi quanh Tràng An, Tam Cốc.",
+  "geo_id": "VN-A00182",
+  "geo_level": "province",
+  "province": "Ninh Bình",
+  "locality": "",
+  "poi": "Ninh Bình thành phố – Tràng An – Tam Cốc – Bái Đính",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave Ninh Bình giá bao nhiêu?",
+    "Cửa hàng nào giao xe tận nơi gần Tràng An?",
+    "Xe thuê có kèm xăng và nón không?",
+    "Đi Tam Cốc, Bái Đính nên thuê xe số hay ga?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Góc nhìn du lịch trọng tâm: giá thuê thuộc nhóm thấp nhất cả nước (xe số từ 70.000đ), hệ thống giao xe tận nơi quanh Phố cổ Hoa Lư dày đặc hơn mọi tỉnh.",
+  "slug": "gia-thue-wave-ninh-binh",
+  "output_path": "thue-xe-may/gia-thue-wave-ninh-binh/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-ninh-binh/",
+  "claim_evidence": [
+    {
+      "claim": "Xe số tại Ninh Bình 70.000đ – 120.000đ/ngày.",
+      "claim_supported": "Xe số: 70.000đ – 120.000đ/ngày.",
+      "source_url": "https://luhanhvietnam.com.vn/du-lich/dia-chi-thue-xe-may-o-ninh-binh.html",
+      "source_domain": "luhanhvietnam.com.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cửa hàng Hương Dương (Ninh Bình) cung cấp đủ xe số, xe ga, xe côn; mỗi xe kèm 1 lít xăng, 2 nón bảo hiểm, giấy tờ nguồn gốc rõ ràng.",
+      "claim_supported": "Cửa hàng Hương Dương cung cấp đủ dòng xe: xe số, xe ga, xe côn. Ngoài ra, mỗi xe luôn đi kèm theo 1 lít xăng, 2 nón bảo hiểm và đầy đủ giấy tờ nguồn gốc rõ ràng.",
+      "source_url": "https://motogo.vn/thue-xe-may-ninh-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Hương Dương giao xe, lấy xe tận nơi trong bán kính 4km từ Phố cổ Hoa Lư, phục vụ 5h – 23h.",
+      "claim_supported": "Giao xe, lấy xe tận nơi (5h-23h) – Bán kính 4km từ Phố cổ Hoa Lư – Các khách sạn, homestay trong khu vực trung tâm.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-huong-duong.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Xe số phổ thông Hương Dương gồm Honda Wave RSX, Wave Alpha (giao ngẫu nhiên), kèm mũ bảo hiểm và 1 lít xăng, giao xe tận nơi.",
+      "claim_supported": "Xe số phổ thông · Hương Dương · Honda Wave RSX, Honda Wave Alpha (Giao ngẫu nhiên). Mũ bảo hiểm, Xăng (1 lít). Giao xe tận nơi.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ninh-binh.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

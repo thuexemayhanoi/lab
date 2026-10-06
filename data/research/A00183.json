@@ -1,0 +1,59 @@
+{
+  "article_id": "A00183",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Quảng Ninh",
+  "secondary_keywords": [
+    "thue xe Wave Quang Ninh",
+    "cho thue Honda Wave Ha Long",
+    "thue xe so Ha Long",
+    "thue xe may Quang Ninh"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Quảng Ninh (Hạ Long): giá từ 70.000đ/ngày, giao xe 10 – 15 phút Bãi Cháy, cơ sở quy mô 100+ xe.",
+  "geo_id": "VN-A00183",
+  "geo_level": "province",
+  "province": "Quảng Ninh",
+  "locality": "",
+  "poi": "Hạ Long – Bãi Cháy – Vân Đồn",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave Hạ Long giá bao nhiêu?",
+    "Có nơi giao xe nhanh tại Bãi Cháy không?",
+    "Tỷ lệ xe số và xe ga ở Hạ Long thế nào?",
+    "Đi Vân Đồn, Móng Cái nên thuê xe gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Góc nhìn thị trường du lịch biển: hệ thống cửa hàng Hạ Long quy mô lớn (hơn 100 xe), giao xe siêu tốc 10 – 15 phút, xe số chiếm thiểu số nên cần đặt trước.",
+  "slug": "gia-thue-wave-quang-ninh",
+  "output_path": "thue-xe-may/gia-thue-wave-quang-ninh/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-quang-ninh/",
+  "claim_evidence": [
+    {
+      "claim": "Thuê xe tại Hạ Long chỉ từ 70.000đ/ngày; giao xe tận nơi trong 10 – 15 phút tại khu vực Bãi Cháy và trung tâm Hạ Long.",
+      "claim_supported": "Chỉ từ 70.000đ/ngày, bạn đã có thể sở hữu một chiếc xe chất lượng. Kim’s Motorbike hỗ trợ giao xe siêu tốc tận nơi trong khu vực Bãi Cháy và trung tâm Hạ Long. Chỉ cần gọi là có xe trong 10–15 phút.",
+      "source_url": "https://dichvuthuexehalong.com/",
+      "source_domain": "dichvuthuexehalong.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một hệ thống cho thuê xe máy Hạ Long có hơn 100 xe sẵn sàng giao ngay, giao xe tận nơi, thủ tục nhanh chóng.",
+      "claim_supported": "Với hơn 100 xe sẵn sàng giao ngay… Giao xe tận nơi - thủ tục nhanh chóng.",
+      "source_url": "https://chothuexemayhalong.com/",
+      "source_domain": "chothuexemayhalong.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cửa hàng Hạ Long có hơn 100 xe với 70% xe ga, 30% xe số; các dòng Air Blade, Vision, Lead, Click, Sirius, Wave.",
+      "claim_supported": "Hiện cửa hàng đang có hơn 100 xe với 70% xe ga, 30% xe số, các dòng xe Air Blade, Vision, Lead, Click, Sirius, Wave.",
+      "source_url": "https://vivuhalong.com/thue-xe-may-ha-long/",
+      "source_domain": "vivuhalong.com",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}
