@@ -1,0 +1,74 @@
+{
+  "article_id": "A00250",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Sirius Ninh Bình",
+  "secondary_keywords": [
+    "gia thue Sirius Ninh Binh",
+    "cho thue Yamaha Sirius Tam Coc",
+    "thue xe so Ninh Binh gia",
+    "gia thue xe may Ninh Binh"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Ninh Bình: TamCoc Motorbike Rental 93 có sẵn xe số yamaha sirius, honda wave với giá dao động 100.000đ – 180.000đ kèm mũ bảo hiểm, áo mưa và giao nhận miễn phí; Hương Dương chỉ từ 80.000đ/ngày; cửa hàng 100k ngày giao tận nơi khách sạn, ga, bến xe.",
+  "geo_id": "VN-A00250",
+  "geo_level": "province",
+  "province": "Ninh Bình",
+  "locality": "",
+  "poi": "Tam Cốc – Bích Động – Tràng An – chùa Bái Đính – Cúc Phương (cửa ngõ) – ga Ninh Bình – bến xe Ninh Bình",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê xe máy ở Ninh Bình giá bao nhiêu?",
+    "Thuê Sirius ở Tam Cốc có sẵn không?",
+    "Cho thuê xe Ninh Bình có cần cọc không?",
+    "Có nơi nào giao xe tận nơi ở Ninh Bình không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Ninh Bình — thủ đô du lịch xe máy: xe số Sirius/wave là \"ngựa thồ\" của Tam Cốc — Tràng An với giá từ 80.000đ và gần như cửa hàng nào cũng giao xe tận nơi miễn phí; nhiều cơ sở không cần cọc với khách du lịch (chỉ để giấy tờ) — thị trường có mặt bằng dày và dịch vụ tốt nhất Bắc Bộ cho dòng xe số.",
+  "slug": "gia-thue-sirius-ninh-binh",
+  "output_path": "thue-xe-may/gia-thue-sirius-ninh-binh/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-ninh-binh/",
+  "claim_evidence": [
+    {
+      "claim": "TamCoc Motorbike Rental 93 có các loại xe số phổ biến như Yamaha Sirius, Honda Wave cùng các dòng xe ga Honda Air Blade, Vision, Lead; mức giá dao động từ 100.000đ – 180.000đ, đã bao gồm mũ bảo hiểm, áo mưa và giao nhận xe miễn phí trong khu vực thành phố và các điểm du lịch.",
+      "claim_supported": "Hiện đơn vị có các loại xe số phổ biến như yamaha sirius, honda wave. Ngoài ra còn có các dòng xe ga honda air blade, honda vision, lead, xe côn để phục vụ quý khách thuê. Hiện nay mức giá thuê xe tại TamCoc Motorbike Rental 93 đang cung câp dao động từ 100.000đ – 180.000đ với đa dạng các loại xe số và xe ga. Giá thuê xe đã bao gồm có các loại phụ kiện xe máy như mũ bảo hiểm, áo mưa. Đặc biệt TamCoc Motorbike Rental 93 còn có chính sách giao nhận xe miễn phí trong khu vực thành phố và các điểm du lịch",
+      "source_url": "https://motogo.vn/thue-xe-may-ninh-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Hương Dương (Đội 1 Văn Lâm, Ninh Hải, Hoa Lư) cho thuê xe từ 80.000đ/ngày; mỗi xe luôn đi kèm theo 1 lít xăng, 2 nón bảo hiểm và đầy đủ giấy tờ nguồn gốc.",
+      "claim_supported": "Đặc biệt giá thuê xe phải chăng chỉ từ 80.000đ/ngày, tiết kiệm chi phí. Ngoài ra, mỗi xe luôn đi kèm theo 1 lít xăng, 2 nón bảo hiểm và đầy đủ giấy tờ nguồn gốc rõ ràng.",
+      "source_url": "https://motogo.vn/thue-xe-may-ninh-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Lys Tam Coc Rental Scooters: khách du lịch đến Ninh Bình cần để lại giấy tờ tùy thân, không yêu cầu cọc xe; khách bản địa nhận cọc từ 1.000.000đ – 1.500.000đ.",
+      "claim_supported": "Đối với khách du lịch đến Ninh Bình cần để lại giấy tờ tùy thân, không yêu cầu cọc xe. Với khách bản địa sinh sống tại Ninh Bình, Lys Tam Coc Rental Scooters có nhận cọc từ 1.000.000đ – 1.500.000đ.",
+      "source_url": "https://motogo.vn/thue-xe-may-ninh-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cửa hàng Dung Mạnh (42 đường 27/7 Nam Bình, TP Ninh Bình) có giá khởi điểm 100k ngày, giao xe máy tận nơi tại khách sạn, nhà Ga, Bến Xe hoặc trong nội thành Ninh Bình.",
+      "claim_supported": "Giá khởi điểm 100k ngày, có giao xe máy tận nơi tại khách sạn, nhà Ga, Bến Xe hoặc trong nội thành Ninh Bình.",
+      "source_url": "https://tripbike.net/thue-xe-may-ninh-binh/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cửa hàng cho thuê xe máy Ninh Bình giá rẻ chỉ từ 100k ngày, không cần đặt cọc, chỉ cần có chứng minh nhân dân hay căn cước công dân là có thể thuê.",
+      "claim_supported": "là đơn vị cho thuê xe máy Ninh Bình giá rẻ, chỉ từ 100k ngày là bạn có thể thuê. Với mức giá cho thuê khá rẻ 100k ngày, không cần đặt cọc chỉ cần có chứng minh nhân dân hay căn cước công dân là có thể thuê.",
+      "source_url": "https://tripbike.net/thue-xe-may-ninh-binh/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn motogo.vn/thue-xe-may-ninh-binh/ (9 cơ sở: Dũng Mạnh, Lys Tam Coc, Đức Thắng, TamCoc Motorbike Rental 93, Phương Tiến, Hương Dương...) và tripbike.net/thue-xe-may-ninh-binh/ (Dung Mạnh 100k ngày giao tận nơi; cửa hàng Ngô Quyền 100k ngày không cần đặt cọc)."
+}

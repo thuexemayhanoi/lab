@@ -1,0 +1,74 @@
+{
+  "article_id": "A00249",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Sirius Hưng Yên",
+  "secondary_keywords": [
+    "gia thue Sirius Hung Yen",
+    "cho thue Yamaha Sirius Hung Yen",
+    "thue xe so Hung Yen gia",
+    "gia thue xe may Hung Yen"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Hưng Yên: bảng giá tham khảo ghi đích danh xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd/ngày; kênh tổng hợp ghi Wave, Sirius 120.000 – 170.000; Thanh Hà Hotel từ 100.000đ/ngày kèm ưu đãi thuê dài.",
+  "geo_id": "VN-A00249",
+  "geo_level": "province",
+  "province": "Hưng Yên",
+  "locality": "",
+  "poi": "phố Hiến – văn miếu Xích Đằng – chùa Chuông (Chúng Liễn) – phố Nối – làng nhãn Khoái Châu – bến xe Hưng Yên",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê xe máy ở Hưng Yên giá bao nhiêu?",
+    "Thuê Sirius FI ở Hưng Yên giá thế nào?",
+    "Có bảng giá tham khảo cho thuê xe Hưng Yên không?",
+    "Giá thuê xe ga Hưng Yên thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Hưng Yên — đất cổ phố Hiến sát Hà Nội: bảng giá tham khảo của tỉnh ghi đích danh Sirius FI 90.000 vnd — một trong những mốc thấp nhất cả nước cho dòng Sirius FI; kênh tổng hợp đưa Wave, Sirius vào khoảng 120.000 – 170.000 — khoảng giá \"chuẩn vùng\" cho khách ở lâu; khách sạn tại Yên Mỹ, Mỹ Hào đều niêm yết cụ thể.",
+  "slug": "gia-thue-sirius-hung-yen",
+  "output_path": "thue-xe-may/gia-thue-sirius-hung-yen/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-hung-yen/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Hưng Yên 1 ngày ghi đích danh dòng xe số Yamaha Sirius 2015 – 2018 FI với giá 90.000 vnd/ngày.",
+      "claim_supported": "Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd",
+      "source_url": "https://motogo.vn/thue-xe-may-hung-yen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cùng bảng ghi Xe số Wave S 80.000 vnd, Wave RS 80.000 vnd, Wave RSX – fi 90.000 vnd, xe số Yamaha Jupiter gravita 80.000 vnd; nhóm xe ga Honda Vision 120.000 vnd.",
+      "claim_supported": "Xe tay ga Honda Vision 120.000 vnd Xe số Wave S 80.000 vnd Xe số Wave RS 80.000 vnd Xe số Wave RSX – fi 90.000 vnd Xe số Yamaha Jupiter gravita 80.000 vnd",
+      "source_url": "https://motogo.vn/thue-xe-may-hung-yen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Thanh Hà Hotel (Số 89 Phố Hảo, xã Liêu Xá, huyện Yên Mỹ) cung cấp chủ yếu các dòng Sirius, Vision, Lead, Air Blade; giá từ 100.000đ/ngày, khách lưu trú thuê dài được ưu đãi giá rẻ hơn.",
+      "claim_supported": "Những dòng xe chủ yếu được nơi đây cung cấp là Sirius, Vision, Leas, Air Blade,… Chỉ cần bỏ ra từ 100.000đ/ngày bạn đã thuê ngay được một chiếc xe chất lượng, an toàn. Đối với khách lưu trú và thuê xe trong thời gian dài có thể nhận được ưu đãi giá rẻ hơn nhiều.",
+      "source_url": "https://motogo.vn/thue-xe-may-hung-yen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Khách sạn Minh Ngọc (Phố Nối, Mỹ Hào) niêm yết giá thuê xe số 100.000đ/ngày và xe ga 150.000đ/ngày.",
+      "claim_supported": "Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày Địa chỉ: Phố Nối, thị xã Mỹ Hòa, tỉnh Hưng Yên",
+      "source_url": "https://motogo.vn/thue-xe-may-hung-yen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Theo bảng giá tổng hợp tại Hưng Yên: nhóm Airblade, Lead, Vision 150.000 – 200.000; nhóm Wave, Sirius 120.000 – 170.000; Exciter 250.000 – 300.000.",
+      "claim_supported": "Airblade, Lead, Vision 150.000 – 200.000. Wave,Sirius 120.000 – 170.000. Exciter 250.000 – 300.000.",
+      "source_url": "https://tripbike.net/thue-xe-may-hung-yen/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn motogo.vn/thue-xe-may-hung-yen/ (bảng giá 1 ngày ghi Sirius FI 90.000 vnd + 4 cơ sở: Nhất Long, Thanh Hà Hotel, Gia Hưng, Minh Ngọc) và tripbike.net/thue-xe-may-hung-yen/ (Wave, Sirius 120.000 – 170.000; Airblade/Lead/Vision 150.000 – 200.000; Exciter 250.000 – 300.000)."
+}

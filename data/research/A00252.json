@@ -1,0 +1,74 @@
+{
+  "article_id": "A00252",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Sirius Thanh Hóa",
+  "secondary_keywords": [
+    "gia thue Sirius Thanh Hoa",
+    "cho thue Yamaha Sirius Thanh Hoa",
+    "thue xe so Thanh Hoa gia",
+    "gia thue xe may Sam Son"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Thanh Hóa: bảng giá tổng hợp ghi đích danh Sirius 100.000 – 150.000 và Sirius Fi 100.000 – 150.000; Tuấn Ngọc (Bãi Đông) 120k đến 200k; Long Hà từ 150k/ngày kèm giao nhận miễn phí sân bay Thọ Xuân; kênh chung ghi xe tay số 200k/ngày gồm Wave, Sirius, Jupiter.",
+  "geo_id": "VN-A00252",
+  "geo_level": "province",
+  "province": "Thanh Hóa",
+  "locality": "",
+  "poi": "Sầm Sơn – TP Thanh Hóa – Bãi Đông Nghi Sơn – Pù Luông (cửa ngõ) – Lam Kinh – sân bay Thọ Xuân",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê xe máy ở Thanh Hóa giá bao nhiêu?",
+    "Thuê Sirius ở Sầm Sơn chỗ nào uy tín?",
+    "Có cửa hàng nào giao xe tại sân bay Thọ Xuân không?",
+    "Giá thuê xe ga Thanh Hóa thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Thanh Hóa — dải đất dài nhất miền Bắc với hai thị trường (phố Thanh Hóa và biển Sầm Sơn – Bãi Đông): Sirius được ghi đích danh trong bảng giá tổng hợp 100.000 – 150.000 (cùng Sirius Fi), và mô hình giao xe miễn phí tại sân bay Thọ Xuân là điểm hiếm có giúp khách bay vào là có xe.",
+  "slug": "gia-thue-sirius-thanh-hoa",
+  "output_path": "thue-xe-may/gia-thue-sirius-thanh-hoa/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-thanh-hoa/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy tại Thanh Hóa ghi đích danh dòng Sirius mức 100.000 – 150.000 và Sirius Fi mức 100.000 – 150.000; cùng bảng ghi Jupiter, Wave S, Wave Rs, Wave Rsx đều 100.000 – 150.000; Lead 110, Vision 110, Airblade 110 mức 100.000 – 160.000.",
+      "claim_supported": "Dòng Xe cho thuê Mức Giá Sirius 100.000 – 150.000 Sirius Fi 100.000 – 150.000 Jupiter 100.000 – 150.000 Wave S 100.000 – 150.000 Wave Rs 100.000 – 150.000 Wave Rsx 100.000 – 150.000 Lead 110 100.000 – 160.000 Vision 110 100.000 – 160.000 Airblade 110 100.000 – 160.000",
+      "source_url": "https://giahuy.org/thue-xe-may-thanh-hoa/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Thuê xe máy tại Bãi Đông Nghi Sơn, Tuấn Ngọc có giá cho thuê 120k đến 200k; cung cấp nhiều dòng xe phổ biến như Airblade, Vision, Lead, Sirius và Honda Wave; thuê nhiều ngày và nhiều xe được giá ưu đãi.",
+      "claim_supported": "Thuê xe máy tại Bãi Đông Nghi Sơn Tuấn Ngọc có giá cho thuê 120k đến 200k. Tuấn Ngọc cung cấp cho khách hàng nhiều lựa chọn về dòng xe phổ biến. Như Airblade, Vision, Lead, Sirius và Honda Wave. Bên cạnh đó, khi thuê nhiều ngày và nhiều xe, khách hàng sẽ được đơn vị có giá ưu đãi.",
+      "source_url": "https://giahuy.org/thue-xe-may-thanh-hoa/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một cửa hàng tại Thanh Hóa cho thuê xe với đơn giá từ 150k/ngày kèm giao nhận xe miễn phí trong sân bay Thọ Xuân, thủ tục chỉ cần căn cước.",
+      "claim_supported": "Với đơn giá cho thuê từ 150k/ngày và giao nhận xe miễn phí trong sân bay Thọ Xuân. Đơn vị cho thuê xe máy tại đây cung cấp cho khách hàng mức giá hợp lý và dịch vụ tốt nhất. Thủ tục cho thuê xe cũng rất đơn giản chỉ cần có Căn cước",
+      "source_url": "https://giahuy.org/thue-xe-may-thanh-hoa/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Theo bảng giá chung tại Thanh Hóa: xe tay số 200k/ngày gồm Wave, Sirius, Jupiter; xe tay ga 300k/ngày gồm Airblade, Lead, Vision; cửa hàng giảm giá 50k/ngày khi thuê từ ngày thứ hai.",
+      "claim_supported": "Xe tay số : 200k/ ngày gồm Wave, sirius. jupiter.. Xe tay ga : 300k/ ngày gồm Airblade,Lead, Vision… Nhìn chung mức giá cho thuê xe máy tại Thanh Hóa rất đồng nhất. Nên chỉ có 2 mức giá để bạn tham khảo",
+      "source_url": "https://tripbike.net/thue-xe-may-thanh-hoa/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá thuê các dòng xe số phổ thông ở Thanh Hóa luôn ổn định với mức giá khoảng 150.000 đồng/ngày; thanh toán cọc 20.000 đ/xe qua nền tảng để xác nhận giữ xe.",
+      "claim_supported": "Giá thuê các dòng xe số phổ thông ở Thanh Hóa luôn ổn định với mức giá khoảng 150.000 đồng/ngày. Thanh toán Cọc (20.000 đ/xe) qua Vexere để xác nhận giữ xe.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-thanh-hoa.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn giahuy.org/thue-xe-may-thanh-hoa/ (bảng giá theo dòng: Sirius 100.000-150.000, Sirius Fi 100.000-150.000, Lead 110/Vision 110 100.000-160.000; Long Hà 150k giao sân bay Thọ Xuân; Tuấn Ngọc 120k-200k; giảm 50k/ngày từ ngày thứ hai), tripbike.net/thue-xe-may-thanh-hoa/ (xe tay số 200k/ngày gồm Wave, sirius; xe tay ga 300k/ngày), vexere.com (xe số phổ thông ~150.000 đồng/ngày; cọc 20.000 đ/xe)."
+}
