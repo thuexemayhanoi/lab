@@ -14,6 +14,33 @@ ecosystem, published as a static GitHub Pages site:
   local + long-tail queries can rank WITHOUT active backlink building.
 - Zero-active-backlink baseline: **YES** (see `config/seo-experiment.json`).
 
+## ONE-COMMAND CONTINUOUS WRITER CONTRACT (giống /vanchinh)
+
+Khi người dùng chỉ nói **"chạy /lab", "viết tiếp", "tiếp tục production"** hoặc giao
+một lệnh production tương đương, external writer PHẢI coi đó là **một lệnh khởi
+động vòng lặp liên tục**, KHÔNG phải lệnh viết đúng một pair rồi dừng.
+
+Quy tắc mặc định:
+
+- Chạy theo [docs/CONTINUOUS-WRITER.md](docs/CONTINUOUS-WRITER.md).
+- Mỗi queue mới ưu tiên **10 bài liên tiếp** khi đủ runtime và tất cả gate xanh;
+  hard contract vẫn là **2..20 bài/push** theo `production-control.json`.
+- Sau mỗi queue: chờ Factory production + Pages của đúng SHA kết thúc, fetch fresh
+  `main`, rồi **lập tức viết queue kế tiếp mà không hỏi người dùng xác nhận**.
+- Không dừng chỉ vì vừa publish 2 bài, vừa xong một queue, workflow vừa GREEN,
+  Pages vừa deploy, hoặc checkpoint vừa tăng.
+- Không full-audit/test toàn site trong hot loop. Content run chỉ dùng scoped FAST
+  QA; deep/full/Tier-4 chỉ dành cho engine/workflow/recovery changes.
+- Nếu queue RED: sửa đúng queue/ID đang lỗi → QA lại → push repair → verify GREEN
+  rồi mới đi tiếp. Không nhảy ID, không bỏ dở repair để claim bài mới.
+- `WRITER_RUNTIME=off` chỉ nói **internal Actions writer** đang tắt; nó KHÔNG chặn
+  external writer/Vibe/Mistral đang chạy theo push-driven flow.
+- Chỉ dừng khi: toàn bộ matrix terminal; runtime/session/tool buộc dừng tại safe
+  checkpoint; hoặc blocker thật cần credential/quyền/người dùng.
+
+Mục tiêu là: **một lệnh của người dùng → nhiều queue liên tiếp → factory tự QA /
+publish / verify**, thay vì bắt người dùng ra lệnh lại sau từng pair.
+
 ## NORMAL WRITER FLOW (push-driven — the ONLY loop a writer needs)
 
 Standard push = **a TURBO write-ahead queue of 2..20 articles**
