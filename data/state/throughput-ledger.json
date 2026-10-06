@@ -3114,6 +3114,29 @@
       ],
       "published": 2,
       "phase": "PRODUCTION"
+    },
+    {
+      "op": "qa",
+      "started_at": "2026-10-06T11:20:18.930Z",
+      "finished_at": "2026-10-06T11:20:19.271Z",
+      "elapsed_ms": 341,
+      "ids": [
+        "A00181",
+        "A00182"
+      ],
+      "count": 2
+    },
+    {
+      "op": "publish",
+      "started_at": "2026-10-06T11:20:20.164Z",
+      "finished_at": "2026-10-06T11:20:23.764Z",
+      "elapsed_ms": 3600,
+      "ids": [
+        "A00181",
+        "A00182"
+      ],
+      "published": 2,
+      "phase": "PRODUCTION"
     }
   ]
 }
