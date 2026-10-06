@@ -61,6 +61,20 @@ Factory production runs (workflow_run must not self-reference).
 multi-chunk soak): it starts on every push/PR but the heavy suites only
 fire for reliability-relevant changes (engine/workflow/tests/config).
 
+### Continuous writer mode (normal production)
+
+Normal production follows the same user-facing model as `/vanchinh`: **one user
+command starts a continuous external-writer loop**. The writer must follow
+[docs/CONTINUOUS-WRITER.md](docs/CONTINUOUS-WRITER.md): fetch fresh `main` → finish
+repair/resume work → write a 2..20 article queue (default target 10) → push → let
+`factory-production.yml` QA/publish/verify automatically → fetch fresh `main` →
+repeat without asking the user after each pair/queue.
+
+The scheduled internal `pipeline` is a separate optional path. When
+`WRITER_RUNTIME=off`, its IDLE-STOP is intentional and **must not be treated as a
+blocker for the normal external writer**. Do not wait for that cron to create
+prose.
+
 ## Experiment rules (short version)
 
 - Bootstrap maximum: 10 pilot articles published.
