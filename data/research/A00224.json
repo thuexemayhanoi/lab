@@ -1,0 +1,74 @@
+{
+  "article_id": "A00224",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Gia Lai",
+  "secondary_keywords": [
+    "gia thue Winner Gia Lai",
+    "cho thue Honda Winner Pleiku",
+    "thue xe con tay Pleiku",
+    "thue xe may Gia Lai gia"
+  ],
+  "search_intent": "informational — khách cần giá thuê Winner/côn tay tại Pleiku – Gia Lai: mặt bằng côn tay đến xe ga 80 – 150k; tham chiếu cơ sở 80.000-150.000 VND/ngày; tạm ứng 500.000 VNĐ – 3.000.000 VNĐ.",
+  "geo_id": "VN-A00224",
+  "geo_level": "province",
+  "province": "Gia Lai",
+  "locality": "",
+  "poi": "TP Pleiku – Biển Hồ (T’Nưng) – Chư Đăng Ya – chùa Minh Thành – Ia Gra – Ayun Pa",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Pleiku giá bao nhiêu?",
+    "Ở Gia Lai có cơ sở cho thuê xe côn không?",
+    "Thuê xe Pleiku có cần đặt cọc không?",
+    "Đi Biển Hồ, Chư Đăng Ya nên thuê xe gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Pleiku phố núi — Biển Hồ T’Nưng, núi lửa Chư Đăng Ya, mùa cà phê: côn tay có trong mặt bằng 80 – 150k kèm giao xe miễn phí, một số nơi không cần cọc tiền mặt.",
+  "slug": "gia-thue-winner-gia-lai",
+  "output_path": "thue-xe-may/gia-thue-winner-gia-lai/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-gia-lai/",
+  "claim_evidence": [
+    {
+      "claim": "Một cơ sở thuê xe tự lái tại Pleiku có nhiều mẫu xe đa dạng từ xe côn tay đến xe ga với giá thuê dao động từ 80 – 150k kèm giao xe miễn phí.",
+      "claim_supported": "Khách hàng có thể tìm thấy nhiều mẫu xe đa dạng từ xe côn tay đến xe ga với giá thuê dao động từ 80 – 150k kèm giao xe miễn phí.",
+      "source_url": "https://touring.vn/thue-xe-may-gia-lai/",
+      "source_domain": "touring.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Mức giá thuê xe tại Pleiku giao động từ 80.000-150.000 VND tùy loại xe; khi thuê được cấp 1 lít xăng, 2 áo mưa và 2 nón bảo hiểm.",
+      "claim_supported": "Mức giá thuê xe giao động từ 80.000-150.000 VND (Phụ thuộc với các loại xe khác nhau). Bạn nên lưu ý khi thuê xe bạn chỉ được cấp 1 lít xăng và trang bị 2 áo mưa cùng 2 nón bảo hiểm .",
+      "source_url": "https://touring.vn/thue-xe-may-gia-lai/",
+      "source_domain": "touring.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá thuê tham khảo tại Gia Lai là 120.000 đ/xe cho tuyến cơ bản.",
+      "claim_supported": "Giá thuê tham khảo 120.000 đ / xe cho tuyến cơ bản",
+      "source_url": "https://touring.vn/thue-xe-may-gia-lai/",
+      "source_domain": "touring.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Số tiền tạm ứng trước khi thuê xe tại Pleiku dao động từ 500.000 VNĐ – 3.000.000 VNĐ tùy mẫu xe và chất lượng.",
+      "claim_supported": "Số tiền tạm ứng trước sẽ dao động từ 500.000 VNĐ – 3.000.000 VNĐ (tùy theo mẫu xe và chất lượng).",
+      "source_url": "https://touring.vn/thue-xe-may-gia-lai/",
+      "source_domain": "touring.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Các cơ sở tại Pleiku ghi nhận: Chị Mai 80.000 vnđ/ngày, Anh Phương 100.000 vnđ/ngày, Anh Đức 120.000 vnđ/ngày, Gia Hân 120.000 vnđ/ngày.",
+      "claim_supported": "Thuê xe máy Chị Mai | 0962.210.079 | 80.000 vnđ/ngày | Thuê xe máy Anh Phương | 0869.697.981 | 100.000 vnđ/ngày | Cửa hàng xe máy Anh Đức | 0917.071.216 | 120.000 vnđ/ngày | Cơ sở thuê xe máy Gia Hân | 0848.659.679 | 120.000 vnđ/ngày",
+      "source_url": "https://touring.vn/thue-xe-may-gia-lai/",
+      "source_domain": "touring.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn touring.vn ghi nhận cửa hàng Pleiku có mẫu xe đa dạng từ xe côn tay đến xe ga 80 – 150k kèm giao xe miễn phí — ghi nhận trực tiếp về côn tay tại Gia Lai."
+}

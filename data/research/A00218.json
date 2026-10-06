@@ -1,0 +1,74 @@
+{
+  "article_id": "A00218",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Thanh Hóa",
+  "secondary_keywords": [
+    "gia thue Winner Thanh Hoa",
+    "cho thue Honda Winner Sam Son",
+    "thue xe may Thanh Hoa gia",
+    "thue xe may Sam Son"
+  ],
+  "search_intent": "informational — khách cần mặt bằng giá thuê xe tại Thanh Hóa/Sầm Sơn: phổ thông 120.000–180.000đ/ngày, xe ga khoảng 150.000đ/ngày; Winner côn tay chưa niêm yết phổ biến, cần hỏi trước.",
+  "geo_id": "VN-A00218",
+  "geo_level": "province",
+  "province": "Thanh Hóa",
+  "locality": "",
+  "poi": "TP Thanh Hóa – biển Sầm Sơn – Pù Luông – thành nhà Hồ – suối cá Cẩm Thượng",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Thanh Hóa/Sầm Sơn giá bao nhiêu?",
+    "Ở Sầm Sơn có cửa hàng cho thuê côn tay không?",
+    "Thuê xe ở khách sạn Thanh Hóa giá thế nào?",
+    "Từ trung tâm Thanh Hóa ra Sầm Sơn mất bao lâu?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Biển Sầm Sơn và hành trình về phía Pù Luông: mặt bằng Sầm Sơn 120.000–180.000đ phổ thông, khách sạn Thanh Hóa cho thuê từ 150.000đ/ngày; côn tay Winner cần đặt trước.",
+  "slug": "gia-thue-winner-thanh-hoa",
+  "output_path": "thue-xe-may/gia-thue-winner-thanh-hoa/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-thanh-hoa/",
+  "claim_evidence": [
+    {
+      "claim": "Giá thuê xe máy ở Sầm Sơn đối với các dòng xe phổ thông như xe số và xe tay ga chỉ khoảng 120.000 đến 180.000 đồng mỗi ngày.",
+      "claim_supported": "Giá thuê xe máy ở Sầm Sơn đối với các dòng xe phổ thông như xe số và xe tay ga chỉ khoảng 120.000 đến 180.000 đồng mỗi ngày.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sam-son.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá thuê xe số ở Sầm Sơn trung bình khoảng 120.000đ/ngày và bao gồm dịch vụ giao, lấy xe tận nơi khu vực thành phố Sầm Sơn.",
+      "claim_supported": "Giá thuê xe số ở Sầm Sơn trung bình khoảng 120.000đ/ngày và bao gồm dịch vụ giao, lấy xe tận nơi khu vực thành phố Sầm Sơn.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sam-son.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá thuê xe ga ở Sầm Sơn trung bình khoảng 150.000 đ/ngày, bao gồm dịch vụ giao xe, lấy xe tại địa điểm của khách hàng.",
+      "claim_supported": "Giá thuê xe ga thường sẽ cao hơn xe số một chút, trung bình khoảng 150.000 đ/ngày, và cũng bao gồm dịch vụ giao xe, lấy xe tại địa điểm của khách hàng.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-sam-son.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Theo cẩm nang của Sun World Sầm Sơn, thuê xe máy tại Thanh Hóa chỉ từ 150.000 - 200.000 đồng/ngày.",
+      "claim_supported": "Xét về chi phí, thuê xe máy cũng là lựa chọn cực kỳ hợp lý: chỉ từ 150.000 - 200.000 đồng/ngày, du khách đã có phương tiện di chuyển chủ động, trong khi sử dụng taxi hoặc xe du lịch nguyên ngày có thể tốn gấp nhiều lần.",
+      "source_url": "https://sunworld.vn/vi/sam-son/di-chuyen/thue-xe-may-thanh-hoa-gia-dia-chi-uy-tin-va-meo-can-biet-12880",
+      "source_domain": "sunworld.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Khách sạn Hoàng Gia (TP Thanh Hóa) ghi nhận giá thuê xe từ 150.000đ/ngày.",
+      "claim_supported": "Khách sạn Hoàng Gia Điện thoại: 0247 109 9999 Địa chỉ: Lô A1 khu 4, bắc ĐL. Lê Lợi, Phường Đông Hương, TP. Thanh Hóa Giá thuê xe: từ 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn vexere.com (bảng giá Sầm Sơn), sunworld.vn (cẩm nang di chuyển xứ Thanh) và motogo.vn (địa chỉ Thanh Hóa). Không nguồn nào niêm yết Honda Winner riêng tại Thanh Hóa — bài ghi nhận mặt bằng và tư vấn đặt trước."
+}

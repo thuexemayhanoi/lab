@@ -1,0 +1,81 @@
+{
+  "article_id": "A00225",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Khánh Hòa",
+  "secondary_keywords": [
+    "gia thue Winner Khanh Hoa",
+    "cho thue Honda Winner Nha Trang",
+    "thue xe con tay Nha Trang",
+    "gia thue xe may Nha Trang"
+  ],
+  "search_intent": "informational — khách cần giá thuê Winner/côn tại Nha Trang – Khánh Hòa: Exciter côn tay 160.000 ~ 250.000 vnd/ngày; mặt bằng chung 50k – 150k; các cơ sở giao tận khách sạn.",
+  "geo_id": "VN-A00225",
+  "geo_level": "province",
+  "province": "Khánh Hòa",
+  "locality": "",
+  "poi": "Nha Trang – Tháp Bà Ponagar – chùa Long Sơn – Vinpearl – vịnh Nha Phu – Dốc Lết (Ninh Hòa) – Cam Ranh",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Nha Trang giá bao nhiêu?",
+    "Xe côn tay ở Nha Trang có phổ biến không?",
+    "Thuê xe ở Nha Trang có giao tận khách sạn không?",
+    "Cuối tuần giá có tăng không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Riviera Việt Nam — Nha Trang, Tháp Bà Ponagar, vịnh Nha Phu: côn thể thao Exciter ghi nhận 160.000 ~ 250.000 vnd/ngày làm mốc tham chiếu cho Winner; Tùng Nha Trang ga 100.000đ – 150.000đ/ngày.",
+  "slug": "gia-thue-winner-khanh-hoa",
+  "output_path": "thue-xe-may/gia-thue-winner-khanh-hoa/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-khanh-hoa/",
+  "claim_evidence": [
+    {
+      "claim": "Xe côn tay Yamaha Exciter tại Nha Trang ghi nhận giá 160.000 ~ 250.000 vnd/ngày.",
+      "claim_supported": "Xe côn tay Yamaha EXCITER | 160.000 ~ 250.000 vnd/ngày",
+      "source_url": "https://nhatrangtoday.vn/thue-xe-may-nha-trang-post1075",
+      "source_domain": "nhatrangtoday.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá thuê xe máy tại Nha Trang ghi nhận dao động từ 50k – 150k cho cả ngày.",
+      "claim_supported": "Thuê xe gắn máy đi du lịch tại Nha Trang sẽ thuận lợi hơn cho việc đi lại của bạn, với giá dao động từ 50k – 150k cho cả ngày giúp bạn có những chuyến vi vu đến các danh thắng nổi tiếng như Chùa Long Sơn, Tháp Bà Ponagar, Vinpearl Land, nhà thờ núi…",
+      "source_url": "https://nhatrangtoday.vn/thue-xe-may-nha-trang-post1075",
+      "source_domain": "nhatrangtoday.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Xe số Honda Wave RSX tại Nha Trang ghi nhận giá 90.000 ~ 100.000 vnd/ngày; xe tay ga Honda Vision 120.000 ~ 130.000 vnd/ngày.",
+      "claim_supported": "Xe số Honda WAVE RSX (nhiều loại Model) | 90.000 ~ 100.000 vnd/ngày | Xe số Yamaha SIRIUS (nhiều loại Model) | 80.000 ~ 100.000 vnd/ngày | Xe tay ga Honda Vision | 120.000 ~ 130.000 vnd/ngày",
+      "source_url": "https://nhatrangtoday.vn/thue-xe-may-nha-trang-post1075",
+      "source_domain": "nhatrangtoday.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Tùng Nha Trang (96 Trần Phú) ghi nhận giá thuê xe số 80.000đ/ngày và xe ga 100.000đ – 150.000đ/ngày.",
+      "claim_supported": "Tùng Nha Trang Địa chỉ: Số 96 đường Trần Phú, phường Lộc Thọ, Thành phố Nha Trang Giá thuê xe số: 80.000đ/ngày Giá thuê xe ga: 100.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Hải Anh (Nha Trang) ghi nhận giá thuê xe số 110.000đ/ngày và xe ga 180.000đ/ngày.",
+      "claim_supported": "Hải Anh Địa chỉ: 114/23 Hoàng Hoa Thám, Phường Lộc Thọ, Thành phố Nha Trang Giá thuê xe số: 110.000đ/ngày Giá thuê xe ga: 180.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Vạn Phúc (Cam Ranh) ghi nhận giá thuê xe số 80.000đ/ngày và xe ga 120.000đ/ngày.",
+      "claim_supported": "Vạn Phúc Địa chỉ: số79 Phan Bội Châu, phường Cam Phú, Thành Phố Cam Ranh Giá thuê xe số: 80.000đ/ngày Giá thuê xe ga: 120.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn nhatrangtoday.vn ghi nhận bảng giá côn thể thao Exciter 160.000 ~ 250.000 vnd/ngày — Winner cùng phân khúc côn 150cc; motogo.vn bổ sung mặt bằng cơ sở Nha Trang."
+}

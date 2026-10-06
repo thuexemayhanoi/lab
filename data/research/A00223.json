@@ -1,0 +1,74 @@
+{
+  "article_id": "A00223",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Quảng Ngãi",
+  "secondary_keywords": [
+    "gia thue Winner Quang Ngai",
+    "cho thue Honda Winner Quang Ngai",
+    "thue xe con tay Quang Ngai",
+    "thue xe may Ly Son"
+  ],
+  "search_intent": "informational — khách cần giá thuê côn tay/Winner tại Quảng Ngãi: Nở Motorbike ghi nhận xe số, xe tay côn ngày thường 120.000/xe/ngày; Lê Trần chuyên côn tay và xe ga 80.000 – 120.000 đồng/xe/ngày.",
+  "geo_id": "VN-A00223",
+  "geo_level": "province",
+  "province": "Quảng Ngãi",
+  "locality": "",
+  "poi": "TP Quảng Ngãi – đảo Lý Sơn – biển Mỹ Khê – Sa Kỳ – La Hà (Tư Nghĩa) – núi Bãi Chước",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê xe côn tay ở Quảng Ngãi giá bao nhiêu?",
+    "Lên đảo Lý Sơn thuê xe ở đâu?",
+    "Ở Quảng Ngãi có cơ sở chuyên xe côn không?",
+    "Giá cuối tuần có chênh không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Quảng Ngãi và đảo Lý Sơn: Nở Motorbike ghi nhận xe số, xe tay côn 120.000/xe/ngày; Lê Trần (La Hà) chuyên côn tay + xe ga 80.000 – 120.000 đồng/xe/ngày; Võ Gia có cơ sở ngay đảo Lý Sơn.",
+  "slug": "gia-thue-winner-quang-ngai",
+  "output_path": "thue-xe-may/gia-thue-winner-quang-ngai/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-quang-ngai/",
+  "claim_evidence": [
+    {
+      "claim": "Nở Motorbike ghi nhận giá cho thuê xe số, xe tay côn ngày thường là 120.000/xe/ngày; tay ga 150.000đ/xe/ngày.",
+      "claim_supported": "Giá cho thuê xe số, xe tay côn ngày thường là 120.000/xe/ngày. Đối với tay ga Nở Motorbike hiện tại đang cho thuê với giá 150.000đ/xe/ngày. Thời gian áp dụng là tất cả các ngày trong tuần, 2 ngày cuối tuần là thứ 7 và chủ nhật mức giá trên có sự chênh lệch.",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-quang-ngai",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Lê Trần (TT La Hà, Tư Nghĩa) chuyên xe côn tay và xe ga, giá thuê dao động từ 80.000 – 120.000 đồng/xe/ngày.",
+      "claim_supported": "Cửa hàng Lê Trần đã nhiều năm cho thuê xe máy tại Quảng Ngãi. Hai dòng xe chính mà cửa hàng cung cấp là xe côn tay và xe ga. Giá thuê dao động từ 80.000 – 120.000 đồng/xe/ngày.",
+      "source_url": "https://didaudalat.com/thue-xe-may-quang-ngai/",
+      "source_domain": "didaudalat.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Võ Gia có cơ sở tại thôn Tân An, xã An Vĩnh, đảo Lý Sơn, ghi nhận giá thuê xe số 100.000đ/ngày và xe ga 150.000đ/ngày.",
+      "claim_supported": "Võ Gia | Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày | 0914 244 269 | Thôn Tân An, xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+      "source_url": "https://didaudalat.com/thue-xe-may-quang-ngai/",
+      "source_domain": "didaudalat.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Hoa Muống Biển (TP Quảng Ngãi) ghi nhận giá thuê xe số 120.000đ/ngày và xe ga 150.000đ/ngày.",
+      "claim_supported": "Hoa Muống Biển | Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 150.000đ/ngày | 0905 395 269 | 118 Nguyễn Nghiêm, P. Nghĩa Chánh, TP. Quảng Ngãi",
+      "source_url": "https://didaudalat.com/thue-xe-may-quang-ngai/",
+      "source_domain": "didaudalat.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Thanh Bình (Quảng Ngãi) ghi nhận giá thuê xe số 100.000đ/ngày và xe ga 150.000đ/ngày.",
+      "claim_supported": "Thanh Bình | Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày | 0338 023 344 | 117 Trần Quang Diệu, Nghĩa Lộ, Quảng Ngãi",
+      "source_url": "https://didaudalat.com/thue-xe-may-quang-ngai/",
+      "source_domain": "didaudalat.com",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn 2trip.vn ghi nhận Nở Motorbike (chợ Quảng Ngãi) công khai giá xe số/xe tay côn 120.000/xe/ngày; didaudalat.com ghi nhận Lê Trần chuyên côn tay — hai ghi nhận trực tiếp về côn tại Quảng Ngãi."
+}

@@ -1,0 +1,74 @@
+{
+  "article_id": "A00221",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Quảng Bình",
+  "secondary_keywords": [
+    "gia thue Winner Quang Binh",
+    "cho thue xe con tay Dong Hoi",
+    "thue xe may Phong Nha",
+    "thue xe may Quang Binh gia"
+  ],
+  "search_intent": "informational — khách cần giá thuê côn tay/Winner tại Đồng Hới – Quảng Bình: Tung Motorbike ghi nhận côn 250.000đ–500.000đ/xe/ngày; xe số 120.000đ–150.000đ; xe ga 150.000đ–200.000đ.",
+  "geo_id": "VN-A00221",
+  "geo_level": "province",
+  "province": "Quảng Bình",
+  "locality": "",
+  "poi": "Đồng Hới – Phong Nha (Sơn Trạch) – biển Nhật Lệ – Vũng Chập – sông Son – Ga Đồng Hới",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê xe côn tay ở Đồng Hới giá bao nhiêu?",
+    "Tại sao giá côn tay Quảng Bình cao hơn xe ga?",
+    "Ở Phong Nha có thuê được xe máy không?",
+    "Thuê xe ở Đồng Hới cần đặt cọc không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Vương quốc hang động — Phong Nha, Đồng Hới, biển Nhật Lệ: xe tay côn tại Đồng Hới được ghi nhận 250.000đ–500.000đ/xe/ngày, cao nhất dải miền Trung trong queue.",
+  "slug": "gia-thue-winner-quang-binh",
+  "output_path": "thue-xe-may/gia-thue-winner-quang-binh/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-quang-binh/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Đồng Hới, xe tay côn có giá thuê từ 250.000đ/xe/ngày – 500.000đ/xe/ngày do số lượng có hạn.",
+      "claim_supported": "Hiện tại cửa hàng đang áp dụng mức giá từ 120.000đ – 150.000đ đối với xe số và 150.000đ – 200.000đ đối với xe tay ga. Đặc biệt, xe tay côn số lượng có hạn nên có mức giá cao hơn so với 2 loại xe trên, xe tay côn có giá thuê từ 250.000đ/xe/ngày – 500.000đ/xe/ngày.",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-dong-hoi-quang-binh",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Tung Motorbike áp dụng giá xe số từ 120.000đ – 150.000đ và xe tay ga từ 150.000đ – 200.000đ.",
+      "claim_supported": "Hiện tại cửa hàng đang áp dụng mức giá từ 120.000đ – 150.000đ đối với xe số và 150.000đ – 200.000đ đối với xe tay ga.",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-dong-hoi-quang-binh",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Beach House (Đồng Hới) ghi nhận mức giá 140.000đ – 150.000đ.",
+      "claim_supported": "Beach House | 35 Trương Pháp, Bắc Lý, Đồng Hới, Quảng Bình | 140.000đ – 150.000đ",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-dong-hoi-quang-binh",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "QB Travel (Đồng Hới) ghi nhận mức giá 130.000đ – 480.000đ.",
+      "claim_supported": "QB Travel | 189B Trương Pháp, Bắc Lý, Đồng Hới, Quảng Bình | 130.000đ – 480.000đ",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-dong-hoi-quang-binh",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Phong Nha motorbike rental & tours (thị trấn Sơn Trạch) ghi nhận mức giá 100.000đ.",
+      "claim_supported": "Phong Nha motorbike rental & tours | Phong Nha, thị trấn Sơn Trạch, Quảng Bình | 100.000đ",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-dong-hoi-quang-binh",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn 2trip.vn ghi nhận trực tiếp giá xe tay côn tại Đồng Hới (Tung Motorbike, 4 điểm gần ga và Bảo Ninh) — cơ sở hiếm hoi công khai giá côn theo ngày."
+}

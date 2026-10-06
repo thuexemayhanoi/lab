@@ -1,0 +1,67 @@
+{
+  "article_id": "A00220",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Hà Tĩnh",
+  "secondary_keywords": [
+    "gia thue Winner Ha Tinh",
+    "cho thue Honda Winner X Ha Tinh",
+    "thue xe con tay Ha Tinh",
+    "thue xe may Thien Cam"
+  ],
+  "search_intent": "informational — khách cần giá thuê Winner X tại Hà Tĩnh: nhà xe ghi nhận Exciter/Winner X 200.000–300.000 VNĐ/ngày; xe số 80.000–120.000 VNĐ; cọc 500.000–3.000.000 VNĐ.",
+  "geo_id": "VN-A00220",
+  "geo_level": "province",
+  "province": "Hà Tĩnh",
+  "locality": "",
+  "poi": "TP Hà Tĩnh – núi Hồng Lĩnh – biển Thiên Cầm – ngã ba Đồng Lộc – Cảnh Khê – Vũng Áng",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner X ở Hà Tĩnh giá bao nhiêu?",
+    "Có cơ sở nào cho thuê côn tay tại Hà Tĩnh không?",
+    "Thuê xe ở Hà Tĩnh cần đặt cọc bao nhiêu?",
+    "Đi Thiên Cầm, Đồng Lộc nên thuê xe gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Hà Tĩnh — Hồng Lĩnh, biển Thiên Cầm, ngã ba Đồng Lộc: nguồn nhà xe ghi nhận Honda Winner X/Exciter cho thuê 200.000–300.000 VNĐ/ngày, mặt bằng số 80.000–120.000 VNĐ.",
+  "slug": "gia-thue-winner-ha-tinh",
+  "output_path": "thue-xe-may/gia-thue-winner-ha-tinh/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-ha-tinh/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Hà Tĩnh, các dòng xe như Yamaha Exciter hay Honda Winner X có thể có mức giá thuê dao động từ 200.000 VNĐ đến 300.000 VNĐ mỗi ngày, hoặc cao hơn tùy độ mới và dòng xe.",
+      "claim_supported": "Nếu có, các dòng xe như Yamaha Exciter hay Honda Winner X có thể có mức giá thuê xe máy tại Hà Tĩnh dao động từ 200.000 VNĐ đến 300.000 VNĐ mỗi ngày, hoặc cao hơn tùy thuộc vào độ mới và dòng xe cụ thể.",
+      "source_url": "https://xethientri.com/cap-nhat-bang-gia-thue-xe-may-ha-tinh-chi-tiet-nhat/",
+      "source_domain": "xethientri.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Xe số tại Hà Tĩnh (Wave Alpha, Wave RSX, Sirius) có giá thuê dao động từ khoảng 80.000 VNĐ đến 120.000 VNĐ mỗi ngày.",
+      "claim_supported": "Các dòng xe số phổ biến như Honda Wave Alpha, Wave RSX, Yamaha Sirius thường có mức giá thuê xe máy Hà Tĩnh dao động từ khoảng 80.000 VNĐ đến 120.000 VNĐ mỗi ngày.",
+      "source_url": "https://xethientri.com/cap-nhat-bang-gia-thue-xe-may-ha-tinh-chi-tiet-nhat/",
+      "source_domain": "xethientri.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Xe tay ga tại Hà Tĩnh có giá thuê nằm trong khoảng từ 120.000 VNĐ đến 180.000 VNĐ mỗi ngày.",
+      "claim_supported": "Các mẫu xe tay ga thông dụng như Honda Vision, Lead, Air Blade hay Yamaha Nouvo, Janus thường có giá thuê xe máy ở Hà Tĩnh cao hơn một chút so với xe số, nằm trong khoảng từ 120.000 VNĐ đến 180.000 VNĐ mỗi ngày, tùy thuộc vào đời xe và tình trạng xe.",
+      "source_url": "https://xethientri.com/cap-nhat-bang-gia-thue-xe-may-ha-tinh-chi-tiet-nhat/",
+      "source_domain": "xethientri.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Mức tiền đặt cọc khi thuê xe máy tại Hà Tĩnh thường dao động từ 500.000 VNĐ đến 3.000.000 VNĐ tùy loại xe và đời xe.",
+      "claim_supported": "Mức tiền đặt cọc khi thuê xe máy tại Hà Tĩnh thường dao động từ 500.000 VNĐ đến 3.000.000 VNĐ, tùy thuộc vào loại xe (xe số, xe ga, xe côn tay) và đời xe bạn chọn, cũng như chính sách cụ thể của từng cửa hàng.",
+      "source_url": "https://xethientri.com/cap-nhat-bang-gia-thue-xe-may-ha-tinh-chi-tiet-nhat/",
+      "source_domain": "xethientri.com",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn xethientri.com (Nhà Xe Thiện Trí) nêu trực tiếp Honda Winner X tại Hà Tĩnh — ghi nhận hiếm hoi nêu tên Winner theo tỉnh."
+}

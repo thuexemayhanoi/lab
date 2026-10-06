@@ -1,0 +1,81 @@
+{
+  "article_id": "A00217",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Quảng Ninh",
+  "secondary_keywords": [
+    "gia thue Winner Quang Ninh",
+    "cho thue Honda Winner Ha Long",
+    "thue xe con tay Bai Chay",
+    "gia thue xe may Ha Long"
+  ],
+  "search_intent": "informational — khách cần biết mặt bằng thuê Winner/côn tay tại Hạ Long: rất ít cơ sở niêm yết côn tay; xe số từ 70.000đ, xe ga cao cấp 160.000đ–180.000đ; cần đặt trước và hỏi trực tiếp.",
+  "geo_id": "VN-A00217",
+  "geo_level": "province",
+  "province": "Quảng Ninh",
+  "locality": "",
+  "poi": "TP Hạ Long – Bãi Cháy – Vịnh Hạ Long – Sun World – cảng tàu Hạ Long – Cẩm Phả – Móng Cái",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Hạ Long có sẵn không, hay phải đặt trước?",
+    "Mặt bằng giá thuê xe máy Hạ Long bao nhiêu?",
+    "Thuê xe quanh Vịnh Hạ Long cần giấy tờ gì?",
+    "Cao điểm mùa hè có khó thuê xe không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Thành phố du lịch Hạ Long — Vịnh Hạ Long, Bãi Cháy, Sun World Hạ Long: thị trường thuê xe lớn bậc nhất miền Bắc, Winner/côn tay hầu như không niêm yết sẵn mà thuê theo yêu cầu đặt trước, mặt bằng niêm yết là xe số/xe ga.",
+  "slug": "gia-thue-winner-quang-ninh",
+  "output_path": "thue-xe-may/gia-thue-winner-quang-ninh/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-quang-ninh/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Hạ Long, Kim’s Motorbike niêm yết giá thuê xe số 80.000đ – 130.000đ/ngày và xe ga 160.000đ -180.000đ/ngày.",
+      "claim_supported": "Kim’s Motorbike Điện thoại: 0338 023 344 Địa chỉ: ngõ 86 Vườn Đào, P. Bãi Cháy, TP.Hạ Long Giá thuê xe số: 80.000đ – 130.000đ/ngày Giá thuê xe ga: 160.000đ -180.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Sun World Quảng Ninh niêm yết giá thuê xe số 130.000đ/ngày và xe ga 180.000đ/ngày.",
+      "claim_supported": "Sun World Quảng Ninh Điện thoại: 0944 697 555 Địa chỉ: Sun World, Hạ Long, Bãi Cháy, Thành phố Hạ Long Giá thuê xe số: 130.000đ/ngày Giá thuê xe ga: 180.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Kim’s Motorbike giao xe miễn phí trong khu vực Bãi Cháy và cam kết giao xe trong 20 phút, các khu vực còn lại tính phí giao nhận là 30k/xe.",
+      "claim_supported": "Hiện tại, cửa hàng đang áp dụng giao xe miễn phí trong khu vực Bãi Cháy và cam kết giao xe trong 20 phút, các khu vực còn lại sẽ tính phí giao nhận là 30k/xe.",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cơ sở Minh Thành niêm yết giá thuê xe số 80.000đ – 100.000đ/ngày và xe ga 130.000đ – 140.000đ/ngày.",
+      "claim_supported": "Minh Thành Điện thoại: 0986 322 292 Địa chỉ: Dốc hương trầm tổ 5, Khu 2, Hạ Long Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Dịch vụ cho thuê xe máy Hạ Long của Kim’s Motorbike Rental ghi mức thuê chỉ từ 70.000đ/ngày.",
+      "claim_supported": "Thuê xe chỉ từ 70.000đ/ngày",
+      "source_url": "https://dichvuthuexehalong.com/",
+      "source_domain": "dichvuthuexehalong.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một cửa hàng trên đường Hoàng Quốc Việt, Hạ Long ghi nhận giá cho thuê các dòng tay số 80-120k và các dòng xe tay ga 130 – 180k.",
+      "claim_supported": "Giá cho thuê đối với các dòng tay số 80-120k, các dòng xe tay ga 130 – 180k. Tất cả các xe được kiểm tra định kỳ hàng tháng.",
+      "source_url": "https://tripbike.net/thue-xe-may-quang-ninh/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    }
+  ],
+  "notes": "Nguồn motogo.vn (tổng hợp Hạ Long) và dichvuthuexehalong.com (Kim’s Motorbike, Bãi Cháy) đều không niêm yết Honda Winner: côn tay tại Hạ Long chủ yếu theo yêu cầu. Bài viết dẫn mặt bằng niêm yết đã kiểm chứng và hướng dẫn đặt trước."
+}
