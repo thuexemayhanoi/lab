@@ -269,7 +269,17 @@
       "A00243",
       "A00244",
       "A00245",
-      "A00246"
+      "A00246",
+      "A00247",
+      "A00248",
+      "A00249",
+      "A00250",
+      "A00251",
+      "A00252",
+      "A00253",
+      "A00254",
+      "A00255",
+      "A00256"
     ],
     "note": "Audited grounding scope: mọi claim định lượng (VND, %, phút/giờ) trong các bài này phải có claim_evidence khớp trong data/research/<ID>.json (source_url thật, source_domain khớp hostname, date_accessed YYYY-MM-DD). Mỗi batch publish mới được append vào required_ids tại publishCommit. Claim từ MỘT cửa hàng phải viết theo dạng 'nguồn X công khai mức…'; kết luận mặt bằng thị trường cần nguồn tổng hợp nhiều nhà cung cấp."
   },

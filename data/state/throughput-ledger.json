@@ -4222,6 +4222,176 @@
       ],
       "published": 2,
       "phase": "PRODUCTION"
+    },
+    {
+      "op": "research",
+      "started_at": "2026-10-06T17:45:56.743Z",
+      "finished_at": "2026-10-06T17:45:57.161Z",
+      "elapsed_ms": 418,
+      "ids": [
+        "A00247",
+        "A00248"
+      ],
+      "count": 2
+    },
+    {
+      "op": "qa",
+      "started_at": "2026-10-06T17:45:58.060Z",
+      "finished_at": "2026-10-06T17:45:58.491Z",
+      "elapsed_ms": 431,
+      "ids": [
+        "A00247",
+        "A00248"
+      ],
+      "count": 2
+    },
+    {
+      "op": "publish",
+      "started_at": "2026-10-06T17:45:59.435Z",
+      "finished_at": "2026-10-06T17:46:01.568Z",
+      "elapsed_ms": 2133,
+      "ids": [
+        "A00247",
+        "A00248"
+      ],
+      "published": 2,
+      "phase": "PRODUCTION"
+    },
+    {
+      "op": "research",
+      "started_at": "2026-10-06T17:46:02.467Z",
+      "finished_at": "2026-10-06T17:46:03.135Z",
+      "elapsed_ms": 668,
+      "ids": [
+        "A00249",
+        "A00250"
+      ],
+      "count": 2
+    },
+    {
+      "op": "qa",
+      "started_at": "2026-10-06T17:46:04.037Z",
+      "finished_at": "2026-10-06T17:46:04.712Z",
+      "elapsed_ms": 675,
+      "ids": [
+        "A00249",
+        "A00250"
+      ],
+      "count": 2
+    },
+    {
+      "op": "publish",
+      "started_at": "2026-10-06T17:46:05.677Z",
+      "finished_at": "2026-10-06T17:46:07.827Z",
+      "elapsed_ms": 2150,
+      "ids": [
+        "A00249",
+        "A00250"
+      ],
+      "published": 2,
+      "phase": "PRODUCTION"
+    },
+    {
+      "op": "research",
+      "started_at": "2026-10-06T17:46:08.663Z",
+      "finished_at": "2026-10-06T17:46:09.336Z",
+      "elapsed_ms": 673,
+      "ids": [
+        "A00251",
+        "A00252"
+      ],
+      "count": 2
+    },
+    {
+      "op": "qa",
+      "started_at": "2026-10-06T17:46:10.520Z",
+      "finished_at": "2026-10-06T17:46:12.183Z",
+      "elapsed_ms": 1663,
+      "ids": [
+        "A00251",
+        "A00252"
+      ],
+      "count": 2
+    },
+    {
+      "op": "publish",
+      "started_at": "2026-10-06T17:46:13.473Z",
+      "finished_at": "2026-10-06T17:46:15.758Z",
+      "elapsed_ms": 2285,
+      "ids": [
+        "A00251",
+        "A00252"
+      ],
+      "published": 2,
+      "phase": "PRODUCTION"
+    },
+    {
+      "op": "research",
+      "started_at": "2026-10-06T17:46:16.712Z",
+      "finished_at": "2026-10-06T17:46:17.202Z",
+      "elapsed_ms": 490,
+      "ids": [
+        "A00253",
+        "A00254"
+      ],
+      "count": 2
+    },
+    {
+      "op": "qa",
+      "started_at": "2026-10-06T17:46:18.111Z",
+      "finished_at": "2026-10-06T17:46:18.540Z",
+      "elapsed_ms": 429,
+      "ids": [
+        "A00253",
+        "A00254"
+      ],
+      "count": 2
+    },
+    {
+      "op": "publish",
+      "started_at": "2026-10-06T17:46:19.515Z",
+      "finished_at": "2026-10-06T17:46:21.595Z",
+      "elapsed_ms": 2080,
+      "ids": [
+        "A00253",
+        "A00254"
+      ],
+      "published": 2,
+      "phase": "PRODUCTION"
+    },
+    {
+      "op": "research",
+      "started_at": "2026-10-06T17:46:22.536Z",
+      "finished_at": "2026-10-06T17:46:22.950Z",
+      "elapsed_ms": 414,
+      "ids": [
+        "A00255",
+        "A00256"
+      ],
+      "count": 2
+    },
+    {
+      "op": "qa",
+      "started_at": "2026-10-06T17:46:23.914Z",
+      "finished_at": "2026-10-06T17:46:24.329Z",
+      "elapsed_ms": 415,
+      "ids": [
+        "A00255",
+        "A00256"
+      ],
+      "count": 2
+    },
+    {
+      "op": "publish",
+      "started_at": "2026-10-06T17:46:25.316Z",
+      "finished_at": "2026-10-06T17:46:27.469Z",
+      "elapsed_ms": 2153,
+      "ids": [
+        "A00255",
+        "A00256"
+      ],
+      "published": 2,
+      "phase": "PRODUCTION"
     }
   ]
 }
