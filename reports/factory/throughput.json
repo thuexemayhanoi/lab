@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-05T20:56:53.542Z",
+  "generated_at": "2026-10-06T10:59:08.242Z",
   "note": "Real measured events only (data/state/throughput-ledger.json). No backfill; historical publishes before the ledger are not counted.",
-  "events_total": 258,
+  "events_total": 268,
   "chunks_completed": 82,
-  "qa_checked": 197,
+  "qa_checked": 207,
   "published": 173,
   "repair_count": 0,
   "publish_operations": 82,

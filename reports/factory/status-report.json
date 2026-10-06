@@ -1,14 +1,16 @@
 {
-  "generated_at": "2026-10-05T20:56:53.533Z",
+  "generated_at": "2026-10-06T10:59:08.239Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 183,
-    "PLANNED": 9817
+    "PUBLISHED": 185,
+    "PASS": 8,
+    "PLANNED": 9807
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 177,
-      "PLANNED": 4823
+      "PUBLISHED": 179,
+      "PASS": 8,
+      "PLANNED": 4813
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -36,9 +38,18 @@
     }
   },
   "phase": "PRODUCTION",
-  "active_chunk": [],
+  "active_chunk": [
+    "A00177",
+    "A00178",
+    "A00179",
+    "A00180",
+    "A00181",
+    "A00182",
+    "A00183",
+    "A00184"
+  ],
   "last_completed_id": "A00176",
-  "next_claimable_id": "A00177",
+  "next_claimable_id": "A00187",
   "blocked": [],
   "published": [
     {
@@ -1096,6 +1107,18 @@
       "pk": "giá thuê Wave Tuyên Quang",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-tuyen-quang/"
+    },
+    {
+      "id": "A00185",
+      "pk": "giá thuê Wave Nghệ An",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-nghe-an/"
+    },
+    {
+      "id": "A00186",
+      "pk": "giá thuê Wave Hà Tĩnh",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-ha-tinh/"
     },
     {
       "id": "A00465",
