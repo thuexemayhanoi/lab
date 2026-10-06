@@ -1,0 +1,66 @@
+{
+  "article_id": "A00210",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Tuyên Quang",
+  "secondary_keywords": [
+    "gia thue Winner Tuyen Quang",
+    "cho thue Honda Winner Tuyen Quang",
+    "thue xe con tay Tuyen Quang",
+    "thue xe may Na Hang"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Winner/xe côn tại Tuyên Quang: côn tay, cào cào từ 250k ngày trở lên, Lô Giang có Winner 150cc, xe số từ 100k/ngày.",
+  "geo_id": "VN-A00210",
+  "geo_level": "province",
+  "province": "Tuyên Quang",
+  "locality": "",
+  "poi": "TP Tuyên Quang – hồ Na Hang – Lâm Bình – thác Bản Ba",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Tuyên Quang giá bao nhiêu?",
+    "Ở đâu có Winner?",
+    "Giá xe số, xe ga thế nào?",
+    "Có xe 50cc không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Đất hai hào hùng với lũy tre, chùa Tuyên Quang làm trung chuyển trước khi lên Hà Giang",
+  "slug": "gia-thue-winner-tuyen-quang",
+  "output_path": "thue-xe-may/gia-thue-winner-tuyen-quang/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-tuyen-quang/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Tuyên Quang, xe tay số có giá từ 100k/ngày, xe tay ga 150k đến 200k, xe côn tay và cào cào giá thuê từ 250k ngày trở lên.",
+      "claim_supported": "Với các xe tay số từ 100k/ngày các dòng xe tay ga 150k đến 200k và xe tay côn, cào cào giá thuê từ 250k ngày trở lên.",
+      "source_url": "https://atdanang.com/thue-xe-may-tuyen-quang/",
+      "source_domain": "atdanang.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Nhà xe Lô Giang tại thành phố Tuyên Quang cung cấp Exciter 150cc, Winner 150cc; các xe có động cơ từ 50cc đến 250cc, đời 2014 – 2018; là địa chỉ duy nhất cho thuê xe 50cc trên địa bàn thành phố.",
+      "claim_supported": "Nhà xe Lô Giang là đơn vị cung cấp nhiều mẫu xe đa dạng nhất thành phố Tuyên Quang. Hiện tại, Lô Giang đang phân phối đa dạng phân khúc xe. Như SYM, Lead, Vision, Airblade, Wave, Sirius, Winner, CRF… Các xe có động cơ từ 50cc – 250cc, đời 2014 – 2018. Cửa hàng này cũng là địa chỉ duy nhất cho thuê xe 50cc trên địa bàn thành phố Tuyên Quang.",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-tuyen-quang",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một nguồn khác ghi nhận tại Tuyên Quang: xe số thường dao động từ 90.000 đến 150.000 đồng mỗi ngày; xe ga từ 120.000 đến 180.000 đồng mỗi ngày, tùy loại xe và thời gian thuê.",
+      "claim_supported": "Mức giá tham khảo cho thuê xe số thường dao động từ 90.000 đến 150.000 đồng mỗi ngày, còn xe ga sẽ nhỉnh hơn, từ 120.000 đến 180.000 đồng mỗi ngày, tùy thuộc vào loại xe và thời gian thuê.",
+      "source_url": "https://xethanhbinhxanh.com/thue-xe-may-tuyen-quang/",
+      "source_domain": "xethanhbinhxanh.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Tại Tuyên Quang, có thể tìm thấy nhiều dòng xe tay côn phổ biến như Exciter 150cc, Winner 150cc.",
+      "claim_supported": "Nhắc đến dịch vụ thuê xe máy Tuyên Quang giá rẻ thì Lô Giang là địa điểm mà bạn có thể tìm thấy ở đây rất nhiều dòng xe. Từ các dòng xe tay côn phổ biến như Exciter 150cc, Winner 150cc.",
+      "source_url": "https://giahuy.org/thue-xe-may-tuyen-quang/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

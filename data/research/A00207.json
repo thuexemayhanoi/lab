@@ -1,0 +1,59 @@
+{
+  "article_id": "A00207",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Sơn La",
+  "secondary_keywords": [
+    "gia thue Winner Son La",
+    "cho thue Honda Winner Son La",
+    "thue xe con tay Moc Chau",
+    "thue xe may Ta Xua"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Winner/xe côn tại Sơn La: côn 200.000đ/ngày, chiết khấu 10 – 15% thuê dài/nhóm, mặt bằng khác tới 300.000 VNĐ/ngày.",
+  "geo_id": "VN-A00207",
+  "geo_level": "province",
+  "province": "Sơn La",
+  "locality": "",
+  "poi": "TP Sơn La – Mộc Châu – đèo Tà Xùa – Bắc Yên",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Sơn La giá bao nhiêu?",
+    "Thuê nhóm có giảm giá không?",
+    "Ở đâu có nhiều xe côn?",
+    "Lên Tà Xùa nên thuê xe gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Thủ phủ Tây Bắc với Mộc Châu – Tà Xùa: nơi côn tay lên tiếng trên mọi cung đèo",
+  "slug": "gia-thue-winner-son-la",
+  "output_path": "thue-xe-may/gia-thue-winner-son-la/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-son-la/",
+  "claim_evidence": [
+    {
+      "claim": "Thành Mỹ tại TP Sơn La có 75% số xe là Exciter và Winner 150cc; giá cho thuê là 100.000đ/ngày/xe số, 150.000đ/ngày/xe ga và 200.000đ/ngày/xe côn (áp dụng thuê dưới 05 ngày); cửa hàng chiết khấu 10% cho khách thuê dài ngày hoặc thuê theo nhóm đông.",
+      "claim_supported": "75% số lượng xe máy Thành Mỹ là Exciter và Winner 150cc. Còn lại là các xe tay số, xe ga như Lead, Airblade, Future, Taurus, Sirius. Giá thuê là 100.000đ/ngày/xe số, 150.000đ/ngày/xe ga và 200.000đ/ngày/xe côn (áp dụng thuê dưới 05 ngày). Cửa hàng chiết khấu 10% cho khách thuê dài ngày hoặc thuê theo nhóm đông.",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-son-la",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Tại Mộc Châu, cơ sở Phan Hoàng ghi nhận 100k ngày cho các dòng tay số, 150k ngày cho các dòng tay ga và tay côn 200k; khách sạn Lam Sơn sở hữu kho xe lớn với nhóm xe côn tay, cào cào như Exciter, Winner.",
+      "claim_supported": "Phan Hoàng là nơi cung cấp các mức giá cho thuê rất rẻ: giá 100k ngày cho các dòng tay số, 150k ngày cho các dòng tay ga và tay côn 200k. Khách sạn Lam Sơn sở hữu kho xe rộng lớn với hơn 50 đầu xe, trong đó có xe côn tay, cào cào như Exciter, Winner.",
+      "source_url": "https://giahuy.org/thue-xe-may-son-la/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Mặt bằng khác ghi nhận tại Sơn La: các dòng xe côn tay như Winner, Exciter có mức giá có thể lên tới 300.000 VNĐ/ngày; các địa điểm tại Mộc Châu đôi khi giá nhỉnh hơn khoảng 10-20%; cung lên Tà Xùa khá dốc nên chọn Winner, Exciter.",
+      "claim_supported": "Các dòng xe côn tay như Winner, Exciter... sẽ là lựa chọn tối ưu với mức giá có thể lên tới 300.000 VNĐ/ngày. Các địa điểm tại Mộc Châu đôi khi có giá nhỉnh hơn một chút do vị trí du lịch đắt đỏ hơn, nhưng sự chênh lệch không quá lớn, khoảng 10-20% cho các dòng xe phổ thông. Cung đường lên Tà Xùa khá dốc và thử thách, bạn nên chọn những dòng xe số côn tay mạnh mẽ hơn (như Winner, Exciter).",
+      "source_url": "https://xemayanthanhphat.com/thue-xe-may-son-la.html",
+      "source_domain": "xemayanthanhphat.com",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

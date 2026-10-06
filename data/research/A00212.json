@@ -1,0 +1,52 @@
+{
+  "article_id": "A00212",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Thái Nguyên",
+  "secondary_keywords": [
+    "gia thue Winner Thai Nguyen",
+    "cho thue Honda Winner Thai Nguyen",
+    "thue xe con tay Thai Nguyen",
+    "thue xe may Nui Coc"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Winner/xe côn tại Thái Nguyên: côn tay 200.000- 300.000 ngày, Bắc Nga 80k đến 150k/ngày, xe số 100.000 – 150.000đ ngày.",
+  "geo_id": "VN-A00212",
+  "geo_level": "province",
+  "province": "Thái Nguyên",
+  "locality": "",
+  "poi": "TP Thái Nguyên – hồ Núi Cốc – Tân Cương – ATK Định Hóa",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Thái Nguyên giá bao nhiêu?",
+    "Thủ tục cần gì?",
+    "Có giao tận nơi không?",
+    "Giá xe số thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Đất thép là cửa ngõ quốc lộ 3 — cung nối Hà Nội với hồ Ba Bể, Cao Bằng",
+  "slug": "gia-thue-winner-thai-nguyen",
+  "output_path": "thue-xe-may/gia-thue-winner-thai-nguyen/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-thai-nguyen/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Thái Nguyên, các loại xe cao cấp côn tay thường có giá khoảng 200.000- 300.000 ngày; xe tay số trung bình từ 100.000 – 150.000đ ngày; các mẫu xe cho thuê như Airblade, Lead, Vision, Wave, Sirius, Exciter có giá cho thuê 100 – 250k.",
+      "claim_supported": "Đối với các loại xe cao cấp côn tay thường có giá khoảng 200.000- 300.000 ngày. Tay số bình thường có giá trung bình từ 100.000 – 150.000đ ngày. Những mẫu xe cho thuê Airblade, Lead, Vision..Wave, Sirius, Exciter..giá cho thuê 100 – 250k. Tất cả các xe đều có hạn sử dụng trong vòng ba năm kể từ ngày sản xuất.",
+      "source_url": "https://tripbike.net/thue-xe-may-thai-nguyen/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cơ sở Bắc Nga tại Thái Nguyên cho thuê đa dạng các loại xe từ tay ga đến tay côn với giá thuê từ 80k đến 150k/ngày; thủ tục chỉ cần mang theo CMND hoặc CCCD; đơn vị cam kết giao nhận xe tận nơi miễn phí và hỗ trợ sửa chữa trên đường đi; các dòng xe đều được nhập khẩu chính hãng.",
+      "claim_supported": "Thuê xe tại Bắc Nga rất đơn giản và nhanh chóng. Bạn chỉ cần mang theo CMND hoặc CCCD là có thể đặt xe được... Ngoài ra, đơn vị còn có đa dạng các loại xe. Từ tay ga đến tay côn với giá thuê từ 80k đến 150k/ngày. Đơn vị cũng cam kết giao nhận xe tận nơi miễn phí và hỗ trợ sửa chữa trên đường đi... các dòng xe đều được nhập khẩu chính hãng.",
+      "source_url": "https://giahuy.org/thue-xe-may-thai-nguyen/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "article_id": "A00211",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Lào Cai",
+  "secondary_keywords": [
+    "gia thue Winner Lao Cai",
+    "cho thue Honda Winner Lao Cai",
+    "thue xe con tay Sapa",
+    "thue xe may O Quy Ho Sapa"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Winner/xe côn tại Lào Cai: côn tay Exciter, Winner khoảng 220.000 VNĐ/ngày, có dịch vụ giao tận nơi, phù hợp đèo Ô Quy Hồ và Y Tý.",
+  "geo_id": "VN-A00211",
+  "geo_level": "province",
+  "province": "Lào Cai",
+  "locality": "",
+  "poi": "TP Lào Cai – Sapa – đèo Ô Quy Hồ – Y Tý – Dền Sáng",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Lào Cai giá bao nhiêu?",
+    "Nhận xe ở đâu tiện?",
+    "Có giao tận nơi không?",
+    "Đi Y Tý nên thuê xe gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Cổng ngõ Sapa — đèo Ô Quy Hồ và cung săn mây Y Tý, Dền Sáng",
+  "slug": "gia-thue-winner-lao-cai",
+  "output_path": "thue-xe-may/gia-thue-winner-lao-cai/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-lao-cai/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Lào Cai, các dòng xe côn tay hoặc xe số mạnh mẽ hơn như Exciter, Winner có giá khoảng 220.000 VNĐ/ngày, đảm bảo khả năng vận hành tốt hơn trên địa hình dốc.",
+      "claim_supported": "Ngược lại, khi nhắm đến các dòng xe côn tay hoặc xe số mạnh mẽ hơn (như Exciter, Winner) với giá khoảng 220.000 VNĐ/ngày sẽ đảm bảo khả năng vận hành tốt hơn.",
+      "source_url": "https://xemayanthanhphat.com/thue-xe-may-lao-cai.html",
+      "source_domain": "xemayanthanhphat.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một cửa hàng lâu năm nhất ở khu vực Lào Cai sở hữu dàn xe chất lượng từ tay số Wave, Sirius cho đến côn tay Exciter, cào cào — mẫu nào cũng có.",
+      "claim_supported": "Nhìn chung đây là một cửa hàng lâu năm nhất ở khu vực Lào Cai. Sở hữu dàn xe chất lượng, từ tay số Wave, Sirius hay côn tay Exciter, cào cào… ở 366 Rent Motorbike mẫu nào cũng có.",
+      "source_url": "https://tripbike.net/thue-xe-may-lao-cai/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Có dịch vụ cho thuê xe ga, xe số, xe côn uy tín tại Lào Cai với giao xe tận nơi và giá minh bạch.",
+      "claim_supported": "Dịch vụ cho thuê xe ga, xe số, xe côn uy tín tại Lào Cai. Xe số, xe ga, xe côn — giao xe tận nơi, giá minh bạch.",
+      "source_url": "https://laocaimotorbike.com/",
+      "source_domain": "laocaimotorbike.com",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "article_id": "A00216",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Ninh Bình",
+  "secondary_keywords": [
+    "gia thue Winner Ninh Binh",
+    "cho thue Honda Winner Ninh Binh",
+    "thue xe con tay Trang An",
+    "thue xe may Tam Coc"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Winner/xe côn tại Ninh Bình: côn tay 200.000đ, xe số 80.000đ, xe ga 120.000đ, du khách không cần cọc.",
+  "geo_id": "VN-A00216",
+  "geo_level": "province",
+  "province": "Ninh Bình",
+  "locality": "",
+  "poi": "TP Ninh Bình – Tràng An – Tam Cốc – Bái Đính – Cúc Phương",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Ninh Bình giá bao nhiêu?",
+    "Có cần đặt cọc không?",
+    "Có phân khối lớn không?",
+    "Mùa cao điểm có khó thuê không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Đô địa danh Tràng An thế giới, chùa Bái Đính và Cúc Phương — vùng du lịch bậc nhất miền Bắc",
+  "slug": "gia-thue-winner-ninh-binh",
+  "output_path": "thue-xe-may/gia-thue-winner-ninh-binh/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-ninh-binh/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Ninh Bình, Hoàng Nam ghi nhận mức giá 80.000đ/xe số, 120.000đ/xe ga và 200.000đ/côn tay; mỗi khách hàng được nhận 01 mũ bảo hiểm và 01 áo mưa giấy.",
+      "claim_supported": "Mức giá cụ thể khi thuê xe Hoàng Nam là 80.000đ/xe số, 120.000đ/xe ga và 200.000đ/côn tay. Mỗi khách hàng được nhận 01 mũ bào hiểm và 01 áo mưa giấy.",
+      "source_url": "https://2trip.vn/toplist/thue-xe-may-ninh-binh",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Tại Lys Tam Coc Rental Scooters, khách du lịch đến Ninh Bình cần để lại giấy tờ tùy thân, không yêu cầu cọc xe; với khách bản địa sinh sống tại Ninh Bình, cửa hàng nhận cọc từ 1.000.000đ – 1.500.000đ và hoàn trả lại cọc cùng giấy tờ sau khi trả xe.",
+      "claim_supported": "Thủ tục thuê xe tại Lys Tam Coc Rental Scooters khá đơn giản. Đối với khách du lịch đến Ninh Bình cần để lại giấy tờ tùy thân, không yêu cầu cọc xe. Với khách bản địa sinh sống tại Ninh Bình, Lys Tam Coc Rental Scooters có nhận cọc từ 1.000.000đ – 1.500.000đ. Sau khi hoàn trả và bàn giao lại xe, cửa hàng hoàn trả lại cọc và giấy tờ cho du khách.",
+      "source_url": "https://motogo.vn/thue-xe-may-ninh-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá thuê xe máy ở Ninh Bình có nguồn ghi nhận dao động từ 50.000 đến 100.000 đồng trên ngày.",
+      "claim_supported": "Giá thuê xe máy chỉ dao động từ 50.000 đến 100.000 đồng trên ngày.",
+      "source_url": "https://vissaihotel.vn/vi/blog/thue-xe-may-ninh-binh.html",
+      "source_domain": "vissaihotel.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Anh Hoàng tại Tam Cốc sở hữu đa dạng các dòng xe: xe số, xe ga, xe tay côn; đặc biệt có cả dòng phân khối lớn như Honda XR150, Honda CRF 250 và pkl CRF150, phục vụ lý tưởng cho những chuyến phượt.",
+      "claim_supported": "Anh Hoàng là địa điểm cung cấp dịch vụ cho thuê xe máy hiếm hoi tại Tam Cốc. Hiện, cơ sở này đang sở hữu khá đa dạng các dòng xe: xe số, xe ga, xe tay côn. Đặc biệt có cả dòng phân khối lớn như Honda XR150, Honda CRF 250 và pkl CRF150, phục vụ lý tưởng cho những chuyến phượt.",
+      "source_url": "https://baoninhbinh.org.vn/10-dia-diem-cho-thue-xe-may-ninh-binh-gia-re-giao-tan-noi/d20230216142021508.htm",
+      "source_domain": "baoninhbinh.org.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

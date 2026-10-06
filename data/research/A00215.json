@@ -1,0 +1,59 @@
+{
+  "article_id": "A00215",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Hưng Yên",
+  "secondary_keywords": [
+    "gia thue Winner Hung Yen",
+    "cho thue Honda Winner Hung Yen",
+    "thue xe con tay Hung Yen",
+    "thue xe may pho co Ban"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Winner/xe côn tại Hưng Yên: cơ sở ghi nhận 80k đến 180k theo dòng, Gia Hưng có côn/cào cào/PKL, Nhất Long xe số 80.000 – 100.000đ/ngày.",
+  "geo_id": "VN-A00215",
+  "geo_level": "province",
+  "province": "Hưng Yên",
+  "locality": "",
+  "poi": "TP Hưng Yên – phố cổ Bần – chùa Chuổng – Khoái Châu – Văn Lâm",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Hưng Yên giá bao nhiêu?",
+    "Ở đâu có xe côn?",
+    "Nhất Long giá thế nào?",
+    "Thuê dài có ưu đãi không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Đất nhãn khô longue với phố cổ Bần, chùa Chuổng, đường 5 cũ",
+  "slug": "gia-thue-winner-hung-yen",
+  "output_path": "thue-xe-may/gia-thue-winner-hung-yen/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-hung-yen/",
+  "claim_evidence": [
+    {
+      "claim": "Gia Hưng tại xã Việt Hòa, huyện Khoái Châu, Hưng Yên ghi nhận mức giá: tay số 100 - 120k, tay ga 120 - 180k; đơn vị có hơn 50 mẫu xe, từ tay số đến tay côn hay cào cào, PKL đều có.",
+      "claim_supported": "Gia Hưng là địa chỉ cho thuê xe máy số 1, duy nhất tại Hưng Yên. Dịch vụ chuyên nghiệp, giao nhận xe nhanh chóng. Từ tay số đến tay côn hay Cào Cào, PKL cửa hàng đều có... Hai dòng xe đơn vị cho thuê là tay số và tay ga, số lượng hơn 50 mẫu xe... Với mức giá đơn vị cho thuê: tay số 100 - 120k. tay ga 120 - 180k.",
+      "source_url": "https://giahuyorg.gitbook.io/thue-xe-may-1/thue-xe-may-hung-yen",
+      "source_domain": "giahuyorg.gitbook.io",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một cơ sở trên Quốc lộ 5, Trưng Trắc, Văn Lâm, Hưng Yên ghi nhận giá thuê xe số 90.000 – 120.000 đ/ngày, xe ga 140.000 – 150.000 đ/ngày; Nhất Long (thôn Ông Hảo, Liễu Xá, Yên Mỹ) ghi nhận xe số 80.000 – 100.000đ/ngày, xe ga 130.000 – 140.000đ/ngày.",
+      "claim_supported": "Giá thuê xe số: 90.000 – 120.000 đ/ngày. Giá thuê xe ga: 140.000 – 150.000 đ/ngày. Địa chỉ: Quốc lộ 5, Trưng Trắc, huyện Văn Lâm, tỉnh Hưng Yên... Giá thuê xe số: 80.000 – 100.000đ/ngày. Giá thuê xe ga: 130.000 – 140.000đ/ngày. Địa chỉ: Thôn Ông Hảo, Liễu Xá, Huyện Yên Mỹ, Hưng Yên.",
+      "source_url": "https://thuexemayhaiphong.com/4-dia-diem-thue-xe-may-hung-yen-uy-tin-chat-luong/",
+      "source_domain": "thuexemayhaiphong.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Thanh Hà tại Hưng Yên ghi nhận mức giá cho thuê phải chăng, chỉ cần bỏ ra từ 100.000đ/ngày; khách lưu trú và thuê xe trong thời gian dài có thể nhận được ưu đãi giá rẻ hơn nhiều.",
+      "claim_supported": "Mức giá cho thuê xe tại Thanh Hà cũng rất phải chăng. Chỉ cần bỏ ra từ 100.000đ/ngày bạn đã thuê ngay được một chiếc xe chất lượng, an toàn. Đối với khách lưu trú và thuê xe trong thời gian dài có thể nhận được ưu đãi giá rẻ hơn nhiều.",
+      "source_url": "https://motogo.vn/thue-xe-may-hung-yen/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

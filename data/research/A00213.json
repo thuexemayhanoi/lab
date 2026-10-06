@@ -1,0 +1,59 @@
+{
+  "article_id": "A00213",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Phú Thọ",
+  "secondary_keywords": [
+    "gia thue Winner Phu Tho",
+    "cho thue Honda Winner Phu Tho",
+    "thue xe con tay Viet Tri",
+    "thue xe may Den Hung"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Winner/xe côn tại Phú Thọ: mặt bằng 80 nghìn đến 250 nghìn, Thủy Hùng xe số 100k/ngày xe ga 150k/ngày, cọc 500.000 đồng hoàn 100%.",
+  "geo_id": "VN-A00213",
+  "geo_level": "province",
+  "province": "Phú Thọ",
+  "locality": "",
+  "poi": "Việt Trì – Đền Hùng – hồ Thác Bà – Hà Thạch",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Phú Thọ giá bao nhiêu?",
+    "Thủy Hùng giá thế nào?",
+    "Cọc bao nhiêu?",
+    "Mùa Giỗ Tổ có khó thuê không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Đất Tổ với Đền Hùng, đền mẫu Au Cơ và các cung đường mộc, lành",
+  "slug": "gia-thue-winner-phu-tho",
+  "output_path": "thue-xe-may/gia-thue-winner-phu-tho/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-phu-tho/",
+  "claim_evidence": [
+    {
+      "claim": "Giá thuê xe máy Phú Thọ dao động từ 80 nghìn đến 250 nghìn tùy dòng xe và thời gian thuê; Thủy Hùng ghi nhận xe số 100k/ngày, xe ga 150k/ngày, địa chỉ số 44 Đại Lộ Hùng Vương, phường Thanh Miếu, TP Việt Trì; mở cửa 24/24.",
+      "claim_supported": "Thông tin liên hệ với cho thuê xe máy Thủy Hùng: Giá cho thuê xe: xe số 100k/ngày, xe ga 150k/ngày... Địa chỉ Thủy Hùng: số 44 Đại Lộ Hùng Vương, Phường Thanh Miếu, Tp Việt Trì, Phú Thọ... mở cửa 24/24. Giá thuê xe máy Phú Thọ chỉ dao động từ 80 nghìn đến 250 nghìn.",
+      "source_url": "https://limoutrip.com/thue-xe-may-viet-tri/",
+      "source_domain": "limoutrip.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cửa hàng tại khu Liên Phương, TP Việt Trì ghi nhận mức giá cho thuê rất rẻ chỉ 90k ngày; các mẫu xe cho thuê gồm wave, sirius, Vision, Lead; được giảm giá khi thuê nhiều ngày, nhiều xe.",
+      "claim_supported": "Địa chỉ cửa hàng nằm ở khu vực Liên Phương, TP Việt Trì. Mức giá cửa hàng cho thuê rất rẻ chỉ 90k ngày, bạn có thể kiếm được chiếc xe tốt vi vu Việt Trì Phú Thọ. Các mẫu xe cửa hàng cho thuê wave, sirius, Vision, Lead... Ngoài ra bạn còn được giảm giá khi thuê nhiều ngày, nhiều xe.",
+      "source_url": "https://tripbike.net/thue-xe-may-viet-tri/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Đại An tại Việt Trì ghi nhận mở cửa 24/7, mức giá chỉ từ 100.000đ/ngày; tiền cọc khoảng 500.000 đồng được hoàn trả 100% sau khi trả xe; thủ tục thuê xe chỉ cần bằng lái xe và giấy tờ tùy thân.",
+      "claim_supported": "Cửa hàng Đại An là cái tên nổi tiếng tại Phú Thọ, với... mở cửa 24/7, luôn sẵn sàng phục vụ bạn mọi lúc, ngay cả trong những ngày lễ. Mức giá thuê cực kỳ hợp lý, chỉ từ 100.000đ/ngày... Thủ tục thuê xe tại Đại An rất đơn giản, chỉ cần bằng lái xe và giấy tờ tùy thân. Nếu có đủ giấy tờ, tiền cọc khoảng 500.000 đồng sẽ được hoàn trả 100% sau khi trả xe.",
+      "source_url": "https://chothuexemayotaituyhoaphuyen.com/Tin-tuc/top-5-dia-diem-cho-thue-xe-may-viet-tri-phu-tho-chat-luong-nhat-199.html",
+      "source_domain": "chothuexemayotaituyhoaphuyen.com",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

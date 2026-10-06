@@ -1,0 +1,59 @@
+{
+  "article_id": "A00208",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Lạng Sơn",
+  "secondary_keywords": [
+    "gia thue Winner Lang Son",
+    "cho thue Honda Winner Lang Son",
+    "thue xe con tay Lang Son",
+    "thue xe may deo Bac Son"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Winner/xe côn tại Lạng Sơn: côn tay Exciter 200k ngày, mặt bằng khác 250k tay côn, thủ tục CMND/CCCD + cọc 500k.",
+  "geo_id": "VN-A00208",
+  "geo_level": "province",
+  "province": "Lạng Sơn",
+  "locality": "",
+  "poi": "TP Lạng Sơn – chùa Tam Thanh – đèo Bắc Sơn – cửa khẩu Tân Thanh",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Lạng Sơn giá bao nhiêu?",
+    "Thủ tục cần gì?",
+    "Có giao xe tận nơi không?",
+    "Winner hay Exciter cho đèo Bắc Sơn?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Xứ nối với đèo Bắc Sơn — một trong tứ đại đỉnh đèo — và chợ vùng biên Đồng Đăng",
+  "slug": "gia-thue-winner-lang-son",
+  "output_path": "thue-xe-may/gia-thue-winner-lang-son/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-lang-son/",
+  "claim_evidence": [
+    {
+      "claim": "Cửa hàng anh Trường tại Lạng Sơn cho thuê gần 50 mẫu xe với giá 80-100k ngày cho xe số, 120-150k ngày cho các loại tay ga, và côn tay exciter 200k ngày; địa chỉ 147 Trần Đăng Ninh, phường Tam Thanh.",
+      "claim_supported": "Là chỗ cho thuê xe máy tại Lạng Sơn giá rẻ, gần 50 mẫu xe các loại từ tay số đến tay côn cửa hàng đều có. Đa số những chiếc xe cửa hàng anh Trường là những mẫu xe đời cũ giá thuê 80-100k ngày cho xe số, 120-150k ngày cho các loại tay ga, và côn tay exciter 200k ngày. Địa chỉ: Số 147 Trần Đăng Ninh, phường Tam Thanh, Lạng Sơn.",
+      "source_url": "https://tripbike.net/thue-xe-may-lang-son/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Anh Tuấn tại Lạng Sơn ghi nhận giá 150k cho tay số, 200k cho các dòng tay ga, 250k cho các dòng tay côn; hỗ trợ hư hỏng 24h; chưa áp dụng dịch vụ giao nhận tận nơi; địa chỉ S61 185 Trần Đăng Ninh.",
+      "claim_supported": "Các dòng xe cho thuê có giá từ 150k cho tay số, 200k cho các dòng tay ga 250k cho các dòng tay côn. Được hỗ trợ hư hỏng 24h. Đơn vị không áp dụng dịch vụ giao nhận tận nơi. Địa chỉ: S61 185 Trần Đăng Ninh, P Tam Thanh, TP Lạng Sơn.",
+      "source_url": "https://giahuyorg.gitbook.io/thue-xe-may-1/thue-xe-may-lang-son",
+      "source_domain": "giahuyorg.gitbook.io",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một cơ sở tại 248 Trần Đăng Ninh, TP Lạng Sơn ghi nhận thủ tục thuê xe chỉ cần CMND/CCCD và chi phí cọc 500k; khách được nhận kèm mũ bảo hiểm và áo mưa miễn phí; có dịch vụ giao xe tận nơi kể cả tại ga tàu hay bến xe.",
+      "claim_supported": "Thủ tục thuê xe chỉ cần CMND/CCCD và chi phí cọc 500k. Khi nhận xe, bạn sẽ được nhận kèm mũ bảo hiểm và áo mưa miễn phí. Đơn vị còn có dịch vụ giao xe tận nơi, kể cả tại ga tàu hay bến xe. Địa chỉ: 248 Trần Đăng Ninh, Hoàng Văn Thụ, Thành phố Lạng Sơn.",
+      "source_url": "https://giahuy.org/thue-xe-may-lang-son/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}
