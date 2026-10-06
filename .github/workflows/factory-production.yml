@@ -2,7 +2,7 @@ name: Factory production
 
 # XƯỞNG SẢN XUẤT TURBO QUEUE — mô hình /vanchinh cho /lab.
 # Writer ngoài (Mistral) push WRITE-AHEAD QUEUE vào _drafts/: 2..queue_max
-# (mặc định 20) ID PLANNED LIÊN TIẾP theo thứ tự matrix trong MỘT commit
+# (tối đa 10) ID PLANNED LIÊN TIẾP theo thứ tự matrix trong MỘT commit
 # (wrapped _drafts/<ID>.html + _drafts/<ID>.body.html + data/research/<ID>.json).
 # Workflow tự hoàn tất trong CÙNG một production run:
 #   select (push-selection.js: validate không duplicate/PUBLISHED/BLOCKED,
@@ -28,7 +28,7 @@ name: Factory production
 # conflict.
 #
 # Writer loop: next_claimable_id (checkpoint) → research packet → body →
-# node scripts/factory/wrap-drafts.js → push queue 2..20 ID liên tiếp.
+# node scripts/factory/wrap-drafts.js → push queue 2..10 ID liên tiếp.
 # Repair: sửa _drafts/<ID>.body.html → wrap → push lại (mode=repair,
 # tối đa chunk_size=2 id/push).
 
@@ -41,13 +41,10 @@ on:
     # xanh, không checkout/token) giữ run SUCCESS; publish chỉ chạy khi
     # push-gate xác nhận push có đụng _drafts/** (outputs.drafts).
     branches: [main]
-  schedule:
-    - cron: '*/30 * * * *'   # pipeline coordinator (production entrypoint)
-    - cron: '10 * * * *'     # Agent #6 production watchdog (nhẹ, mỗi giờ)
   workflow_dispatch:
     inputs:
       action:
-        description: 'status | recover | diagnostics | pipeline | selftest | watchdog'
+        description: 'status | recover | diagnostics'
         required: true
         type: string
   # KHÔNG có trigger workflow_run trong workflow này: GitHub TỪ CHỐI
@@ -108,9 +105,9 @@ jobs:
     # (b) dispatch status|recover|diagnostics.
     # always() để không bị needs-skip khi push-gate không chạy (dispatch);
     # push không đụng draft → drafts != 'true' → publish KHÔNG chạy.
-    # Mọi event khác (schedule, dispatch pipeline|selftest|watchdog)
-    # KHÔNG bao giờ rơi vào job này — mỗi event chỉ đến đúng job của nó
-    # (pipeline / agent-watchdog); #4/#5 nằm ở factory-repair.yml.
+    # Production path duy nhất: writer ngoài push _drafts/**.
+    # Dispatch chỉ dành cho status/recover/diagnostics; #4/#5 recovery
+    # vẫn nằm ở factory-repair.yml.
     if: >-
       always() &&
       github.repository == 'thuexemayhanoi/lab' &&
@@ -420,139 +417,3 @@ jobs:
             exit 1
           fi
           echo "FACTORY QUEUE COMPLETE: published=[${PUBLISHED_IDS:-none}] recoverable=[${RECOVERABLE_PAIRS:-none}]"
-
-  pipeline:
-    # AUTONOMOUS PIPELINE (docs/PIPELINE.md): coordinator duy nhất
-    # (scripts/factory/pipeline.js) — refill queue ~300 PLANNED, cấp 12–18
-    # bài/cycle, chia 3 writer song song (workspace riêng, gitignored), QA,
-    # publish MỘT batch atomic cho cả cycle (--cycle-batch, audit #3), xác
-    # nhận Pages deployment trước khi hoàn tất cycle (audit #4), checkpoint/
-    # resume exactly-once. Chỉ chạy trên
-    # schedule + dispatch pipeline|selftest; serialized với job publish qua
-    # CÙNG concurrency group lab-factory-production (một coordinator tại
-    # một thời điểm) + pipeline/lock.json TTL. WRITER_RUNTIME=off (mặc
-    # định) ⇒ IDLE-STOP trước khi claim — KHÔNG bao giờ viết/publish khi
-    # thiếu writer runtime.
-    if: github.repository == 'thuexemayhanoi/lab' && ((github.event_name == 'schedule' && github.event.schedule == '*/30 * * * *') || (github.event_name == 'workflow_dispatch' && (inputs.action == 'pipeline' || inputs.action == 'selftest')))
-    runs-on: ubuntu-latest
-    timeout-minutes: 45
-    permissions:
-      contents: write   # commit + push publication commit của cycle
-      pages: read        # đọc Pages build truth (audit #4)
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: Cấu hình git identity
-        run: |
-          git config user.name "factory-operator-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: 'Pipeline selftest (dispatch action=selftest: chỉ mock + test, KHÔNG publish)'
-        if: github.event_name == 'workflow_dispatch' && inputs.action == 'selftest'
-        run: node scripts/factory/pipeline.js selftest
-
-      - name: 'Pages deployment truth (audit #4: đọc SHA + status của Pages build cuối — cycle chỉ hoàn tất khi deploy đúng SHA)'
-        if: github.event_name == 'schedule' || inputs.action == 'pipeline'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -eu
-          # Pages build cuối của repo (branch Pages deploy từ main). FAIL/thiếu
-          # truth => env RỖNG => pipeline giữ deployment.pending (fail-closed:
-          # KHÔNG finalize mù, KHÔNG build/push lại bài).
-          PAGES_BUILD_COMMIT=""
-          PAGES_BUILD_STATUS=""
-          PAGES_JSON="$(curl -sS --max-time 20 \
-            -H "Authorization: Bearer ${GITHUB_TOKEN}" \
-            -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/builds/latest" || true)"
-          if [ -n "${PAGES_JSON}" ]; then
-            PAGES_BUILD_COMMIT="$(printf '%s' "${PAGES_JSON}" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{const j=JSON.parse(s);process.stdout.write(String(j.commit||""))}catch(e){process.stdout.write("")}})')"
-            PAGES_BUILD_STATUS="$(printf '%s' "${PAGES_JSON}" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{const j=JSON.parse(s);process.stdout.write(String(j.status||""))}catch(e){process.stdout.write("")}})')"
-          fi
-          echo "PAGES_BUILD_COMMIT=${PAGES_BUILD_COMMIT}" >> "$GITHUB_ENV"
-          echo "PAGES_BUILD_STATUS=${PAGES_BUILD_STATUS}" >> "$GITHUB_ENV"
-          echo "Pages deployment truth: commit=${PAGES_BUILD_COMMIT:-<none>} status=${PAGES_BUILD_STATUS:-<none>}"
-
-      - name: 'Pipeline cycle (audit #3+#4: refill → claim 12–18 → 3 writer song song → QA → publish MỘT batch atomic → pending deployment → xác nhận Pages truth trước finalize)'
-        if: github.event_name == 'schedule' || inputs.action == 'pipeline'
-        env:
-          WRITER_RUNTIME: ${{ vars.WRITER_RUNTIME || 'off' }}
-          WRITER_ENDPOINT: ${{ vars.WRITER_ENDPOINT || '' }}
-          WRITER_API_KEY: ${{ secrets.WRITER_API_KEY || '' }}
-          WRITER_TIMEOUT_MS: ${{ vars.WRITER_TIMEOUT_MS || '300000' }}
-        run: node scripts/factory/pipeline.js cycle
-
-      - name: Commit + push cycle (1 commit, KHÔNG force push; fetch+rebase+verify khi truth di chuyển)
-        if: github.event_name == 'schedule' || inputs.action == 'pipeline'
-        run: |
-          set -eu
-          git add -A
-          if git diff --cached --quiet; then
-            echo "pipeline cycle: không có gì để commit"
-            exit 0
-          fi
-          git commit -m "pipeline-cycle: refill + write + qa + publish (deterministic outputs of canonical tooling only)"
-          PIPELINE_PUSH_ATTEMPT=0
-          until git push origin HEAD:refs/heads/main; do
-            PIPELINE_PUSH_ATTEMPT=$((PIPELINE_PUSH_ATTEMPT+1))
-            if [ "$PIPELINE_PUSH_ATTEMPT" -ge 3 ]; then
-              echo "::error::pipeline push FAIL sau $PIPELINE_PUSH_ATTEMPT lần thử — STOP, không force push; cycle sau resume từ checkpoint"
-              exit 1
-            fi
-            echo "repository truth di chuyển — fetch + rebase + verify lại (lần $PIPELINE_PUSH_ATTEMPT), KHÔNG force push"
-            git fetch origin main
-            git rebase origin/main
-            node scripts/factory/operator.js recover
-            node scripts/factory/operator.js verify --scope fast
-            if ! git diff --quiet; then
-              echo "::error::cây commit khác cây đã verified (pipeline rebase) — STOP, không push"
-              exit 1
-            fi
-          done
-
-      - name: Xác nhận trạng thái sạch sau cycle (txn inactive, lock free, pipeline status)
-        if: github.event_name == 'schedule' || inputs.action == 'pipeline'
-        run: |
-          set -eu
-          node -e 'const fs=require("fs");
-          const t=JSON.parse(fs.readFileSync("data/state/transaction.json","utf8"));
-          const l=JSON.parse(fs.readFileSync("data/state/writer-lock.json","utf8"));
-          if(t.active){console.error("txn còn active:",t.id,t.operation);process.exit(1);}
-          if(l.locked){console.error("writer lock còn held:",l.holder);process.exit(1);}
-          console.log("FACTORY CLEAN: txn inactive, lock free");'
-          node scripts/factory/pipeline.js status
-
-  agent-watchdog:
-    # AGENT #6 — production watchdog, MỘT trách nhiệm: nếu KHÔNG có progress
-    # hợp lệ nào (staging/publish/cycle thật) trong 2 giờ liên tục VÀ mọi
-    # thứ đang idle => trigger ĐÚNG MỘT production entrypoint (action=
-    # pipeline — pipeline tự fan-out 3 writer). Passive khi #4/#5 active,
-    # pause chủ ý, idle chờ writer runtime, hoặc production đang chạy.
-    if: github.repository == 'thuexemayhanoi/lab' && ((github.event_name == 'schedule' && github.event.schedule == '10 * * * *') || (github.event_name == 'workflow_dispatch' && inputs.action == 'watchdog'))
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    permissions:
-      contents: read
-      actions: write
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: 'Agent #6 — production watchdog (read-only; chỉ trigger đúng MỘT entrypoint)'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          node scripts/factory/agent-watchdog.js check \
-            --trigger-cmd "gh workflow run factory-production.yml --ref main -f action=pipeline"
