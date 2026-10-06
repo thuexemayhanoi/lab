@@ -105,7 +105,7 @@ command refuses to exceed it. Mass publishing waits for pilot learnings.
 `scripts/factory/operator.js` wraps every canonical publish-flow step behind a
 whitelist command contract. The production loop is PUSH-DRIVEN (the
 /vanchinh + /blog model): the writer commits a TURBO WRITE-AHEAD QUEUE into
-`_drafts/` (2..20 consecutive PLANNED ids — `A#####.html` wrapped +
+`_drafts/` (2..10 consecutive PLANNED ids — `A#####.html` wrapped +
 `A#####.body.html` + `data/research/<ID>.json` each, all in ONE commit) and
 pushes; `.github/workflows/factory-production.yml` does the rest — the old
 command-file channel is retired.
@@ -115,11 +115,11 @@ command-file channel is retired.
   duplicate, no PUBLISHED/BLOCKED row, no skip against matrix order — the
   queue must start at the first PLANNED row and be contiguous), sorts them by
   repository/matrix order and splits them into sequential 2-article PAIRS.
-  PLANNED rows → new claims (the queue, 2..20 ids); RESEARCH/WRITING/QA/
+  PLANNED rows → new claims (the queue, 2..10 ids); RESEARCH/WRITING/QA/
   REVIEW/REPAIR/PASS rows → repair (QA only, no new claims, ≤ `chunk_size`).
   REFUSED (exit 3, nothing executed, nothing mutated): unknown id,
   PUBLISHED/BLOCKED row, mixed new+repair, fewer than `queue_min` (2) or more
-  than `queue_max` (20) ids (`data/state/production-control.json`), a hole
+  than `queue_max` (10) ids (`data/state/production-control.json`), a hole
   inside the queue span, body-only push, missing research packet. No drafts in
   the push → skip (the publish commit deletes drafts — a D-only diff — so the
   loop never re-triggers itself).
