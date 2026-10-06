@@ -1,0 +1,52 @@
+{
+  "article_id": "A00200",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Hải Phòng",
+  "secondary_keywords": [
+    "gia thue Winner Hai Phong",
+    "cho thue Honda Winner Hai Phong",
+    "thue xe con tay Hai Phong",
+    "thue xe may Cat Ba"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Winner/xe côn tại Hải Phòng: mặt bằng 80.000đ – 180.000đ/ngày, côn tay nửa trên mặt bằng, cơ sở Kiến An có Winner.",
+  "geo_id": "VN-A00200",
+  "geo_level": "province",
+  "province": "Hải Phòng",
+  "locality": "",
+  "poi": "Hải Phòng – Đồ Sơn – Cát Bà – Kiến An",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Hải Phòng giá bao nhiêu?",
+    "Ở đâu có xe côn tay?",
+    "Thuê dài có giảm giá không?",
+    "Người mới nên thuê Winner không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Cửa ngõ Đông Bắc: thành phố cảng làm điểm xuất phát cung đường ven biển và trung du",
+  "slug": "gia-thue-winner-hai-phong",
+  "output_path": "thue-xe-may/gia-thue-winner-hai-phong/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-hai-phong/",
+  "claim_evidence": [
+    {
+      "claim": "Mặt bằng thuê xe máy tại Hải Phòng dao động 80.000đ – 180.000đ/ngày tùy dòng xe; xe tay số tầm 100.000đ – 120.000đ/ngày; xe tay ga 130.000đ – 180.000đ/ngày; thuê dài ngày được giảm giá.",
+      "claim_supported": "Giá thuê xe máy ở Hải Phòng dao động 80.000đ – 180.000đ/ngày tùy dòng xe. Xe tay số tầm 100.000đ – 120.000đ/ngày. Xe tay ga 130.000đ – 180.000đ/ngày. Thuê dài ngày được giảm giá.",
+      "source_url": "https://tripbike.net/thue-xe-may-hai-phong/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cửa hàng Anh Thuấn tại Kiến An, Hải Phòng (số 307 Phan Đăng Lưu) có cho thuê dòng xe côn tay Winner, Exciter.",
+      "claim_supported": "Cửa hàng Anh Thuấn — Kiến An, số 307 Phan Đăng Lưu — có sẵn dòng xe côn tay Winner, Exciter phục vụ khách đi phượt.",
+      "source_url": "https://tripbike.net/thue-xe-may-hai-phong/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

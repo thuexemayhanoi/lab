@@ -1,0 +1,52 @@
+{
+  "article_id": "A00205",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Lai Châu",
+  "secondary_keywords": [
+    "gia thue Winner Lai Chau",
+    "cho thue Honda Winner Lai Chau",
+    "thue xe con tay Lai Chau",
+    "thue xe may O Quy Ho"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Winner/xe côn tại Lai Châu: côn tay 200.000đ – 250.000đ/ngày, số/ga 100.000đ – 250.000đ/ngày, cơ sở Anh Kiên giao nhận miễn phí.",
+  "geo_id": "VN-A00205",
+  "geo_level": "province",
+  "province": "Lai Châu",
+  "locality": "",
+  "poi": "TP Lai Châu – đèo Ô Quy Hồ – Sìn Hồ – đèo Khau Phạ",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Lai Châu giá bao nhiêu?",
+    "Ở đâu có xe côn tay?",
+    "Có tặng nón, xăng không?",
+    "Đi Ô Quy Hồ nên thuê xe gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Địa đầu Tây Bắc với đèo Ô Quy Hồ — một trong tứ đại đỉnh đèo của Việt Nam",
+  "slug": "gia-thue-winner-lai-chau",
+  "output_path": "thue-xe-may/gia-thue-winner-lai-chau/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-lai-chau/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Lai Châu, giá thuê xe số, xe ga từ 100.000đ – 250.000đ/ngày; xe côn tay Exciter 200.000đ – 250.000đ/ngày; cơ sở của Anh Kiên (51 Trần Hưng Đạo, TP Lai Châu) tặng nón bảo hiểm, đổ xăng đầy và giao nhận xe miễn phí.",
+      "claim_supported": "Thuê xe máy tại Lai Châu: xe số, xe ga từ 100.000đ – 250.000đ/ngày, xe côn tay Exciter 200.000đ – 250.000đ/ngày. Anh Kiên (51 Trần Hưng Đạo, TP Lai Châu) cho thuê đủ loại xe, tặng nón bảo hiểm, đổ xăng đầy, giao nhận xe miễn phí.",
+      "source_url": "https://giahuy.org/thue-xe-may-lai-chau/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cơ sở của Anh Kiên tại Lai Châu cho thuê đủ loại xe từ xe số, xe côn đến xe cào cào.",
+      "claim_supported": "Anh Kiên cho thuê đủ loại xe: xe số, xe côn, xe cào cào — phục vụ khách đi các cung đèo Lai Châu.",
+      "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

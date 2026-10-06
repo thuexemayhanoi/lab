@@ -1,0 +1,52 @@
+{
+  "article_id": "A00206",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Điện Biên",
+  "secondary_keywords": [
+    "gia thue Winner Dien Bien",
+    "cho thue Honda Winner Dien Bien",
+    "thue xe con tay Dien Bien",
+    "thue xe may Ta Xua"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Winner/xe côn tại Điện Biên: côn tay 200.000đ/ngày, thuê từ 5 ngày giảm 20.000đ – 30.000đ/xe/ngày, số 100.000đ/ngày, ga 120.000đ/ngày.",
+  "geo_id": "VN-A00206",
+  "geo_level": "province",
+  "province": "Điện Biên",
+  "locality": "",
+  "poi": "TP Điện Biên – di tích Mường Thanh – Mường Lay – Tà Xùa",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Điện Biên giá bao nhiêu?",
+    "Thuê dài có giảm không?",
+    "Giá xe số, xe ga thế nào?",
+    "Winner, Exciter chênh nhau bao nhiêu?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Chảo lò tên lửa Mường Thanh và đèo trần Tà Xùa — cung phượt Tây Bắc huyền thoại",
+  "slug": "gia-thue-winner-dien-bien",
+  "output_path": "thue-xe-may/gia-thue-winner-dien-bien/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-dien-bien/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Điện Biên, Vương Khánh ghi nhận: xe số 100.000đ/ngày, xe ga 120.000đ/ngày, xe côn tay (Exciter, Winner, Viva Fi) 200.000đ/ngày; thuê từ 5 ngày được giảm 20.000đ – 30.000đ/xe/ngày.",
+      "claim_supported": "Vương Khánh: giá thuê xe số 100.000đ/ngày, xe ga 120.000đ/ngày, xe côn tay Exciter, Winner, Viva Fi 200.000đ/ngày. Thuê từ 5 ngày được giảm 20.000đ – 30.000đ/xe/ngày.",
+      "source_url": "https://2trip.vn/thue-xe-may-dien-bien/",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cơ sở của Mr Đức tại Điện Biên ghi nhận giá thuê 80.000đ – 200.000đ/ngày; chênh lệch giữa các đời xe 20.000đ – 50.000đ/ngày.",
+      "claim_supported": "Mr Đức: giá thuê xe từ 80.000đ – 200.000đ/ngày tùy dòng xe; chênh lệch giữa các đời xe khoảng 20.000đ – 50.000đ/ngày.",
+      "source_url": "https://2trip.vn/thue-xe-may-dien-bien/",
+      "source_domain": "2trip.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

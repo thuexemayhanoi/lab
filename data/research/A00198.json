@@ -1,0 +1,59 @@
+{
+  "article_id": "A00198",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave Cà Mau",
+  "secondary_keywords": [
+    "thue xe Wave Ca Mau",
+    "cho thue Honda Wave Ca Mau",
+    "thue xe so Ca Mau",
+    "thue xe may U Minh"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại Cà Mau: Wave S/Sirius Fi 120.000 VNĐ tới 200.000 VNĐ/ngày, phổ thông 100.000 VNĐ đến 150.000 VNĐ/ngày, mặt bằng 130.000 – 300.000đ/ngày.",
+  "geo_id": "VN-A00198",
+  "geo_level": "province",
+  "province": "Cà Mau",
+  "locality": "",
+  "poi": "TP Cà Mau – đầm Thị Tường – Rừng U Minh Hạ – Mũi Cà Mau – biển Khai Long",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave ở Cà Mau giá bao nhiêu?",
+    "Thời điểm nào nên đi?",
+    "Có giao xe tận nơi không?",
+    "Đi U Minh Hạ nên thuê xe gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Điểm cuối đường Việt Nam với rừng U Minh Hạ và đầm Thị Tường",
+  "slug": "gia-thue-wave-ca-mau",
+  "output_path": "thue-xe-may/gia-thue-wave-ca-mau/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-ca-mau/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Cà Mau, xe phổ thông như Nouvo, Mio, Attila rơi vào khoảng 100.000 VNĐ đến 150.000 VNĐ/ngày; Future, Jupiter, Wave S, Sirius Fi, Vision, Lead tầm 120.000 VNĐ tới 200.000 VNĐ/ngày; địa chỉ Trọng Nguyễn (đường Lý Thường Kiệt) dao động 80.000 VNĐ tới 140.000 VNĐ/ngày.",
+      "claim_supported": "Nouvo, Mio, Attila rơi vào khoảng 100.000 VNĐ đến 150.000 VNĐ/ngày thì Future, Jupiter, Wave S, Sirius Fi, Vision, Lead sẽ tầm 120.000 VNĐ tới 200.000 VNĐ/ngày. Trọng Nguyễn… cửa hàng chuyên bán kết hợp cho thuê đa dạng dòng xe máy như Wave, Sirius, Vision, Air Blade… mức giá còn rất hấp dẫn, phải chăng dao động trong khoảng 80.000 VNĐ tới 140.000 VNĐ/ngày.",
+      "source_url": "https://mia.vn/cam-nang-du-lich/dia-chi-thue-xe-may-o-ca-mau-dam-bao-gia-tot-dich-vu-chuyen-nghiep-9666",
+      "source_domain": "mia.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một cơ sở cho thuê xe máy Cà Mau (Quý Cọp) có mức giá chỉ từ 100.000đ/ngày và hỗ trợ giao xe 24/7.",
+      "claim_supported": "Chỉ với từ 100.000đ/ngày, bạn đã có thể thuê được những chiếc xe cực chất lượng. Quý Cọp còn hỗ trợ giao xe 24/7… bạn có thể đặt xe bất cứ lúc nào mà không cần căn giờ.",
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Giá thuê xe máy ở Cà Mau dao động từ 130.000 – 300.000đ/ngày tùy loại xe và thời gian thuê; mùa khô từ tháng 12 đến tháng 4 lý tưởng; dịp lễ nên đặt trước ít nhất 1-2 ngày.",
+      "claim_supported": "Nhìn chung, giá thuê xe máy ở Cà Mau sẽ cao hơn so với các điểm du lịch khác, với mức chi phí dao động từ 130.000 – 300.000đ/ngày tùy theo loại xe và thời gian thuê. Mùa khô từ tháng 12 đến tháng 4 là thời gian lý tưởng nhất… Vào các dịp lễ lớn hoặc mùa cao điểm du lịch, nhu cầu thuê xe máy tại Cà Mau thường rất cao. Để tránh tình trạng hết xe hoặc phải thuê với giá cao, bạn nên đặt trước ít nhất 1-2 ngày.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-ca-mau.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

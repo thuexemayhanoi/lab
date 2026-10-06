@@ -1,0 +1,59 @@
+{
+  "article_id": "A00202",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Đà Nẵng",
+  "secondary_keywords": [
+    "gia thue Winner Da Nang",
+    "cho thue Honda Winner Da Nang",
+    "thue xe con tay Da Nang",
+    "thue xe may Hai Van"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Winner/xe côn tại Đà Nẵng: côn tay 80.000đ - 150.000đ/ngày, thuê tháng 3.000.000 đồng đến 4.500.000 đồng/tháng, giao xe tận nơi nội thành.",
+  "geo_id": "VN-A00202",
+  "geo_level": "province",
+  "province": "Đà Nẵng",
+  "locality": "",
+  "poi": "Đà Nẵng – đèo Hải Vân – Hội An – Sơn Trà",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Đà Nẵng giá bao nhiêu?",
+    "Có giao xe tận nơi không?",
+    "Thuê tháng bao nhiêu?",
+    "Được đi Huế, Quảng Nam không?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Thành phố đáng sống là trạm trung chuyển của mọi cung miền Trung: Hải Vân, Bà Nà, Hoàng Sa",
+  "slug": "gia-thue-winner-da-nang",
+  "output_path": "thue-xe-may/gia-thue-winner-da-nang/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-da-nang/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Đà Nẵng, xe tay côn Winner, Exciter có giá 80.000đ - 150.000đ/ngày; khách được lái đi Huế, Quảng Trị, Quảng Nam.",
+      "claim_supported": "Thuê xe tay côn Winner, Exciter 80.000đ - 150.000đ/ngày. Khách hàng được lái xe đi Huế, Quảng Trị, Quảng Nam.",
+      "source_url": "https://thuexemaydanang.vn/",
+      "source_domain": "thuexemaydanang.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Mặt bằng thuê xe máy tại Đà Nẵng dao động 80.000đ – 180.000đ/ngày tùy mẫu xe; thuê tháng xe côn tay từ 3.000.000 đồng đến 4.500.000 đồng/tháng.",
+      "claim_supported": "Giá thuê xe máy tại Đà Nẵng dao động 80.000đ – 180.000đ/ngày tùy mẫu xe. Thuê tháng xe côn tay từ 3.000.000 đồng đến 4.500.000 đồng/tháng.",
+      "source_url": "https://atdanang.vn/thue-xe-may-da-nang/",
+      "source_domain": "atdanang.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Bảo Tín tại Đà Nẵng hỗ trợ giao xe tận nơi miễn phí trong nội thành.",
+      "claim_supported": "Bảo Tín hỗ trợ giao xe tận nơi miễn phí trong khu vực nội thành Đà Nẵng.",
+      "source_url": "https://thuexemaydanang.vn/",
+      "source_domain": "thuexemaydanang.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

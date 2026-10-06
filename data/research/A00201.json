@@ -1,0 +1,59 @@
+{
+  "article_id": "A00201",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Huế",
+  "secondary_keywords": [
+    "gia thue Winner Hue",
+    "cho thue Honda Winner Hue",
+    "thue xe con tay Hue",
+    "thue xe may Hai Van"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Winner/xe côn tại Huế: côn tay 250.000 – 350.000 VNĐ/ngày, xe số 80.000 – 120.000 VNĐ/ngày, có thuê một chiều Huế — Đà Nẵng.",
+  "geo_id": "VN-A00201",
+  "geo_level": "province",
+  "province": "Huế",
+  "locality": "",
+  "poi": "Huế – đèo Hải Vân – A Lưới – vòng cung phá tích",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Huế giá bao nhiêu?",
+    "Có thuê một chiều trả Đà Nẵng không?",
+    "Giá xe số, xe ga thế nào?",
+    "Vì sao côn tay đắt hơn?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Cố đô là trung chuyển của mọi cung miền Trung: Hải Vân, A Lưới, Cù Lập",
+  "slug": "gia-thue-winner-hue",
+  "output_path": "thue-xe-may/gia-thue-winner-hue/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-hue/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Huế, xe côn tay (Exciter, Winner) có giá 250.000 – 350.000 VNĐ/ngày; xe số 80.000 – 120.000 VNĐ/ngày; xe ga 120.000 – 160.000 VNĐ/ngày.",
+      "claim_supported": "Thuê xe côn tay (Exciter, Winner): 250.000 – 350.000 VNĐ/ngày. Thuê xe số: 80.000 – 120.000 VNĐ/ngày. Thuê xe ga: 120.000 – 160.000 VNĐ/ngày.",
+      "source_url": "https://sovaba.travel/thue-xe-may-o-hue/",
+      "source_domain": "sovaba.travel",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một cơ sở cho thuê xe tại Huế (chị Chi) ghi nhận côn tay 250.000đ – 300.000đ/ngày với xe chủ yếu Exciter và Winner.",
+      "claim_supported": "Chị Chi cho hay: dòng côn tay 250.000đ – 300.000đ/ngày, xe chủ yếu là Exciter và Winner.",
+      "source_url": "https://tripbike.net/thue-xe-may-hue/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một cửa hàng tại Huế niêm yết xe số 120.000đ/ngày, xe ga 150.000đ/ngày và hỗ trợ thuê tại Huế trả xe tại Đà Nẵng.",
+      "claim_supported": "Giá thuê xe số 120.000đ/ngày, xe ga 150.000đ/ngày. Cửa hàng hỗ trợ thuê tại Huế, trả xe tại Đà Nẵng cho khách đi một chiều.",
+      "source_url": "https://tripbike.net/thue-xe-may-hue/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "article_id": "A00197",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Wave An Giang",
+  "secondary_keywords": [
+    "thue xe Wave An Giang",
+    "cho thue Honda Wave An Giang",
+    "thue xe so Long Xuyen",
+    "thue xe may Chau Doc"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Wave/xe số tại An Giang: phổ thông 100.000 – 200.000 VNĐ/ngày, mặt bằng 100.000 – 300.000 VNĐ/ngày, cọc 1 triệu.",
+  "geo_id": "VN-A00197",
+  "geo_level": "province",
+  "province": "An Giang",
+  "locality": "",
+  "poi": "Long Xuyên – Châu Đốc – Núi Sam – Núi Cấm – rừng tràm Trà Sư",
+  "brand": "Honda",
+  "model": "Wave",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Wave ở An Giang giá bao nhiêu?",
+    "Tiền đặt cọc bao nhiêu?",
+    "Có giao xe tận nơi không?",
+    "Đi Trà Sư, Núi Cấm nên thuê xe gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Thất Sơn – rừng tràm Trà Sư – Núi Sam: xe số giữa miền Tây sông nước",
+  "slug": "gia-thue-wave-an-giang",
+  "output_path": "thue-xe-may/gia-thue-wave-an-giang/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-wave-an-giang/",
+  "claim_evidence": [
+    {
+      "claim": "Xe phổ thông tại Long Xuyên, An Giang có giá khoảng 100.000 – 200.000 VNĐ/ngày; mặt bằng rộng 100.000 – 300.000 VNĐ/ngày cho các điểm như Núi Sam, Chợ Châu Đốc, Rừng tràm Trà Sư.",
+      "claim_supported": "Việc thuê xe máy tại đây không chỉ giúp bạn tiết kiệm chi phí (chỉ khoảng 100.000 – 200.000 VNĐ/ngày cho các dòng xe phổ thông). Với mức giá chỉ từ 100.000 – 300.000 VNĐ/ngày, bạn có thể tự do di chuyển đến các điểm du lịch nổi tiếng như Núi Sam, Chợ Châu Đốc, Rừng tràm Trà Sư.",
+      "source_url": "https://hondavinamotor.vn/tin-thi-truong/cua-hang-xe-may-long-xuyen.html",
+      "source_domain": "hondavinamotor.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một cửa hàng tại An Giang ghi nhận: giá thuê xe được niêm yết từ 120.000đ – 250.000đ/ngày tùy loại xe; địa chỉ 183 Châu Thị Tế, P. Núi Sam, Châu Đốc; thủ tục để lại bản CMND/Passport photo và đặt cọc 1 triệu hoàn lại đầy đủ khi trả xe.",
+      "claim_supported": "Giá thuê xe được niêm yết từ 120.000đ – 250.000đ/ngày, tùy loại xe. Địa chỉ: 183 Châu Thị Tế, P. Núi Sam, Châu Đốc, An Giang. Thủ tục thuê xe đơn giản, khách hàng có thể để lại bản CMND/Passport photo và đặt cọc 1 triệu, hoàn lại đầy đủ khi trả xe.",
+      "source_url": "http://thuexemayophuyen.com/Tin-tuc/cho-thue-xe-may-long-xuyen-an-giang-gia-re-xe-ngon-82.html",
+      "source_domain": "thuexemayophuyen.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Gửi xe gần cổng chợ Long Xuyên có phí chỉ khoảng 5.000đ/lượt; một số cửa hàng hỗ trợ giao xe tận nơi miễn phí trong nội thành Long Xuyên; thuê xe dài ngày có giá ưu đãi hơn.",
+      "claim_supported": "Bạn có thể đi xe máy đến gửi gần cổng chợ (phí chỉ khoảng 5.000đ/lượt). Một số cửa hàng hỗ trợ giao xe tận nơi miễn phí trong nội thành Long Xuyên. Thuê xe dài ngày sẽ có mức giá ưu đãi hơn.",
+      "source_url": "https://vexere.com/vn/thue-xe/xe-may-tai-long-xuyen.vi",
+      "source_domain": "vexere.com",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

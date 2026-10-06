@@ -1,0 +1,59 @@
+{
+  "article_id": "A00204",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner Cần Thơ",
+  "secondary_keywords": [
+    "gia thue Winner Can Tho",
+    "cho thue Honda Winner Can Tho",
+    "thue xe con tay Can Tho",
+    "thue xe may mien Tay"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Winner/xe côn tại Cần Thơ: tay côn 200.000đ/ngày gồm Winner X, Siêu Tốc từ 100.000đ/ngày, cọc 500K kèm CMND và bằng lái.",
+  "geo_id": "VN-A00204",
+  "geo_level": "province",
+  "province": "Cần Thơ",
+  "locality": "",
+  "poi": "Cần Thơ – Trà Vinh – Sóc Trăng – Bạc Liêu",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner ở Cần Thơ giá bao nhiêu?",
+    "Thủ tục cần gì?",
+    "Có giao tận nơi không?",
+    "Vì sao Exciter, Winner cùng nhóm giá?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Thủ phủ miền Tây là trạm phân tuyến cho các cung nổi tiếng: Trà Vinh, Sóc Trăng, Cà Mau",
+  "slug": "gia-thue-winner-can-tho",
+  "output_path": "thue-xe-may/gia-thue-winner-can-tho/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-can-tho/",
+  "claim_evidence": [
+    {
+      "claim": "Tại Cần Thơ, giá thuê xe tay côn là 200.000đ/ngày, gồm các dòng Exciter 155, Exciter 150, Winner X.",
+      "claim_supported": "Giá thuê xe tay côn là 200.000đ/ngày, bao gồm Exciter 155, Exciter 150, Winner X.",
+      "source_url": "https://phuot3mien.com/thue-xe-may-can-tho/",
+      "source_domain": "phuot3mien.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Cơ sở Siêu Tốc tại Cần Thơ cho thuê xe máy từ 100.000đ/ngày, có cả dòng Winner, giao xe tận nơi đúng hẹn.",
+      "claim_supported": "Siêu Tốc cho thuê xe máy từ 100.000đ/ngày, có cả Winner. Dịch vụ giao xe tận nơi đúng hẹn.",
+      "source_url": "https://thuexemaycantho.com/",
+      "source_domain": "thuexemaycantho.com",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một số cơ sở tại Cần Thơ ghi nhận xe tay côn Exciter khoảng 200k/xe trở lên; thủ tục đặt cọc 500K kèm CMND và Bằng lái.",
+      "claim_supported": "Xe tay côn Exciter khoảng 200k/xe trở lên. Thủ tục thuê xe: đặt cọc 500K, kèm CMND và Bằng lái.",
+      "source_url": "https://cantho65.com/",
+      "source_domain": "cantho65.com",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "article_id": "A00203",
+  "research_date": "2026-10-06",
+  "primary_keyword": "giá thuê Winner TP.HCM",
+  "secondary_keywords": [
+    "gia thue Winner TP HCM",
+    "cho thue Honda Winner TP HCM",
+    "thue xe con tay TP HCM",
+    "thue Winner X"
+  ],
+  "search_intent": "informational — khách cần biết giá thuê Honda Winner/xe côn tại TP.HCM: Winner X 150.000đ – 200.000đ/ngày giảm 10% đơn từ 3 ngày, cọc 6.000.000 vnđ, hỗ trợ 24/7.",
+  "geo_id": "VN-A00203",
+  "geo_level": "province",
+  "province": "TP.HCM",
+  "locality": "",
+  "poi": "TP.HCM – Vũng Tàu – Đà Lạt – Củ Chi",
+  "brand": "Honda",
+  "model": "Winner",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Winner TP.HCM giá bao nhiêu?",
+    "Đơn dài ngày có giảm không?",
+    "Cọc bao nhiêu?",
+    "Xe hỏng giữa đường sao?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Thành phố lớn nhất là nơi côn tay nhiều nhất: đủ đời xe, đủ chính sách hỗ trợ",
+  "slug": "gia-thue-winner-tp-hcm",
+  "output_path": "thue-xe-may/gia-thue-winner-tp-hcm/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-tp-hcm/",
+  "claim_evidence": [
+    {
+      "claim": "MOTOTRIP tại TP.HCM cho thuê Winner X giá 150.000đ – 200.000đ/ngày, giảm 10% cho đơn từ 3 ngày, tặng nón bảo hiểm, áo mưa, 0.5 L xăng và hỗ trợ khách 24/7.",
+      "claim_supported": "Winner X 150.000đ – 200.000đ/ngày. Giảm 10% cho đơn từ 3 ngày. Tặng kèm nón bảo hiểm, áo mưa, 0.5 L xăng. Hỗ trợ khách hàng 24/7 trên suốt hành trình.",
+      "source_url": "https://chothuexemaygiare.vn/xe-may-honda/winner-x/",
+      "source_domain": "chothuexemaygiare.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một dịch vụ tại TP.HCM ghi nhận giá thuê xe côn theo block: ngày đầu 280.000 vnđ, ngày 2: 240.000 vnđ, từ ngày 3 trở đi 200.000 vnđ; tiền đặt cọc 6.000.000 vnđ; thời gian thuê tính theo block: 24 tiếng = 1 ngày.",
+      "claim_supported": "Giá thuê: Ngày đầu: 280.000 vnđ Ngày 2: 240.000 vnđ Ngày 3: trở đi: 200.000 vnđ. Tiền đặt cọc: 6.000.000 vnđ. Thời gian thuê tính theo block: 24 tiếng = 1 ngày, 48 tiếng = 2 ngày.",
+      "source_url": "https://thueleu.vn/thue-xe-con-honda-winner",
+      "source_domain": "thueleu.vn",
+      "date_accessed": "2026-10-06"
+    },
+    {
+      "claim": "Một số dịch vụ tại TP.HCM niêm yết xe tay côn Exciter khoảng 200k/xe.",
+      "claim_supported": "Các dòng xe tay côn như Exciter khoảng 200k/xe.",
+      "source_url": "https://chothuexemaytphcm.vn/",
+      "source_domain": "chothuexemaytphcm.vn",
+      "date_accessed": "2026-10-06"
+    }
+  ]
+}
