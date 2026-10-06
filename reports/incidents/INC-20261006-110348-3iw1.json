@@ -1,0 +1,31 @@
+{
+  "id": "INC-20261006-110348-3iw1",
+  "created_at": "2026-10-06T11:03:48.031Z",
+  "source": {
+    "kind": "workflow_run",
+    "run_id": "37453818829",
+    "run_url": "https://github.com/thuexemayhanoi/lab/actions/runs/37453818829",
+    "job": "Factory production",
+    "reason": "Factory production run fail (conclusion=failure)"
+  },
+  "actions": [
+    {
+      "at": "2026-10-06T11:03:48.033Z",
+      "actor": "agent-4",
+      "action": "acquire-maintenance-lock",
+      "detail": "Đã giữ global maintenance lock — production mutations tạm dừng trong lúc sửa (pipeline cycle => PAUSED)."
+    },
+    {
+      "at": "2026-10-06T11:03:48.035Z",
+      "actor": "agent-4",
+      "action": "inspect",
+      "detail": "txn_active=false writer_lock_held=false coord_lock_held=false state_ok=true stopped_reason=null"
+    }
+  ],
+  "final": {
+    "status": "ESCALATE",
+    "summary": "Không xác định được lớp hỏng an toàn nào từ probes (hoặc không có hỏng infra nào) — giao Agent #5 re-diagnose độc lập. Probes: {\"txn_active\":false,\"writer_lock_held\":false,\"coord_lock_held\":false,\"state_ok\":true}",
+    "at": "2026-10-06T11:03:48.035Z"
+  },
+  "updated_at": "2026-10-06T11:03:48.035Z"
+}
