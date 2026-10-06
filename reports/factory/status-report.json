@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-06T16:21:38.776Z",
+  "generated_at": "2026-10-06T16:47:44.186Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 233,
-    "PLANNED": 9767
+    "PUBLISHED": 243,
+    "PLANNED": 9757
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 227,
-      "PLANNED": 4773
+      "PUBLISHED": 237,
+      "PLANNED": 4763
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00226",
-  "next_claimable_id": "A00227",
+  "last_completed_id": "A00236",
+  "next_claimable_id": "A00237",
   "blocked": [],
   "published": [
     {
@@ -1396,6 +1396,66 @@
       "pk": "giá thuê Winner Lâm Đồng",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-lam-dong/"
+    },
+    {
+      "id": "A00227",
+      "pk": "giá thuê Winner Đồng Nai",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-dong-nai/"
+    },
+    {
+      "id": "A00228",
+      "pk": "giá thuê Winner Tây Ninh",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-tay-ninh/"
+    },
+    {
+      "id": "A00229",
+      "pk": "giá thuê Winner Vĩnh Long",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-vinh-long/"
+    },
+    {
+      "id": "A00230",
+      "pk": "giá thuê Winner Đồng Tháp",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-dong-thap/"
+    },
+    {
+      "id": "A00231",
+      "pk": "giá thuê Winner An Giang",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-an-giang/"
+    },
+    {
+      "id": "A00232",
+      "pk": "giá thuê Winner Cà Mau",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-winner-ca-mau/"
+    },
+    {
+      "id": "A00233",
+      "pk": "thuê Yamaha Sirius Hà Nội",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-yamaha-sirius-ha-noi/"
+    },
+    {
+      "id": "A00234",
+      "pk": "giá thuê Sirius Hải Phòng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-hai-phong/"
+    },
+    {
+      "id": "A00235",
+      "pk": "giá thuê Sirius Huế",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-hue/"
+    },
+    {
+      "id": "A00236",
+      "pk": "giá thuê Sirius Đà Nẵng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-da-nang/"
     },
     {
       "id": "A00465",
