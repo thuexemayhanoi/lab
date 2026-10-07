@@ -1,0 +1,76 @@
+{
+  "article_id": "A00267",
+  "research_date": "2026-10-07",
+  "primary_keyword": "thuê Yamaha Exciter Hà Nội",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần giá thuê Exciter tại Hà Nội: bảng giá côn tay ghi Exciter 300.000 vnđ/ngày (gói 2 ngày 290.000, 3 ngày 250.000); thuê tháng Exciter 150 từ 3.500.000đ đến 4.500.000đ/tháng; Sabo và Lộc Motorbike là hai cơ sở côn tay được ghi đích danh.",
+  "geo_id": "VN-A00267",
+  "geo_level": "province",
+  "province": "Hà Nội",
+  "locality": "Hà Nội",
+  "poi": "Hồ Gươm – Long Biên – Ba Vì – Hòa Bình (phượt cung phía Bắc)",
+  "brand": "Yamaha",
+  "model": "Exciter",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/phượt",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "hanoi_owner_verified",
+  "questions_found": [
+    "Thuê Exciter ở Hà Nội giá bao nhiêu?",
+    "Thuê Exciter ở Hà Nội chỗ nào rẻ?",
+    "Cho thuê Exciter Hà Nội cần đặt cọc không?",
+    "Thuê Exciter Hà Nội theo tháng giá thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Hà Nội — thủ đô có dàn xe côn tay lớn nhất miền Bắc: Exciter nằm thẳng trong bảng giá côn tay (300.000/290.000/250.000 vnđ theo gói ngày) và được Sabo, Lộc Motorbike, Bon Bon liệt kê đích danh cho khách phượt Ba Vì – Hòa Bình – Hà Giang.",
+  "slug": "thue-yamaha-exciter-ha-noi",
+  "output_path": "thue-xe-may/thue-yamaha-exciter-ha-noi/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/thue-yamaha-exciter-ha-noi/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Hà Nội (giahuy) ghi dòng xe côn tay Exciter 300.000 vnd/ngày cho gói 1 ngày, 290.000 vnd cho gói 2 ngày và 250.000 vnd cho gói 3 ngày; Winner 150 cùng ba mốc giá này.",
+      "claim_supported": "Exciter 300.000 vnđ/Ngày 290.000 vnđ/Ngày 250.000 vnđ/Ngày Winer 150 300.000 vnđ/Ngày 290.000 vnđ/Ngày 250.000 vnđ/Ngày",
+      "source_url": "https://giahuy.org/thue-xe-may-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Khi thuê Exciter 150 ở Hà Nội theo ngày, mức giá ghi nhận 300.000 vnd/ngày; thuê theo tháng từ 3.500.000đ đến 4.500.000đ/tháng; mức thuê tháng chung dao động từ 3.000.000đ đến 4.000.000đ/tháng.",
+      "claim_supported": "Giá thuê xe máy theo tháng dao động từ 3.000.000đ đến 4.000.000đ/ 1tháng Khi thuê xe máy exciter 150 ở Hà Nội, mức giá hơi cao, 1 ngày thì 300.000 vnđ/Ngày con thuê tháng thì từ 3.500.000đ đến 4.500.000đ/ 1tháng",
+      "source_url": "https://giahuy.org/thue-xe-may-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Cửa hàng trên trang giahuy Hà Nội chuyên cho thuê các dòng xe côn tay Exciter 150cc, Winner 150cc; Bon Bon Motor có hơn 100 mẫu xe, trong đó có xe exciter 150 đi phượt.",
+      "claim_supported": "Chuyên cho thuê các dòng xe côn tay Exciter 150cc, Winner 150cc. Hơn nữa còn cho thuê nhiều dòng xe phân khối lớn ( pkl ) xe exciter 150 đi phượt đảm bảo cực kỳ khỏe và an toàn. Hơn 100 mẫu xe cho thuê",
+      "source_url": "https://giahuy.org/thue-xe-may-ha-noi/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Sabo (Hà Nội) cung cấp xe côn tay Exciter 135, Exciter 150 cùng Winner; giá cho thuê cửa hàng tầm 100.000-250.000vnd/ngày, ngoài các dòng phổ thông còn cho thuê PKL.",
+      "claim_supported": "Những hãng xe Sabo cung cấp là xe tay số Sirius Wave s rs rsx… xe tay ga janus Lead Vision Airblade, Côn tay có Exciter 135 150 Winner… Giá cho thuê xe cửa hang tầm 100.000- 250.000vnd/ngày Ngoài các dòng xe phổ thông Sabo còn cho thuê PKL",
+      "source_url": "https://tripbike.net/thue-xe-may-ha-noi/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Lộc Motorbike (Hà Nội) nổi bật với các dòng xe côn tay Exciter 135cc, 150cc và Winner — những dòng xe thịnh hành nhất tại cửa hàng, phục vụ khách đam mê phượt.",
+      "claim_supported": "Lộc Motorbike Nỗi bật với những dòng xe côn tay Exciter 135cc, 150cc hay Winner là những dòng xe thịnh hành nhất tại Lộc Motorbike. Với Đam mê đi phượt yêu phượt thích khám phá những cảnh đẹp thiên nhiên",
+      "source_url": "https://tripbike.net/thue-xe-may-ha-noi/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá côn tay Hà Nội (tripbike) ghi Exciter 150 300.000 ngày đầu, 280.000 ngày hai và 250.000 ngày ba; Winner 150 cùng ba mốc; thuê theo tháng xe số 2.100.000đ/tháng, xe ga 3.600.000đ/tháng.",
+      "claim_supported": "Xe Côn tay 1 ngày 2 ngày 3 ngày Exciter 150 300.000 280.000 250.000 Winer 150 300.000 280.000 250.000 Cho Thuê xe máy tại Hà Nội theo tháng : xe tay số : 2.100.000đ/ tháng, xe tay ga : 3.600.000đ/ tháng",
+      "source_url": "https://tripbike.net/thue-xe-may-ha-noi/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Nguồn giahuy.org/thue-xe-may-ha-noi/ (bảng côn tay Exciter 300-290-250k, Exciter 150 thuê tháng 3.500.000đ–4.500.000đ, Bon Bon Motor exciter 150, thuê tháng chung 3.000.000đ–4.000.000đ), tripbike.net/thue-xe-may-ha-noi/ (Sabo Exciter 135/150 100.000-250.000vnd/ngày, Lộc Motorbike Exciter 135cc/150cc, bảng Exciter 150 300.000/280.000/250.000, tháng xe số 2.100.000đ, xe ga 3.600.000đ)."
+}

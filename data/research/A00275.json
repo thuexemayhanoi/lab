@@ -1,0 +1,55 @@
+{
+  "article_id": "A00275",
+  "research_date": "2026-10-07",
+  "primary_keyword": "giá thuê Exciter Sơn La",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần giá thuê Exciter tại Sơn La: bảng giá Mộc Châu ghi Exciter côn tay – Winner 150 ở mức 180.000 vnd – 200.000 vnd; Thành Mỹ (Bắc Yên) chuyên Exciter 150 và Winner hợp cung Tà Xùa; bảng motogo ghi Yamaha Exciter, Honda Winner 300k.",
+  "geo_id": "VN-A00275",
+  "geo_level": "province",
+  "province": "Sơn La",
+  "locality": "",
+  "poi": "Tà Xùa – Mộc Châu – đèo Khau Phạ (gần) – Thung lũng mận",
+  "brand": "Yamaha",
+  "model": "Exciter",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/phượt",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Exciter ở Sơn La giá bao nhiêu?",
+    "Thuê Exciter ở Sơn La chỗ nào rẻ?",
+    "Cho thuê xe Sơn La cần đặt cọc không?",
+    "Giá thuê Exciter Sơn La thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Sơn La — đất của Tà Xùa và Mộc Châu: Exciter côn tay được ghi đích danh trong hai bảng giá (180.000 – 200.000 vnd tại Mộc Châu và 300k theo bảng dòng xe tại Sơn La), còn Bắc Yên có riêng cơ sở chuyên Exciter 150, Winner cho khách săn biển mây.",
+  "slug": "gia-thue-exciter-son-la",
+  "output_path": "thue-xe-may/gia-thue-exciter-son-la/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-son-la/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Mộc Châu (Sơn La) ghi Exciter côn tay – Winner 150 ở mức 180.000 vnd – 200.000 vnd; nhóm xe ga Airblade, Lead, Vision 150.000 vnd – 200.000 vnd; Wave Rs, Wave S, Wave Rsx 120.000 vnd – 150.000 vnd.",
+      "claim_supported": "Wave Rs- Wave S - Wave Rsx 120.000 vnd – 150.000 vnd Airblade - Lead - Vision 150.000 vnd – 200.000 vnd Exciter Côn tay - Winer 150 180.000 vnd – 200.000 vnd",
+      "source_url": "https://giahuy.org/thue-xe-may-son-la/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Thành Mỹ (Bắc Yên, Sơn La) là đơn vị cho thuê xe gắn máy lâu năm, mẫu xe nào cũng có và nhiều nhất là các dòng xe tay côn Exciter 150 và Winner — hai dòng rất thích hợp địa hình đi lại ở Bắc Yên, nhất là đi Tà Xùa; ngoài các mẫu côn tay, xe tay số hay tay ga giá từ 100k – 200k, máy móc ngon lành.",
+      "claim_supported": "Đơn vị là nơi cho thuê xe gắn máy lâu năm, mẫu xe nào cũng có và nhiều hơn là các dòng xe tay côn Exciter 150 và Winner. Bởi 2 dòng xe tay côn này rất thích hợp trong đị hình đi lại ở Bắc Yên nhất là đi Tà Xùa Ngoài các mẫu côn tay xe tay số hay tay ga giá từ 100k – 200k, máy móc ngon lành di chuyển không lo hư hỏng.",
+      "source_url": "https://giahuy.org/thue-xe-may-son-la/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá motogo tại Sơn La ghi Yamaha Exciter và Honda Winner 300k/ngày; xe cào cào 500k; Honda Wave, Suzuki Smart 100k; Honda Wave RSX Fi 125k; Honda Future Fi mới, Honda Vision 130k; nhóm Yamaha Extciter tự động, Honda Aiblade 110cc Fi, Honda Dream 150k.",
+      "claim_supported": "Honda Wave, Suzuki Smart 100k Honda Wave RSX Fi 125k Honda Future Fi mới, Honda Vision 130k Yamaha Extciter tự động, Honda Aiblade 110cc Fi, Honda dream 150k Yamaha exciter, Honda Winner 300k Xe cào cào 500k",
+      "source_url": "https://motogo.vn/thue-xe-may-son-la/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Nguồn giahuy.org/thue-xe-may-son-la/ (bảng Exciter Côn tay – Winer 150 180.000 vnd – 200.000 vnd; Thành Mỹ Bắc Yên chuyên Exciter 150, Winner, các mẫu 100k – 200k), motogo.vn/thue-xe-may-son-la/ (bảng Yamaha exciter, Honda Winner 300k, cào cào 500k, Wave/Smart 100k, RSX Fi 125k, Future/Vision 130k, Extciter tự động/Aiblade/dream 150k)."
+}

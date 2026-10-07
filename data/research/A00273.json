@@ -1,0 +1,62 @@
+{
+  "article_id": "A00273",
+  "research_date": "2026-10-07",
+  "primary_keyword": "giá thuê Exciter Lai Châu",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần giá thuê Exciter tại Lai Châu: bảng giá ghi côn tay Exciter 200.000 – 250.000/ngày; Hoa Sữa cho Exciter 150cc trong khung 100k đến 250k; Ngọc Minh niêm yết xe tay côn Exciter 200-250k; Anh Kiên cho thuê từ 150.000đ/ngày.",
+  "geo_id": "VN-A00273",
+  "geo_level": "province",
+  "province": "Lai Châu",
+  "locality": "",
+  "poi": "Đèo Ô Quy Hồ – Sìn Hồ – núi Tây Côn Lĩnh – Tà Xùa",
+  "brand": "Yamaha",
+  "model": "Exciter",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/phượt",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Exciter ở Lai Châu giá bao nhiêu?",
+    "Thuê Exciter ở Lai Châu chỗ nào rẻ?",
+    "Cho thuê xe Lai Châu cần đặt cọc không?",
+    "Giá thuê Exciter Lai Châu thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Lai Châu — gateway đèo Ô Quy Hồ: Exciter 150cc là dòng côn tay hiếm được liệt kê đích danh tại tỉnh núi, từ Hoa Sữa (khung 100k đến 250k) đến Ngọc Minh (côn Exciter 200-250k giá Net, kèm nón, xăng, giao tận nơi) — hợp hành trình Sìn Hồ, Ô Quy Hồ.",
+  "slug": "gia-thue-exciter-lai-chau",
+  "output_path": "thue-xe-may/gia-thue-exciter-lai-chau/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-lai-chau/",
+  "claim_evidence": [
+    {
+      "claim": "Hoa Sữa (Lai Châu) là địa chỉ cho thuê xe máy giá rẻ với nhiều dòng xe từ Yamaha Sirius, Jupiter, Tarus đến Air Blade 125cc, Lead mới, Vision, Exciter 150cc và Suzuki Raider; mức giá từ 100k đến 250k.",
+      "claim_supported": "Hoa Sữa địa chỉ cho thuê xe máy Lai Châu giá rẻ. Và có nhiều dòng xe cho thuê. Như Yamaha Sirius, Jupiter, Tarus cho đến Air Blade 125cc, Lead mới, Vision hay Exciter 150cc và Suzuki Raider. Với mức giá từ 100k đến 250k",
+      "source_url": "https://giahuy.org/thue-xe-may-lai-chau/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Ngọc Minh (Lai Châu) niêm yết giá Net cho xe số và xe ga từ 100-200k, xe tay côn Exciter 200-250k; đi kèm một bộ nón bảo hiểm, tặng kèm xăng và giao xe tận nơi miễn phí, không để khách bị bất kỳ khoản phí phát sinh nào.",
+      "claim_supported": "Ngọc Minh không để bạn bị bất kỳ khoản phí phát sinh nào. Giá thuê \"Net\" cho xe số và xe ga từ 100-200k, còn xe tay côn exciter thì 200-250k. Đi kèm với đó là một bộ nón bảo hiểm đảm bảo an toàn khi lưu thông trên đường. Bạn còn được tặng kèm xăng và giao xe tận nơi miễn phí.",
+      "source_url": "https://giahuy.org/thue-xe-may-lai-chau/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Anh Kiên (2 Tháng 8, Tân Phong, Thị xã Lai Châu) đầu tư nhiều loại xe từ xe số đến xe tay côn, cào cào; các dòng được ưa chuộng nhất là Wave, Sirius, Vision, Exciter; xe được mua mới, mức giá chỉ từ 150.000đ/ngày.",
+      "claim_supported": "Anh Kiên đầu tư rất nhiều loại xe đa dạng. Tất cả các loại từ xe số đến xe tay côn hay xe cào cào đều đủ cả. Những dòng xe được ưa chuộng nhất tại đây là: Wave, Sirius, Vision, Exciter,… Chỉ từ 150.000đ/ngày, bạn đã thuê ngay được một chiếc xe cực ngon.",
+      "source_url": "https://motogo.vn/thue-xe-may-lai-chau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá tripbike tại Lai Châu ghi côn tay Exciter 200.000 – 250.000 mỗi ngày cùng Winner 150; nhóm tay ga Lead, Vision, Airblade 150.000 – 200.000; Wave Rsx 120.000 – 150.000.",
+      "claim_supported": "Côn tay 1 ngày Exciter 200.000 – 250.000 Winer 150 200.000 – 250.000 tay ga Honda 1 ngày Lead 150.000 – 200.000 Vision 150.000 – 200.000 Airblade 150.000 – 200.000 Wave Rsx 120.000 – 150.000",
+      "source_url": "https://tripbike.net/thue-xe-may-lai-chau/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Nguồn giahuy.org/thue-xe-may-lai-chau/ (Hoa Sữa Exciter 150cc giá 100k-250k; Ngọc Minh côn exciter 200-250k kèm nón, xăng, giao tận nơi), motogo.vn/thue-xe-may-lai-chau/ (Anh Kiên 2 Tháng 8 Tân Phong có Exciter, chỉ từ 150.000đ/ngày), tripbike.net/thue-xe-may-lai-chau/ (bảng côn tay Exciter 200.000 – 250.000, Winer 150 cùng mức)."
+}

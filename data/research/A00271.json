@@ -1,0 +1,76 @@
+{
+  "article_id": "A00271",
+  "research_date": "2026-10-07",
+  "primary_keyword": "giá thuê Exciter TP.HCM",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần giá thuê Exciter tại TP.HCM: bảng giá côn tay ghi Exciter 150 300.000 ngày đầu, 280.000 ngày hai, 250.000 ngày ba; chị My (quận 6) cho thuê từ 100k/ngày đến 150k/ngày gồm cả tay côn Exciter; Minh Hạ có Exciter trong dàn xe.",
+  "geo_id": "VN-A00271",
+  "geo_level": "province",
+  "province": "TP. Hồ Chí Minh",
+  "locality": "TP. Hồ Chí Minh",
+  "poi": "Quận 1 – Thủ Đức – Bình Thạnh – Chợ Lớn",
+  "brand": "Yamaha",
+  "model": "Exciter",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/phượt",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Exciter ở TP.HCM giá bao nhiêu?",
+    "Thuê Exciter ở Sài Gòn chỗ nào rẻ?",
+    "Cho thuê xe TP.HCM cần đặt cọc không?",
+    "Thuê Exciter Sài Gòn theo tháng giá thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "TP.HCM — thị trường côn tay lớn nhất nước: Exciter 150 đứng đầu bảng côn tay với 300.000/280.000/250.000 theo gói ngày, chị My giữ khung 100k – 150k cho cả tay côn Exciter, còn Bình An (Thủ Đức) duy trì dàn Exciter bảo trì định kỳ cho khách ở lại dài ngày.",
+  "slug": "gia-thue-exciter-tp-hcm",
+  "output_path": "thue-xe-may/gia-thue-exciter-tp-hcm/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-tp-hcm/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Sài Gòn (tripbike) ghi dòng xe côn tay Exciter 150 300.000 cho ngày đầu, 280.000 cho ngày hai và 250.000 cho ngày ba; Winner 150 cùng ba mốc giá.",
+      "claim_supported": "Xe Côn tay 1 ngày 2 ngày 3 ngày Exciter 150 300.000 280.000 250.000 Winer 150 300.000 280.000 250.000",
+      "source_url": "https://tripbike.net/thue-xe-may-tphcm/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Chị My (351 An Dương Vương, phường 10, quận 6) cho thuê với mức giá từ 100k/ngày đến 150k/ngày tùy loại xe, từ tay ga đến tay số và tay côn Exciter; xe kiểu dáng đẹp, khỏe, thủ tục đơn giản nhanh.",
+      "claim_supported": "Với mức giá thuê từ 100k/ ngày đến 150k/ ngày tùy thuộc vào những loại xe khác nhau mà bạn chọn. Từ tay ga đến tay số tay côn exciter kiểu dáng đẹp, khỏe và thủ tục cũng đơn giản nhanh giúp khách vui vẻ trong lựa chọn xe Địa chỉ : 351 An Dương Vương, phường 10, quận 6",
+      "source_url": "https://tripbike.net/thue-xe-may-tphcm/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Công ty Thuê Xe Máy Minh Hạ chuyên cho thuê xe máy Sài Gòn các loại mới cũ: Air Blade, Vision, Lead, Nouvo, SH, Attila, Wave, Sirius, Moto, Exciter, 50cc, Winner, SuSport.",
+      "claim_supported": "Công ty Thuê Xe Máy Minh Hạ Chuyên cho thuê xe gắn máy tay ga các loại mới cũ, Air Blade, Vision, Lead, Nouvo, SH, Attila, Wave, Sirius, Moto, Exciter, 50cc, Winner, SuSport …",
+      "source_url": "https://tripbike.net/thue-xe-may-tphcm/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Dịch vụ thuê xe máy tại Sài Gòn được giao xe, nhận xe tận nơi miễn phí tại khách sạn, sân bay, bến xe hoặc nhà ga.",
+      "claim_supported": "Dịch Vụ Thuê Xe Máy tại Sài Gòn Được giao xe nhận xe tận nơi miễn phí tại Khách sạn bạn đang ở, tại Sân Bay, Bến Xe Hoặc tại nhà ga miễn phí",
+      "source_url": "https://tripbike.net/thue-xe-may-tphcm/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bình An (cơ sở cho thuê xe máy tại Thủ Đức, TP.HCM) có dàn xe đa dạng trong đó nổi bật là dòng Exciter; chất lượng xe rất tốt, các bộ phận đèn, gương, bình xăng, lốp được bảo trì kiểm tra định kỳ.",
+      "claim_supported": "Xe máy cho thuê cũng đa dạng với nhiều dòng khác nhau. Trong đó nổi bật là dòng Exciter. Điều đáng chú ý là chất lượng xe máy rất tốt, máy móc và động cơ đều hoạt động tốt. Các bộ phận như đèn chiếu sáng, gương chiếu hậu, bình xăng, lốp,… đều được bảo trì và kiểm tra định kỳ.",
+      "source_url": "https://giahuy.org/thue-xe-may-sai-gon/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Thủ tục thuê xe máy tại TP.HCM (cơ sở trên trang giahuy) không phức tạp và được thực hiện tương đối nhanh, khoảng 10 – 15 phút.",
+      "claim_supported": "Thủ tục thuê xe cũng không phức tạp và được thực hiện tương đối nhanh (khoảng 10 – 15 phút).",
+      "source_url": "https://giahuy.org/thue-xe-may-sai-gon/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Nguồn tripbike.net/thue-xe-may-tphcm/ (bảng côn tay Exciter 150 300.000/280.000/250.000; chị My 351 An Dương Vương Q6 100k-150k gồm tay côn Exciter; Minh Hạ có Exciter, Winner; giao nhận tận nơi miễn phí khách sạn/sân bay/bến xe), giahuy.org/thue-xe-may-sai-gon/ (Bình An Thủ Đức nổi bật dòng Exciter bảo trì định kỳ; thủ tục khoảng 10 – 15 phút)."
+}

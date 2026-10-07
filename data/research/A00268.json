@@ -1,0 +1,62 @@
+{
+  "article_id": "A00268",
+  "research_date": "2026-10-07",
+  "primary_keyword": "giá thuê Exciter Hải Phòng",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần giá thuê Exciter tại Hải Phòng: An An cho thuê nhóm xe côn Exciter, Sirius, Wave… từ 100-150k tùy loại kèm giao tận nơi ga/bến xe; Anh Thuấn có côn tay Winner, Exciter với giá thuê 80.000 đến 100.000.",
+  "geo_id": "VN-A00268",
+  "geo_level": "province",
+  "province": "Hải Phòng",
+  "locality": "Hải Phòng",
+  "poi": "Đồ Sơn – Cát Hải – Kiến An – sân bay Cát Bì",
+  "brand": "Yamaha",
+  "model": "Exciter",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/phượt",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Exciter ở Hải Phòng giá bao nhiêu?",
+    "Thuê Exciter ở Hải Phòng chỗ nào rẻ?",
+    "Cho thuê xe Hải Phòng cần đặt cọc không?",
+    "Thuê Exciter ở Hải Phòng cần giấy tờ gì?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Hải Phòng — thành phố cảng ít cơ sở côn tay nhưng vẫn có điểm chốt: An An giữ nhóm xe côn Exciter ở khung 100-150k kèm giao tận nơi miễn phí tại nhà ga, bến xe; Anh Thuấn chuyên Winner, Exciter theo giá 80.000 đến 100.000 — hợp khách chạy Đồ Sơn, Cát Hải.",
+  "slug": "gia-thue-exciter-hai-phong",
+  "output_path": "thue-xe-may/gia-thue-exciter-hai-phong/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-hai-phong/",
+  "claim_evidence": [
+    {
+      "claim": "An An (Hải Phòng) cho thuê các dòng xe gồm tay côn Exciter, Sirius, Wave, AB, Lead, Janus… với giá thuê từ 100-150k tùy loại; có dịch vụ giao xe tận nơi miễn phí tại nhà ga hay bến xe, hỗ trợ hư hỏng 24/24 trong thành phố; khách thuê dài hạn theo tuần, theo tháng được giá giảm ưu đãi.",
+      "claim_supported": "Đối với các khách hàng thuê dài hạn theo tuần theo thán có giá giảm ưu đãi. Các dòng xe cho thuê như Tay Côn exciter, sirius wave ab lead jannus….gia thuê từ 100-150k tùy loại. Có dịch vụ giao xe tận nơi miễn phí tại nhà ga hay bến xe miễn phí. Ngoài ra dịch vụ hỗ trợ hư hỏng khi xe bị sự cố 24/24 trong thành phố.",
+      "source_url": "https://tripbike.net/thue-xe-may-hai-phong/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Anh Thuấn (Hải Phòng) có đầy đủ các loại xe côn tay Winner, Exciter để khách lựa chọn; giá thuê 80.000 đến 100.000 tùy xe cho dòng phổ thông Honda wave, Sirious, Future, tay ga Nouvo, Atila, Click; miễn phí giao tận nơi, thuê trên 2 ngày được giữ xe qua đêm, bảo hành máy móc.",
+      "claim_supported": "đầy đủ các loại xe Côn tay winner, Exciter để bạn lựa chọn Với dịch vụ tốt giá cả hợp lý Giá thuê 80.000 đến 100.000 tùy xe Honda wave, Sirious, Future… tay ga: Nouvo, Atila, Click,… Miễn phí giao tận nơi - thuê trên 2 ngày được giữ xe qua đêm Bảo hành máy móc -chất lượng xe",
+      "source_url": "https://tripbike.net/thue-xe-may-hai-phong/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Twelve AM (Hải Phòng) cung cấp nhiều dòng xe từ xe số, xe tay ga đến xe côn tay, tất cả ở tình trạng tốt nhất; hỗ trợ giao xe tận khách sạn hoặc ga Hải Phòng mà không thu thêm phí.",
+      "claim_supported": "Hệ thống xe đa dạng và bảo dưỡng định kỳ: Cửa hàng cung cấp nhiều dòng xe từ xe số, xe tay ga đến xe côn tay, tất cả đều ở tình trạng tốt nhất. Giao xe tận nơi: Twelve AM hỗ trợ giao xe tận khách sạn hoặc ga Hải Phòng mà không thu thêm phí.",
+      "source_url": "https://giahuy.org/thue-xe-may-hai-phong/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Dịch vụ cho thuê xe máy Hải Phòng (giahuy) có xe đa dạng từ xe số, xe tay ga đến xe côn tay; hỗ trợ giao xe tận nơi miễn phí trong bán kính 5km và miễn phí 1 lít xăng đầu tiên.",
+      "claim_supported": "Xe đa dạng: Từ xe số, xe tay ga đến xe côn tay, đáp ứng mọi nhu cầu của khách hàng. Hỗ trợ giao xe tận nơi miễn phí trong bán kính 5km. Miễn phí 1 lít xăng đầu tiên, giúp khách hàng dễ",
+      "source_url": "https://giahuy.org/thue-xe-may-hai-phong/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Nguồn tripbike.net/thue-xe-may-hai-phong/ (An An côn Exciter 100-150k giao tận ga/bến xe hỗ trợ 24/24; Anh Thuấn côn tay Winner/Exciter 80.000-100.000 miễn phí giao, trên 2 ngày giữ qua đêm), giahuy.org/thue-xe-may-hai-phong/ (Twelve AM xe côn tay giao tận khách sạn/ga không thu phí; giao tận nơi bán kính 5km, miễn 1 lít xăng)."
+}

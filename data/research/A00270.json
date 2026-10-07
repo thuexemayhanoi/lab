@@ -1,0 +1,69 @@
+{
+  "article_id": "A00270",
+  "research_date": "2026-10-07",
+  "primary_keyword": "giá thuê Exciter Đà Nẵng",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần giá thuê Exciter tại Đà Nẵng: bảng giá ghi Exciter côn tay 170.000/160.000/150.000 theo gói ngày; Bảo An chuyên côn tay Exciter 135-155cc dao động 160.000đ – 180.000đ; Bảo Tín cho Exciter 150cc 80.000đ – 150.000đ.",
+  "geo_id": "VN-A00270",
+  "geo_level": "province",
+  "province": "Đà Nẵng",
+  "locality": "Đà Nẵng",
+  "poi": "Bà Nà – Hải Vân – Hội An – Ngũ Hành Sơn",
+  "brand": "Yamaha",
+  "model": "Exciter",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/phượt",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Exciter ở Đà Nẵng giá bao nhiêu?",
+    "Thuê Exciter ở Đà Nẵng chỗ nào rẻ?",
+    "Cho thuê xe Đà Nẵng cần đặt cọc không?",
+    "Thuê Exciter Đà Nẵng theo tháng giá thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Đà Nẵng — thủ đô côn tay miền Trung: Exciter được ghi thẳng trong bảng giá theo gói ngày (170.000/160.000/150.000) và bảng tháng (3.200.000 – 3.900.000đ); Bảo An với Exciter 135-155cc, Bảo Tín với Exciter 150cc 80.000đ – 150.000đ là hai điểm chốt cho cung Hải Vân.",
+  "slug": "gia-thue-exciter-da-nang",
+  "output_path": "thue-xe-may/gia-thue-exciter-da-nang/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-da-nang/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Đà Nẵng (giahuy) ghi dòng Exciter (côn tay) 170.000/ngày cho gói 1 ngày, 160.000 cho gói 2 ngày, 150.000 cho gói 3 ngày; Winner (côn tay) cùng ba mốc giá này.",
+      "claim_supported": "Exciter (côn tay) 170.000 160.000 150.000 Winner (côn tay) 170.000 160.000 150.000",
+      "source_url": "https://giahuy.org/thue-xe-may-da-nang/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Thuê Exciter hay Winner tại Đà Nẵng theo gói tháng ghi 170.000/ngày cho thuê ngày, 700.000 – 1.000.000 cho gói tuần và 3.200.000 – 3.900.000/tháng; giá thuê theo giờ (không phổ biến) dao động 20.000đ – 40.000đ/giờ.",
+      "claim_supported": "Exciter / Winner 170.000 700.000 – 1.000.000 3.200.000 – 3.900.000 Thuê xe máy Đà Nẵng theo giờ Có – nhưng không phổ biến tại Đà Nẵng. Thông thường: Giá thuê theo giờ dao động: 20.000đ – 40.000đ/giờ",
+      "source_url": "https://giahuy.org/thue-xe-may-da-nang/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảo An – Bảo Long (Đà Nẵng) chuyên cung cấp các dòng xe côn tay như Yamaha Exciter 135-155cc, Suzuki Raider R150, Honda Winner X, Honda MSX 125; chi phí thuê Exciter hay Winner dao động từ 160.000đ – 180.000đ, bảo hành toàn bộ quá trình thuê.",
+      "claim_supported": "Nhắc đến các dòng xe côn tay như Yamaha Exciter 135 -155cc, Suzuki Raider R150, Honda Winner X, Honda MSX 125. Bảo An - Bảo Long là một trong những địa điểm cửa hàng chuyên cung cấp các dòng xe côn tay chất lượng Về chi phí thuê xe máy côn tay Exciter hay Winner dao động từ 160.000đ – 180.000đ. Bảo hành toàn bộ quá trình",
+      "source_url": "https://giahuy.org/thue-xe-may-da-nang/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảo Tín (Đà Nẵng) cho thuê xe côn Exciter 150cc ở mức 80.000đ – 150.000đ; cùng cơ sở có xe số Sirius, Future, Wave 110cc và xe ga Lead, Vision, AirBlade 125cc.",
+      "claim_supported": "Bảo Tín Xe số: Sirius, Future, Wave 110cc Xe ga: Lead, Vision, AirBlade 125cc Xe côn: Exciter 150cc 80.000đ – 150.000đ",
+      "source_url": "https://motogo.vn/thue-xe-may-da-nang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá côn tay Đà Nẵng (tripbike) ghi Exciter 160.000/ngày cùng Winner 150 160.000; bảng xe trực tiếp ghi Bike Exciter 150 ở mức 150,000; cửa hàng Gia Huy (Trần Cao Vân, Thanh Khê, sau lưng ga Đà Nẵng) cho thuê côn tay Winner, Exciter 150cc 150k ngày, xe số chỉ 80k ngày, xe ga 120 – 150k ngày.",
+      "claim_supported": "Côn tay 1 ngày Exciter 160.000 Winer 150 160.000 Bike Exciter 150 ₫150,000 Mức giá cho thuê khá rẻ chỉ 80k ngày cho các dòng xe tay số, xe tay ga từ 120 – 150k ngày, Côn tay Winner, Exciter 150cc 150k ngày",
+      "source_url": "https://tripbike.net/thue-xe-may-da-nang/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Nguồn giahuy.org/thue-xe-may-da-nang/ (bảng Exciter côn tay 170/160/150k, Exciter-Winner tháng 170.000 ngày, 700.000-1.000.000 tuần, 3.200.000-3.900.000 tháng, giờ 20.000đ-40.000đ; Bảo An Exciter 135-155cc 160.000đ-180.000đ), motogo.vn/thue-xe-may-da-nang/ (Bảo Tín Exciter 150cc 80.000đ-150.000đ), tripbike.net/thue-xe-may-da-nang/ (Exciter 160.000, Bike Exciter 150 150,000, Gia Huy côn tay Exciter 150cc 150k ngày)."
+}
