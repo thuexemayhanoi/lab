@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-07T06:57:22.277Z",
+  "generated_at": "2026-10-07T07:21:45.339Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 283,
-    "PLANNED": 9717
+    "PUBLISHED": 293,
+    "PLANNED": 9707
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 277,
-      "PLANNED": 4723
+      "PUBLISHED": 287,
+      "PLANNED": 4713
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00276",
-  "next_claimable_id": "A00277",
+  "last_completed_id": "A00286",
+  "next_claimable_id": "A00287",
   "blocked": [],
   "published": [
     {
@@ -1696,6 +1696,66 @@
       "pk": "giá thuê Exciter Lạng Sơn",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-lang-son/"
+    },
+    {
+      "id": "A00277",
+      "pk": "giá thuê Exciter Cao Bằng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-cao-bang/"
+    },
+    {
+      "id": "A00278",
+      "pk": "giá thuê Exciter Tuyên Quang",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-tuyen-quang/"
+    },
+    {
+      "id": "A00279",
+      "pk": "giá thuê Exciter Lào Cai",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-lao-cai/"
+    },
+    {
+      "id": "A00280",
+      "pk": "giá thuê Exciter Thái Nguyên",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-thai-nguyen/"
+    },
+    {
+      "id": "A00281",
+      "pk": "giá thuê Exciter Phú Thọ",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-phu-tho/"
+    },
+    {
+      "id": "A00282",
+      "pk": "giá thuê Exciter Bắc Ninh",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-bac-ninh/"
+    },
+    {
+      "id": "A00283",
+      "pk": "giá thuê Exciter Hưng Yên",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-hung-yen/"
+    },
+    {
+      "id": "A00284",
+      "pk": "giá thuê Exciter Ninh Bình",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-ninh-binh/"
+    },
+    {
+      "id": "A00285",
+      "pk": "giá thuê Exciter Quảng Ninh",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-quang-ninh/"
+    },
+    {
+      "id": "A00286",
+      "pk": "giá thuê Exciter Thanh Hóa",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-thanh-hoa/"
     },
     {
       "id": "A00465",
