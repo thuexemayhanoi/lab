@@ -1,0 +1,69 @@
+{
+  "article_id": "A00286",
+  "research_date": "2026-10-07",
+  "primary_keyword": "giá thuê Exciter Thanh Hóa",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần giá thuê Exciter tại Thanh Hóa: bảng giahuy ghi Exciter 180.000-250.000; danh sách có tiêu đề ghi giá rẻ chỉ 110k/ngày; khách sạn Hoàng Gia cho thuê từ 150.000đ/ngày; cơ sở Sầm Sơn xe số 200.000đ/ngày, xe ga 300.000đ/ngày.",
+  "geo_id": "VN-A00286",
+  "geo_level": "province",
+  "province": "Thanh Hóa",
+  "locality": "Thanh Hóa",
+  "poi": "Sầm Sơn – Hải Tiến – Bãi Đông Nghi Sơn – Pù Luông – suối cá Thác B",
+  "brand": "Yamaha",
+  "model": "Exciter",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/phượt",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Exciter ở Thanh Hóa giá bao nhiêu?",
+    "Thuê Exciter ở Thanh Hóa chỗ nào rẻ?",
+    "Cho thuê xe Thanh Hóa cần đặt cọc không?",
+    "Giá thuê Exciter Thanh Hóa thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Thanh Hóa — bờ biển dài nhất Bắc Trung Bộ: Exciter được niêm yết 180.000-250.000 theo bảng thị trường trong khi danh sách cửa hàng quảng cáo mức rẻ chỉ 110k/ngày; khách sạn Hoàng Gia cho thuê từ 150.000đ/ngày; mùa hè Sầm Sơn xe số lên 200.000đ/ngày, xe ga 300.000đ/ngày — chênh giá theo mùa rõ rệt.",
+  "slug": "gia-thue-exciter-thanh-hoa",
+  "output_path": "thue-xe-may/gia-thue-exciter-thanh-hoa/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-thanh-hoa/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy tại Thanh Hóa (giahuy) ghi Exciter 180.000-250.000 và Winer 150 180.000-250.000; nhóm Lead 125, Vision 125, Airblade 125 ở mức 150.000-200.000; nhóm Lead 110, Vision 110, Airblade 110 ở mức 100.000 – 160.000; nhóm Sirius, Sirius Fi, Jupiter, Wave 100.000 – 150.000.",
+      "claim_supported": "Sirius 100.000 – 150.000 Sirius Fi 100.000 – 150.000 Jupiter 100.000 – 150.000 Wave S 100.000 – 150.000 Wave Rs 100.000 – 150.000 Wave Rsx 100.000 – 150.000 Lead 110 100.000 – 160.000 Vision 110 100.000 – 160.000 Airblade 110 100.000 – 160.000 Lead 125 150.000-200.000 Vision 125 150.000-200.000 Airblade 125 150.000-200.000 Exciter 180.000-250.000 Winer 150 180.000-250.000",
+      "source_url": "https://giahuy.org/thue-xe-may-thanh-hoa/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Danh sách địa điểm thuê xe máy Thanh Hóa của giahuy có tiêu đề ghi giá rẻ chỉ 110k/ngày; danh sách gồm các cơ sở như Long Hà, Tuấn Ngọc (Bãi Đông Nghi Sơn), Queen Hotel (Hải Tiến), khách sạn Mường Thanh, Hoàng Gia, các cơ sở Sầm Sơn và nhóm cho thuê tại Pù Luông (Anh Tần, Khánh Trắng).",
+      "claim_supported": "#12 Địa Điểm Thuê Xe Máy Thanh Hóa giá rẻ chỉ giá 110k/ngày !… Thuê xe máy Thanh Hóa – Long Hà Thuê xe máy Bãi Đông Nghi Sơn – Tuấn Ngọc Thuê xe máy ở Hải Tiến Queen Hotel Khách sạn Mường Thanh Khách sạn Hoàng Gia Cho thuê xe máy ở Sầm Sơn… Thuê xe máy ở Pù Luông Anh Tần Cho Thuê Xe Máy Đi Pù Luông – Khánh Trắng",
+      "source_url": "https://giahuy.org/thue-xe-may-thanh-hoa/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Khách sạn Hoàng Gia (Lô A1 khu 4, bắc Đại Lộ Lê Lợi, phường Đông Hương, TP Thanh Hóa) cho thuê xe với giá từ 150.000đ/ngày.",
+      "claim_supported": "Khách sạn Hoàng Gia Địa chỉ: Lô A1 khu 4, bắc ĐL. Lê Lợi, Phường Đông Hương, TP. Thanh Hóa Giá thuê xe: từ 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Cơ sở Thuê xe máy ở Sầm Sơn (Võ Thị Sáu, cạnh đường Bà Triệu, bãi tắm C, Sầm Sơn) giá xe số 200.000đ/ngày, xe ga 300.000đ/ngày; Khách sạn Mường Thanh (Ngã Ba Voi, phường Đông Vệ, TP Thanh Hóa) giá xe số 200.000đ/ngày, xe ga 300.000đ/ngày, đánh giá 5/5.",
+      "claim_supported": "Thuê xe máy ở Sầm Sơn Địa chỉ: Võ Thị Sáu, Cạnh đường Bà Triệu, Bãi tắm C – Sầm Sơn Giá thuê xe số: 200.000đ/ngày Giá thuê xe ga: 300.000đ/ngày… Khách sạn Mường Thanh Địa chỉ: Ngã Ba Voi, Phường Đông Vệ, thành phố Thanh Hóa Giá thuê xe số: 200.000đ/ngày Giá thuê xe ga: 300.000đ/ngày 5/5",
+      "source_url": "https://motogo.vn/thue-xe-may-thanh-hoa/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Khu vực Pù Luông (Thanh Hóa) có các cơ sở cho thuê xe máy phục vụ khách đi thiên nhiên: Dịch Vụ Cho Thuê Xe Máy Pù Luông tại Làng Bầm, Bá Thước (điện thoại 0399 031 044) và Thuê Xe Máy tại Pù Luông ở Bản Hiêu, Bá Thước (điện thoại 0385 651 335).",
+      "claim_supported": "Dịch Vụ Cho Thuê Xe Máy Pù Luông Địa chỉ : Làng Bầm, Bá Thước, Thanh Hoá, Việt Nam Điện thoại : 0399 031 044 Thuê Xe Máy tại Pù Luông Địa chỉ : Bản Hiêu, Bá Thước, Thanh Hoá Điện thoại : 0385 651 335",
+      "source_url": "https://giahuy.org/thue-xe-may-thanh-hoa/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Queue 11 — Exciter family tỉnh Thanh Hóa; tất cả mức giá lấy từ bảng giá và danh sách cửa hàng công khai; informational_only."
+}
