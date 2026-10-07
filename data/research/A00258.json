@@ -1,0 +1,88 @@
+{
+  "research_date": "2026-10-07",
+  "geo_level": "province",
+  "locality": "",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "official_sources": [],
+  "article_id": "A00258",
+  "primary_keyword": "giá thuê Sirius Gia Lai",
+  "secondary_keywords": [
+    "gia thue Sirius Gia Lai",
+    "cho thue Yamaha Sirius Pleiku",
+    "thue xe so Pleiku gia",
+    "gia thue xe may Gia Lai"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Gia Lai (Pleiku): bảng giá ghi đích danh Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd/ngày; cơ sở 290 Nguyễn Tất Thành từ 80.000đ/ngày có Sirius, không cần cọc, giao tận sân bay; Thuê xe Pleiku 100.000đ/ngày xe số; Anh Đức xe số 150.000đ/ngày; IFT từ 80.000đ/ngày.",
+  "geo_id": "VN-A00258",
+  "province": "Gia Lai",
+  "poi": "Biển Hồ (TP. Pleiku) – chùa Minh Thành – Vườn quốc gia Kon Ka Kinh – làng cà phek Chu Se (cửa ngõ) – dốc cảnh Măng Đen (cửa ngõ)",
+  "questions_found": [
+    "Thuê xe máy ở Gia Lai giá bao nhiêu?",
+    "Thuê Sirius ở Pleiku chỗ nào rẻ?",
+    "Cho thuê xe Pleiku cần cọc bao nhiêu?",
+    "Giá thuê xe ga Pleiku Gia Lai thế nào?"
+  ],
+  "unique_angle": "Gia Lai — cao nguyên Pleiku: Sirius được liệt thẳng trong bảng giá tỉnh với dòng \"Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd\" — một trong số ít tỉnh có ghi rõ đời xe 2015 – 2018 FI; cơ sở 290 Nguyễn Tất Thành giao xe tận sân bay Pleiku và không cần cọc; nhiều cửa hàng tính giá theo 24h thay vì tính theo ngày tự nhiên, rất tiện cho khách đi sớm về muộn.",
+  "slug": "gia-thue-sirius-gia-lai",
+  "output_path": "thue-xe-may/gia-thue-sirius-gia-lai/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-gia-lai/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Pleiku Gia Lai ghi đích danh dòng Xe số Yamaha Sirius 2015 – 2018 FI với giá 90.000 vnd/ngày, cùng mức với Wave RSX – fi.",
+      "claim_supported": "Xe số Wave RSX – fi 90.000 vnd Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd Xe số Yamaha Jupiter gravita 80.000 vnd",
+      "source_url": "https://motogo.vn/thue-xe-may-pleiku/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Tại Gia Lai, xe số Wave S và Wave RS có giá 80.000 vnd/ngày; xe ga Honda Vision, Lead, Airblade 2012 ở mức 120.000 vnd, Airblade 2013-2015 là 140.000 vnd và Airblade 2016-2018 là 160.000 vnd.",
+      "claim_supported": "Xe tay ga Honda Airblade 2012 120.000 vnd Xe tay ga Honda Airblade 2013-2015 140.000 vnd Xe tay ga Honda Airblade 2016- 2017 – 2018 160.000 vnd Xe tay ga Honda Lead 120.000 vnd Xe tay ga Honda Vision 120.000 vnd Xe số Wave S 80.000 vnd Xe số Wave RS 80.000 vnd",
+      "source_url": "https://motogo.vn/thue-xe-may-pleiku/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Cơ sở cho thuê xe máy tại Gia Lai (290 Nguyễn Tất Thành, Phù Đổng, TP. Pleiku) có giá thuê từ 80.000đ/ngày, đánh giá 4.9/5, có các dòng Air Blade, Nouvo, Sirius, không cần cọc và có dịch vụ giao xe tận sân bay.",
+      "claim_supported": "Thuê xe máy tại Gia Lai Điện thoại: 0869 697 981 Địa chỉ: 290 Nguyễn Tất Thành, Phù Đổng, Thành phố Pleiku, Gia Lai Giá thuê xe: từ 80.000đ/ngày 4.9/5 Thêm vào đó số lượng xe máy tại cơ sở này cũng rất lớn và đa dạng. Nhiều dòng xe phổ biến như Air Blade, Nouvo, Sirius,… đều có mặt tại đây. Chúng cũng có giá cả vô cùng hợp lý, không cần cọc nên rất tiết kiệm.",
+      "source_url": "https://motogo.vn/thue-xe-may-pleiku/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Thuê xe Pleiku (35C Nguyễn Tất Thành, P. Hoa Lư) niêm yết giá thuê xe số 100.000đ/ngày và xe ga 150.000đ/ngày, đánh giá 4.5/5.",
+      "claim_supported": "Thuê xe Pleiku Điện thoại: 096 610 87 77 Địa chỉ: 35C Nguyễn Tất Thành, P. Hoa Lư, Thành phố Pleiku, Gia Lai. Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày 4.5/5",
+      "source_url": "https://motogo.vn/thue-xe-may-pleiku/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Anh Đức (420 Đ. Trường Chinh, P. Trà Bá, TP. Pleiku) cho thuê xe số với giá 150.000đ/ngày, đánh giá 4.9/5, có dịch vụ giao xe tận nơi.",
+      "claim_supported": "Anh Đức Điện thoại: 098 864 44 46 Địa chỉ: 420 Đ. Trường Chinh, P.Trà Bá, Thành phố Pleiku, Gia Lai. Giá thuê xe số: 150.000đ/ngày 4.9/5 Mặt khác thủ tục cho thuê xe tại đây cũng khá đơn giản. Anh còn triển khai thêm dịch vụ giao xe máy tận nơi theo yêu cầu rất tiện lợi nữa.",
+      "source_url": "https://motogo.vn/thue-xe-may-pleiku/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "IFT Gia Lai (107 Đường Lê Thánh Tôn, P. Diên Hông) cho thuê xe từ 80.000đ/ngày, đánh giá 4.6/5, thủ tục chỉ cần CMND/CCCD.",
+      "claim_supported": "IFT Gia Lai Điện thoại: 094 101 00 33 Địa chỉ: 107 Đường Lê Thánh Tôn, P. Diên Hông, Thành phố Pleiku, Gia Lai. Giá thuê xe: từ 80.000đ/ngày 4.6/5 IFT cũng không yêu cầu quá nhiều về các loại giấy tờ khi làm thủ tục. Bạn chỉ cần cung cấp một số loại giấy tờ có ảnh như CMND hay CCCD là được.",
+      "source_url": "https://motogo.vn/thue-xe-may-pleiku/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Tại Pleiku một số cửa hàng tính giá thuê theo 24h: từ 8h sáng hôm trước đến 8h sáng hôm sau chỉ mất tiền 1 ngày, thay vì tính theo ngày tự nhiên khiến khách lấy xe chiều hôm trước bị tính giá 2 ngày.",
+      "claim_supported": "Những cửa hàng theo mô hình cũ thường tính giá theo ngày. Như vậy nếu bạn lấy xe qua đêm thì sẽ tính giá sang ngày tiếp theo. Một số cửa hàng khách lại tính giá theo 24h. Theo đó thời gian sử dụng xe của bạn sẽ được tận dụng tốt hơn. Từ 8h sáng hôm trước đến 8h sáng hôm sau chỉ mất tiền 1 ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-pleiku/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Nguồn motogo.vn/thue-xe-may-pleiku/ (bảng giá có dòng Sirius 2015-2018 FI 90.000 vnd + 6 cơ sở Pleiku + chính sách tính giá 24h). giahuy/tripbike/vexere Pleiku đều là trang 404/placeholder nên packet dùng một nguồn chính duy nhất, thuần informational."
+}

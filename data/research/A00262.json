@@ -1,0 +1,88 @@
+{
+  "research_date": "2026-10-07",
+  "geo_level": "province",
+  "locality": "",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "official_sources": [],
+  "article_id": "A00262",
+  "primary_keyword": "giá thuê Sirius Tây Ninh",
+  "secondary_keywords": [
+    "gia thue Sirius Tay Ninh",
+    "cho thue Yamaha Sirius Tay Ninh",
+    "thue xe so Tay Ninh gia",
+    "gia thue xe may Tay Ninh"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Tây Ninh: bảng giá ghi Sirius – Sirius Fi – Wave Rs – Wave Rsx 120.000 – 150.000 vnd/ngày; bảng motogo ghi Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd; Tân Quốc Việt từ 80.000đ/ngày có Wave, Sirius, Vision, AB; Phượng xe số 80.000đ – 120.000đ/ngày.",
+  "geo_id": "VN-A00262",
+  "province": "Tây Ninh",
+  "poi": "Núi Bà Đen – Tòa thánh Cao Đài Tây Ninh – hồ Dầu Tiếng (cửa ngõ) – chợ Tây Ninh – đường Cách Mạng Tháng 8",
+  "questions_found": [
+    "Thuê xe máy ở Tây Ninh giá bao nhiêu?",
+    "Thuê Sirius ở Tây Ninh chỗ nào rẻ?",
+    "Cho thuê xe Tây Ninh cần cọc bao nhiêu?",
+    "Giá thuê xe ga Tây Ninh thế nào?"
+  ],
+  "unique_angle": "Tây Ninh — đất thánh Bà Đen: giá thuê xe được hai bảng giá độc lập ghi khác nhau (bảng tỉnh ghi nhóm Sirius – Sirius Fi 120.000 – 150.000 vnd/ngày, bảng motogo ghi Sirius 2015 – 2018 FI 90.000 vnd), cho khách dải lựa chọn rộng; Tân Quốc Việt ở Gò Dầu có đủ Wave, Sirius, Vision, AB chỉ từ 80.000đ/ngày và giữ xe qua đêm miễn phí khi thuê trên 2 ngày; cọc phổ biến 500.000đ đến 3 triệu đồng.",
+  "slug": "gia-thue-sirius-tay-ninh",
+  "output_path": "thue-xe-may/gia-thue-sirius-tay-ninh/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-tay-ninh/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Tây Ninh ghi nhóm Sirius – Sirius Fi – Wave Rs – Wave Rsx ở mức 120.000 – 150.000 vnd/ngày; nhóm Lead – Vision – Airblade (xe cũ) 130.000 – 180.000 vnd/ngày.",
+      "claim_supported": "Sirius – Sirius Fi – Wave Rs – Wave Rsx 120.000 – 150.000 vnd/ngày Lead – Vision – Airblade ( Xe cũ ) 130.000 – 180.000 vnd/ngày Lead 125cc – Vision – Airblade 125cc ( Xe mới ) 150.000 – 200.000 vnd/ngày Winer 150 – Exciter 180.000 – 250.000 vnd/ngày",
+      "source_url": "https://giahuy.org/thue-xe-may-tay-ninh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá motogo tại Tây Ninh ghi dòng Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd/ngày; Xe số Wave S và Wave RS 80.000 vnd/ngày; xe ga Honda Vision, Lead, Airblade 2012 ở mức 120.000 vnd/ngày.",
+      "claim_supported": "Xe số Wave S 80.000 vnd Xe số Wave RS 80.000 vnd Xe số Wave RSX – fi 90.000 vnd Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd Xe số Yamaha Jupiter gravita 80.000 vnd Xe tay ga Honda Lead 120.000 vnd Xe tay ga Honda Vision 120.000 vnd",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Tân Quốc Việt (Ngã 4, Đường Nông Trường, KCN Phước Đông, Gò Dầu) có các dòng Wave, Sirius, Vision, AB; chỉ cần bỏ ra từ 80.000đ/ngày đã thuê được xe số, xe ga khoảng 120.000 – 180.000đ/ngày, cọc trước 1 triệu để thế chân.",
+      "claim_supported": "Nguyên nhân vì nơi này có rất nhiều loại xe như Wave, Sirius, Vision, AB,… Không những vậy mà giá thuê xe còn rất phải chăng. Chỉ cần bỏ ra từ 80.000đ/ngày bạn đã thuê được ngay một chiếc xe số siêu khỏe rồi. Với xe ga thì giá cao hơn chút, khoảng 120.000 – 180.000đ/ngày. Thủ tục cho thuê xe cũng gọn nhẹ, chỉ cần giấy tờ và tiền cọc là xong. Bạn sẽ đưa trước 1 triệu để thế chân, sau đó sẽ được nhận lại khi trả xe.",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Tân Quốc Việt (Gò Dầu) cho thuê các dòng xe đời cũ từ 80.000 – 120.000 đồng/ngày, xe tay ga từ 120.000 – 180.000 đồng/ngày; thuê xe trên 2 ngày được giữ xe qua đêm miễn phí, giao nhận tận nơi ở Gò Dầu, Trảng Bàng miễn phí.",
+      "claim_supported": "Với các dòng xe đời cũ từ 80.000 – 120.000 đồng/ngày Và các dòng xe tay ga từ 120.000 – 180.000 đồng/ngày Nếu bạn thuê xe trên 2 ngày, bạn sẽ được giữ xe qua đêm miễn phí. Ngoài ra, cửa hàng còn có chế độ bảo hành xe được kiểm tra định kỳ, giúp bạn yên tâm khi sử dụng xe. Hơn nữa. đơn vị còn cung cấp giao nhận xe tận nơi ở Gò Dầu, Trảng Bàng theo yêu cầu khách miễn phí.",
+      "source_url": "https://giahuy.org/thue-xe-may-tay-ninh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Phượng (4/28b Kp5, P.4, Thị Xã Tây Ninh) cho thuê xe số 80.000đ – 120.000đ/ngày và xe ga 100.000đ -160.000đ/ngày, đánh giá 4.3/5; Hùng Vương (652 Cách Mạng Tháng 8, Phường 3) cùng mức giá, đánh giá 5.0/5.",
+      "claim_supported": "Phượng Điện thoại: 0276 3824 728 Địa chỉ: 4/28b Kp5, P.4, Thị Xã Tây Ninh, Tây Ninh, Phường 4, Tây Ninh Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 100.000đ -160.000đ/ngày 4.3/5 Hùng Vương Điện thoại: 093 121 16 68 Địa chỉ: 652 Cách Mạng Tháng 8, Phường 3, Tây Ninh Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 100.000đ -160.000đ/ngày 5.0/5",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Hoàng Gia (19 đường 781, ấp Bình Hòa, Thái Hòa, Châu Thành) cho thuê khoảng từ 100.000đ đến 150.000đ/ngày, không cần đặt cọc, chỉ cần giấy lái xe và CMND; các dòng Exciter hay Winner giá từ 200.000đ trở lên.",
+      "claim_supported": "Giá cho thuê xe máy tại Tây Binh khá rẻ, khoảng từ 100.000đ đến 150.000đ/ngày, giá này hợp lý so với khu vực địa phương. Nếu bạn muốn thuê các dòng xe mạnh hơn như Exciter hay Winner, giá sẽ cao hơn một chút, từ 200.000đ trở lên. Bạn không cần phải đặt cọc hay tốn công tìm địa điểm trả xe khi trả lại. Chỉ cần mang theo giấy tờ tùy thân như lái xe và CMND.",
+      "source_url": "https://giahuy.org/thue-xe-may-tay-ninh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Khi thuê xe máy Tây Ninh, tiền cọc thế chân theo loại xe dao động từ 500.000đ đến 3 triệu đồng và được hoàn lại khi trả xe.",
+      "claim_supported": "Một thủ tục quan trọng không thể thiếu là đặt cọc tiền thế chân khi thuê xe máy Tây Ninh. Tùy vào loại xe mà số tiền cọc yêu câu có thể dao động từ 500.000đ đến 3 triệu đồng. Khi giao tiền cho cửa hàng mà không nhận lại được biên lai thì hãy yêu cầu đơn vị đó xác nhận đã thu tiền.",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Nguồn motogo.vn/thue-xe-may-tay-ninh/ (bảng Sirius 2015-2018 FI 90.000 vnd + Tân Quốc Việt + Phượng/Hùng Vương + cọc 500k-3 triệu) và giahuy.org/thue-xe-may-tay-ninh/ (bảng Sirius-Sirius Fi 120-150k + Tân Quốc Việt đời cũ 80-120k + Hoàng Gia không cọc)."
+}

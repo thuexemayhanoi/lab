@@ -1,0 +1,95 @@
+{
+  "research_date": "2026-10-07",
+  "geo_level": "province",
+  "locality": "",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "official_sources": [],
+  "article_id": "A00265",
+  "primary_keyword": "giá thuê Sirius An Giang",
+  "secondary_keywords": [
+    "gia thue Sirius An Giang",
+    "cho thue Yamaha Sirius Chau Doc",
+    "thue xe so Chau Doc gia",
+    "gia thue xe may An Giang"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại An Giang: bảng giahuy ghi Sirius – Sirius Fi – Wave Rs – Wave Rsx 120.000 – 150.000 vnd/ngày; bảng tripbike ghi Sirius, Sirius Fi 80.000 – 120.000; Mr Tủm (Núi Sam) xe số 90.000đ – 120.000đ/ngày; Thuê xe máy Long Xuyên 100.000đ/ngày xe số.",
+  "geo_id": "VN-A00265",
+  "province": "An Giang",
+  "poi": "Núi Sam – chùa Bà Châu Đốc – rừng tràm Trà Sư – làng Chăm Châu Phong (Châu Đốc) – phố Tây Bùi Quang Dung – Long Xuyên",
+  "questions_found": [
+    "Thuê xe máy ở An Giang giá bao nhiêu?",
+    "Thuê Sirius ở Châu Đốc chỗ nào rẻ?",
+    "Cho thuê xe An Giang cần cọc bao nhiêu?",
+    "Giá thuê xe ga An Giang thế nào?"
+  ],
+  "unique_angle": "An Giang — đất Bà chúa Xứ sở: hai bảng giá độc lập cho hai khung khác nhau (giahuy ghi nhóm Sirius – Sirius Fi – Wave Rs – Wave Rsx 120.000 – 150.000 vnd/ngày, tripbike ghi Sirius/Sirius Fi 80.000 – 120.000), phản ánh chênh lệch giữa cơ sở Núi Sam xa trung tâm và phố Châu Đốc; Thanh Hoàng tại Núi Sam giao xe tận chùa Bà, chợ Châu Đốc miễn phí có sẵn Sirius, Jupiter, Tarus; cơ sở 89 Phan Văn Vàng giữ đồng giá 100.000đ/ngày với xe dùng khoảng 1-2 năm.",
+  "slug": "gia-thue-sirius-an-giang",
+  "output_path": "thue-xe-may/gia-thue-sirius-an-giang/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-an-giang/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy An Giang của giahuy ghi nhóm Sirius – Sirius Fi – Wave Rs – Wave Rsx ở mức 120.000 – 150.000 vnd/ngày; nhóm Lead – Vision – Airblade (xe cũ) 130.000 – 180.000 vnd/ngày.",
+      "claim_supported": "Sirius – Sirius Fi – Wave Rs – Wave Rsx 120.000 – 150.000 vnd/ngày Lead – Vision – Airblade ( Xe cũ ) 130.000 – 180.000 vnd/ngày Lead 125cc – Vision – Airblade 125cc ( Xe mới ) 150.000 – 200.000 vnd/ngày Winer 150 – Exciter 180.000 – 250.000 vnd/ngày",
+      "source_url": "https://giahuy.org/thue-xe-may-an-giang/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá tripbike tại An Giang ghi Sirius 80.000 – 120.000 và Sirius Fi 80.000 – 120.000 mỗi ngày, cùng nhóm Jupiter, Wave S, Wave Rs, Wave Rsx; tay ga Lead 110, Vision 110, Airblade 110 ở mức 100.000 – 130.000.",
+      "claim_supported": "Hãng Giá thuê máy tay số Yamaha 1 ngày Sirius 80.000 – 120.000 Sirius Fi 80.000 – 120.000 Jupiter 80.000 – 120.000 tay ga Honda 1 ngày Lead 110 100.000 – 130.000 Vision 110 100.000 – 130.000 Airblade 110 100.000 – 130.000",
+      "source_url": "https://tripbike.net/thue-xe-may-an-giang/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Thanh Hoàng (Số 183 Châu Thị Tế, Vĩnh Tây 3, Núi Sam, Châu Đốc) cho thuê giá rẻ 120.000 /xe số và 150k/ xe tay ga, có các dòng Air Blade 125cc, Lead mới, Vision, Honda Wave S, Rs, RSX, Yamaha Sirius, Jupiter, Tarus; giao tận nơi chùa Bà, chợ Châu Đốc miễn phí.",
+      "claim_supported": "Bởi vị trí thuận lợi giá thuê rẻ 120.000 /xe số 150k/ xe tay ga, tham quan du lịch An giang bạn có thể bỏ túi cửa hàng này Các dòng xe đơn vị cung cấp như Air Blade 125cc, Lead mới, Vision, Honda : Wave S, Rs, RSX, Yamaha: Sirius, Jupiter , Tarus…nhiều dòng xe tiện lợi, tiết kiệm nhiên liệu cao. Được trang bị các vật dụng như nón bảo hiểm, giao tận nơi chùa Bà, chợ Châu Đốc miễn phí",
+      "source_url": "https://giahuy.org/thue-xe-may-an-giang/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Mr Tủm (183 Châu Thị Tế, P. Núi Sam, Châu Đốc) niêm yết giá thuê xe số 90.000đ – 120.000đ/ngày và xe ga 140.000đ – 150.000đ/ngày, đánh giá 4.0/5, hotline hoạt động 24/24, giao xe chỉ vài phút sau khi gọi điện.",
+      "claim_supported": "Mr Tủm Điện thoại: 097 455 54 75 Địa chỉ: 183 Châu Thị Tế, P. Núi Sam, Châu Đốc, An Giang Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày 4.0/5 Một ưu điểm nữa của cửa hàng này là tốc độ giao xe cực nhanh. Chỉ vài phút sau khi gọi điện, chiếc xe của bạn đã sẵn sàng.",
+      "source_url": "https://motogo.vn/thue-xe-may-an-giang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Thuê xe máy Long Xuyên (574A Võ Thị Sáu, Phường Đông Xuyên, TP Long Xuyên) cho thuê xe số 100.000đ/ngày, xe ga 120.000đ -180.000đ/ngày, xe phân khối lớn 300.000đ/ngày, đánh giá 4.9/5.",
+      "claim_supported": "Thuê xe máy Long Xuyên Điện thoại: 096 557 94 06 Địa chỉ: 574A Võ Thị Sáu, Phường Đông Xuyên, Thành phố Long Xuyên, An Giang Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 120.000đ -180.000đ/ngày Giá thuê xe PKL: 300.000đ/ngày 4.9/5",
+      "source_url": "https://motogo.vn/thue-xe-may-an-giang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Hải Nhân (Thành phố Long Xuyên) niêm yết giá trong mức từ 120.000đ – 250.000đ/ngày tùy loại xe, xe số rẻ hơn; giá cọc xe là 1 triệu, hoàn lại đầy đủ sau khi trả xe, cho phép để lại bản photo giấy tờ.",
+      "claim_supported": "Giá cho thuê xe máy tại địa chỉ này được niêm yết rất rõ ràng. Khoảng giá trong mức từ 120.000đ – 250.000đ/ngày tùy loại xe. Đa phần những chiếc xe số sẽ có giá rẻ hơn. Giá cọc xe là 1 triệu, sẽ được hoàn lại đầy đủ sau khi trả xe.",
+      "source_url": "https://motogo.vn/thue-xe-may-an-giang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Cơ sở cho thuê xe máy An Giang (89 Phan Văn Vàng, Châu Phú A, Châu Đốc) giữ đồng giá 100.000đ/ngày, xe đã sử dụng khoảng 1-2 năm nhưng chất lượng đảm bảo, thủ tục có thể dùng bản photo CMND kèm GPLX và đặt cọc.",
+      "claim_supported": "Xe tại đây không còn quá mới, đã sử dụng được khoảng 1-2 năm. Tuy vậy chất lượng của chúng vấn được đảm bảo tốt. Không những thế giá thuê còn rất mềm, đồng giá 100.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-an-giang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá motogo tại An Giang ghi xe số 80k – 120k, xe ga 120k – 200k, xe côn 250k mỗi ngày.",
+      "claim_supported": "Loại xe Giá/ngày Xe số 80k – 120k Xe ga 120k – 200k Xe côn 250k",
+      "source_url": "https://motogo.vn/thue-xe-may-an-giang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Nguồn motogo.vn/thue-xe-may-an-giang/ (Mr Tủm 90-120k, Long Xuyên 100k, bảng 80k-120k), giahuy.org/thue-xe-may-an-giang/ (Thanh Hoàng 120.000/150k có Sirius, bảng 120-150k), tripbike.net/thue-xe-may-an-giang/ (bảng Sirius 80-120k)."
+}

@@ -1,0 +1,81 @@
+{
+  "research_date": "2026-10-07",
+  "geo_level": "province",
+  "locality": "",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "official_sources": [],
+  "article_id": "A00264",
+  "primary_keyword": "giá thuê Sirius Đồng Tháp",
+  "secondary_keywords": [
+    "gia thue Sirius Dong Thap",
+    "cho thue Yamaha Sirius Cao Lanh",
+    "thue xe so Cao Lanh gia",
+    "gia thue xe may Dong Thap"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Đồng Tháp: bảng giá ghi Yamaha Sirius và Sirius Fi 100.000 -120.000 VNĐ/ngày; Bảo Trâm có Wave, Sirius, Exciter tính giá theo 24h từ 100.000đ đến 130.000đ; Chị Lan xe số 100.000đ – 120.000đ/ngày; Minh Chánh (Sa Đéc) xe số 80.000đ – 100.000đ/ngày.",
+  "geo_id": "VN-A00264",
+  "province": "Đồng Tháp",
+  "poi": "Vườn sen Tháp Mười – nhà cổ Huỳnh Thủy Lê (Sa Đéc) – làng nghề chiếu Định Yên – khu di tích Gò Tháp – chợ đêm Sa Đéc",
+  "questions_found": [
+    "Thuê xe máy ở Đồng Tháp giá bao nhiêu?",
+    "Thuê Sirius ở Cao Lãnh chỗ nào rẻ?",
+    "Cho thuê xe Đồng Tháp cần cọc không?",
+    "Giá thuê xe ga Đồng Tháp thế nào?"
+  ],
+  "unique_angle": "Đồng Tháp — xứ sở sen hồng: bảng giá ghi rõ cả Sirius lẫn Sirius Fi cùng khung 100.000 -120.000 VNĐ/ngày, hiếm province nào công khai cả hai bản thể của Sirius; Bảo Trâm là cơ sở tại Cao Lãnh có sẵn Wave, Sirius, Exciter và tính giá theo 24h từ 100.000đ đến 130.000đ; các cơ sở tập trung ở Cao Lãnh và Sa Đéc — hai đầu trung tâm du lịch, thuận tiện cho lịch trình thăm vườn sen Tháp Mười rồi chạy sang làng chiếu Định Yên.",
+  "slug": "gia-thue-sirius-dong-thap",
+  "output_path": "thue-xe-may/gia-thue-sirius-dong-thap/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-dong-thap/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Đồng Tháp – Cao Lãnh – Sa Đéc ghi Yamaha Sirius và Yamaha Sirius Fi ở mức 100.000 -120.000 VNĐ/ngày, cùng nhóm với Honda Wave Rs, RSX; Honda Vision, Lead, Air Blade 120.000 -150.000 VNĐ/ngày; Yamaha Exciter 150.000 -200.000 VNĐ/ngày.",
+      "claim_supported": "Yamaha Sirius 100.000 -120.000 VNĐ/ngày Yamaha Sirius Fi 100.000 -120.000 VNĐ/ngày Honda Wave Rs, RSX 100.000 -120.000 VNĐ/ngày Honda Vision 120.000 -150.000 VNĐ/ngày Honda Lead 120.000 -150.000 VNĐ/ngày Honda Air Blade 120.000 -150.000 VNĐ/ngày Yamaha Exciter 150.000 -200.000 VNĐ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Chị Lan (34/1 Nguyễn Văn Trỗi, Phường 2, TP. Cao Lãnh) niêm yết giá thuê xe số 100.000đ – 120.000đ/ngày và xe ga 120.000đ -150.000đ/ngày, đánh giá 5.0/5, chủ yếu cho thuê xe Wave đời dưới 3 năm, thủ tục chỉ cần để lại CMND.",
+      "claim_supported": "Chị Lan Điện thoại: 091 875 00 16 Địa chỉ: 34/1 Nguyễn Văn Trỗi, Phường 2, TP. Cao Lãnh, Đồng Tháp Giá thuê xe số: 100.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -150.000đ/ngày 5.0/5 Cửa hàng không có quá nhiều loại xe mà chủ yếu là xe Wave. Những chiếc xe này đều khá mới, thời gian sử dụng dưới 3 năm.",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Lợi Thế (212 Phạm Hữu Lầu, phường Cao Lãnh) cho thuê rơi vào khoảng từ 120.000đ – 200.000đ/ngày tùy loại xe, chuẩn bị sẵn xăng xe, mũ bảo hiểm kèm áo mưa, có dịch vụ giao xe tận nơi.",
+      "claim_supported": "Giá thuê xe tại Lợi Thế rơi vào khoảng từ 120.000đ – 200.000đ/ngày tùy loại xe. Với số tiền không lớn này, bạn còn nhận được thêm nhiều vật phẩm tiện dụng khác. Cụ thể, cửa hàng sẽ chuẩn bị sẵn xăng xe, mũ bảo hiểm kèm theo áo mưa trong mỗi chiếc xe. Điểm cộng lớn nhất của Lợi Thế chính là dịch vụ giao xe tận nơi cực tiện lợi.",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảo Trâm (209 Mai Văn Khải, Tp. Cao Lãnh) có đầy đủ các loại xe như Wave, Sirius, Exciter; cửa hàng tính giá theo 24h và bạn chỉ cần bỏ ra từ 100.000đ đến 130.000đ là có một chiếc xe ưng ý.",
+      "claim_supported": "Tại đây có đầy đủ các loại xe như Wave, Sirius, Exciter,… đến từ các thương hiệu uy tín. Một điểm khác biệt của cơ sở này là cách tính giá theo 24h. Thêm vào đó là giá thuê tại nơi này cũng rất hợp lý. Bạn chỉ cần bỏ ra từ 100.000đ đến 130.000đ là đã có thể sở hữu một chiếc xe ưng ý rồi.",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Minh Chánh (Ấp Tân Lập, Sa Đéc) cho thuê xe số 80.000đ – 100.000đ/ngày và xe ga 130.000đ – 140.000đ/ngày; Phương Nam Hotel (384A Đường Nguyễn Sinh Dung, TP Sa Đéc) xe số 100.000đ – 120.000đ/ngày, xe ga 120.000đ -150.000đ/ngày.",
+      "claim_supported": "Minh Chánh Điện thoại: 0796 262 623 Địa chỉ: Ấp Tân Lập, Sa Đéc, Đồng Tháp Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày Phương Nam Hotel Địa chỉ: 384A, Đường Nguyễn Sinh Dung nhan, TP Sa Đéc, Đồng Tháp. Giá thuê xe số: 100.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Phương Nam Hotel cho thuê những chiếc xe tương đối mới, hầu hết thời gian sử dụng dưới 3 năm, linh kiện đầy đủ; đa phần xe cho thuê ở Đồng Tháp chỉ từ 100k/ngày mà chất lượng đảm bảo.",
+      "claim_supported": "Tất cả những chiếc xe tại đây đều còn tương đối mới. Hầu hết thời gian sử dụng của chúng đều dưới 3 năm. Giá thuê xe máy ở Đồng Tháp không hề cao, mà ngược lại hầu hết các cửa hàng đều đưa ra mức giá khá tốt để hỗ trợ tối đa cho du khách. Đa phần xe cho thuê chỉ từ 100k/ngày mà chất lượng cực đảm bảo.",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-thap/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Nguồn motogo.vn/thue-xe-may-dong-thap/ (bảng Sirius + Sirius Fi 100-120k VNĐ/ngày, 5 cơ sở Cao Lãnh/Sa Đéc). giahuy/tripbike/vexere Đồng Tháp là 404/placeholder nên dùng một nguồn chính duy nhất."
+}

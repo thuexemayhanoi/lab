@@ -1,0 +1,88 @@
+{
+  "research_date": "2026-10-07",
+  "geo_level": "province",
+  "locality": "",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "official_sources": [],
+  "article_id": "A00261",
+  "primary_keyword": "giá thuê Sirius Đồng Nai",
+  "secondary_keywords": [
+    "gia thue Sirius Dong Nai",
+    "cho thue Yamaha Sirius Bien Hoa",
+    "thue xe so Bien Hoa gia",
+    "gia thue xe may Dong Nai"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Đồng Nai (Biên Hòa): Thắng Lê xe số 80.000đ – 120.000đ/ngày không cần cọc; Thành Cư và Gia Bảo 80.000đ – 100.000đ/ngày; Hiếu Bình 100.000đ/ngày xe số, 150.000đ/ngày xe ga; Nam Khương từ 100.000đ/ngày.",
+  "geo_id": "VN-A00261",
+  "province": "Đồng Nai",
+  "poi": "Khu du lịch Bửu Long (Biên Hòa) – thác Giang Điền – núi Chứa Chiến (Long Khánh) – vườn cây ăn quả Long Khánh – sông Đồng Nai",
+  "questions_found": [
+    "Thuê xe máy ở Đồng Nai giá bao nhiêu?",
+    "Thuê xe máy Biên Hòa chỗ nào rẻ?",
+    "Cho thuê xe Đồng Nai cần đặt cọc không?",
+    "Giá thuê xe ga Đồng Nai thế nào?"
+  ],
+  "unique_angle": "Đồng Nai — cửa ngõ Đông Nam Bộ cạnh Sài Gòn: thị trường thuê xe tập trung ở Biên Hòa với Thắng Lê giữ xe số 80.000đ – 120.000đ/ngày và chính sách không cần cọc chỉ cần giấy tờ; nhiều cơ sở nằm sát quốc lộ 1 và quốc lộ 51 thuận tiện cho khách đi thác Giang Điền, Bửu Long hoặc kết hợp xuống Vũng Tàu; các cửa hàng ghi kèm 2 mũ bảo hiểm, 1 lít xăng, 2 áo mưa.",
+  "slug": "gia-thue-sirius-dong-nai",
+  "output_path": "thue-xe-may/gia-thue-sirius-dong-nai/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-dong-nai/",
+  "claim_evidence": [
+    {
+      "claim": "Thắng Lê (Số 104B, Võ Thị Sáu, phường Quyết Thắng, Biên Hòa) niêm yết giá thuê xe số 80.000đ – 120.000đ/ngày và xe ga 120.000đ -160.000đ/ngày, đánh giá 5.0/5, không cần đặt cọc.",
+      "claim_supported": "Thắng Lê Điện thoại: 0844 000 666 Địa chỉ: Số 104B, Võ Thị Sáu, phường Quyết Thắng, Biên Hòa, Đồng Nai Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày 5.0/5",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Thắng Lê không thu bất kỳ khoản tiền cọc nào, thủ tục thuê chỉ cần giấy tờ tùy thân; thuê dài hạn theo tuần hay tháng có nhiều ưu đãi.",
+      "claim_supported": "Đặc biệt, khi thuê xe máy tại cơ sở này bạn sẽ không cần đặt cọc. Như vậy thủ tục khi thuê xe chỉ cần giấy tờ tùy thân là được, rất đơn giản. Chính sách không cần đặt cọc tiền này sẽ giúp bạn tiết kiệm được một chi phí kha khá. Hơn thế nữa, nếu bạn thuê xe máy dài hạn theo tuần hay tháng thì còn nhiều ưu đãi cực lớn khác.",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Hiếu Bình (Số 46, Ấp 3, xã Tân Hạnh, Tp. Biên Hòa) cho thuê xe số 100.000đ/ngày và xe ga 150.000đ/ngày; xe từ các hãng Honda, Yamaha được bảo dưỡng định kỳ.",
+      "claim_supported": "Hiếu Bình Điện thoại: 0982 075 072 Địa chỉ: Số 46, Ấp 3, xã Tân Hạnh, Tân Hạnh, Tp. Biên Hòa, Đồng Nai Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Thanh Thùy Dương (Ấp 1, Xã Hiệp Phước, Huyện Nhơn Trạch) cho thuê xe số 90.000đ – 120.000đ/ngày và xe ga 140.000đ – 150.000đ/ngày; Thành Cư (Số 14/1, khu phố 7, quốc lộ 1, phường Tân Hòa) xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày.",
+      "claim_supported": "Thanh Thùy Dương Điện thoại: 090 341 30 08 Địa chỉ: Ấp 1, Xã Hiệp Phước, Huyện Nhơn Trạch, Hiệp Phước, Nhơn Trạch, Đồng Nai Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày 3.8/5 Thành Cư Điện thoại: 0913 613 452 Địa chỉ: Số 14/1, khu phố 7, quốc lộ 1, phường Tân Hòa, Tân Hòa, Tp. Biên Hòa, Đồng Nai. Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Gia Bảo (Số 1099, quốc lộ 51, ấp 2, xã An Hòa, Tp. Biên Hòa) cho thuê chỉ từ 120.000đ/ngày, cung cấp 2 chiếc mũ bảo hiểm đạt chuẩn và dịch vụ giao nhận xe tận nơi.",
+      "claim_supported": "Mặt khác mức giá thuê xe tại đây còn rất phải chăng. Chỉ ừ 120.000đ/ngày là bạn đã thuê ngay được xe tại đây rồi. Không những thế, Gia Bảo còn cung cấp 2 chiếc mũ bảo hiểm đạt chuẩn cho khách hàng. Đặc biệt, nơi đây còn có dịch vụ giao nhận xe tận nơi.",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Nam Khương (Số 1103 Phạm Văn Thuận, Tp. Biên Hòa) có chi phí thuê xe chỉ từ 100.000đ/ngày, xe nhập từ các hãng uy tín và được bảo dưỡng thường xuyên.",
+      "claim_supported": "Với chi phí thuê xe chỉ từ 100.000đ/ngày, bạn đã thuê ngay được một chiếc xe tại đây. Ban đầu cửa hàng nhập xe từ các hãng uy tín nên chúng có thể vận hành êm ái, bền bỉ trong thời gian dài. Bên cạnh đó Nam Khương còn tiến hành bảo dưỡng xe thường xuyên nên xe luôn trọng trạng thái tốt.",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Hiếu Bình tại Biên Hòa có các loại xe tay ga, xe số, xe tay côn giá chỉ từ 120.000đ/ngày, mỗi lần thuê khách được trang bị 2 mũ bảo hiểm, 1 lít xăng và 2 áo mưa tùy theo thời tiết.",
+      "claim_supported": "Tại Hiếu Bình, bạn có thể thuê các loại xe máy đa dạng với giá chỉ từ 120.000đ/ngày. Cụ thể, mỗi lần thuê xe tại đây, khách hàng được trang bị 2 mũ bảo hiểm, 1 lít xăng và 2 áo mưa tùy theo thời tiết.",
+      "source_url": "https://giahuy.org/thue-xe-may-dong-nai/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Nguồn motogo.vn/thue-xe-may-dong-nai/ (Thắng Lê 80-120k không cọc, 6 cơ sở Biên Hòa/Nhơn Trạch) và giahuy.org/thue-xe-may-dong-nai/ (Hiếu Bình từ 120k kèm 2 mũ, 1 lít xăng, 2 áo mưa)."
+}

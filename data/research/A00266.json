@@ -1,0 +1,88 @@
+{
+  "research_date": "2026-10-07",
+  "geo_level": "province",
+  "locality": "",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "official_sources": [],
+  "article_id": "A00266",
+  "primary_keyword": "giá thuê Sirius Cà Mau",
+  "secondary_keywords": [
+    "gia thue Sirius Ca Mau",
+    "cho thue Yamaha Sirius Ca Mau",
+    "thue xe so Ca Mau gia",
+    "gia thue xe may Ca Mau"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Cà Mau: bảng tripbike ghi Sirius, Sirius Fi 80.000 – 120.000/ngày; bảng giahuy ghi Tay Số Wave – Sirius 90.000 -150.000 VNĐ; bảng motogo ghi Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd; Triển Lê xe số 90.000đ – 120.000đ/ngày.",
+  "geo_id": "VN-A00266",
+  "province": "Cà Mau",
+  "poi": "Mũi Cà Mau – Vườn quốc gia Mũi Cà Mau – chợ đêm Cà Mau – rừng ngập mặn Đất Mũi – sông Cà Mau",
+  "questions_found": [
+    "Thuê xe máy ở Cà Mau giá bao nhiêu?",
+    "Thuê Sirius ở Cà Mau chỗ nào rẻ?",
+    "Cho thuê xe Cà Mau cần cọc bao nhiêu?",
+    "Giá thuê xe ga Cà Mau thế nào?"
+  ],
+  "unique_angle": "Cà Mau — cực Nam Tổ quốc: ba bảng giá độc lập cùng ghi Sirius (tripbike 80.000 – 120.000, giahuy nhóm Tay Số Wave – Sirius 90.000 -150.000 VNĐ, motogo Sirius 2015 – 2018 FI 90.000 vnd) cho thấy mặt bằng ổn định; Trọng Nguyễn ngay trung tâm có sẵn Wave, Sirius, Vision, AB trong khung 100.000đ đến 150.000đ/ngày; Triển Lê kèm mũ bảo hiểm và 1 lít xăng miễn phí — tiện cho hành trình chạy dọc hướng về Mũi Cà Mau.",
+  "slug": "gia-thue-sirius-ca-mau",
+  "output_path": "thue-xe-may/gia-thue-sirius-ca-mau/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-ca-mau/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Cà Mau của tripbike ghi Sirius 80.000 – 120.000 và Sirius Fi 80.000 – 120.000 mỗi ngày, cùng nhóm Wave Rsx; tay ga Lead 110, Vision 110, Airblade 110 100.000 – 130.000.",
+      "claim_supported": "Bảng giá Thuê xe máy Cà Mau Hãng Giá thuê máy Sirius 80.000 – 120.000 Sirius Fi 80.000 – 120.000 Wave Rsx 80.000 – 120.000 Lead 110 100.000 – 130.000 Vision 110 100.000 – 130.000 Airblade 110 100.000 – 130.000",
+      "source_url": "https://tripbike.net/thue-xe-may-ca-mau/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá giahuy tại Cà Mau ghi nhóm Tay Số Wave – Sirius 90.000 -150.000 VNĐ; Honda Tay Ga Airblade 125cc 160.000 – 210.000 VNĐ; Honda Tay Ga Vision 125cc 140.000 – 180.000 VNĐ; Honda Winner và Tay Côn Exciter 210.000 – 260.000 VNĐ.",
+      "claim_supported": "Honda Winner 210.000 – 260.000 VNĐ Tay Côn Exciter 210.000 – 260.000 VNĐ Honda Tay Ga Airblade 125cc 160.000 – 210.000 VNĐ Honda Tay Ga Lead 125cc 150.000 – 200.000 VNĐ Honda Tay Ga Vision 125cc 140.000 – 180.000 VNĐ Tay Số Wave – Sirius 90.000 -150.000 VNĐ",
+      "source_url": "https://giahuy.org/thue-xe-may-ca-mau/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá motogo tại Cà Mau ghi dòng Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd/ngày; Xe số Wave S và Wave RS 80.000 vnd/ngày; xe ga Honda Lead, Vision, Airblade 2012 ở mức 120.000 vnd/ngày.",
+      "claim_supported": "Xe số Wave S 80.000 vnd Xe số Wave RS 80.000 vnd Xe số Wave RSX – fi 90.000 vnd Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd Xe số Yamaha Jupiter gravita 80.000 vnd Xe tay ga Honda Lead 120.000 vnd Xe tay ga Honda Vision 120.000 vnd",
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Triển Lê (8 Bùi Thị Xuân, K2, Phường 4, TP. Cà Mau) niêm yết giá thuê xe số 90.000đ – 120.000đ/ngày và xe ga 140.000đ – 150.000đ/ngày, đánh giá 5.0/5; khi thuê xe bạn được nhận kèm mũ bảo hiểm và 1 lít xăng miễn phí.",
+      "claim_supported": "Triển Lê Điện thoại: 0849 526 952 Địa chỉ: 8 Bùi Thị Xuân, K2, Phường 4, TP. Cà Mau. Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày 5.0/5 Khi thuê xe bạn xe được nhận kèm mũ bảo hiểm và 1 lít xăng miễn phí.",
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Anh Cường (398 Lý Thường Kiệt, Khóm 2, TP. Cà Mau) cho thuê với giá từ 100.000đ/ngày, đánh giá 4.1/5; nếu đáp ứng đủ giấy tờ bạn không cần đặt cọc tiền.",
+      "claim_supported": "Bên cạnh đó mức giá cho thuê xe máy tại cửa hàng này rất hợp lý. Chỉ với từ 100.000đ/ngày, bạn đã có thể thuê được những chiếc xe cực chất lượng. Nếu đáp ứng đủ giấy tờ bạn còn không cần phải đặt cọc tiền khi thuê xe.",
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Trọng Nguyễn (389 Lý Thường Kiệt, khóm 2, phường 6, TP. Cà Mau) có các dòng Wave, Sirius, Vision, AB; tất cả các xe nằm trong khoảng 100.000đ đến 150.000đ/ngày.",
+      "claim_supported": "Những dòng xe được khách hàng yêu thích có thể kể đế Wave, Sirius, Vison, AB. Mặt khác giá cho thuê xe tại đây còn rất hấp dẫn. Tất cả cá xe đều nằm trong khoảng 100.000đ đến 150.000đ/ngày.",
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Khi thuê xe máy ở Cà Mau, bạn cần để lại một giấy tờ tùy thân (CMND, căn cước công dân hoặc hộ chiếu) và tiền đặt cọc khoảng 1 đến 3 triệu tùy loại xe, được hoàn lại khi trả xe.",
+      "claim_supported": "Thông thường, bạn cần để lại một giấy tờ tùy thân cá nhân và tiêng đặt cọc. Ở một số cửa hàng sẽ yêu cầu bạn cần đặt cọc một khoản tiền nhất định để đủ điều kiện thuê xe. Thường khoản tiền này sẽ khoảng 1 đến 3 triệu tùy loại xe.",
+      "source_url": "https://motogo.vn/thue-xe-may-ca-mau/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Nguồn motogo.vn/thue-xe-may-ca-mau/ (bảng Sirius FI 90.000 vnd + Triển Lê/Anh Cường/Trọng Nguyễn + cọc 1-3 triệu), giahuy.org/thue-xe-may-ca-mau/ (Tay Số Wave – Sirius 90-150k), tripbike.net/thue-xe-may-ca-mau/ (bảng Sirius 80-120k)."
+}

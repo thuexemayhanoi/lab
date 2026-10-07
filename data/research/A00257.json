@@ -1,0 +1,102 @@
+{
+  "research_date": "2026-10-07",
+  "geo_level": "province",
+  "locality": "",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "official_sources": [],
+  "article_id": "A00257",
+  "primary_keyword": "giá thuê Sirius Quảng Ngãi",
+  "secondary_keywords": [
+    "gia thue Sirius Quang Ngai",
+    "cho thue Yamaha Sirius Quang Ngai",
+    "thue xe so Quang Ngai gia",
+    "gia thue xe may Quang Ngai"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Quảng Ngãi: bảng giá xe số Sirius 100.000đ – 150.000đ/ngày; Thanh Bình 100.000đ – 120.000đ/ngày tính khung 24h (cửa hàng có sirius fi 100k); Lê Trần 80.000đ – 120.000đ/ngày; Thịnh Phát 100.000 – 150.000 VNĐ/xe/ngày tặng 1 lít xăng, không cần cọc; Hoa Muống Biển xe số 120.000đ/ngày, xe ga 150.000đ/ngày.",
+  "geo_id": "VN-A00257",
+  "province": "Quảng Ngãi",
+  "poi": "Đảo Lý Sơn – núi Thiên Ấn – biển Mỹ Khê (Sơn Tịnh) – thành cổ Châu Sa – đồng muối Sa Huỳnh",
+  "questions_found": [
+    "Thuê xe máy ở Quảng Ngãi giá bao nhiêu?",
+    "Thuê Sirius ở Quảng Ngãi chỗ nào rẻ?",
+    "Cho thuê xe Quảng Ngãi cần đặt cọc không?",
+    "Giá thuê xe ga Quảng Ngãi thế nào?"
+  ],
+  "unique_angle": "Quảng Ngãi — cửa ngõ đảo Lý Sơn: Sirius nằm thẳng trong bảng giá xe số của tỉnh (100.000đ – 150.000đ/ngày) và được Thanh Bình, Thịnh Phát, Phong Hiền liệt kê đích danh; nhiều cơ sở tại phố chỉ cách nhau vài trăm mét trên trục Trần Quang Diệu – Hùng Vương nên dễ ghé thử xe; lệ phí tính theo khung 24h giúp tối ưu lịch đi Lý Sơn sáng sớm.",
+  "slug": "gia-thue-sirius-quang-ngai",
+  "output_path": "thue-xe-may/gia-thue-sirius-quang-ngai/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-quang-ngai/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy tại Quảng Ngãi ghi dòng Yamaha Sirius 100.000đ – 150.000đ/ngày, cùng mức với Honda Wave, Honda Blade, Wave RSX, Yamaha Jupiter, Yamaha Future.",
+      "claim_supported": "Yamaha Sirius 100.000đ – 150.000đ/ngày Honda Wave 100.000đ – 150.000đ/ngày Honda Blade 100.000đ – 150.000đ/ngày Honda Wave RSX 100.000đ – 150.000đ/ngày Yamaha Jupiter 100.000đ – 150.000đ/ngày Yamaha Future 100.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-quang-ngai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Hoa Muống Biển (118 Nguyễn Nghiêm, P. Nghĩa Chánh, TP. Quảng Ngãi) niêm yết giá thuê xe số 120.000đ/ngày và xe ga 150.000đ/ngày, được đánh giá 5.0/5.",
+      "claim_supported": "Hoa Muống Biển Điện thoại: 0905 395 269 Địa chỉ: 118 Nguyễn Nghiêm, P. Nghĩa Chánh, TP. Quảng Ngãi Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 150.000đ/ngày 5.0/5",
+      "source_url": "https://motogo.vn/thue-xe-may-quang-ngai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Lê Trần (Khối 1, TT. La Hà, huyện Tư Nghĩa) cho thuê các loại xe chất lượng chỉ từ 80.000đ – 120.000đ/ngày, phù hợp cả sinh viên.",
+      "claim_supported": "Một điểm cộng cực lớn thu hút khách hàng đến đây là giá thuê xe cực rẻ. Tất cả các loại xe chất lượng tại đây chỉ có giá thuê từ 80.000đ – 120.000đ/ngày. Đây là mức chi phí phù hợp với rất nhiều đối tượng, kể cả sinh viên có kinh phí ít.",
+      "source_url": "https://motogo.vn/thue-xe-may-quang-ngai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Thanh Bình (117 Trần Quang Diệu, Nghĩa Lộ) cho thuê khoảng 100.000đ đến 120.000đ/ngày và tính thời gian thuê theo khung 24h.",
+      "claim_supported": "Mặt khác, mức giá cho thuê xe còn vô cùng phải chăng. Bạn chỉ cần bỏ ra khoảng 100.000đ đến 120.000đ/ngày là đã thuê được xe rồi. Hơn nữa thời gian tại đây tính theo khung 24h nên bạn sẽ sử dụng xe được hiệu quả hơn.",
+      "source_url": "https://motogo.vn/thue-xe-may-quang-ngai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Thịnh Phát (117 Trần Quang Diệu, Tp. Quảng Ngãi) cho thuê trong khoảng 100.000 – 150.000 VNĐ/xe/ngày, tặng kèm 1 lít xăng, gần như không cần đặt cọc, có các dòng Sirius, Nouvo 4, Mio, Wave RSX, Air Blade, Vision, Wave.",
+      "claim_supported": "Giá thuê xe tại Thịnh Phát rất hợp lý, trong khoảng 100.000 – 150.000 VNĐ/xe/ngày rẻ hơn so với giá : thuê xe máy Quy Nhơn. Bạn cũng sẽ được tặng kèm 1 lít xăng, để có thể sử dụng trong suốt khoảng thời gian chưa tìm được cây xăng gần để nạp thêm nhiên liệu.",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-ngai/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Phong Hiền (12 Hùng Vương, TP. Quảng Ngãi) cho thuê dao động 100.000đ – 150.000đ, có đủ Waves, Wave RSX, Sirius, Attila Elizabet, Nouvo 4, MIO, Airblade, Vision.",
+      "claim_supported": "Phong Hiền – Địa chỉ cho thuê xe máy Quảng Ngãi giao tận nơi miễn phí. Giá cả của các loại xe tại Phong Hiền rất rõ ràng. Dao động từ 100.000đ – 150.000đ, Tại đơn vị có nhiều loại xe để khách hàng lựa chọn. Từ Waves, Wave RSX, Sirius, Attila Elizabet, Nouvo 4, MIO, Airblade, Vision và nhiều hơn nữa.",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-ngai/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá tripbike ghi xe số Yamaha Sirius và Sirius Fi tại Quảng Ngãi ở mức 80.000 – 120.000/ngày; tại Thanh Bình xe wave rsx fi, sirius fi có giá thành 100k, còn Airblade, Vision, Lead 120 – 150k.",
+      "claim_supported": "Hãng Giá thuê máy tay số Yamaha 1 ngày Sirius 80.000 – 120.000 Sirius Fi 80.000 – 120.000 Jupiter 80.000 – 120.000 tay số Honda 1 ngày Wave S 80.000 – 120.000 Wave Rs 80.000 – 120.000 Wave Rsx 80.000 – 120.000",
+      "source_url": "https://tripbike.net/thue-xe-may-quang-ngai/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Nở Motorbike (Lầu 2, Chợ Quảng Ngãi, đường Nguyễn Nghiêm) có mức giá cho thuê từ 120.000 – 150.000 VNĐ/ngày, thủ tục khoảng 5 phút là có xe.",
+      "claim_supported": "Mức giá cho thuê xe máy cũng vừa và rẻ, từ 120.000 – 150.000 VNĐ/ngày. Thủ tục đơn giản, bạn chỉ cần chuẩn bị giấy phép lái xe và giấy tờ thân chính chủ là có thể thuê xe ngay. Thủ tục cho thuê xe cực kỳ nhanh chóng và đơn giản. Chỉ khoảng 5 phút là bạn đã có thể sở hữu chiếc xe để khám phá thành phố rực rỡ.",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-ngai/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Minh Phương (39 Hùng Vương, TP. Quảng Ngãi) có Jupiter, Wave RSX, Lead, Air Blade, Exciter 135, Sirius, Nouvo, giá thuê xe số 120.000đ/ngày và xe ga 150.000đ – 200.000đ/ngày.",
+      "claim_supported": "Nhiều dòng xe máy đa dạng như Jupiter, Wave RSX, Lead, Air Blade, Exciter 135, Sirius, Nouvo, Giá thuê xe số: 120.000đ/ngày Giá thuê xe ga: 150.000đ – 200.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-quang-ngai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Nguồn motogo.vn/thue-xe-may-quang-ngai/ (bảng giá Sirius 100-150k + 7 cơ sở), giahuy.org/thue-xe-may-quang-ngai/ (Thanh Bình 100-120k khung 24h, Thịnh Phát tặng 1 lít xăng, Nở Motorbike 5 phút), tripbike.net/thue-xe-may-quang-ngai/ (bảng Sirius/Sirius Fi 80-120k)."
+}

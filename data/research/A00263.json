@@ -1,0 +1,88 @@
+{
+  "research_date": "2026-10-07",
+  "geo_level": "province",
+  "locality": "",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "official_sources": [],
+  "article_id": "A00263",
+  "primary_keyword": "giá thuê Sirius Vĩnh Long",
+  "secondary_keywords": [
+    "gia thue Sirius Vinh Long",
+    "cho thue Yamaha Sirius Vinh Long",
+    "thue xe so Vinh Long gia",
+    "gia thue xe may Vinh Long"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Vĩnh Long: bảng tripbike ghi Sirius và Sirius Fi 100.000 – 120.000/ngày; Anh Duy xe số Wave s rs rsx sirius jupiter 130.000 vnd ngày; bảng motogo ghi Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd; Thiên Thanh xe số 100.000đ/ngày.",
+  "geo_id": "VN-A00263",
+  "province": "Vĩnh Long",
+  "poi": "Cù lao An Bình – chợ nổi Trà Ôn – cầu Mỹ Thuận – vườn trái cây Long Hồ – sông Tiền – sông Hậu",
+  "questions_found": [
+    "Thuê xe máy ở Vĩnh Long giá bao nhiêu?",
+    "Thuê Sirius ở Vĩnh Long chỗ nào rẻ?",
+    "Cho thuê xe Vĩnh Long cần cọc không?",
+    "Giá thuê xe ga Vĩnh Long thế nào?"
+  ],
+  "unique_angle": "Vĩnh Long — trái tim miền Tây sông nước: Sirius được ghi trong cả ba bảng giá (Sirius/Sirius Fi 100.000 – 120.000 của tripbike, Sirius 2015 – 2018 FI 90.000 vnd của motogo, và mức 130.000 vnd ngày cho nhóm wave s rs rsx sirius jupiter tại Anh Duy); Anh Duy là cơ sở chuyên nghiệp hiếm hoi của tỉnh với chính sách không cần đặt cọc, giao xe nhanh 5 – 10 phút và hỗ trợ thuê theo tháng cho khách huyện Vũng Liêm, Tam Bình, Mang Thít, Long Hồ, Trà Ôn.",
+  "slug": "gia-thue-sirius-vinh-long",
+  "output_path": "thue-xe-may/gia-thue-sirius-vinh-long/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-vinh-long/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Vĩnh Long của tripbike ghi Sirius 100.000 – 120.000 và Sirius Fi 100.000 – 120.000 mỗi ngày, cùng nhóm với Wave S, Wave Rs, Wave Rsx, Jupiter.",
+      "claim_supported": "Hãng Giá thuê máy tay số Yamaha 1 ngày Sirius 100.000 – 120.000 Sirius Fi 100.000 – 120.000 Jupiter 100.000 – 120.000 tay số Honda 1 ngày Wave S 100.000 – 120.000 Wave Rs 100.000 – 120.000 Wave Rsx 100.000 – 120.000",
+      "source_url": "https://tripbike.net/thue-xe-may-vinh-long/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá motogo tại Vĩnh Long ghi dòng Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd/ngày; Xe số Wave S, Wave RS 80.000 vnd/ngày.",
+      "claim_supported": "Xe số Wave S 80.000 vnd Xe số Wave RS 80.000 vnd Xe số Wave RSX – fi 90.000 vnd Xe số Yamaha Sirius 2015 – 2018 FI 90.000 vnd Xe số Yamaha Jupiter gravita 80.000 vnd",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Anh Duy (130 đường 8-3, phường 5, TP. Vĩnh Long) cho thuê xe số như Wave RSX, Wave S hay tương tự giá 130.000đ/ngày; tay ga Lead, Vision, Grande 180.000đ/ngày; Exciter 250.000đ/ngày, có đầy đủ từ Wave, Sirius đến Lead, Air Blade, Exciter, giao xe tận nơi siêu tốc.",
+      "claim_supported": "Mặt khác giá cho thuê xe cũng tương đối hợp lý. Các loại xe số như Wave RSX, Wave S hay xe tương tự giá thuê là 130.000đ/ngày. Các dòng tay ga mới hơn như Lead, Vision hay Grande thì giá cao hơn chút, 180.000đ/ngày. Loại xe có giá thuê cao nhất tại đây là Exciter với chi phí 250.000đ/ngày. Từ Wave, Sirius đến Lead, Air Blade hay Exciter đều đủ cả.",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Anh Duy giao xe nhanh chóng 5 – 10 phút, khách hàng không cần đặt cọc hay thế chấp, chỉ cần giấy tờ tùy thân, cửa hàng hoạt động từ 7 giờ sáng đến 10 giờ tối, thuê xe số lượng nhiều hay nhiều ngày thì được giảm giá.",
+      "claim_supported": "Khi thuê khách hàng không cần phải đặt cọc hay thế chấp bất cứ khoản tiền nào. Giao xe nhanh chóng 5 – 10 phút. Cửa hàng hoạt động từ 7 giờ sáng đến 10 giờ tối. Thuê xe số lượng nhiều hay nhiều ngày thì được giảm giá.",
+      "source_url": "https://tripbike.net/thue-xe-may-vinh-long/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Ngọc Sang (Số 95/8 Ấp Bình Lương, xã An Bình, huyện Long Hồ) cho thuê tay số Yamaha Sirius, Wave Rsx 100.000 – 120.000 và tay ga Honda Lead, Vision 150.000 – 200.000.",
+      "claim_supported": "Tay ga Honda Lead, Vision 150.000 – 200.000 Tay số Yamaha Sirius Wave Rsx 100.000 – 120.000 Hầu như những mẫu xe ở Ngọc Sang vẫn còn khá tốt, đi lại ổn định.",
+      "source_url": "https://tripbike.net/thue-xe-may-vinh-long/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Khách sạn Thiên Thanh (2G Hùng Vương, Phường 1, Vĩnh Long) niêm yết giá thuê xe số 100.000đ/ngày và xe ga 150.000đ/ngày; homestay Lộc Phúc (50 Đường Nguyễn Thị Út, Phường 1) xe số 80.000đ – 100.000đ/ngày, xe ga 120.000đ -160.000đ/ngày.",
+      "claim_supported": "Khách sạn Thiên Thanh Điện thoại: 0270 3822 099 Địa chỉ: 2G Hùng Vương, Phường 1, Vĩnh Long, Việt Nam Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày 3.8/5 Lộc Phúc Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-vinh-long/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Tại Vĩnh Long, Anh Duy hỗ trợ khách thuê lâu dài theo tháng ở thành phố hay huyện Vũng Liêm, huyện Tam Bình, huyện Mang Thít, huyện Long Hồ, huyện Trà Ôn với mức giá thuê tháng ưu đãi; khi giao nhận xe cửa hàng giữ lại CCCD để kiểm tra đối chiếu và làm hợp đồng bằng văn bản.",
+      "claim_supported": "Với những khách hàng thuê lâu dài theo tháng ở trong thành phố hay ở huyện Vũng Liêm, huyện Tam Bình, huyện Mang Thít, huyện Long Hồ, huyện Tân Bình, huyện Trà Ôn và các khu vực khác. Được giảm giá và có giá thuê tháng rất ưu đãi Khi giao nhận xe phía cửa hàng anh Duy giữ lại cccd của quý khách để kiểm tra đối chiếu. Làm hợp đồng thủ tục liên quan rõ ràng bằng văn bản.",
+      "source_url": "https://tripbike.net/thue-xe-may-vinh-long/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Nguồn motogo.vn/thue-xe-may-vinh-long/ (bảng Sirius FI 90.000 vnd + Anh Duy + Thiên Thanh/Lộc Phúc), tripbike.net/thue-xe-may-vinh-long/ (bảng Sirius 100-120k + Anh Duy không cọc, giao xe 5-10 phút), giahuy.org/thue-xe-may-vinh-long/ (danh sách dòng xe)."
+}

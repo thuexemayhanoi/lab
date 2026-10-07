@@ -1,0 +1,102 @@
+{
+  "research_date": "2026-10-07",
+  "geo_level": "province",
+  "locality": "",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "official_sources": [],
+  "article_id": "A00259",
+  "primary_keyword": "giá thuê Sirius Khánh Hòa",
+  "secondary_keywords": [
+    "gia thue Sirius Khanh Hoa",
+    "cho thue Yamaha Sirius Nha Trang",
+    "thue xe so Nha Trang gia",
+    "gia thue xe may Nha Trang"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Khánh Hòa (Nha Trang): bảng giá ngày ghi Yamaha Sirius 80.000 – 130.000 VNĐ/ngày; MOTOTA từ 80.000đ/ngày cho xe số Sirius, Wave, Blade; Lệ Oanh xe số 80.000đ – 90.000đ/ngày có Sirius, Wave; thuê theo tháng Sirius 1.800.000 – 1.900.000 VNĐ/tháng.",
+  "geo_id": "VN-A00259",
+  "province": "Khánh Hòa",
+  "poi": "Bãi biển Trần Phú – Tháp Bà Ponagar – chùa Long Sơn – VinWonders Nha Trang (Hòn Tre) – vịnh Nha Trang – đại lộ Trần Phú",
+  "questions_found": [
+    "Thuê xe máy ở Nha Trang giá bao nhiêu?",
+    "Thuê Sirius ở Nha Trang chỗ nào rẻ?",
+    "Cho thuê xe Nha Trang cần cọc bao nhiêu?",
+    "Giá thuê xe máy Nha Trang theo tháng thế nào?"
+  ],
+  "unique_angle": "Khánh Hòa — thủ đô biển miền Trung: Sirius xuất hiện trong cả bảng giá theo ngày (80.000 – 130.000 VNĐ/ngày) và bảng giá theo tháng (1.800.000 – 1.900.000 VNĐ/tháng) của Nha Trang, hiếm tỉnh nào công khai două khung giá này; Lệ Oanh là cơ sở được cả motogo và tripbike cùng ghi giá, giữ xe số có Sirius chỉ 80.000đ – 90.000đ/ngày; nhiều cơ sở tính giá theo 24h và không cần cọc cho khách có giấy tờ.",
+  "slug": "gia-thue-sirius-khanh-hoa",
+  "output_path": "thue-xe-may/gia-thue-sirius-khanh-hoa/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-khanh-hoa/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Nha Trang theo ngày ghi Yamaha Sirius 80.000 – 130.000 VNĐ/ngày, cùng mức với Honda Wave Alpha, Wave S, Yamaha Jupiter; Honda Air Blade 120.000 – 150.000 VNĐ/ngày.",
+      "claim_supported": "Honda Wave Alpha 80.000 – 130.000 VNĐ/ngày Honda Wave S 80.000 – 130.000 VNĐ/ngày Yamaha Sirius 80.000 – 130.000 VNĐ/ngày Yamaha Jupiter 80.000 – 130.000 VNĐ/ngày Honda Air Blade 120.000 – 150.000 VNĐ/ngày Honda Lead 120.000 – 150.000 VNĐ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "MOTOTA (33/16 Biệt Thự, Tân Tiến, Nha Trang) cho thuê chỉ từ 80.000đ/ngày cho xe số Sirius, Wave, Blade và từ 100.000đ/ngày cho xe ga Vision, Air Blade, Lead, giao xe tận nơi miễn phí, kèm 2 mũ bảo hiểm, 2 áo mưa.",
+      "claim_supported": "Giá thuê rất hợp lý: chỉ từ 80.000đ/ngày cho xe số Sirius, Wave, Blade và từ 100.000đ/ngày cho các dòng xe ga Vision, Air Blade, Lead. Hơn nữa, xe lúc nhận luôn trong tình trạng sạch sẽ, dễ đi và được chuẩn bị sẵn 2 mũ bảo hiểm, 2 áo mưa cùng kẹp điện thoại miễn phí.",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Lệ Oanh (14A Mạc Đĩnh Chi, Phước Tiến, TP Nha Trang) cho thuê xe số 80.000đ – 90.000đ/ngày và xe ga 110.000đ – 140.000đ/ngày, có các xe số Wave, Sirius, đánh giá 4.9.",
+      "claim_supported": "Lệ Oanh Địa chỉ: 14A Mạc Đĩnh Chi, Phước Tiến, TP Nha Trang. Giá thuê xe số: 80.000đ – 90.000đ/ngày Giá thuê xe ga: 110.000đ – 140.000đ/ngày Ngoài ra Lệ Oanh còn có các xe số Wave, Sirius. Đánh giá: 4.9",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Huy Hoàng (79 Phan Bội Châu, Cam Phú, Cam Ranh) có mức giá rơi vào khoảng 80.000đ – 120.000đ, mỗi xe kèm 2 mũ bảo hiểm, 2 áo mưa mỏng, bộ kit vá xe, 1 lít xăng; khách để lại tiền cọc 500.000đ – 1.000.000đ.",
+      "claim_supported": "Mức giá ngày thuê xe này thường tại nơi này rơi vào khoảng 80.000đ – 120.000đ. Đặc biệt mỗi xe đi kèm với 2 mũ bảo hiểm, 2 áo mưa mỏng, bộ kit vá xe, 1 lít xăng. khi thuê xe tại đây bạn sẽ phải để lại số tiền cọc 500.000đ – 1.000.000đ.",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Nam Việt (Số 65 Phan Bội Châu, Phường Cam Phú, TP Cam Ranh) tính giá thuê 120.000đ/ngày với xe số và 180.000đ/ngày với xe ga, giá tính theo 24h, thuê xe không yêu cầu cọc.",
+      "claim_supported": "Giá thuê xe máy tại đơn vị thuê xe Nam Việt nằm trong mức 120.000đ/ngày với xe số. Giá thuê xe ga là 180.000đ/ngày. Giá thuê xe máy tại Nam Việt được tính theo 24h. Thuê xe máy không yêu cầu cọc.",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Mr Cường (8 Lý Tự Trọng, phường Lộc Thọ, Nha Trang) cho thuê chỉ từ 100.000đ/ngày với xe số và 180.000đ/ngày với xe ga, có xe Wave, Yamaha Sirius, đánh giá 5.0.",
+      "claim_supported": "Chỉ từ 100.000đ/ngày với xe số và 180.000đ/ngày với xe ga, bạn đã có thể thỏa sức vi vu dọc khắp thành phố biển Nha Trang xinh đẹp. Bên cạnh đó tại Mr Cường còn có xe Wave, Yamaha Sirius,… Đánh giá: 5.0",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá thuê theo tháng tại Nha Trang ghi Yamaha Sirius 1.800.000 – 1.900.000 VNĐ/tháng; Honda Air Blade 2.500.000 – 3.000.000 VNĐ/tháng.",
+      "claim_supported": "Honda Wave Alpha 1.500.000 – 1.800.000 VNĐ/tháng Yamaha Sirius 1.800.000 – 1.900.000 VNĐ/tháng Yamaha Jupiter 1.500.000 – 1.800.000 VNĐ/tháng Honda Air Blade 2.500.000 – 3.000.000 VNĐ/tháng Honda Lead 2.500.000 – 3.000.000 VNĐ/tháng",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Công ty TNHH Du Lịch San Hô Việt (152 Hùng Vương, phường Lộc Thọ, Nha Trang) có các dòng Sirius, Wave, Nouvo, Air Blade, Vision được khách ưa chuộng, giá thuê dao động từ 80.000đ – 200.000đ.",
+      "claim_supported": "Những dòng xe như Sirius, Wave, Nouvo, Air Blade, Vision tại đây luôn được khách hàng ưa chuộng. Giá thuê xe máy hạt rẻ, dao động từ 80.000đ – 200.000đ.",
+      "source_url": "https://motogo.vn/thue-xe-may-nha-trang/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Tripbike ghi bảng giá tại Lệ Oanh Nha Trang: Sirius 50.000 – 80.000 và Wave 50.000 – 80.000; tay ga Lead, Air Blade 120.000 – 180.000.",
+      "claim_supported": "Các mẫu xe cho thuê Future 80.000 – 100.000 Wave 50.000 – 80.000 Sirius 50.000 – 80.000 Nouvo 100.000 – 150.000 Lead 120.000 – 180.000 Air Blade 120.000 – 180.000đ Exciter 150cc 130.000 – 180.000 Exciter 135cc 120.000 – 150.000",
+      "source_url": "https://tripbike.net/thue-xe-may-nha-trang/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Nguồn motogo.vn/thue-xe-may-nha-trang/ (bảng giá ngày Sirius 80-130k + bảng tháng 1.800.000-1.900.000 + 12 cơ sở) và tripbike.net/thue-xe-may-nha-trang/ (Lệ Oanh Sirius 50-80k, bảng Airblade 120-180k)."
+}

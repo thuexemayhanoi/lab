@@ -1,0 +1,95 @@
+{
+  "research_date": "2026-10-07",
+  "geo_level": "province",
+  "locality": "",
+  "brand": "Yamaha",
+  "model": "Sirius",
+  "vehicle_type": "xe số",
+  "use_case": "thuê xe du lịch/công tác",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "official_sources": [],
+  "article_id": "A00260",
+  "primary_keyword": "giá thuê Sirius Lâm Đồng",
+  "secondary_keywords": [
+    "gia thue Sirius Lam Dong",
+    "cho thue Yamaha Sirius Da Lat",
+    "thue xe so Da Lat gia",
+    "gia thue xe may Da Lat"
+  ],
+  "search_intent": "informational — khách cần giá thuê Sirius tại Lâm Đồng (Đà Lạt): bảng giá ghi nhóm tay số Yamaha Sirius – Sirius Fi – Jupiter 80.000 – 120.000; Moto a3.go 80-150k có Sirius Fi; Khánh Thy xe số Honda wave alpha – yamaha sirius 100.000đ/ngày; Như Hà Sirius 80k/ngày.",
+  "geo_id": "VN-A00260",
+  "province": "Lâm Đồng",
+  "poi": "Hồ Xuân Hương – Thiền viện Trúc Lâm – đỉnh Robin – Dinh Bảo Đại – thác Datanla – chợ đêm Đà Lạt",
+  "questions_found": [
+    "Thuê xe máy ở Đà Lạt giá bao nhiêu?",
+    "Thuê Sirius ở Đà Lạt chỗ nào rẻ?",
+    "Cho thuê xe Đà Lạt cần đặt cọc không?",
+    "Giá thuê xe ga Đà Lạt thế nào?"
+  ],
+  "unique_angle": "Lâm Đồng — thành phố ngàn hoa: bảng giá Đà Lạt gom Sirius – Sirius Fi – Jupiter vào cùng nhóm tay số 80.000 – 120.000, và cơ sở Moto a3.go ghi rõ Sirius Fi trong dàn xe 80-150k kèm 2 nón bảo hiểm, áo mưa, 1 lít xăng; nhiều cửa hàng ở phường 1, 2 nằm sát chợ đêm, ga tàu và bến xe Thành Bưởi nên việc nhận xe tối muộn rất phổ biến; hình thức thuê không cần bằng lái được một số đơn vị hỗ trợ kèm cọc 1 đến 2 triệu.",
+  "slug": "gia-thue-sirius-lam-dong",
+  "output_path": "thue-xe-may/gia-thue-sirius-lam-dong/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-lam-dong/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy Đà Lạt ghi nhóm tay số Yamaha Sirius – Sirius Fi – Jupiter ở mức 80.000 – 120.000; nhóm tay ga Honda cũ Lead – Vision – Airblade (110cc) 100.000 – 130.000.",
+      "claim_supported": "tay số Yamaha Sirius – Sirius Fi – Jupiter 80.000 – 120.000 tay số Honda – Wave S – Wave Rs – Wave Rsx 80.000 – 120.000 Tay ga Honda cũ Lead – Vision – Airblade ( 110cc) 100.000 – 130.000 Tay ga mới Lead – Vision – Airblade ( 125cc) 150.000-180.000",
+      "source_url": "https://giahuy.org/thue-xe-may-da-lat/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Moto a3.go (82/20 Đường Nguyễn Chí Thanh, Phường 1, Đà Lạt) cho thuê 80-150k các dòng Future, Jupiter, Wave S, Sirius Fi, Air Blade 125cc, Lead mới, Vision, trang bị nón bảo hiểm kèm theo 2 cái, áo mưa, và 1 lít xăng, giao xe tận nơi miễn phí.",
+      "claim_supported": "Đồng thời giá cho thuê 80-150k Future, Jupiter, Wave S, Sirius Fi Air Blade 125cc, Lead mới, Vision.. bạn thoải mái lựa chọn. Trang bị nón bảo hiểm kèm theo 2 cái, áo mưa, và 1 lít xăng Song song giá cho thuê, Song song với dịch vụ Thuê xe máy Đà Lạt – Moto a3.go sẽ đem đến những tiện lợi, hỗ trợ bảo hành máy móc, hỗ trợ các hư hỏng bất kì đâu trong thành phố",
+      "source_url": "https://giahuy.org/thue-xe-may-da-lat/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Khánh Thy (24 Hải Thượng, Phường 6, Đà Lạt) niêm yết xe số đời mới Honda wave alpha – yamaha sirius, Taurus, suzuki smash revo, viva Fi ở mức 100.000đ/ngày; xe số mạnh Honda future – Yamaha Jupiter 130.000đ/ngày; tay ga nam air blade fi – Lead 150.000đ/ngày; tay côn exciter 200.000đ/ngày.",
+      "claim_supported": "Xe số đời mới chất lượng, chính hãng : Honda wave alpha – yamaha sirius, Taurus – suzuki smash revo, viva Fi …: 100.000đ/ Ngày Xe số mạnh Honda future – Yamaha Jupiter – Exciter côn tự động… : 130.000đ/ Ngày Tay ga nữ Honda vision Fi, Click – Atila 2016 – Yamaha luvias125cc – cuxi Fi..: 130. 000đ/ ngày Tay ga nam air blade fi- Lead – Bcx – vespa – Yamaha nouvo fi 5, 6: 150. 000đ/ ngày Tay côn tay Yamaha exciter – cào cào – môtô CBR, Gl …: 200. 000đ/ ngày",
+      "source_url": "https://giahuy.org/thue-xe-may-da-lat/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Ngọc Anh (2 Trần Hưng Đạo, Phường 3, Đà Lạt) có hơn 100 mẫu xe, đơn giá cho thuê từ 80-150k, giao xe bất kì đâu trong thành phố miễn phí, thủ tục không cần đặt cọc.",
+      "claim_supported": "Với đơn giá cho thuê từ 80-150k, giá cho thuê gần như tương đương các đơn vị cho thuê xe máy Đà Nẵng. Hơn nữa Ngọc Anh giao xe bất kì đâu trong thành phố miễn phí. Các thủ tục khi thuê không cần đặt cọc, cung cấp giấy tùy tân.",
+      "source_url": "https://giahuy.org/thue-xe-may-da-lat/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Mr Din (27 Đ. Hùng Vương, Phường 10, Đà Lạt) cho thuê 80 – 100k cho các dòng tay số và 120k – 150 cho các dòng tay ga, giao nhận xe từ 4h30 sáng và trả xe đến 21 hay 22h tối, không cần đặt cọc, xe trang bị 2 nón bảo hiểm.",
+      "claim_supported": "Giao nhận xe từ 4h30 sáng và trả xe đến 21 hay 22h tối, điều này rất thuậay tiện khi bạn có những chuyến bay vào ban đêm, Hơn nữa giá cho thuê tại đây chỉ 80 – 100k cho các dòng tay số và 120k – 150 cho các dòng tay ga. Kèm theo đó xe luôn được trang bị 2 nón bảo hiểm bản đồ đầy đủ",
+      "source_url": "https://giahuy.org/thue-xe-may-da-lat/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Dịch vụ thuê xe không cần bằng lái tại Đà Lạt hỗ trợ cọc chi phí 1 triệu đến 2 triệu thế chân kèm giấy tùy thân, giá cho thuê 100 -150k, thuê nhiều ngày được giảm 10%, thuê theo tháng giảm 20-30%.",
+      "claim_supported": "Tuy nhiên hình thức thủ tục sẽ đạt cọc chi phí 1 triệu đến 2 triệu thế chân và kèm giấy tùy thân Đơn vị nhận giao xe theo yêu cầu miễn phí giá cho thuê 100 -150k xe đảm ảo chất lượng. Nếu thuê nhiều ngày được giảm 10% thuê theo tháng giảm 20-30%.",
+      "source_url": "https://giahuy.org/thue-xe-may-da-lat/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Minh Khang (5A Đường Thủ Khoa Huân, Phường 1, Đà Lạt) có trên 100 xe máy đời mới, bảng giá tay số 80.000 cho nhóm Honda wave alpha – Yamaha sirius, kèm giao nhận tận nơi, bản đồ, nón bảo hiểm.",
+      "claim_supported": "Minh Khang hiện có trên 100 xe máy đời mới đời củ các loại Bảng giá thuê xe Minh Khang trong ngày miễn phí -Giao nhận tận nơi- bản đồ- nón bảo hiểm Tay số 80.000(Honda wave alpha – Yamaha sirius",
+      "source_url": "https://tripbike.net/thue-xe-may-da-lat/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Như Hà (90/3 Nguyễn Văn Trỗi, Phường 2, Đà Lạt) ghi giá xe số Wave RS Honda, Sirius Yamaha, Wave S 110 ở mức 80k/ngày; Happy Day (127 Phan Bội Châu, Phường 2) cho xe số Honda wave alpha – Yamaha sirius giá 100 vnd.",
+      "claim_supported": "Xe số: Wave RS Honda , Sirius Yamaha, Wave S 110 80k/ngày Tay ga Nouvo RC, Hayate, Attila Victoria, Click 90k/ngày",
+      "source_url": "https://tripbike.net/thue-xe-may-da-lat/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Nguồn giahuy.org/thue-xe-may-da-lat/ (bảng nhóm Sirius/Sirius Fi/Jupiter 80-120k; Moto a3.go; Khánh Thy; Mr Din; không cần bằng lái cọc 1-2 triệu) và tripbike.net/thue-xe-may-da-lat/ (Minh Khang, Như Hà Sirius 80k/ngày)."
+}
