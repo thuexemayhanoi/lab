@@ -1,0 +1,76 @@
+{
+  "article_id": "A00288",
+  "research_date": "2026-10-07",
+  "primary_keyword": "giá thuê Exciter Hà Tĩnh",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần giá thuê Exciter tại Hà Tĩnh: bảng tripbike ghi Exciter 180.000-250.000; Trần Thắng có Exciter 150cc niêm 250k với hơn 100 xe; bảng giahuy ghi Exciter 135-150cc 120.000-200.000; cọc dao động 300.000đ – 500.000đ/xe đến 1 triệu.",
+  "geo_id": "VN-A00288",
+  "geo_level": "province",
+  "province": "Hà Tĩnh",
+  "locality": "Hà Tĩnh",
+  "poi": "biển Thiên Cầm – chùa Hương Tích – hồ Hắc Hải – vườn quốc gia Vũ Quang",
+  "brand": "Yamaha",
+  "model": "Exciter",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/phượt",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Exciter ở Hà Tĩnh giá bao nhiêu?",
+    "Thuê Exciter ở Hà Tĩnh chỗ nào rẻ?",
+    "Cho thuê xe Hà Tĩnh cần đặt cọc không?",
+    "Giá thuê Exciter Hà Tĩnh thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Hà Tĩnh có khoảng giá Exciter trải dài 120.000-200.000 (bảng giahuy) tới 180.000-250.000 (bảng tripbike); Trần Thắng niêm Exciter 150cc 250k với hơn 100 xe; cọc nhẹ từ 300.000đ – 500.000đ/xe ở Hoa Đô.",
+  "slug": "gia-thue-exciter-ha-tinh",
+  "output_path": "thue-xe-may/gia-thue-exciter-ha-tinh/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-ha-tinh/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá tripbike ghi Exciter 180.000-250.000 mỗi ngày, Winer 150 cùng khung này.",
+      "claim_supported": "1 ngày Exciter 180.000-250.000 Winer 150 180.000-250.000",
+      "source_url": "https://tripbike.net/thue-xe-may-ha-tinh/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá giahuy ghi Exciter 135-150cc 120.000-200.000, Winer 150cc cùng mức.",
+      "claim_supported": "Exciter 135-150cc 120.000-200.000 Winer 150cc 120.000-200.000",
+      "source_url": "https://giahuy.org/thue-xe-may-ha-tinh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Trần Thắng (267 Hà Huy Tập) cho thuê Exciter 150cc ở mức 250k, Winner cũng 250k; cửa hàng có hơn 100 chiếc xe; xe số từ 80-120k, xe ga 130-180k.",
+      "claim_supported": "Là chỗ cho thuê xe giá rẻ, chỉ từ 80-120k các loại xe tay số, 130-180k các loại xe tay ga, Exciter 150cc, Winnner 250k. Cùng số lượng lớn các mẫu xe cho thuê hơn 100 chiếc",
+      "source_url": "https://tripbike.net/thue-xe-may-ha-tinh/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Khách sạn Hoa Đô niêm yết Sirius, wave, Jupiter 100k/ngày và Lead, Vision, Ab 150k/ngày; khách thuê cần cccd, cmnd và cọc 1 triệu.",
+      "claim_supported": "Sirius, wave, Jupiter : 100k/ngày – Lead, Vision, Ab : 150k/ngày. Tại khách sạn không hỗ trợ cho thuê côn tay ... Thủ tục thuê xe cần có cccd, cmnd khi thuê cọc 1 triệu",
+      "source_url": "https://tripbike.net/thue-xe-may-ha-tinh/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Theo motogo, Anh Hoàng (255 Đường Hà Huy Tập) có giá thuê xe số 80.000đ – 100.000đ/ngày, xe ga 130.000đ – 140.000đ/ngày, đánh giá 5.0/5; Hoa Đô giá khoảng 80.000đ – 150.000đ/ngày, đặt cọc 300.000đ – 500.000đ/xe, chỉ cần CMND/CCCD/Passport.",
+      "claim_supported": "Anh Hoàng ... Giá thuê xe số: 80.000đ – 100.000đ/ngày Giá thuê xe ga: 130.000đ – 140.000đ/ngày 5.0/5 ... chỉ khoảng 80.000đ – 150.000đ/ngày ... Số tiền đặt cọc cũng chỉ tầm 300.000đ – 500.000đ/xe, không quá tốn",
+      "source_url": "https://motogo.vn/thue-xe-may-ha-tinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Hồng Nghị (352 Hà Huy Tập) trên 5 năm kinh nghiệm, giá thuê từ 100-120k kèm 2 nón bảo hiểm, giao nhận xe tận nơi miễn phí; theo motogo giá xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 150.000đ/ngày.",
+      "claim_supported": "giá thuê từ 100-120k. Có giao nhận xe tận nơi miễn phí ... Khi thuê được kèm 2 nón bảo hiểm chất lượng ... trên 5 năm kinh nghiệm ... Hồng Nghị Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày",
+      "source_url": "https://giahuy.org/thue-xe-may-ha-tinh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Queue 12 research — 3 nguồn (giahuy, tripbike, motogo)."
+}

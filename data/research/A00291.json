@@ -1,0 +1,76 @@
+{
+  "article_id": "A00291",
+  "research_date": "2026-10-07",
+  "primary_keyword": "giá thuê Exciter Quảng Ngãi",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần giá thuê Exciter tại Quảng Ngãi: bảng giahuy ghi Exciter 180.000-250.000; bảng tripbike ghi Exciter 130.000-180.000; Minh Phương có Exciter 135 từ 100.000 đến 130.000 vnđ/xe/ngày; Thịnh Phát không cần đặt cọc 100.000 – 150.000 VNĐ/xe/ngày.",
+  "geo_id": "VN-A00291",
+  "geo_level": "province",
+  "province": "Quảng Ngãi",
+  "locality": "Quảng Ngãi",
+  "poi": "biển Mỹ Khê – đảo Lý Sơn – biển Sa Huỳnh – chùa Ong",
+  "brand": "Yamaha",
+  "model": "Exciter",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/phượt",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Exciter ở Quảng Ngãi giá bao nhiêu?",
+    "Thuê Exciter ở Quảng Ngãi chỗ nào rẻ?",
+    "Cho thuê xe Quảng Ngãi cần đặt cọc không?",
+    "Giá thuê Exciter Quảng Ngãi thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Quảng Ngãi có hai khung Exciter 130.000-180.000 (tripbike) và 180.000-250.000 (giahuy); Minh Phương cho thuê Exciter 135 chỉ từ 100.000 đến 130.000 vnđ/xe/ngày; Thịnh Phát và Lê Trần đều không cần đặt cọc.",
+  "slug": "gia-thue-exciter-quang-ngai",
+  "output_path": "thue-xe-may/gia-thue-exciter-quang-ngai/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-quang-ngai/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá giahuy ghi Exciter 180.000-250.000 mỗi ngày, Winer 150 cùng khung.",
+      "claim_supported": "Exciter 180.000-250.000 Winer 150 180.000-250.000",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-ngai/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá tripbike ghi Exciter 130.000-180.000 mỗi ngày, Winer 150 cùng khung.",
+      "claim_supported": "1 ngày Exciter 130.000-180.000 Winer 150 130.000-180.000",
+      "source_url": "https://tripbike.net/thue-xe-may-quang-ngai/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Minh Phương (39 Hùng Vương) có Exciter 135 trong dàn xe Jupiter, Wave RSX, Lead, Air Blade, Sirius, Nouvo; giá chỉ từ 100.000 đến 130.000 vnđ/xe/ngày; theo motogo giá thuê xe ga 150.000đ – 200.000đ/ngày.",
+      "claim_supported": "Nhiều dòng xe máy đa dạng như Jupiter, Wave RSX, Lead, Air Blade, Exciter 135, Sirius, Nouvo ... chỉ từ 100.000 đến 130.000 vnđ/xe/ngày ... Minh Phương Giá thuê xe ga: 150.000đ – 200.000đ/ngày",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-ngai/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Thanh Bình (117 Trần Quang Diệu) có xe từ 50cc đến 150cc gồm cả xe tay côn, giá chỉ từ 100.000đ đến 120.000đ/ngày, tính theo khung giờ 24h; Nở Motorbike cho thuê từ 120.000 – 150.000 VNĐ/ngày, thủ tục cần giấy phép lái xe và giấy tờ chính chủ.",
+      "claim_supported": "nhiều loại xe từ 50cc đến 150cc, từ xe Dream đến xe tay côn hầm hố ... Với mức giá chỉ từ 100.000đ đến 120.000đ/ngày ... Thời gian thuê tính theo khung giờ là 24h ... Mức giá cho thuê xe máy cũng vừa và rẻ, từ 120.000 – 150.000 VNĐ/ngày ... bạn chỉ cần chuẩn bị giấy phép lái xe và giấy tờ thân chính chủ",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-ngai/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Thịnh Phát (117 Trần Quang Diệu) cho thuê không cần đặt cọc, giá trong khoảng 100.000 – 150.000 VNĐ/xe/ngày, tặng kèm 1 lít xăng; Lê Trần (La Hà) dao động 80.000 đến 120.000 vnđ/xe/ngày, hoàn toàn không cần đặt cọc/thể chân bằng tiền.",
+      "claim_supported": "Tiền đặt cọc/thế chân gần như không cần ... trong khoảng 100.000 – 150.000 VNĐ/xe/ngày ... tặng kèm 1 lít xăng ... Mức giá cho thuê dao động từ 80.000 đến 120.000 vnđ/xe/ngày ... Hoàn toàn không cần đặt cọc/thể chân bằng tiền",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-ngai/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Phong Hiền (12 Hùng Vương) có cả xe Côn tay Exciter, giá dao động 100.000đ – 150.000đ, giao xe trong 10 – 15 phút hoặc tại sân bay, bến xe miễn phí.",
+      "claim_supported": "Từ xe số xe ga hay xe Côn tay Exciter tại cửa hàng đều có ... Dao động từ 100.000đ – 150.000đ ... đội ngũ nhân viên giao xe cho mình tầm 10 – 15 phút. Hoặc giao tại sân bay, bến xe, Khách sạn tùy thích tất cả miễn phí",
+      "source_url": "https://tripbike.net/thue-xe-may-quang-ngai/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Queue 12 research — 3 nguồn (giahuy, tripbike, motogo)."
+}

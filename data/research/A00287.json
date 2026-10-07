@@ -1,0 +1,76 @@
+{
+  "article_id": "A00287",
+  "research_date": "2026-10-07",
+  "primary_keyword": "giá thuê Exciter Nghệ An",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần giá thuê Exciter tại Nghệ An/Vinh: bảng giahuy ghi Exciter 135-150cc 120.000-200.000/ngày, xe côn chung 250.000-300.000/ngày; bảng motogo ghi Yamaha Exciter 150.000 VNĐ/ngày; nhiều cửa hàng từ 80k/ngày không cần đặt cọc; cần bằng lái hạng A1 hoặc A2.",
+  "geo_id": "VN-A00287",
+  "geo_level": "province",
+  "province": "Nghệ An",
+  "locality": "Vinh",
+  "poi": "biển Cửa Lò – quảng trường Vinh – suối khoáng Kém Sông – chùa Cần Linh",
+  "brand": "Yamaha",
+  "model": "Exciter",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/phượt",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Exciter ở Nghệ An giá bao nhiêu?",
+    "Thuê Exciter ở Nghệ An chỗ nào rẻ?",
+    "Cho thuê xe Nghệ An cần đặt cọc không?",
+    "Giá thuê Exciter Nghệ An thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Nghệ An có hai khung niêm yết Exciter 135-150cc 120.000-200.000/ngày (giahuy) và Yamaha Exciter 150.000 VNĐ/ngày (motogo); nhiều cửa hàng Vinh như Khải Anh, Bảo Yến cho thuê từ 80k/ngày không cần đặt cọc; thủ tục cần bằng lái hạng A1 hoặc A2.",
+  "slug": "gia-thue-exciter-nghe-an",
+  "output_path": "thue-xe-may/gia-thue-exciter-nghe-an/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-nghe-an/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá thuê xe máy ở Vinh của giahuy niêm yết Exciter 135-150cc ở mức 120.000-200.000/ngày, ngang bằng với Winer 150cc; nhóm xe côn nói chung dao động 250.000-300.000/ngày; thuê tuần được giảm từ 10% đến 15%.",
+      "claim_supported": "Muốn sang hơn nữa thì chơi xe côn, giá dao động 250.000-300.000/ngày. Nếu thuê dài ngày, chủ xe còn giảm giá, thuê tuần thì cỡ 10-15% giảm ... Exciter 135-150cc 120.000-200.000 Winer 150cc 120.000-200.000",
+      "source_url": "https://giahuy.org/thue-xe-may-vinh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá thuê xe côn của motogo ghi Yamaha Exciter 150.000 VNĐ/ngày, cùng Suzuki Sport và Suzuki Satria 250.000 VNĐ/ngày.",
+      "claim_supported": "Bảng giá thuê xe côn 2021 Dòng xe Giá thuê xe Yamaha Exciter 150.000 VNĐ/ngày Suzuki Sport 250.000 VNĐ/ngày Suzuki Satria 250.000 VNĐ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-o-vinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Thủ tục thuê xe máy ở Vinh cần CMND/CCCD và bằng lái xe mô tô hạng A1 hoặc A2 để được phép thuê.",
+      "claim_supported": "Chứng minh nhân dân/Căn cước công dân: Đây là giấy tờ bắt buộc để chứng minh danh tính của bạn. Bằng lái xe mô tô: Bạn cần có bằng lái xe mô tô hạng A1 hoặc A2 để được phép thuê xe.",
+      "source_url": "https://giahuy.org/thue-xe-may-vinh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Khải Anh cho thuê từ 80k/ngày kèm giao xe tận nơi, thủ tục chỉ cần giấy tờ tùy thân, không cần đặt cọc; Bảo Yến cũng từ 80k/ngày với hơn 50 xe, giao tận nơi miễn phí.",
+      "claim_supported": "Với mức giá chỉ từ 80k/ngày ... Thủ tục thì chỉ cần giấy tờ tùy thân là xong, không cần đặt cọc rườm rà chi hết ... Bảo Yến có hơn 50 xe, từ xe số tới xe ga ... giao xe tận nơi miễn phí",
+      "source_url": "https://giahuy.org/thue-xe-may-vinh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Hồng Dương (26 Bạch Liêu, Phường Bến Thủy, TP Vinh) có Exciter trong dàn xe theo giahuy; motogo đánh giá 4.9/5 với giá thuê xe số 80.000đ – 120.000đ/ngày, xe ga 120.000đ -160.000đ/ngày.",
+      "claim_supported": "Xe từ Wave, Future đến Lead, Exciter, đủ cả ... Hồng Dương Địa chỉ: 26 Bạch Liêu ... Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày 4.9/5",
+      "source_url": "https://motogo.vn/thue-xe-may-o-vinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Anh Dũng ở gần trung tâm TP Vinh có giá thuê chỉ từ 100k/ngày, hỗ trợ giao nhận xe tận nơi; Uỷ Nguyên Phi ở Cửa Lò không yêu cầu đặt cọc, giao nhận xe miễn phí tận nơi.",
+      "claim_supported": "Gía thuê xe tại đây chỉ từ 100k/ngày ... hỗ trợ bạn giao nhận xe tận nơi ... Đơn vị cho thuê xe máy không yêu cầu đặt cọc, giao nhận xe miễn phí tận nơi",
+      "source_url": "https://motogo.vn/thue-xe-may-o-vinh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Queue 12 research — 2 nguồn (giahuy.org/thue-xe-may-vinh/, motogo.vn/thue-xe-may-o-vinh/)."
+}

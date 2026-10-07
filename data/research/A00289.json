@@ -1,0 +1,69 @@
+{
+  "article_id": "A00289",
+  "research_date": "2026-10-07",
+  "primary_keyword": "giá thuê Exciter Quảng Bình",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần giá thuê Exciter tại Quảng Bình/Đồng Hới: bảng giahuy ghi Exciter 250.000 -300.000; anh Lộc niêm Jupiter, EXciter, Sirius, Wave RS, Taurus 130k/ngày; Vân Song 100k – 250k; Dong Hoi Motobike rental 100k – 250k/ngày không cần đặt cọc.",
+  "geo_id": "VN-A00289",
+  "geo_level": "province",
+  "province": "Quảng Bình",
+  "locality": "Đồng Hới",
+  "poi": "động Phong Nha – thiên đường hang Tô – biển Nhật Lệ – sân bay Đồng Hới",
+  "brand": "Yamaha",
+  "model": "Exciter",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/phượt",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Exciter ở Quảng Bình giá bao nhiêu?",
+    "Thuê Exciter ở Quảng Bình chỗ nào rẻ?",
+    "Cho thuê xe Quảng Bình cần đặt cọc không?",
+    "Giá thuê Exciter Quảng Bình thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Quảng Bình có khoảng giá Exciter trải từ 130k/ngày (anh Lộc) tới 250.000 -300.000 (bảng giahuy); Dong Hoi Motobike rental chỉ cần CMND, không cần đặt cọc với giá 100k – 250k/ngày tính 24h.",
+  "slug": "gia-thue-exciter-quang-binh",
+  "output_path": "thue-xe-may/gia-thue-exciter-quang-binh/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-quang-binh/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá giahuy ghi Exciter 250.000 -300.000 mỗi ngày, Winer 150 cùng khung.",
+      "claim_supported": "Exciter 250.000 -300.000 Winer 150 250.000 -300.000",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-binh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Anh Lộc (17 Lý Thường Kiệt, Đồng Hới) niêm yết Jupiter, EXciter, Sirius, Wave RS, Taurus ở 130k/ngày; AirBlade, Nouvo LX, Vision, Suzuki Hayate 150k/ngày.",
+      "claim_supported": "Đối với Jupiter, EXciter, Sirius, Wave RS, Taurus : giá thuê 130k/ngày. Đối với AirBlade, Nouvo LX, Vision, Suzuki Hayate : giá thuê 150k/ngày.",
+      "source_url": "https://tripbike.net/thue-xe-may-quang-binh/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Vân Song gần bến xe Đồng Hới có các dòng xe cao cấp Sh Exciter, đơn giá cho thuê từ 100k – 250k ngày cho tay số, tay ga và tay côn, giao nhận miễn phí theo yêu cầu.",
+      "claim_supported": "từ những dòng xe phổ thông tay số, tay ga đến các dòng xe cao cấp Sh Exciter đơn vị có cung cấp ... Về đơn giá cho thuê từ 100k – 250k ngày cho các tay số tay ga và tay côn ... giao nhận xe theo yêu cầu miễn phí",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-binh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Dong Hoi Motobike rental (377 Lý Thường Kiệt, Hải Thành) cung cấp Cào Cào, Exciter ở mức 100k – 250k/ngày tính 24h, giao xe theo yêu cầu miễn phí, thủ tục chỉ cần CMND và không cần đặt cọc.",
+      "claim_supported": "Cào Cào, Exciter hay các xe phổ thông Wave Sirius… là những dòng xe đơn vị đang cung cấp. Mức giá cho thuê 100k – 250k/ngày được tính 24h, được giao xe theo yêu cầu miễn phí ... các thủ tục thuê xe chỉ cần có cmnd và không cần đặt cọc",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-binh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá motogo Quảng Bình ghi nhóm xe côn tay Honda XR ở mức 120.000 đ – 500.000đ (Tung Motorbike), Beach House xe côn 130.000đ – 480.000đ.",
+      "claim_supported": "Xe côn tay: Honda XR 120.000 đ – 500.000đ ... Beach House ... Xe côn tay: Honda XR 130.000đ – 480.000đ",
+      "source_url": "https://motogo.vn/thue-xe-may-quang-binh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Queue 12 research — 3 nguồn (giahuy, tripbike, motogo)."
+}

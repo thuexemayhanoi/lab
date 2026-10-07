@@ -1,0 +1,76 @@
+{
+  "article_id": "A00296",
+  "research_date": "2026-10-07",
+  "primary_keyword": "giá thuê Exciter Tây Ninh",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần giá thuê Exciter tại Tây Ninh: bảng giahuy ghi Exciter 180.000-250.000; Hoàng Gia 100.000đ đến 150.000đ/ngày, Exciter/Winner từ 200.000đ trở lên; Tân Quốc Việt có Yamaha Exciter, Honda Winner; cọc tiền 1-3 triệu.",
+  "geo_id": "VN-A00296",
+  "geo_level": "province",
+  "province": "Tây Ninh",
+  "locality": "Tây Ninh",
+  "poi": "núi Bà Đen – hồ Dầu Tiếng – tòa thánh Cao Đài – vườn quốc gia Lò Gò Xa Mát",
+  "brand": "Yamaha",
+  "model": "Exciter",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/phượt",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Exciter ở Tây Ninh giá bao nhiêu?",
+    "Thuê Exciter ở Tây Ninh chỗ nào rẻ?",
+    "Cho thuê xe Tây Ninh cần đặt cọc không?",
+    "Giá thuê Exciter Tây Ninh thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Tây Ninh có hai khung Exciter: bảng giahuy 180.000-250.000 và mức từ 200.000đ trở lên ở Hoàng Gia; Tân Quốc Việt (Gò Dầu) có Yamaha Exciter, Honda Winner với xe đời cũ 80.000 – 120.000 đồng/ngày; thủ tục cọc tiền 1-3 triệu, miễn phí giao dưới 3km.",
+  "slug": "gia-thue-exciter-tay-ninh",
+  "output_path": "thue-xe-may/gia-thue-exciter-tay-ninh/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-tay-ninh/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá giahuy ghi Exciter 180.000-250.000 mỗi ngày, Winer 150 cùng khung.",
+      "claim_supported": "Exciter 180.000-250.000 Winer 150 180.000-250.000",
+      "source_url": "https://giahuy.org/thue-xe-may-tay-ninh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Hoàng Gia (19 đường 781, ấp Bình Hòa, Châu Thành) cho thuê khoảng từ 100.000đ đến 150.000đ/ngày; các dòng xe mạnh hơn như Exciter hay Winner giá cao hơn một chút, từ 200.000đ trở lên; theo giahuy bạn không cần phải đặt cọc, chỉ cần mang theo giấy tờ tùy thân như bằng lái xe và CMND.",
+      "claim_supported": "Giá cho thuê xe máy tại Tây Binh khá rẻ, khoảng từ 100.000đ đến 150.000đ/ngày ... Nếu bạn muốn thuê các dòng xe mạnh hơn như Exciter hay Winner, giá sẽ cao hơn một chút, từ 200.000đ trở lên ... Bạn không cần phải đặt cọc ... Chỉ cần mang theo giấy tờ tùy thân như lái xe và CMND",
+      "source_url": "https://giahuy.org/thue-xe-may-tay-ninh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Tân Quốc Việt (Ngã 4 Đường Nông Trường, KCN Phước Đông, Gò Dầu) có các dòng xe mới nhất như Yamaha Exciter hay Honda Winner; các dòng xe đời cũ từ 80.000 – 120.000 đồng/ngày, xe tay ga từ 120.000 – 180.000 đồng/ngày; theo tripbike cọc tiền 1 -2 triệu tùy giá thành xe, giao tận nơi kèm 2 mũ bảo hiểm.",
+      "claim_supported": "Đơn vị còn có các dòng xe mới nhất để bạn có thể trải nghiệm như Yamaha Exciter hay Honda Winner ... Với các dòng xe đời cũ từ 80.000 – 120.000 đồng/ngày Và các dòng xe tay ga từ 120.000 – 180.000 đồng/ngày ... Thủ tục thuê xe cần có chứng minh hoặc hộ chiếu. Cọc tiền 1 -2 triệu tùy vào giá thành xe. Khi thuê được giao tận nơi, kèm 2 mũ bảo hiểm",
+      "source_url": "https://giahuy.org/thue-xe-may-tay-ninh/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Theo tripbike, Hoàng Gia nhận giao xe miễn phí khu vực bến xe Tây Ninh và các địa chỉ dưới 3km; thủ tục thuê xe cần căn cước công dân, hộ chiếu và cọc tiền 1-3 triệu, miễn phí mũ bảo hiểm và bản đồ du lịch; bảng tripbike ghi Exciter 150cc , Suzuki raider 180 – 200k.",
+      "claim_supported": "Hoàng Gia nhận giao xe miễn phí ở khu vực bến xe tây Ninh và những địa chỉ dưới 3km miễn phí ... Các thủ tục thuê xe cần có căn cước công dân, hộ chiếu và cọc tiền 1-3 triệu. Miễn phí mũ bảo hiểm, bản đồ du lịch địa phương ... Exciter 150cc , Suzuki raider 180 – 200k",
+      "source_url": "https://tripbike.net/thue-xe-may-tay-ninh/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Hùng Vương (652 Cách Mạng Tháng 8) có mặt bằng rộng chứa hơn 100 xe gắn máy đủ loại, giá từ 100 -150k ngày, giao nhận xe chuyên nghiệp; Chị Phượng (Khu phố 5, xã Tây Ninh) giá khoảng 100 – 150k ngày, thủ tục chỉ cần giấy tùy thân.",
+      "claim_supported": "Cửa hàng Hùng Vương có mặt bằng rất rộng, chứa hơn 100 xe gắn máy đủ loại ... Giá thành cho cũng vừa túi tiền bạn, từ 100 -150k ngày ... Giá xe khoảng 100 – 150k ngày ... thủ tục cho thuê đơn giản chỉ cần có giấy tùy thân và bạn có thể thuê",
+      "source_url": "https://tripbike.net/thue-xe-may-tay-ninh/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Theo motogo, Hùng Vương giá thuê xe số 80.000đ – 120.000đ/ngày, xe ga 100.000đ -160.000đ/ngày, đánh giá 5.0/5; Tân Quốc Việt giá thuê xe số 40.000đ – 90.000đ/ngày, xe ga 50.000đ – 120.000đ/ngày, đánh giá 5.0/5; Phượng xe số 80.000đ – 120.000đ/ngày đánh giá 4.3/5.",
+      "claim_supported": "Hùng Vương ... Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 100.000đ -160.000đ/ngày 5.0/5 ... Tân Quốc Việt Giá thuê xe số: 40.000đ – 90.000đ/ngày Giá thuê xe ga: 50.000đ – 120.000đ/ngày 5.0/5 ... Phượng Giá thuê xe số: 80.000đ – 120.000đ/ngày ... 4.3/5",
+      "source_url": "https://motogo.vn/thue-xe-may-tay-ninh/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Queue 12 research — 3 nguồn (giahuy, tripbike, motogo)."
+}

@@ -1,0 +1,69 @@
+{
+  "article_id": "A00293",
+  "research_date": "2026-10-07",
+  "primary_keyword": "giá thuê Exciter Khánh Hòa",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần giá thuê Exciter tại Khánh Hòa/Nha Trang: Lệ Oanh niêm Exciter 150cc 130.000 – 180.000 và Exciter 135cc 120.000 – 150.000; True Friends Easy Rider chuyên Exciter, Winner; Ngày Hè Vàng xe côn tay 200-300k.",
+  "geo_id": "VN-A00293",
+  "geo_level": "province",
+  "province": "Khánh Hòa",
+  "locality": "Nha Trang",
+  "poi": "biển Nha Trang – tháp Bà Ponagar – vịnh Nha Trang – biển Đại Lãnh",
+  "brand": "Yamaha",
+  "model": "Exciter",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/phượt",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Exciter ở Khánh Hòa giá bao nhiêu?",
+    "Thuê Exciter ở Khánh Hòa chỗ nào rẻ?",
+    "Cho thuê xe Khánh Hòa cần đặt cọc không?",
+    "Giá thuê Exciter Khánh Hòa thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Khánh Hòa có Exciter 135cc 120.000 – 150.000 và Exciter 150cc 130.000 – 180.000 niêm yết tại Lệ Oanh; True Friends Easy Rider chuyên Exciter, Winner cho phượt đèo; nhiều cửa hàng như Hoàng Long không cần đặt cọc tiền.",
+  "slug": "gia-thue-exciter-khanh-hoa",
+  "output_path": "thue-xe-may/gia-thue-exciter-khanh-hoa/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-khanh-hoa/",
+  "claim_evidence": [
+    {
+      "claim": "Lệ Oanh (14A Mạc Đỉnh Chi, Nha Trang) niêm yết Exciter 150cc ở mức 130.000 – 180.000 và Exciter 135cc ở mức 120.000 – 150.000; theo motogo giá thuê xe số 80.000đ – 90.000đ/ngày, xe ga 110.000đ – 140.000đ/ngày.",
+      "claim_supported": "Exciter 150cc 130.000 – 180.000 Exciter 135cc 120.000 – 150.000 ... Giá thuê xe số: 80.000đ – 90.000đ/ngày Giá thuê xe ga: 110.000đ – 140.000đ/ngày",
+      "source_url": "https://tripbike.net/thue-xe-may-nha-trang/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "True Friends Easy Rider (60 Nguyễn Thiện Thuật) chuyên cung cấp xe côn tay Exciter, Winner và xe cào cào cho khách đam mê phượt, xe khỏe leo đèo tốt; theo motogo giá thuê xe số 100.000đ/ngày, xe ga 120.000đ – 150.000đ/ngày.",
+      "claim_supported": "Tại cửa hàng chủ yếu cung cấp xe côn tay Exciter, Winner , xe cào cào dành cho các bạn đam mê phượt. Những mẫu xe tay côn ở đây rất khỏe mạnh leo đèo rất tốt ... True Friends Easy Rider Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 120.000đ – 150.000đ/ngày",
+      "source_url": "https://tripbike.net/thue-xe-may-nha-trang/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Ngày Hè Vàng (114/23 Hoàng Hoa Thám) kinh doanh trên 10 năm, giá xe tay số 70- 80k, xe tay ga 100-160k tùy loại, xe côn tay 200-300k, giá niêm yết minh bạch không tăng giá cao điểm.",
+      "claim_supported": "Cửa hàng kinh doanh trên 10 năm ... Giá xe tay số 70- 80k, xe tay ga 100-160k tùy loại, xe côn tay 200-300k ... không có hiện tượng chặt chém hay tăng giá vào những ngày cao điểm",
+      "source_url": "https://tripbike.net/thue-xe-may-nha-trang/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Hoàng Long (96B1/13 Trần Phú) thủ tục thuê xe đơn giản, không cần đặt cọc tiền, giá Wave s rs chỉ 80.000, Airblade 120.000, xe PCX 150.000 vnđ; Mr Lợi (11 Tôn Đản) giá rẻ chỉ với 80k – 120k.",
+      "claim_supported": "Wave s rs chỉ  80.000. Airblade : 120.000. Xe Pcx: 150.000 vnđ ... Thủ tục thuê xe đơn giản không cần đặt cọc tiền ... địa chỉ thuê xe này rất rẻ chỉ với 80k – 120k",
+      "source_url": "https://tripbike.net/thue-xe-may-nha-trang/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Lệ Oanh hỗ trợ giao nhận xe tận nơi khách sạn, bến xe miễn phí, trang bị áo mưa, bản đồ, mũ bảo hiểm và 1 lít xăng; thủ tục chỉ cần giấy phép lái xe, căn cước.",
+      "claim_supported": "Thủ tục thuê cũng rất đơn giản, chỉ cần giấy phép lái xe, căn cước là có thể thuê. Bên cạnh còn có dịch vụ giao nhận xe tận nơi khách sạn, bến xe miễn phí. Khi thuê trang bị áo mưa bản đồ mũ bảo hiểm 1l xăng",
+      "source_url": "https://tripbike.net/thue-xe-may-nha-trang/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Queue 12 research — 2 nguồn (tripbike, motogo; giahuy không có trang Nha Trang hợp lệ)."
+}

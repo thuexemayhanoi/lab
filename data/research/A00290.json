@@ -1,0 +1,69 @@
+{
+  "article_id": "A00290",
+  "research_date": "2026-10-07",
+  "primary_keyword": "giá thuê Exciter Quảng Trị",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần giá thuê Exciter tại Quảng Trị/Đông Hà: bảng tripbike ghi Exciter 200.000 – 250.000; bảng giahuy ghi Exciter 150cc, Suzuki raider 180 – 200k; Anh Quang 80k – 150k giảm 10 -30% khi thuê tuần/tháng, không cần cọc.",
+  "geo_id": "VN-A00290",
+  "geo_level": "province",
+  "province": "Quảng Trị",
+  "locality": "Đông Hà",
+  "poi": "địa đạo Vịnh Mốc – thành cổ Quảng Trị – biển Cửa Tùng – cầu Hiền Lương",
+  "brand": "Yamaha",
+  "model": "Exciter",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/phượt",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Exciter ở Quảng Trị giá bao nhiêu?",
+    "Thuê Exciter ở Quảng Trị chỗ nào rẻ?",
+    "Cho thuê xe Quảng Trị cần đặt cọc không?",
+    "Giá thuê Exciter Quảng Trị thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Quảng Trị niêm Exciter 200.000 – 250.000 theo tripbike và Exciter 150cc, Suzuki raider 180 – 200k theo giahuy; Anh Quang giảm 10 -30% cho thuê tuần/tháng, không cần cọc, hỗ trợ 24/24h; Hoàn Hão có Sh Exciter côn tay 5.0/5.",
+  "slug": "gia-thue-exciter-quang-tri",
+  "output_path": "thue-xe-may/gia-thue-exciter-quang-tri/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-quang-tri/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá tripbike ghi Exciter 200.000 – 250.000 mỗi ngày, Winer 150 cùng khung.",
+      "claim_supported": "1 ngày Exciter 200.000 – 250.000 Winer 150 200.000 – 250.000",
+      "source_url": "https://tripbike.net/thue-xe-may-quang-tri/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Bảng giá giahuy ghi Exciter 150cc , Suzuki raider ở mức 180 – 200k; nhóm Cào cào, CBR cũng 180 – 200k.",
+      "claim_supported": "Exciter 150cc , Suzuki raider 180 – 200k Cào cào, CBR 180 – 200k",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-tri/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Hoàn Hão (152 Tôn Thất Thuyết, Đông Hà) cho thuê các dòng xe cao cấp Sh Exciter côn tay; thủ tục cần bằng lái xe A1 A2 kèm giấy chứng minh hay hộ chiếu, giao tận nơi miễn phí; motogo ghi giá thuê từ 100.000đ/ngày, đánh giá 5.0/5.",
+      "claim_supported": "đến các dòng xe cao cấp Sh Exciter côn tay ... thủ tục thuê xe máy chỉ cần bạn có bằng lái xe a a2 cung cấp giấy chứng minh hay hộ chiếu là có thể thuê ... Hoàn Hão Giá thuê xe: từ 100.000đ/ngày 5.0/5",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-tri/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Anh Quang (94 Tôn Thất Thuyết) cho thuê từ 80k – 150k; thuê theo tuần hay tháng được giảm từ 10% đến 30%; thủ tục không cần cọc, chỉ cần giấy chứng minh; hỗ trợ 24/24h, giao xe tại bến xe Đông Hà, ga tàu hay khách sạn miễn phí.",
+      "claim_supported": "Giá cho thuê từ 80k – 150k thuê nhiều ngày được giảm giá ưu đãi. Thuê theo tháng hay thuê theo tuần có giá giảm 10 -30% ... Thủ tục đơn giản không cần cọc chỉ cần có giấy chứng minh ... Mọi sự cố dọc đường đơn vị sẽ hỗ trợ 24/24h",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-tri/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Thụy Điện House (09 Lê Văn Hưu) giá từ 100k các loại tay số, 150k các loại tay ga, không hỗ trợ cho thuê côn tay, kèm 2 nón bảo hiểm, 2 áo mưa; Phú Cường ở biển Cửa Tùng giá từ 100k đến 150k cho xe số và xe tay côn.",
+      "claim_supported": "Giá xe Thụy Điển House từ 100k các loại tay số 150k các loại tay ga. Về dòng côn tay đơn vị không hỗ trợ cho thuê ... 2 nón bảo hiểm sạch sẽ, 2 áo mưa ... Giá từ 100k đến 150k xe số xe tay côn các loại",
+      "source_url": "https://giahuy.org/thue-xe-may-quang-tri/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Queue 12 research — 3 nguồn (giahuy, tripbike, motogo)."
+}

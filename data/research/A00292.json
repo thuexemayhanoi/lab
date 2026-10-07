@@ -1,0 +1,76 @@
+{
+  "article_id": "A00292",
+  "research_date": "2026-10-07",
+  "primary_keyword": "giá thuê Exciter Gia Lai",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần giá thuê Exciter tại Gia Lai/Pleiku: bảng giahuy ghi Exciter 180.000-250.000; Anh Phương 80k – 150k có giao tận sân bay không cần cọc; Anh Hưng từ 100.000 vnđ/xe/ngày; IFT xe số 100-120k ngày giảm 10%.",
+  "geo_id": "VN-A00292",
+  "geo_level": "province",
+  "province": "Gia Lai",
+  "locality": "Pleiku",
+  "poi": "hồ T'nưng – hòn Đá Đen – tháp Chư Đang Ya – cột mốc Hà Nội",
+  "brand": "Yamaha",
+  "model": "Exciter",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/phượt",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Exciter ở Gia Lai giá bao nhiêu?",
+    "Thuê Exciter ở Gia Lai chỗ nào rẻ?",
+    "Cho thuê xe Gia Lai cần đặt cọc không?",
+    "Giá thuê Exciter Gia Lai thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Gia Lai niêm Exciter 180.000-250.000 (giahuy) nhưng nhiều cửa hàng Pleiku không cần đặt cọc: Anh Phương 80k – 150k giao tận sân bay, Anh Hưng từ 100.000 vnđ/xe/ngày, IFT giảm 10% tổng bill khi thuê nhiều xe.",
+  "slug": "gia-thue-exciter-gia-lai",
+  "output_path": "thue-xe-may/gia-thue-exciter-gia-lai/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-gia-lai/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá giahuy ghi Exciter 180.000-250.000 mỗi ngày, Winer 150 cùng khung.",
+      "claim_supported": "Exciter 180.000-250.000 Winer 150 180.000-250.000",
+      "source_url": "https://giahuy.org/thue-xe-may-pleiku/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Anh Phương (290 Nguyễn Tất Thành và 370/72C Phạm Văn Đồng, 2 chi nhánh) giá dao động 80k – 150k, kèm 1 lít xăng, 2 áo mưa và mũ nón bảo hiểm, giao xe tận nơi miễn phí và giao xe tận sân bay; thuê xe không cần đặt cọc, giữ CCCD, hộ chiếu hoặc chụp hình thẻ căn cước.",
+      "claim_supported": "Với mức giá dao động từ 80k – 150k ... Khi thuê xe bạn sẽ được cung cấp 1 lít xăng, 2 áo mưa và mũ nón bảo hiểm ... giao nhận xe tận nơi miễn phí và đúng giờ ... dịch vụ giao xe tận sân bay ... Điểm đặc biệt tại cửa hàng là thuê xe không cần đặt cọc ... Giữ Căn cước công dân, Hộ Chiếu hoặc chụp hình thẻ căn cước là bạn có thể thuê xe",
+      "source_url": "https://giahuy.org/thue-xe-may-pleiku/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Anh Hưng (Hẻm 03 Nguyễn Thiếp, Diên Hồng) giá chỉ từ 100.000 vnđ/xe/ngày, miễn phí giao xe tận nơi trong trung tâm thành phố, không cần đặt cọc, thủ tục passport/CCCD/CMND kèm bằng lái xe.",
+      "claim_supported": "Giá thuê cũng rất phải chăng, chỉ từ 100.000 vnđ/xe/ngày và được miễn phí giao xe tận nơi trong trung tâm thành phố ... Không cần đặt cọc, bạn sẽ được kí hợp đồng rõ ràng",
+      "source_url": "https://giahuy.org/thue-xe-may-pleiku/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "IFT (107 Lê Thánh Tôn) cho thuê xe số 100-120k ngày, xe ga 130-180k ngày; thuê nhiều ngày hoặc nhiều xe được giảm ngay 10% tổng bill; có cho thuê tại Kon Tum, Chư Sê, An Khê để trả ở nơi khác.",
+      "claim_supported": "Các dòng xe số 100-120k ngày, xe ga 130-180k ngày ... Khi thuê nhiều ngày hoặc nhiều xe bạn được giảm ngay 10% tổng bill thanh toán ... IFT cũng không yêu cầu quá nhiều về giấy tờ ... chỉ cần cung cấp một số loại giấy tờ có ảnh như CMND hay CCCD",
+      "source_url": "https://tripbike.net/thue-xe-may-pleiku/",
+      "source_domain": "tripbike.net",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Thuê Xe Máy Giao Tận Nơi Pleiku (12 Lý Nam Đế) giá dao động 80.000 – 200.000 vnđ/xe/ngày, thủ tục không yêu cầu đặt cọc, thế chân bằng tiền, có hợp đồng rõ ràng.",
+      "claim_supported": "Với mức giá dao động từ 80.000 – 200.000 vnđ/xe/ngày ... Thut tục thuê xe gắn máy ở cửa hàng đơn giản, không yêu cầu đặt cọc, thế chân bằng tiền khi bạn thuê xe máy",
+      "source_url": "https://giahuy.org/thue-xe-may-pleiku/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Theo motogo, cơ sở cho thuê tại 290 Nguyễn Tất Thành giá từ 80.000đ/ngày đánh giá 4.9/5; cửa hàng 35C Nguyễn Tất Thành giá xe số 100.000đ/ngày, xe ga 150.000đ/ngày đánh giá 4.5/5.",
+      "claim_supported": "Giá thuê xe: từ 80.000đ/ngày 4.9/5 ... Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày 4.5/5",
+      "source_url": "https://motogo.vn/thue-xe-may-pleiku/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Queue 12 research — 3 nguồn (giahuy, tripbike, motogo, đều ở trang Pleiku)."
+}

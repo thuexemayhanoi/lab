@@ -1,0 +1,69 @@
+{
+  "article_id": "A00295",
+  "research_date": "2026-10-07",
+  "primary_keyword": "giá thuê Exciter Đồng Nai",
+  "secondary_keywords": [],
+  "search_intent": "informational — khách cần giá thuê Exciter tại Đồng Nai/Biên Hòa: bảng giahuy ghi Exciter 150cc , Suzuki raider 180 – 200k; Hiếu Bình từ 120.000đ/ngày có xe tay côn; Thành Cư và Hải Trung Kim 100 – 180k không cần đặt cọc; Motorbike for rent ở ga Biên Hòa không cần cọc, tính theo khung 24h.",
+  "geo_id": "VN-A00295",
+  "geo_level": "province",
+  "province": "Đồng Nai",
+  "locality": "Biên Hòa",
+  "poi": "thác Giang Điền – núi Chứa Chan – vườn quốc gia Nam Cát Tiên – hồ Bom Bo",
+  "brand": "Yamaha",
+  "model": "Exciter",
+  "vehicle_type": "xe côn tay",
+  "use_case": "thuê xe du lịch/phượt",
+  "duration": "ngày",
+  "requires_research": true,
+  "requires_official_sources": false,
+  "actual_service_area": "informational_only",
+  "questions_found": [
+    "Thuê Exciter ở Đồng Nai giá bao nhiêu?",
+    "Thuê Exciter ở Đồng Nai chỗ nào rẻ?",
+    "Cho thuê xe Đồng Nai cần đặt cọc không?",
+    "Giá thuê Exciter Đồng Nai thế nào?"
+  ],
+  "official_sources": [],
+  "unique_angle": "Đồng Nai niêm Exciter 150cc , Suzuki raider 180 – 200k theo giahuy; Hiếu Bình cho thuê từ 120.000đ/ngày có đủ xe tay côn; nhiều đơn vị Biên Hòa như Thành Cư, Hải Trung Kim, Motorbike for rent đều không cần đặt cọc.",
+  "slug": "gia-thue-exciter-dong-nai",
+  "output_path": "thue-xe-may/gia-thue-exciter-dong-nai/",
+  "canonical": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-exciter-dong-nai/",
+  "claim_evidence": [
+    {
+      "claim": "Bảng giá giahuy ghi Exciter 150cc , Suzuki raider ở mức 180 – 200k; nhóm Cào cào, CBR cũng 180 – 200k.",
+      "claim_supported": "Exciter 150cc , Suzuki raider 180 – 200k Cào cào, CBR 180 – 200k",
+      "source_url": "https://giahuy.org/thue-xe-may-dong-nai/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Hiếu Bình (Số 46, Ấp 3, Tân Hạnh, TP Biên Hòa) cho thuê các loại xe từ tay ga, xe số đến xe tay côn với giá chỉ từ 120.000đ/ngày, giao nhận xe tận nơi, kèm 2 mũ bảo hiểm, 1 lít xăng và 2 áo mưa; theo motogo giá xe số 100.000đ/ngày, xe ga 150.000đ/ngày, đánh giá 4.0/5.",
+      "claim_supported": "bạn có thể thuê các loại xe máy đa dạng với giá chỉ từ 120.000đ/ngày. Từ xe tay ga, xe số đến xe tay côn, tất cả đều có sẵn ... dịch vụ giao nhận xe tận nơi ... được trang bị 2 mũ bảo hiểm, 1 lít xăng và 2 áo mưa ... Hiếu Bình Giá thuê xe số: 100.000đ/ngày Giá thuê xe ga: 150.000đ/ngày 4.0/5",
+      "source_url": "https://giahuy.org/thue-xe-may-dong-nai/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Motor Go (9 Nguyễn Ái Quốc, Tân Tiến, Biên Hòa) chuyên cung cấp các loại xe côn tay, xe ga và xe phân khối lớn, giao xe miễn phí ở địa chỉ của bạn; Motorbike for rent ở Ga Biên Hòa (104B Đ. Võ Thị Sáu) có nhiều dòng xe tay số, tay ga, tay côn, không cần đặt cọc khi thuê, thời gian thuê tính theo khung 24h.",
+      "claim_supported": "Motor Go là một cửa hàng xe máy chuyên cung cấp các loại xe côn tay, xe ga và xe phân khối lớn ... Motor Go còn cung cấp giao xe miễn phí ở địa chỉ của bạn ... bạn cũng không cần phải đặt cọc khi thuê xe ... Thời gian thuê xe cũng được tính theo khung 24h",
+      "source_url": "https://giahuy.org/thue-xe-may-dong-nai/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Thành Cư (14/1 khu phố 7, quốc lộ 1, Tân Hòa) cho thuê với mức giá hợp lý và không cần đặt cọc từ 100 – 180k, hơn 50 mẫu xe, tặng mũ bảo hiểm và áo mưa; Hải Trung Kim (208/17B Đồng Văn Cự) giá thuê từ 100 – 180k trong 24h, trả xe muộn hơn 1 tiếng được hỗ trợ miễn phí, kèm 2 mũ bảo hiểm, 2 áo mưa và 1 lít xăng.",
+      "claim_supported": "không cần phải đặt cọc từ 100 – 180k ... Với hơn 50 mẫu xe khác nhau ... được tặng mũ bảo hiểm và áo mưa miễn phí ... Với giá thuê từ 100 – 180k trong 24h ... Nếu khách hàng trả xe muộn hơn 1 tiếng, công ty cũng hỗ trợ miễn phí ... 2 mũ bảo hiểm, 2 áo mưa và 1 lít xăng miễn phí",
+      "source_url": "https://giahuy.org/thue-xe-may-dong-nai/",
+      "source_domain": "giahuy.org",
+      "date_accessed": "2026-10-07"
+    },
+    {
+      "claim": "Theo motogo, Thắng Lê (104B Võ Thị Sáu, Biên Hòa) giá thuê xe số 80.000đ – 120.000đ/ngày, xe ga 120.000đ -160.000đ/ngày; Thanh Thùy Dương (Nhơn Trạch) xe số 90.000đ – 120.000đ/ngày, xe ga 140.000đ – 150.000đ/ngày.",
+      "claim_supported": "Thắng Lê ... Giá thuê xe số: 80.000đ – 120.000đ/ngày Giá thuê xe ga: 120.000đ -160.000đ/ngày ... Thanh Thùy Dương Giá thuê xe số: 90.000đ – 120.000đ/ngày Giá thuê xe ga: 140.000đ – 150.000đ/ngày",
+      "source_url": "https://motogo.vn/thue-xe-may-dong-nai/",
+      "source_domain": "motogo.vn",
+      "date_accessed": "2026-10-07"
+    }
+  ],
+  "notes": "Queue 12 research — 2 nguồn (giahuy, motogo; tripbike không có trang Đồng Nai hợp lệ)."
+}
