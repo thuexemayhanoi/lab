@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-06T17:46:27.754Z",
+  "generated_at": "2026-10-07T06:14:05.440Z",
   "total": 10000,
   "by_status": {
-    "PUBLISHED": 263,
-    "PLANNED": 9737
+    "PUBLISHED": 273,
+    "PLANNED": 9727
   },
   "by_cluster": {
     "RENTAL": {
-      "PUBLISHED": 257,
-      "PLANNED": 4743
+      "PUBLISHED": 267,
+      "PLANNED": 4733
     },
     "RESCUE": {
       "PLANNED": 999,
@@ -37,8 +37,8 @@
   },
   "phase": "PRODUCTION",
   "active_chunk": [],
-  "last_completed_id": "A00256",
-  "next_claimable_id": "A00257",
+  "last_completed_id": "A00266",
+  "next_claimable_id": "A00267",
   "blocked": [],
   "published": [
     {
@@ -1576,6 +1576,66 @@
       "pk": "giá thuê Sirius Quảng Trị",
       "qa": "100",
       "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-quang-tri/"
+    },
+    {
+      "id": "A00257",
+      "pk": "giá thuê Sirius Quảng Ngãi",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-quang-ngai/"
+    },
+    {
+      "id": "A00258",
+      "pk": "giá thuê Sirius Gia Lai",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-gia-lai/"
+    },
+    {
+      "id": "A00259",
+      "pk": "giá thuê Sirius Khánh Hòa",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-khanh-hoa/"
+    },
+    {
+      "id": "A00260",
+      "pk": "giá thuê Sirius Lâm Đồng",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-lam-dong/"
+    },
+    {
+      "id": "A00261",
+      "pk": "giá thuê Sirius Đồng Nai",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-dong-nai/"
+    },
+    {
+      "id": "A00262",
+      "pk": "giá thuê Sirius Tây Ninh",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-tay-ninh/"
+    },
+    {
+      "id": "A00263",
+      "pk": "giá thuê Sirius Vĩnh Long",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-vinh-long/"
+    },
+    {
+      "id": "A00264",
+      "pk": "giá thuê Sirius Đồng Tháp",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-dong-thap/"
+    },
+    {
+      "id": "A00265",
+      "pk": "giá thuê Sirius An Giang",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-an-giang/"
+    },
+    {
+      "id": "A00266",
+      "pk": "giá thuê Sirius Cà Mau",
+      "qa": "100",
+      "url": "https://thuexemayhanoi.github.io/lab/thue-xe-may/gia-thue-sirius-ca-mau/"
     },
     {
       "id": "A00465",
