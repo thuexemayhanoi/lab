@@ -416,6 +416,35 @@ test('chatbot: panel has dialog semantics + accessible controls', () => {
   assert.ok(/aria-label="Câu hỏi cho trợ lý"/.test(t), 'input not labelled');
   assert.ok(/aria-label="Xóa hội thoại"/.test(t), 'clear button not labelled');
 });
+// ---------- CHATBOT DIALOG MODALITY CONTRACT (issue #4) ----------
+// While open, the reading assistant BEHAVES modally (Tab trapped inside,
+// ESC closes, focus restored to the launcher/pre-open target, body scroll
+// locked on mobile) — the panel markup must DECLARE that same modality.
+test('chatbot: panel declares modal dialog semantics matching its focus behavior (issue #4)', () => {
+  // canonical shell emits the modal contract and never declares non-modal
+  const shellSrc = fs.readFileSync(path.join(ROOT, 'scripts', 'site', 'shell.js'), 'utf8');
+  assert.ok(/id="chat-panel"[^>]*role="dialog" aria-modal="true"/.test(shellSrc),
+    'shell.js chat panel must be role="dialog" aria-modal="true"');
+  assert.ok(!/id="chat-panel"[^>]*aria-modal="false"/.test(shellSrc),
+    'shell.js must not declare the chat panel non-modal');
+  // the modal BEHAVIOR that makes the declaration true must stay in chatbot.js
+  const js = fs.readFileSync(path.join(ROOT, 'scripts', 'site', 'chatbot.js'), 'utf8');
+  ['Escape', 'e.key', 'Tab', 'lastFocus', 'chat-open'].forEach(m =>
+    assert.ok(js.includes(m), 'chatbot.js missing modal behavior marker: ' + m));
+  assert.ok(/launcher\.setAttribute\('aria-expanded', 'true'\)/.test(js), 'chatbot.js must expand launcher on open');
+  assert.ok(/launcher\.setAttribute\('aria-expanded', 'false'\)/.test(js), 'chatbot.js must collapse launcher on close');
+  assert.ok(/lastFocus\.focus/.test(js), 'chatbot.js must restore focus on close');
+  assert.ok(/e\.shiftKey && document\.activeElement === first/.test(js) &&
+    /document\.activeElement === last/.test(js), 'chatbot.js must trap Tab inside the panel');
+  // every built public page carries the declared contract; none regresses to non-modal
+  publicFiles().filter(f => f.endsWith('.html')).forEach(f => {
+    const t = fs.readFileSync(f, 'utf8');
+    if (!t.includes('id="chat-panel"')) return;
+    assert.ok(/id="chat-panel"[^>]*aria-modal="true"/.test(t), 'chat panel not declared modal in ' + f);
+    assert.ok(!/id="chat-panel"[^>]*aria-modal="false"/.test(t), 'chat panel declared NON-modal in ' + f);
+    assert.ok(/aria-expanded="false" aria-controls="chat-panel"/.test(t), 'launcher must control the panel in ' + f);
+  });
+});
 test('chatbot: knowledge index covers published articles + static pages only', () => {
   const kb = JSON.parse(fs.readFileSync(path.join(SITE,'assets','knowledge-index.json'),'utf8'));
   assert.ok(kb.version === 1 && Array.isArray(kb.records) && kb.records.length >= 19, 'unexpected index shape');
