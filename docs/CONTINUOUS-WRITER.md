@@ -11,9 +11,10 @@ writer does not stop after each 2-article pair or each queue.
 - Repository truth: `main` + content matrix shards + checkpoint/state files.
 - Factory QA/publish unit: **PAIR = 2 articles**.
 - Writer unit: **WRITE-AHEAD QUEUE = 2..10 consecutive claimable PLANNED IDs**.
-- Default queue target for a healthy run: **10 articles**. Use a smaller queue
-  only when runtime is constrained, a repair is pending, or source quality
-  requires it. Never exceed `queue_max` in `data/state/production-control.json`.
+- Default queue target for a healthy run: **2 articles** (owner approved fast-push mode).
+  Test scoped FAST; push the verified pair immediately. Never hold completed
+  pairs to accumulate 10 articles. A larger queue (up to 10) needs explicit owner
+  instruction; never exceed `queue_max` in `data/state/production-control.json`.
 - External writer writes prose/research and pushes drafts. GitHub Actions does
   deterministic recover → exact-id claim → research gate → QA → publish PASS →
   checkpoint → Pages.
@@ -32,7 +33,7 @@ FETCH FRESH MAIN
 → RESUME first: repair/QA any open current IDs before new claims
 → READ checkpoint + matrix truth
 → PICK next 2..10 consecutive PLANNED IDs starting at next_claimable_id
-   (default target = 10)
+   (default target = 2; push immediately after FAST checks)
 → RESEARCH every ID; official/quantitative claims follow source policy
 → WRITE _drafts/<ID>.body.html for the full queue
    (internal links may target only pages already PUBLISHED on fresh main;

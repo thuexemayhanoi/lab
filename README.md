@@ -88,4 +88,4 @@ See `AGENTS.md` and `docs/` for the full contracts.
 
 ## Writer Pack + Coordinator Lite pilot
 
-`node scripts/factory/writer-pack.js --count 10 --writers 3 --json` plans a safe read-only queue with 3 offline writing lanes. **Only one integrator may push that queue.** GitHub Factory alone validates/publishes. Hourly coordinator checks readiness and liveness; it never writes prose or touches production state. See [docs/WRITER-PACK-ROLES.md](docs/WRITER-PACK-ROLES.md).
+`node scripts/factory/writer-pack.js --count 2 --writers 1 --json` plans a safe read-only queue with 3 offline writing lanes. **Only one integrator may push that queue.** GitHub Factory alone validates/publishes. Hourly coordinator checks readiness and liveness; it never writes prose or touches production state. See [docs/WRITER-PACK-ROLES.md](docs/WRITER-PACK-ROLES.md).
