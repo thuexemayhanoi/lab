@@ -1,0 +1,38 @@
+name: Factory coordinator lite (read-only)
+
+# Inspired by /total lightweight coordinator. NOT a writer or publisher.
+# Every hour: verify queue readiness and diagnose liveness; no writes to main.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '19 * * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lab-factory-coordinator-lite
+  cancel-in-progress: false
+
+jobs:
+  state-and-liveness:
+    if: github.repository == 'thuexemayhanoi/lab'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Writer Pack state (read only; never start AI)
+        run: node scripts/factory/writer-pack.js --count 10 --writers 1 --json
+      - name: Liveness gate (WARN=2 is informational; FAIL=1 blocks)
+        run: |
+          set +e
+          node scripts/factory/liveness-watchdog.js
+          rc=$?
+          if [ "$rc" -eq 2 ]; then
+            echo "::warning::Liveness returned warning; no state was modified"
+            exit 0
+          fi
+          exit "$rc"
