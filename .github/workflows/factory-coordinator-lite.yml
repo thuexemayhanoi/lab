@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: '22'
       - name: Writer Pack state (read only; never start AI)
-        run: node scripts/factory/writer-pack.js --count 10 --writers 1 --json
+        run: node scripts/factory/writer-pack.js --count 2 --writers 1 --json
       - name: Liveness gate (WARN=2 is informational; FAIL=1 blocks)
         run: |
           set +e

@@ -43,6 +43,16 @@ test('three offline lanes distribute one contiguous queue without duplicate IDs 
   } finally { x.cleanup(); }
 });
 
+test('default producer target is two articles so verified pairs can be pushed promptly', () => {
+  const x = fixture();
+  try {
+    const p = makePack(x.root);
+    assert.equal(p.status, 'READY');
+    assert.deepEqual(p.queue.map(r => r.id), ['A00003', 'A00004']);
+    assert.equal(p.count, 2);
+  } finally { x.cleanup(); }
+});
+
 test('pause stops new queue without editing state', () => {
   const x = fixture();
   try {

@@ -15,9 +15,9 @@ tối đa 10/push; mọi published HTML/URL/canonical/sitemap hiện tại bất
     git fetch origin main
     git checkout main
     git pull --ff-only
-    node scripts/factory/writer-pack.js --count 10 --writers 3 --json
+    node scripts/factory/writer-pack.js --count 2 --writers 1 --json
 
-Kết quả JSON bao gồm đúng 10 ID PLANNED liên tiếp (nếu đủ), intent, keyword, file path, canonical,
+Kết quả JSON mặc định bao gồm 2 ID PLANNED liên tiếp (nếu đủ), intent, keyword, file path, canonical,
 cờ bắt buộc nguồn chính thức, gợi ý liên kết nội bộ tới PUBLISHED và 3 lane không trùng nhau.
 
 - Chỉ có MỘT **integrator/lead Writer** làm chủ working tree và commit/push.
@@ -25,7 +25,7 @@ cờ bắt buộc nguồn chính thức, gợi ý liên kết nội bộ tới P
   Chỉ trả văn bản/file cho integrator; không push main, không mutate Matrix/checkpoint/state.
 - Integrator xác minh tất cả ID liên tiếp, đối chiếu nguồn, đưa các file vào
   \`_drafts/<ID>.body.html\` và \`data/research/<ID>.json\`.
-- Chạy \`node scripts/factory/wrap-drafts.js\`, scoped FAST QA, **một commit chứa toàn bộ queue** rồi push.
+- Chạy \`node scripts/factory/wrap-drafts.js\`, scoped FAST QA rồi **push ngay từng queue 2 bài đã PASS**. Không đợi tích đủ 10 bài.
 - \`factory-production.yml\` là cổng duy nhất nhận queue và xuất bản sau QA (không cho worker tự publish).
 - Nếu QA/claim fail, repair xong mới mở queue mới. Không đụng ID đã PUBLISHED.
 

@@ -23,7 +23,7 @@ một lệnh production tương đương, external writer PHẢI coi đó là **
 Quy tắc mặc định:
 
 - Chạy theo [docs/CONTINUOUS-WRITER.md](docs/CONTINUOUS-WRITER.md).
-- Mỗi queue mới ưu tiên **10 bài liên tiếp** khi đủ runtime và tất cả gate xanh;
+- Mỗi queue mới ưu tiên **2 bài liên tiếp** để test đạt → push ngay; chỉ tăng tới 10 bài nếu chủ repo yêu cầu;
   hard contract là **2..10 bài/push** theo `production-control.json`.
 - Sau mỗi queue: chờ Factory production + Pages của đúng SHA kết thúc, fetch fresh
   `main`, rồi **lập tức viết queue kế tiếp mà không hỏi người dùng xác nhận**.
@@ -373,6 +373,6 @@ articles and never touch queue/matrix/taxonomy/content strategy.
 ## /lab Writer Pack (pilot reference from /total, 2026-10-13)
 
 Read [docs/WRITER-PACK-ROLES.md](docs/WRITER-PACK-ROLES.md) for one-integrator/three-offline-lanes mode.
-Use `node scripts/factory/writer-pack.js --count 10 --writers 1|2|3 --json` to get the NEXT exact queue (read-only).
+Use `node scripts/factory/writer-pack.js --count 2 --writers 1|2|3 --json` to get the NEXT exact queue (read-only).
 Multiple lanes are **not** permission for parallel direct pushes or claims; the existing Factory publisher alone owns publish state.
 The hourly coordinator is read-only and does not spawn AI. QA >= 75, matrix, existing published content and main's push-driven contract remain unchanged.

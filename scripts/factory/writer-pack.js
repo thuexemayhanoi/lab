@@ -60,7 +60,7 @@ function loadMatrix(root) {
   return rows;
 }
 
-function makePack(root, { count = 10, writers = 1 } = {}) {
+function makePack(root, { count = 2, writers = 1 } = {}) {
   if (!Number.isInteger(count) || count < 2 || count > 10)
     throw new Error('--count must be an integer from 2 to 10');
   if (!Number.isInteger(writers) || writers < 1 || writers > 3)
@@ -129,7 +129,7 @@ function makePack(root, { count = 10, writers = 1 } = {}) {
 }
 
 function main(argv) {
-  let count = 10, writers = 1, root = path.join(__dirname, '..', '..');
+  let count = 2, writers = 1, root = path.join(__dirname, '..', '..');
   for (let i = 0; i < argv.length; i++) {
     const arg = argv[i];
     if (arg === '--count') count = Number(argv[++i]);
