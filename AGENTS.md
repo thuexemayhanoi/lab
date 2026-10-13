@@ -368,3 +368,11 @@ articles and never touch queue/matrix/taxonomy/content strategy.
 - `scripts/factory/agent-watchdog.js` remains as read-only/tested reliability
   tooling, but there is no scheduled #6 job in normal production. External writer
   continuity is governed by `docs/CONTINUOUS-WRITER.md`.
+
+
+## /lab Writer Pack (pilot reference from /total, 2026-10-13)
+
+Read [docs/WRITER-PACK-ROLES.md](docs/WRITER-PACK-ROLES.md) for one-integrator/three-offline-lanes mode.
+Use `node scripts/factory/writer-pack.js --count 10 --writers 1|2|3 --json` to get the NEXT exact queue (read-only).
+Multiple lanes are **not** permission for parallel direct pushes or claims; the existing Factory publisher alone owns publish state.
+The hourly coordinator is read-only and does not spawn AI. QA >= 75, matrix, existing published content and main's push-driven contract remain unchanged.

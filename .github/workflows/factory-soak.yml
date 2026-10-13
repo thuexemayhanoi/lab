@@ -91,6 +91,9 @@ jobs:
       - name: 'Tier 1 — agent-suite (watchdog / supervisor / durable pause contracts)'
         run: node --test tests/agent-suite.js
 
+      - name: 'Writer Pack — read-only queue and safety regression'
+        run: node --test tests/writer-pack-suite.js
+
       - name: 'Tier 4 — pipeline-suite (coordinator contracts: refill, grants, exactly-once, crash/resume)'
         env:
           PIPELINE_ALLOW_MOCK: '1'
